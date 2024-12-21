@@ -56,10 +56,21 @@
   <math|X=Y\<oplus\>Z> (for example, let <math|X> two-dimensional, <math|Y>
   and <math|Z> are the components), then we have <strong|marginal
   distribution>s, denoted by <math|P<rsub|Y>> and <math|P<rsub|Z>>, where
-  <math|p<rsub|Y><around*|(|y|)>\<assign\><big|int><rsub|\<cal-Z\>>\<mathd\>z
-  p<around*|(|y,z|)>> and <math|p<rsub|Z><around*|(|z|)>\<assign\><big|int><rsub|\<cal-Y\>>\<mathd\>y
+  <math|p<around*|(|y|)>\<assign\><big|int><rsub|\<cal-Z\>>\<mathd\>z
+  p<around*|(|y,z|)>> and <math|p<around*|(|z|)>\<assign\><big|int><rsub|\<cal-Y\>>\<mathd\>y
   p<around*|(|y,z|)>> if <math|X> is of continuum, and the same for mass
-  function. We <strong|marginalize> <math|Z> so as to get <math|P<rsub|Y>>.
+  function. Notice that we have omitted the subscript <math|Y> in
+  <math|p<rsub|Y>> (and the same for <math|p<rsub|Z>>) since the <math|y> in
+  <math|p<around*|(|y|)>> has clearly indicated this. We <strong|marginalize>
+  <math|Z> so as to get <math|P<rsub|Y>>.
+
+  We further have the <strong|conditional distribution> of <math|Y> given
+  <math|Z>, denoted by <math|P<rsub|Y\|Z>>, where
+  <math|p<around*|(|y\|z|)>\<assign\>p<around*|(|y,z|)>/p<around*|(|z|)>> (we
+  omit the subscript of <math|p<rsub|Y\|Z>> too). Suppose that we samples
+  lots of <math|<around*|(|Y,Z|)>> values from <math|P>, and then filters the
+  pairs with <math|Z=z>. The frequency of <math|Y=y> found in the filtered
+  samples is approximated by <math|p<around*|(|y\|z|)>>.
 
   <subsection|Shannon Entropy Is Plausible for Discrete Random Variable>
 
@@ -341,7 +352,7 @@
       <no-break><pageref|auto-2>>
 
       <with|par-left|<quote|1tab>|1.2<space|2spc>Shannon Entropy Is Plausible
-      for Discrete Variable <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      for Discrete Random Variable <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-3>>
 
       <with|par-left|<quote|1tab>|1.3<space|2spc>Shannon Entropy Fails for
