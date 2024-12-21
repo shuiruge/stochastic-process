@@ -5,9 +5,6 @@
 <\body>
   <section|Least-Action Principle>
 
-  In this section, we are to find a way of extracting dynamics (action or
-  Lagrangian) from any raw data of any entity.
-
   <subsection|Conventions in This Section>
 
   Follow the conventions in section <reference|section: Kramers-Moyal
