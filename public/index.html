@@ -626,7 +626,7 @@ a) = 0\), we get \(\partial_1 h (a x, a y) x + \partial_2 h (a
       t)] .\)
     </center>
     <p>
-      By inserting equation (<a href="#equation:transition density normalization">?</a>), we find
+      By inserting equation (<a href="#equation:transition density normalization">1</a>), we find
     </p>
     <table width="100%">
       <tr>
@@ -700,8 +700,8 @@ y) p (y, t) . \)</td>
     </table>
     <p>
       <em>Since we only deal with Markovian stochastic process throughout this
-      note, when referring to master equation, we mean equation <a href="#equation:master equation">?</a>.
-      And to discrete time master equation, equation <a href="#equation:discrete time master equation">?</a>:</em>
+      note, when referring to master equation, we mean equation <a href="#equation:master equation">4</a>.
+      And to discrete time master equation, equation <a href="#equation:discrete time master equation">5</a>:</em>
     </p>
     <table width="100%">
       <tr>
@@ -716,7 +716,7 @@ y) p (y, t) . \)</td>
     </p>
     <p>
       Before finishing this section, we discuss the demanded conditions for
-      transition rate. The normalization of transition density <a href="#equation:transition density normalization">?</a>
+      transition rate. The normalization of transition density <a href="#equation:transition density normalization">1</a>
       implies that \(\int_{\mathcal{X}} \mathrm{d} x r (x, y) = 0\). This can
       be seen by Taylor expanding \(q_{\Delta t}\) by \(\Delta t\), as
       \(q_{\Delta t} (x|y) = \delta (x - y) + r (x, y) \Delta t + \omicron
@@ -725,7 +725,7 @@ y) p (y, t) . \)</td>
       the non-negativity of \(q_{\Delta t}\) implies \(r (x, y) \geqslant 0\)
       when \(x \neq y\). Since \(p\) is a density function of distribution,
       and density function is defined to be positive (see section <a href="#section: A Brief Review of Probability">1.1</a>),
-      the equation <a href="#equation:discrete time master equation v0">?</a> must conserve this positivity. We are to
+      the equation <a href="#equation:discrete time master equation v0">2</a> must conserve this positivity. We are to
       show that this is guaranteed by the master equation itself, without any
       extra condition demanded for the transition rate. It is convenient to
       use discrete notations, thus replace \(x \rightarrow i\), \(y
@@ -755,9 +755,9 @@ y) p (y, t) . \)</td>
       are to show how this happens.
     </p>
     <p>
-      We can use the master equation <a href="#equation:master equation">?</a> to calculate \(\partial^n
+      We can use the master equation <a href="#equation:master equation">4</a> to calculate \(\partial^n
       p / \partial t^n\) for any \(n\). For \(n = 2\), by inserting master
-      equation <a href="#equation:master equation">?</a> (to the blue term), we have
+      equation <a href="#equation:master equation">4</a> (to the blue term), we have
     </p>
     <center>
       \(\displaystyle \frac{\partial^2 p}{\partial t^2} (z, t) =
@@ -771,7 +771,7 @@ y) p (y, t) . \)</td>
 p}{\partial t} (y, t)} .\)
     </center>
     <p>
-      We then insert master equation <a href="#equation:master equation">?</a> again (to the green term),
+      We then insert master equation <a href="#equation:master equation">4</a> again (to the green term),
       and find
     </p>
     <center>
@@ -801,7 +801,7 @@ x) p (x, t) .\)
       \(r\), is independent of \(t\): a Markovian property.
     </p>
     <p>
-      On the other hand, Taylor expand the both sides of equation <a href="#equation:discrete time master equation">?</a>
+      On the other hand, Taylor expand the both sides of equation <a href="#equation:discrete time master equation">5</a>
       by \(\Delta t\) gives, at \((\Delta t)^{n + 1}\) order,
     </p>
     <center>
@@ -935,7 +935,7 @@ y_2 r (z, y_2) r
 (x, t)\)
     </center>
     <p>
-      also leads to the (continuous time) master equation <a href="#equation:master equation">?</a> with
+      also leads to the (continuous time) master equation <a href="#equation:master equation">4</a> with
       the same \(r\) as that of \(q_{\Delta t}\). So, we should have
       \(q'_{\Delta t} = q_{\Delta t}\), which means \(f\) is not free, but
       should vanish.
@@ -996,12 +996,12 @@ p (x, t) = 0.\)
       This provides an addition restriction to the transition density.
     </p>
     <p>
-      Interestingly, obeying equation <a href="#equation:transition rate determines transition density v2">?</a> is sufficient for
-      \(q_{\Delta t}\) to satisfy equation <a href="#equation:transition rate determines transition density">?</a>. Precisely, let
+      Interestingly, obeying equation <a href="#equation:transition rate determines transition density v2">7</a> is sufficient for
+      \(q_{\Delta t}\) to satisfy equation <a href="#equation:transition rate determines transition density">6</a>. Precisely, let
       \(q_{\Delta t} (x|y)\) is a function that is smooth on \(\Delta t\) with
       \(q_0 (x|y) = \delta (x - y)\), we are to show that, if \(q_{\Delta t}\)
-      satisfies equation <a href="#equation:transition rate determines transition density v2">?</a>, then it will obey equation <a href="#equation:transition rate determines transition density">?</a>.
-      To do so, we take derivative on equation <a href="#equation:transition rate determines transition density v2">?</a> by \(\Delta t'\)
+      satisfies equation <a href="#equation:transition rate determines transition density v2">7</a>, then it will obey equation <a href="#equation:transition rate determines transition density">6</a>.
+      To do so, we take derivative on equation <a href="#equation:transition rate determines transition density v2">7</a> by \(\Delta t'\)
       at \(\Delta t' = 0\), resulting in
     </p>
     <center>
@@ -1053,11 +1053,11 @@ q^{(n + 1)}_0 (z|x) .\)
 x)\)
     </center>
     <p>
-      again. And this implies equation <a href="#equation:transition rate determines transition density">?</a>. So, we conclude this
-      paragraph as follow: <em>obeying equation <a href="#equation:transition rate determines transition density v2">?</a> is the
+      again. And this implies equation <a href="#equation:transition rate determines transition density">6</a>. So, we conclude this
+      paragraph as follow: <em>obeying equation <a href="#equation:transition rate determines transition density v2">7</a> is the
       sufficient and essential condition for a function \(q_{\Delta t}
       (x|y)\), which is smooth on \(\Delta t\) with \(q_0 (x|y) = \delta (x -
-      y)\), to satisfy equation <a href="#equation:transition rate determines transition density">?</a>; additionally, if \(q_{\Delta
+      y)\), to satisfy equation <a href="#equation:transition rate determines transition density">6</a>; additionally, if \(q_{\Delta
       t} (x|y)\) is non-negative and normalized on \(x\) (namely,
       \(\int_{\mathcal{X}} \mathrm{d} x q_{\Delta t} (x|y) = 1\)), then
       \(q_{\Delta t}\) is a transition density</em>.
@@ -1065,7 +1065,7 @@ x)\)
     <h3 id="auto-10"><a id="section: Detailed Balance Provides Stationary Distribution"></a>2.4<span style="margin-left: 1em"></span>Detailed Balance Provides
     Stationary Distribution<span style="margin-left: 1em"></span></h3>
     <p>
-      Let \(\Pi\) a stationary solution of master equation <a href="#equation:master equation">?</a>.
+      Let \(\Pi\) a stationary solution of master equation <a href="#equation:master equation">4</a>.
       Then, its density function \(\pi\) satisfies \(\int_{\mathcal{X}}
       \mathrm{d} y r (x, y) \pi (y) = 0\). Since we have demanded that
       \(\int_{\mathcal{X}} \mathrm{d} y r (y, x) = 0\), the stationary master
@@ -1091,8 +1091,8 @@ x)\)
     </p>
     <p>
       Interestingly, for a transition rate \(r\) that satisfies detailed
-      balance condition <a href="#equation:Detailed Balance">?</a>, the transition density \(q_{\Delta
-      t}\) generated by \(r\) using equation <a href="#equation:transition rate determines transition density">?</a> satisfies a
+      balance condition <a href="#equation:Detailed Balance">8</a>, the transition density \(q_{\Delta
+      t}\) generated by \(r\) using equation <a href="#equation:transition rate determines transition density">6</a> satisfies a
       similar relation
     </p>
     <table width="100%">
@@ -1103,7 +1103,7 @@ x)\)
       </tr>
     </table>
     <p>
-      To see this, consider the third line in equation (<a href="#equation:transition rate determines transition density">?</a>), where
+      To see this, consider the third line in equation (<a href="#equation:transition rate determines transition density">6</a>), where
       the main factor is
     </p>
     <center>
@@ -1125,7 +1125,7 @@ x)\)
     </center>
     <p>
       Following the same steps, we can show that all terms in equation <a
-      href="#equation:transition rate determines transition density">?</a> share the same relation, indicating \(q_{\Delta t} (z|x) \pi
+      href="#equation:transition rate determines transition density">6</a> share the same relation, indicating \(q_{\Delta t} (z|x) \pi
       (x) = q_{\Delta t} (x|z) \pi (z)\).
     </p>
     <h3 id="auto-11"><a id="section: Detailed Balance Condition and Connectivity Monotonically Reduce Relative Entropy"></a>2.5<span style="margin-left: 1em"></span>Detailed Balance with
@@ -1153,7 +1153,7 @@ t)}{\pi (x)} .\)</td>
     <p>
       We can calculate the time-derivative of relative entropy by master
       equation
-      <a href="#equation:master equation">?</a>
+      <a href="#equation:master equation">4</a>
       . Generally, the time-derivative of relative entropy has no interesting
       property. But, if the \(\pi\) is more than stationary but satisfying a
       stronger condition: detailed balance, then \(\mathrm{d} H (P (t), \Pi) /
@@ -1193,7 +1193,7 @@ x \frac{\partial p}{\partial
                 t} (x, t) \ln \frac{p (x, t)}{\pi (x)} .\)
               </center><p>
                 Now, we replace \(\partial p / \partial t\) by master equation
-                <a href="#equation:master equation">?</a>, as
+                <a href="#equation:master equation">4</a>, as
               </p><center>
                 \(\displaystyle \frac{\mathrm{d}}{\mathrm{d} t} H (P (t), \Pi)
                 = \int_{\mathcal{X}} \mathrm{d}
@@ -1401,10 +1401,10 @@ x \int_{\mathcal{X}}
       <strong>Theorem <class style="font-style: normal">1</class>. </strong><i><a id="theorem: relaxation"></a>Let
       \(\Pi\) a distribution with alphabet \(\mathcal{X}\). If there is a
       transition rate r such that 1) every two elements in \(\mathcal{X}\) are
-      connected and that 2) the detailed balance condition <a href="#equation:Detailed Balance">?</a>
+      connected and that 2) the detailed balance condition <a href="#equation:Detailed Balance">8</a>
       holds for \(\Pi\) and \(r\), then for any time-dependent distribution
       \(P (t)\) with the same alphabet (at one time) evolved by the master
-      equation <a href="#equation:master equation">?</a>, \(P (t)\) will monotonically and constantly
+      equation <a href="#equation:master equation">4</a>, \(P (t)\) will monotonically and constantly
       relax to \(\Pi\).</i>
     </p>
     <p>
@@ -1420,7 +1420,7 @@ x \int_{\mathcal{X}}
     Guarantee of Relaxation<span style="margin-left: 1em"></span></h3>
     <p>
       How to numerically simulate the evolution of master equation
-      <a href="#equation:master equation">?</a>
+      <a href="#equation:master equation">4</a>
       that tends to equilibrium (without which the simulation will not
       terminate)? Using the metaphor of sands (see section
       <a href="#section: Master Equation Describes the Evolution of Markov Process">2.2</a>
@@ -1435,7 +1435,7 @@ x \int_{\mathcal{X}}
       hand, to ensure the termination, the transition rate \(r\), together
       with the density function \(\pi\), shall satisfy the detailed balance
       condition
-      <a href="#equation:Detailed Balance">?</a>
+      <a href="#equation:Detailed Balance">8</a>
       . (Section
       <a href="#section: Example: Metropolis-Hastings Algorithm">2.7</a>
       will provide a method that constructs such a transition rate from the
@@ -1541,8 +1541,8 @@ t))}\) gives
     <p>
       The first line is recognized as \(H (P (t + \Delta t), P (t))\), which
       is non-negative. Following the same steps in section <a href="#section: Detailed Balance Condition and Connectivity Monotonically Reduce Relative Entropy">2.5</a>
-      (but using discrete time master equation <a href="#equation:discrete time master equation">?</a> instead, and
-      detailed balance condition <a href="#equation:Detailed Balance for transition density">?</a> for transition density), the
+      (but using discrete time master equation <a href="#equation:discrete time master equation">5</a> instead, and
+      detailed balance condition <a href="#equation:Detailed Balance for transition density">9</a> for transition density), the
       second line reduces to
     </p>
     <center>
@@ -1682,11 +1682,11 @@ t^2) .\)
 t^2),\)
     </center>
     <p>
-      where, by master equation <a href="#equation:master equation">?</a>, \((\partial / \partial t) \ln
+      where, by master equation <a href="#equation:master equation">4</a>, \((\partial / \partial t) \ln
       p (x, t) = \int_{\mathcal{X}} \mathrm{d} x r (x,
 y) p (y, t) / p (x,
-      t)\). For \(\Delta H_2\), we insert equation <a href="#equation:relative entropy derivative">?</a> after Taylor
-      expanding \(q_{\Delta t}\) by \(\Delta t\), and obtain
+      t)\). For \(\Delta H_2\), we insert equation <a href="#equation:relative entropy derivative">11</a> after
+      Taylor expanding \(q_{\Delta t}\) by \(\Delta t\), and obtain
     </p>
     <center>
       \(\displaystyle \Delta H_2 = \Delta t \frac{\mathrm{d}}{\mathrm{d} t} H
@@ -1752,7 +1752,7 @@ y) p (y, t) / p (x,
       This transition rate connects every two elements in \(\mathcal{X}\)
       (since \(\gamma (y, x) > 0\) for each \(x \neq y\)). In addition,
       together with \(\pi\), it satisfies the detailed balance condition <a
-      href="#equation:Detailed Balance">?</a>. Directly,
+      href="#equation:Detailed Balance">8</a>. Directly,
     </p>
     <center>
       \(\displaystyle \begin{array}{rl}
@@ -1778,7 +1778,7 @@ y) p (y, t) / p (x,
     </center>
     <p>
       Thus detailed balance condition holds. So, theorem <a href="#theorem: relaxation">1</a> states
-      that, <em>evolved by the master equation <a href="#equation:master equation">?</a>, any initial
+      that, <em>evolved by the master equation <a href="#equation:master equation">4</a>, any initial
       distribution will finally relax to the stationary distribution
       \(\Pi\)</em>.
     </p>
@@ -1799,7 +1799,7 @@ y) p (y, t) / p (x,
     </table>
     <p>
       where \(g\) is positive-definite on \(\mathcal{X}\). Notice that, in
-      equation <a href="#equation:metropolis-hastings origin">?</a> there is no extra time parameter like the
+      equation <a href="#equation:metropolis-hastings origin">13</a> there is no extra time parameter like the
       \(q_{\Delta t} (x|y)\) in section <a href="#section: Master Equation Describes the Evolution of Markov Process">2.2</a>. It can be seen as a
       fixed time interval, which can only be used for discrete time master
       equation.
@@ -1836,8 +1836,8 @@ y) p (y, t) / p (x,
     <p>
       Altogether, for each \(x, y \in \mathcal{X}\), we find \(q_{\Delta t}
       (x|y) = \delta (x - y) + r (x, y) \Delta t + \omicron (\Delta t)\).
-      <em>In practice, we use the Metropolis-Hastings algorithm <a href="#equation:metropolis-hastings origin">?</a>
-      to numerically simulate master equation <a href="#equation:master equation">?</a>.</em> But, based
+      <em>In practice, we use the Metropolis-Hastings algorithm <a href="#equation:metropolis-hastings origin">13</a>
+      to numerically simulate master equation <a href="#equation:master equation">4</a>.</em> But, based
       on the discussion in section <a href="#section: Monte-Carlo Simulation and Guarantee of Relaxation">2.6</a>, the \(\Delta t\) in
       \(g_{\Delta t}\) shall be properly bounded to be small (or equivalently
       speaking, \(g\) shall be &ldquo;principal diagonal&rdquo;)  so as to
@@ -1847,8 +1847,8 @@ y) p (y, t) / p (x,
     Function<span style="margin-left: 1em"></span></h3>
     <p>
       Given a transition rate, we wonder if there exists a density function
-      such that detailed balance condition <a href="#equation:Detailed Balance">?</a> holds. Actually,
-      equation <a href="#equation:Detailed Balance">?</a> <em>defines</em> a density function. For
+      such that detailed balance condition <a href="#equation:Detailed Balance">8</a> holds. Actually,
+      equation <a href="#equation:Detailed Balance">8</a> <em>defines</em> a density function. For
       example, if both \(r (x, y)\) and \(r (y, x)\) are not zero, we can
       construct \(\pi (y)\) by given \(\pi (x)\) as \(\pi (y) = \pi (x) r (y,
       x) / r (x, y)\). Generally, if \(x\) and \(y\) are connected, then there
@@ -1910,8 +1910,8 @@ y) p (y, t) / p (x,
     </table>
     <p>
       It means every path along two connected elements in \(\mathcal{X}\) is
-      equivalent. If the condition <a href="#equation:circle">?</a> holds, we can simplify the
-      notation in equation <a href="#equation:define stationary density function">?</a> by
+      equivalent. If the condition <a href="#equation:circle">15</a> holds, we can simplify the
+      notation in equation <a href="#equation:define stationary density function">14</a> by
     </p>
     <center>
       \(\displaystyle \ln \pi (y) = \ln \pi (x) + \int_x^y \mathrm{d} s \rho
@@ -1922,30 +1922,30 @@ y) p (y, t) / p (x,
       \(y\) are connected).
     </p>
     <p>
-      Condition <a href="#equation:circle">?</a> implies that the previous construction does
+      Condition <a href="#equation:circle">15</a> implies that the previous construction does
       define a \(\pi\) that holds the detailed balance condition. Given \(x, y
       \in \mathcal{X}\), we have \(\ln \pi (x) = \ln \pi (x_0) + \int_{x_0}^x
       \mathrm{d} s \rho (s)\) and \(\ln \pi (y) = \ln \pi (x_0) + \int_{x_0}^y
       \mathrm{d} s \rho (s)\). If \(x\) and \(y\) are connected, then, by
-      condition <a href="#equation:circle">?</a>,\(\) \(\rho (y, x) = \int_x^{x_0} \mathrm{d} s
+      condition <a href="#equation:circle">15</a>,\(\) \(\rho (y, x) = \int_x^{x_0} \mathrm{d} s
       \rho (s) + \int_{x_0}^y \mathrm{d} s
 \rho (s)\) (the \(\rho (y, x)\)
       indicates the path \((x, y)\), &ldquo;jumping&rdquo; directly from \(x\)
       to \(y\)), thus \(\ln \pi (y) = \ln \pi (x) + \rho (y, x)\), which is
-      just the detailed balance condition <a href="#equation:Detailed Balance">?</a>. And if \(x\) and
+      just the detailed balance condition <a href="#equation:Detailed Balance">8</a>. And if \(x\) and
       \(y\) are not connected, then both \(r (x, y)\) and \(r (y, x)\) shall
       vanish (recall the requirements of transition rate in section <a href="#section: Master Equation Describes the Evolution of Markov Process">2.2</a>:
       if \(r (x, y) = 0\), then \(r (y, x) = 0\)), and detailed balance
       condition holds naturally.
     </p>
     <p>
-      So, condition <a href="#equation:circle">?</a> is <em>essential and sufficient for the
-      existence of \(\pi\) that holds the detailed balance condition <a href="#equation:Detailed Balance">?</a></em>.
+      So, condition <a href="#equation:circle">15</a> is <em>essential and sufficient for the
+      existence of \(\pi\) that holds the detailed balance condition <a href="#equation:Detailed Balance">8</a></em>.
       If \(\mathcal{X}\) is a simply connected smooth manifold, then using
       Stokes's theorem, we have \(\nabla \times \rho = 0\) on \(\mathcal{X}\).
       But, generally \(\mathcal{X}\) is neither simply connected nor smooth,
       but involving independent subsystems and discrete. In these cases,
-      condition <a href="#equation:circle">?</a> becomes very complicated.
+      condition <a href="#equation:circle">15</a> becomes very complicated.
     </p>
     <p>
       In many applications, we consider the inverse question: given a density
@@ -1992,7 +1992,7 @@ y) p (y, t) / p (x,
       smoothness.
     </p>
     <p>
-      Now, the master equation <a href="#equation:master equation">?</a> becomes
+      Now, the master equation <a href="#equation:master equation">4</a> becomes
     </p>
     <center>
       \(\displaystyle \frac{\partial p}{\partial t} (x, t) =
@@ -2158,7 +2158,7 @@ x^{\alpha_k}} \right)  [\omega (x, \epsilon) p
 \epsilon^{\alpha} = 0\) for each
       \(\alpha\), since the water molecule cannot distinguish the direction
       \(- \epsilon^{\alpha}\) from \(\epsilon^{\alpha}\). With these two
-      assumptions, the Kramers&ndash;Moyal expansion <a href="#equation:km expansion">?</a> becomes
+      assumptions, the Kramers&ndash;Moyal expansion <a href="#equation:km expansion">17</a> becomes
     </p>
     <center>
       \(\displaystyle \frac{\partial p}{\partial t} (x, t) = \sum_{k = 2}^{+
@@ -2214,7 +2214,7 @@ x^{\alpha_1}} \cdots \frac{\partial}{\partial
     <p>
       where the factor \(1 / \sqrt{\cdots}\) comes from normalization
       \(\int_{\mathbb{R}^n} \mathrm{d} x p (x, t) = 1\). Recall the (discrete
-      time) master equation <a href="#equation:discrete time master equation">?</a>, \(p (x, \Delta t) =
+      time) master equation <a href="#equation:discrete time master equation">5</a>, \(p (x, \Delta t) =
       \int_{\mathbb{R}^n} \mathrm{d} y q_{\Delta t} (x|y) p (y, 0)\). The
       transition rate of pollen particle can be readily read out as
     </p>
@@ -2293,7 +2293,7 @@ x^{\alpha_1}} \cdots \frac{\partial}{\partial
       If we replace the pollen particles by paramecia, then the scales remain.
       In the perspective of water molecule, homogeneity and isotropy still
       hold. So, the contribution from the constant striking of water molecules
-      obeys the transition density of Wiener process <a href="#equation:wiener process">?</a>. But in
+      obeys the transition density of Wiener process <a href="#equation:wiener process">18</a>. But in
       the perspective of paramecium, both homogeneity and isotropy break.
       Unlike pollen particle, a paramecium can swim along a direction (maybe,
       there is food on this direction), thus isotropy breaks. In the
@@ -2417,7 +2417,7 @@ t'} (x|y)
       \mathrm{d} W^{\alpha},\)
     </center>
     <p>
-      which is a formal re-formulation of equation <a href="#equation:langevin process v0">?</a>.
+      which is a formal re-formulation of equation <a href="#equation:langevin process v0">19</a>.
     </p>
     <h3 id="auto-20"><a id="section: Transition Rate of Langevin Process Is a Generalized Function"></a>3.5<span style="margin-left: 1em"></span>Transition Rate of Langevin
     Process Is a Generalized Function<span style="margin-left: 1em"></span></h3>
@@ -2757,7 +2757,7 @@ x) f^{\alpha
       \epsilon |x) = \Delta t K^{\alpha \beta
 \gamma} (x) + \omicron (\Delta
       t)\) (derived in section <a href="#section: Spatial Expansion of Master Equation Gives Kramers-Moyal Expansion">3.2</a>), we find \(K^{\alpha \beta
-      \gamma} (x) = 0\). Thus, Kramers-Moyal expansion <a href="#equation:km expansion">?</a> reads
+      \gamma} (x) = 0\). Thus, Kramers-Moyal expansion <a href="#equation:km expansion">17</a> reads
     </p>
     <table width="100%">
       <tr>
@@ -2779,7 +2779,7 @@ p (x, t)) .
     <h3 id="auto-22">3.7<span style="margin-left: 1em"></span>Stationary Solution of Langevin Process Has
     Source-Free Degree of Freedom<span style="margin-left: 1em"></span></h3>
     <p>
-      The master equation of Langevin process (equation <a href="#equation:Fokker-Planck equation">?</a>) has
+      The master equation of Langevin process (equation <a href="#equation:Fokker-Planck equation">22</a>) has
       stationary solution \(\Pi\) which satisfies (since there is only one
       variable \(x\), we use \(\partial\) instead of \(\nabla\))
     </p>
@@ -2825,8 +2825,8 @@ p (x, t)) .
       this is equivalent to ask: when will the transition rate of Langevin
       process satisfy detailed balance condition? Detailed balance condition
       reads \(r (x + \epsilon, x) \pi (x) = r (x, x + \epsilon) \pi (x +
-      \epsilon)\). Directly inserting equation <a href="#equation:Langevin transition rate">?</a>, we get, for the
-      left hand side,
+      \epsilon)\). Directly inserting equation <a href="#equation:Langevin transition rate">21</a>, we get, for
+      the left hand side,
     </p>
     <center>
       \(\displaystyle r (x + \epsilon, x) \pi (x) = - f^{\alpha} (x) \pi (x)
@@ -2985,7 +2985,7 @@ p (x, t)) .
     </table>
     <p>
       Comparing with the stationary solution of Langevin process (equation <a
-      href="#equation:stationary Fokker-Planck equation">?</a>), the source-free vector field \(\nu\) is absent here.
+      href="#equation:stationary Fokker-Planck equation">23</a>), the source-free vector field \(\nu\) is absent here.
       Recall in section <a href="#section: Detailed Balance Provides Stationary Distribution">2.4</a> where detailed balance condition was
       first encountered, we said that detailed balance condition is stronger
       than just being stationary. Now, in Langevin process, this becomes
@@ -3078,13 +3078,13 @@ x (1) = x_1 \}\) given the
     </p>
     <p>
       Take harmonic oscillator as example. To discretize its action (equation
-      <a href="#equation:harmonic oscillator action">?</a>), we replace the integral \(\int_0^1 \mathrm{d} t\) by
+      <a href="#equation:harmonic oscillator action">25</a>), we replace the integral \(\int_0^1 \mathrm{d} t\) by
       mean \((1 / T)  \sum_{i = 0}^T\) and \(x (t)\) by \(x (i / T)\). Thus
       the second term becomes \((\omega^2 / 2 T)  \sum_{i = 0}^T x^2 (i /
       T)\). For the first term, the derivative \(\dot{x} (t)\) is replaced by
       its difference \(T [x ((i + 1) / T) - x (i / T)]\), hence the summation
       shall terminated at \(T - 1\) instead of \(T\). Altogether, the action
-      <a href="#equation:harmonic oscillator action">?</a> is discretized as
+      <a href="#equation:harmonic oscillator action">25</a> is discretized as
     </p>
     <center>
       \(\displaystyle S_{\operatorname{HO}} (x|x_0, x_1) = \frac{T}{2} \sum_{i
@@ -3167,7 +3167,7 @@ x_1) = T^2  [x_{\star} ((i + 1) / T) - 2 x_{\star}
     </p>
     <p>
       There are, however, redundant degrees of freedom in action \(S\). We may
-      construct multiple actions all satisfying equation <a href="#equation:least-action principle v1">?</a>.
+      construct multiple actions all satisfying equation <a href="#equation:least-action principle v1">27</a>.
       Knowing the extremum of a function cannot imply the shape of the
       function. The action has much more degrees of freedom than that is
       needed for revealing the real world datum in classical mechanics. But
@@ -3233,7 +3233,7 @@ x_1) = T^2  [x_{\star} ((i + 1) / T) - 2 x_{\star}
       x^{\alpha}} \right] = 0.\)
     </center>
     <p>
-      This is analog to equation <a href="#equation:least-action principle v1">?</a>, where the minimum
+      This is analog to equation <a href="#equation:least-action principle v1">27</a>, where the minimum
       \(x_{\star}\) is replaced by the expectation \(\mathbb{E}_Q\). Secondly,
       in the limit \(\beta \rightarrow + \infty\) while fixing \(S\), the
       distribution \(Q\) becomes so sharp that it only samples the
@@ -3270,7 +3270,7 @@ x_1) = T^2  [x_{\star} ((i + 1) / T) - 2 x_{\star}
       where \(Z (\theta) = \int_{\mathcal{X}} \mathrm{d} x \exp (- S (x,
       \theta))\) for ensuring the normalization \(\int_{\mathcal{X}}
       \mathrm{d} x p (x, \theta) = 1\). This is consistent with the action
-      defined by equation <a href="#equation:action of distribution">?</a>, except that the action here is
+      defined by equation <a href="#equation:action of distribution">28</a>, except that the action here is
       parameterized, and that we omit the constant \(\beta\) since it is
       irrelevant throughout this section.
     </p>
@@ -3285,7 +3285,7 @@ x_1) = T^2  [x_{\star} ((i + 1) / T) - 2 x_{\star}
       density function of \(Q\), all that we can do with \(Q\) is computing
       the expectation \(\mathbb{E}_Q [f] = (1 / | Q |) \sum_{x \in Q} f (x)\)
       for any function \(f\), where we use \(Q\) as a set of data. With this
-      realization, we have, after plugging equation <a href="#equation:generic density">?</a> into \(H
+      realization, we have, after plugging equation <a href="#equation:generic density">29</a> into \(H
       (Q, P (\theta))\),
     </p>
     <center>
@@ -3372,7 +3372,7 @@ x_1) = T^2  [x_{\star} ((i + 1) / T) - 2 x_{\star}
       
     </p>
     <p>
-      It can be read from equation <a href="#equation:data-fitting iteration">?</a> that minimizing \(L\) is to
+      It can be read from equation <a href="#equation:data-fitting iteration">30</a> that minimizing \(L\) is to
       increase \(S (\cdot, \theta)\) on the sampled points (the first term)
       while decrease it on data points (the second term). As figure <a href="#figure: Least-Action">1</a>
       illustrates, this way of optimization will site real world data onto
@@ -3423,10 +3423,10 @@ x_1) = T^2  [x_{\star} ((i + 1) / T) - 2 x_{\star}
       Each movie is a series of frames that log the positions of each bird at
       each time instant. These movies provide the real world data. The
       parameterized action \(S\) can be expressed by a neural network. Then,
-      iterating by equation <a href="#equation:data-fitting iteration">?</a> until \(\| \partial L / \partial
+      iterating by equation <a href="#equation:data-fitting iteration">30</a> until \(\| \partial L / \partial
       \theta \|\) has been small enough gives an \(S (\cdot, \theta_{\star})\)
       that mimics the stochastic dynamics of starling flocks. To compute the
-      expectation \(\mathbb{E}_{P (\theta)} [\ldots]\) in equation <a href="#equation:data-fitting iteration">?</a>,
+      expectation \(\mathbb{E}_{P (\theta)} [\ldots]\) in equation <a href="#equation:data-fitting iteration">30</a>,
       we can employ Monte-Carlo simulation with the transition rate satisfying
       detailed balance condition with \(P (\theta)\) as the stationary
       distribution. For continuous random variables, Monte-Carlo simulation
@@ -3487,7 +3487,7 @@ x^{\alpha}_i}{\Delta t} - f^{\alpha} (x_i)
       f^{\beta} (x_i) \right] +\operatorname{const}.\)
     </center>
     <p>
-      If regard \(x_0\) as the condition, then equation <a href="#equation:action of distribution">?</a>
+      If regard \(x_0\) as the condition, then equation <a href="#equation:action of distribution">28</a>
       (setting \(\beta = 1\)) defines the action
     </p>
     <table width="100%">
@@ -3707,13 +3707,14 @@ t} \right) \varphi (x) .\)
     <h3 id="auto-32"><a id="section: Langevin Process Has Dissipation"></a>4.7<span style="margin-left: 1em"></span>* Langevin Process Has
     Dissipation<span style="margin-left: 1em"></span></h3>
     <p>
-      We are to compare action <a href="#equation:action of langevin process">?</a> with that appearing in classical
-      mechanics. To make the compute simple, we directly employ Euler-Lagrange
-      equation. Readers who are not familiar with it may skip this section.
+      We are to compare action <a href="#equation:action of langevin process">32</a> with that appearing in
+      classical mechanics. To make the compute simple, we directly employ
+      Euler-Lagrange equation. Readers who are not familiar with it may skip
+      this section.
     </p>
     <p>
       For simplicity, we suppose \(K (x)\) to be identity matrix for any
-      \(x\). In this situation, the action <a href="#equation:action of langevin process">?</a> becomes
+      \(x\). In this situation, the action <a href="#equation:action of langevin process">32</a> becomes
     </p>
     <table width="100%">
       <tr>
@@ -3735,7 +3736,7 @@ t} \right) \varphi (x) .\)
       \((x_0, \ldots, x_N)\) becomes \(x (t)\) with \(t \in [0, t_f]\), where
       \(t_f := N \Delta t\), and \(x_0\) becomes \(x (0)\). Accordingly, \(f
       (x_i)\) becomes \(f (x (t))\). So, we get the continuous version of
-      equation <a href="#equation:action of langevin process v2">?</a>, as
+      equation <a href="#equation:action of langevin process v2">33</a>, as
     </p>
     <center>
       \(\displaystyle S (x|x (0)) = \frac{1}{2} \int_0^{t_f} \mathrm{d} t
@@ -3806,7 +3807,7 @@ f^{\beta} (x) \partial_{\alpha} f^{\beta} (x) .\)
     </p>
     <p>
       To show how it works, we start with an action that is generalized from
-      action <a href="#equation:action of langevin process v2">?</a>, which is
+      action <a href="#equation:action of langevin process v2">33</a>, which is
     </p>
     <table width="100%">
       <tr>
@@ -3823,7 +3824,7 @@ f^{\beta} (x) \partial_{\alpha} f^{\beta} (x) .\)
     </table>
     <p>
       where \(\varphi, \xi : \mathbb{R}^n \times \mathbb{R}^n \rightarrow
-      \mathbb{R}^n\). Comparing with action <a href="#equation:action of langevin process v2">?</a>, \(\epsilon =
+      \mathbb{R}^n\). Comparing with action <a href="#equation:action of langevin process v2">33</a>, \(\epsilon =
       \Delta t\), \(\varphi (x_{i + 1}, x_i) = f (x_i)\), and \(\xi (x_{i +
       1}, x_i) = f^2 (x_i) / 2\). There are another two differences between
       them. Here, we do not fix boundary (namely, the condition \(x_0\) in \(S
@@ -3857,8 +3858,8 @@ x_{2 i + 1} \exp (- S (x))
     </p>
     <p>
       Given \(i\), we are to show how to marginalize \(x_{2 i + 1}\). This
-      variables appear in two terms in action <a href="#equation:rg action">?</a>, with indices \(2
-      i + 1\) and \(2 i\). So, we are to integrate \(\int_{\mathbb{R}^n}
+      variables appear in two terms in action <a href="#equation:rg action">35</a>, with indices
+      \(2 i + 1\) and \(2 i\). So, we are to integrate \(\int_{\mathbb{R}^n}
       \mathrm{d} x_{2 i + 1} \exp \left( \sum_{\alpha = 1}^n
 J^{\alpha}
       \right)\) where
@@ -3931,7 +3932,7 @@ x^{\alpha}_{2 i + 2}}{2} \right]^2 + \frac{1}{4
 x^{\alpha}_{2 i + 2})^2 .\)
     </center>
     <p>
-      Remark that the second term looks like the first term in action <a href="#equation:rg action">?</a>,
+      Remark that the second term looks like the first term in action <a href="#equation:rg action">35</a>,
       except for an \(1 / 2\) factor. Then, \(J^{\alpha}\) becomes
     </p>
     <center>
@@ -4326,7 +4327,7 @@ x^{\alpha}_{2 i})  [\Delta \varphi^{\alpha} (\bar{x}_{2 i + 1}, x_{2
       \epsilon \xi'}^{\alpha} (x_{i + 1}', x_i') \right],\)
     </center>
     <p>
-      which has exactly the same format as \(S\) (equation <a href="#equation:rg action">?</a>).
+      which has exactly the same format as \(S\) (equation <a href="#equation:rg action">35</a>).
     </p>
     <h3 id="auto-34">4.9<span style="margin-left: 1em"></span>Example: Action in Deep Learning
     (TODO)<span style="margin-left: 1em"></span></h3>
