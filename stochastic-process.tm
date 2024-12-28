@@ -45,107 +45,112 @@
     <no-break><pageref|auto-9>>
 
     <with|par-left|1tab|2.4<space|2spc>Master Equation on Euclidean Alphabet
-    Can Be Formulated as Path Integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    Can Be Formulated as Path Integral (TODO)
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-10>>
 
-    <with|par-left|1tab|2.5<space|2spc>Detailed Balance Provides Stationary
-    Distribution <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <with|par-left|1tab|2.5<space|2spc>Drafts
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-11>>
 
-    <with|par-left|1tab|2.6<space|2spc>Detailed Balance with Connectivity
-    Monotonically Reduces Relative Entropy
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <with|par-left|1tab|2.6<space|2spc>Detailed Balance Provides Stationary
+    Distribution <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-12>>
 
-    <with|par-left|1tab|2.7<space|2spc>Monte-Carlo Simulation and Guarantee
-    of Relaxation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <with|par-left|1tab|2.7<space|2spc>Detailed Balance with Connectivity
+    Monotonically Reduces Relative Entropy
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-13>>
 
-    <with|par-left|1tab|2.8<space|2spc>Example: Metropolis-Hastings Algorithm
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <with|par-left|1tab|2.8<space|2spc>Monte-Carlo Simulation and Guarantee
+    of Relaxation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-14>>
 
-    <with|par-left|1tab|2.9<space|2spc>* Existence of Stationary Density
-    Function <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <with|par-left|1tab|2.9<space|2spc>Example: Metropolis-Hastings Algorithm
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-15>>
+
+    <with|par-left|1tab|2.10<space|2spc>* Existence of Stationary Density
+    Function <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-16>>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|3<space|2spc>Kramers-Moyal
     Expansion and Langevin Process> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-16><vspace|0.5fn>
+    <no-break><pageref|auto-17><vspace|0.5fn>
 
     <with|par-left|1tab|3.1<space|2spc>Conventions in This Section
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-17>>
+    <no-break><pageref|auto-18>>
 
     <with|par-left|1tab|3.2<space|2spc>Spatial Expansion of Master Equation
     Gives Kramers-Moyal Expansion <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-18>>
+    <no-break><pageref|auto-19>>
 
     <with|par-left|1tab|3.3<space|2spc>Wiener Process Arises from Homogeneity
     and Isotropy <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-19>>
+    <no-break><pageref|auto-20>>
 
     <with|par-left|1tab|3.4<space|2spc>Langevin Process Arises in the
     Difference of Scales <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-20>>
+    <no-break><pageref|auto-21>>
 
     <with|par-left|1tab|3.5<space|2spc>Transition Rate of Langevin Process Is
     a Generalized Function <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-21>>
+    <no-break><pageref|auto-22>>
 
     <with|par-left|1tab|3.6<space|2spc>Master Equation of Langevin Process Is
     Fokker-Planck Equation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-22>>
+    <no-break><pageref|auto-23>>
 
     <with|par-left|1tab|3.7<space|2spc>Stationary Solution of Langevin
     Process Has Source-Free Degree of Freedom
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-23>>
+    <no-break><pageref|auto-24>>
 
     <with|par-left|1tab|3.8<space|2spc>Detailed Balance of Langevin Process
     Lacks Source-Free Degree of Freedom <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-24>>
+    <no-break><pageref|auto-25>>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|4<space|2spc>Least-Action
     Principle> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-25><vspace|0.5fn>
+    <no-break><pageref|auto-26><vspace|0.5fn>
 
     <with|par-left|1tab|4.1<space|2spc>Conventions in This Section
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-26>>
+    <no-break><pageref|auto-27>>
 
     <with|par-left|1tab|4.2<space|2spc>A Brief Review of Least-Action
     Principle in Classical Mechanics <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-27>>
+    <no-break><pageref|auto-28>>
 
     <with|par-left|1tab|4.3<space|2spc>Least-Action Principle of Distribution
     Has No Redundancy <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-28>>
+    <no-break><pageref|auto-29>>
 
     <with|par-left|1tab|4.4<space|2spc>Data Fitting Is Equivalent to
     Least-Action Principle of Distribution
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-29>>
+    <no-break><pageref|auto-30>>
 
     <with|par-left|1tab|4.5<space|2spc>How Far Will Information Propagate in
     Markovian Process? (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-31>>
+    <no-break><pageref|auto-32>>
 
     <with|par-left|1tab|4.6<space|2spc>Example: Action in Deep Learning
     (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-32>>
+    <no-break><pageref|auto-33>>
 
     <with|par-left|1tab|4.7<space|2spc>* History: Structures in Nature Arise
     from Least-Action Principle <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-33>>
+    <no-break><pageref|auto-34>>
 
     <with|par-left|2tab|4.7.1<space|2spc>WBE Theory and Universality
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-34>>
+    <no-break><pageref|auto-35>>
 
     <with|par-left|2tab|4.7.2<space|2spc>Renormalization Group and
     Criticality <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-35>>
+    <no-break><pageref|auto-36>>
   </table-of-contents>
 
   <section|Relative Entropy><label|section: Relative Entropy>
@@ -908,8 +913,8 @@
   a transition density>.
 
   <subsection|Master Equation on Euclidean Alphabet Can Be Formulated as Path
-  Integral><label|section: Master Equation on Euclidean Alphabet Can Be
-  Formulated as Path Integral>
+  Integral (TODO)><label|section: Master Equation on Euclidean Alphabet Can
+  Be Formulated as Path Integral>
 
   In this section, we are to formulate the master equation into path
   integral. The path integral formulation was found by Paul Dirac in 1933 who
@@ -956,15 +961,15 @@
   <math|q<rsub|\<Delta\>t><around*|(|x\|y|)>> is
   <math|\<delta\><around*|(|x-y|)>> which cannot be converted into
   exponential. But, we can consider its Fourier transform, since
-  <math|\<delta\><around*|(|x-y|)>> has exponential Fourier coefficient
-  <math|exp<around*|(|\<mathi\>k <around*|(|x-y|)>|)>>. We have simplified
-  the notation <math|k\<cdot\>x\<assign\>k<rsub|\<alpha\>> x<rsup|\<alpha\>>>
-  as <math|k x>, where the inner dot is omitted. This suggest us to consider
-  the Fourier transform of transition rate, as
+  <math|\<delta\><around*|(|x-y|)>>, if regarding as a Dirac delta function,
+  has exponential Fourier coefficient <math|exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>
+  <around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>|)>>. This suggest us to
+  consider the Fourier transform of transition rate, as
 
   <\equation*>
     <wide|r|^><around*|(|x,k|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>k
-    exp<around*|(|\<mathi\>k \<epsilon\>|)> r<around*|(|x+\<epsilon\>,x|)>.
+    exp<around*|(|\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>
+    r<around*|(|x+\<epsilon\>,x|)>.
   </equation*>
 
   This forces the alphabet to be <math|\<bbb-R\><rsup|n>>, because we cannot
@@ -974,7 +979,7 @@
   <\equation*>
     q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>=\<delta\><around*|(|\<epsilon\>|)>+r<around*|(|x+\<epsilon\>,x|)>
     \<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>=<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>k
-    \ exp<around*|(|-\<mathi\>k \<epsilon\>|)>
+    \ exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>
     <around*|[|1+<wide|r|^><around*|(|x,k|)>
     \<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>|]>.
   </equation*>
@@ -985,16 +990,17 @@
 
   <\equation*>
     q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>=<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>k
-    \ exp<around*|{|-\<mathi\>k \<epsilon\>+<wide|r|^><around*|(|x,k|)>
+    \ exp<around*|{|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>+<wide|r|^><around*|(|x,k|)>
     \<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>|}>.
   </equation*>
 
-  If we Taylor expand <math|<wide|r|^><around*|(|x,k|)>> by <math|\<mathi\>k>
-  at <math|k=0>, then the expansion coefficient is
+  We are to integrate over <math|k>. If we Taylor expand
+  <math|<wide|r|^><around*|(|x,k|)>> by <math|\<mathi\>k> at <math|k=0>, then
+  the expansion coefficient is (<math|K> hints for \Pcorrelation\Q)
 
   <\equation*>
-    lim<rsub|k\<rightarrow\>0><frac|\<partial\>|\<partial\><around*|(|\<mathi\>k<rsub|\<alpha\><rsub|1>>|)>>\<cdots\><frac|\<partial\>|\<partial\><around*|(|\<mathi\>k<rsub|\<alpha\><rsub|n>>|)>><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
-    exp<around*|(|\<mathi\>k\<epsilon\>|)>
+    K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>\<assign\>lim<rsub|k\<rightarrow\>0><frac|\<partial\>|\<partial\><around*|(|\<mathi\>k<rsub|\<alpha\><rsub|1>>|)>>\<cdots\><frac|\<partial\>|\<partial\><around*|(|\<mathi\>k<rsub|\<alpha\><rsub|n>>|)>><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
+    exp<around*|(|\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>
     r<around*|(|x+\<epsilon\>,x|)>=<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
     <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|)>
     r<around*|(|x+\<epsilon\>,x|)>.
@@ -1003,12 +1009,14 @@
   Thus, we find
 
   <\equation*>
-    <wide|r|^><around*|(|x,k|)>=f<rsup|\<alpha\>><around*|(|x|)>
-    <around*|(|\<mathi\>k<rsub|\<alpha\>>|)>+<around*|(|1/2|)>
-    K<rsup|\<alpha\>\<beta\>><around*|(|x|)>
+    <wide|r|^><around*|(|x,k|)>=K<rsub|1><rsup|\<alpha\>><around*|(|x|)>
+    <around*|(|\<mathi\>k<rsub|\<alpha\>>|)>+<frac|1|2!>
+    K<rsub|2><rsup|\<alpha\>\<beta\>><around*|(|x|)>
     <around*|(|\<mathi\>k<rsub|\<alpha\>>|)>
-    <around*|(|\<mathi\>k<rsub|\<beta\>>|)>+<frac|1|6>L<rsup|\<alpha\>\<beta\>\<gamma\>><around*|(|x|)>
-    k<rsub|\<alpha\>>k<rsub|\<beta\>> k<rsub|\<gamma\>>+\<cdots\>,
+    <around*|(|\<mathi\>k<rsub|\<beta\>>|)>+<frac|1|3>K<rsub|3><rsup|\<alpha\>\<beta\>\<gamma\>><around*|(|x|)>
+    <around*|(|\<mathi\>k<rsub|\<alpha\>>|)>
+    <around*|(|\<mathi\>k<rsub|\<beta\>>|)>
+    <around*|(|\<mathi\>k<rsub|\<gamma\>>|)>+\<cdots\>,
   </equation*>
 
   where the zeroth order term vanishes because of the property of transition
@@ -1018,195 +1026,93 @@
 
   <\equation*>
     <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>k
-    \ exp<around*|{|<around*|[|f<rsup|\<alpha\>><around*|(|x|)>
+    \ exp<around*|(|<around*|[|K<rsub|1><rsup|\<alpha\>><around*|(|x|)>
     \<Delta\>t-\<epsilon\><rsup|\<alpha\>>|]>
-    \<mathi\>k<rsub|\<alpha\>>-<frac|\<Delta\>t|2>K<rsup|\<alpha\>\<beta\>><around*|(|x|)>
-    k<rsub|\<alpha\>>k<rsub|\<beta\>>+<frac|\<Delta\>t|6>L<rsup|\<alpha\>\<beta\>\<gamma\>><around*|(|x|)>
-    k<rsub|\<alpha\>>k<rsub|\<beta\>> k<rsub|\<gamma\>>+\<cdots\>+\<omicron\><around*|(|\<Delta\>t|)>|}>.
+    \<mathi\>k<rsub|\<alpha\>>-<frac|\<Delta\>t|2>K<rsub|2><rsup|\<alpha\>\<beta\>><around*|(|x|)>
+    k<rsub|\<alpha\>>k<rsub|\<beta\>>-<frac|\<mathi\>\<Delta\>t|6>K<rsub|3><rsup|\<alpha\>\<beta\>\<gamma\>><around*|(|x|)>
+    k<rsub|\<alpha\>>k<rsub|\<beta\>> k<rsub|\<gamma\>>+\<cdots\>+\<omicron\><around*|(|\<Delta\>t|)>|)>.
   </equation*>
 
-  If <math|K> as a matrix-valued field is everywhere positive definite, then
-  it turns to be a Gaussian integral. Thus,
+  If <math|K<rsub|2>> as a matrix-valued field is everywhere positive
+  definite, then it turns to be a Gaussian integral, as
 
-  <\equation>
-    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>=<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>k
-    \ exp<around*|(|<around*|[|f<rsup|\<alpha\>><around*|(|x|)>
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>k
+    \ exp<around*|(|<around*|[|K<rsub|1><rsup|\<alpha\>><around*|(|x|)>
     \<Delta\>t-\<epsilon\><rsup|\<alpha\>>|]>
-    \<mathi\>k<rsub|\<alpha\>>-<frac|\<Delta\>t|2>K<rsup|\<alpha\>\<beta\>><around*|(|x|)>
-    k<rsub|\<alpha\>>k<rsub|\<beta\>>+J<around*|(|x,k|)>+\<omicron\><around*|(|\<Delta\>t|)>|)>,<label|equation:transition
-    density of markovian process>
-  </equation>
+    \<mathi\>k<rsub|\<alpha\>>-<frac|\<Delta\>t|2>K<rsub|2><rsup|\<alpha\>\<beta\>><around*|(|x|)>
+    k<rsub|\<alpha\>>k<rsub|\<beta\>>-J<around*|(|x,k|)>|)>,
+  </equation*>
 
-  where <math|J<around*|(|x,k|)>> is a polynomial of <math|k> with minimal
-  <math|k<rsup|3>>-order. This is a Gaussian integral corresponding the a
-  normal distribution with covariance proportional to <math|\<Delta\>t>. So,
-  the typical scale of <math|<around*|\||k|\|>> estimated to be
-  <math|<sqrt|\<Delta\>t>>. This means that the contribution from
-  <math|J<around*|(|x,k|)>> is <math|<with|font|cal|O><around*|(|\<Delta\>t<rsup|3/2>|)>=\<omicron\><around*|(|\<Delta\>t|)>>
-  as <math|\<Delta\>t\<rightarrow\>0>, thus can be absorbed into the
-  <math|\<omicron\><around*|(|\<Delta\>t|)>> term. Then, by the formula of
-  Gaussian integral which is, for any positive definite matrix <math|A>,
+  where
+
+  <\equation*>
+    J<around*|(|x,k|)>\<assign\>-<frac|\<mathi\>\<Delta\>t|6>K<rsub|3><rsup|\<alpha\>\<beta\>\<gamma\>><around*|(|x|)>
+    k<rsub|\<alpha\>>k<rsub|\<beta\>> k<rsub|\<gamma\>>+\<cdots\>+\<omicron\><around*|(|\<Delta\>t|)>.
+  </equation*>
+
+  As an example, let us examine
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>k
+    \ exp<around*|(|<around*|[|K<rsub|1><rsup|\<alpha\>><around*|(|x|)>
+    \<Delta\>t-\<epsilon\><rsup|\<alpha\>>|]>
+    \<mathi\>k<rsub|\<alpha\>>-<frac|\<Delta\>t|2>K<rsub|2><rsup|\<alpha\>\<beta\>><around*|(|x|)>
+    k<rsub|\<alpha\>>k<rsub|\<beta\>>|)> k<rsub|\<alpha\>> k<rsub|\<beta\>>
+    k<rsub|\<gamma\>>.
+  </equation*>
+
+  Recall the formula of Gaussian integral which is, for any positive definite
+  matrix <math|A>,
 
   <\equation*>
     <big|int><rsub|\<bbb-R\><rsup|m>>\<mathd\>x exp<around*|(|-<frac|1|2>
     A<rsub|\<alpha\>\<beta\>> x<rsup|\<alpha\>>
-    x<rsup|\<beta\>>+b<rsub|\<alpha\>> x<rsup|\<beta\>>|)>=<sqrt|<frac|<around*|(|2\<mathpi\>|)><rsup|m>|det
+    x<rsup|\<beta\>>+b<rsub|\<alpha\>> x<rsup|\<alpha\>>|)>=<sqrt|<frac|<around*|(|2\<mathpi\>|)><rsup|m>|det
     A>> exp<around*|(|<frac|1|2> <around*|(|A<rsup|-1>|)><rsup|\<alpha\>\<beta\>>
-    b<rsub|\<alpha\>> b<rsub|\<beta\>>|)>,
+    b<rsub|\<alpha\>> b<rsub|\<beta\>>|)>.
   </equation*>
 
-  we get (replacing <math|A> by <math|K<around*|(|x|)> \<Delta\>t> and
-  <math|b> by <math|\<mathi\> <around*|[|f<around*|(|x|)>
-  \<Delta\>t-\<epsilon\>|]>>)
+  We have
 
   <\small>
     <\align>
-      <tformat|<table|<row|<cell|>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>k
-      \ exp<around*|(|<around*|[|f<rsup|\<alpha\>><around*|(|x|)>
-      \<Delta\>t-\<epsilon\><rsup|\<alpha\>>|]>
-      \<mathi\>k<rsub|\<alpha\>>+<frac|\<Delta\>t|2>K<rsup|\<alpha\>\<beta\>><around*|(|x|)>
-      k<rsub|\<alpha\>>k<rsub|\<beta\>>|)>>>|<row|<cell|=>|<cell|<sqrt|<frac|<around*|(|2\<mathpi\>|)><rsup|n>|<around*|(|\<Delta\>t|)><rsup|n>
-      det K<around*|(|x|)>>> exp<around*|(|-<frac|1|2\<Delta\>t><around*|[|K<rsup|-1><around*|(|x|)>|]><rsub|\<alpha\>\<beta\>>
-      <around*|[|f<rsup|\<alpha\>><around*|(|x|)>
-      \<Delta\>t-\<epsilon\><rsup|\<alpha\>>|]>
-      <around*|[|f<rsup|\<beta\>><around*|(|x|)>
-      \<Delta\>t-\<epsilon\><rsup|\<beta\>>|]>|)>>>|<row|<cell|=>|<cell|<around*|(|<frac|2\<mathpi\>|\<Delta\>t>|)><rsup|n/2>
-      exp<around*|(|-<frac|1|2\<Delta\>t><around*|[|K<rsup|-1><around*|(|x|)>|]><rsub|\<alpha\>\<beta\>>
-      <around*|[|f<rsup|\<alpha\>><around*|(|x|)>
-      \<Delta\>t-\<epsilon\><rsup|\<alpha\>>|]>
-      <around*|[|f<rsup|\<beta\>><around*|(|x|)>
-      \<Delta\>t-\<epsilon\><rsup|\<beta\>>|]>-<frac|1|2>ln det
-      K<around*|(|x|)>|)>.>>>>
+      <tformat|<table|<row|<cell|>|<cell|<big|int><rsub|\<bbb-R\><rsup|m>>\<mathd\>x
+      exp<around*|(|-<frac|1|2> A<rsub|\<alpha\>\<beta\>> x<rsup|\<alpha\>>
+      x<rsup|\<beta\>>+b<rsub|\<alpha\>> x<rsup|\<alpha\>>|)>
+      x<rsup|\<alpha\>>x<rsup|\<beta\>>x<rsup|\<gamma\>>>>|<row|<cell|=>|<cell|<frac|\<partial\>|\<partial\>b<rsub|\<alpha\>>><frac|\<partial\>|\<partial\>b<rsub|\<beta\>>><frac|\<partial\>|\<partial\>b<rsub|\<gamma\>>><big|int><rsub|\<bbb-R\><rsup|m>>\<mathd\>x
+      exp<around*|(|-<frac|1|2> A<rsub|\<alpha\>\<beta\>> x<rsup|\<alpha\>>
+      x<rsup|\<beta\>>+b<rsub|\<alpha\>> x<rsup|\<alpha\>>|)>>>|<row|<cell|=>|<cell|<sqrt|<frac|<around*|(|2\<mathpi\>|)><rsup|m>|det
+      A>> <frac|\<partial\>|\<partial\>b<rsub|\<alpha\>>><frac|\<partial\>|\<partial\>b<rsub|\<beta\>>><frac|\<partial\>|\<partial\>b<rsub|\<gamma\>>>exp<around*|(|<frac|1|2>
+      <around*|(|A<rsup|-1>|)><rsup|\<alpha\>\<beta\>> b<rsub|\<alpha\>>
+      b<rsub|\<beta\>>|)>>>|<row|<cell|=>|<cell|<sqrt|<frac|<around*|(|2\<mathpi\>|)><rsup|m>|det
+      A>> <frac|\<partial\>|\<partial\>b<rsub|\<beta\>>><frac|\<partial\>|\<partial\>b<rsub|\<gamma\>>><around*|{|exp<around*|(|<frac|1|2>
+      <around*|(|A<rsup|-1>|)><rsup|\<alpha\>\<beta\>> b<rsub|\<alpha\>>
+      b<rsub|\<beta\>>|)> <around*|(|A<rsup|-1>|)><rsup|\<alpha\>\<alpha\><rprime|'>>b<rsub|\<alpha\><rprime|'>>|}>>>|<row|<cell|=>|<cell|<sqrt|<frac|<around*|(|2\<mathpi\>|)><rsup|m>|det
+      A>> <frac|\<partial\>|\<partial\>b<rsub|\<gamma\>>><around*|{|exp<around*|(|<frac|1|2>
+      <around*|(|A<rsup|-1>|)><rsup|\<alpha\>\<beta\>> b<rsub|\<alpha\>>
+      b<rsub|\<beta\>>|)><around*|[| <around*|(|A<rsup|-1>|)><rsup|\<alpha\>\<alpha\><rprime|'>>
+      b<rsub|\<alpha\><rprime|'>> <around*|(|A<rsup|-1>|)><rsup|\<beta\>\<beta\><rprime|'>>b<rsub|\<beta\><rprime|'>>+<around*|(|A<rsup|-1>|)><rsup|\<alpha\>\<beta\>>|]>|}>>>|<row|<cell|=>|<cell|<sqrt|<frac|<around*|(|2\<mathpi\>|)><rsup|m>|det
+      A>> exp<around*|(|<frac|1|2> <around*|(|A<rsup|-1>|)><rsup|\<alpha\>\<beta\>>
+      b<rsub|\<alpha\>> b<rsub|\<beta\>>|)>
+      <around*|[|<around*|(|A<rsup|-1>|)><rsup|\<alpha\>\<alpha\><rprime|'>>
+      b<rsub|\<alpha\><rprime|'>> <around*|(|A<rsup|-1>|)><rsup|\<beta\>\<beta\><rprime|'>>b<rsub|\<beta\><rprime|'>><around*|(|A<rsup|-1>|)><rsup|\<gamma\>\<gamma\><rprime|'>>b<rsub|\<gamma\><rprime|'>>\<cdots\>|]>>>|<row|<cell|>|<cell|<around*|[|\<cdots\>+<around*|(|A<rsup|-1>|)><rsup|\<alpha\>\<beta\>><around*|(|A<rsup|-1>|)><rsup|\<gamma\>\<gamma\><rprime|'>>b<rsub|\<gamma\><rprime|'>>++<around*|(|A<rsup|-1>|)><rsup|\<alpha\>\<gamma\>>
+      <around*|(|A<rsup|-1>|)><rsup|\<beta\>\<beta\><rprime|'>>b<rsub|\<beta\><rprime|'>>+<around*|(|A<rsup|-1>|)><rsup|\<alpha\>\<alpha\><rprime|'>>
+      b<rsub|\<alpha\><rprime|'>> <around*|(|A<rsup|-1>|)><rsup|\<beta\>\<gamma\>>|]>>>>>
     </align>
   </small>
 
-  Altogether, we find, up to a constant term,
-
-  <\equation*>
-    ln q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>=
-    -<frac|1|2\<Delta\>t><around*|[|K<rsup|-1><around*|(|x|)>|]><rsub|\<alpha\>\<beta\>>
-    <around*|[|f<rsup|\<alpha\>><around*|(|x|)>
-    \<Delta\>t-\<epsilon\><rsup|\<alpha\>>|]>
-    <around*|[|f<rsup|\<beta\>><around*|(|x|)>
-    \<Delta\>t-\<epsilon\><rsup|\<beta\>>|]>-<frac|1|2>ln det
-    K<around*|(|x|)>+<frac|n|2>ln<frac|2\<mathpi\>|\<Delta\>t>+\<omicron\><around*|(|\<Delta\>t|)>.
-  </equation*>
-
-  We summarize the calculation in the second step as follow.
-
-  <\lemma>
-    <label|theorem: markovian process approximation>Consider a generic
-    Markovian process with transition rate <math|r> and alphabet
-    <math|\<bbb-R\><rsup|n>>. Denote
-
-    <\equation*>
-      f<rsup|\<alpha\>><around*|(|x|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
-      \ r<around*|(|x+\<epsilon\>\|x|)> \<epsilon\><rsup|\<alpha\>>
-    </equation*>
-
-    and
-
-    <\equation*>
-      K<rsup|\<alpha\>\<beta\>><around*|(|x|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
-      \ r<around*|(|x+\<epsilon\>\|x|)> \<epsilon\><rsup|\<alpha\>>
-      \<epsilon\><rsup|\<beta\>>.
-    </equation*>
-
-    If <math|K> is everywhere positive definite on <math|\<bbb-R\><rsup|n>>,
-    then we have
-
-    <\equation>
-      q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>=<around*|(|<frac|2\<mathpi\>|\<Delta\>t>|)><rsup|n/2>exp<around*|(|-S<rsub|\<Delta\>t><around*|(|x+\<epsilon\>,x|)>+\<omicron\><around*|(|\<Delta\>t|)>|)><label|equation:path
-      integral step 2>
-    </equation>
-
-    with
-
-    <\equation>
-      S<rsub|\<Delta\>t><around*|(|x+\<epsilon\>,x|)>\<assign\><frac|\<Delta\>t|2><around*|[|K<rsup|-1><around*|(|x|)>|]><rsub|\<alpha\>\<beta\>>
-      <around*|[|<frac|\<epsilon\><rsup|\<alpha\>>|\<Delta\>t>-f<rsup|\<alpha\>><around*|(|x|)>|]>
-      <around*|[|<frac|\<epsilon\><rsup|\<beta\>>|\<Delta\>t>-f<rsup|\<beta\>><around*|(|x|)>|]>+<frac|1|2>ln
-      det K<around*|(|x|)>.<label|equation:path integral step 2 action>
-    </equation>
-  </lemma>
-
-  <\remark>
-    Contrarily, if <math|K> is not everywhere positive definite, but has zero
-    or negative eigen-value at some position <math|x>, then the trick of
-    using Gaussian integral will not work, and we will not know what to do
-    since the complicated <math|J<around*|(|x,k|)>> in equation
-    <reference|equation:transition density of markovian process> may not be
-    negligible.
-  </remark>
-
-  Plugging equation <reference|equation:path integral step 2> back into
-  <reference|equation:path integral step 1>, we find
-
-  <\equation>
-    p<around*|(|x<rsub|N>,N \<Delta\>t|)>=<around*|(|<frac|2\<mathpi\>|\<Delta\>t>|)><rsup|n
-    N/2><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|N-1>\<cdots\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|0>
-    exp<around*|(|-S<around*|(|x|)>+\<omicron\><around*|(|N \<Delta\>t|)>|)>
-    p<around*|(|x<rsub|0>,0|)>,<label|equation:path integral step 3>
-  </equation>
-
-  with
-
-  <\equation>
-    S<around*|(|x|)>\<assign\><big|sum><rsub|i=0><rsup|N-1><around*|{|<frac|\<Delta\>t|2><around*|[|K<rsup|-1><around*|(|x<rsub|i>|)>|]><rsub|\<alpha\>\<beta\>>
-    <around*|[|<frac|x<rsub|i+1><rsup|\<alpha\>>-x<rsup|\<alpha\>><rsub|i>|\<Delta\>t>-f<rsup|\<alpha\>><around*|(|x<rsub|i>|)>|]>
-    <around*|[|<frac|x<rsub|i+1><rsup|\<beta\>>-x<rsup|\<beta\>><rsub|i>|\<Delta\>t>-f<rsup|\<beta\>><around*|(|x<rsub|i>|)>|]>+<frac|1|2>ln
-    det K<around*|(|x<rsub|i>|)>|}>.<label|equation:path integral step 3
-    action>
-  </equation>
-
-  \;
-
-  All these steps are strict. But the last step is a little challenging. It
-  takes the limit <math|\<Delta\>t\<rightarrow\>0>, at the same time letting
-  <math|N\<rightarrow\>+\<infty\>> such that <math|N \<Delta\>t> keeps
-  finite. This limit, however, may not exist for <math|S>. The <math|ln det
-  K<around*|(|x|)>> term is independent of <math|\<Delta\>t>, thus may
-  diverge in the summation (notice <math|N=<with|font|cal|O><around*|(|1/\<Delta\>t|)>>
-  diverges). So is the constant factor <math|<around*|(|2\<mathpi\>/\<Delta\>t|)><rsup|n
-  N/2>>. The divergence from <math|ln det K<around*|(|x|)>> can be eliminated
-  when <math|K> is constant. In this situation, by properly choosing
-  coordinates, <math|K> becomes an identity matrix, thus <math|ln det
-  K<around*|(|x|)>=ln<around*|(|1|)>=0>. To solve the divergence from the
-  constant factor, we simply absorb it into
-  <math|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|0>\<cdots\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|N-1>>,
-  by defining
-
-  <\equation>
-    <big|int>D<around*|[|x|]>\<assign\><around*|(|<frac|2\<mathpi\>|\<Delta\>t>|)><rsup|n
-    N/2><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|N-1>\<cdots\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|0>.<label|equation:path
-    integral step 4>
-  </equation>
-
-  In addition, the <math|<around*|(|x<rsub|i+1>-x<rsub|i>|)>/\<Delta\>t> term
-  may diverge too, but we regard it as \Pvelocity\Q and treat it as
-  well-defined. In the limit <math|\<Delta\>t\<rightarrow\>0>, we formally
-  express it by <math|<wide|x|\<dot\>>>. Altogether, while taking the limit
-  <math|\<Delta\>t\<rightarrow\>0>, we replace
-  <math|<big|sum><rsub|i>\<Delta\>t> by <math|<big|int>\<mathd\>t>,
-  <math|x<rsub|i>> by <math|x<around*|(|t|)>>, <math|N \<Delta\>t> by
-  <math|t<rsub|f>> (a finite time), and omit the
-  <math|\<omicron\><around*|(|N \<Delta\>t|)>=\<omicron\><around*|(|1|)>>.
-  Finally, we obtain the path integral formulation of master equation, as
-
-  <\equation>
-    p<around*|(|x<rsub|f>,t<rsub|f>|)>=<big|int>D<around*|[|x|]>
-    exp<around*|(|-<frac|1|2><big|int><rsub|0><rsup|t<rsub|f>>\<mathd\>t
-    <around*|[|<wide|x|\<dot\>><around*|(|t|)>-f<around*|(|x<around*|(|t|)>|)>|]><rsup|2>|)>
-    p<around*|(|x<around*|(|0|)>,0|)>.<label|equation:path integral>
-  </equation>
-
-  As the definition of <math|<big|int>D<around*|[|x|]>> indicates, the
-  integral considers all the path ending in position <math|x<rsub|f>> at time
-  <math|t<rsub|f>>. As a summary, we have found that, if the <math|K> defined
-  in lemma <reference|theorem: markovian process approximation> is constant,
-  then we can re-formulate the master equation by path integral
-  <reference|equation:path integral>. We will examine this further in section
-  <reference|section: Least-Action Principle>.
+  In our situation, <math|A=K<rsub|2><around*|(|x|)> \<Delta\>t> and
+  <math|b=\<mathi\>\<Delta\>t <around*|[|K<rsub|1><around*|(|x|)>-\<epsilon\>/\<Delta\>t|]>>.
+  We get <math|<around*|[|\<cdots\>|]>=<with|font|cal|O><around*|(|1/\<Delta\>t|)>>.
+  This means the contribution from <math|\<Delta\>t
+  K<rsub|3><rsup|\<alpha\>\<beta\>\<gamma\>><around*|(|x|)>
+  k<rsub|\<alpha\>>k<rsub|\<beta\>> k<rsub|\<gamma\>>> term is at least
+  <math|<with|font|cal|O><around*|(|1|)>> as
+  <math|\<Delta\>t\<rightarrow\>0>, thus is not negligible. The situation get
+  worse for terms with more <math|k> factor. It indicates that we cannot
+  fomulate the master equation into path integral, unless the
+  <math|K<rsub|n>> for <math|n\<gtr\>2> are all vanishing.
 
   <subsection|Detailed Balance Provides Stationary
   Distribution><label|section: Detailed Balance Provides Stationary
@@ -2688,19 +2594,40 @@
   and those with order (the number of superscripts) higher than
   <math|K<rsup|\<alpha\>\<beta\>><around*|(|x|)>> are all vanishing (<math|K>
   is defined in section <reference|section: Spatial Expansion of Master
-  Equation Gives Kramers-Moyal Expansion>). For example, the integral
-  <math|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
-  <around*|(|\<epsilon\><rsup|\<alpha\>> \<epsilon\><rsup|\<beta\>>
-  \<epsilon\><rsup|\<gamma\>>|)> q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>=<with|font|cal|O><around*|(|\<Delta\>t<rsup|3/2>|)>>,
-  which can be easily realized by the estimation
-  <math|\<epsilon\>=<with|font|cal|O><around*|(|<sqrt|\<Delta\>t>|)>>. By
-  relation <math|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
-  <around*|(|\<epsilon\><rsup|\<alpha\>> \<epsilon\><rsup|\<beta\>>
-  \<epsilon\><rsup|\<gamma\>>|)> q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>=\<Delta\>t
-  K<rsup|\<alpha\>\<beta\>\<gamma\>><around*|(|x|)>+\<omicron\><around*|(|\<Delta\>t|)>>
-  (derived in section <reference|section: Spatial Expansion of Master
-  Equation Gives Kramers-Moyal Expansion>), we find
-  <math|K<rsup|\<alpha\>\<beta\>\<gamma\>><around*|(|x|)>=0>. Thus,
+  Equation Gives Kramers-Moyal Expansion>). For example, we calculate
+  <math|K<rsup|\<alpha\>\<beta\>\<gamma\>><around*|(|x|)>>. Recall the
+  transition rate of Langevin process (equation <reference|equation:Langevin
+  transition rate>), we have
+
+  <\align>
+    <tformat|<table|<row|<cell|K<rsup|\<alpha\>\<beta\>\<gamma\>><around*|(|x|)>=>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
+    <around*|(|\<epsilon\><rsup|\<alpha\>> \<epsilon\><rsup|\<beta\>>
+    \<epsilon\><rsup|\<gamma\>>|)> r<around*|(|x+\<epsilon\>,x|)>>>|<row|<cell|=>|<cell|-<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
+    <around*|(|\<epsilon\><rsup|\<alpha\>> \<epsilon\><rsup|\<beta\>>
+    \<epsilon\><rsup|\<gamma\>>|)> f<rsup|\<sigma\>><around*|(|x|)>
+    \<partial\><rsub|\<sigma\>>\<delta\><around*|(|\<epsilon\>|)>+<frac|1|2><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
+    <around*|(|\<epsilon\><rsup|\<alpha\>> \<epsilon\><rsup|\<beta\>>
+    \<epsilon\><rsup|\<gamma\>>|)> K<rsup|\<sigma\>\<lambda\>><around*|(|x|)>
+    \<partial\><rsub|\<sigma\>>\<partial\><rsub|\<lambda\>>\<delta\><around*|(|\<epsilon\>|)>.>>>>
+  </align>
+
+  Integration by parts gives
+
+  <\equation*>
+    K<rsup|\<alpha\>\<beta\>\<gamma\>><around*|(|x|)>=<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
+    \<partial\><rsub|\<sigma\>><around*|(|\<epsilon\><rsup|\<alpha\>>
+    \<epsilon\><rsup|\<beta\>> \<epsilon\><rsup|\<gamma\>>|)>\<delta\><around*|(|\<epsilon\>|)>
+    f<rsup|\<sigma\>><around*|(|x|)>+<frac|1|2><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
+    \<partial\><rsub|\<sigma\>>\<partial\><rsub|\<lambda\>><around*|(|\<epsilon\><rsup|\<alpha\>>
+    \<epsilon\><rsup|\<beta\>> \<epsilon\><rsup|\<gamma\>>|)>
+    \<delta\><around*|(|\<epsilon\>|)> K<rsup|\<sigma\>\<lambda\>><around*|(|x|)>.
+  </equation*>
+
+  Both integrand are proportional to <math|\<epsilon\>
+  \<delta\><around*|(|\<epsilon\>|)>>, thus vanish. The same situation
+  happens in the higher order <math|K>, thus all vanishing. This is because
+  the transition rate of Langevin process involves only at most second order
+  of <math|\<partial\><rsup|n>\<delta\><around*|(|\<epsilon\>|)>>. So,
   Kramers-Moyal expansion <reference|equation:km expansion> reads
 
   <\equation>
@@ -3712,145 +3639,145 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|2.4|9>>
-    <associate|auto-11|<tuple|2.5|11>>
-    <associate|auto-12|<tuple|2.6|12>>
-    <associate|auto-13|<tuple|2.7|13>>
-    <associate|auto-14|<tuple|2.8|16>>
-    <associate|auto-15|<tuple|2.9|17>>
-    <associate|auto-16|<tuple|3|18>>
-    <associate|auto-17|<tuple|3.1|18>>
-    <associate|auto-18|<tuple|3.2|18>>
-    <associate|auto-19|<tuple|3.3|19>>
+    <associate|auto-10|<tuple|2.4|8>>
+    <associate|auto-11|<tuple|2.5|10>>
+    <associate|auto-12|<tuple|2.6|11>>
+    <associate|auto-13|<tuple|2.7|11>>
+    <associate|auto-14|<tuple|2.8|13>>
+    <associate|auto-15|<tuple|2.9|15>>
+    <associate|auto-16|<tuple|3|16>>
+    <associate|auto-17|<tuple|3.1|17>>
+    <associate|auto-18|<tuple|3.2|17>>
+    <associate|auto-19|<tuple|3.3|17>>
     <associate|auto-2|<tuple|1.1|1>>
-    <associate|auto-20|<tuple|3.4|20>>
-    <associate|auto-21|<tuple|3.5|22>>
-    <associate|auto-22|<tuple|3.6|23>>
+    <associate|auto-20|<tuple|3.4|18>>
+    <associate|auto-21|<tuple|3.5|19>>
+    <associate|auto-22|<tuple|3.6|21>>
     <associate|auto-23|<tuple|3.7|23>>
-    <associate|auto-24|<tuple|3.8|24>>
-    <associate|auto-25|<tuple|4|25>>
+    <associate|auto-24|<tuple|3.8|23>>
+    <associate|auto-25|<tuple|4|23>>
     <associate|auto-26|<tuple|4.1|25>>
     <associate|auto-27|<tuple|4.2|25>>
-    <associate|auto-28|<tuple|4.3|26>>
-    <associate|auto-29|<tuple|4.4|27>>
+    <associate|auto-28|<tuple|4.3|25>>
+    <associate|auto-29|<tuple|4.4|26>>
     <associate|auto-3|<tuple|1.2|2>>
-    <associate|auto-30|<tuple|1|28>>
-    <associate|auto-31|<tuple|4.5|29>>
-    <associate|auto-32|<tuple|4.6|31>>
-    <associate|auto-33|<tuple|4.7|32>>
-    <associate|auto-34|<tuple|4.7.1|32>>
+    <associate|auto-30|<tuple|1|27>>
+    <associate|auto-31|<tuple|4.5|28>>
+    <associate|auto-32|<tuple|4.6|28>>
+    <associate|auto-33|<tuple|4.7|31>>
+    <associate|auto-34|<tuple|4.7.1|31>>
     <associate|auto-35|<tuple|4.7.2|32>>
+    <associate|auto-36|<tuple|4.7.2|32>>
     <associate|auto-4|<tuple|1.3|3>>
     <associate|auto-5|<tuple|1.4|3>>
     <associate|auto-6|<tuple|2|4>>
     <associate|auto-7|<tuple|2.1|4>>
-    <associate|auto-8|<tuple|2.2|5>>
+    <associate|auto-8|<tuple|2.2|4>>
     <associate|auto-9|<tuple|2.3|6>>
-    <associate|equation:Detailed Balance|<tuple|16|11>>
+    <associate|equation:Detailed Balance|<tuple|9|11>>
     <associate|equation:Detailed Balance for transition
-    density|<tuple|17|11>>
-    <associate|equation:Fokker-Planck equation|<tuple|30|23>>
-    <associate|equation:Langevin transition rate|<tuple|29|22>>
-    <associate|equation:action of distribution|<tuple|36|26>>
-    <associate|equation:circle|<tuple|23|17>>
-    <associate|equation:data-fitting iteration|<tuple|38|28>>
-    <associate|equation:data-fitting result|<tuple|39|28>>
-    <associate|equation:define stationary density function|<tuple|22|17>>
+    density|<tuple|10|11>>
+    <associate|equation:Fokker-Planck equation|<tuple|23|23>>
+    <associate|equation:Langevin transition rate|<tuple|22|22>>
+    <associate|equation:action of distribution|<tuple|29|26>>
+    <associate|equation:circle|<tuple|16|16>>
+    <associate|equation:data-fitting iteration|<tuple|31|27>>
+    <associate|equation:data-fitting result|<tuple|32|27>>
+    <associate|equation:define stationary density function|<tuple|15|16>>
     <associate|equation:detailed balance condition for
-    Langevin|<tuple|32|25>>
-    <associate|equation:discrete time master equation|<tuple|5|6>>
+    Langevin|<tuple|25|24>>
+    <associate|equation:discrete time master equation|<tuple|5|5>>
     <associate|equation:discrete time master equation v0|<tuple|2|5>>
-    <associate|equation:equation:metropolis-hastings|<tuple|20|16>>
-    <associate|equation:generic density|<tuple|37|27>>
-    <associate|equation:harmonic oscillator action|<tuple|33|25>>
-    <associate|equation:km correlation|<tuple|24|19>>
-    <associate|equation:km expansion|<tuple|25|19>>
-    <associate|equation:langevin process|<tuple|28|21>>
-    <associate|equation:langevin process v0|<tuple|27|21>>
-    <associate|equation:least-action principle v0|<tuple|34|25>>
-    <associate|equation:least-action principle v1|<tuple|35|26>>
-    <associate|equation:master equation|<tuple|4|6>>
+    <associate|equation:equation:metropolis-hastings|<tuple|13|15>>
+    <associate|equation:generic density|<tuple|30|27>>
+    <associate|equation:harmonic oscillator action|<tuple|26|25>>
+    <associate|equation:km correlation|<tuple|17|18>>
+    <associate|equation:km expansion|<tuple|18|18>>
+    <associate|equation:langevin process|<tuple|21|20>>
+    <associate|equation:langevin process v0|<tuple|20|20>>
+    <associate|equation:least-action principle v0|<tuple|27|25>>
+    <associate|equation:least-action principle v1|<tuple|28|26>>
+    <associate|equation:master equation|<tuple|4|5>>
     <associate|equation:master equation v0|<tuple|3|5>>
-    <associate|equation:metropolis-hastings origin|<tuple|21|16>>
-    <associate|equation:path integral|<tuple|15|11>>
-    <associate|equation:path integral step 1|<tuple|8|9>>
-    <associate|equation:path integral step 2|<tuple|10|10>>
-    <associate|equation:path integral step 2 action|<tuple|11|?>>
-    <associate|equation:path integral step 3|<tuple|12|10>>
-    <associate|equation:path integral step 3 action|<tuple|13|11>>
-    <associate|equation:path integral step 4|<tuple|14|11>>
-    <associate|equation:relative entropy derivative|<tuple|19|12>>
-    <associate|equation:rg action|<tuple|40|29>>
-    <associate|equation:rg integral|<tuple|41|29>>
-    <associate|equation:stationary Fokker-Planck equation|<tuple|31|23>>
+    <associate|equation:metropolis-hastings origin|<tuple|14|15>>
+    <associate|equation:path integral|<tuple|14|11>>
+    <associate|equation:path integral step 1|<tuple|8|8>>
+    <associate|equation:path integral step 2|<tuple|9|10>>
+    <associate|equation:path integral step 2 action|<tuple|10|10>>
+    <associate|equation:path integral step 3|<tuple|11|10>>
+    <associate|equation:path integral step 3 action|<tuple|12|10>>
+    <associate|equation:path integral step 4|<tuple|13|10>>
+    <associate|equation:relative entropy derivative|<tuple|12|12>>
+    <associate|equation:rg action|<tuple|33|29>>
+    <associate|equation:rg integral|<tuple|34|29>>
+    <associate|equation:stationary Fokker-Planck equation|<tuple|24|23>>
     <associate|equation:transition density normalization|<tuple|1|5>>
-    <associate|equation:transition density of markovian process|<tuple|9|10>>
     <associate|equation:transition rate determines transition
     density|<tuple|6|7>>
     <associate|equation:transition rate determines transition density
-    v2|<tuple|7|8>>
-    <associate|equation:wiener process|<tuple|26|20>>
+    v2|<tuple|7|7>>
+    <associate|equation:wiener process|<tuple|19|19>>
     <associate|figure: Least-Action|<tuple|1|28>>
     <associate|footnote-1|<tuple|1|2>>
-    <associate|footnote-10|<tuple|10|15>>
-    <associate|footnote-11|<tuple|11|21>>
+    <associate|footnote-10|<tuple|10|14>>
+    <associate|footnote-11|<tuple|11|20>>
     <associate|footnote-12|<tuple|12|22>>
-    <associate|footnote-13|<tuple|13|23>>
+    <associate|footnote-13|<tuple|13|22>>
     <associate|footnote-14|<tuple|14|26>>
     <associate|footnote-15|<tuple|15|29>>
-    <associate|footnote-16|<tuple|16|31>>
+    <associate|footnote-16|<tuple|16|30>>
     <associate|footnote-17|<tuple|17|32>>
     <associate|footnote-2|<tuple|2|2>>
     <associate|footnote-3|<tuple|3|2>>
     <associate|footnote-4|<tuple|4|2>>
     <associate|footnote-5|<tuple|5|7>>
-    <associate|footnote-6|<tuple|6|9>>
+    <associate|footnote-6|<tuple|6|8>>
     <associate|footnote-7|<tuple|7|12>>
     <associate|footnote-8|<tuple|8|13>>
-    <associate|footnote-9|<tuple|9|14>>
+    <associate|footnote-9|<tuple|9|13>>
     <associate|footnr-1|<tuple|1|2>>
-    <associate|footnr-10|<tuple|10|15>>
-    <associate|footnr-11|<tuple|11|21>>
+    <associate|footnr-10|<tuple|10|14>>
+    <associate|footnr-11|<tuple|11|20>>
     <associate|footnr-12|<tuple|12|22>>
-    <associate|footnr-13|<tuple|13|23>>
+    <associate|footnr-13|<tuple|13|22>>
     <associate|footnr-14|<tuple|14|26>>
     <associate|footnr-15|<tuple|15|29>>
-    <associate|footnr-16|<tuple|16|31>>
+    <associate|footnr-16|<tuple|16|30>>
     <associate|footnr-17|<tuple|17|32>>
     <associate|footnr-2|<tuple|2|2>>
     <associate|footnr-3|<tuple|3|2>>
     <associate|footnr-4|<tuple|4|2>>
     <associate|footnr-5|<tuple|5|7>>
-    <associate|footnr-6|<tuple|6|9>>
+    <associate|footnr-6|<tuple|6|8>>
     <associate|footnr-7|<tuple|7|12>>
     <associate|footnr-8|<tuple|8|13>>
-    <associate|footnr-9|<tuple|9|14>>
+    <associate|footnr-9|<tuple|9|13>>
     <associate|section: A Brief Review of Least-Action Principle in Classical
     Mechanics|<tuple|4.2|25>>
     <associate|section: A Brief Review of Probability|<tuple|1.1|1>>
     <associate|section: Data Fitting Is Equivalent to Least-Action Principle
     of Distribution|<tuple|4.4|27>>
     <associate|section: Detailed Balance Condition and Connectivity
-    Monotonically Reduce Relative Entropy|<tuple|2.6|12>>
+    Monotonically Reduce Relative Entropy|<tuple|2.6|11>>
     <associate|section: Detailed Balance Condition of Langevin Process Lacks
-    Source-Free Degree of Freedom|<tuple|3.8|24>>
+    Source-Free Degree of Freedom|<tuple|3.8|23>>
     <associate|section: Detailed Balance Provides Stationary
     Distribution|<tuple|2.5|11>>
     <associate|section: Example: Metropolis-Hastings
-    Algorithm|<tuple|2.8|16>>
+    Algorithm|<tuple|2.8|15>>
     <associate|section: How Far Will Information Propagate in Markovian
-    Process?|<tuple|4.5|29>>
+    Process?|<tuple|4.5|28>>
     <associate|section: Kramers-Moyal Expansion and Langevin
-    Process|<tuple|3|18>>
+    Process|<tuple|3|17>>
     <associate|section: Langevin Process Arises in the Difference of
-    Scales|<tuple|3.4|20>>
+    Scales|<tuple|3.4|19>>
     <associate|section: Least-Action Principle|<tuple|4|25>>
     <associate|section: Least-Action Principle of Distribution Has No
     Redundancy|<tuple|4.3|26>>
     <associate|section: Master Equation Describes the Evolution of Markov
-    Process|<tuple|2.2|5>>
+    Process|<tuple|2.2|4>>
     <associate|section: Master Equation on Euclidean Alphabet Can Be
-    Formulated as Path Integral|<tuple|2.4|9>>
+    Formulated as Path Integral|<tuple|2.4|8>>
     <associate|section: Master Equation, Detailed Balance, and Relative
     Entropy|<tuple|2|4>>
     <associate|section: Monte-Carlo Simulation and Guarantee of
@@ -3861,15 +3788,15 @@
     <associate|section: Shannon Entropy Is Plausible for Discrete Random
     Variable|<tuple|1.2|2>>
     <associate|section: Spatial Expansion of Master Equation Gives
-    Kramers-Moyal Expansion|<tuple|3.2|18>>
+    Kramers-Moyal Expansion|<tuple|3.2|17>>
     <associate|section: Transition Rate Determines Transition
     Density|<tuple|2.3|6>>
     <associate|section: Transition Rate of Langevin Process Is a Generalized
-    Function|<tuple|3.5|22>>
+    Function|<tuple|3.5|21>>
     <associate|section: Wiener Process Arises from Homogeneity and
-    Isotropy|<tuple|3.3|19>>
+    Isotropy|<tuple|3.3|18>>
     <associate|theorem: markovian process approximation|<tuple|2|10>>
-    <associate|theorem: relaxation|<tuple|4|13>>
+    <associate|theorem: relaxation|<tuple|2|13>>
   </collection>
 </references>
 
@@ -3900,7 +3827,7 @@
       <with|mode|<quote|math>|x<rsub|1>> a local minimum of
       <with|mode|<quote|math>|S<around*|(|\<cdummy\>,\<theta\>|)>>, and
       <with|mode|<quote|math>|S<around*|(|\<cdummy\>,\<theta\>|)>> is
-      optimized to be the dashed green curve.>|<pageref|auto-30>>
+      optimized to be the dashed green curve.>|<pageref|auto-31>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Relative
@@ -3941,113 +3868,117 @@
       <no-break><pageref|auto-9>>
 
       <with|par-left|<quote|1tab>|2.4<space|2spc>Master Equation on Euclidean
-      Alphabet Can Be Formulated as Path Integral
+      Alphabet Can Be Formulated as Path Integral (TODO)
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-10>>
 
-      <with|par-left|<quote|1tab>|2.5<space|2spc>Detailed Balance Provides
-      Stationary Distribution <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|2.5<space|2spc>Drafts
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-11>>
 
-      <with|par-left|<quote|1tab>|2.6<space|2spc>Detailed Balance with
-      Connectivity Monotonically Reduces Relative Entropy
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|2.6<space|2spc>Detailed Balance Provides
+      Stationary Distribution <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-12>>
 
-      <with|par-left|<quote|1tab>|2.7<space|2spc>Monte-Carlo Simulation and
-      Guarantee of Relaxation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|2.7<space|2spc>Detailed Balance with
+      Connectivity Monotonically Reduces Relative Entropy
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-13>>
 
-      <with|par-left|<quote|1tab>|2.8<space|2spc>Example: Metropolis-Hastings
-      Algorithm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|2.8<space|2spc>Monte-Carlo Simulation and
+      Guarantee of Relaxation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-14>>
 
-      <with|par-left|<quote|1tab>|2.9<space|2spc>* Existence of Stationary
-      Density Function <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|2.9<space|2spc>Example: Metropolis-Hastings
+      Algorithm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-15>>
+
+      <with|par-left|<quote|1tab>|2.10<space|2spc>* Existence of Stationary
+      Density Function <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-16>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Kramers-Moyal
       Expansion and Langevin Process> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-16><vspace|0.5fn>
+      <no-break><pageref|auto-17><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|3.1<space|2spc>Conventions in This Section
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-17>>
+      <no-break><pageref|auto-18>>
 
       <with|par-left|<quote|1tab>|3.2<space|2spc>Spatial Expansion of Master
       Equation Gives Kramers-Moyal Expansion
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-18>>
+      <no-break><pageref|auto-19>>
 
       <with|par-left|<quote|1tab>|3.3<space|2spc>Wiener Process Arises from
       Homogeneity and Isotropy <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-19>>
+      <no-break><pageref|auto-20>>
 
       <with|par-left|<quote|1tab>|3.4<space|2spc>Langevin Process Arises in
       the Difference of Scales <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-20>>
+      <no-break><pageref|auto-21>>
 
       <with|par-left|<quote|1tab>|3.5<space|2spc>Transition Rate of Langevin
       Process Is a Generalized Function <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-21>>
+      <no-break><pageref|auto-22>>
 
       <with|par-left|<quote|1tab>|3.6<space|2spc>Master Equation of Langevin
       Process Is Fokker-Planck Equation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-22>>
+      <no-break><pageref|auto-23>>
 
       <with|par-left|<quote|1tab>|3.7<space|2spc>Stationary Solution of
       Langevin Process Has Source-Free Degree of Freedom
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-23>>
+      <no-break><pageref|auto-24>>
 
       <with|par-left|<quote|1tab>|3.8<space|2spc>Detailed Balance of Langevin
       Process Lacks Source-Free Degree of Freedom
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-24>>
+      <no-break><pageref|auto-25>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Least-Action
       Principle> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-25><vspace|0.5fn>
+      <no-break><pageref|auto-26><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|4.1<space|2spc>Conventions in This Section
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-26>>
+      <no-break><pageref|auto-27>>
 
       <with|par-left|<quote|1tab>|4.2<space|2spc>A Brief Review of
       Least-Action Principle in Classical Mechanics
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-27>>
+      <no-break><pageref|auto-28>>
 
       <with|par-left|<quote|1tab>|4.3<space|2spc>Least-Action Principle of
       Distribution Has No Redundancy <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-28>>
+      <no-break><pageref|auto-29>>
 
       <with|par-left|<quote|1tab>|4.4<space|2spc>Data Fitting Is Equivalent
       to Least-Action Principle of Distribution
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-29>>
+      <no-break><pageref|auto-30>>
 
       <with|par-left|<quote|1tab>|4.5<space|2spc>How Far Will Information
       Propagate in Markovian Process? (TODO)
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-31>>
+      <no-break><pageref|auto-32>>
 
       <with|par-left|<quote|1tab>|4.6<space|2spc>Example: Action in Deep
       Learning (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-32>>
+      <no-break><pageref|auto-33>>
 
       <with|par-left|<quote|1tab>|4.7<space|2spc>* History: Structures in
       Nature Arise from Least-Action Principle
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-33>>
+      <no-break><pageref|auto-34>>
 
       <with|par-left|<quote|2tab>|4.7.1<space|2spc>WBE Theory and
       Universality <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-34>>
+      <no-break><pageref|auto-35>>
 
       <with|par-left|<quote|2tab>|4.7.2<space|2spc>Renormalization Group and
       Criticality <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-35>>
+      <no-break><pageref|auto-36>>
     </associate>
   </collection>
 </auxiliary>
