@@ -86,7 +86,7 @@
     <no-break><pageref|auto-19>>
 
     <with|par-left|1tab|3.5<space|2spc>Transition Rate of Langevin Process Is
-    a Generalized Function <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    a Generalized Function (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-20>>
 
     <with|par-left|1tab|3.6<space|2spc>Master Equation of Langevin Process Is
@@ -465,8 +465,8 @@
   distribution of sands changes with time. In the language of probability,
   the density of sands at position <math|x> of the desk is described by a
   time-dependent density function <math|p<around*|(|x,t|)>>, where the total
-  mass of the sands on the desk is normalized to <math|1>, and the position
-  on the desk characterizes the alphabet <math|\<cal-X\>>.
+  mass of the sands on the desk is normalized to one, and the position on the
+  desk characterizes the alphabet <math|\<cal-X\>>.
 
   Let <math|q<rsub|t\<rightarrow\>t<rprime|'>><around*|(|y\|x|)>> denote the
   <em|portion> of density at position <math|x> that transits to position
@@ -478,8 +478,8 @@
   <math|x> to <math|x> (stay on <math|x>), which is
   <math|q<rsub|t\<rightarrow\>t<rprime|'>><around*|(|x\|x|)>>. Now, every
   sand at position <math|x> has transited during
-  <math|t\<rightarrow\>t<rprime|'>>, and the total portion shall be 100%,
-  which means
+  <math|t\<rightarrow\>t<rprime|'>>, and the total portion shall be
+  <math|100%>, which means
 
   <\equation>
     <big|int><rsub|\<cal-X\>>\<mathd\>y q<rsub|t\<rightarrow\>t<rprime|'>><around*|(|y\|x|)>=1.<label|equation:transition
@@ -2102,9 +2102,9 @@
   <wide|W|\<dot\>><rsup|\<beta\>><rsub|S><around*|(|t<rprime|'>|)>|]>=\<delta\><rsup|\<alpha\>\<beta\>>
   \<delta\><around*|(|t-t<rprime|'>|)>>.
 
-  <subsection|Transition Rate of Langevin Process Is a Generalized
-  Function><label|section: Transition Rate of Langevin Process Is a
-  Generalized Function>
+  <subsection|Transition Rate of Langevin Process Is a Generalized Function
+  (TODO)><label|section: Transition Rate of Langevin Process Is a Generalized
+  Function>
 
   In this section, we calculate the the transition rate of Langevin process
   from transition density. The <math|\<Delta\>t> appears in many places in
@@ -2125,7 +2125,7 @@
     q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)><around*|[|
     \<varphi\><around*|(|0|)>+\<epsilon\><rsup|\<alpha\>>
     \<partial\><rsub|\<alpha\>>\<varphi\><around*|(|0|)>+<frac|1|2>\<epsilon\><rsup|\<alpha\>>
-    \<epsilon\><rsup|\<beta\>> \<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>\<varphi\><around*|(|0|)>+\<cdots\>|]>
+    \<epsilon\><rsup|\<beta\>> \<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>\<varphi\><around*|(|0|)>+\<cdots\>|]>.
   </equation*>
 
   These Gaussian integrals result in
@@ -2149,6 +2149,26 @@
     \<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>.
   </equation*>
 
+  For higher order terms, since the <math|n>th-order moment of standard
+  normal distribution is <math|<with|font|cal|O><around*|(|1|)>> (explicitly,
+  it is <math|0> when <math|n> is odd and <math|2<rsup|-n/2>
+  n!/<around*|(|n/2|)>!> otherwise), we have
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
+    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>
+    <around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>-f<rsup|\<alpha\><rsub|1>><around*|(|x|)>\<Delta\>t|]>\<cdots\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|n>>-f<rsup|\<alpha\><rsub|n>><around*|(|x|)>\<Delta\>t|]>=<with|font|cal|O><around*|(|\<Delta\>t<rsup|n/2>|)>.
+  </equation*>
+
+  Thus, when <math|n\<geqslant\>3>, TODO
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
+    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>
+    <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|)>=<with|font|cal|O><around*|(|\<Delta\>t<rsup|n/2>|)>+I<rsub|n-1>
+    <with|font|cal|O><around*|(|\<Delta\>t|)>.
+  </equation*>
+
   Altogether,
 
   <\equation*>
@@ -2165,6 +2185,7 @@
   \<epsilon\><rsup|\<alpha\>> \<epsilon\><rsup|\<beta\>>
   \<epsilon\><rsup|\<gamma\>> \<epsilon\><rsup|\<delta\>>
   \<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>\<partial\><rsub|\<gamma\>>\<partial\><rsub|\<delta\>>\<varphi\><around*|(|0|)>|]>=<with|font|cal|O><around*|(|\<Delta\>t<rsup|2>|)>=\<omicron\><around*|(|\<Delta\>t|)>>).
+
   On the other hand, if we Taylor expand <math|q<rsub|\<Delta\>t>> by
   <math|\<Delta\>t> as <math|q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>=\<delta\><around*|(|\<epsilon\>|)>+r<around*|(|x+\<epsilon\>,x|)>
   \<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>>, where <math|r> is the
@@ -2355,8 +2376,7 @@
     holds for any <math|f\<in\>S<around*|(|\<bbb-R\><rsup|n>,\<bbb-R\><rsup|n\<times\>n>|)>>,
     thus <math|><math|\<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>\<delta\><around*|(|-x|)>=\<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>\<delta\><around*|(|x|)>>.
   </footnote> These conclusions are to be used in section <reference|section:
-  Detailed Balance Condition of Langevin Process Lacks Source-Free Degree of
-  Freedom>.
+  Detailed Balance of Langevin Process Lacks Source-Free Degree of Freedom>.
 
   <subsection|Master Equation of Langevin Process Is Fokker-Planck Equation>
 
@@ -3312,7 +3332,7 @@
     <associate|auto-24|<tuple|4|22>>
     <associate|auto-25|<tuple|4.1|22>>
     <associate|auto-26|<tuple|4.2|22>>
-    <associate|auto-27|<tuple|4.3|24>>
+    <associate|auto-27|<tuple|4.3|23>>
     <associate|auto-28|<tuple|4.4|24>>
     <associate|auto-29|<tuple|1|25>>
     <associate|auto-3|<tuple|1.2|2>>
@@ -3327,7 +3347,7 @@
     <associate|equation:Detailed Balance for transition density|<tuple|9|8>>
     <associate|equation:Fokker-Planck equation|<tuple|22|20>>
     <associate|equation:Langevin transition rate|<tuple|21|19>>
-    <associate|equation:action of distribution|<tuple|28|24>>
+    <associate|equation:action of distribution|<tuple|28|23>>
     <associate|equation:circle|<tuple|15|14>>
     <associate|equation:data-fitting iteration|<tuple|30|25>>
     <associate|equation:data-fitting result|<tuple|31|25>>
@@ -3343,7 +3363,7 @@
     <associate|equation:km expansion|<tuple|17|16>>
     <associate|equation:langevin process|<tuple|20|17>>
     <associate|equation:langevin process v0|<tuple|19|17>>
-    <associate|equation:least-action principle v0|<tuple|26|23>>
+    <associate|equation:least-action principle v0|<tuple|26|22>>
     <associate|equation:least-action principle v1|<tuple|27|23>>
     <associate|equation:master equation|<tuple|4|5>>
     <associate|equation:master equation v0|<tuple|3|5>>
@@ -3351,7 +3371,7 @@
     <associate|equation:relative entropy derivative|<tuple|11|9>>
     <associate|equation:rg action|<tuple|32|26>>
     <associate|equation:rg integral|<tuple|33|26>>
-    <associate|equation:stationary Fokker-Planck equation|<tuple|23|21>>
+    <associate|equation:stationary Fokker-Planck equation|<tuple|23|20>>
     <associate|equation:transition density normalization|<tuple|1|5>>
     <associate|equation:transition rate determines transition
     density|<tuple|6|7>>
@@ -3364,7 +3384,7 @@
     <associate|footnote-11|<tuple|11|19>>
     <associate|footnote-12|<tuple|12|20>>
     <associate|footnote-13|<tuple|13|23>>
-    <associate|footnote-14|<tuple|14|27>>
+    <associate|footnote-14|<tuple|14|26>>
     <associate|footnote-15|<tuple|15|28>>
     <associate|footnote-2|<tuple|2|2>>
     <associate|footnote-3|<tuple|3|2>>
@@ -3379,7 +3399,7 @@
     <associate|footnr-11|<tuple|11|19>>
     <associate|footnr-12|<tuple|12|20>>
     <associate|footnr-13|<tuple|13|23>>
-    <associate|footnr-14|<tuple|14|27>>
+    <associate|footnr-14|<tuple|14|26>>
     <associate|footnr-15|<tuple|15|28>>
     <associate|footnr-2|<tuple|2|2>>
     <associate|footnr-3|<tuple|3|2>>
@@ -3410,7 +3430,7 @@
     Scales|<tuple|3.4|17>>
     <associate|section: Least-Action Principle|<tuple|4|22>>
     <associate|section: Least-Action Principle of Distribution Has No
-    Redundancy|<tuple|4.3|24>>
+    Redundancy|<tuple|4.3|23>>
     <associate|section: Master Equation Describes the Evolution of Markov
     Process|<tuple|2.2|4>>
     <associate|section: Master Equation, Detailed Balance, and Relative
@@ -3544,7 +3564,8 @@
       <no-break><pageref|auto-19>>
 
       <with|par-left|<quote|1tab>|3.5<space|2spc>Transition Rate of Langevin
-      Process Is a Generalized Function <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      Process Is a Generalized Function (TODO)
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-20>>
 
       <with|par-left|<quote|1tab>|3.6<space|2spc>Master Equation of Langevin
