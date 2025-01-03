@@ -53,13 +53,13 @@
 
   <\equation*>
     <around*|\||\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>|\|>\<gg\><around*|\||\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>
-    \<alpha\><rsub|n+1>>|]>|\|>
+    \<alpha\><rsub|n+m>>|]>|\|>
   </equation*>
 
-  for any <math|\<alpha\>> sequence. For the second condition, we shall
-  expect that <math|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>>
-  will become much smaller by multiplying a small (random) variable
-  <math|\<epsilon\><rsup|\<alpha\><rsub|n+1>>>.
+  for any <math|<around*|(|\<alpha\><rsub|1>,\<alpha\><rsub|2>,\<ldots\>|)>>
+  and some <math|m> (may depend on <math|n>). For the second condition, we
+  shall expect that <math|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>>
+  will become much smaller by multiplying more small (random) variables.
 
   Plugging in the expression of <math|p<around*|(|x+\<epsilon\>,\<Delta\>t|)>>,
   we find
@@ -88,29 +88,283 @@
   </equation*>
 
   So the first condition simply implies <math|<around*|\||K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>|\|>\<less\>+\<infty\>>.
-  And the second indicates <math|<around*|\||K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>|\|>\<gg\><around*|\||K<rsub|n+1><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>\<alpha\><rsub|n+1>><around*|(|x|)>|\|>>.
-  As a summary, we have the sequence (omitting the superscript on <math|K>
-  for simplicity)
+  The second condition is non-trivial. We are to show that it indicates a
+  cut-off. Namely, there shall exist an positive integer <math|N>, such that
+  <math|K<rsub|n>=0> for any <math|n\<gtr\>N>.
+
+  As an example for exploration, we first cut-off at <math|N=2>. We are to
+  calculate <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>>
+  up to <math|\<omicron\><around*|(|\<Delta\>t<rsup|2>|)>>. This demands the
+  relation between transition rate and transition density (equation
+  <reference|equation:transition rate determines transition density>), namely
 
   <\equation*>
-    +\<infty\>\<gtr\><around*|\||K<rsub|1><around*|(|x|)>|\|>\<gg\><around*|\||K<rsub|2><around*|(|x|)>|\|>\<gg\>\<cdots\>\<gg\><around*|\||K<rsub|n><around*|(|x|)>|\|>\<gg\><around*|\||K<rsub|n+1><around*|(|x|)>|\|>\<gg\>\<cdots\>,
+    <tabular|<tformat|<cwith|1|-1|1|1|cell-hyphen|n>|<cwith|1|-1|1|1|cell-halign|r>|<cwith|1|-1|2|2|cell-halign|l>|<table|<row|<cell|q<rsub|\<Delta\>t><around*|(|z\|x|)>=>|<cell|\<delta\><around*|(|z-x|)>>>|<row|<cell|+>|<cell|<around*|(|\<Delta\>t|)>
+    r<around*|(|z,x|)>>>|<row|<cell|+>|<cell|<frac|<around*|(|\<Delta\>t|)><rsup|2>|2!>
+    <big|int><rsub|\<cal-X\>>\<mathd\>y r<around*|(|z,y|)>
+    r<around*|(|y,x|)>>>|<row|<cell|+>|<cell|\<cdots\>>>|<row|<cell|+>|<cell|<frac|<around*|(|\<Delta\>t|)><rsup|n+1>|<around*|(|n+1|)>!><big|int><rsub|\<cal-X\>>\<mathd\>y<rsub|1>\<cdots\><big|int><rsub|\<cal-X\>>\<mathd\>y<rsub|n>
+    r<around*|(|z,y<rsub|n>|)> r<around*|(|y<rsub|n>,y<rsub|n-1>|)>\<cdots\>r<around*|(|y<rsub|1>,x|)>>>|<row|<cell|+>|<cell|\<cdots\>.>>|<row|<cell|>|<cell|>>>>>
   </equation*>
 
-  which is held except for specific situations in which some <math|K>
-  vanishes (for example, when <math|r<around*|(|x+\<epsilon\>,x|)>> is
-  isotropic, we have <math|K<rsub|1>=0> on <math|\<bbb-R\><rsup|n>>).
+  As we have derived, starting at <math|p<around*|(|y,0|)>=\<delta\><around*|(|x-y|)>>
+  for some <math|x\<in\>\<bbb-R\><rsup|n>>,
+
+  <\equation*>
+    \<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>\<assign\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
+    p<around*|(|x+\<epsilon\>,\<Delta\>t|)>
+    \<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>=<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
+    q<rsub|\<mathLaplace\>t><around*|(|x+\<epsilon\>\|x|)>
+    \<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>.
+  </equation*>
+
+  Thus,
+
+  <\equation*>
+    \<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>=\<Delta\>t
+    <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
+    r<around*|(|x+\<epsilon\>,x|)> \<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>+<frac|<around*|(|\<Delta\>t|)><rsup|2>|2!>
+    <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    r<around*|(|x+\<epsilon\>,y|)> r<around*|(|y,x|)>
+    \<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>+\<omicron\><around*|(|\<Delta\>t<rsup|2>|)>.
+  </equation*>
+
+  As we have known, the first term is <math|\<Delta\>t
+  K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>>,
+  so it is <math|\<Delta\>t K<rsub|1><around*|(|x|)>> and <math|\<Delta\>t
+  K<rsub|2><around*|(|x|)>> for <math|n=1,2> respectively, and vanishes
+  otherwise. In the rest, we focus on the second term, denoting the integral
+  as <math|F<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>>,
+  thus the second term is <math|\<Delta\>t<rsup|2>/2
+  F<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>>
+  First notice that the integral has\ 
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    r<around*|(|x+\<epsilon\>,y|)> r<around*|(|y,x|)>=<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    r<around*|(|x+\<epsilon\>,x+y|)> r<around*|(|x+y,x|)>
+  </equation*>
+
+  Thus
+
+  <\equation*>
+    F<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>=<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    r<around*|(|x+\<epsilon\>,x+y|)> r<around*|(|x+y,x|)>
+    \<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>.
+  </equation*>
+
+  \;
+
+  Now, we are to calculate <math|F<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x|)>>.
+  By inserting an <math|<around*|(|\<epsilon\>-y|)>> term, we get
+
+  <\align>
+    <tformat|<table|<row|<cell|F<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x|)>=>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    r<around*|(|x+\<epsilon\>,x+y|)> r<around*|(|x+y,x|)>
+    <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>-y<rsup|\<alpha\><rsub|1>>|)>>>|<row|<cell|+>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    r<around*|(|x+\<epsilon\>,x+y|)> r<around*|(|x+y,x|)>
+    y<rsup|\<alpha\><rsub|1>>.>>>>
+  </align>
+
+  While integrating over <math|\<epsilon\>>, the first line gives
+  <math|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+  K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x+y|)> r<around*|(|x+y,x|)>>,
+  and the second vanishes because of the property
+  <math|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x r<around*|(|x,y|)>=0>.
+  So, we find
+
+  <\equation*>
+    F<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x|)>=<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x+y|)> r<around*|(|x+y,x|)>.
+  </equation*>
+
+  Taylor expansion of <math|K<rsub|1>> at <math|x> gives
+
+  <\align>
+    <tformat|<table|<row|<cell|>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    \ K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x+y|)>
+    r<around*|(|x+y,x|)>=K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x|)><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    \ r<around*|(|x+y,x|)>+>>|<row|<cell|+>|<cell|\<partial\><rsub|\<beta\><rsub|1>>K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x|)><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    \ r<around*|(|x+y,x|)> y<rsup|\<beta\><rsub|1>>+<frac|1|2>\<partial\><rsub|\<beta\><rsub|1>>\<partial\><rsub|\<beta\><rsub|2>>K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x|)><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    \ r<around*|(|x+y,x|)> y<rsup|\<beta\><rsub|1>>y<rsup|\<beta\><rsub|2>>>>|<row|<cell|+>|<cell|<frac|1|6>\<partial\><rsub|\<beta\><rsub|1>>\<partial\><rsub|\<beta\><rsub|2>>\<partial\><rsub|\<beta\><rsub|3>>K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x|)><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    \ r<around*|(|x+y,x|)> y<rsup|\<beta\><rsub|1>>y<rsup|\<beta\><rsub|2>>y<rsup|\<beta\><rsub|3>>+\<cdots\>.>>>>
+  </align>
+
+  The first term on the right hand side vanishes. The second term is
+  <math|K<rsub|1><rsup|\<beta\><rsub|1>><around*|(|x|)>
+  \<partial\><rsub|\<beta\><rsub|1>>K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x|)>>,
+  and the third is <math|><math|<around*|(|1/2|)>
+  K<rsub|2><rsup|\<beta\><rsub|1>\<beta\><rsub|2>><around*|(|x|)>
+  \<partial\><rsub|\<beta\><rsub|1>>\<partial\><rsub|\<beta\><rsub|2>>K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x|)>>.
+  The rest terms are all vanishing because <math|K<rsub|n>=0> for any
+  <math|n\<gtr\>2>. So, we find
+
+  <\equation*>
+    F<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x|)>=K<rsub|1><rsup|\<beta\><rsub|1>><around*|(|x|)>
+    \<partial\><rsub|\<beta\><rsub|1>>K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x|)>+<frac|1|2>
+    K<rsub|2><rsup|\<beta\><rsub|1>\<beta\><rsub|2>><around*|(|x|)>
+    \<partial\><rsub|\<beta\><rsub|1>>\<partial\><rsub|\<beta\><rsub|2>>K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x|)>.
+  </equation*>
+
+  Following the same steps, we can obtain for
+  <math|F<rsub|2><around*|(|x|)>>,<\footnote>
+    Since
+
+    <\equation*>
+      \<epsilon\><rsup|\<alpha\>>\<epsilon\><rsup|\<beta\>>=<around*|(|\<epsilon\><rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><around*|(|\<epsilon\><rsup|\<beta\>>-y<rsup|\<beta\>>|)>+<around*|(|\<epsilon\><rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>y<rsup|\<beta\>>+y<rsup|\<alpha\>>y<rsup|\<beta\>>+perm,
+    </equation*>
+
+    we have
+
+    <\align>
+      <tformat|<table|<row|<cell|F<rsub|2><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>><around*|(|x|)>=>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+      r<around*|(|x+\<epsilon\>,x+y|)> r<around*|(|x+y,x|)>
+      <around*|(|\<epsilon\><rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><around*|(|\<epsilon\><rsup|\<beta\>>-y<rsup|\<beta\>>|)>>>|<row|<cell|+>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+      r<around*|(|x+\<epsilon\>,x+y|)> r<around*|(|x+y,x|)>
+      <around*|(|\<epsilon\><rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>y<rsup|\<beta\>>+perm>>|<row|<cell|+>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+      r<around*|(|x+\<epsilon\>,x+y|)> r<around*|(|x+y,x|)>
+      y<rsup|\<alpha\>>y<rsup|\<beta\>>.>>>>
+    </align>
+
+    Again, by integrating over <math|\<epsilon\>>, the first line on the
+    right hand side is <math|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    \ K<rsub|2><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>><around*|(|x+y|)>
+    r<around*|(|x+y,x|)>> and the last line vanishes. The second line is
+    <math|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    K<rsub|1><rsup|\<alpha\>><around*|(|x+y|)>
+    r<around*|(|x+y,x|)>y<rsup|\<beta\>>+perm>. Thus,
+
+    <\equation*>
+      F<rsub|2><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>><around*|(|x|)>=<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+      \ K<rsub|2><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>><around*|(|x+y|)>
+      r<around*|(|x+y,x|)>+<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+      K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x+y|)>
+      r<around*|(|x+y,x|)>y<rsup|\<alpha\><rsub|2>>+perm.
+    </equation*>
+
+    Then, again, Taylor expansion of <math|K>s at <math|x> gives
+
+    <\equation*>
+      <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+      \ K<rsub|2><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>><around*|(|x+y|)>
+      r<around*|(|x+y,x|)>=K<rsub|1><rsup|\<beta\><rsub|1>><around*|(|x|)>
+      \<partial\><rsub|\<beta\><rsub|1>>K<rsub|2><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>><around*|(|x|)>+<frac|1|2>K<rsub|2><rsup|\<beta\><rsub|1>\<beta\><rsub|2>><around*|(|x|)>\<partial\><rsub|\<beta\><rsub|1>>\<partial\><rsub|\<beta\><rsub|2>>K<rsub|2><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>><around*|(|x|)>
+    </equation*>
+
+    and
+
+    <\equation*>
+      <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+      K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x+y|)>
+      r<around*|(|x+y,x|)>y<rsup|\<alpha\><rsub|2>>=K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x|)>K<rsub|1><rsup|\<alpha\><rsub|2>><around*|(|x|)>+K<rsub|2><rsup|\<alpha\><rsub|2>\<beta\><rsub|1>><around*|(|x|)>\<partial\><rsub|\<beta\><rsub|1>>K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x|)>,
+    </equation*>
+
+    where we have used <math|K<rsub|n>=0> for any <math|n\<gtr\>2> to cut the
+    Taylor series. So, we find
+
+    <\equation*>
+      F<rsub|2><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>><around*|(|x|)>=K<rsub|1><rsup|\<beta\><rsub|1>><around*|(|x|)>
+      \<partial\><rsub|\<beta\><rsub|1>>K<rsub|2><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>><around*|(|x|)>+<frac|1|2>K<rsub|2><rsup|\<beta\><rsub|1>\<beta\><rsub|2>><around*|(|x|)>\<partial\><rsub|\<beta\><rsub|1>>\<partial\><rsub|\<beta\><rsub|2>>K<rsub|2><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>><around*|(|x|)>+K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x|)>K<rsub|1><rsup|\<alpha\><rsub|2>><around*|(|x|)>+K<rsub|2><rsup|\<alpha\><rsub|1>\<beta\><rsub|1>><around*|(|x|)>\<partial\><rsub|\<beta\><rsub|1>>K<rsub|1><rsup|\<alpha\><rsub|2>><around*|(|x|)>+perm.
+    </equation*>
+  </footnote>
+
+  <\align>
+    <tformat|<table|<row|<cell|F<rsub|2><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>><around*|(|x|)>=>|<cell|K<rsub|1><rsup|\<beta\><rsub|1>><around*|(|x|)>
+    \<partial\><rsub|\<beta\><rsub|1>>K<rsub|2><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>><around*|(|x|)>+<frac|1|2>K<rsub|2><rsup|\<beta\><rsub|1>\<beta\><rsub|2>><around*|(|x|)>\<partial\><rsub|\<beta\><rsub|1>>\<partial\><rsub|\<beta\><rsub|2>>K<rsub|2><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>><around*|(|x|)>+K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x|)>K<rsub|1><rsup|\<alpha\><rsub|2>><around*|(|x|)>>>|<row|<cell|+>|<cell|K<rsub|2><rsup|\<alpha\><rsub|1>\<beta\><rsub|1>><around*|(|x|)>\<partial\><rsub|\<beta\><rsub|1>>K<rsub|1><rsup|\<alpha\><rsub|2>><around*|(|x|)>+perm<around*|(|\<alpha\><rsub|1>,\<alpha\><rsub|2>|)>,>>>>
+  </align>
+
+  where <math|perm<around*|(|\<alpha\><rsub|1>,\<alpha\><rsub|2>|)>> permutes
+  the <math|\<alpha\><rsub|1>> and <math|\<alpha\><rsub|2>> for any term that
+  is not symmetric (which is the forth term on the right hand side). Then for
+  <math|F<rsub|3><around*|(|x|)>>, we have<\footnote>
+    Since
+
+    <\align>
+      <tformat|<table|<row|<cell|\<epsilon\><rsup|\<alpha\>>\<epsilon\><rsup|\<beta\>>\<epsilon\><rsup|\<gamma\>>=>|<cell|<around*|(|\<epsilon\><rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><around*|(|\<epsilon\><rsup|\<beta\>>-y<rsup|\<beta\>>|)><around*|(|\<epsilon\><rsup|\<gamma\>>-y<rsup|\<gamma\>>|)>>>|<row|<cell|+>|<cell|<around*|(|\<epsilon\><rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><around*|(|\<epsilon\><rsup|\<beta\>>-y<rsup|\<beta\>>|)>y<rsup|\<gamma\>>+<around*|(|\<epsilon\><rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><around*|(|\<epsilon\><rsup|\<gamma\>>-y<rsup|\<gamma\>>|)>y<rsup|\<beta\>>+<around*|(|\<epsilon\><rsup|\<beta\>>-y<rsup|\<beta\>>|)><around*|(|\<epsilon\><rsup|\<gamma\>>-y<rsup|\<gamma\>>|)>y<rsup|\<alpha\>>>>|<row|<cell|+>|<cell|<around*|(|\<epsilon\><rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>y<rsup|\<beta\>>y<rsup|\<gamma\>>+<around*|(|\<epsilon\><rsup|\<beta\>>-y<rsup|\<beta\>>|)>y<rsup|\<alpha\>>y<rsup|\<gamma\>>+<around*|(|\<epsilon\><rsup|\<gamma\>>-y<rsup|\<gamma\>>|)>y<rsup|\<alpha\>>y<rsup|\<beta\>>>>|<row|<cell|+>|<cell|y<rsup|\<alpha\>>y<rsup|\<beta\>>y<rsup|\<gamma\>>,>>>>
+    </align>
+
+    we have
+
+    <\align>
+      <tformat|<table|<row|<cell|F<rsub|3><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>\<alpha\><rsub|3>><around*|(|x|)>=>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+      r<around*|(|x+\<epsilon\>,x+y|)> r<around*|(|x+y,x|)>
+      <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>-y<rsup|\<alpha\><rsub|1>>|)><around*|(|\<epsilon\><rsup|\<alpha\><rsub|2>>-y<rsup|a<rsub|2>>|)><around*|(|\<epsilon\><rsup|\<alpha\><rsub|3>>-y<rsup|\<alpha\><rsub|3>>|)>>>|<row|<cell|+>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+      r<around*|(|x+\<epsilon\>,x+y|)> r<around*|(|x+y,x|)>
+      <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>-y<rsup|\<alpha\><rsub|1>>|)><around*|(|\<epsilon\><rsup|\<alpha\><rsub|2>>-y<rsup|a<rsub|2>>|)>y<rsup|\<alpha\><rsub|3>>+perm>>|<row|<cell|+>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+      r<around*|(|x+\<epsilon\>,x+y|)> r<around*|(|x+y,x|)>
+      <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>-y<rsup|\<alpha\><rsub|1>>|)>y<rsup|\<alpha\><rsub|2>>y<rsup|\<alpha\><rsub|3>>+perm>>|<row|<cell|+>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+      r<around*|(|x+\<epsilon\>,x+y|)> r<around*|(|x+y,x|)>
+      y<rsup|\<alpha\><rsub|1>>y<rsup|\<alpha\><rsub|2>>y<rsup|\<alpha\><rsub|3>>.>>>>
+    </align>
+
+    Again, using <math|K<rsub|n>=0> for any <math|n\<gtr\>2>, we get
+
+    <\equation*>
+      F<rsub|3><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>\<alpha\><rsub|3>><around*|(|x|)>=<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+      K<rsub|2><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>><around*|(|x+y|)>
+      y<rsup|\<alpha\><rsub|3>> r<around*|(|x+y,x|)>+<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+      K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x+y|)>
+      y<rsup|\<alpha\><rsub|2>>y<rsup|\<alpha\><rsub|3>>
+      r<around*|(|x+y,x|)>+perm.
+    </equation*>
+
+    Taylor expansion of <math|K>s at <math|x> gives
+
+    <\equation*>
+      F<rsub|3><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>\<alpha\><rsub|3>><around*|(|x|)>=K<rsub|2><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>><around*|(|x|)>K<rsub|1><rsup|\<alpha\><rsub|3>><around*|(|x|)>+K<rsub|2><rsup|\<alpha\><rsub|1>\<beta\><rsub|1>><around*|(|x|)>\<partial\><rsub|\<beta\><rsub|1>>K<rsub|2><rsup|\<alpha\><rsub|2>\<alpha\><rsub|3>><around*|(|x|)>+perm.
+    </equation*>
+  </footnote>
+
+  <\equation*>
+    F<rsub|3><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>\<alpha\><rsub|3>><around*|(|x|)>=K<rsub|2><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>><around*|(|x|)>K<rsub|1><rsup|\<alpha\><rsub|3>><around*|(|x|)>+K<rsub|2><rsup|\<alpha\><rsub|1>\<beta\><rsub|1>><around*|(|x|)>\<partial\><rsub|\<beta\><rsub|1>>K<rsub|2><rsup|\<alpha\><rsub|2>\<alpha\><rsub|3>><around*|(|x|)>+perm<around*|(|\<alpha\><rsub|1>,\<alpha\><rsub|2>,\<alpha\><rsub|3>|)>.
+  </equation*>
+
+  And for <math|F<rsub|4><around*|(|x|)>>,
+
+  <\equation*>
+    F<rsub|4><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>\<alpha\><rsub|3>\<alpha\><rsub|4>><around*|(|x|)>=K<rsub|2><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>><around*|(|x|)>
+    K<rsub|2><rsup|\<alpha\><rsub|3>\<alpha\><rsub|4>>+perm<around*|(|\<alpha\><rsub|1>,\<alpha\><rsub|2>,\<alpha\><rsub|3>,\<alpha\><rsub|4>|)>.
+  </equation*>
+
+  Observing these results, we find the following rules. The superscripts are
+  assigned to two <math|K>s together with partial derivatives, ensuring that
+  the extra indices (such as <math|\<beta\><rsub|1>>) are all summed over
+  (namely, contracted). For each <math|n>th order partial derivative,
+  multiply it by a factor <math|1/n!>. The reason why there are two <math|K>s
+  in <math|F<rsub|n>> is that there are two <math|r>s in the expansion of
+  <math|q<rsub|\<Delta\>t>> at <math|\<Delta\>t<rsup|2>> order.
+
+  We have found that both <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|3>>|]>>
+  and <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|4>>|]>>
+  are of <math|<with|font|cal|O><around*|(|\<Delta\>t<rsup|2>|)>>, since both
+  <math|F<rsub|3><around*|(|x|)>> and <math|F<rsub|4><around*|(|x|)>> are
+  non-zero. But <math|F<rsub|5><around*|(|x|)>> must vanish since we cannot
+  get five superscirpts with only two <math|K<rsub|n>>s with <math|n=1,2>.
+  This further implies that any <math|F<rsub|n>> with <math|n\<gtr\>4> is
+  zero, leading <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>>
+  to <math|\<omicron\><around*|(|\<Delta\>t<rsup|2>|)>>. But at higher (than
+  2) order of <math|\<Delta\>t>, there will be more (than two) <math|K>s in
+  <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>>.
+  Then, based on the rules we just found, the number of combination of
+  indices will be greater (than <math|4>). These combinations, however, will
+  always be \Pexhausted\Q when <math|n> has been sufficiently large. That is,
+  there will be finite <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>>s
+  at any given order of <math|\<Delta\>t>. This is just the formal expression
+  of the second condition we assumed. So, the assumption is guaranteed with
+  cut-off. And conversely, only with a cut-off can we guarantee the
+  assumption. This can be generalized to cut-off at any <math|N>.
 
   <subsubsection|Kramers\UMoyal Expansion>
 
-  Since all <math|K>s are well-defined, we can relate the <math|K>s to the
+  Since all <math|K>s are finite, we can relate the <math|K>s to the
   transition rate <math|r> explicitly. To do so, we first introduce an
   arbitrary test function <math|\<varphi\>:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\>>
   in <strong|Schwarts space> <math|S<around*|(|\<bbb-R\><rsup|n>|)>>, which
-  is a functional space in which function mapping to <math|\<bbb-R\>> is
-  smooth and rapidly falls to zero in the region far from origin. For
-  example, Gaussian function (the density function of normal distribution) is
-  in Schwarts space <math|S<around*|(|\<bbb-R\>|)>> (the <math|\<bbb-R\>>
-  represents for domain). Taylor expanding <math|\<varphi\>> at origin gives
+  is a functional space in which function mapping from
+  <math|\<bbb-R\><rsup|n>> to <math|\<bbb-R\>> is smooth and rapidly falls to
+  zero in the region far from origin. For example, Gaussian function (the
+  density function of normal distribution) is in Schwarts space
+  <math|S<around*|(|\<bbb-R\>|)>>. Taylor expanding <math|\<varphi\>> at
+  origin gives
 
   <\equation*>
     <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
@@ -293,7 +547,7 @@
   and <math|y<around*|(|0|)>\<neq\>x<around*|(|0|)>>. That is to say,
   transport equation is deterministic.
 
-  <subsubsection|Wiener Process and Central Limit Theorem>
+  <subsubsection|Randomess Appears in the Second Moment>
 
   We have analyzed the cut-off at <math|n=1> in the sequence
   <math|<around*|(|K<rsub|1>,K<rsub|2>,\<ldots\>|)>> and found it
@@ -396,273 +650,6 @@
   theorem>, the most famous theorem in probability theory. Now, we have found
   for central limit theorem a physical description, the Brownian motion, and
   found it as a corollary of expansion <reference|equation:km expansion>.
-
-  <subsubsection|Examination of the Assumption>
-
-  After cut-off the series <math|<around*|(|K<rsub|1>,K<rsub|2>,\<ldots\>|)>>
-  such that <math|K<rsub|n>=0> for any <math|n\<gtr\>2>, we are to check if
-  the <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\>>\<epsilon\><rsup|\<beta\>>\<epsilon\><rsup|\<gamma\>>|]>>
-  converges to zero with a faster speed than
-  <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\>>\<epsilon\><rsup|\<beta\>>|]>>
-  (and if <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>\<epsilon\><rsup|\<alpha\><rsub|n+1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n+m>>|]>>
-  is faster than <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>>)
-  to <math|<with|font|cal|O><around*|(|\<Delta\>t<rsup|2>|)>> \ This demands
-  the relation between transition rate and transition density (equation
-  <reference|equation:transition rate determines transition density>), namely
-
-  <\equation*>
-    <tabular|<tformat|<cwith|1|-1|1|1|cell-hyphen|n>|<cwith|1|-1|1|1|cell-halign|r>|<cwith|1|-1|2|2|cell-halign|l>|<table|<row|<cell|q<rsub|\<Delta\>t><around*|(|z\|x|)>=>|<cell|\<delta\><around*|(|z-x|)>>>|<row|<cell|+>|<cell|<around*|(|\<Delta\>t|)>
-    r<around*|(|z,x|)>>>|<row|<cell|+>|<cell|<frac|<around*|(|\<Delta\>t|)><rsup|2>|2!>
-    <big|int><rsub|\<cal-X\>>\<mathd\>y r<around*|(|z,y|)>
-    r<around*|(|y,x|)>>>|<row|<cell|+>|<cell|\<cdots\>>>|<row|<cell|+>|<cell|<frac|<around*|(|\<Delta\>t|)><rsup|n+1>|<around*|(|n+1|)>!><big|int><rsub|\<cal-X\>>\<mathd\>y<rsub|1>\<cdots\><big|int><rsub|\<cal-X\>>\<mathd\>y<rsub|n>
-    r<around*|(|z,y<rsub|n>|)> r<around*|(|y<rsub|n>,y<rsub|n-1>|)>\<cdots\>r<around*|(|y<rsub|1>,x|)>>>|<row|<cell|+>|<cell|\<cdots\>.>>|<row|<cell|>|<cell|>>>>>
-  </equation*>
-
-  As we have derived, starting at <math|p<around*|(|y,0|)>=\<delta\><around*|(|x-y|)>>
-  for some <math|x\<in\>\<bbb-R\><rsup|n>>,
-
-  <\equation*>
-    \<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>\<assign\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
-    p<around*|(|x+\<epsilon\>,\<Delta\>t|)>
-    \<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>=<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
-    q<rsub|\<mathLaplace\>t><around*|(|x+\<epsilon\>\|x|)>
-    \<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>.
-  </equation*>
-
-  Thus,
-
-  <\equation*>
-    \<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>=\<Delta\>t
-    <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
-    r<around*|(|x+\<epsilon\>,x|)> \<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>+<frac|<around*|(|\<Delta\>t|)><rsup|2>|2!>
-    <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
-    r<around*|(|x+\<epsilon\>,y|)> r<around*|(|y,x|)>
-    \<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>+\<omicron\><around*|(|\<Delta\>t<rsup|2>|)>.
-  </equation*>
-
-  As we have known, the first term is <math|\<Delta\>t
-  K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>>,
-  so it is <math|\<Delta\>t K<rsub|1><around*|(|x|)>> and <math|\<Delta\>t
-  K<rsub|2><around*|(|x|)>> for <math|n=1,2> respectively, and vanishes
-  otherwise.
-
-  In the rest, we focus on the second term, denoting the integral as
-  <math|F<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>>,
-  thus the second term is <math|\<Delta\>t<rsup|2>/2
-  F<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>>
-  First notice that the integral has\ 
-
-  <\equation*>
-    <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
-    r<around*|(|x+\<epsilon\>,y|)> r<around*|(|y,x|)>=<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
-    r<around*|(|x+\<epsilon\>,x+y|)> r<around*|(|x+y,x|)>
-  </equation*>
-
-  Thus
-
-  <\equation*>
-    F<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>=<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
-    r<around*|(|x+\<epsilon\>,x+y|)> r<around*|(|x+y,x|)>
-    \<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>.
-  </equation*>
-
-  \;
-
-  Now, we are to calculate <math|F<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x|)>>.
-  By inserting an <math|<around*|(|\<epsilon\>-y|)>> term, we get
-
-  <\align>
-    <tformat|<table|<row|<cell|F<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x|)>=>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
-    r<around*|(|x+\<epsilon\>,x+y|)> r<around*|(|x+y,x|)>
-    <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>-y<rsup|\<alpha\><rsub|1>>|)>>>|<row|<cell|+>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
-    r<around*|(|x+\<epsilon\>,x+y|)> r<around*|(|x+y,x|)>
-    y<rsup|\<alpha\><rsub|1>>.>>>>
-  </align>
-
-  While integrating over <math|\<epsilon\>>, the first line gives
-  <math|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
-  K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x+y|)> r<around*|(|x+y,x|)>>,
-  and the second vanishes because of the property
-  <math|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x r<around*|(|x,y|)>=0>.
-  So, we find
-
-  <\equation*>
-    F<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x|)>=<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
-    K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x+y|)> r<around*|(|x+y,x|)>.
-  </equation*>
-
-  Taylor expansion of <math|K<rsub|1>> at <math|x> gives
-
-  <\align>
-    <tformat|<table|<row|<cell|>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
-    \ K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x+y|)>
-    r<around*|(|x+y,x|)>=K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x|)><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
-    \ r<around*|(|x+y,x|)>+>>|<row|<cell|+>|<cell|\<partial\><rsub|\<beta\><rsub|1>>K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x|)><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
-    \ r<around*|(|x+y,x|)> y<rsup|\<beta\><rsub|1>>+<frac|1|2>\<partial\><rsub|\<beta\><rsub|1>>\<partial\><rsub|\<beta\><rsub|2>>K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x|)><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
-    \ r<around*|(|x+y,x|)> y<rsup|\<beta\><rsub|1>>y<rsup|\<beta\><rsub|2>>>>|<row|<cell|+>|<cell|<frac|1|6>\<partial\><rsub|\<beta\><rsub|1>>\<partial\><rsub|\<beta\><rsub|2>>\<partial\><rsub|\<beta\><rsub|3>>K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x|)><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
-    \ r<around*|(|x+y,x|)> y<rsup|\<beta\><rsub|1>>y<rsup|\<beta\><rsub|2>>y<rsup|\<beta\><rsub|3>>+\<cdots\>.>>>>
-  </align>
-
-  The first term on the right hand side vanishes. The second term is
-  <math|K<rsub|1><rsup|\<beta\><rsub|1>><around*|(|x|)>
-  \<partial\><rsub|\<beta\><rsub|1>>K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x|)>>,
-  and the third is <math|><math|<around*|(|1/2|)>
-  K<rsub|2><rsup|\<beta\><rsub|1>\<beta\><rsub|2>><around*|(|x|)>
-  \<partial\><rsub|\<beta\><rsub|1>>\<partial\><rsub|\<beta\><rsub|2>>K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x|)>>.
-  The rest terms are all vanishing because <math|K<rsub|n>=0> for any
-  <math|n\<gtr\>2>. So, we find
-
-  <\equation*>
-    F<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x|)>=K<rsub|1><rsup|\<beta\><rsub|1>><around*|(|x|)>
-    \<partial\><rsub|\<beta\><rsub|1>>K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x|)>+<frac|1|2>
-    K<rsub|2><rsup|\<beta\><rsub|1>\<beta\><rsub|2>><around*|(|x|)>
-    \<partial\><rsub|\<beta\><rsub|1>>\<partial\><rsub|\<beta\><rsub|2>>K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x|)>.
-  </equation*>
-
-  \;
-
-  The next is <math|F<rsub|2><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>><around*|(|x|)>>.
-  Since
-
-  <\equation*>
-    \<epsilon\><rsup|\<alpha\>>\<epsilon\><rsup|\<beta\>>=<around*|(|\<epsilon\><rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><around*|(|\<epsilon\><rsup|\<beta\>>-y<rsup|\<beta\>>|)>+<around*|(|\<epsilon\><rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>y<rsup|\<beta\>>+y<rsup|\<alpha\>>y<rsup|\<beta\>>+perm,
-  </equation*>
-
-  where <math|perm> permutes the <math|\<alpha\>> and <math|\<beta\>> for any
-  term that is not symmetric (which is the second term on the right hand
-  side). So, we get
-
-  <\align>
-    <tformat|<table|<row|<cell|F<rsub|2><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>><around*|(|x|)>=>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
-    r<around*|(|x+\<epsilon\>,x+y|)> r<around*|(|x+y,x|)>
-    <around*|(|\<epsilon\><rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><around*|(|\<epsilon\><rsup|\<beta\>>-y<rsup|\<beta\>>|)>>>|<row|<cell|+>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
-    r<around*|(|x+\<epsilon\>,x+y|)> r<around*|(|x+y,x|)>
-    <around*|(|\<epsilon\><rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>y<rsup|\<beta\>>+perm>>|<row|<cell|+>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
-    r<around*|(|x+\<epsilon\>,x+y|)> r<around*|(|x+y,x|)>
-    y<rsup|\<alpha\>>y<rsup|\<beta\>>.>>>>
-  </align>
-
-  Again, by integrating over <math|\<epsilon\>>, the first line on the right
-  hand side is <math|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
-  \ K<rsub|2><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>><around*|(|x+y|)>
-  r<around*|(|x+y,x|)>> and the last line vanishes. The second line is
-  <math|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
-  K<rsub|1><rsup|\<alpha\>><around*|(|x+y|)>
-  r<around*|(|x+y,x|)>y<rsup|\<beta\>>+perm>. Thus,
-
-  <\equation*>
-    F<rsub|2><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>><around*|(|x|)>=<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
-    \ K<rsub|2><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>><around*|(|x+y|)>
-    r<around*|(|x+y,x|)>+<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
-    K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x+y|)>
-    r<around*|(|x+y,x|)>y<rsup|\<alpha\><rsub|2>>+perm.
-  </equation*>
-
-  Then, again, Taylor expansion of <math|K>s at <math|x> gives
-
-  <\equation*>
-    <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
-    \ K<rsub|2><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>><around*|(|x+y|)>
-    r<around*|(|x+y,x|)>=K<rsub|1><rsup|\<beta\><rsub|1>><around*|(|x|)>
-    \<partial\><rsub|\<beta\><rsub|1>>K<rsub|2><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>><around*|(|x|)>+<frac|1|2>K<rsub|2><rsup|\<beta\><rsub|1>\<beta\><rsub|2>><around*|(|x|)>\<partial\><rsub|\<beta\><rsub|1>>\<partial\><rsub|\<beta\><rsub|2>>K<rsub|2><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>><around*|(|x|)>
-  </equation*>
-
-  and
-
-  <\equation*>
-    <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
-    K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x+y|)>
-    r<around*|(|x+y,x|)>y<rsup|\<alpha\><rsub|2>>=K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x|)>K<rsub|1><rsup|\<alpha\><rsub|2>><around*|(|x|)>+K<rsub|2><rsup|\<alpha\><rsub|2>\<beta\><rsub|1>><around*|(|x|)>\<partial\><rsub|\<beta\><rsub|1>>K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x|)>,
-  </equation*>
-
-  where we have used <math|K<rsub|n>=0> for any <math|n\<gtr\>2> to cut the
-  Taylor series. So, we find
-
-  <\small>
-    <\equation*>
-      F<rsub|2><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>><around*|(|x|)>=K<rsub|1><rsup|\<beta\><rsub|1>><around*|(|x|)>
-      \<partial\><rsub|\<beta\><rsub|1>>K<rsub|2><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>><around*|(|x|)>+<frac|1|2>K<rsub|2><rsup|\<beta\><rsub|1>\<beta\><rsub|2>><around*|(|x|)>\<partial\><rsub|\<beta\><rsub|1>>\<partial\><rsub|\<beta\><rsub|2>>K<rsub|2><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>><around*|(|x|)>+K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x|)>K<rsub|1><rsup|\<alpha\><rsub|2>><around*|(|x|)>+K<rsub|2><rsup|\<alpha\><rsub|1>\<beta\><rsub|1>><around*|(|x|)>\<partial\><rsub|\<beta\><rsub|1>>K<rsub|1><rsup|\<alpha\><rsub|2>><around*|(|x|)>+perm.
-    </equation*>
-  </small>
-
-  \;
-
-  Following the same steps, we can obtain<\footnote>
-    Since
-
-    <\align>
-      <tformat|<table|<row|<cell|\<epsilon\><rsup|\<alpha\>>\<epsilon\><rsup|\<beta\>>\<epsilon\><rsup|\<gamma\>>=>|<cell|<around*|(|\<epsilon\><rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><around*|(|\<epsilon\><rsup|\<beta\>>-y<rsup|\<beta\>>|)><around*|(|\<epsilon\><rsup|\<gamma\>>-y<rsup|\<gamma\>>|)>>>|<row|<cell|+>|<cell|<around*|(|\<epsilon\><rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><around*|(|\<epsilon\><rsup|\<beta\>>-y<rsup|\<beta\>>|)>y<rsup|\<gamma\>>+<around*|(|\<epsilon\><rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><around*|(|\<epsilon\><rsup|\<gamma\>>-y<rsup|\<gamma\>>|)>y<rsup|\<beta\>>+<around*|(|\<epsilon\><rsup|\<beta\>>-y<rsup|\<beta\>>|)><around*|(|\<epsilon\><rsup|\<gamma\>>-y<rsup|\<gamma\>>|)>y<rsup|\<alpha\>>>>|<row|<cell|+>|<cell|<around*|(|\<epsilon\><rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>y<rsup|\<beta\>>y<rsup|\<gamma\>>+<around*|(|\<epsilon\><rsup|\<beta\>>-y<rsup|\<beta\>>|)>y<rsup|\<alpha\>>y<rsup|\<gamma\>>+<around*|(|\<epsilon\><rsup|\<gamma\>>-y<rsup|\<gamma\>>|)>y<rsup|\<alpha\>>y<rsup|\<beta\>>>>|<row|<cell|+>|<cell|y<rsup|\<alpha\>>y<rsup|\<beta\>>y<rsup|\<gamma\>>,>>>>
-    </align>
-
-    we have
-
-    <\align>
-      <tformat|<table|<row|<cell|F<rsub|3><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>\<alpha\><rsub|3>><around*|(|x|)>=>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
-      r<around*|(|x+\<epsilon\>,x+y|)> r<around*|(|x+y,x|)>
-      <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>-y<rsup|\<alpha\><rsub|1>>|)><around*|(|\<epsilon\><rsup|\<alpha\><rsub|2>>-y<rsup|a<rsub|2>>|)><around*|(|\<epsilon\><rsup|\<alpha\><rsub|3>>-y<rsup|\<alpha\><rsub|3>>|)>>>|<row|<cell|+>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
-      r<around*|(|x+\<epsilon\>,x+y|)> r<around*|(|x+y,x|)>
-      <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>-y<rsup|\<alpha\><rsub|1>>|)><around*|(|\<epsilon\><rsup|\<alpha\><rsub|2>>-y<rsup|a<rsub|2>>|)>y<rsup|\<alpha\><rsub|3>>+perm>>|<row|<cell|+>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
-      r<around*|(|x+\<epsilon\>,x+y|)> r<around*|(|x+y,x|)>
-      <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>-y<rsup|\<alpha\><rsub|1>>|)>y<rsup|\<alpha\><rsub|2>>y<rsup|\<alpha\><rsub|3>>+perm>>|<row|<cell|+>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
-      r<around*|(|x+\<epsilon\>,x+y|)> r<around*|(|x+y,x|)>
-      y<rsup|\<alpha\><rsub|1>>y<rsup|\<alpha\><rsub|2>>y<rsup|\<alpha\><rsub|3>>.>>>>
-    </align>
-
-    Again, using <math|K<rsub|n>=0> for any <math|n\<gtr\>2>, we get
-
-    <\equation*>
-      F<rsub|3><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>\<alpha\><rsub|3>><around*|(|x|)>=<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
-      K<rsub|2><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>><around*|(|x+y|)>
-      y<rsup|\<alpha\><rsub|3>> r<around*|(|x+y,x|)>+<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
-      K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x+y|)>
-      y<rsup|\<alpha\><rsub|2>>y<rsup|\<alpha\><rsub|3>>
-      r<around*|(|x+y,x|)>+perm.
-    </equation*>
-
-    Taylor expansion of <math|K>s at <math|x> gives
-
-    <\equation*>
-      F<rsub|3><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>\<alpha\><rsub|3>><around*|(|x|)>=K<rsub|2><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>><around*|(|x|)>K<rsub|1><rsup|\<alpha\><rsub|3>><around*|(|x|)>+K<rsub|2><rsup|\<alpha\><rsub|1>\<beta\><rsub|1>><around*|(|x|)>\<partial\><rsub|\<beta\><rsub|1>>K<rsub|2><rsup|\<alpha\><rsub|2>\<alpha\><rsub|3>><around*|(|x|)>+perm.
-    </equation*>
-  </footnote>
-
-  <\equation*>
-    F<rsub|3><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>\<alpha\><rsub|3>><around*|(|x|)>=K<rsub|2><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>><around*|(|x|)>K<rsub|1><rsup|\<alpha\><rsub|3>><around*|(|x|)>+K<rsub|2><rsup|\<alpha\><rsub|1>\<beta\><rsub|1>><around*|(|x|)>\<partial\><rsub|\<beta\><rsub|1>>K<rsub|2><rsup|\<alpha\><rsub|2>\<alpha\><rsub|3>><around*|(|x|)>+perm
-  </equation*>
-
-  and
-
-  <\equation*>
-    F<rsub|4><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>\<alpha\><rsub|3>\<alpha\><rsub|4>><around*|(|x|)>=K<rsub|2><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>><around*|(|x|)>
-    K<rsub|2><rsup|\<alpha\><rsub|3>\<alpha\><rsub|4>>+perm.
-  </equation*>
-
-  Now, we have observed the rules. The superscripts are assigned to two
-  <math|K>s together with partial derivatives, ensuring that the extra
-  indices (such as <math|\<beta\><rsub|1>>) are all summed over (namely,
-  contracted). For each <math|n>th order partial derivative, multiply it by a
-  factor <math|1/n!>. The reason why there are two <math|K>s in
-  <math|F<rsub|n>> is that there are two <math|r>s in the expansion of
-  <math|q<rsub|\<Delta\>t>> at <math|\<Delta\>t<rsup|2>> order.
-
-  We have found that both <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|3>>|]>>
-  and <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|4>>|]>>
-  are of <math|<with|font|cal|O><around*|(|\<Delta\>t<rsup|2>|)>>, since both
-  <math|F<rsub|3><around*|(|x|)>> and <math|F<rsub|4><around*|(|x|)>> are
-  non-zero. But <math|F<rsub|5><around*|(|x|)>> must vanish since we cannot
-  get five superscirpts with only two <math|K<rsub|n>>s with <math|n=1,2>.
-  This further implies that any <math|F<rsub|n>> with <math|n\<gtr\>4> is
-  zero, leading <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>>
-  to <math|\<omicron\><around*|(|\<Delta\>t<rsup|2>|)>>. But at higher (than
-  2) order of <math|\<Delta\>t>, there will be more (than two) <math|K>s in
-  <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>>.
-  Then, based on the rules, the number of combination of indices will be
-  greater (than <math|4>) <math|n>. This combination, however, will always be
-  \Pexhausted\Q when <math|n> becomes sufficiently large. That is, there will
-  be finite <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>>s
-  at a given order of <math|\<Delta\>t>. So, the assumption is guaranteed
-  with cut-off. And conversely, only with a cut-off can we guarantee the
-  assumption. This can be generalized to cut-off at any <math|n>.
 
   <subsection|Eliminating Covariance>
 
@@ -1145,19 +1132,19 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|1.3.1|8>>
-    <associate|auto-11|<tuple|1.4|9>>
-    <associate|auto-12|<tuple|1.5|10>>
-    <associate|auto-13|<tuple|1.5.1|10>>
+    <associate|auto-10|<tuple|1.4|8>>
+    <associate|auto-11|<tuple|1.5|9>>
+    <associate|auto-12|<tuple|1.5.1|10>>
+    <associate|auto-13|<tuple|1.5.2|10>>
     <associate|auto-14|<tuple|1.5.2|10>>
     <associate|auto-2|<tuple|1.1|1>>
     <associate|auto-3|<tuple|1.1.1|1>>
     <associate|auto-4|<tuple|1.1.2|1>>
     <associate|auto-5|<tuple|1.1.3|2>>
     <associate|auto-6|<tuple|1.1.4|3>>
-    <associate|auto-7|<tuple|1.1.5|4>>
-    <associate|auto-8|<tuple|1.2|6>>
-    <associate|auto-9|<tuple|1.3|7>>
+    <associate|auto-7|<tuple|1.2|4>>
+    <associate|auto-8|<tuple|1.3|6>>
+    <associate|auto-9|<tuple|1.3.1|7>>
     <associate|equation:km expansion|<tuple|1|2>>
     <associate|equation:km expansion v1|<tuple|2|2>>
     <associate|equation:path integral step 1|<tuple|4|7>>
@@ -1166,10 +1153,12 @@
     <associate|footnote-2|<tuple|2|7>>
     <associate|footnote-3|<tuple|3|10>>
     <associate|footnote-4|<tuple|4|?>>
-    <associate|footnr-1|<tuple|2|2>>
+    <associate|footnote-5|<tuple|5|?>>
+    <associate|footnr-1|<tuple|1|2>>
     <associate|footnr-2|<tuple|2|7>>
-    <associate|footnr-3|<tuple|3|10>>
+    <associate|footnr-3|<tuple|2|10>>
     <associate|footnr-4|<tuple|4|?>>
+    <associate|footnr-5|<tuple|5|?>>
     <associate|section: Master Equation on Euclidean Alphabet Can Be
     Formulated as Path Integral|<tuple|1.3|7>>
   </collection>
