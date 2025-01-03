@@ -5,6 +5,653 @@
 <\body>
   <section|Drafts>
 
+  <subsection|Randomness at Small Scale 0>
+
+  <subsubsection|Conditions from Spatial Smoothness>
+
+  Let the alphabet <math|\<cal-X\>=\<bbb-R\><rsup|n>> for some integer
+  <math|n\<geqslant\>1>, which has sufficient connectivity. In addition,
+  suppose that the density function <math|p<around*|(|x,t|)>> of a
+  time-dependent distribution <math|P<around*|(|t|)>> and the transition rate
+  <math|r<around*|(|x,y|)>> are smooth on <math|x> and <math|y>. In this
+  section, we investigate the direct results of spatial smoothness.
+
+  Given <math|y\<in\>\<bbb-R\><rsup|n>>, suppose that all the mass is
+  centered at <math|x> initially, thus <math|p<around*|(|x<rprime|'>,0|)>=\<delta\><around*|(|x-x<rprime|'>|)>>.
+  Then, after a small temporal period <math|\<Delta\>t>, there is some
+  portion of mass transits to elsewhere. By master equation
+  <reference|equation:master equation>, the change in density is
+  <math|p<around*|(|y,\<Delta\>t|)>-p<around*|(|y,0|)>=\<Delta\>t
+  <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y r<around*|(|y,x<rprime|'>|)>
+  p<around*|(|x<rprime|'>,0|)>+\<omicron\><around*|(|\<Delta\>t|)>>.
+  Inserting <math|p<around*|(|x<rprime|'>,0|)>=\<delta\><around*|(|x-x<rprime|'>|)>>
+  and denoting <math|\<epsilon\>\<assign\>y-x>, we get
+
+  <\equation*>
+    p<around*|(|x+\<epsilon\>,\<Delta\>t|)>=\<delta\><around*|(|\<epsilon\>|)>+r<around*|(|x+\<epsilon\>,x|)>
+    \<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>.
+  </equation*>
+
+  <em|We assume that the portion of mass does not transit far away from
+  <math|x>, but in its neighbor, namely <math|\<epsilon\>> is really small in
+  scale.> Quantitively speaking, the scale is reflected by moments, where the
+  <math|n>th-moment is defined by
+
+  <\equation*>
+    \<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>\<assign\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
+    p<around*|(|x+\<epsilon\>,\<Delta\>t|)>
+    <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|)>.
+  </equation*>
+
+  Thus, the assumption turns to be
+
+  <\equation*>
+    lim<rsub|\<Delta\>t\<rightarrow\>0>\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>=0
+  </equation*>
+
+  and
+
+  <\equation*>
+    <around*|\||\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>|\|>\<gg\><around*|\||\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>
+    \<alpha\><rsub|n+1>>|]>|\|>
+  </equation*>
+
+  for any <math|\<alpha\>> sequence. For the second condition, we shall
+  expect that <math|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>>
+  will become much smaller by multiplying a small (random) variable
+  <math|\<epsilon\><rsup|\<alpha\><rsub|n+1>>>.
+
+  Plugging in the expression of <math|p<around*|(|x+\<epsilon\>,\<Delta\>t|)>>,
+  we find
+
+  <\align>
+    <tformat|<table|<row|<cell|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>=>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
+    \<delta\><around*|(|\<epsilon\>|)> <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|)>+\<Delta\>t<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
+    r<around*|(|x+\<epsilon\>,x|)> <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|)>+\<omicron\><around*|(|\<Delta\>t|)>>>|<row|<cell|=>|<cell|\<Delta\>t<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
+    r<around*|(|x+\<epsilon\>,x|)> <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|)>+\<omicron\><around*|(|\<Delta\>t|)>.>>>>
+  </align>
+
+  Then, introducing (to distinguish moments, which is defined on density, we
+  employ <math|K> instead of <math|M> for denoting the \Pmoments for
+  transition rate\Q)
+
+  <\equation*>
+    K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
+    r<around*|(|x+\<epsilon\>,x|)> <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|)>,
+  </equation*>
+
+  we have
+
+  <\equation*>
+    \<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>=K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>
+    \<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>.
+  </equation*>
+
+  So the first condition simply implies <math|<around*|\||K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>|\|>\<less\>+\<infty\>>.
+  And the second indicates <math|<around*|\||K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>|\|>\<gg\><around*|\||K<rsub|n+1><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>\<alpha\><rsub|n+1>><around*|(|x|)>|\|>>.
+  As a summary, we have the sequence (omitting the superscript on <math|K>
+  for simplicity)
+
+  <\equation*>
+    +\<infty\>\<gtr\><around*|\||K<rsub|1><around*|(|x|)>|\|>\<gg\><around*|\||K<rsub|2><around*|(|x|)>|\|>\<gg\>\<cdots\>\<gg\><around*|\||K<rsub|n><around*|(|x|)>|\|>\<gg\><around*|\||K<rsub|n+1><around*|(|x|)>|\|>\<gg\>\<cdots\>,
+  </equation*>
+
+  which is held except for specific situations in which some <math|K>
+  vanishes (for example, when <math|r<around*|(|x+\<epsilon\>,x|)>> is
+  isotropic, we have <math|K<rsub|1>=0> on <math|\<bbb-R\><rsup|n>>).
+
+  <subsubsection|Kramers\UMoyal Expansion>
+
+  Since all <math|K>s are well-defined, we can relate the <math|K>s to the
+  transition rate <math|r> explicitly. To do so, we first introduce an
+  arbitrary test function <math|\<varphi\>:\<bbb-R\><rsup|n>\<rightarrow\>\<bbb-R\>>
+  in <strong|Schwarts space> <math|S<around*|(|\<bbb-R\><rsup|n>|)>>, which
+  is a functional space in which function mapping to <math|\<bbb-R\>> is
+  smooth and rapidly falls to zero in the region far from origin. For
+  example, Gaussian function (the density function of normal distribution) is
+  in Schwarts space <math|S<around*|(|\<bbb-R\>|)>> (the <math|\<bbb-R\>>
+  represents for domain). Taylor expanding <math|\<varphi\>> at origin gives
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
+    r<around*|(|x+\<epsilon\>,x|)> \<varphi\><around*|(|\<epsilon\>|)>=<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
+    r<around*|(|x+\<epsilon\>,x|)> \<varphi\><around*|(|0|)>+<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
+    r<around*|(|x+\<epsilon\>,x|)><big|sum><rsub|n=1><rsup|+\<infty\>><frac|1|n!>
+    <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|)>
+    <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>.
+  </equation*>
+
+  Because of the normalization of transition density, we have
+  <math|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
+  r<around*|(|x+\<epsilon\>,x|)>=0>, thus
+
+  <\align>
+    <tformat|<table|<row|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
+    r<around*|(|x+\<epsilon\>,x|)> \<varphi\><around*|(|\<epsilon\>|)>=>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
+    r<around*|(|x+\<epsilon\>,x|)><big|sum><rsub|n=1><rsup|+\<infty\>><frac|1|n!>
+    <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|)>
+    <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>>>|<row|<cell|=>|<cell|<big|sum><rsub|n=1><rsup|+\<infty\>><frac|1|n!>K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>
+    <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>,>>>>
+  </align>
+
+  where we have inserted the definition of <math|K>s. This expansion is valid
+  since <math|K>s are well defined and <math|\<varphi\>> is smooth (since
+  <math|\<varphi\>> is in Schwarts space, in which functions are smooth).
+  Then, because of the identity
+
+  <\equation*>
+    <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>=<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
+    \<delta\><around*|(|\<epsilon\>|)> <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|\<epsilon\>|)>,
+  </equation*>
+
+  integration by parts on the right hand side gives
+
+  <\equation*>
+    <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>=<around*|(|-1|)><rsup|n>
+    <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
+    <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|\<epsilon\>|)>
+    \<varphi\><around*|(|\<epsilon\>|)>.
+  </equation*>
+
+  Plugging this back, we find
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
+    r<around*|(|x+\<epsilon\>,x|)> \<varphi\><around*|(|\<epsilon\>|)>=<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
+    <around*|[|<big|sum><rsub|n=1><rsup|+\<infty\>><frac|<around*|(|-1|)><rsup|n>|n!>K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)><around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|\<epsilon\>|)>|]>
+    \<varphi\><around*|(|\<epsilon\>|)>.
+  </equation*>
+
+  Since <math|\<varphi\>> is arbitrary, we finall arrive at
+
+  <\equation>
+    r<around*|(|x+\<epsilon\>,x|)>=<big|sum><rsub|n=1><rsup|+\<infty\>><frac|<around*|(|-1|)><rsup|n>|n!>K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)><around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|\<epsilon\>|)>.<label|equation:transition
+    rate and moments>
+  </equation>
+
+  With this expansion of transition rate, master equation becomes
+
+  <\align>
+    <tformat|<table|<row|<cell|>|<cell|<frac|\<partial\>p|\<partial\>t><around*|(|x,t|)>=<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    r<around*|(|x,y|)> p<around*|(|y,t|)>=<big|sum><rsub|n=1><rsup|+\<infty\>><frac|<around*|(|-1|)><rsup|n>|n!><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|y|)>
+    <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|x-y|)>
+    p<around*|(|y,t|)>.>>>>
+  </align>
+
+  Notice that <math|<around*|(|\<partial\>/\<partial\>y<rsup|\<alpha\><rsub|1>>|)>\<cdots\><around*|(|\<partial\>/\<partial\>y<rsup|\<alpha\><rsub|n>>|)>\<delta\><around*|(|x-y|)>=<around*|(|-1|)><rsup|n>
+  <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|x-y|)>>,
+  we get
+
+  <\equation*>
+    <frac|\<partial\>p|\<partial\>t><around*|(|x,t|)>=<big|sum><rsub|n=1><rsup|+\<infty\>><frac|1|n!><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|y|)>
+    <around*|[|<frac|\<partial\>|\<partial\>y<rsup|\<alpha\><rsub|1>>>\<cdots\><frac|\<partial\>|\<partial\>y<rsup|\<alpha\><rsub|n>>>\<delta\><around*|(|x-y|)>|]>
+    p<around*|(|y,t|)>.
+  </equation*>
+
+  Taking integration by parts on the right hand side and then integrating
+  over <math|y>, we finally arrive at
+
+  <\equation>
+    <frac|\<partial\>p|\<partial\>t><around*|(|x,t|)>=<big|sum><rsub|n=1><rsup|+\<infty\>><frac|<around*|(|-1|)><rsup|n>|n!>
+    <around*|(|<frac|\<partial\>|\<partial\>x<rsup|\<alpha\><rsub|1>>>\<cdots\><frac|\<partial\>|\<partial\>x<rsup|\<alpha\><rsub|n>>>|)>
+    <around*|[|K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>
+    p<around*|(|x,t|)>|]>.<label|equation:km expansion>
+  </equation>
+
+  This Taylor expansion of master equation is called the
+  <with|font-series|bold|Kramers\UMoyal expansion>.
+
+  \;
+
+  <subsubsection|Randomness Is Absent in the First Moment>
+
+  Recall that the other condition for <math|K>s is the sequence
+  <math|K<rsub|1>\<gg\>K<rsub|2>\<gg\>\<cdots\>>. It suggests us to cut the
+  series on the right hand side of Kramers\UMoyal expansion
+  <reference|equation:km expansion>. We are to show that cut-off at
+  <math|K<rsub|1>>, omitting <math|K<rsub|n>> for any <math|n\<gtr\>1>,
+  results in a deterministic evolution. To do so, we omit all
+  <math|K<rsub|n>> for <math|n\<gtr\>1>, and get (re-denote <math|K<rsub|1>>
+  to <math|f> for simplicity)
+
+  <\equation*>
+    <frac|\<partial\>p|\<partial\>t><around*|(|x,t|)>+\<partial\><rsub|\<alpha\>><around*|(|f<rsup|\<alpha\>><around*|(|x|)>
+    p<around*|(|x,t|)>|)>=0.
+  </equation*>
+
+  This is the <strong|continuity equation> or <strong|transport equation>. It
+  was used for describing the evolution of the density of incompressible
+  liquids. We are to solve this equation explicitly. As a first order partial
+  differential equation, we can use the <strong|method of characteristics>.
+  At the first step, we fully expand the equation, as
+
+  <\equation*>
+    <frac|\<partial\>p|\<partial\>t><around*|(|x,t|)>+f<rsup|\<alpha\>><around*|(|x|)>
+    \<partial\><rsub|\<alpha\>>p<around*|(|x,t|)>=-\<partial\><rsub|\<alpha\>>f<rsup|\<alpha\>><around*|(|x|)>
+    p<around*|(|x,t|)>.
+  </equation*>
+
+  The next step is constructing a parameterized curve
+  <math|<around*|(|x<around*|(|s|)>,t<around*|(|s|)>|)>> for
+  <math|s\<in\><around*|[|0,+\<infty\>|)>> called <strong|characteristic>,
+  obeying
+
+  <\equation*>
+    <frac|\<mathd\>t|\<mathd\>s><around*|(|s|)>=1
+  </equation*>
+
+  and
+
+  <\equation*>
+    <frac|\<mathd\>x<rsup|\<alpha\>>|\<mathd\>s><around*|(|s|)>=f<rsup|\<alpha\>><around*|(|x<around*|(|s|)>|)>.
+  </equation*>
+
+  It has solution <math|t<around*|(|s|)>=s+t<around*|(|0|)>>. If we set
+  <math|t<around*|(|0|)>=0>, then we have <math|t=s> and
+
+  <\equation*>
+    <frac|\<mathd\>x<rsup|\<alpha\>>|\<mathd\>s><around*|(|s|)>=<frac|\<mathd\>x<rsup|\<alpha\>>|\<mathd\>t><around*|(|t|)>=f<rsup|\<alpha\>><around*|(|x<around*|(|t|)>|)>,
+  </equation*>
+
+  from which we solve <math|x<around*|(|t|)>>, leading to
+
+  <\equation*>
+    <frac|\<mathd\>|\<mathd\>t>p<around*|(|x<around*|(|t|)>,t|)>=<frac|\<partial\>p|\<partial\>x<rsup|\<alpha\>>><around*|(|x<around*|(|t|)>,t|)>
+    <frac|\<mathd\>x<rsup|\<alpha\>>|\<mathd\>t><around*|(|t|)>+<frac|\<partial\>p|\<partial\>t><around*|(|x<around*|(|t|)>,t|)>=\<partial\><rsub|\<alpha\>>p<around*|(|x<around*|(|t|)>,t|)>
+    f<rsup|\<alpha\>><around*|(|x<around*|(|t|)>|)>+<frac|\<partial\>p|\<partial\>t><around*|(|x<around*|(|t|)>,t|)>,
+  </equation*>
+
+  which is the left hand side of the original equaiton along characteristic.
+  Thus, by equaling to the right hand side of the original equation, we get
+
+  <\equation*>
+    <frac|\<mathd\>|\<mathd\>t>p<around*|(|x<around*|(|t|)>,t|)>=-\<partial\><rsub|\<alpha\>>f<rsup|\<alpha\>><around*|(|x<around*|(|t|)>|)>
+    p<around*|(|x<around*|(|t|)>,t|)>.
+  </equation*>
+
+  Now, the original partial differential equation is converted into an
+  ordinary differential equation. It has the unique solution
+
+  <\equation*>
+    p<around*|(|x<around*|(|t|)>,t|)>=p<around*|(|x<around*|(|0|)>,0|)>\<times\>exp<around*|(|-<big|int><rsub|0><rsup|t>\<mathd\>t<rprime|'>
+    \<partial\><rsub|\<alpha\>>f<rsup|\<alpha\>><around*|(|x<around*|(|t<rprime|'>|)>|)>|)>.
+  </equation*>
+
+  It indicates that the density at <math|x<around*|(|0|)>> will \Ptransport\Q
+  along the curve <math|x<around*|(|t|)>> as time evolves. For example,
+  consider <math|p<around*|(|y,0|)>=\<delta\><around*|(|y-x<around*|(|0|)>|)>>,
+  that is all mass is centered at <math|x<around*|(|0|)>>. Then
+  <math|p<around*|(|x,t|)>> will have density only at
+  <math|x<around*|(|t|)>>, and <math|p<around*|(|y,t|)>=0> for any
+  <math|y\<neq\>x<around*|(|t|)>>, since <math|y> is traced back to
+  <math|y<around*|(|0|)>> along the characteristic <math|y<around*|(|t|)>>
+  and <math|y<around*|(|0|)>\<neq\>x<around*|(|0|)>>. That is to say,
+  transport equation is deterministic.
+
+  <subsubsection|Langevin Process>
+
+  So, cut-off at <math|K<rsub|1>> will loss the randomess in Markovian
+  process. We have to cut-off at <math|K<rsub|2>> and to show that, when
+  <math|K<rsub|2>>, as a matrix-valued field, is positive definite, the
+  randomness of Markovian process is guaranteed.
+
+  Together with <math|K<rsub|1>> (re-denoted to <math|f> as before) and
+  <math|K<rsub|2>> (re-denoted to <math|\<Sigma\>>), we have the transition
+  rate cut-off at <math|n=2> as
+
+  <\equation>
+    r<around*|(|x+\<epsilon\>,x|)>=-f<rsup|\<alpha\>><around*|(|x|)>
+    \<partial\><rsub|\<alpha\>>\<delta\><around*|(|\<epsilon\>|)>+<frac|1|2>\<Sigma\><rsup|\<alpha\>\<beta\>><around*|(|x|)>
+    \<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>\<delta\><around*|(|\<epsilon\>|)>.<label|equation:langevin
+    transition rate>
+  </equation>
+
+  We are to show that this is the transition rate of the Gaussian density
+  function
+
+  <\equation>
+    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>\<assign\><frac|1|<sqrt|<around*|(|2\<mathpi\>
+    \<Delta\>t|)><rsup|n> det \<Sigma\><around*|(|x|)>>>exp<around*|(|-<frac|1|2\<Delta\>t>
+    <around*|[|\<Sigma\><rsup|-1><around*|(|x|)>|]><rsub|\<alpha\>\<beta\>>
+    <around*|[|\<epsilon\><rsup|\<alpha\>>-f<rsup|\<alpha\>><around*|(|x|)>
+    \<Delta\>t|]> <around*|[|\<epsilon\><rsup|\<beta\>><rsub|>-f<rsup|\<beta\>><around*|(|x|)>
+    \<Delta\>t|]>|)>.<label|equation:langevin process>
+  </equation>
+
+  In fact, this density function does not satisfy the relation
+  <reference|equation:transition rate determines transition density> as long
+  as <math|f> and <math|\<Sigma\>> are not constants, thus it is generally
+  not a transition density, but an approximation when <math|\<Delta\>t> is
+  sufficiently small.
+
+  To show this, we have to calculate the expectation
+  <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>=<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
+  q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>
+  <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|)>>.
+  Based on Gaussian integral
+
+  <\equation*>
+    I<around*|(|b|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|m>>\<mathd\>x
+    exp<around*|(|-<frac|1|2> A<rsub|\<alpha\>\<beta\>> x<rsup|\<alpha\>>
+    x<rsup|\<beta\>>+b<rsub|\<alpha\>> x<rsup|\<alpha\>>|)>=<sqrt|<frac|<around*|(|2\<mathpi\>|)><rsup|m>|det
+    A>> exp<around*|(|<frac|1|2> <around*|(|A<rsup|-1>|)><rsup|\<alpha\>\<beta\>>
+    b<rsub|\<alpha\>> b<rsub|\<beta\>>|)>.
+  </equation*>
+
+  Replacing <math|A<rsup|-1>> by <math|\<Sigma\><around*|(|x|)> \<Delta\>t>
+  and <math|x> by <math|\<epsilon\>-f<around*|(|x|)> \<Delta\>t>, we find
+
+  <\equation*>
+    \<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\>>-f<rsup|\<alpha\>><around*|(|x|)>
+    \<Delta\>t|]>=<frac|\<partial\>I|\<partial\>b<rsub|\<alpha\>>><around*|(|0|)>=0,
+  </equation*>
+
+  implying <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\>>|]>=<with|font|cal|O><around*|(|\<Delta\>t|)>>,
+  and
+
+  <\equation*>
+    \<bbb-E\><around*|[|<around*|(|\<epsilon\><rsup|\<alpha\>>-f<rsup|\<alpha\>><around*|(|x|)>
+    \<Delta\>t|)> <around*|(|\<epsilon\><rsup|\<beta\>>-f<rsup|\<beta\>><around*|(|x|)>
+    \<Delta\>t|)>|]>=<frac|\<partial\><rsup|2>|\<partial\>b<rsub|\<alpha\>>\<partial\>b<rsub|\<beta\>>><around*|(|0|)>=<frac|\<Delta\>t|2><around*|[|\<Sigma\><rsup|\<alpha\>\<beta\>><around*|(|x|)>+\<Sigma\><rsup|\<beta\>\<alpha\>><around*|(|x|)>|]>=\<Sigma\><rsup|\<alpha\>\<beta\>><around*|(|x|)>
+    \<Delta\>t,
+  </equation*>
+
+  implying <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\>>
+  \<epsilon\><rsup|\<beta\>>|]>=<with|font|cal|O><around*|(|\<Delta\>t|)>>
+  also. Using the same trick, we find the third moment
+
+  <\equation*>
+    \<bbb-E\><around*|[|<around*|(|\<epsilon\><rsup|\<alpha\>>-f<rsup|\<alpha\>><around*|(|x|)>
+    \<Delta\>t|)> <around*|(|\<epsilon\><rsup|\<beta\>>-f<rsup|\<beta\>><around*|(|x|)>
+    \<Delta\>t|)> <around*|(|\<epsilon\><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x|)>
+    \<Delta\>t|)>|]>=0,
+  </equation*>
+
+  implying <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\>>
+  \<epsilon\><rsup|\<beta\>> \<epsilon\><rsup|\<gamma\>>|]>=<with|font|cal|O><around*|(|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\>>
+  \<epsilon\><rsup|\<beta\>>|]>\<times\>\<Delta\>t|)>=<with|font|cal|O><around*|(|\<Delta\>t<rsup|2>|)>=\<omicron\><around*|(|\<Delta\>t|)>>.
+  And the same for the forth moment, we find
+
+  <\equation*>
+    \<bbb-E\><around*|[|<big|prod><rsub|i=1><rsup|4><around*|(|\<epsilon\><rsup|\<alpha\><rsub|i>>-f<rsup|\<alpha\><rsub|i>><around*|(|x|)>
+    \<Delta\>t|)> |]>=<around*|(|<frac|\<Delta\>t|2>|)><rsup|2><big|sum><rsub|j\<in\>perm<around*|(|1\<ldots\>4|)>>\<Sigma\><rsup|\<alpha\><rsub|j<rsub|1>>\<alpha\><rsub|j<rsub|2>>><around*|(|x|)>
+    \<Sigma\><rsup|\<alpha\><rsub|j<rsub|3>>\<alpha\><rsub|j<rsub|4>>><around*|(|x|)>,
+  </equation*>
+
+  implying <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\>>
+  \<epsilon\><rsup|\<beta\>> \<epsilon\><rsup|\<gamma\>>
+  \<epsilon\><rsup|\<sigma\>>|]>=<with|font|cal|O><around*|(|\<Delta\>t<rsup|2>|)>+<with|font|cal|O><around*|(|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\>>
+  \<epsilon\><rsup|\<beta\>> \<epsilon\><rsup|\<gamma\>>|]>\<times\>\<Delta\>t|)>=\<omicron\><around*|(|\<Delta\>t|)>>.
+  Repeating the same calculation, we will find
+  <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>=\<omicron\><around*|(|\<Delta\>t|)>>
+  for any <math|n\<gtr\>2>. On the other hand, since
+  <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>=K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>
+  \<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>>, we find
+  <math|K<rsub|1><rsup|\<alpha\>><around*|(|x|)>=f<rsup|\<alpha\>><around*|(|x|)>>
+  and <math|K<rsub|2><rsup|\<alpha\>\<beta\>><around*|(|x|)>=\<Sigma\><rsup|\<alpha\>\<beta\>><around*|(|x|)>>.
+  Plugging these into equation <reference|equation:transition rate and
+  moments>, we arrive at the result (equation <reference|equation:langevin
+  transition rate>).
+
+  Remark that, when cut-off the <math|K<rsub|n>> at <math|n=2> (thus
+  transition rate obeys equation \ <reference|equation:langevin transition
+  rate>), we find higher order moments <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>>
+  with <math|n\<gtr\>2> decreases faster (as
+  <math|\<omicron\><around*|(|\<Delta\>t|)>>) than
+  <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\>>
+  \<epsilon\><rsup|\<beta\>>|]>> (as <math|<with|font|cal|O><around*|(|\<Delta\>t|)>>)
+  when <math|\<Delta\>t> tends to zero. This is consistent with our intuitive
+  assumption.
+
+  <subsubsection|Direct Examination of the Assumption>
+
+  We are to check if the <math|K<rsub|3>> converges to zero with a faster
+  speed than <math|K<rsub|2>> (and then if <math|K<rsub|4>> is faster than
+  <math|K<rsub|3>>) to <math|<with|font|cal|O><around*|(|\<Delta\>t<rsup|2>|)>>
+  \ This demands the relation between transition rate and transition density
+  (equation <reference|equation:transition rate determines transition
+  density>), namely
+
+  <\equation*>
+    <tabular|<tformat|<cwith|1|-1|1|1|cell-hyphen|n>|<cwith|1|-1|1|1|cell-halign|r>|<cwith|1|-1|2|2|cell-halign|l>|<table|<row|<cell|q<rsub|\<Delta\>t><around*|(|z\|x|)>=>|<cell|\<delta\><around*|(|z-x|)>>>|<row|<cell|+>|<cell|<around*|(|\<Delta\>t|)>
+    r<around*|(|z,x|)>>>|<row|<cell|+>|<cell|<frac|<around*|(|\<Delta\>t|)><rsup|2>|2!>
+    <big|int><rsub|\<cal-X\>>\<mathd\>y r<around*|(|z,y|)>
+    r<around*|(|y,x|)>>>|<row|<cell|+>|<cell|\<cdots\>>>|<row|<cell|+>|<cell|<frac|<around*|(|\<Delta\>t|)><rsup|n+1>|<around*|(|n+1|)>!><big|int><rsub|\<cal-X\>>\<mathd\>y<rsub|1>\<cdots\><big|int><rsub|\<cal-X\>>\<mathd\>y<rsub|n>
+    r<around*|(|z,y<rsub|n>|)> r<around*|(|y<rsub|n>,y<rsub|n-1>|)>\<cdots\>r<around*|(|y<rsub|1>,x|)>>>|<row|<cell|+>|<cell|\<cdots\>.>>|<row|<cell|>|<cell|>>>>>
+  </equation*>
+
+  As we have derived, starting at <math|p<around*|(|x,0|)>=\<delta\><around*|(|x|)>>,
+
+  <\equation*>
+    \<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>\<assign\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
+    p<around*|(|\<epsilon\>,\<Delta\>t|)>
+    \<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>=<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
+    q<rsub|\<mathLaplace\>t><around*|(|\<epsilon\>\|0|)>
+    \<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>.
+  </equation*>
+
+  Thus,
+
+  <\equation*>
+    \<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>=\<Delta\>t
+    <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
+    r<around*|(|\<epsilon\>,0|)> \<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>+<frac|<around*|(|\<Delta\>t|)><rsup|2>|2!>
+    <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    r<around*|(|\<epsilon\>,y|)> r<around*|(|y,0|)>
+    \<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>+\<omicron\><around*|(|\<Delta\>t<rsup|2>|)>.
+  </equation*>
+
+  As we have known, the first term is <math|\<Delta\>t
+  K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|0|)>>,
+  so it is <math|\<Delta\>t K<rsub|1>> and <math|\<Delta\>t K<rsub|2>> for
+  <math|n=1,2> and vanishes otherwise. The second term is complicated. We
+  first examine <math|n=1>, thus
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    r<around*|(|\<epsilon\>,y|)> r<around*|(|y,0|)>
+    \<epsilon\><rsup|\<alpha\>>=<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    r<around*|(|\<epsilon\>,y|)> r<around*|(|y,0|)>
+    <around*|(|\<epsilon\><rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>+<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    r<around*|(|\<epsilon\>,y|)> r<around*|(|y,0|)> y<rsup|\<alpha\>>.
+  </equation*>
+
+  The second integral on the right hand side vanishes after integrating over
+  <math|\<epsilon\>> since <math|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x
+  r<around*|(|x,y|)>=0>. For the first integral, letting
+  <math|\<epsilon\><rprime|'>\<assign\>\<epsilon\>-y>, thus
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><rprime|'><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    r<around*|(|\<epsilon\><rprime|'>+y,y|)> r<around*|(|y,0|)>
+    \<epsilon\><rprime|'><rsup|\<alpha\>>=<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    \ K<rsub|1><rsup|\<alpha\>><around*|(|y|)> r<around*|(|y,0|)>.
+  </equation*>
+
+  Taylor expansion of <math|K<rsub|1><around*|(|y|)>> at <math|y=0> gives
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    \ K<rsub|1><rsup|\<alpha\>><around*|(|y|)>
+    r<around*|(|y,0|)>=K<rsub|1><rsup|\<beta\>>
+    \<partial\><rsub|\<beta\><rsub|1>>K<rsub|1><rsup|\<alpha\>>+<frac|1|2>K<rsub|2><rsup|\<beta\><rsub|1>\<beta\><rsub|2>>\<partial\><rsub|\<beta\><rsub|1>>\<partial\><rsub|\<beta\><rsub|2>>K<rsub|1><rsup|\<alpha\>>,
+  </equation*>
+
+  where we have used <math|K<rsub|3>=0>. Thus,
+
+  <\equation*>
+    \<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\>>|]>=\<Delta\>t
+    K<rsub|1><rsup|\<alpha\>><around*|(|0|)>+<frac|<around*|(|\<Delta\>t|)><rsup|2>|2!>
+    <around*|[|K<rsub|1><rsup|\<beta\>>\<partial\><rsub|\<beta\>>K<rsub|1><rsup|\<alpha\>>+<frac|1|2>K<rsub|2><rsup|\<beta\>\<beta\><rprime|'>>\<partial\><rsub|\<beta\>>\<partial\><rsub|\<beta\><rprime|'>>K<rsub|1><rsup|\<alpha\>>|]>+\<omicron\><around*|(|\<Delta\>t<rsup|2>|)>.
+  </equation*>
+
+  Next, consider <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\>>\<epsilon\><rsup|\<beta\>>|]>>.
+  We have
+
+  <\align>
+    <tformat|<table|<row|<cell|>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    r<around*|(|\<epsilon\>,y|)> r<around*|(|y,0|)>
+    \<epsilon\><rsup|\<alpha\>>\<epsilon\><rsup|\<beta\>>>>|<row|<cell|=>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    r<around*|(|\<epsilon\>,y|)> r<around*|(|y,0|)>
+    <around*|(|\<epsilon\><rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><around*|(|\<epsilon\><rsup|\<beta\>>-y<rsup|\<beta\>>|)>>>|<row|<cell|+>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    r<around*|(|\<epsilon\>,y|)> r<around*|(|y,0|)>
+    <around*|(|\<epsilon\><rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>y<rsup|\<beta\>>+<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    r<around*|(|\<epsilon\>,y|)> r<around*|(|y,0|)>
+    y<rsup|\<alpha\>><around*|(|\<epsilon\><rsup|\<beta\>>-y<rsup|\<beta\>>|)>>>|<row|<cell|+>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    r<around*|(|\<epsilon\>,y|)> r<around*|(|y,0|)>
+    y<rsup|\<alpha\>>y<rsup|\<beta\>>.>>>>
+  </align>
+
+  Again, the first line on the right hand side is
+  <math|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+  \ K<rsub|2><rsup|\<alpha\>\<beta\>><around*|(|y|)> r<around*|(|y,0|)>> and
+  the last line vanishes. The second line is
+  <math|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+  K<rsub|1><rsup|\<alpha\>><around*|(|y|)>
+  r<around*|(|y,0|)>y<rsup|\<beta\>>+perm>. Thus,
+
+  <\small>
+    <\equation*>
+      \<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\>>\<epsilon\><rsup|\<beta\>>|]>=\<Delta\>t
+      K<rsub|2><rsup|\<alpha\>\<beta\>><around*|(|0|)>+<frac|\<Delta\>t<rsup|2>|2><around*|[|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+      \ K<rsub|2><rsup|\<alpha\>\<beta\>><around*|(|y|)>
+      r<around*|(|y,0|)>+<around*|(|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+      K<rsub|1><rsup|\<alpha\>><around*|(|y|)> y<rsup|\<beta\>>
+      r<around*|(|y,0|)>+perm|)>|]>+\<omicron\><around*|(|\<Delta\>t<rsup|2>|)>.
+    </equation*>
+  </small>
+
+  Again, Taylor expansion on <math|K<rsub|1><around*|(|y|)>> at <math|y=0>
+  gives
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    \ K<rsub|2><rsup|\<alpha\>\<beta\>><around*|(|y|)>
+    r<around*|(|y,0|)>=K<rsub|1><rsup|\<gamma\>>
+    \<partial\><rsub|\<gamma\>>K<rsub|2><rsup|\<alpha\>\<beta\>>+<frac|1|2>K<rsub|2><rsup|\<gamma\><rsub|1>\<gamma\><rsub|2>>\<partial\><rsub|\<gamma\><rsub|1>>\<partial\><rsub|\<gamma\><rsub|2>>K<rsub|2><rsup|\<alpha\>\<beta\>>
+  </equation*>
+
+  and
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    K<rsub|1><rsup|\<alpha\>><around*|(|y|)>
+    r<around*|(|y,0|)>y<rsup|\<beta\>>=K<rsub|1><rsup|\<alpha\>>K<rsub|1><rsup|\<beta\>>+\<partial\><rsub|\<gamma\>>K<rsub|1><rsup|\<alpha\>>
+    K<rsub|2><rsup|\<beta\>\<gamma\>>.
+  </equation*>
+
+  We find
+
+  <\small>
+    <\equation*>
+      \<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\>>\<epsilon\><rsup|\<beta\>>|]>=\<Delta\>t
+      K<rsub|2><rsup|\<alpha\>\<beta\>><around*|(|0|)>+<frac|\<Delta\>t<rsup|2>|2><around*|[|K<rsub|1><rsup|\<gamma\>>
+      \<partial\><rsub|\<gamma\>>K<rsub|2><rsup|\<alpha\>\<beta\>>+<frac|1|2>K<rsub|2><rsup|\<gamma\><rsub|1>\<gamma\><rsub|2>>\<partial\><rsub|\<gamma\><rsub|1>>\<partial\><rsub|\<gamma\><rsub|2>>K<rsub|2><rsup|\<alpha\>\<beta\>>+2K<rsub|1><rsup|\<alpha\>>K<rsub|1><rsup|\<beta\>>+\<partial\><rsub|\<gamma\>>K<rsub|1><rsup|\<alpha\>>
+      K<rsub|2><rsup|\<beta\>\<gamma\>>+\<partial\><rsub|\<gamma\>>K<rsub|1><rsup|\<beta\>>
+      K<rsub|2><rsup|\<alpha\>\<gamma\>>|]>+\<omicron\><around*|(|\<Delta\>t<rsup|2>|)>.
+    </equation*>
+  </small>
+
+  Next, we turn to <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\>>\<epsilon\><rsup|\<beta\>>\<epsilon\><rsup|\<gamma\>>|]>>.
+  Since
+
+  <\align>
+    <tformat|<table|<row|<cell|\<epsilon\><rsup|\<alpha\>>\<epsilon\><rsup|\<beta\>>\<epsilon\><rsup|\<gamma\>>=>|<cell|<around*|(|\<epsilon\><rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><around*|(|\<epsilon\><rsup|\<beta\>>-y<rsup|\<beta\>>|)><around*|(|\<epsilon\><rsup|\<gamma\>>-y<rsup|\<gamma\>>|)>>>|<row|<cell|+>|<cell|<around*|(|\<epsilon\><rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><around*|(|\<epsilon\><rsup|\<beta\>>-y<rsup|\<beta\>>|)>y<rsup|\<gamma\>>+<around*|(|\<epsilon\><rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>y<rsup|\<beta\>><around*|(|\<epsilon\><rsup|\<gamma\>>-y<rsup|\<gamma\>>|)>+y<rsup|\<alpha\>><around*|(|\<epsilon\><rsup|\<beta\>>-y<rsup|\<beta\>>|)><around*|(|\<epsilon\><rsup|\<gamma\>>-y<rsup|\<gamma\>>|)>>>|<row|<cell|+>|<cell|<around*|(|\<epsilon\><rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>y<rsup|\<beta\>>y<rsup|\<gamma\>>+y<rsup|\<alpha\>><around*|(|\<epsilon\><rsup|\<beta\>>-y<rsup|\<beta\>>|)>y<rsup|\<gamma\>>+y<rsup|\<alpha\>>y<rsup|\<beta\>><around*|(|\<epsilon\><rsup|\<gamma\>>-y<rsup|\<gamma\>>|)>>>|<row|<cell|+>|<cell|y<rsup|\<alpha\>>y<rsup|\<beta\>>y<rsup|\<gamma\>>,>>>>
+  </align>
+
+  we have
+
+  <\align>
+    <tformat|<table|<row|<cell|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\>>\<epsilon\><rsup|\<beta\>>\<epsilon\><rsup|\<gamma\>>|]>=>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    r<around*|(|\<epsilon\>,y|)> r<around*|(|y,0|)>
+    <around*|(|\<epsilon\><rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><around*|(|\<epsilon\><rsup|\<beta\>>-y<rsup|\<beta\>>|)><around*|(|\<epsilon\><rsup|\<gamma\>>-y<rsup|\<gamma\>>|)>>>|<row|<cell|+>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    r<around*|(|\<epsilon\>,y|)> r<around*|(|y,0|)>
+    <around*|(|\<epsilon\><rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><around*|(|\<epsilon\><rsup|\<beta\>>-y<rsup|\<beta\>>|)>y<rsup|\<gamma\>>+perm>>|<row|<cell|+>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    r<around*|(|\<epsilon\>,y|)> r<around*|(|y,0|)>
+    <around*|(|\<epsilon\><rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>y<rsup|\<beta\>>y<rsup|\<gamma\>>+perm>>|<row|<cell|+>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    r<around*|(|\<epsilon\>,y|)> r<around*|(|y,0|)>
+    y<rsup|\<alpha\>>y<rsup|\<beta\>>y<rsup|\<gamma\>>.>>>>
+  </align>
+
+  Thus,
+
+  <\equation*>
+    \<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\>>\<epsilon\><rsup|\<beta\>>\<epsilon\><rsup|\<gamma\>>|]>=<frac|\<Delta\>t<rsup|2>|2><around*|[|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    K<rsub|2><rsup|\<alpha\>\<beta\>><around*|(|y|)> y<rsup|\<gamma\>>
+    r<around*|(|y,0|)>+<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    K<rsub|1><rsup|\<alpha\>><around*|(|y|)>
+    y<rsup|\<beta\>>y<rsup|\<gamma\>> r<around*|(|y,0|)>+perm|]>+\<omicron\><around*|(|\<Delta\>t<rsup|2>|)>,
+  </equation*>
+
+  where we have used <math|K<rsub|3>=0>. Taylor expansion on <math|K> gives
+
+  <\small>
+    <\equation*>
+      \<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\>>\<epsilon\><rsup|\<beta\>>\<epsilon\><rsup|\<gamma\>>|]>=<frac|\<Delta\>t<rsup|2>|2><around*|[|K<rsub|2><rsup|\<alpha\>\<beta\>>
+      K<rsub|1><rsup|\<gamma\>>+K<rsub|2><rsup|\<gamma\>\<sigma\>>\<partial\><rsub|\<sigma\>>K<rsub|2><rsup|\<alpha\>\<beta\>>+perm|]>+\<omicron\><around*|(|\<Delta\>t<rsup|2>|)>.
+    </equation*>
+  </small>
+
+  An educated guess for <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\>>\<epsilon\><rsup|\<beta\>>\<epsilon\><rsup|\<gamma\>>\<epsilon\><rsup|\<sigma\>>|]>>
+  is
+
+  <\equation*>
+    \<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\>>\<epsilon\><rsup|\<beta\>>\<epsilon\><rsup|\<gamma\>>\<epsilon\><rsup|\<sigma\>>|]>=<frac|\<Delta\>t<rsup|2>|2><around*|[|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    K<rsub|2><rsup|\<alpha\>\<beta\>><around*|(|y|)>
+    y<rsup|\<gamma\>>y<rsup|\<sigma\>> r<around*|(|y,0|)>+<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    K<rsub|1><rsup|\<alpha\>><around*|(|y|)>
+    y<rsup|\<beta\>>y<rsup|\<gamma\>>y<rsup|\<sigma\>>
+    r<around*|(|y,0|)>+perm|]>+\<omicron\><around*|(|\<Delta\>t<rsup|2>|)>,
+  </equation*>
+
+  thus
+
+  <\equation*>
+    \<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\>>\<epsilon\><rsup|\<beta\>>\<epsilon\><rsup|\<gamma\>>\<epsilon\><rsup|\<sigma\>>|]>=<frac|\<Delta\>t<rsup|2>|2><around*|[|K<rsub|2><rsup|\<alpha\>\<beta\>>
+    K<rsub|2><rsup|\<gamma\>\<sigma\>>+perm|]>+\<omicron\><around*|(|\<Delta\>t<rsup|2>|)>.
+  </equation*>
+
+  Both are of <math|<with|font|cal|O><around*|(|\<Delta\>t<rsup|2>|)>>. The
+  next order <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\>>\<epsilon\><rsup|\<beta\>>\<epsilon\><rsup|\<gamma\>>\<epsilon\><rsup|\<sigma\>>\<epsilon\><rsup|\<omega\>>|]>>
+  shall vanish at <math|<with|font|cal|O><around*|(|\<Delta\>t<rsup|2>|)>>
+  since we cannot get five superscirpts with only two <math|K<rsub|n>>s with
+  <math|n=1,2> (it is two because there are two <math|r>s in
+  <math|q<rsub|\<Delta\>t>> at <math|<with|font|cal|O><around*|(|\<Delta\>t<rsup|2>|)>>).
+  This implies that <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>>
+  with <math|n\<gtr\>4> is zero at <math|<with|font|cal|O><around*|(|\<Delta\>t<rsup|2>|)>>
+  and may have non-vanishing value at <math|<with|font|cal|O><around*|(|\<Delta\>t<rsup|3>|)>>.
+  So, the assumption is guaranteed with cut-off. And conversely, only with a
+  sharp cut-off (\Psharp\Q means, given some <math|N\<gtr\>0>,
+  <math|K<rsub|n>=0> for any <math|n\<gtr\>N>, rather than that
+  <math|K<rsub|n>> deceases with <math|n>) can we guarantee the assumption.
+  An educated guess is that <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>=<with|font|cal|O><around*|(|\<Delta\>t<rsup|\<sharp\><around*|(|n/N|)>>|)>>
+  for any <math|n\<geqslant\>1>, where <math|\<sharp\>> represents for
+  ceiling function, which rounds the argument to the nearest greater integer.
+
+  <subsection|Eliminating Covariance>
+
+  Consider Langevin process on <math|\<bbb-R\><rsup|n>>
+
+  <\equation*>
+    <wide|X|\<dot\>><rsup|\<alpha\>><around*|(|t|)>=f<rsup|\<alpha\>><around*|(|X<around*|(|t|)>|)>+C<rsup|\<alpha\>\<beta\>><around*|(|X<around*|(|t|)>|)>
+    <wide|W|\<dot\>><rsub|\<beta\>><around*|(|t|)>.
+  </equation*>
+
+  If <math|C<around*|(|x|)>> as a matrix-valued field is everywhere full
+  rank, namely <math|det C<around*|(|x|)>\<neq\>0> for any
+  <math|x\<in\>\<bbb-R\><rsup|n>>, then we have
+
+  <\equation*>
+    <wide|Y|\<dot\>><rsub|\<alpha\>><around*|(|t|)>=g<rsub|\<alpha\>><around*|(|Y<around*|(|t|)>|)>+<wide|W|\<dot\>><rsub|\<alpha\>><around*|(|t|)>,
+  </equation*>
+
+  where <math|y<rsub|\<alpha\>>\<assign\><around*|[|C<rsup|-1><around*|(|x|)>|]><rsub|\<alpha\>\<beta\>>
+  x<rsup|\<beta\>>> and then <math|g<rsub|\<alpha\>><around*|(|y|)>\<assign\><around*|[|C<rsup|-1><around*|(|x|)>|]><rsub|\<alpha\>\<beta\>>
+  f<rsup|\<alpha\>><around*|(|x|)>>. With this new variable, we have
+  eliminated the covariance (precisely, the Cholesky factor of covariane).
+
   <subsection|Master Equation on Euclidean Alphabet Can Be Formulated as Path
   Integral (TODO)><label|section: Master Equation on Euclidean Alphabet Can
   Be Formulated as Path Integral>
@@ -134,25 +781,24 @@
     \ exp<around*|(|<around*|[|K<rsub|1><rsup|\<alpha\>><around*|(|x|)>
     \<Delta\>t-\<epsilon\><rsup|\<alpha\>>|]>
     \<mathi\>k<rsub|\<alpha\>>-<frac|\<Delta\>t|2>K<rsub|2><rsup|\<alpha\>\<beta\>><around*|(|x|)>
-    k<rsub|\<alpha\>>k<rsub|\<beta\>>-J<around*|(|x,k|)>|)>,
+    k<rsub|\<alpha\>>k<rsub|\<beta\>>-J<around*|(|x,k|)> \<Delta\>t|)>,
   </equation*>
 
   where
 
   <\equation*>
-    J<around*|(|x,k|)>\<assign\>-<frac|\<mathi\>\<Delta\>t|6>K<rsub|3><rsup|\<alpha\>\<beta\>\<gamma\>><around*|(|x|)>
-    k<rsub|\<alpha\>>k<rsub|\<beta\>> k<rsub|\<gamma\>>+\<cdots\>+\<omicron\><around*|(|\<Delta\>t|)>.
+    J<around*|(|x,k|)>\<assign\>-<frac|\<mathi\>|6>K<rsub|3><rsup|\<alpha\>\<beta\>\<gamma\>><around*|(|x|)>
+    k<rsub|\<alpha\>>k<rsub|\<beta\>> k<rsub|\<gamma\>>+\<cdots\>+\<omicron\><around*|(|1|)>
   </equation*>
 
-  As an example, let us examine
+  as <math|\<Delta\>t\<rightarrow\>0>. We are to examine the expectation
 
   <\equation*>
-    <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>k
+    \<bbb-E\><around*|[|k<rsub|\<alpha\><rsub|1>>\<cdots\>k<rsub|\<alpha\><rsub|n>>|]>\<assign\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>k
     \ exp<around*|(|<around*|[|K<rsub|1><rsup|\<alpha\>><around*|(|x|)>
     \<Delta\>t-\<epsilon\><rsup|\<alpha\>>|]>
     \<mathi\>k<rsub|\<alpha\>>-<frac|\<Delta\>t|2>K<rsub|2><rsup|\<alpha\>\<beta\>><around*|(|x|)>
-    k<rsub|\<alpha\>>k<rsub|\<beta\>>|)> k<rsub|\<alpha\>> k<rsub|\<beta\>>
-    k<rsub|\<gamma\>>.
+    k<rsub|\<alpha\>>k<rsub|\<beta\>>|)> k<rsub|\<alpha\><rsub|1>>\<cdots\>k<rsub|\<alpha\><rsub|n>>.
   </equation*>
 
   Recall the formula of Gaussian integral which is, for any positive definite
@@ -166,7 +812,7 @@
     b<rsub|\<alpha\>> b<rsub|\<beta\>>|)>.
   </equation*>
 
-  We have
+  We have, for <math|n=3>,
 
   <\small>
     <\align>
@@ -196,574 +842,152 @@
   </small>
 
   In our situation, <math|A=K<rsub|2><around*|(|x|)> \<Delta\>t> and
-  <math|b=\<mathi\>\<Delta\>t <around*|[|K<rsub|1><around*|(|x|)>-\<epsilon\>/\<Delta\>t|]>>.
-  We get <math|<around*|[|\<cdots\>|]>=<with|font|cal|O><around*|(|1/\<Delta\>t|)>>.
+  <math|b=\<mathi\> <around*|[|K<rsub|1><around*|(|x|)>
+  \<Delta\>t-\<epsilon\>|]>>. We get <math|<around*|[|\<cdots\>|]>=<with|font|cal|O><around*|(|\<Delta\>t<rsup|-3>|)>>.
   This means the contribution from <math|\<Delta\>t
   K<rsub|3><rsup|\<alpha\>\<beta\>\<gamma\>><around*|(|x|)>
-  k<rsub|\<alpha\>>k<rsub|\<beta\>> k<rsub|\<gamma\>>> term is at least
-  <math|<with|font|cal|O><around*|(|1|)>> as
+  k<rsub|\<alpha\>>k<rsub|\<beta\>> k<rsub|\<gamma\>>> term is
+  <math|<with|font|cal|O><around*|(|\<Delta\>t<rsup|-2>|)>> as
   <math|\<Delta\>t\<rightarrow\>0>, thus is not negligible. The situation get
   worse for terms with more <math|k> factor. It indicates that we cannot
   fomulate the master equation into path integral, unless the
   <math|K<rsub|n>> for <math|n\<gtr\>2> are all vanishing.
 
-  <subsection|Operator>
+  <subsubsection|Examining the Assumptions>
 
-  For a Markovian process on alphabet <math|\<cal-X\>> characterized by
-  transition rate <math|r>, we can express the transition density for a time
-  interval <math|\<Delta\>t> using Dirac's bracket notation, as
-
-  <\equation*>
-    q<rsub|\<Delta\>t><around*|(|x\|x<rprime|'>|)>=\<langle\>x\|exp<around*|(|<wide|r|^>
-    \<Delta\>t|)>\|x<rprime|'>\<rangle\>,
-  </equation*>
-
-  where <math|x,x<rprime|'>\<in\>\<cal-X\>> and <math|<wide|r|^>> is a real
-  operator with <math|\<langle\>x\|<wide|r|^>\|x<rprime|'>\<rangle\>=r<around*|(|x,y|)>>.
-  This results from the exponential mapping of master equation. We have, in
-  the <math|\|x\<rangle\>> representation,
-  <math|\<langle\>x\|x<rprime|'>\<rangle\>=\<delta\><around*|(|x-x<rprime|'>|)>>,
-  which represents Dirac delta function when <math|\<cal-X\>> is continuous
-  or Kronecker delta <math|\<delta\><rsub|x,x<rprime|'>>> otherwise.
-
-  Let us first examine the situation where <math|\<cal-X\>=\<bbb-R\><rsup|n>>
-  and <math|\<Delta\>t\<ll\>1>. In Fourier or momentum representation,
-  <math|\|k\<rangle\>>, we have <math|\<langle\>k\|x\<rangle\>=exp<around*|(|\<mathi\>k
-  x|)>> (we know in <math|\|x\<rangle\>> representation,
-  <math|<wide|k|^>=-\<mathi\>\<partial\><rsub|x>>, thus
-  <math|\<langle\>k\|<wide|k|^>\|x\<rangle\>=-\<mathi\>\<partial\><rsub|x>
-  exp<around*|(|\<mathi\>k x|)>=k exp<around*|(|\<mathi\>k
-  x|)>=k\<langle\>k\|x\<rangle\>>). We first Taylor expand by
-  <math|\<Delta\>t> as
+  Let us examine the assumptions that, with
+  <math|p<around*|(|x,0|)>=\<delta\><around*|(|x|)>>, we have
+  <math|p<around*|(|\<epsilon\>,\<Delta\>t|)>=q<rsub|\<Delta\>t><around*|(|\<epsilon\>\|0|)>>
+  and when <math|\<Delta\>t\<rightarrow\>0>,
 
   <\equation*>
-    q<rsub|\<Delta\>t><around*|(|x\|x<rprime|'>|)>=\<langle\>x\|x<rprime|'>\<rangle\>+\<langle\>x\|<wide|r|^>\|x<rprime|'>\<rangle\>
-    \<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>.
+    \<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>=<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
+    p<around*|(|\<epsilon\>,\<Delta\>t|)>
+    \<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>=<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
+    q<rsub|\<Delta\>t><around*|(|\<epsilon\>\|0|)>
+    \<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>
   </equation*>
 
-  Inserting <math|<big|int>\<mathd\>k \|k\<rangle\>\<langle\>k\|=1> gives
+  converges (to zero) faster for greater <math|n>. We have derived that, up
+  to <math|\<omicron\><around*|(|\<Delta\>t|)>>, (omitting the <math|0> in
+  <math|<wide|r|^><around*|(|0,k|)> \<Delta\>t>)
 
   <\equation*>
-    q<rsub|\<Delta\>t><around*|(|x\|x<rprime|'>|)>=<big|int>\<mathd\>k<around*|[|\<langle\>x\|k\<rangle\>\<langle\>k\|x<rprime|'>\<rangle\>+\<langle\>x\|k\<rangle\>\<langle\>k\|<wide|r|^>\|x<rprime|'>\<rangle\>
-    \<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>|]>.
+    q<rsub|\<Delta\>t><around*|(|\<epsilon\>\|0|)>=<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>k
+    \ exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>+<wide|r|^><around*|(|k|)>
+    \<Delta\>t|)>.
   </equation*>
 
-  Then, inserting <math|\<langle\>k\|x\<rangle\>>,
+  Thus,
 
   <\equation*>
-    q<rsub|\<Delta\>t><around*|(|x\|x<rprime|'>|)>=<big|int>\<mathd\>k<around*|[|exp<around*|(|-\<mathi\>k<around*|(|x-x<rprime|'>|)>|)>+exp<around*|(|-\<mathi\>k
-    x|)>\<langle\>k\|<wide|r|^>\|x<rprime|'>\<rangle\>
-    \<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>|]>.
+    \<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>=<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>k
+    \ exp<around*|(|<wide|r|^><around*|(|k|)>
+    \<Delta\>t|)>\<times\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
+    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>
+    \<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>.
   </equation*>
 
-  We have to insert <math|exp<around*|(|\<mathi\>k x<rprime|'>|)>
-  exp<around*|(|-\<mathi\>k x<rprime|'>|)>>, and notice
-  <math|exp<around*|(|-\<mathi\>k x<rprime|'>|)>=\<langle\>x<rprime|'>\|k\<rangle\>>,
+  Integrating over <math|\<epsilon\>> gives
 
   <\equation*>
-    q<rsub|\<Delta\>t><around*|(|x\|x<rprime|'>|)>=<big|int>\<mathd\>k
-    exp<around*|(|-\<mathi\>k<around*|(|x-x<rprime|'>|)>|)><around*|[|1+\<langle\>k\|<wide|r|^>\|x<rprime|'>\<rangle\>\<langle\>x<rprime|'>\|k\<rangle\>
-    \<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>|]>.
+    <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
+    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>
+    \<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>=<frac|\<partial\>|\<partial\><around*|(|-\<mathi\>k<rsub|\<alpha\><rsub|1>>|)>>\<cdots\><frac|\<partial\>|\<partial\><around*|(|-\<mathi\>k<rsub|\<alpha\><rsub|n>>|)>><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
+    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>=\<mathi\><rsup|n>
+    \<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\><around*|(|k|)>.
   </equation*>
 
-  Since <math|\<Delta\>t\<ll\>1> and <math|exp<around*|(|-\<mathi\>k<around*|(|x-x<rprime|'>|)>|)>=\<langle\>x\|k\<rangle\>\<langle\>k\|x<rprime|'>\<rangle\>>,
-  we get
+  Thus,
 
   <\equation*>
-    q<rsub|\<Delta\>t><around*|(|x\|x<rprime|'>|)>=<big|int>\<mathd\>k
-    \<langle\>x\|k\<rangle\>\<langle\>k\|x<rprime|'>\<rangle\>
-    exp<around*|(|\<langle\>x<rprime|'>\|k\<rangle\>\<langle\>k\|<wide|r|^>\|x<rprime|'>\<rangle\>
-    \<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>|)>.
+    \<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>=\<mathi\><rsup|n><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>k
+    \ exp<around*|(|<wide|r|^><around*|(|k|)> \<Delta\>t|)>
+    \<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\><around*|(|k|)>.
   </equation*>
 
-  The <math|\<langle\>x<rprime|'>\|k\<rangle\>\<langle\>k\|<wide|r|^>\|x<rprime|'>\<rangle\>>
-  is recognized as the <math|<wide|r|^><around*|(|x<rprime|'>,k|)>> in
-  previous section. And
+  Integration by parts gives
 
   <\equation*>
-    K<rsub|n><around*|(|x<rprime|'>|)>=<big|int>\<mathd\>\<epsilon\>
-    \<epsilon\><rsup|n> r<around*|(|x<rprime|'>+\<epsilon\>,x<rprime|'>|)>=<big|int>\<mathd\>x
-    <around*|(|x-x<rprime|'>|)><rsup|n> r<around*|(|x,x<rprime|'>|)>=<big|int>\<mathd\>x
-    \<langle\>x\|<around*|(|?|)> <wide|r|^>\|x<rprime|'>\<rangle\>
+    \<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>=<around*|(|-\<mathi\>|)><rsup|n><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>k
+    \ \<delta\><around*|(|k|)> \<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>exp<around*|(|<wide|r|^><around*|(|k|)>
+    \<Delta\>t|)>=lim<rsub|k\<rightarrow\>0><frac|\<partial\>|\<partial\><around*|(|\<mathi\>k<rsub|\<alpha\><rsub|1>>|)>>\<ldots\><frac|\<partial\>|\<partial\><around*|(|\<mathi\>k<rsub|\<alpha\><rsub|n>>|)>>exp<around*|(|<wide|r|^><around*|(|k|)>
+    \<Delta\>t|)>.
   </equation*>
 
-  <subsection|Randomness at Small Scale 0>
-
-  Let the alphabet <math|\<cal-X\>=\<bbb-R\><rsup|n>> for some integer
-  <math|n\<geqslant\>1>, which has sufficient connectivity. In addition,
-  suppose that the density function <math|p<around*|(|x,t|)>> of a
-  time-dependent distribution <math|P<around*|(|t|)>> and the transition rate
-  <math|r<around*|(|x,y|)>> are smooth on <math|x> and <math|y>. In this
-  section, we investigate the direct results of spatial smoothness.
-
-  Given <math|y\<in\>\<bbb-R\><rsup|n>>, suppose that all the mass is
-  centered at <math|x> initially, thus <math|p<around*|(|x<rprime|'>,0|)>=\<delta\><around*|(|x-x<rprime|'>|)>>.
-  Then, after a small temporal period <math|\<Delta\>t>, there is some
-  portion of mass transits to elsewhere. By master equation
-  <reference|equation:master equation>, the change in density is
-  <math|p<around*|(|y,\<Delta\>t|)>-p<around*|(|y,0|)>=\<Delta\>t
-  <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y r<around*|(|y,x<rprime|'>|)>
-  p<around*|(|x<rprime|'>,0|)>+\<omicron\><around*|(|\<Delta\>t|)>>.
-  Inserting <math|p<around*|(|x<rprime|'>,0|)>=\<delta\><around*|(|x-x<rprime|'>|)>>
-  and denoting <math|\<epsilon\>\<assign\>y-x>, we get
+  We have
 
   <\equation*>
-    p<around*|(|x+\<epsilon\>,\<Delta\>t|)>=\<delta\><around*|(|\<epsilon\>|)>+r<around*|(|x+\<epsilon\>,x|)>
-    \<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>.
+    lim<rsub|k\<rightarrow\>0><frac|\<partial\>|\<partial\><around*|(|\<mathi\>
+    k<rsub|\<alpha\>>|)>>exp<around*|(|<wide|r|^><around*|(|k|)>
+    \<Delta\>t|)>=exp<around*|(|<wide|r|^><around*|(|0|)> \<Delta\>t|)>
+    \<Delta\>t <frac|\<partial\><wide|r|^>|\<partial\><around*|(|\<mathi\>k<rsub|\<alpha\>>|)>><around*|(|0|)>=\<Delta\>t
+    K<rsub|1><rsup|\<alpha\>>,
   </equation*>
 
-  <em|We assume that the portion of mass does not transit far away from
-  <math|x>, but in its neighbor (namely, <math|\<epsilon\>> is really small
-  in scale), and that as <math|\<Delta\>t\<rightarrow\>0>, it tends to be
-  vanishing.> Statistically, it means the <math|n>th-moment
-
-  <\equation*>
-    \<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>\<assign\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
-    p<around*|(|x+\<epsilon\>,\<Delta\>t|)>
-    <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|)>
-  </equation*>
-
-  tends to zero as <math|\<Delta\>t\<rightarrow\>0> for any
-  <math|n\<in\><around*|{|1,2,\<ldots\>|}>>. Plugging in the expression of
-  <math|p<around*|(|x+\<epsilon\>,\<Delta\>t|)>>, we find
+  where we have used the Taylor expansion of <math|<wide|r|^><around*|(|k|)>>
+  by <math|\<mathi\>k>. And then,
 
   <\align>
-    <tformat|<table|<row|<cell|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>=>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
-    \<delta\><around*|(|\<epsilon\>|)> <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|)>+\<Delta\>t<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
-    r<around*|(|x+\<epsilon\>,x|)> <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|)>+\<omicron\><around*|(|\<Delta\>t|)>>>|<row|<cell|=>|<cell|\<Delta\>t<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
-    r<around*|(|x+\<epsilon\>,x|)> <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|)>+\<omicron\><around*|(|\<Delta\>t|)>.>>>>
+    <tformat|<table|<row|<cell|>|<cell|lim<rsub|k\<rightarrow\>0><frac|\<partial\>|\<partial\><around*|(|\<mathi\>
+    k<rsub|\<alpha\>>|)>><frac|\<partial\>|\<partial\><around*|(|\<mathi\>
+    k<rsub|\<beta\>>|)>>exp<around*|(|<wide|r|^><around*|(|k|)>
+    \<Delta\>t|)>>>|<row|<cell|=>|<cell|lim<rsub|k\<rightarrow\>0><frac|\<partial\>|\<partial\><around*|(|\<mathi\>
+    k<rsub|\<beta\>>|)>><around*|[|exp<around*|(|<wide|r|^><around*|(|k|)>
+    \<Delta\>t|)> \<Delta\>t <frac|\<partial\><wide|r|^>|\<partial\><around*|(|\<mathi\>k<rsub|\<alpha\>>|)>><around*|(|k|)>|]>>>|<row|<cell|=>|<cell|lim<rsub|k\<rightarrow\>0>exp<around*|(|<wide|r|^><around*|(|k|)>
+    \<Delta\>t|)> <around*|[|\<Delta\>t<rsup|2>
+    <frac|\<partial\><wide|r|^>|\<partial\><around*|(|\<mathi\>k<rsub|\<alpha\>>|)>><around*|(|k|)>
+    <frac|\<partial\><wide|r|^>|\<partial\><around*|(|\<mathi\>k<rsub|\<beta\>>|)>><around*|(|k|)>+\<Delta\>t<frac|\<partial\><rsup|2><wide|r|^>|\<partial\><around*|(|\<mathi\>k<rsub|\<alpha\>>|)>\<partial\><around*|(|\<mathi\>k<rsub|\<beta\>>|)>><around*|(|k|)>|]>>>|<row|<cell|=>|<cell|\<Delta\>t<rsup|2>
+    K<rsub|1><rsup|\<alpha\>> K<rsub|1><rsup|\<beta\>>+\<Delta\>t
+    K<rsub|2><rsup|\<alpha\>\<beta\>>.>>>>
   </align>
 
-  By introducing (to distinguish moments, which is defined on density, we
-  employ <math|K> instead of <math|M> for denoting the \Pmoments for
-  transition rate\Q)
-
-  <\equation*>
-    K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
-    r<around*|(|x+\<epsilon\>,x|)> <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|)>,
-  </equation*>
-
-  we have
-
-  <\equation*>
-    \<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>=K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>
-    \<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>.
-  </equation*>
-
-  So <math|lim<rsub|\<Delta\>t\<rightarrow\>0>\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>=0>
-  simply implies that <math|K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>>
-  is finite. In addition, since <math|\<epsilon\>> is small in scale, we
-  shall have
-
-  <\equation*>
-    <around*|\||\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>|\|>\<gg\><around*|\||\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>
-    \<alpha\><rsub|n+1>>|]>|\|>
-  </equation*>
-
-  for any <math|\<alpha\>> sequence. That is, we shall expect that
-  <math|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>>
-  will become much smaller by multiplying a small (random) variable
-  <math|\<epsilon\><rsup|\<alpha\><rsub|n+1>>>. It indicates
-  <math|<around*|\||K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>|\|>\<gg\><around*|\||K<rsub|n+1><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>\<alpha\><rsub|n+1>><around*|(|x|)>|\|>>.
-  As a summary, we have the sequence (omitting the superscript on <math|K>
-  for simplicity)
-
-  <\equation*>
-    +\<infty\>\<gtr\><around*|\||K<rsub|1><around*|(|x|)>|\|>\<gg\><around*|\||K<rsub|2><around*|(|x|)>|\|>\<gg\>\<cdots\>\<gg\><around*|\||K<rsub|n><around*|(|x|)>|\|>\<gg\><around*|\||K<rsub|n+1><around*|(|x|)>|\|>\<gg\>\<cdots\>.
-  </equation*>
-
-  \;
-
-  Since all <math|K>s are well-defined, we can relate the <math|K>s to the
-  transition rate <math|r> explicitly. To do so, we first introduce an
-  arbitrary test function <math|\<varphi\>\<in\>S<around*|(|\<bbb-R\><rsup|n>,\<bbb-R\>|)>>.
-  Taylor expanding <math|\<varphi\>> at origin gives
-
-  <\equation*>
-    <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
-    r<around*|(|x+\<epsilon\>,x|)> \<varphi\><around*|(|\<epsilon\>|)>=<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
-    r<around*|(|x+\<epsilon\>,x|)> \<varphi\><around*|(|0|)>+<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
-    r<around*|(|x+\<epsilon\>,x|)><big|sum><rsub|n=1><rsup|+\<infty\>><frac|1|n!>
-    <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|)>
-    <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>.
-  </equation*>
-
-  Because of the normalization of transition density, we have
-  <math|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
-  r<around*|(|x+\<epsilon\>,x|)>=0>, thus
+  Now the critical one
 
   <\align>
-    <tformat|<table|<row|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
-    r<around*|(|x+\<epsilon\>,x|)> \<varphi\><around*|(|\<epsilon\>|)>=>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
-    r<around*|(|x+\<epsilon\>,x|)><big|sum><rsub|n=1><rsup|+\<infty\>><frac|1|n!>
-    <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|)>
-    <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>>>|<row|<cell|=>|<cell|<big|sum><rsub|n=1><rsup|+\<infty\>><frac|1|n!>K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>
-    <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>,>>>>
+    <tformat|<table|<row|<cell|>|<cell|lim<rsub|k\<rightarrow\>0><frac|\<partial\>|\<partial\><around*|(|\<mathi\>
+    k<rsub|\<alpha\>>|)>><frac|\<partial\>|\<partial\><around*|(|\<mathi\>
+    k<rsub|\<beta\>>|)>><frac|\<partial\>|\<partial\><around*|(|\<mathi\>
+    k<rsub|\<gamma\>>|)>>exp<around*|(|<wide|r|^><around*|(|k|)>
+    \<Delta\>t|)>>>|<row|<cell|=>|<cell|lim<rsub|k\<rightarrow\>0><frac|\<partial\>|\<partial\><around*|(|\<mathi\>
+    k<rsub|\<gamma\>>|)>><around*|{|exp<around*|(|<wide|r|^><around*|(|k|)>
+    \<Delta\>t|)> <around*|[|\<Delta\>t<rsup|2>
+    <frac|\<partial\><wide|r|^>|\<partial\><around*|(|\<mathi\>k<rsub|\<alpha\>>|)>><around*|(|k|)>
+    <frac|\<partial\><wide|r|^>|\<partial\><around*|(|\<mathi\>k<rsub|\<beta\>>|)>><around*|(|k|)>+\<Delta\>t<frac|\<partial\><rsup|2><wide|r|^>|\<partial\><around*|(|\<mathi\>k<rsub|\<alpha\>>|)>\<partial\><around*|(|\<mathi\>k<rsub|\<beta\>>|)>><around*|(|k|)>|]>|}>>>|<row|<cell|=>|<cell|\<Delta\>t<rsup|3>
+    K<rsub|1><rsup|\<alpha\>>K<rsub|1><rsup|\<beta\>>K<rsub|1><rsup|\<gamma\>>+\<Delta\>t<rsup|2><around*|[|K<rsub|1><rsup|\<gamma\>>K<rsub|2><rsup|\<alpha\>\<beta\>>+K<rsub|1><rsup|\<alpha\>>K<rsub|2><rsup|\<gamma\>\<beta\>>+K<rsub|1><rsup|\<beta\>>K<rsub|2><rsup|\<alpha\>\<gamma\>>|]>+\<Delta\>t
+    K<rsub|3><rsup|\<alpha\>\<beta\>\<gamma\>>.>>>>
   </align>
 
-  where we have inserted the definition of <math|K>s. This expansion is valid
-  since <math|K>s are well defined and <math|\<varphi\>> is smooth (since
-  <math|\<varphi\>> is in Schwarts space, in which functions are smooth).
-  Then, because of the identity
-
-  <\equation*>
-    <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>=<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
-    \<delta\><around*|(|\<epsilon\>|)> <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|\<epsilon\>|)>,
-  </equation*>
-
-  integration by parts on the right hand side gives
-
-  <\equation*>
-    <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>=<around*|(|-1|)><rsup|n>
-    <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
-    <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|\<epsilon\>|)>
-    \<varphi\><around*|(|\<epsilon\>|)>.
-  </equation*>
-
-  Plugging this back, we find
-
-  <\equation*>
-    <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
-    r<around*|(|x+\<epsilon\>,x|)> \<varphi\><around*|(|\<epsilon\>|)>=<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
-    <around*|[|<big|sum><rsub|n=1><rsup|+\<infty\>><frac|<around*|(|-1|)><rsup|n>|n!>K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)><around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|\<epsilon\>|)>|]>
-    \<varphi\><around*|(|\<epsilon\>|)>.
-  </equation*>
-
-  Since <math|\<varphi\>> is arbitrary, we finall arrive at
-
-  <\equation>
-    r<around*|(|x+\<epsilon\>,x|)>=<big|sum><rsub|n=1><rsup|+\<infty\>><frac|<around*|(|-1|)><rsup|n>|n!>K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)><around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|\<epsilon\>|)>.
-  </equation>
-
-  With this expansion of transition rate, master equation becomes
+  It converges faster only when <math|K<rsub|3>=0>. Then,
 
   <\align>
-    <tformat|<table|<row|<cell|>|<cell|<frac|\<partial\>p|\<partial\>t><around*|(|x,t|)>=<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
-    r<around*|(|x,y|)> p<around*|(|y,t|)>=<big|sum><rsub|n=1><rsup|+\<infty\>><frac|<around*|(|-1|)><rsup|n>|n!><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
-    K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|y|)>
-    <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|x-y|)>
-    p<around*|(|y,t|)>.>>>>
+    <tformat|<table|<row|<cell|>|<cell|lim<rsub|k\<rightarrow\>0><frac|\<partial\>|\<partial\><around*|(|\<mathi\>
+    k<rsub|\<alpha\>>|)>><frac|\<partial\>|\<partial\><around*|(|\<mathi\>
+    k<rsub|\<beta\>>|)>><frac|\<partial\>|\<partial\><around*|(|\<mathi\>
+    k<rsub|\<gamma\>>|)>><frac|\<partial\>|\<partial\><around*|(|\<mathi\>
+    k<rsub|\<sigma\>>|)>>exp<around*|(|<wide|r|^><around*|(|k|)>
+    \<Delta\>t|)>>>|<row|<cell|=>|<cell|<tiny|lim<rsub|k\<rightarrow\>0><frac|\<partial\>|\<partial\><around*|(|\<mathi\>
+    k<rsub|\<sigma\>>|)>><around*|{|exp<around*|(|<wide|r|^><around*|(|k|)>
+    \<Delta\>t|)> <around*|[|\<Delta\>t<rsup|3>
+    <frac|\<partial\><wide|r|^>|\<partial\><around*|(|\<mathi\>k<rsub|\<alpha\>>|)>><around*|(|k|)>
+    <frac|\<partial\><wide|r|^>|\<partial\><around*|(|\<mathi\>k<rsub|\<beta\>>|)>><around*|(|k|)><frac|\<partial\><wide|r|^>|\<partial\><around*|(|\<mathi\>k<rsub|\<gamma\>>|)>><around*|(|k|)>+\<Delta\>t<rsup|2><frac|\<partial\><wide|r|^>|\<partial\><around*|(|\<mathi\>k<rsub|\<gamma\>>|)>><around*|(|k|)><frac|\<partial\><rsup|2><wide|r|^>|\<partial\><around*|(|\<mathi\>k<rsub|\<alpha\>>|)>\<partial\><around*|(|\<mathi\>k<rsub|\<beta\>>|)>><around*|(|k|)>+\<Delta\>t
+    <frac|\<partial\><rsup|3><wide|r|^>|\<partial\><around*|(|\<mathi\>k<rsub|\<alpha\>>|)>\<partial\><around*|(|\<mathi\>k<rsub|\<beta\>>|)>\<partial\><around*|(|\<mathi\>k<rsub|\<beta\>>|)>><around*|(|k|)>+perm|]>|}>>>>|<row|<cell|=>|<cell|\<Delta\>t<rsup|4>
+    K<rsub|1><rsup|\<alpha\>>K<rsub|1><rsup|\<beta\>>K<rsub|1><rsup|\<gamma\>>K<rsub|1><rsup|\<sigma\>>+\<Delta\>t<rsup|3>K<rsub|1><rsup|\<alpha\>>K<rsub|1><rsup|\<beta\>>K<rsub|2><rsup|\<gamma\>\<sigma\>>+\<Delta\>t<rsup|2>K<rsub|1><rsup|\<alpha\>>K<rsub|3><rsup|\<beta\>\<gamma\>\<sigma\>>+\<Delta\>t<rsup|2>K<rsub|2><rsup|\<alpha\>\<beta\>>K<rsub|2><rsup|\<gamma\>\<sigma\>>+\<Delta\>t
+    K<rsub|4><rsup|\<alpha\>\<beta\>\<gamma\>\<sigma\>>+perm.>>>>
   </align>
 
-  Notice that <math|<around*|(|\<partial\>/\<partial\>y<rsup|\<alpha\><rsub|1>>|)>\<cdots\><around*|(|\<partial\>/\<partial\>y<rsup|\<alpha\><rsub|n>>|)>\<delta\><around*|(|x-y|)>=<around*|(|-1|)><rsup|n>
-  <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|x-y|)>>,
-  we get
-
-  <\equation*>
-    <frac|\<partial\>p|\<partial\>t><around*|(|x,t|)>=<big|sum><rsub|n=1><rsup|+\<infty\>><frac|1|n!><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
-    K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|y|)>
-    <around*|[|<frac|\<partial\>|\<partial\>y<rsup|\<alpha\><rsub|1>>>\<cdots\><frac|\<partial\>|\<partial\>y<rsup|\<alpha\><rsub|n>>>\<delta\><around*|(|x-y|)>|]>
-    p<around*|(|y,t|)>.
-  </equation*>
-
-  Taking integration by parts on the right hand side and then integrating
-  over <math|y>, we finally arrive at
-
-  <\equation>
-    <frac|\<partial\>p|\<partial\>t><around*|(|x,t|)>=<big|sum><rsub|n=1><rsup|+\<infty\>><frac|<around*|(|-1|)><rsup|n>|n!>
-    <around*|(|<frac|\<partial\>|\<partial\>x<rsup|\<alpha\><rsub|1>>>\<cdots\><frac|\<partial\>|\<partial\>x<rsup|\<alpha\><rsub|n>>>|)>
-    <around*|[|K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>
-    p<around*|(|x,t|)>|]>.<label|equation:km expansion>
-  </equation>
-
-  This Taylor expansion of master equation is called the
-  <with|font-series|bold|Kramers\UMoyal expansion>.
-
-  \;
-
-  Recall that the other condition for <math|K>s is the sequence
-  <math|K<rsub|1>\<gg\>K<rsub|2>\<gg\>\<cdots\>>. It suggests us to cut-off
-  the series on the right hand side of Kramers\UMoyal expansion
-  <reference|equation:km expansion>. We are to show that to introduce
-  randomness, we have to keep at least <math|K<rsub|2>>. That is,
-  <math|K<rsub|1>> is not stochastic. To do so, we omit all <math|K<rsub|n>>
-  for <math|n\<gtr\>1>, and get (re-denote <math|K<rsub|1>> to <math|f> for
-  simplicity)
-
-  <\equation*>
-    <frac|\<partial\>p|\<partial\>t><around*|(|x,t|)>+\<partial\><rsub|\<alpha\>><around*|(|f<rsup|\<alpha\>><around*|(|x|)>
-    p<around*|(|x,t|)>|)>=0.
-  </equation*>
-
-  This is the <strong|continuity equation> or <strong|transport equation>. It
-  was used for describing the evolution of the density of incompressible
-  liquids. We are to solve this equation explicitly. As a first order partial
-  differential equation, we can use the <strong|method of characteristics>.
-  At the first step, we fully expand the equation, as
-
-  <\equation*>
-    <frac|\<partial\>p|\<partial\>t><around*|(|x,t|)>+f<rsup|\<alpha\>><around*|(|x|)>
-    \<partial\><rsub|\<alpha\>>p<around*|(|x,t|)>=-\<partial\><rsub|\<alpha\>>f<rsup|\<alpha\>><around*|(|x|)>
-    p<around*|(|x,t|)>.
-  </equation*>
-
-  The next step is constructing a parameterized curve
-  <math|<around*|(|x<around*|(|s|)>,t<around*|(|s|)>|)>> for
-  <math|s\<in\><around*|[|0,+\<infty\>|)>> called <strong|characteristic>,
-  obeying
-
-  <\equation*>
-    <frac|\<mathd\>t|\<mathd\>s><around*|(|s|)>=1
-  </equation*>
-
-  and
-
-  <\equation*>
-    <frac|\<mathd\>x<rsup|\<alpha\>>|\<mathd\>s><around*|(|s|)>=f<rsup|\<alpha\>><around*|(|x<around*|(|s|)>|)>.
-  </equation*>
-
-  It has solution <math|t<around*|(|s|)>=s+t<around*|(|0|)>>. If we set
-  <math|t<around*|(|0|)>=0>, then we have <math|t=s> and
-
-  <\equation*>
-    <frac|\<mathd\>x<rsup|\<alpha\>>|\<mathd\>s><around*|(|s|)>=<frac|\<mathd\>x<rsup|\<alpha\>>|\<mathd\>t><around*|(|t|)>=f<rsup|\<alpha\>><around*|(|x<around*|(|t|)>|)>,
-  </equation*>
-
-  from which we solve <math|x<around*|(|t|)>>, leading to
-
-  <\equation*>
-    <frac|\<mathd\>|\<mathd\>t>p<around*|(|x<around*|(|t|)>,t|)>=<frac|\<partial\>p|\<partial\>x<rsup|\<alpha\>>><around*|(|x<around*|(|t|)>,t|)>
-    <frac|\<mathd\>x<rsup|\<alpha\>>|\<mathd\>t><around*|(|t|)>+<frac|\<partial\>p|\<partial\>t><around*|(|x<around*|(|t|)>,t|)>=\<partial\><rsub|\<alpha\>>p<around*|(|x<around*|(|t|)>,t|)>
-    f<rsup|\<alpha\>><around*|(|x<around*|(|t|)>|)>+<frac|\<partial\>p|\<partial\>t><around*|(|x<around*|(|t|)>,t|)>,
-  </equation*>
-
-  which is the left hand side of the original equaiton along characteristic.
-  Thus, by equaling to the right hand side of the original equation, we get
-
-  <\equation*>
-    <frac|\<mathd\>|\<mathd\>t>p<around*|(|x<around*|(|t|)>,t|)>=-\<partial\><rsub|\<alpha\>>f<rsup|\<alpha\>><around*|(|x<around*|(|t|)>|)>
-    p<around*|(|x<around*|(|t|)>,t|)>.
-  </equation*>
-
-  Now, the original partial differential equation is converted into an
-  ordinary differential equation. It has the unique solution
-
-  <\equation*>
-    p<around*|(|x<around*|(|t|)>,t|)>=p<around*|(|x<around*|(|0|)>,0|)>\<times\>exp<around*|(|-<big|int><rsub|0><rsup|t>\<mathd\>t<rprime|'>
-    \<partial\><rsub|\<alpha\>>f<rsup|\<alpha\>><around*|(|x<around*|(|t<rprime|'>|)>|)>|)>.
-  </equation*>
-
-  It indicates that the density at <math|x<around*|(|0|)>> will \Ptransport\Q
-  along the curve <math|x<around*|(|t|)>> as time evolves. For example,
-  consider <math|p<around*|(|y,0|)>=\<delta\><around*|(|y-x<around*|(|0|)>|)>>,
-  that is all mass is centered at <math|x<around*|(|0|)>>. Then
-  <math|p<around*|(|x,t|)>> will have density only at
-  <math|x<around*|(|t|)>>, and <math|p<around*|(|y,t|)>=0> for any
-  <math|y\<neq\>x<around*|(|t|)>>, since <math|y> is traced back to
-  <math|y<around*|(|0|)>> along the characteristic <math|y<around*|(|t|)>>
-  and <math|y<around*|(|0|)>\<neq\>x<around*|(|0|)>>. That is to say,
-  transport equation is deterministic.
-
-  So, cut-off at <math|K<rsub|1>> will loss the randomess in Markovian
-  process. We have to cut-off at <math|K<rsub|2>> and to show that, when
-  <math|K<rsub|2>>, as a matrix-valued field, is positive definite, the
-  randomness of Markovian process is guaranteed.
-
-  Together with <math|K<rsub|1>> (re-denoted to <math|f> as before) and
-  <math|K<rsub|2>> (re-denoted to <math|\<Sigma\>>), we have the transition
-  rate cut-off at <math|n=2> as
-
-  <\equation>
-    r<around*|(|x+\<epsilon\>,x|)>=-f<rsup|\<alpha\>><around*|(|x|)>
-    \<partial\><rsub|\<alpha\>>\<delta\><around*|(|\<epsilon\>|)>+<frac|1|2>K<rsup|\<alpha\>\<beta\>><around*|(|x|)>
-    \<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>\<delta\><around*|(|\<epsilon\>|)>.<label|equation:Langevin
-    transition rate>
-  </equation>
-
-  We are to show that this is the transition rate of the Gaussian transition
-  density
-
-  <\equation>
-    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>\<assign\><frac|1|<sqrt|<around*|(|2\<mathpi\>
-    \<Delta\>t|)><rsup|n> det \<Sigma\><around*|(|x|)>>>exp<around*|(|-<frac|1|2\<Delta\>t>
-    <around*|[|\<Sigma\><rsup|-1><around*|(|x|)>|]><rsub|\<alpha\>\<beta\>>
-    <around*|[|\<epsilon\><rsup|\<alpha\>>-f<rsup|\<alpha\>><around*|(|x|)>
-    \<Delta\>t|]> <around*|[|\<epsilon\><rsup|\<beta\>><rsub|>-f<rsup|\<beta\>><around*|(|x|)>
-    \<Delta\>t|]>|)>.<label|equation:langevin process>
-  </equation>
-
-  To do so, we TODO
-
-  <subsection|Randomness at Small Scale 1>
-
-  There is a kind of phenomena in Nature, which is macroscopically
-  deterministic but microscopically stochastic. For example, in Brownian
-  motion, the strike by a water molecule is microscopic and extremely fast,
-  comparing with the scale of pollen particle. We are to analyze this kind of
-  phenomena using master equation. The state of the system is given by an
-  element <math|x\<in\>\<cal-X\>> (for Browian motion, the state is
-  characterized by the velocity of the pollen particle). We shall expect that
-  the transition from <math|x> to its neighbor <math|x+\<epsilon\>> where
-  <math|<around*|\<\|\|\>|\<epsilon\>|\<\|\|\>>\<rightarrow\>0> as
-  <math|\<Delta\>t\<rightarrow\>0>. What does this mean in statistical sense?
-  We imagine that, as <math|\<Delta\>t\<rightarrow\>0>, the distribution of
-  <math|\<epsilon\>> decreases exponentially fast. Not every transition rate
-  can lead to such a picture. Consider two kinds of transition rate. The
-  first is uniformly distributed, thus from
-  <math|q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>\<approx\>\<delta\><around*|(|\<epsilon\>|)>+r<around*|(|x+\<epsilon\>,x|)>
-  \<Delta\>t> we know that the distribution at <math|\<epsilon\>\<sim\>1> is
-  the same as <math|\<epsilon\>\<ll\>1> no matter what <math|\<Delta\>t> is.
-  The second is like the transition rate of normal distribution where the
-  covariance proportional to <math|\<Delta\>t>.
-
-  Consider a test function <math|\<varphi\>\<in\>S<around*|(|\<bbb-R\><rsup|n>,\<bbb-R\>|)>>,
-  <math|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
-  q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>
-  \<varphi\><around*|(|\<epsilon\>|)>> can be seen as an exploration of the
-  test function. But, since the statistical scale of <math|\<epsilon\>> is
-  small, it can only probe the <math|\<varphi\>> around zero, namely the
-  <math|\<varphi\>> and its lower derivatives at zero. Because of Taylor
-  expansion
-
-  <\equation*>
-    <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
-    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>
-    \<varphi\><around*|(|\<epsilon\>|)>=\<varphi\><around*|(|0|)>+\<Delta\>t
-    <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
-    r<around*|(|x+\<epsilon\>,x|)> <around*|[|\<epsilon\><rsup|\<alpha\>>
-    \<partial\><rsub|\<alpha\>>\<varphi\><around*|(|0|)>+<frac|1|2>\<epsilon\><rsup|\<alpha\>>
-    \<epsilon\><rsup|\<beta\>> \<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>\<varphi\><around*|(|0|)>+\<cdots\>|]>,
-  </equation*>
-
-  It indicates that the series has a cut-off at some order. How to determine
-  where is the cut-off?
-
-  \;
-
-  So, we shall define the moments
-
-  <\equation*>
-    K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>\<assign\><big|int><rsub|\<cal-X\>>\<mathd\>\<epsilon\>
-    <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|)>
-    r<around*|(|x+\<epsilon\>,x|)>
-  </equation*>
-
-  and demand that <math|K<rsub|n+1>\<ll\>K<rsub|n>>. But, what is the leading
-  term?
-
-  \;
-
-  If only <math|K<rsub|1>> is left, then we have (re-denote <math|K<rsub|1>>
-  to <math|f>)
-
-  <\equation*>
-    <frac|\<partial\>p|\<partial\>t><around*|(|x,t|)>+\<partial\><rsub|\<alpha\>><around*|(|f<rsup|\<alpha\>><around*|(|x|)>
-    p<around*|(|x,t|)>|)>=0.
-  </equation*>
-
-  This is the <strong|continuity equation>, describing the evolution of the
-  density of incompressible liquids. It keeps the normalization
-  <math|<big|int><rsub|\<cal-X\>>\<mathd\>x p<around*|(|x,t|)>=1> while
-  evolving.
-
-  We are to solve this equation explicitly. As a first order partial
-  differential equation, we can use the method of characteristics. At the
-  first step, we fully expand the equation, as
-
-  <\equation*>
-    <frac|\<partial\>p|\<partial\>t><around*|(|x,t|)>+f<rsup|\<alpha\>><around*|(|x|)>
-    \<partial\><rsub|\<alpha\>>p<around*|(|x,t|)>=-\<partial\><rsub|\<alpha\>>f<rsup|\<alpha\>><around*|(|x|)>
-    p<around*|(|x,t|)>.
-  </equation*>
-
-  The next step is constructing a parameterized curve
-  <math|<around*|(|x<around*|(|s|)>,t<around*|(|s|)>|)>> for
-  <math|s\<in\><around*|[|0,+\<infty\>|)>> called <strong|characteristic> as
-
-  <\eqnarray*>
-    <tformat|<table|<row|<cell|<frac|\<mathd\>t|\<mathd\>s><around*|(|s|)>>|<cell|=>|<cell|1;>>|<row|<cell|<frac|\<mathd\>x<rsup|\<alpha\>>|\<mathd\>s><around*|(|s|)>>|<cell|=>|<cell|f<rsup|\<alpha\>><around*|(|x<around*|(|s|)>|)>.>>>>
-  </eqnarray*>
-
-  It has solution <math|t<around*|(|s|)>=s+t<around*|(|0|)>>. If we set
-  <math|t<around*|(|0|)>=0>, then we have
-
-  <\equation*>
-    <frac|\<mathd\>x<rsup|\<alpha\>>|\<mathd\>s><around*|(|s|)>=<frac|\<mathd\>x<rsup|\<alpha\>>|\<mathd\>t><around*|(|t|)>=f<rsup|\<alpha\>><around*|(|x<around*|(|t|)>|)>,
-  </equation*>
-
-  from which we solve <math|x<around*|(|t|)>>, leading to
-
-  <\equation*>
-    <frac|\<mathd\>|\<mathd\>t>p<around*|(|x<around*|(|t|)>,t|)>=<frac|\<partial\>p|\<partial\>x<rsup|\<alpha\>>><around*|(|x<around*|(|t|)>,t|)>
-    <frac|\<mathd\>x<rsup|\<alpha\>>|\<mathd\>t><around*|(|t|)>+<frac|\<partial\>p|\<partial\>t><around*|(|x<around*|(|t|)>,t|)>=\<partial\><rsub|\<alpha\>>p<around*|(|x<around*|(|t|)>,t|)>
-    f<rsup|\<alpha\>><around*|(|x<around*|(|t|)>|)>+<frac|\<partial\>p|\<partial\>t><around*|(|x<around*|(|t|)>,t|)>,
-  </equation*>
-
-  which is the left hand side of the original equaiton along characteristic.
-  Thus, by equaling to the right hand side of the original equation, we get
-
-  <\equation*>
-    <frac|\<mathd\>|\<mathd\>t>p<around*|(|x<around*|(|t|)>,t|)>=-\<partial\><rsub|\<alpha\>>f<rsup|\<alpha\>><around*|(|x<around*|(|t|)>|)>
-    p<around*|(|x<around*|(|t|)>,t|)>.
-  </equation*>
-
-  Now, the original partial differential equation is converted into an
-  ordinary differential equation. It has the unique solution
-
-  <\equation*>
-    p<around*|(|x<around*|(|t|)>,t|)>=p<around*|(|x<around*|(|0|)>,0|)>\<times\>exp<around*|(|-<big|int><rsub|0><rsup|t>\<mathd\>t<rprime|'>
-    \<partial\><rsub|\<alpha\>>f<rsup|\<alpha\>><around*|(|x<around*|(|t<rprime|'>|)>|)>|)>.
-  </equation*>
-
-  <subsection|Generic Transition Rate on Euclidean Alphabet>
-
-  We generalize the derivation for the transition rate of Langevin process to
-  generic transition rate on Euclidean alphabet <math|\<bbb-R\><rsup|n>>. We
-  follow the same steps, starting at considering a test function
-  <math|\<varphi\>\<in\>S<around*|(|\<bbb-R\><rsup|n>,\<bbb-R\>|)>>, as (if
-  <math|K<rsub|n>> is well-defined for any <math|n>)
-
-  <\equation*>
-    <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
-    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>
-    \<varphi\><around*|(|\<epsilon\>|)>=\<varphi\><around*|(|0|)>+\<Delta\>t
-    <big|sum><rsub|n=1><rsup|+\<infty\>><frac|1|n!>K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>
-    <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>+\<omicron\><around*|(|\<Delta\>t|)>.
-  </equation*>
-
-  Since
-
-  <\equation*>
-    <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>=<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
-    <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|\<epsilon\>|)>
-    \<delta\><around*|(|\<epsilon\>|)>,
-  </equation*>
-
-  integration by parts gives
-
-  <\equation*>
-    <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>=<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
-    <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|\<epsilon\>|)>
-    \<varphi\><around*|(|\<epsilon\>|)>.
-  </equation*>
-
-  Plugging this back, we find
-
-  <\equation*>
-    r<around*|(|x+\<epsilon\>,x|)>=<big|sum><rsub|n=1><rsup|+\<infty\>><frac|<around*|(|-1|)><rsup|n>|n!>K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)><around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|\<epsilon\>|)>.
-  </equation*>
-
-  <subsection|Eliminating Covariance>
-
-  Consider Langevin process on <math|\<bbb-R\><rsup|n>>
-
-  <\equation*>
-    <wide|X|\<dot\>><rsup|\<alpha\>><around*|(|t|)>=f<rsup|\<alpha\>><around*|(|X<around*|(|t|)>|)>+C<rsup|\<alpha\>\<beta\>><around*|(|X<around*|(|t|)>|)>
-    <wide|W|\<dot\>><rsub|\<beta\>><around*|(|t|)>.
-  </equation*>
-
-  If <math|C<around*|(|x|)>> as a matrix-valued field is everywhere full
-  rank, namely <math|det C<around*|(|x|)>\<neq\>0> for any
-  <math|x\<in\>\<bbb-R\><rsup|n>>, then we have
-
-  <\equation*>
-    <wide|Y|\<dot\>><rsub|\<alpha\>><around*|(|t|)>=g<rsub|\<alpha\>><around*|(|Y<around*|(|t|)>|)>+<wide|W|\<dot\>><rsub|\<alpha\>><around*|(|t|)>,
-  </equation*>
-
-  where <math|y<rsub|\<alpha\>>\<assign\><around*|[|C<rsup|-1><around*|(|x|)>|]><rsub|\<alpha\>\<beta\>>
-  x<rsup|\<beta\>>> and then <math|g<rsub|\<alpha\>><around*|(|y|)>\<assign\><around*|[|C<rsup|-1><around*|(|x|)>|]><rsub|\<alpha\>\<beta\>>
-  f<rsup|\<alpha\>><around*|(|x|)>>. With this new variable, we have
-  eliminated the covariance (precisely, the Cholesky factor of covariane).
+  It converges faster than <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\>>\<epsilon\><rsup|\<beta\>>|]>>
+  only when <math|K<rsub|4>=0>. But since <math|K<rsub|2>\<neq\>0>, it
+  converges as fast as <math|><math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\>>\<epsilon\><rsup|\<beta\>>
+  \<epsilon\><rsup|\<gamma\>>|]>>, both are
+  <math|<with|font|cal|O><around*|(|\<Delta\>t<rsup|2>|)>>. But this does not
+  make sense because we have omitted an <math|\<omicron\><around*|(|\<Delta\>t|)>>
+  in the exponential of the integrand. Repeating this process, we will find
+  that, if we demand that<math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>>
+  converges faster than <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\>>|]>>
+  and <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\>>\<epsilon\><rsup|\<beta\>>|]>>,
+  both of which are <math|<with|font|cal|O><around*|(|\<Delta\>t|)>>, then we
+  must have <math|K<rsub|n>=0> for any <math|n\<gtr\>2>.
 
   <subsection|Example: Action in Deep Learning (TODO)>
 
@@ -887,29 +1111,34 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|1.8.1|?>>
-    <associate|auto-11|<tuple|1.8.2|?>>
+    <associate|auto-10|<tuple|1.3.1|7>>
+    <associate|auto-11|<tuple|1.4|8>>
+    <associate|auto-12|<tuple|1.5|?>>
+    <associate|auto-13|<tuple|1.5.1|?>>
+    <associate|auto-14|<tuple|1.5.2|?>>
+    <associate|auto-15|<tuple|1.8.2|?>>
     <associate|auto-2|<tuple|1.1|1>>
-    <associate|auto-3|<tuple|1.2|2>>
-    <associate|auto-4|<tuple|1.3|3>>
-    <associate|auto-5|<tuple|1.4|3>>
-    <associate|auto-6|<tuple|1.5|3>>
-    <associate|auto-7|<tuple|1.6|3>>
-    <associate|auto-8|<tuple|1.7|4>>
-    <associate|auto-9|<tuple|1.8|?>>
-    <associate|equation:Langevin transition rate|<tuple|4|?>>
-    <associate|equation:km expansion|<tuple|3|?>>
-    <associate|equation:langevin process|<tuple|5|?>>
-    <associate|equation:path integral step 1|<tuple|1|1>>
+    <associate|auto-3|<tuple|1.1.1|2>>
+    <associate|auto-4|<tuple|1.1.2|3>>
+    <associate|auto-5|<tuple|1.1.3|5>>
+    <associate|auto-6|<tuple|1.1.4|6>>
+    <associate|auto-7|<tuple|1.1.5|7>>
+    <associate|auto-8|<tuple|1.2|7>>
+    <associate|auto-9|<tuple|1.3|7>>
+    <associate|equation:Langevin transition rate|<tuple|4|5>>
+    <associate|equation:km expansion|<tuple|2|4>>
+    <associate|equation:langevin process|<tuple|4|5>>
+    <associate|equation:langevin transition rate|<tuple|3|?>>
+    <associate|equation:path integral step 1|<tuple|5|1>>
+    <associate|equation:transition rate and moments|<tuple|1|?>>
+    <associate|equation:transition rate determines transition
+    density|<tuple|6|?>>
     <associate|footnote-1|<tuple|1|1>>
-    <associate|footnote-2|<tuple|2|3>>
-    <associate|footnote-3|<tuple|3|?>>
+    <associate|footnote-2|<tuple|2|7>>
     <associate|footnr-1|<tuple|1|1>>
-    <associate|footnr-2|<tuple|2|3>>
-    <associate|footnr-3|<tuple|3|?>>
-    <associate|mwCg|<tuple|3|?>>
+    <associate|footnr-2|<tuple|2|7>>
     <associate|section: Master Equation on Euclidean Alphabet Can Be
-    Formulated as Path Integral|<tuple|1.1|1>>
+    Formulated as Path Integral|<tuple|1.3|1>>
   </collection>
 </references>
 
@@ -929,26 +1158,38 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-3>>
 
-      <with|par-left|<quote|1tab>|1.3<space|2spc>Eliminating Covariance
+      <with|par-left|<quote|1tab>|1.3<space|2spc>Randomness at Small Scale 0
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-4>>
 
-      <with|par-left|<quote|1tab>|1.4<space|2spc>Example: Action in Deep
-      Learning (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.4<space|2spc>Randomness at Small Scale 1
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-5>>
 
-      <with|par-left|<quote|1tab>|1.5<space|2spc>* History: Structures in
-      Nature Arise from Least-Action Principle
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.5<space|2spc>Generic Transition Rate on
+      Euclidean Alphabet <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-6>>
 
-      <with|par-left|<quote|2tab>|1.5.1<space|2spc>WBE Theory and
-      Universality <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.6<space|2spc>Eliminating Covariance
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-7>>
 
-      <with|par-left|<quote|2tab>|1.5.2<space|2spc>Renormalization Group and
-      Criticality <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.7<space|2spc>Example: Action in Deep
+      Learning (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-8>>
+
+      <with|par-left|<quote|1tab>|1.8<space|2spc>* History: Structures in
+      Nature Arise from Least-Action Principle
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-9>>
+
+      <with|par-left|<quote|2tab>|1.8.1<space|2spc>WBE Theory and
+      Universality <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-10>>
+
+      <with|par-left|<quote|2tab>|1.8.2<space|2spc>Renormalization Group and
+      Criticality <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-11>>
     </associate>
   </collection>
 </auxiliary>
