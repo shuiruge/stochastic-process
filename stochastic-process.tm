@@ -125,9 +125,13 @@
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-28>>
 
-    <with|par-left|1tab|4.5<space|2spc>How Far Will Information Propagate in
-    Markovian Process? (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <with|par-left|1tab|4.5<space|2spc>Langevin Process Can Be Formulated as
+    Path Integral (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-30>>
+
+    <with|par-left|1tab|4.6<space|2spc>How Far Will Information Propagate in
+    Markovian Process? (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-31>>
   </table-of-contents>
 
   <section|Relative Entropy><label|section: Relative Entropy>
@@ -3830,15 +3834,15 @@
     <associate|auto-21|<tuple|3.6|22>>
     <associate|auto-22|<tuple|3.7|23>>
     <associate|auto-23|<tuple|3.8|23>>
-    <associate|auto-24|<tuple|4|24>>
-    <associate|auto-25|<tuple|4.1|24>>
-    <associate|auto-26|<tuple|4.2|24>>
+    <associate|auto-24|<tuple|4|25>>
+    <associate|auto-25|<tuple|4.1|25>>
+    <associate|auto-26|<tuple|4.2|25>>
     <associate|auto-27|<tuple|4.3|26>>
-    <associate|auto-28|<tuple|4.4|26>>
-    <associate|auto-29|<tuple|1|27>>
+    <associate|auto-28|<tuple|4.4|27>>
+    <associate|auto-29|<tuple|1|28>>
     <associate|auto-3|<tuple|1.2|2>>
     <associate|auto-30|<tuple|4.5|28>>
-    <associate|auto-31|<tuple|4.6|?>>
+    <associate|auto-31|<tuple|4.6|31>>
     <associate|auto-4|<tuple|1.3|3>>
     <associate|auto-5|<tuple|1.4|3>>
     <associate|auto-6|<tuple|2|4>>
@@ -3847,7 +3851,7 @@
     <associate|auto-9|<tuple|2.3|6>>
     <associate|equation:Detailed Balance|<tuple|8|8>>
     <associate|equation:Detailed Balance for transition density|<tuple|9|8>>
-    <associate|equation:Fokker-Planck equation|<tuple|19|22>>
+    <associate|equation:Fokker-Planck equation|<tuple|19|23>>
     <associate|equation:action of distribution|<tuple|25|26>>
     <associate|equation:circle|<tuple|15|14>>
     <associate|equation:data-fitting iteration|<tuple|27|27>>
@@ -3858,20 +3862,20 @@
     <associate|equation:discrete time master equation|<tuple|5|5>>
     <associate|equation:discrete time master equation v0|<tuple|2|5>>
     <associate|equation:equation:metropolis-hastings|<tuple|12|13>>
-    <associate|equation:generic density|<tuple|26|26>>
-    <associate|equation:harmonic oscillator action|<tuple|22|24>>
+    <associate|equation:generic density|<tuple|26|27>>
+    <associate|equation:harmonic oscillator action|<tuple|22|25>>
     <associate|equation:km expansion|<tuple|16|19>>
-    <associate|equation:langevin path integral|<tuple|30|?>>
+    <associate|equation:langevin path integral|<tuple|30|31>>
     <associate|equation:langevin transition rate|<tuple|18|22>>
     <associate|equation:least-action principle v0|<tuple|23|25>>
-    <associate|equation:least-action principle v1|<tuple|24|25>>
+    <associate|equation:least-action principle v1|<tuple|24|26>>
     <associate|equation:master equation|<tuple|4|5>>
     <associate|equation:master equation v0|<tuple|3|5>>
     <associate|equation:metropolis-hastings origin|<tuple|13|13>>
-    <associate|equation:path integral step 1|<tuple|29|?>>
+    <associate|equation:path integral step 1|<tuple|29|29>>
     <associate|equation:relative entropy derivative|<tuple|11|9>>
-    <associate|equation:rg action|<tuple|31|28>>
-    <associate|equation:rg integral|<tuple|32|28>>
+    <associate|equation:rg action|<tuple|31|31>>
+    <associate|equation:rg integral|<tuple|32|31>>
     <associate|equation:stationary Fokker-Planck equation|<tuple|20|23>>
     <associate|equation:transition density normalization|<tuple|1|5>>
     <associate|equation:transition rate determines transition
@@ -3879,16 +3883,16 @@
     <associate|equation:transition rate determines transition density
     v2|<tuple|7|7>>
     <associate|equation:wiener process|<tuple|17|22>>
-    <associate|figure: Least-Action|<tuple|1|27>>
+    <associate|figure: Least-Action|<tuple|1|28>>
     <associate|footnote-1|<tuple|1|2>>
     <associate|footnote-10|<tuple|10|17>>
     <associate|footnote-11|<tuple|11|17>>
     <associate|footnote-12|<tuple|12|20>>
     <associate|footnote-13|<tuple|13|20>>
-    <associate|footnote-14|<tuple|14|25>>
+    <associate|footnote-14|<tuple|14|26>>
     <associate|footnote-15|<tuple|15|29>>
-    <associate|footnote-16|<tuple|16|30>>
-    <associate|footnote-17|<tuple|17|?>>
+    <associate|footnote-16|<tuple|16|32>>
+    <associate|footnote-17|<tuple|17|33>>
     <associate|footnote-2|<tuple|2|2>>
     <associate|footnote-3|<tuple|3|2>>
     <associate|footnote-4|<tuple|4|2>>
@@ -3902,10 +3906,10 @@
     <associate|footnr-11|<tuple|11|17>>
     <associate|footnr-12|<tuple|12|20>>
     <associate|footnr-13|<tuple|13|20>>
-    <associate|footnr-14|<tuple|14|25>>
+    <associate|footnr-14|<tuple|14|26>>
     <associate|footnr-15|<tuple|15|29>>
-    <associate|footnr-16|<tuple|16|30>>
-    <associate|footnr-17|<tuple|17|?>>
+    <associate|footnr-16|<tuple|16|32>>
+    <associate|footnr-17|<tuple|17|33>>
     <associate|footnr-2|<tuple|2|2>>
     <associate|footnr-3|<tuple|3|2>>
     <associate|footnr-4|<tuple|4|2>>
@@ -3914,14 +3918,13 @@
     <associate|footnr-7|<tuple|7|10>>
     <associate|footnr-8|<tuple|8|11>>
     <associate|footnr-9|<tuple|9|12>>
-    <associate|mwBw|<tuple|29|?>>
     <associate|section: A Brief Review of Least-Action Principle in Classical
-    Mechanics|<tuple|4.2|24>>
+    Mechanics|<tuple|4.2|25>>
     <associate|section: A Brief Review of Probability|<tuple|1.1|1>>
     <associate|section: Cut-off in the Moments of Transition Rate Is
     Essential for Spatial Smoothness|<tuple|3.2|15>>
     <associate|section: Data Fitting Is Equivalent to Least-Action Principle
-    of Distribution|<tuple|4.4|26>>
+    of Distribution|<tuple|4.4|27>>
     <associate|section: Detailed Balance Condition and Connectivity
     Monotonically Reduce Relative Entropy|<tuple|2.5|9>>
     <associate|section: Detailed Balance Provides Stationary
@@ -3931,18 +3934,18 @@
     <associate|section: Example: Metropolis-Hastings
     Algorithm|<tuple|2.7|13>>
     <associate|section: How Far Will Information Propagate in Markovian
-    Process?|<tuple|4.6|28>>
+    Process?|<tuple|4.6|31>>
     <associate|section: Kramers-Moyal Expansion and Langevin
     Process|<tuple|3|14>>
     <associate|section: Langevin Process Is a Markovian Process with
-    Ncut=2|<tuple|3.6|?>>
-    <associate|section: Least-Action Principle|<tuple|4|24>>
+    Ncut=2|<tuple|3.6|22>>
+    <associate|section: Least-Action Principle|<tuple|4|25>>
     <associate|section: Least-Action Principle of Distribution Has No
     Redundancy|<tuple|4.3|26>>
     <associate|section: Master Equation Describes the Evolution of Markov
     Process|<tuple|2.2|4>>
     <associate|section: Master Equation on Euclidean Alphabet Can Be
-    Formulated as Path Integral|<tuple|4.5|?>>
+    Formulated as Path Integral|<tuple|4.5|28>>
     <associate|section: Master Equation, Detailed Balance, and Relative
     Entropy|<tuple|2|4>>
     <associate|section: Monte-Carlo Simulation and Guarantee of
@@ -4111,10 +4114,14 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-28>>
 
-      <with|par-left|<quote|1tab>|4.5<space|2spc>How Far Will Information
+      <with|par-left|<quote|1tab>|4.5<space|2spc>Langevin Process Can Be
+      Formulated as Path Integral (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-30>>
+
+      <with|par-left|<quote|1tab>|4.6<space|2spc>How Far Will Information
       Propagate in Markovian Process? (TODO)
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-30>>
+      <no-break><pageref|auto-31>>
     </associate>
   </collection>
 </auxiliary>
