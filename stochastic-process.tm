@@ -3300,7 +3300,9 @@
     r<around*|(|x+\<epsilon\>,x|)>=K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>.
   </equation*>
 
-  We meat the moments of transition rate again. Thus, we have
+  We meet the moments of transition rate again (it first appears in section
+  <reference|section: Cut-off in the Moments of Transition Rate Is Essential
+  for Spatial Smoothness>). Thus, we have
 
   <\equation*>
     <wide|r|^><around*|(|x,k|)>=K<rsub|1><rsup|\<alpha\>><around*|(|x|)>
