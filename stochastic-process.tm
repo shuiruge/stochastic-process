@@ -1679,8 +1679,8 @@
   Expansion><label|section: Spatial Expansion of Master Equation Gives
   Kramers-Moyal Expansion>
 
-  Let the alphabet <math|\<cal-X\>=\<bbb-R\><rsup|n>> for some integer
-  <math|n\<geqslant\>1>, which has sufficient connectivity. In addition,
+  Let the alphabet <math|\<cal-X\>=\<bbb-R\><rsup|d>> for some integer
+  <math|d\<geqslant\>1>, which has sufficient connectivity. In addition,
   suppose that the density function <math|p<around*|(|x,t|)>> of a
   time-dependent distribution <math|P<around*|(|t|)>> and the transition rate
   <math|r<around*|(|x,y|)>> are smooth on <math|x> and <math|y>. In this
@@ -2509,7 +2509,8 @@
   Langevin Process Is a Generalized Function>).
 
   As generalized functions, we are to examine these two expressions by using
-  an arbitrary test function <math|\<varphi\>>. Thus, for the left hand side,
+  an arbitrary test function <math|\<varphi\>\<in\>S<around*|(|\<bbb-R\><rsup|d>|)>>.
+  Thus, for the left hand side,
 
   <\equation*>
     <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\>
@@ -3387,7 +3388,6 @@
     <associate|footnote-13|<tuple|13|23>>
     <associate|footnote-14|<tuple|14|26>>
     <associate|footnote-15|<tuple|15|28>>
-    <associate|footnote-16|<tuple|16|?>>
     <associate|footnote-2|<tuple|2|2>>
     <associate|footnote-3|<tuple|3|2>>
     <associate|footnote-4|<tuple|4|2>>
@@ -3403,7 +3403,6 @@
     <associate|footnr-13|<tuple|13|23>>
     <associate|footnr-14|<tuple|14|26>>
     <associate|footnr-15|<tuple|15|28>>
-    <associate|footnr-16|<tuple|16|?>>
     <associate|footnr-2|<tuple|2|2>>
     <associate|footnr-3|<tuple|3|2>>
     <associate|footnr-4|<tuple|4|2>>

@@ -8,17 +8,18 @@
   <subsection|Randomness at Small Scale 0>
 
   <subsubsection|Cut-off in the Moments of Transition Rate Is Essential for
-  Spatial Smoothness>
+  Spatial Smoothness><label|section: Cut-off in the Moments of Transition
+  Rate Is Essential for Spatial Smoothness>
 
   Let the alphabet <math|\<cal-X\>=\<bbb-R\><rsup|d>> for some integer
-  <math|n\<geqslant\>1>, which has sufficient connectivity. In addition,
-  suppose that the density function <math|p<around*|(|x,t|)>> of a
+  <math|d\<geqslant\>1>, which has sufficient connectivity. In addition,
+  assume that the density function <math|p<around*|(|x,t|)>> of a
   time-dependent distribution <math|P<around*|(|t|)>> and the transition rate
-  <math|r<around*|(|x,y|)>> are smooth on <math|x> and <math|y>. In this
-  section, we investigate the direct results of spatial smoothness.
-
-  Given <math|x\<in\>\<bbb-R\><rsup|d>>, suppose that all the mass is
-  centered at <math|x> initially, thus <math|p<around*|(|x<rprime|'>,0|)>=\<delta\><around*|(|x-x<rprime|'>|)>>.
+  <math|r<around*|(|x,y|)>> are smooth on <math|x> and <math|y>. Besides the
+  smoothness of functions, however, spatial smoothness demands more. To
+  declare this, we consider the situation where the mass of
+  <math|P<around*|(|t|)>> is centered at <math|x> initially, namely
+  <math|p<around*|(|x<rprime|'>,0|)>=\<delta\><around*|(|x-x<rprime|'>|)>>.
   Then, after a small temporal period <math|\<Delta\>t>, there is some
   portion of mass transits to elsewhere. By master equation
   <reference|equation:master equation>, the change in density is
@@ -60,7 +61,7 @@
   </enumerate>
 
   For the second condition, we shall expect that
-  <math|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>>
+  <math|<around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|)>>
   will become much smaller by multiplying more small (random) variables.
 
   Plugging in the expression of <math|p<around*|(|x+\<epsilon\>,\<Delta\>t|)>>,
@@ -490,8 +491,9 @@
   functional space in which function mapping from <math|\<bbb-R\><rsup|d>> to
   <math|\<bbb-R\>> is smooth and rapidly falls to zero in the region far from
   origin. For example, Gaussian function (the density function of normal
-  distribution) is in Schwarts space <math|S<around*|(|\<bbb-R\>|)>>. Taylor
-  expanding <math|\<varphi\>> at origin gives
+  distribution) is in Schwarts space <math|S<around*|(|\<bbb-R\>|)>>. Since
+  <math|\<varphi\>> is in Schwarts space, in which functions are smooth, we
+  can Taylor expanding <math|\<varphi\>> at origin, which gives
 
   <\equation*>
     <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
@@ -511,14 +513,14 @@
     r<around*|(|x+\<epsilon\>,x|)> \<varphi\><around*|(|\<epsilon\>|)>=>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
     r<around*|(|x+\<epsilon\>,x|)><big|sum><rsub|n=1><rsup|+\<infty\>><frac|1|n!>
     <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|)>
-    <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>>>|<row|<cell|=>|<cell|<big|sum><rsub|n=1><rsup|+\<infty\>><frac|1|n!>K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>
+    <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>>>|<row|<cell|=>|<cell|<big|sum><rsub|n=1><rsup|N<rsub|cut>><frac|1|n!>K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>
     <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>,>>>>
   </align>
 
-  where we have inserted the definition of <math|K>s. This expansion is valid
-  since <math|K>s are well defined and <math|\<varphi\>> is smooth (since
-  <math|\<varphi\>> is in Schwarts space, in which functions are smooth).
-  Then, because of the identity
+  where we have inserted the definition of <math|K>s and that
+  <math|K<rsub|n>=0> for any <math|n\<gtr\>N<rsub|cut>> (section
+  <reference|section: Cut-off in the Moments of Transition Rate Is Essential
+  for Spatial Smoothness>). Then, because of the identity
 
   <\equation*>
     <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
@@ -539,24 +541,24 @@
   <\equation*>
     <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
     r<around*|(|x+\<epsilon\>,x|)> \<varphi\><around*|(|\<epsilon\>|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
-    <around*|[|<big|sum><rsub|n=1><rsup|+\<infty\>><frac|<around*|(|-1|)><rsup|n>|n!>K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)><around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|\<epsilon\>|)>|]>
+    <around*|[|<big|sum><rsub|n=1><rsup|N<rsub|cut>><frac|<around*|(|-1|)><rsup|n>|n!>K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)><around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|\<epsilon\>|)>|]>
     \<varphi\><around*|(|\<epsilon\>|)>.
   </equation*>
 
   Since <math|\<varphi\>> is arbitrary, we finall arrive at
 
   <\equation>
-    r<around*|(|x+\<epsilon\>,x|)>=<big|sum><rsub|n=1><rsup|+\<infty\>><frac|<around*|(|-1|)><rsup|n>|n!>K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)><around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|\<epsilon\>|)>.<label|equation:km
+    r<around*|(|x+\<epsilon\>,x|)>=<big|sum><rsub|n=1><rsup|N<rsub|cut>><frac|<around*|(|-1|)><rsup|n>|n!>K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)><around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|\<epsilon\>|)>.<label|equation:km
     expansion>
   </equation>
 
   This is called <with|font-series|bold|Kramers\UMoyal expansion>.<\footnote>
-    If we plug expansion <reference|equation:transition rate and moments>
-    into master equation, then we get
+    If we plug expansion <reference|equation:km expansion> into master
+    equation, then we get
 
     <\align>
       <tformat|<table|<row|<cell|>|<cell|<frac|\<partial\>p|\<partial\>t><around*|(|x,t|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
-      r<around*|(|x,y|)> p<around*|(|y,t|)>=<big|sum><rsub|n=1><rsup|+\<infty\>><frac|<around*|(|-1|)><rsup|n>|n!><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+      r<around*|(|x,y|)> p<around*|(|y,t|)>=<big|sum><rsub|n=1><rsup|N<rsub|cut>><frac|<around*|(|-1|)><rsup|n>|n!><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
       K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|y|)>
       <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|x-y|)>
       p<around*|(|y,t|)>.>>>>
@@ -567,7 +569,7 @@
     we get
 
     <\equation*>
-      <frac|\<partial\>p|\<partial\>t><around*|(|x,t|)>=<big|sum><rsub|n=1><rsup|+\<infty\>><frac|1|n!><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+      <frac|\<partial\>p|\<partial\>t><around*|(|x,t|)>=<big|sum><rsub|n=1><rsup|N<rsub|cut>><frac|1|n!><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
       K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|y|)>
       <around*|[|<frac|\<partial\>|\<partial\>y<rsup|\<alpha\><rsub|1>>>\<cdots\><frac|\<partial\>|\<partial\>y<rsup|\<alpha\><rsub|n>>>\<delta\><around*|(|x-y|)>|]>
       p<around*|(|y,t|)>.
@@ -576,12 +578,12 @@
     Taking integration by parts on the right hand side and then integrating
     over <math|y>, we get the Kramers\UMoyal expansion
 
-    <\equation>
-      <frac|\<partial\>p|\<partial\>t><around*|(|x,t|)>=<big|sum><rsub|n=1><rsup|+\<infty\>><frac|<around*|(|-1|)><rsup|n>|n!>
+    <\equation*>
+      <frac|\<partial\>p|\<partial\>t><around*|(|x,t|)>=<big|sum><rsub|n=1><rsup|N<rsub|cut>><frac|<around*|(|-1|)><rsup|n>|n!>
       <around*|(|<frac|\<partial\>|\<partial\>x<rsup|\<alpha\><rsub|1>>>\<cdots\><frac|\<partial\>|\<partial\>x<rsup|\<alpha\><rsub|n>>>|)>
       <around*|[|K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>
-      p<around*|(|x,t|)>|]>.<label|equation:km expansion v1>
-    </equation>
+      p<around*|(|x,t|)>|]>.
+    </equation*>
 
     This is the form of Kramers\UMoyal expansion that appears in many
     textures.
@@ -689,13 +691,38 @@
 
   \;
 
-  <subsubsection|Randomness Is Absent in the First Moment of Transition Rate>
+  <subsubsection|Randomness Is Absent in the First Moment of Transition
+  Rate><label|section: Randomness Is Absent in the First Moment of Transition
+  Rate>
 
-  We are to show that cut-off at <math|N<rsub|cut>=1>, namely
-  <math|K<rsub|n>=0> for any <math|n\<gtr\>1>, results in a deterministic
-  evolution. To do so, we plug the cut-off into Kramers\UMoyal expansion
-  <reference|equation:km expansion v1>, and find (re-denote <math|K<rsub|1>>
-  to <math|f> for simplicity)
+  In section <reference|section: Cut-off in the Moments of Transition Rate Is
+  Essential for Spatial Smoothness>, we have found that a finite cut-off on
+  the moments of transition rate is essential for spatial smoothness. We are
+  to show that cut-off at <math|N<rsub|cut>=1> (namely <math|K<rsub|n>=0> for
+  any <math|n\<gtr\>1>) only results in a deterministic evolution. To do so,
+  we plug Kramers\UMoyal expansion <reference|equation:km expansion> into
+  master equation, and find (re-denote <math|K<rsub|1>> to <math|f> for
+  simplicity)
+
+  <\equation*>
+    <frac|\<partial\>p|\<partial\>t><around*|(|x,t|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    r<around*|(|x,y|)> p<around*|(|y,t|)>=-<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    f<rsup|\<alpha\>><around*|(|y|)> <around*|(|\<partial\><rsub|\<alpha\>>\<delta\>|)><around*|(|x-y|)>
+    p<around*|(|y,t|)>.
+  </equation*>
+
+  Since <math| <around*|(|\<partial\><rsub|\<alpha\>>\<delta\>|)><around*|(|x-y|)>=-\<partial\><rsub|\<alpha\>><around*|[|\<delta\><around*|(|x-y|)>|]>>,
+  integration by parts on the right hand side gives
+
+  <\equation*>
+    <big|int>\<mathd\>y f<rsup|\<alpha\>><around*|(|y|)>
+    \<partial\><rsub|\<alpha\>><around*|[|\<delta\><around*|(|x-y|)>|]>
+    p<around*|(|y,t|)>=-<big|int>\<mathd\>y
+    \<partial\><rsub|\<alpha\>><around*|[|f<rsup|\<alpha\>><around*|(|y|)>p<around*|(|y,t|)>|]>
+    \<delta\><around*|(|x-y|)>=-\<partial\><rsub|\<alpha\>><around*|[|f<rsup|\<alpha\>><around*|(|x|)>p<around*|(|x,t|)>|]>.
+  </equation*>
+
+  Thus,
 
   <\equation*>
     <frac|\<partial\>p|\<partial\>t><around*|(|x,t|)>+\<partial\><rsub|\<alpha\>><around*|(|f<rsup|\<alpha\>><around*|(|x|)>
@@ -773,14 +800,16 @@
 
   <subsubsection|Randomness Appears in the Second Moment of Transition Rate>
 
-  We have analyzed the cut-off at <math|N<rsub|cut>=1> and found it
-  deterministic, thus not a stochastic process. It indicates that we have to
-  cut-off at least at <math|N<rsub|cut>=2>. We are to show that, if
+  In section <reference|section: Randomness Is Absent in the First Moment of
+  Transition Rate>, we have analyzed the cut-off at <math|N<rsub|cut>=1> and
+  found it deterministic, thus not a stochastic process. It indicates that we
+  have to cut-off at least at <math|N<rsub|cut>=2>. We are to show that, if
   <math|K<rsub|2>> as a matrix-valued field is positive definite, then the
   randomness of Markovian process is guaranteed.
 
   We examine this by using an example. Let <math|K<rsub|1>> is everywhere
-  vanishing and <math|K<rsub|2>> is a constant identity matrix. Thus,
+  vanishing and <math|K<rsub|2>> is a constant identity matrix. Then,
+  Kramers\UMoyal expansion <reference|equation:km expansion> becomes
 
   <\equation*>
     r<around*|(|x+\<epsilon\>,x|)>=<frac|1|2>\<delta\><rsup|\<alpha\>\<beta\>>
@@ -828,8 +857,7 @@
   </equation>
 
   which obeys a normal distribution with <math|y> as its mean and <math|t> as
-  its variance. So, we find randomness in the cut-off at <math|n=2> in the
-  sequence <math|<around*|(|K<rsub|1>,K<rsub|2>,\<ldots\>|)>>.
+  its variance. So, we find randomness in the cut-off <math|N<rsub|cut>=2>.
 
   Historically, in 1827, botanist Robert Brown noticed that pollen particles
   automatically shakes in water. It was first explained by Albert Einstein in
@@ -877,7 +905,7 @@
   <subsubsection|Langevin Process (TODO)>
 
   With the cut-off at <math|N<rsub|cut>=2>, where only <math|K<rsub|1>> and
-  <math|K<rsub|2>> are non-vanishing, we have (re-denote <math|K<rsub|1>> by
+  <math|K<rsub|2>> are not vanishing, we have (re-denote <math|K<rsub|1>> by
   <math|f> and <math|K<rsub|2>> by <math|\<Sigma\>> for simplicity)
 
   <\equation*>
@@ -885,6 +913,8 @@
     \<partial\><rsub|\<alpha\>>\<delta\><around*|(|x-y|)>+<frac|1|2>\<Sigma\><rsup|a\<beta\>><around*|(|y|)>
     \<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>\<delta\><around*|(|x-y|)>.
   </equation*>
+
+  Plugging\ 
 
   Thus,
 
@@ -1269,35 +1299,39 @@
   <\collection>
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-10|<tuple|1.4|10>>
-    <associate|auto-11|<tuple|1.5|10>>
-    <associate|auto-12|<tuple|1.5.1|10>>
+    <associate|auto-11|<tuple|1.5|11>>
+    <associate|auto-12|<tuple|1.5.1|11>>
     <associate|auto-13|<tuple|1.5.2|11>>
     <associate|auto-2|<tuple|1.1|1>>
     <associate|auto-3|<tuple|1.1.1|1>>
-    <associate|auto-4|<tuple|1.1.2|4>>
+    <associate|auto-4|<tuple|1.1.2|5>>
     <associate|auto-5|<tuple|1.1.3|6>>
-    <associate|auto-6|<tuple|1.1.4|6>>
-    <associate|auto-7|<tuple|1.1.5|7>>
+    <associate|auto-6|<tuple|1.1.4|7>>
+    <associate|auto-7|<tuple|1.1.5|8>>
     <associate|auto-8|<tuple|1.2|8>>
-    <associate|auto-9|<tuple|1.3|8>>
+    <associate|auto-9|<tuple|1.3|9>>
     <associate|equation:km expansion|<tuple|1|5>>
-    <associate|equation:km expansion v1|<tuple|2|5>>
-    <associate|equation:path integral step 1|<tuple|4|8>>
-    <associate|equation:wiener process|<tuple|3|7>>
+    <associate|equation:km expansion v1|<tuple|2|6>>
+    <associate|equation:path integral step 1|<tuple|3|9>>
+    <associate|equation:wiener process|<tuple|2|7>>
     <associate|footnote-1|<tuple|1|3>>
     <associate|footnote-2|<tuple|2|3>>
-    <associate|footnote-3|<tuple|3|5>>
-    <associate|footnote-4|<tuple|4|5>>
-    <associate|footnote-5|<tuple|5|8>>
-    <associate|footnote-6|<tuple|6|10>>
+    <associate|footnote-3|<tuple|3|6>>
+    <associate|footnote-4|<tuple|4|6>>
+    <associate|footnote-5|<tuple|5|9>>
+    <associate|footnote-6|<tuple|6|11>>
     <associate|footnr-1|<tuple|1|3>>
     <associate|footnr-2|<tuple|2|3>>
-    <associate|footnr-3|<tuple|2|5>>
-    <associate|footnr-4|<tuple|4|5>>
-    <associate|footnr-5|<tuple|5|8>>
-    <associate|footnr-6|<tuple|6|10>>
+    <associate|footnr-3|<tuple|3|6>>
+    <associate|footnr-4|<tuple|4|6>>
+    <associate|footnr-5|<tuple|5|9>>
+    <associate|footnr-6|<tuple|6|11>>
+    <associate|section: Cut-off in the Moments of Transition Rate Is
+    Essential for Spatial Smoothness|<tuple|1.1.1|?>>
     <associate|section: Master Equation on Euclidean Alphabet Can Be
-    Formulated as Path Integral|<tuple|1.3|8>>
+    Formulated as Path Integral|<tuple|1.3|9>>
+    <associate|section: Randomness Is Absent in the First Moment of
+    Transition Rate|<tuple|1.1.3|?>>
   </collection>
 </references>
 
