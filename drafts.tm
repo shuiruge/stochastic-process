@@ -91,14 +91,14 @@
 
   So the first condition simply implies <math|<around*|\||K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>|\|>\<less\>+\<infty\>>.
   The second condition is non-trivial. We are to show that it indicates a
-  cut-off. That is, there shall exist an positive integer <math|N>, such that
-  <math|K<rsub|n>=0> for any <math|n\<gtr\>N>. And we will find the
-  estimation <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>=<with|font|cal|O><around*|(|\<Delta\>t<rsup|\<sharp\><around*|(|n/N|)>>|)>>,
+  cut-off. That is, there shall exist an positive integer <math|N<rsub|cut>>,
+  such that <math|K<rsub|n>=0> for any <math|n\<gtr\>N<rsub|cut>>. And we
+  will find the estimation <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>=<with|font|cal|O><around*|(|\<Delta\>t<rsup|\<sharp\><around*|(|n/N<rsub|cut>|)>>|)>>,
   where <math|\<sharp\>> is the ceiling function (which rounds its argument
   to the nearest greater integer).
 
-  As an example for exploration, we first cut-off at <math|N=2>, namely
-  <math|K<rsub|n>=0> for any <math|n\<gtr\>2>. We are to calculate
+  As an example for exploration, we first cut-off at <math|N<rsub|cut>=2>,
+  namely <math|K<rsub|n>=0> for any <math|n\<gtr\>2>. We are to calculate
   <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>>
   up to <math|\<omicron\><around*|(|\<Delta\>t<rsup|2>|)>>. This demands the
   relation between transition rate and transition density (equation
@@ -475,8 +475,8 @@
   at any given order of <math|\<Delta\>t>. This is just the formal expression
   of the second condition we assumed. So, the assumption is guaranteed with
   cut-off. And conversely, only with a cut-off can we guarantee the
-  assumption. This can be generalized to cut-off at any <math|N>, in which
-  <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>=<with|font|cal|O><around*|(|\<Delta\>t<rsup|\<sharp\><around*|(|n/N|)>>|)>>
+  assumption. This can be generalized to cut-off at any <math|N<rsub|cut>>,
+  in which <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>=<with|font|cal|O><around*|(|\<Delta\>t<rsup|\<sharp\><around*|(|n/N<rsub|cut>|)>>|)>>
   (recall that <math|\<sharp\>> is the ceiling function).
 
   <subsubsection|Kramers\UMoyal Expansion Formulates Transition Rate by Its
@@ -691,11 +691,11 @@
 
   <subsubsection|Randomness Is Absent in the First Moment of Transition Rate>
 
-  We are to show that cut-off at <math|N=1>, namely <math|K<rsub|n>=0> for
-  any <math|n\<gtr\>1>, results in a deterministic evolution. To do so, we
-  plug the cut-off into Kramers\UMoyal expansion <reference|equation:km
-  expansion v1>, and find (re-denote <math|K<rsub|1>> to <math|f> for
-  simplicity)
+  We are to show that cut-off at <math|N<rsub|cut>=1>, namely
+  <math|K<rsub|n>=0> for any <math|n\<gtr\>1>, results in a deterministic
+  evolution. To do so, we plug the cut-off into Kramers\UMoyal expansion
+  <reference|equation:km expansion v1>, and find (re-denote <math|K<rsub|1>>
+  to <math|f> for simplicity)
 
   <\equation*>
     <frac|\<partial\>p|\<partial\>t><around*|(|x,t|)>+\<partial\><rsub|\<alpha\>><around*|(|f<rsup|\<alpha\>><around*|(|x|)>
@@ -773,11 +773,11 @@
 
   <subsubsection|Randomness Appears in the Second Moment of Transition Rate>
 
-  We have analyzed the cut-off at <math|N=1> and found it deterministic, thus
-  not a stochastic process. It indicates that we have to cut-off at least at
-  <math|N=2>. We are to show that, if <math|K<rsub|2>> as a matrix-valued
-  field is positive definite, then the randomness of Markovian process is
-  guaranteed.
+  We have analyzed the cut-off at <math|N<rsub|cut>=1> and found it
+  deterministic, thus not a stochastic process. It indicates that we have to
+  cut-off at least at <math|N<rsub|cut>=2>. We are to show that, if
+  <math|K<rsub|2>> as a matrix-valued field is positive definite, then the
+  randomness of Markovian process is guaranteed.
 
   We examine this by using an example. Let <math|K<rsub|1>> is everywhere
   vanishing and <math|K<rsub|2>> is a constant identity matrix. Thus,
@@ -876,7 +876,7 @@
 
   <subsubsection|Langevin Process (TODO)>
 
-  With the cut-off at <math|N=2>, where only <math|K<rsub|1>> and
+  With the cut-off at <math|N<rsub|cut>=2>, where only <math|K<rsub|1>> and
   <math|K<rsub|2>> are non-vanishing, we have (re-denote <math|K<rsub|1>> by
   <math|f> and <math|K<rsub|2>> by <math|\<Sigma\>> for simplicity)
 
