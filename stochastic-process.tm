@@ -527,12 +527,13 @@
   </equation*>
 
   where <math|\<delta\><around*|(|x-y|)>> indicates Kronecker's delta
-  function when <math|\<cal-X\>> is discrete, or Dirac's delta function when
-  <math|\<cal-X\>> is continuous. Delta function has the property that
+  <math|\<delta\><rsub|x,y>> when <math|\<cal-X\>> is discrete, or Dirac's
+  delta function when <math|\<cal-X\>> is continuous. Even though we call it
+  Dirac's delta function, it is in fact a generalized function. A generalized
+  function has meaning only when it is integrated together with other (not
+  generalized) functions. For example, Dirac's delta function has
   <math|<big|int><rsub|\<cal-X\>>\<mathd\>x \<delta\><around*|(|x-y|)>
-  f<around*|(|x|)>=f<around*|(|y|)>> for any <math|f>.
-
-  \;
+  f<around*|(|x|)>=f<around*|(|y|)>> for any usual function <math|f>.
 
   In addition, if the change of the distribution of sands is smooth, that is,
   there is not a sand lump that jumping from one place to another in an
@@ -2081,7 +2082,7 @@
   \<delta\><around*|(|t-t<rprime|'>|)>> is discretized to
   <math|\<Sigma\><rsub|i> \<Delta\>t <around*|[|\<delta\><rsub|i
   j>/\<Delta\>t|]>=1>, we find <math|\<delta\><rsub|i j>/\<Delta\>t> tends to
-  the Dirac delta function <math|\<delta\><around*|(|t-t<rprime|'>|)>> as
+  the Dirac's delta function <math|\<delta\><around*|(|t-t<rprime|'>|)>> as
   <math|\<Delta\>t\<rightarrow\>0>. So, the covariance becomes
   <math|\<bbb-E\><around*|[|<wide|W|\<dot\>><rsup|\<alpha\>><around*|(|t|)>
   <wide|W|\<dot\>><rsup|\<beta\>><around*|(|t<rprime|'>|)>|]>=K<rsup|\<alpha\>\<beta\>><around*|(|X|)>
@@ -2276,8 +2277,8 @@
     transition rate>
   </equation>
 
-  Because of the Dirac's <math|\<delta\>>-functions, this transition rate is
-  a generalized function. That is, only when applied to a test function can
+  Because of the Dirac's delta functions, this transition rate is a
+  generalized function. That is, only when applied to a test function can
   they be evaluated.
 
   For example, to evaluate <math|\<partial\><rsub|\<alpha\>>\<delta\><around*|(|-x|)>>,
@@ -3386,6 +3387,7 @@
     <associate|footnote-13|<tuple|13|23>>
     <associate|footnote-14|<tuple|14|26>>
     <associate|footnote-15|<tuple|15|28>>
+    <associate|footnote-16|<tuple|16|?>>
     <associate|footnote-2|<tuple|2|2>>
     <associate|footnote-3|<tuple|3|2>>
     <associate|footnote-4|<tuple|4|2>>
@@ -3401,6 +3403,7 @@
     <associate|footnr-13|<tuple|13|23>>
     <associate|footnr-14|<tuple|14|26>>
     <associate|footnr-15|<tuple|15|28>>
+    <associate|footnr-16|<tuple|16|?>>
     <associate|footnr-2|<tuple|2|2>>
     <associate|footnr-3|<tuple|3|2>>
     <associate|footnr-4|<tuple|4|2>>

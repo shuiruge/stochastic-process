@@ -174,11 +174,9 @@
   </align>
 
   While integrating over <math|\<epsilon\>>, the first line gives
-  <math|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
-  K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x+y|)> r<around*|(|x+y,x|)>>,
-  and the second vanishes because of the property
-  <math|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x r<around*|(|x,y|)>=0>.
-  So, we find
+  <math|<big|int>\<mathd\>y K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x+y|)>
+  r<around*|(|x+y,x|)>>, and the second vanishes because of the property
+  <math|<big|int>\<mathd\>x r<around*|(|x,y|)>=0>. So, we find
 
   <\equation*>
     F<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
@@ -332,6 +330,83 @@
     F<rsub|4><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>\<alpha\><rsub|3>\<alpha\><rsub|4>><around*|(|x|)>=K<rsub|2><rsup|\<alpha\><rsub|1>\<alpha\><rsub|2>><around*|(|x|)>
     K<rsub|2><rsup|\<alpha\><rsub|3>\<alpha\><rsub|4>>+perm<around*|(|\<alpha\><rsub|1>,\<alpha\><rsub|2>,\<alpha\><rsub|3>,\<alpha\><rsub|4>|)>.
   </equation*>
+
+  \;
+
+  At higher order expansion of <math|q<rsub|\<Delta\>t>> by <math|r>
+  (equation <reference|equation:transition rate determines transition
+  density>), the same goes. As an example, we examine the expansion at
+  <math|<with|font|cal|O><around*|(|\<Delta\>t<rsup|3>|)>>, as
+
+  <\equation*>
+    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>=\<cdots\>+<frac|\<Delta\>t<rsup|3>|3!><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y<rprime|'>
+    r<around*|(|x+\<epsilon\>,y|)> r<around*|(|y,y<rprime|'>|)>r<around*|(|y<rprime|'>,x|)>+\<omicron\><around*|(|\<Delta\>t<rsup|3>|)>,
+  </equation*>
+
+  where we have omitted the <math|<with|font|cal|O><around*|(|\<Delta\>t<rsup|2>|)>>
+  terms. Following the same derivation, we find it contributes to
+  <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\>>|]>> by the term
+
+  <\equation*>
+    G<rsub|1><rsup|\<alpha\>><around*|(|x|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y<rprime|'>
+    r<around*|(|x+\<epsilon\>,y|)> r<around*|(|y,y<rprime|'>|)>r<around*|(|y<rprime|'>,x|)>
+    \<epsilon\><rsup|\<alpha\>>.
+  </equation*>
+
+  We insert an <math|<around*|(|\<epsilon\>-y|)>> term again, and get
+
+  <\align>
+    <tformat|<table|<row|<cell|G<rsub|1><rsup|\<alpha\>><around*|(|x|)>=>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y<rprime|'>r<around*|(|x+\<epsilon\>,x|)>
+    r<around*|(|x+y,y<rprime|'>|)>r<around*|(|y<rprime|'>,x|)>
+    <around*|(|\<epsilon\><rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>>>|<row|<cell|+>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y<rprime|'>
+    r<around*|(|x+\<epsilon\>,y|)> r<around*|(|y,y<rprime|'>|)>r<around*|(|y<rprime|'>,x|)>
+    y<rsup|\<alpha\>>>>>>
+  </align>
+
+  The second line vanishes after integrating over <math|\<epsilon\>> because
+  <math|<big|int>\<mathd\>x r<around*|(|x,y|)>=0>. The first line can be
+  re-written as
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y<rprime|'>r<around*|(|<around*|(|x+y|)>+<around*|(|\<epsilon\>-y|)>,x|)>
+    r<around*|(|x+y,y<rprime|'>|)>r<around*|(|y<rprime|'>,x|)>
+    <around*|(|\<epsilon\><rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>.
+  </equation*>
+
+  And integrating over <math|\<epsilon\>> gives
+
+  <\equation*>
+    G<rsub|1><rsup|\<alpha\>><around*|(|x|)>=<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y<rprime|'>
+    K<rsub|1><rsup|\<alpha\>><around*|(|x+y|)>
+    r<around*|(|x+y,y<rprime|'>|)>r<around*|(|y<rprime|'>,x|)>.
+  </equation*>
+
+  Again, we Taylor expand <math|K<rsub|1>> at <math|x>, resulting in
+
+  <\align>
+    <tformat|<table|<row|<cell|G<rsub|1><rsup|\<alpha\>><around*|(|x|)>=>|<cell|K<rsub|1><rsup|\<alpha\>><around*|(|x|)><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y<rprime|'>
+    r<around*|(|x+y,y<rprime|'>|)>r<around*|(|y<rprime|'>,x|)>>>|<row|<cell|+>|<cell|\<partial\><rsub|\<beta\>>K<rsub|1><rsup|\<alpha\>><around*|(|x|)><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y<rprime|'>
+    r<around*|(|x+y,y<rprime|'>|)>r<around*|(|y<rprime|'>,x|)>
+    y<rsup|\<beta\>>>>|<row|<cell|+>|<cell|<frac|1|2!>\<partial\><rsub|\<beta\><rsub|1>>\<partial\><rsub|\<beta\><rsub|2>>K<rsub|1><rsup|\<alpha\>><around*|(|x|)><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y<rprime|'>
+    r<around*|(|x+y,y<rprime|'>|)>r<around*|(|y<rprime|'>,x|)>
+    y<rsup|\<beta\><rsub|1>>y<rsup|\<beta\><rsub|2>>>>|<row|<cell|+>|<cell|\<cdots\>.>>>>
+  </align>
+
+  By \ integrating over <math|y>, we find the first line vanishes because
+  <math|<big|int>\<mathd\>x r<around*|(|x,y|)>=0>. We recognize that the
+  second line is just the <math|F<rsup|\<beta\>><rsub|1><around*|(|x|)>>, and
+  the third line is just the <math|F<rsub|2><rsup|\<beta\><rsub|1>\<beta\><rsub|2>><around*|(|x|)>>.
+  Namely,
+
+  <\equation*>
+    G<rsup|\<alpha\>><rsub|1><around*|(|x|)>=\<partial\><rsub|\<beta\>>K<rsub|1><rsup|\<alpha\>><around*|(|x|)>
+    F<rsub|1><rsup|\<beta\>><around*|(|x|)>+<frac|1|2!>\<partial\><rsub|\<beta\><rsub|1>>\<partial\><rsub|\<beta\><rsub|2>>K<rsub|1><rsup|\<alpha\>><around*|(|x|)>
+    F<rsub|2><rsup|\<beta\><rsub|1>\<beta\><rsub|2>><around*|(|x|)>+\<cdots\>
+  </equation*>
+
+  So, the problem is deduced to that we have solved at lower order expansion
+  of <math|q<rsub|\<Delta\>t>>. It means that we can calculate to arbitrary
+  order of expansion iteratively, and the process is the same at each order.
 
   Observing these results, we find the following rules (with explanations).
 
@@ -510,9 +585,9 @@
 
     This is the form of Kramers\UMoyal expansion that appears in many
     textures.
-  </footnote> Because of the Dirac's <math|\<delta\>>-functions, this
-  transition rate is a generalized function. That is, only when applied to a
-  test function can they be evaluated.
+  </footnote> Because of the Dirac's delta functions, this transition rate is
+  a generalized function. That is, only when applied to a test function can
+  they be evaluated.
 
   For example, to evaluate <math|\<partial\><rsub|\<alpha\>>\<delta\><around*|(|-x|)>>,
   we have to employ an arbitrary test function
@@ -918,8 +993,9 @@
   <math|q<rsub|\<Delta\>t><around*|(|x\|y|)>> is
   <math|\<delta\><around*|(|x-y|)>> which cannot be converted into
   exponential. But, we can consider its Fourier transform, since
-  <math|\<delta\><around*|(|x-y|)>>, if regarding as a Dirac delta function,
-  has exponential Fourier coefficient <math|exp<around*|(|-\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>|)>>.
+  <math|\<delta\><around*|(|x-y|)>>, if regarding as a Dirac's delta
+  function, has exponential Fourier coefficient
+  <math|exp<around*|(|-\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>|)>>.
   This suggest us to consider the Fourier transform of transition rate, as
 
   <\equation*>
