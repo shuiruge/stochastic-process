@@ -3320,14 +3320,15 @@
   r<around*|(|x+\<epsilon\>\|x|)>=0>. Then, we find
   <math|q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>> to be
 
-  <\equation*>
+  <\equation>
     <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k
     \ exp<around*|(|<around*|[|K<rsub|1><rsup|\<alpha\>><around*|(|x|)>
     \<Delta\>t-\<epsilon\><rsup|\<alpha\>>|]>
     \<mathi\>k<rsub|\<alpha\>>-<frac|\<Delta\>t|2!>K<rsub|2><rsup|\<alpha\>\<beta\>><around*|(|x|)>
     k<rsub|\<alpha\>>k<rsub|\<beta\>>-<frac|\<mathi\>\<Delta\>t|3!>K<rsub|3><rsup|\<alpha\>\<beta\>\<gamma\>><around*|(|x|)>
-    k<rsub|\<alpha\>>k<rsub|\<beta\>> k<rsub|\<gamma\>>+\<cdots\>+\<omicron\><around*|(|\<Delta\>t|)>|)>.
-  </equation*>
+    k<rsub|\<alpha\>>k<rsub|\<beta\>> k<rsub|\<gamma\>>+\<cdots\>+\<omicron\><around*|(|\<Delta\>t|)>|)>.<label|equation:path
+    integral step 2>
+  </equation>
 
   The summation terminates at the cut-off <math|N<rsub|cut>> of
   <math|K<rsub|n>> (for the necessity of cut-off, see section
@@ -3372,8 +3373,11 @@
     q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>=<around*|(|<frac|2\<mathpi\>|\<Delta\>t>|)><rsup|d/2><frac|1|<sqrt|det
     \<Sigma\><around*|(|x|)>>> exp<around*|(|-<frac|\<Delta\>t|2><around*|[|\<Sigma\><rsup|-1><around*|(|x|)>|]><rsub|\<alpha\>\<beta\>>
     <around*|[|<frac|\<epsilon\><rsup|\<alpha\>>|\<Delta\>t>-f<rsup|\<alpha\>><around*|(|x|)>|]>
-    <around*|[|<frac|\<epsilon\><rsup|\<beta\>>|\<Delta\>t>-f<rsup|\<beta\>><around*|(|x|)>|]>|)>.
+    <around*|[|<frac|\<epsilon\><rsup|\<beta\>>|\<Delta\>t>-f<rsup|\<beta\>><around*|(|x|)>|]>+\<omicron\><around*|(|\<Delta\>t|)>|)>.
   </equation*>
+
+  It indicates that the transition density of Langevin process is
+  approximately Gaussian.
 
   Now, non-constant terms are all in the exponential except for the
   <math|<around*|[|det \<Sigma\><around*|(|x|)>|]><rsup|-1/2>> factor. We are
@@ -3381,22 +3385,24 @@
   remove the root, and then using Berezin integral to convert determinant to
   exponential.
 
-  Now we introduce Cholesky factorization, during which <math|x> is fixed and
-  omitted for simplicity. Since <math|\<Sigma\>> is symmetric and positive
+  To introduce Cholesky factorization, we fix the argument <math|x> and omit
+  it for simplicity, so <math|\<Sigma\><around*|(|x|)>> is written as
+  <math|\<Sigma\>>. Since <math|\<Sigma\>> is symmetric and positive
   definite, we can diagonalize it using an orthogonal matrix <math|E> as
-  <math|\<Sigma\>=E<rsup|T> \<Lambda\> E>, where
+  <math|\<Sigma\>=E<rsup|T> \<Lambda\> E>, where the diagonal
   <math|\<Lambda\><rsub|\<alpha\>\<beta\>>=\<delta\><rsub|\<alpha\>\<beta\>>
   \<lambda\><rsub|\<beta\>>> with <math|\<lambda\><rsub|\<beta\>>\<gtr\>0>.
   Define <math|<sqrt|\<Lambda\>><rsub|\<alpha\>\<beta\>>\<assign\>\<delta\><rsub|\<alpha\>\<beta\>>
   <sqrt|\<lambda\><rsub|\<beta\>>>>, thus
   <math|\<Lambda\>=<sqrt|\<Lambda\>><rsup|T> <sqrt|\<Lambda\>>>, and
-  <math|\<Sigma\>=C<rsup|T> C> where <math|C\<assign\>E <sqrt|\<Lambda\>>>.
+  <math|\<Sigma\>=C<rsup|T> C> where <math|C\<assign\><sqrt|\<Lambda\>> E>.
   We thus factorize <math|\<Sigma\>> into the \Psquare\Q of <math|C>. This
   was first discovered by French military officer André-Louis Cholesky, who
   was killed in battle a few months before the end of World War I, dead at
   age 31. Instead of the matrix-valued field <math|C>, we use its inverse
   (since both <math|E> and <math|<sqrt|\<Lambda\>>> are invertible)
-  <math|R\<assign\>C<rsup|-1>>, thus <math|\<Sigma\><rsup|-1>=R<rsup|T> R>.
+  <math|R\<assign\>C<rsup|-1>>, thus <math|\<Sigma\><rsup|-1>=R<rsup|T> R>,
+  or <math|<around*|(|\<Sigma\><rsup|-1>|)><rsub|\<alpha\>\<beta\>>=<big|sum><rsub|\<gamma\>=1><rsup|d>R<rsub|\<gamma\>\<alpha\>>R<rsub|\<gamma\>\<beta\>>>.
   So, we have (insert the omitted <math|x> again)
 
   <\equation*>
@@ -3404,19 +3410,20 @@
     R<around*|(|x|)>,
   </equation*>
 
-  and
+  and thus
 
   <\equation*>
     q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>=<around*|(|<frac|2\<mathpi\>|\<Delta\>t>|)><rsup|d/2>
-    det R<around*|(|x|)> exp<around*|(|-<frac|\<Delta\>t|2><around*|[|R<around*|(|x|)>
+    <around*|[|det R<around*|(|x|)>|]> exp<around*|(|-<frac|\<Delta\>t|2><around*|[|R<around*|(|x|)>
     <around*|(|<frac|\<epsilon\>|\<Delta\>t>-f<around*|(|x|)>|)>|]><rsup|2>|)>,
   </equation*>
 
   where the <math|<around*|[|\<cdots\>|]><rsup|2>> represents vector square,
-  like <math|y<rsup|2>=<big|sum><rsub|\<alpha\>=1><rsup|d><around*|(|y<rsup|\<alpha\>>|)><rsup|2>>.
-  Now, the determinant gets rid of root (and fraction).
+  like <math|y<rsup|2>=<big|sum><rsub|\<alpha\>=1><rsup|d>y<rsub|\<alpha\>>y<rsub|\<alpha\>>>.
+  Now, the determinant gets rid of root (and fraction). Remark that
+  <math|R<around*|(|x|)>> may not be a symmetric matrix.
 
-  Next, we use Berezin integral to convert determinant <math|det
+  Next, we use Berezin integral to convert the determinant <math|det
   R<around*|(|x|)>> to exponential. We have to briefly introduce Grassmann
   number, on which Berezin integral is based. Grassmann number is an
   extension of complex number,by introducing in the anti-commutative numbers.
@@ -3437,12 +3444,24 @@
 
   TODO
 
-  Using Berezin integral
+  By the formula of Berezin integral for any
+  <math|A\<in\>\<bbb-C\><rsup|d\<times\>d>>,
 
   <\equation*>
-    <big|int>\<mathd\>\<psi\>\<mathd\><wide|\<psi\>|\<bar\>>
-    exp<around*|(|-\<Delta\>t <wide|\<psi\>|\<bar\>> R<around*|(|x|)>
-    \<psi\>|)>=det<around*|[|R<around*|(|x|)>
+    <big|int>\<mathd\>\<theta\><big|int>\<mathd\>\<eta\>
+    exp<around*|(|-A<rsub|\<alpha\>\<beta\>> \<theta\><rsup|\<alpha\>>
+    \<eta\><rsup|\<beta\>>|)>=det A,
+  </equation*>
+
+  where <math|\<theta\>> and <math|\<eta\>> are multi-dimensional Grassmann
+  numbers, we have (replacing the Grassmann numbers <math|\<theta\>> and
+  <math|\<eta\>> by <math|\<psi\>> and <math|<wide|\<psi\>|\<bar\>>>
+  respectively, and the matrix <math|A> by <math|R<around*|(|x|)>>)
+
+  <\equation*>
+    <big|int>\<mathd\>\<psi\><big|int>\<mathd\><wide|\<psi\>|\<bar\>>
+    exp<around*|(|-\<Delta\>t R<rsub|\<alpha\>\<beta\>><around*|(|x|)>
+    \<psi\><rsup|\<alpha\>> <wide|\<psi\>|\<bar\>><rsup|\<beta\>>|)>=det<around*|[|R<around*|(|x|)>
     \<Delta\>t|]>=\<Delta\>t<rsup|d> det R<around*|(|x|)>,
   </equation*>
 
@@ -3453,46 +3472,50 @@
     <big|int>\<mathd\>\<psi\><big|int>\<mathd\><wide|\<psi\>|\<bar\>>
     exp<around*|(|-<frac|\<Delta\>t|2><around*|[|R<around*|(|x|)>
     <around*|(|<frac|\<epsilon\>|\<Delta\>t>-f<around*|(|x|)>|)>|]><rsup|2>-\<Delta\>t
-    <wide|\<psi\>|\<bar\>> R<around*|(|x|)> \<psi\>|)>.
+    R<rsub|\<alpha\>\<beta\>><around*|(|x|)> \<psi\><rsup|\<alpha\>>
+    <wide|\<psi\>|\<bar\>><rsup|\<beta\>>|)>.
   </equation*>
+
+  \;
 
   Plugging back to equation <reference|equation:path integral step 1>, we get
 
-  <\align>
-    <tformat|<table|<row|<cell|p<around*|(|x<rsub|N>,N
-    \<Delta\>t|)>=>|<cell|<around*|(|<frac|2\<mathpi\>|\<Delta\>t<rsup|3>>|)><rsup|N
-    d/2><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|0>\<cdots\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|N-1><big|int>\<mathd\>\<psi\><rsub|0><big|int>\<mathd\><wide|\<psi\>|\<bar\>><rsub|0>\<cdots\><big|int>\<mathd\>\<psi\><rsub|N-1><big|int>\<mathd\><wide|\<psi\>|\<bar\>><rsub|N-1>
-    p<around*|(|x<rsub|0>,0|)>\<times\>>>|<row|<cell|\<times\>>|<cell|exp<around*|(|-<big|sum><rsub|i=0><rsup|N-1>\<Delta\>t<around*|{|<frac|1|2>
-    <around*|[|R<around*|(|x<rsub|i>|)> <around*|(|<frac|x<rsub|i+1>-x<rsub|i>|\<Delta\>t>-f<around*|(|x<rsub|i>|)>|)>|]><rsup|2>+<wide|\<psi\>|\<bar\>><rsub|i>
-    R<around*|(|x<rsub|i>|)> \<psi\><rsub|i>|}>+\<omicron\><around*|(|\<Delta\>t|)>|)>.>>>>
-  </align>
-
-  Formally taking <math|\<Delta\>t\<rightarrow\>0> and
-  <math|N\<rightarrow\>+\<infty\>> while keeping <math|N \<Delta\>t> finite,
-  and replacing the discrete index <math|i> with a continuous variable
-  <math|t\<in\><around*|[|0,t<rsub|f>|]>>, we find
-
   <\equation*>
-    p<around*|(|x,t<rsub|f>|)>=<big|int>\<mathD\><around*|[|x,\<psi\>,<wide|\<psi\>|\<bar\>>|]>
-    p<around*|(|x<around*|(|0|)>,0|)> exp<around*|(|-S<around*|(|x,\<psi\>,<wide|\<psi\>|\<bar\>>|)>|)>,
+    p<around*|(|x<rsub|N>,N \<Delta\>t|)>=<big|int>\<mathD\><around*|[|x,\<psi\>,<wide|\<psi\>|\<bar\>>|]>
+    exp<around*|(|-S<around*|(|x,\<psi\>,<wide|\<psi\>|\<bar\>>|)>|)>
+    p<around*|(|x<rsub|0>,0|)>,
   </equation*>
 
-  where
+  where the measurement is defined by
 
   <\equation*>
     <big|int>\<mathD\><around*|[|x,\<psi\>,<wide|\<psi\>|\<bar\>>|]>\<assign\><around*|(|<frac|2\<mathpi\>|\<Delta\>t<rsup|3>>|)><rsup|N
     d/2><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|0>\<cdots\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|N-1><big|int>\<mathd\>\<psi\><rsub|0><big|int>\<mathd\><wide|\<psi\>|\<bar\>><rsub|0>\<cdots\><big|int>\<mathd\>\<psi\><rsub|N-1><big|int>\<mathd\><wide|\<psi\>|\<bar\>><rsub|N-1>
   </equation*>
 
-  and
+  and the \Paction of Langevin process\Q is
 
   <\equation>
-    S<around*|(|x,\<psi\>,<wide|\<psi\>|\<bar\>>|)>\<assign\><big|int><rsub|0><rsup|t<rsub|f>>\<mathd\>t<around*|{|<frac|1|2>
-    <around*|[|R<around*|(|x<around*|(|t|)>|)>
-    <around*|(|<frac|\<mathd\>x|\<mathd\>t><around*|(|t|)>-f<around*|(|x<around*|(|t|)>|)>|)>|]><rsup|2>+<wide|\<psi\>|\<bar\>><around*|(|t|)>
-    R<around*|(|x<around*|(|t|)>|)> \<psi\><around*|(|t|)>|}>,<label|equation:langevin
-    path integral>
+    S<around*|(|x,\<psi\>,<wide|\<psi\>|\<bar\>>|)>\<assign\><big|sum><rsub|i=0><rsup|N-1>\<Delta\>t<around*|{|<frac|1|2>
+    <around*|[|R<around*|(|x<rsub|i>|)> <around*|(|<frac|x<rsub|i+1>-x<rsub|i>|\<Delta\>t>-f<around*|(|x<rsub|i>|)>|)>|]><rsup|2>+R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>
+    \<psi\><rsub|i><rsup|\<alpha\>> <wide|\<psi\>|\<bar\>><rsub|i><rsup|\<beta\>>+\<omicron\><around*|(|1|)>|}>.<label|equation:langevin
+    action>
   </equation>
+
+  \;
+
+  By formally taking <math|\<Delta\>t\<rightarrow\>0> and
+  <math|N\<rightarrow\>+\<infty\>> while keeping <math|N \<Delta\>t> finite,
+  and replacing the discrete index <math|i> with a continuous variable
+  <math|t\<in\><around*|[|0,t<rsub|f>|]>>, the action becomes
+
+  <\equation*>
+    S<around*|(|x,\<psi\>,<wide|\<psi\>|\<bar\>>|)>\<rightarrow\><big|int><rsub|0><rsup|t<rsub|f>>\<mathd\>t<around*|{|<frac|1|2>
+    <around*|[|R<around*|(|x<around*|(|t|)>|)>
+    <around*|(|<frac|\<mathd\>x|\<mathd\>t><around*|(|t|)>-f<around*|(|x<around*|(|t|)>|)>|)>|]><rsup|2>+R<rsub|\<alpha\>\<beta\>><around*|(|x<around*|(|t|)>|)>
+    \<psi\><rsup|\<alpha\>><around*|(|t|)>
+    <wide|\<psi\>|\<bar\>><rsup|\<beta\>><around*|(|t|)>|}>,
+  </equation*>
 
   in which <math|<around*|(|\<mathd\>x/\<mathd\>t|)><around*|(|t|)>\<assign\><around*|(|x<rsub|i+1>-x<rsub|i>|)>/\<Delta\>t>.
   These are formal definitions, and we will never really take the limit
@@ -3503,11 +3526,137 @@
 
   As a summary, we find the master equation of Langevin process can be
   formulated as a path integral, in which the action is given by equation
-  <reference|equation:langevin path integral>, in which
-  <math|\<psi\><around*|(|t|)>> and <math|<wide|\<psi\>|\<bar\>><around*|(|t|)>>
-  are independent Grassmann numbers.
+  <reference|equation:langevin action>, in which <math|\<psi\>> and
+  <math|<wide|\<psi\>|\<bar\>>> are independent Grassmann numbers.
 
-  \;
+  Final remark on cut-off <math|N<rsub|cut>=2>. If choose
+  <math|N<rsub|cut>\<gtr\>2>, it is hard to see how to integrate the improper
+  integral <reference|equation:path integral step 2>, and even to show why it
+  is finite. For example, if <math|N<rsub|cut>=4>, the
+  <math|<around*|(|\<Delta\>t/4!|)>K<rsup|\<alpha\>\<beta\>\<gamma\>\<sigma\>><rsub|4><around*|(|x|)>
+  k<rsub|\<alpha\>>k<rsub|\<beta\>>k<rsub|\<gamma\>>k<rsub|\<sigma\>>> term
+  will dominate the integral when <math|k> is far from origin. But we cannot
+  ensure that this term will suppress the integrand as
+  <math|<around*|\<\|\|\>|k|\<\|\|\>>\<rightarrow\>+\<infty\>> so as to make
+  the improper integral finite. We cannot even diagonalize the fourth order
+  symmetric tensor <math|K<rsub|4><around*|(|x|)>> (because diagonalizing a
+  fourth order symmetric tensor has <math|<with|font|cal|O><around*|(|d<rsup|4>|)>>
+  restrictions, but a coordinate transformation has only
+  <math|<with|font|cal|O><around*|(|d<rsup|2>|)>> degrees of freedom, so this
+  cannot be done except for specific situations).
+
+  <subsection|Super-symmetry in Langevin Process (TODO)>
+
+  Now, at each <math|t>, consider the infinitesimal variation that mixes real
+  number and Grassmann numbers
+
+  <\equation>
+    <tabular|<tformat|<table|<row|<cell|\<delta\>x<rsup|\<alpha\>><rsub|i>>|<cell|=>|<cell|<wide|\<epsilon\>|\<bar\>><rsup|\<alpha\>><rsub|i>
+    \<psi\><rsup|\<alpha\>><rsub|i>+<wide|\<psi\>|\<bar\>><rsup|\<alpha\>><rsub|i>
+    \<epsilon\><rsup|\<alpha\>><rsub|i>>>|<row|<cell|\<delta\>\<psi\><rsup|\<alpha\>><rsub|i>>|<cell|=>|<cell|-\<epsilon\><rsub|i><rsup|\<alpha\>>
+    g<rsub|i><rsup|\<alpha\>>>>|<row|<cell|\<delta\><wide|\<psi\>|\<bar\>><rsup|\<alpha\>><rsub|i>>|<cell|=>|<cell|-<wide|\<epsilon\>|\<bar\>><rsub|i><rsup|\<alpha\>>
+    h<rsup|\<alpha\>><rsub|i>.>>>>><label|equation:susy transformation>
+  </equation>
+
+  Variation on <math|\<delta\>x<rsub|i>> gives
+
+  <\align>
+    <tformat|<table|<row|<cell|\<delta\>x<rsub|i><rsup|\<alpha\>><frac|\<partial\>S|\<partial\>x<rsub|i><rsup|\<alpha\>>>=>|<cell|<frac|1|2>\<delta\>x<rsub|i><rsup|\<alpha\>><frac|\<partial\>|\<partial\>x<rsub|i><rsup|\<alpha\>>><around*|[|R<around*|(|x<rsub|i>|)>
+    <around*|(|<frac|x<rsub|i+1>-x<rsub|i>|\<Delta\>t>-f<around*|(|x<rsub|i>|)>|)>|]><rsup|2>+<frac|\<partial\>|\<partial\>x<rsub|i><rsup|\<alpha\>>>R<rsub|\<beta\>\<gamma\>><around*|(|x<rsub|i>|)>
+    \<delta\>x<rsub|i><rsup|\<alpha\>>\<psi\><rsub|i><rsup|\<beta\>>
+    <wide|\<psi\>|\<bar\>><rsup|\<gamma\>><rsub|i>>>|<row|<cell|+>|<cell|<frac|1|2>\<delta\>x<rsub|i><rsup|\<alpha\>><frac|\<partial\>|\<partial\>x<rsub|i><rsup|\<alpha\>>><around*|[|R<around*|(|x<rsub|i-1>|)>
+    <around*|(|<frac|x<rsub|i>-x<rsub|i-1>|\<Delta\>t>-f<around*|(|x<rsub|i-1>|)>|)>|]><rsup|2>,>>>>
+  </align>
+
+  which results in <math|\<delta\>S<around*|(|x,\<psi\>,<wide|\<psi\>|\<bar\>>|)>=0>.<\footnote>
+    Recall that
+
+    <\equation*>
+      <around*|[|R<around*|(|x<rsub|i>|)>
+      <around*|(|<frac|x<rsub|i+1>-x<rsub|i>|\<Delta\>t>-f<around*|(|x<rsub|i>|)>|)>|]><rsup|2>=<big|sum><rsub|\<beta\>=1><rsup|d>R<rsub|\<beta\>\<gamma\>><around*|(|x<rsub|i>|)>R<rsub|\<beta\>\<gamma\><rprime|'>><around*|(|x<rsub|i>|)><around*|(|<frac|x<rsup|\<gamma\>><rsub|i+1>-x<rsup|\<gamma\>><rsub|i>|\<Delta\>t>-f<rsup|\<gamma\>><around*|(|x<rsub|i>|)>|)><around*|(|<frac|x<rsup|\<gamma\><rprime|'>><rsub|i+1>-x<rsup|\<gamma\><rprime|'>><rsub|i>|\<Delta\>t>-f<rsup|\<gamma\><rprime|'>><around*|(|x<rsub|i>|)>|)>,
+    </equation*>
+
+    thus,
+
+    <\align>
+      <tformat|<table|<row|<cell|>|<cell|<frac|1|2><frac|\<partial\>|\<partial\>x<rsub|i><rsup|\<alpha\>>><around*|[|R<around*|(|x<rsub|i>|)>
+      <around*|(|<frac|x<rsub|i+1>-x<rsub|i>|\<Delta\>t>-f<around*|(|x<rsub|i>|)>|)>|]><rsup|2>>>|<row|<cell|=>|<cell|<big|sum><rsub|\<beta\>=1><rsup|d>R<rsub|\<beta\>\<gamma\>><around*|(|x<rsub|i>|)>\<partial\><rsub|\<alpha\>>R<rsub|\<beta\>\<gamma\><rprime|'>><around*|(|x<rsub|i>|)><around*|(|<frac|x<rsup|\<gamma\>><rsub|i+1>-x<rsup|\<gamma\>><rsub|i>|\<Delta\>t>-f<rsup|\<gamma\>><around*|(|x<rsub|i>|)>|)><around*|(|<frac|x<rsup|\<gamma\><rprime|'>><rsub|i+1>-x<rsup|\<gamma\><rprime|'>><rsub|i>|\<Delta\>t>-f<rsup|\<gamma\><rprime|'>><around*|(|x<rsub|i>|)>|)>>>|<row|<cell|+>|<cell|<big|sum><rsub|\<beta\>=1><rsup|d>R<rsub|\<beta\>\<gamma\>><around*|(|x<rsub|i>|)>R<rsub|\<beta\>\<gamma\><rprime|'>><around*|(|x<rsub|i>|)><around*|(|<frac|x<rsup|\<gamma\>><rsub|i+1>-x<rsup|\<gamma\>><rsub|i>|\<Delta\>t>-f<rsup|\<gamma\>><around*|(|x<rsub|i>|)>|)><around*|(|-<frac|\<delta\><rsup|\<gamma\><rprime|'>><rsub|\<alpha\>>|\<Delta\>t>-\<partial\><rsub|\<alpha\>>f<rsup|\<gamma\><rprime|'>><around*|(|x<rsub|i>|)>|)>,>>>>
+    </align>
+
+    where we have taken into account the symmetry between <math|\<gamma\>>
+    and <math|\<gamma\><rprime|'>>. The same,
+
+    <\align>
+      <tformat|<table|<row|<cell|>|<cell|<frac|1|2><frac|\<partial\>|\<partial\>x<rsub|i><rsup|\<alpha\>>><around*|[|R<around*|(|x<rsub|i-1>|)>
+      <around*|(|<frac|x<rsub|i>-x<rsub|i-1>|\<Delta\>t>-f<around*|(|x<rsub|i-1>|)>|)>|]><rsup|2>>>|<row|<cell|=>|<cell|<big|sum><rsub|\<beta\>=1><rsup|d>R<rsub|\<beta\>\<gamma\>><around*|(|x<rsub|i-1>|)>R<rsub|\<beta\>\<gamma\><rprime|'>><around*|(|x<rsub|i-1>|)><around*|(|<frac|x<rsup|\<gamma\>><rsub|i>-x<rsup|\<gamma\>><rsub|i-1>|\<Delta\>t>-f<rsup|\<gamma\>><around*|(|x<rsub|i-1>|)>|)><frac|\<delta\><rsup|\<gamma\><rprime|'>><rsub|\<alpha\>>|\<Delta\>t>.>>>>
+    </align>
+
+    So,
+
+    <\align>
+      <tformat|<table|<row|<cell|<frac|\<partial\>S|\<partial\>x<rsup|\<alpha\>><rsub|i>>=>|<cell|<big|sum><rsub|\<beta\>=1><rsup|d>R<rsub|\<beta\>\<gamma\>><around*|(|x<rsub|i>|)><around*|(|<frac|x<rsup|\<gamma\>><rsub|i+1>-x<rsup|\<gamma\>><rsub|i>|\<Delta\>t>-f<rsup|\<gamma\>><around*|(|x<rsub|i>|)>|)><around*|[|\<partial\><rsub|\<alpha\>>R<rsub|\<beta\>\<gamma\><rprime|'>><around*|(|x<rsub|i>|)><around*|(|<frac|x<rsup|\<gamma\><rprime|'>><rsub|i+1>-x<rsup|\<gamma\><rprime|'>><rsub|i>|\<Delta\>t>-f<rsup|\<gamma\><rprime|'>><around*|(|x<rsub|i>|)>|)>+R<rsub|\<beta\>\<gamma\><rprime|'>><around*|(|x<rsub|i>|)><around*|(|-<frac|\<delta\><rsup|\<gamma\><rprime|'>><rsub|\<alpha\>>|\<Delta\>t>-\<partial\><rsub|\<alpha\>>f<rsup|\<gamma\><rprime|'>><around*|(|x<rsub|i>|)>|)>|]>>>|<row|<cell|+>|<cell|<big|sum><rsub|\<beta\>=1><rsup|d>R<rsub|\<beta\>\<gamma\>><around*|(|x<rsub|i-1>|)>R<rsub|\<beta\>\<gamma\><rprime|'>><around*|(|x<rsub|i-1>|)><around*|(|<frac|x<rsup|\<gamma\>><rsub|i>-x<rsup|\<gamma\>><rsub|i-1>|\<Delta\>t>-f<rsup|\<gamma\>><around*|(|x<rsub|i-1>|)>|)><frac|\<delta\><rsup|\<gamma\><rprime|'>><rsub|\<alpha\>>|\<Delta\>t>+\<partial\><rsub|\<alpha\>>R<rsub|\<beta\>\<gamma\>><around*|(|x<rsub|i>|)>
+      \<psi\><rsub|i><rsup|\<beta\>> <wide|\<psi\>|\<bar\>><rsup|\<gamma\>><rsub|i>>>|<row|<cell|\<backassign\>>|<cell|u<rsub|\<alpha\>><around*|(|x|)>+\<partial\><rsub|\<alpha\>>R<rsub|\<beta\>\<gamma\>><around*|(|x<rsub|i>|)>
+      \<psi\><rsub|i><rsup|\<beta\>> <wide|\<psi\>|\<bar\>><rsup|\<gamma\>><rsub|i>>>>>
+    </align>
+
+    We have
+
+    <\equation*>
+      <frac|\<partial\>S|\<partial\>\<psi\><rsub|i><rsup|\<alpha\>>>=<frac|\<partial\>|\<partial\>\<psi\><rsup|\<alpha\>><rsub|i>><around*|{|R<rsub|\<beta\>\<gamma\>><around*|(|x<rsub|i>|)>
+      \<psi\><rsub|i><rsup|\<beta\>> <wide|\<psi\>|\<bar\>><rsub|i><rsup|\<gamma\>>|}>=R<rsub|\<beta\>\<gamma\>><around*|(|x<rsub|i>|)>\<delta\><rsup|\<beta\>><rsub|\<alpha\>><wide|\<psi\>|\<bar\>><rsup|\<gamma\>><rsub|i>,
+    </equation*>
+
+    and
+
+    <\equation*>
+      <frac|\<partial\>S|\<partial\><wide|\<psi\>|\<bar\>><rsub|i><rsup|\<alpha\>>>=<frac|\<partial\>|\<partial\><wide|\<psi\>|\<bar\>><rsup|\<alpha\>><rsub|i>><around*|{|R<rsub|\<gamma\>\<beta\>><around*|(|x<rsub|i>|)>
+      \<psi\><rsub|i><rsup|\<gamma\>> <wide|\<psi\>|\<bar\>><rsub|i><rsup|\<beta\>>|}>=-R<rsub|\<gamma\>\<beta\>><around*|(|x<rsub|i>|)>\<psi\><rsub|i><rsup|\<gamma\>>\<delta\><rsup|\<beta\>><rsub|\<alpha\>>.
+    </equation*>
+
+    Altogether, denoting
+
+    <\equation*>
+      u<rsub|\<alpha\>><around*|(|x|)>\<assign\><big|sum><rsub|\<beta\>=1><rsup|d>R<rsub|\<beta\>\<gamma\>><around*|(|x<rsub|i>|)><around*|(|<frac|x<rsup|\<gamma\>><rsub|i+1>-x<rsup|\<gamma\>><rsub|i>|\<Delta\>t>-f<rsup|\<gamma\>><around*|(|x<rsub|i>|)>|)><around*|[|\<partial\><rsub|\<alpha\>>R<rsub|\<beta\>\<gamma\><rprime|'>><around*|(|x<rsub|i>|)><around*|(|<frac|x<rsup|\<gamma\><rprime|'>><rsub|i+1>-x<rsup|\<gamma\><rprime|'>><rsub|i>|\<Delta\>t>-f<rsup|\<gamma\><rprime|'>><around*|(|x<rsub|i>|)>|)>+R<rsub|\<beta\>\<gamma\><rprime|'>><around*|(|x<rsub|i>|)><around*|(|-<frac|\<delta\><rsup|\<gamma\><rprime|'>><rsub|\<alpha\>>|\<Delta\>t>-\<partial\><rsub|\<alpha\>>f<rsup|\<gamma\><rprime|'>><around*|(|x<rsub|i>|)>|)>|]>+R<rsub|\<beta\>\<gamma\>><around*|(|x<rsub|i-1>|)>R<rsub|\<beta\>\<gamma\><rprime|'>><around*|(|x<rsub|i-1>|)><around*|(|<frac|x<rsup|\<gamma\>><rsub|i>-x<rsup|\<gamma\>><rsub|i-1>|\<Delta\>t>-f<rsup|\<gamma\>><around*|(|x<rsub|i-1>|)>|)><frac|\<delta\><rsup|\<gamma\><rprime|'>><rsub|\<alpha\>>|\<Delta\>t>,
+    </equation*>
+
+    we have
+
+    <\align>
+      <tformat|<table|<row|<cell|\<delta\>S=>|<cell|u<rsub|\<alpha\>><around*|(|x|)>\<delta\>x<rsub|i><rsup|\<alpha\>>+\<partial\><rsub|\<alpha\>>R<rsub|\<beta\>\<gamma\>><around*|(|x<rsub|i>|)>
+      \<psi\><rsub|i><rsup|\<beta\>> <wide|\<psi\>|\<bar\>><rsup|\<gamma\>><rsub|i>
+      \<delta\>x<rsub|i><rsup|\<alpha\>>+R<rsub|\<alpha\>\<gamma\>><around*|(|x<rsub|i>|)><wide|\<psi\>|\<bar\>><rsup|\<gamma\>><rsub|i>\<delta\>\<psi\><rsub|i><rsup|\<alpha\>>-R<rsub|\<gamma\>\<alpha\>><around*|(|x<rsub|i>|)>\<psi\><rsub|i><rsup|\<gamma\>>\<delta\><wide|\<psi\>|\<bar\>><rsup|\<alpha\>><rsub|i>>>|<row|<cell|=>|<cell|u<rsub|\<alpha\>><around*|(|x|)><wide|\<epsilon\>|\<bar\>><rsup|\<alpha\>><rsub|i>
+      \<psi\><rsup|\<alpha\>><rsub|i>+u<rsub|\<alpha\>><around*|(|x|)><wide|\<psi\>|\<bar\>><rsup|\<alpha\>><rsub|i>
+      \<epsilon\><rsup|\<alpha\>><rsub|i>+\<partial\><rsub|\<alpha\>>R<rsub|\<beta\>\<gamma\>><around*|(|x<rsub|i>|)>
+      \<psi\><rsub|i><rsup|\<beta\>> <wide|\<psi\>|\<bar\>><rsup|\<gamma\>><rsub|i><wide|\<epsilon\>|\<bar\>><rsup|\<alpha\>><rsub|i>
+      \<psi\><rsup|\<alpha\>><rsub|i>+\<partial\><rsub|\<alpha\>>R<rsub|\<beta\>\<gamma\>><around*|(|x<rsub|i>|)>
+      \<psi\><rsub|i><rsup|\<beta\>> <wide|\<psi\>|\<bar\>><rsup|\<gamma\>><rsub|i><wide|\<psi\>|\<bar\>><rsup|\<alpha\>><rsub|i>
+      \<epsilon\><rsup|\<alpha\>><rsub|i>>>|<row|<cell|->|<cell|R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)><wide|\<psi\>|\<bar\>><rsup|\<beta\>><rsub|i>\<epsilon\><rsub|i><rsup|\<alpha\>>
+      g<rsub|i><rsup|\<alpha\>>+R<rsub|\<beta\>\<alpha\>><around*|(|x<rsub|i>|)>\<psi\><rsub|i><rsup|\<beta\>><wide|\<epsilon\>|\<bar\>><rsub|i><rsup|\<alpha\>>
+      h<rsub|i><rsup|\<alpha\>>>>|<row|<cell|=>|<cell|<wide|\<epsilon\>|\<bar\>><rsup|\<alpha\>><rsub|i>
+      \<psi\><rsup|\<beta\>><rsub|i><around*|{|\<delta\><rsub|\<alpha\>\<beta\>>u<rsub|\<alpha\>><around*|(|x|)>+\<delta\><rsub|\<alpha\>\<beta\>>\<partial\><rsub|\<alpha\>>R<rsub|\<beta\>\<gamma\>><around*|(|x<rsub|i>|)>
+      \<psi\><rsub|i><rsup|\<beta\>> <wide|\<psi\>|\<bar\>><rsup|\<gamma\>><rsub|i>-R<rsub|\<beta\>\<alpha\>><around*|(|x<rsub|i>|)>h<rsub|i><rsup|\<alpha\>>|}>>>|<row|<cell|+>|<cell|<wide|\<psi\>|\<bar\>><rsup|\<beta\>><rsub|i>
+      \<epsilon\><rsup|\<alpha\>><rsub|i><around*|{|\<delta\><rsub|\<alpha\>\<beta\>>u<rsub|\<alpha\>><around*|(|x|)>+\<delta\><rsub|\<alpha\>\<beta\>>\<partial\><rsub|\<alpha\>>R<rsub|\<beta\>\<gamma\>><around*|(|x<rsub|i>|)>
+      \<psi\><rsub|i><rsup|\<beta\>> <wide|\<psi\>|\<bar\>><rsup|\<gamma\>><rsub|i>-R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>g<rsub|i><rsup|\<alpha\>>|}>.>>>>
+    </align>
+
+    <math|\<delta\>S=0> indicates
+
+    <\equation*>
+      \<delta\><rsub|\<alpha\>\<beta\>>u<rsub|\<alpha\>><around*|(|x|)>+\<delta\><rsub|\<alpha\>\<beta\>>\<partial\><rsub|\<alpha\>>R<rsub|\<alpha\>\<gamma\>><around*|(|x<rsub|i>|)>
+      \<psi\><rsub|i><rsup|\<alpha\>> <wide|\<psi\>|\<bar\>><rsup|\<gamma\>><rsub|i>-R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>h<rsub|i><rsup|\<beta\>>=0,
+    </equation*>
+
+    and
+
+    <\equation*>
+      \<delta\><rsub|\<alpha\>\<beta\>>u<rsub|\<alpha\>><around*|(|x|)>+\<delta\><rsub|\<alpha\>\<beta\>>\<partial\><rsub|\<alpha\>>R<rsub|\<alpha\>\<gamma\>><around*|(|x<rsub|i>|)>
+      \<psi\><rsub|i><rsup|\<alpha\>> <wide|\<psi\>|\<bar\>><rsup|\<gamma\>><rsub|i>-R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>g<rsub|i><rsup|\<alpha\>>=0.
+    </equation*>
+
+    Then, by multiplying <math|<around*|[|R<around*|(|x<rsub|i>|)>|]><rsup|-1>>,
+    we can solve the <math|h> and <math|g>.
+  </footnote> That is, the action is invariant under the \Psuper-symmetric\Q
+  transformation <reference|equation:susy transformation>.
 
   <subsection|How Far Will Information Propagate in Markovian Process?
   (TODO)><label|section: How Far Will Information Propagate in Markovian
@@ -3845,6 +3994,7 @@
     <associate|auto-3|<tuple|1.2|2>>
     <associate|auto-30|<tuple|4.5|28>>
     <associate|auto-31|<tuple|4.6|31>>
+    <associate|auto-32|<tuple|4.7|32>>
     <associate|auto-4|<tuple|1.3|3>>
     <associate|auto-5|<tuple|1.4|3>>
     <associate|auto-6|<tuple|2|4>>
@@ -3867,7 +4017,7 @@
     <associate|equation:generic density|<tuple|26|27>>
     <associate|equation:harmonic oscillator action|<tuple|22|25>>
     <associate|equation:km expansion|<tuple|16|19>>
-    <associate|equation:langevin path integral|<tuple|30|31>>
+    <associate|equation:langevin action|<tuple|31|31>>
     <associate|equation:langevin transition rate|<tuple|18|22>>
     <associate|equation:least-action principle v0|<tuple|23|25>>
     <associate|equation:least-action principle v1|<tuple|24|26>>
@@ -3875,10 +4025,12 @@
     <associate|equation:master equation v0|<tuple|3|5>>
     <associate|equation:metropolis-hastings origin|<tuple|13|13>>
     <associate|equation:path integral step 1|<tuple|29|29>>
+    <associate|equation:path integral step 2|<tuple|30|29>>
     <associate|equation:relative entropy derivative|<tuple|11|9>>
-    <associate|equation:rg action|<tuple|31|31>>
-    <associate|equation:rg integral|<tuple|32|31>>
+    <associate|equation:rg action|<tuple|33|32>>
+    <associate|equation:rg integral|<tuple|34|33>>
     <associate|equation:stationary Fokker-Planck equation|<tuple|20|23>>
+    <associate|equation:susy transformation|<tuple|32|31>>
     <associate|equation:transition density normalization|<tuple|1|5>>
     <associate|equation:transition rate determines transition
     density|<tuple|6|7>>
@@ -3895,6 +4047,7 @@
     <associate|footnote-15|<tuple|15|29>>
     <associate|footnote-16|<tuple|16|32>>
     <associate|footnote-17|<tuple|17|33>>
+    <associate|footnote-18|<tuple|18|34>>
     <associate|footnote-2|<tuple|2|2>>
     <associate|footnote-3|<tuple|3|2>>
     <associate|footnote-4|<tuple|4|2>>
@@ -3912,6 +4065,7 @@
     <associate|footnr-15|<tuple|15|29>>
     <associate|footnr-16|<tuple|16|32>>
     <associate|footnr-17|<tuple|17|33>>
+    <associate|footnr-18|<tuple|18|34>>
     <associate|footnr-2|<tuple|2|2>>
     <associate|footnr-3|<tuple|3|2>>
     <associate|footnr-4|<tuple|4|2>>
@@ -3936,7 +4090,7 @@
     <associate|section: Example: Metropolis-Hastings
     Algorithm|<tuple|2.7|13>>
     <associate|section: How Far Will Information Propagate in Markovian
-    Process?|<tuple|4.6|31>>
+    Process?|<tuple|4.7|32>>
     <associate|section: Kramers-Moyal Expansion and Langevin
     Process|<tuple|3|14>>
     <associate|section: Langevin Process Is a Markovian Process with
@@ -4120,10 +4274,14 @@
       Formulated as Path Integral (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-30>>
 
-      <with|par-left|<quote|1tab>|4.6<space|2spc>How Far Will Information
+      <with|par-left|<quote|1tab>|4.6<space|2spc>Super-symmetry in Langevin
+      Process (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-31>>
+
+      <with|par-left|<quote|1tab>|4.7<space|2spc>How Far Will Information
       Propagate in Markovian Process? (TODO)
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-31>>
+      <no-break><pageref|auto-32>>
     </associate>
   </collection>
 </auxiliary>
