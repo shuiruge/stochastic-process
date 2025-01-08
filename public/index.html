@@ -165,10 +165,6 @@
         4.5<span style="margin-left: 1em"></span>Langevin Process Can Be Formulated as Path
         Integral (TODO) <span style="margin-left: 5mm"></span> <a href="#auto-30">28</a>
       </p>
-      <p>
-        4.6<span style="margin-left: 1em"></span>How Far Will Information Propagate in Markovian
-        Process? (TODO) <span style="margin-left: 5mm"></span> <a href="#auto-31">31</a>
-      </p>
     </div>
     <h2 id="auto-1"><a id="section: Relative Entropy"></a>1<span style="margin-left: 1em"></span>Relative Entropy<span style="margin-left: 1em"></span></h2>
     <h3 id="auto-2"><a id="section: A Brief Review of Probability"></a>1.1<span style="margin-left: 1em"></span>A Brief Review of
@@ -4084,17 +4080,21 @@ K_2^{\alpha \beta} (x)  (\mathrm{i}
       \epsilon |x) = 0\). Then, we find \(q_{\Delta t} (x + \epsilon |x)\) to
       be
     </p>
-    <center>
-      \(\displaystyle \int_{\mathbb{R}^d} \mathrm{d} k \exp \left(
-      [K_1^{\alpha} (x) \Delta t -
-\epsilon^{\alpha}] \mathrm{i} k_{\alpha} -
-      \frac{\Delta t}{2!} K_2^{\alpha
-\beta} (x) k_{\alpha} k_{\beta} -
-      \frac{\mathrm{i} \Delta t}{3!} K_3^{\alpha
-\beta \gamma} (x) k_{\alpha}
-      k_{\beta} k_{\gamma} + \cdots + \omicron (\Delta
-t) \right) .\)
-    </center>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle \int_{\mathbb{R}^d} \mathrm{d} k
+        \exp \left( [K_1^{\alpha} (x) \Delta t -
+\epsilon^{\alpha}] \mathrm{i}
+        k_{\alpha} - \frac{\Delta t}{2!} K_2^{\alpha
+\beta} (x) k_{\alpha}
+        k_{\beta} - \frac{\mathrm{i} \Delta t}{3!} K_3^{\alpha
+\beta \gamma}
+        (x) k_{\alpha} k_{\beta} k_{\gamma} + \cdots + \omicron (\Delta
+t)
+        \right) . \)</td>
+        <td align="right">(30)</td>
+      </tr>
+    </table>
     <p>
       The summation terminates at the cut-off \(N_{\operatorname{cut}}\) of
       \(K_n\) (for the necessity of cut-off, see section <a href="#section: Cut-off in the Moments of Transition Rate Is Essential for Spatial Smoothness">3.2</a>). 
@@ -4143,8 +4143,13 @@ b_{\beta} \right),\)
       \frac{\epsilon^{\alpha}}{\Delta t} - f^{\alpha}
 (x) \right]  \left[
       \frac{\epsilon^{\beta}}{\Delta t} - f^{\beta} (x) \right]
-\right) .\)
++ \omicron
+      (\Delta t) \right) .\)
     </center>
+    <p>
+      It indicates that the transition density of Langevin process is
+      approximately Gaussian.
+    </p>
     <p>
       Now, non-constant terms are all in the exponential except for the
       \([\det \Sigma (x)]^{- 1 / 2}\) factor. We are to move it into
@@ -4152,44 +4157,49 @@ b_{\beta} \right),\)
       and then using Berezin integral to convert determinant to exponential.
     </p>
     <p>
-      Now we introduce Cholesky factorization, during which \(x\) is fixed and
-      omitted for simplicity. Since \(\Sigma\) is symmetric and positive
-      definite, we can diagonalize it using an orthogonal matrix \(E\) as
-      \(\Sigma = E^T \Lambda E\), where \(\Lambda_{\alpha \beta} =
-      \delta_{\alpha \beta} \lambda_{\beta}\) with \(\lambda_{\beta} > 0\).
-      Define \(\sqrt{\Lambda}_{\alpha \beta} := \delta_{\alpha \beta} 
+      To introduce Cholesky factorization, we fix the argument \(x\) and omit
+      it for simplicity, so \(\Sigma (x)\) is written as \(\Sigma\). Since
+      \(\Sigma\) is symmetric and positive definite, we can diagonalize it
+      using an orthogonal matrix \(E\) as \(\Sigma = E^T \Lambda E\), where
+      the diagonal \(\Lambda_{\alpha \beta} = \delta_{\alpha \beta}
+      \lambda_{\beta}\) with \(\lambda_{\beta} > 0\). Define
+      \(\sqrt{\Lambda}_{\alpha \beta} := \delta_{\alpha \beta} 
       \sqrt{\lambda_{\beta}}\), thus \(\Lambda = \sqrt{\Lambda}^T 
-      \sqrt{\Lambda}\), and \(\Sigma = C^T C\) where \(C := E
-      \sqrt{\Lambda}\). We thus factorize \(\Sigma\) into the
-      &ldquo;square&rdquo; of \(C\). This was first discovered by French
-      military officer Andr&eacute;-Louis Cholesky, who was killed in battle a
-      few months before the end of World War I, dead at age 31. Instead of the
+      \sqrt{\Lambda}\), and \(\Sigma = C^T C\) where \(C := \sqrt{\Lambda}
+      E\). We thus factorize \(\Sigma\) into the &ldquo;square&rdquo; of
+      \(C\). This was first discovered by French military officer
+      Andr&eacute;-Louis Cholesky, who was killed in battle a few months
+      before the end of World War I, dead at age 31. Instead of the
       matrix-valued field \(C\), we use its inverse (since both \(E\) and
       \(\sqrt{\Lambda}\) are invertible) \(R := C^{- 1}\), thus \(\Sigma^{- 1}
-      = R^T R\). So, we have (insert the omitted \(x\) again)
+      = R^T R\), or \((\Sigma^{- 1})_{\alpha \beta} = \sum_{\gamma = 1}^d
+      R_{\gamma \alpha}
+R_{\gamma \beta}\). So, we have (insert the omitted
+      \(x\) again)
     </p>
     <center>
       \(\displaystyle [\det \Sigma (x)]^{- 1 / 2} = \det R (x),\)
     </center>
     <p>
-      and
+      and thus
     </p>
     <center>
       \(\displaystyle q_{\Delta t} (x + \epsilon |x) = \left( \frac{2
       \pi}{\Delta t} \right)^{d / 2}
-\det R (x) \exp \left( - \frac{\Delta
+[\det R (x)] \exp \left( - \frac{\Delta
       t}{2} \left[ R (x)  \left(
 \frac{\epsilon}{\Delta t} - f (x) \right)
       \right]^2 \right),\)
     </center>
     <p>
       where the \([\cdots]^2\) represents vector square, like \(y^2 =
-      \sum_{\alpha = 1}^d (y^{\alpha})^2\). Now, the determinant gets rid of
-      root (and fraction).
+      \sum_{\alpha = 1}^d y_{\alpha} y_{\alpha}\). Now, the determinant gets
+      rid of root (and fraction). Remark that \(R (x)\) may not be a symmetric
+      matrix.
     </p>
     <p>
-      Next, we use Berezin integral to convert determinant \(\det R (x)\) to
-      exponential. We have to briefly introduce Grassmann number, on which
+      Next, we use Berezin integral to convert the determinant \(\det R (x)\)
+      to exponential. We have to briefly introduce Grassmann number, on which
       Berezin integral is based. Grassmann number is an extension of complex
       number,by introducing in the anti-commutative numbers. Given a set of
       anti-commutative numbers \(\{ \theta_i |i = 1, \ldots, n \}\), where we
@@ -4209,13 +4219,26 @@ b_{\beta} \right),\)
       TODO
     </p>
     <p>
-      Using Berezin integral
+      By the formula of Berezin integral for any \(A \in \mathbb{C}^{d \times
+      d}\),
     </p>
     <center>
-      \(\displaystyle \int \mathrm{d} \psi \mathrm{d} \bar{\psi} \exp (-
-      \Delta t \bar{\psi} R (x)
-\psi) = \det [R (x) \Delta t] = \Delta t^d
-      \det R (x),\)
+      \(\displaystyle \int \mathrm{d} \theta \int \mathrm{d} \eta \exp (-
+      A_{\alpha \beta}
+\theta^{\alpha} \eta^{\beta}) = \det A,\)
+    </center>
+    <p>
+      where \(\theta\) and \(\eta\) are multi-dimensional Grassmann numbers,
+      we have (replacing the Grassmann numbers \(\theta\) and \(\eta\) by
+      \(\psi\) and \(\bar{\psi}\) respectively, and the matrix \(A\) by \(R
+      (x)\))
+    </p>
+    <center>
+      \(\displaystyle \int \mathrm{d} \psi \int \mathrm{d} \bar{\psi} \exp (-
+      \Delta t R_{\alpha
+\beta} (x) \psi^{\alpha}  \bar{\psi}^{\beta}) = \det
+      [R (x) \Delta t] = \Delta
+t^d \det R (x),\)
     </center>
     <p>
       we convert the determinant into exponential, as
@@ -4227,45 +4250,22 @@ b_{\beta} \right),\)
       \bar{\psi} \exp \left( - \frac{\Delta
 t}{2} \left[ R (x)  \left(
       \frac{\epsilon}{\Delta t} - f (x) \right) \right]^2
-- \Delta t
-      \bar{\psi} R (x) \psi \right) .\)
+- \Delta t R_{\alpha
+      \beta} (x) \psi^{\alpha}  \bar{\psi}^{\beta} \right) .\)
     </center>
+    <p>
+      
+    </p>
     <p>
       Plugging back to equation <a href="#equation:path integral step 1">29</a>, we get
     </p>
     <center>
-      \(\displaystyle \begin{array}{rl}
-  p (x_N, N \Delta t) = & \left(
-      \frac{2 \pi}{\Delta t^3} \right)^{N d / 2}
-  \int_{\mathbb{R}^n}
-      \mathrm{d} x_0 \cdots \int_{\mathbb{R}^n} \mathrm{d}
-  x_{N - 1} \int
-      \mathrm{d} \psi_0 \int \mathrm{d} \bar{\psi}_0 \cdots \int
-  \mathrm{d}
-      \psi_{N - 1} \int \mathrm{d} \bar{\psi}_{N - 1} p (x_0, 0)
-  \times\\
- 
-      \times & \exp \left( - \sum_{i = 0}^{N - 1} \Delta t \left\{ \frac{1}{2}
-      
-  \left[ R (x_i)  \left( \frac{x_{i + 1} - x_i}{\Delta t} - f (x_i)
-      \right)
-  \right]^2 + \bar{\psi}_i R (x_i) \psi_i \right\} + \omicron
-      (\Delta t)
-  \right) .
-\end{array}\)
+      \(\displaystyle p (x_N, N \Delta t) = \int \mathrm{D} [x, \psi,
+      \bar{\psi}] \exp (- S (x,
+\psi, \bar{\psi})) p (x_0, 0),\)
     </center>
     <p>
-      Formally taking \(\Delta t \rightarrow 0\) and \(N \rightarrow +
-      \infty\) while keeping \(N \Delta t\) finite, and replacing the discrete
-      index \(i\) with a continuous variable \(t \in [0, t_f]\), we find
-    </p>
-    <center>
-      \(\displaystyle p (x, t_f) = \int \mathrm{D} [x, \psi, \bar{\psi}] p (x
-      (0), 0) \exp (- S (x,
-\psi, \bar{\psi})),\)
-    </center>
-    <p>
-      where
+      where the measurement is defined by
     </p>
     <center>
       \(\displaystyle \int \mathrm{D} [x, \psi, \bar{\psi}] := \left( \frac{2
@@ -4279,19 +4279,40 @@ t}{2} \left[ R (x)  \left(
 \bar{\psi}_{N - 1}\)
     </center>
     <p>
-      and
+      and the &ldquo;action of Langevin process&rdquo; is
     </p>
     <table width="100%">
       <tr>
-        <td width="100%" align="center">\(\displaystyle S (x, \psi, \bar{\psi}) :=
-        \int_0^{t_f} \mathrm{d} t \left\{ \frac{1}{2} 
-\left[ R (x (t)) 
-        \left( \frac{\mathrm{d} x}{\mathrm{d} t} (t) - f (x (t))
-\right)
-        \right]^2 + \bar{\psi} (t) R (x (t)) \psi (t) \right\}, \)</td>
-        <td align="right">(30)</td>
+        <td width="100%" align="center">\(\displaystyle S (x, \psi, \bar{\psi}) := \sum_{i =
+        0}^{N - 1} \Delta t \left\{ \frac{1}{2} 
+\left[ R (x_i)  \left(
+        \frac{x_{i + 1} - x_i}{\Delta t} - f (x_i) \right)
+\right]^2 +
+        R_{\alpha \beta} (x_i) \psi_i^{\alpha}  \bar{\psi}_i^{\beta}
+        +
+\omicron (1) \right\} . \)</td>
+        <td align="right">(31)</td>
       </tr>
     </table>
+    <p>
+      
+    </p>
+    <p>
+      By formally taking \(\Delta t \rightarrow 0\) and \(N \rightarrow +
+      \infty\) while keeping \(N \Delta t\) finite, and replacing the discrete
+      index \(i\) with a continuous variable \(t \in [0, t_f]\), the action
+      becomes
+    </p>
+    <center>
+      \(\displaystyle S (x, \psi, \bar{\psi}) \rightarrow \int_0^{t_f}
+      \mathrm{d} t \left\{
+\frac{1}{2}  \left[ R (x (t))  \left(
+      \frac{\mathrm{d} x}{\mathrm{d} t} (t) -
+f (x (t)) \right) \right]^2 +
+      R_{\alpha \beta} (x (t)) \psi^{\alpha} (t) 
+\bar{\psi}^{\beta} (t)
+      \right\},\)
+    </center>
     <p>
       in which \((\mathrm{d} x / \mathrm{d} t) (t) := (x_{i + 1} - x_i) /
       \Delta t\). These are formal definitions, and we will never really take
@@ -4303,554 +4324,24 @@ t}{2} \left[ R (x)  \left(
     <p>
       As a summary, we find the master equation of Langevin process can be
       formulated as a path integral, in which the action is given by equation
-      <a href="#equation:langevin path integral">30</a>, in which \(\psi (t)\) and \(\bar{\psi} (t)\) are
-      independent Grassmann numbers.
+      <a href="#equation:langevin action">31</a>, in which \(\psi\) and \(\bar{\psi}\) are independent
+      Grassmann numbers.
     </p>
     <p>
-      
-    </p>
-    <h3 id="auto-31"><a id="section: How Far Will Information Propagate in Markovian Process?"></a>4.6<span style="margin-left: 1em"></span>How Far Will Information
-    Propagate in Markovian Process? (TODO)<span style="margin-left: 1em"></span></h3>
-    <p>
-      We are to determine how far information will propagate during the
-      iteration of Langevin process (see section TODO). For this kind of
-      problem, physicists have invented a technique called renormalization
-      group. This technique was first proposed by Murray Gell-Mann and Francis
-      Low in 1954, applied to quantum field theory of fundamental particles.
-      Following this research, Kenneth Wilson, who was a PhD student of
-      Gell-Mann, started his malathion in 1961. He published his first paper
-      on renormalization group eight years later, in 1969. This technique was
-      then further developed and applied to many areas in and even out of
-      physics, such as neural science.
-    </p>
-    <p>
-      To show how it works, we start with an action that is generalized from
-      action <a href="#equation:action of langevin process v2">?</a>, which is
-    </p>
-    <table width="100%">
-      <tr>
-        <td width="100%" align="center">\(\displaystyle S (x) = \sum_{i = - \infty}^{+
-        \infty} \sum_{\alpha = 1}^n \left[
-\frac{(x^{\alpha}_{i + 1} -
-        x^{\alpha}_i)^2}{2 \epsilon} - (x^{\alpha}_{i + 1}
-- x^{\alpha}_i)
-        \varphi^{\alpha} (x_{i + 1}, x_i) + \epsilon \xi^{\alpha}
-(x_{i + 1},
-        x_i) \right], \)</td>
-        <td align="right">(31)</td>
-      </tr>
-    </table>
-    <p>
-      where \(\varphi, \xi : \mathbb{R}^d \times \mathbb{R}^d \rightarrow
-      \mathbb{R}^d\). Comparing with action <a href="#equation:action of langevin process v2">?</a>, \(\epsilon =
-      \Delta t\), \(\varphi (x_{i + 1}, x_i) = f (x_i)\), and \(\xi (x_{i +
-      1}, x_i) = f^2 (x_i) / 2\). There are another two differences between
-      them. Here, we do not fix boundary (namely, the condition \(x_0\) in \(S
-      (x|x_0)\)), and let the index \(i\) run from \(- \infty\) to \(+
-      \infty\) rather than from \(0\) to \(N\). As we will see later in this
-      section, these differences are crucial for renormalization group. In the
-      end of this section, we will show how to add the condition back and
-      restrict the range of index \(i\).
-    </p>
-    <p>
-      Renormalization group technique bases on the fact that there are as many
-      even numbers as integers. This is a famous result that was first claimed
-      by George Cantor. For our purpose, we marginalize all the variable
-      \(x_i\) in \(q (x)\) where \(i\) is odd. Namely, we are to compute an
-      &ldquo;effective action&rdquo; \(S'\) defined by
-    </p>
-    <table width="100%">
-      <tr>
-        <td width="100%" align="center">\(\displaystyle S' (x) := - \ln \left[ \prod_{i \in
-        \mathbb{Z}} \int_{\mathbb{R}^d} \mathrm{d}
-x_{2 i + 1} \exp (- S (x))
-        \right], \)</td>
-        <td align="right">(32)</td>
-      </tr>
-    </table>
-    <p>
-      where \(S' (\ldots, x_{- 4}, x_{- 2}, x_0, x_2, x_4, \ldots)\) contains
-      only the variables with even index. Interestingly, it is to be revealed
-      that, by a proper re-scaling of \(x\), \(S'\) has exactly the same
-      format as \(S\).
-    </p>
-    <p>
-      Given \(i\), we are to show how to marginalize \(x_{2 i + 1}\). This
-      variables appear in two terms in action <a href="#equation:rg action">31</a>, with indices
-      \(2 i + 1\) and \(2 i\). So, we are to integrate \(\int_{\mathbb{R}^d}
-      \mathrm{d} x_{2 i + 1} \exp \left( \sum_{\alpha = 1}^n
-J^{\alpha}
-      \right)\) where
-    </p>
-    <center>
-      \(\displaystyle \begin{array}{rl}
-  J^{\alpha} := & -
-      \frac{(x^{\alpha}_{2 i + 1} - x^{\alpha}_{2 i})^2}{2
-  \epsilon} -
-      \frac{(x^{\alpha}_{2 i + 2} - x^{\alpha}_{2 i + 1})^2}{2
-  \epsilon}\\
- 
-      & + (x^{\alpha}_{2 i + 1} - x^{\alpha}_{2 i}) \varphi^{\alpha} (x_{2 i
-      +
-  1}, x_{2 i}) + (x^{\alpha}_{2 i + 2} - x^{\alpha}_{2 i + 1})
- 
-      \varphi^{\alpha} (x_{2 i + 2}, x_{2 i + 1})\\
-  & - \epsilon
-      \xi^{\alpha} (x_{2 i + 1}, x_{2 i}) - \epsilon \xi^{\alpha}
-  (x_{2 i +
-      2}, x_{2 i + 1}) .
-\end{array}\)
-    </center>
-    <p>
-      This integral is hard to calculate. A general strategy is using
-      perturbative method. In our situation, \(\epsilon\) serves as the small
-      quantity for perturbation.
-    </p>
-    <p>
-      First, we have an algebraic identity
-      <div class="footnote">
-        <font style="font-size: 77.1%"><div align="justify">
-          <div style="margin-left: 0px">
-            <div style="margin-right: 0px">
-              <class style="font-style: normal"><p>
-                16. Directly, expand \((x - y)^2 + (y - z)^2 = x^2 - 2 x y +
-                y^2 + y^2 - 2 y z + z^2\). Then, collect the \(y\) terms
-                together, as \(2 (y^2 - (x + z) y) = 2 (y - (x + z) y + (x +
-                z)^2 / 4) - (x + z)^2 / 2 = 2 (y
-- (x + z) / 2)^2 - (x + z)^2
-                / 2\), in which the last term can be further combined with the
-                rest terms \(x^2 + z^2\), as \(- (x + z)^2 / 2 + x^2 + z^2 =
-                (x - z)^2 / 2\). Altogether, we find
-              </p><center>
-                \(\displaystyle (x - y)^2 + (y - z)^2 = 2 \left( y - \frac{x +
-                z}{2} \right)^2 + \frac{1}{2}
-(x - z)^2 .\)
-              </center><p>
-                If replace \(x \rightarrow x^{\alpha}_{2 i}\), \(y \rightarrow
-                x^{\alpha}_{2 i + 1}\), and \(z \rightarrow x^{\alpha}_{2 i +
-                2}\), then we get what we need.
-              </p></class>
-            </div>
-          </div>
-        </div></font>
-      </div>
-      <span style="margin-left: 0em"></span>
-      <a id="footnr-16"></a>
-      <sup><class style="font-style: normal"><a href="#footnote-16">16</a></class></sup>
-    </p>
-    <center>
-      \(\displaystyle \frac{(x^{\alpha}_{2 i + 1} - x^{\alpha}_{2 i})^2}{2
-      \epsilon} +
-\frac{(x^{\alpha}_{2 i + 2} - x^{\alpha}_{2 i + 1})^2}{2
-      \epsilon} =
-\frac{1}{\epsilon} \left[ x^{\alpha}_{2 i + 1} -
-      \frac{x^{\alpha}_{2 i} +
-x^{\alpha}_{2 i + 2}}{2} \right]^2 + \frac{1}{4
-      \epsilon} (x^{\alpha}_{2 i} -
-x^{\alpha}_{2 i + 2})^2 .\)
-    </center>
-    <p>
-      Remark that the second term looks like the first term in action <a href="#equation:rg action">31</a>,
-      except for an \(1 / 2\) factor. Then, \(J^{\alpha}\) becomes
-    </p>
-    <center>
-      \(\displaystyle \begin{array}{rl}
-  J^{\alpha} = & - \frac{1}{\epsilon}
-      \left[ x^{\alpha}_{2 i + 1} -
-  \frac{x^{\alpha}_{2 i} + x^{\alpha}_{2 i
-      + 2}}{2} \right]^2 - \frac{1}{4
-  \epsilon} (x^{\alpha}_{2 i} -
-      x^{\alpha}_{2 i + 2})^2\\
-  & + (x^{\alpha}_{2 i + 1} - x^{\alpha}_{2
-      i}) \varphi^{\alpha} (x_{2 i +
-  1}, x_{2 i}) + (x^{\alpha}_{2 i + 2} -
-      x^{\alpha}_{2 i + 1})
-  \varphi^{\alpha} (x_{2 i + 2}, x_{2 i + 1})\\
- 
-      & - \epsilon \xi^{\alpha} (x_{2 i + 1}, x_{2 i}) - \epsilon
-      \xi^{\alpha}
-  (x_{2 i + 2}, x_{2 i + 1}) .
-\end{array}\)
-    </center>
-    <p>
-      The first term is a quadratic form of \(x_{2 i + 1}\). It suggests that
-      we shall treat the integral as a perturbation to the Gaussian integral,
-      and use perturbative method to integrate it out. Following this
-      strategy, we define \(\bar{x}_{2 i + 1} := (x_{2 i + 2} + x_{2 i}) / 2\)
-      and \(y := x_{2 i + 1} - \bar{x}_{2 i + 1}\). \(\)And the integral
-      becomes
-    </p>
-    <font style="font-size: 84.1%"><center>
-      \(\displaystyle \int_{\mathbb{R}^d} \mathrm{d} x_{2 i + 1} \exp \left(
-      \sum_{\alpha = 1}^n
-J^{\alpha} \right) = \int_{\mathbb{R}^d} \mathrm{d}
-      y \exp \left( -
-\frac{1}{2} \sum_{\alpha = 1}^n \left(
-      \frac{y^{\alpha}}{\sqrt{\epsilon / 2}}
-\right)^2 + \cdots \right) .\)
-    </center></font>
-    <p>
-      It means the \(y\) obeys a normal distribution with zero mean and
-      diagonal covariance \(\Sigma_{\alpha \beta} = (\epsilon / 2)
-      \delta_{\alpha \beta}\). We have a rough estimation \(y = \mathcal{O}
-      \left( \sqrt{\epsilon} \right)\).
-    </p>
-    <p>
-      Next, we process the other lines in \(J^{\alpha}\). Using \(x_{2 i + 1}
-      = y + \bar{x}_{2 i + 1}\) and \(\bar{x}_{2 i + 1} - x_{2 i} = x_{2 i +
-      2} - \bar{x}_{2 i + 1} = (x_{2 i + 2} -
-x_{2 i}) / 2\), the second line
-      can be expanded, up to \(\mathcal{O} (\epsilon^{3 / 2})\), as
-    </p>
-    <font style="font-size: 84.1%"><center>
-      \(\displaystyle \begin{array}{rl}
-  & (y^{\alpha} + \bar{x}_{2 i +
-      1}^{\alpha} - x^{\alpha}_{2 i})
-  \varphi^{\alpha} (y + \bar{x}_{2 i +
-      1}, x_{2 i}) + (x^{\alpha}_{2 i + 2} -
-  y^{\alpha} - \bar{x}_{2 i +
-      1}^{\alpha}) \varphi^{\alpha} (x_{2 i + 2}, y +
-  \bar{x}_{2 i + 1})\\
- 
-      = & \frac{1}{2} (x^{\alpha}_{2 i + 2} - x^{\alpha}_{2 i}) 
-      [\varphi^{\alpha}
-  (\bar{x}_{2 i + 1}, x_{2 i}) + \varphi^{\alpha}
-      (x_{2 i + 2}, \bar{x}_{2 i +
-  1})]\\
-  + & y^{\alpha} 
-      [\varphi^{\alpha} (\bar{x}_{2 i + 1}, x_{2 i}) -
-  \varphi^{\alpha}
-      (x_{2 i + 2}, \bar{x}_{2 i + 1})]\\
-  + & \frac{1}{2} y^{\beta} 
-      (x^{\alpha}_{2 i + 2} - x^{\alpha}_{2 i}) 
-  [\partial_{\beta}
-      \varphi^{\alpha} (\bar{x}_{2 i + 1}, x_{2 i}) +
-  \partial_{\beta}'
-      \varphi^{\alpha} (x_{2 i + 2}, \bar{x}_{2 i + 1})]\\
-  + & y^{\alpha}
-      y^{\beta}  [\partial_{\beta} \varphi^{\alpha} (\bar{x}_{2 i +
-  1}, x_{2
-      i}) - \partial_{\beta}' \varphi^{\alpha} (x_{2 i + 2}, \bar{x}_{2 i
-  +
-      1})]\\
-  + & \frac{1}{4} y^{\beta} y^{\gamma}  (x^{\alpha}_{2 i + 2} -
-      x^{\alpha}_{2
-  i})  [\partial_{\beta} \partial_{\gamma}
-      \varphi^{\alpha} (\bar{x}_{2 i +
-  1}, x_{2 i}) + \partial_{\beta}'
-      \partial'_{\gamma} \varphi^{\alpha} (x_{2 i
-  + 2}, \bar{x}_{2 i +
-      1})]
-\end{array}\)
-    </center></font>
-    <p>
-      where we have denoted \(\partial \varphi\) as the partial derivative
-      taken on the first argument, and \(\partial' \varphi\) on the second.
-      Notice that we have used Einstein convention in this expansion (see the
-      conventions in section <a href="#section: Kramers-Moyal Expansion and Langevin Process">3</a>), hiding the summations of indices
-      \(\beta\) and \(\gamma\). Also up to \(\mathcal{O} (\epsilon^{3 / 2})\),
-      the third line simply becomes \(- \epsilon \xi^{\alpha} (\bar{x}_{2 i +
-      1}, x_{2 i}) - \epsilon \xi^{\alpha}
-(x_{2 i + 2}, \bar{x}_{2 i + 1})\).
-      Altogether, the integral becomes
-    </p>
-    <font style="font-size: 84.1%"><center>
-      \(\displaystyle \exp \left( \sum_{\alpha = 1}^n I^{\alpha} \right)
-      \times \int_{\mathbb{R}^d}
-\mathrm{d} y \exp \left( - \frac{1}{2}
-      \sum_{\alpha = 1}^n \left(
-\frac{y^{\alpha}}{\sqrt{\epsilon / 2}}
-      \right)^2 + \sum_{\alpha = 1}^n
-V^{\alpha} (y) + \mathcal{O}
-      (\epsilon^{3 / 2}) \right),\)
-    </center></font>
-    <p>
-      with the &ldquo;interactive part&rdquo;
-    </p>
-    <font style="font-size: 84.1%"><center>
-      \(\displaystyle \begin{array}{rl}
-  V^{\alpha} (y) := & y^{\alpha} 
-      [\varphi^{\alpha} (\bar{x}_{2 i + 1}, x_{2
-  i}) - \varphi^{\alpha}
-      (x_{2 i + 2}, \bar{x}_{2 i + 1})]\\
-  + & \frac{1}{2} y^{\beta} 
-      (x^{\alpha}_{2 i + 2} - x^{\alpha}_{2 i}) 
-  [\partial_{\beta}
-      \varphi^{\alpha} (\bar{x}_{2 i + 1}, x_{2 i}) +
-  \partial_{\beta}'
-      \varphi^{\alpha} (x_{2 i + 2}, \bar{x}_{2 i + 1})]\\
-  + & y^{\alpha}
-      y^{\beta}  [\partial_{\beta} \varphi^{\alpha} (\bar{x}_{2 i +
-  1}, x_{2
-      i}) - \partial_{\beta}' \varphi^{\alpha} (x_{2 i + 2}, \bar{x}_{2 i
-  +
-      1})]\\
-  + & \frac{1}{4} y^{\beta} y^{\gamma}  (x^{\alpha}_{2 i + 2} -
-      x^{\alpha}_{2
-  i})  [\partial_{\beta} \partial_{\gamma}
-      \varphi^{\alpha} (\bar{x}_{2 i +
-  1}, x_{2 i}) + \partial_{\beta}'
-      \partial'_{\gamma} \varphi^{\alpha} (x_{2 i
-  + 2}, \bar{x}_{2 i +
-      1})],
-\end{array}\)
-    </center></font>
-    <p>
-      which depends on \(y\) and is \(\mathcal{O} \left( \sqrt{\epsilon}
-      \right)\), and the &ldquo;independent part&rdquo; (the color is for
-      later usage)
-    </p>
-    <font style="font-size: 84.1%"><center>
-      \(\displaystyle I^{\alpha} := - \frac{1}{4 \epsilon} (x^{\alpha}_{2 i} -
-      x^{\alpha}_{2 i +
-2})^2 + \frac{1}{2} (x^{\alpha}_{2 i + 2} -
-      x^{\alpha}_{2 i}) 
-[\varphi^{\alpha} (\bar{x}_{2 i + 1}, x_{2 i}) +
-      \varphi^{\alpha} (x_{2 i +
-2}, \bar{x}_{2 i + 1})] {\color{red}{-
-      \epsilon \xi^{\alpha} (\bar{x}_{2 i +
-1}, x_{2 i}) - \epsilon
-      \xi^{\alpha} (x_{2 i + 2}, \bar{x}_{2 i + 1})}},\)
-    </center></font>
-    <p>
-      which is independent of \(y\). We Taylor expands the second factor as
-    </p>
-    <font style="font-size: 84.1%"><center>
-      \(\displaystyle \int_{\mathbb{R}^d} \mathrm{d} y \exp \left( -
-      \frac{1}{2} \sum_{\alpha = 1}^n
-\left( \frac{y^{\alpha}}{\sqrt{\epsilon
-      / 2}} \right)^2 + \sum_{\alpha = 1}^n
-V^{\alpha} (y) + \mathcal{O}
-      (\epsilon^{3 / 2}) \right) =\mathbb{E}_Y \left[ 1
-+ \sum_{\alpha = 1}^n
-      V^{\alpha} (y) + \frac{1}{2} \left( \sum_{\alpha = 1}^n
-V^{\alpha} (y)
-      \right)^2 + \mathcal{O} (\epsilon^{3 / 2}) \right],\)
-    </center></font>
-    <p>
-      where \(\mathbb{E}_Y [\ldots]\) is defined by the Gaussian integral of
-      \(y\). We will neglect the constant factor \((\pi \epsilon)^{- n / 2}\),
-      so that \(\mathbb{E}_Y [1] = 1\). This constant factor can be absorbed
-      into the action as an irrelevant constant term. Plugging in the
-      definition of \(V^{\alpha} (y)\) with \(\mathbb{E}_Y [y^{\alpha}] = 0\)
-      and \(\mathbb{E}_Y [y^{\alpha} y^{\beta}] = \delta_{\alpha \beta}
-      \epsilon / 2\), we get (color for later usage)
-    </p>
-    <font style="font-size: 70.7%"><p>
-      <font color="#008000"><center>
-        \(\displaystyle \sum_{\alpha = 1}^n \mathbb{E} [V^{\alpha} (y)] =
-        \frac{\epsilon}{2}
-\sum_{\alpha = 1}^n \left[ \partial_{\alpha}
-        \varphi^{\alpha} (\bar{x}_{2 i +
-1}, x_{2 i}) - \partial_{\alpha}'
-        \varphi^{\alpha} (x_{2 i + 2}, \bar{x}_{2 i
-+ 1}) + \frac{1}{4} 
-        \left( x^{\alpha}_{2 i + 2} - x^{\alpha}_{2 i} \right) 
-[\Delta
-        \varphi^{\alpha} (\bar{x}_{2 i + 1}, x_{2 i}) +
-        \Delta'
-\varphi^{\alpha} (x_{2 i + 2}, \bar{x}_{2 i + 1})] \right],\)
-      </center></font>
-    </p></font>
-    <p>
-      where the Laplacian \(\Delta' := \sum_{\alpha = 1}^n \partial_{\alpha}
-      \partial_{\alpha}\), and the same \(\Delta' := \sum_{\alpha = 1}^n
-      \partial'_{\alpha} \partial'_{\alpha}\). Also, we have (color for later
-      usage)
-      <div class="footnote">
-        <font style="font-size: 77.1%"><div align="justify">
-          <div style="margin-left: 0px">
-            <div style="margin-right: 0px">
-              <class style="font-style: normal"><p>
-                17. We have \(\mathbb{E}_Y \left[ (1 / 2) \left( \sum_{\alpha
-                = 1}^n V^{\alpha} (y)
-\right)^2 \right] = (1 / 2)
-                \sum_{\alpha, \alpha' = 1}^n \mathbb{E}_Y
-[V^{\alpha} (y)
-                V^{\alpha'} (y)]\), where
-              </p><center>
-                \(\displaystyle \begin{array}{rl}
-  & \mathbb{E}_Y [V^{\alpha}
-                (y) V^{\alpha'} (y)]\\
-  = & \frac{\delta_{\alpha \alpha'}
-                \epsilon}{2}  [\varphi^{\alpha}_{2 i}
-  (\bar{x}_{2 i + 1},
-                x_{2 i}) - \varphi^{\alpha}_{2 i + 1} (x_{2 i + 2},
- 
-                \bar{x}_{2 i + 1})]^2\\
-  + & \frac{\epsilon}{4} 
-                (x^{\alpha'}_{2 i + 2} - x^{\alpha'}_{2 i}) 
- 
-                [\varphi^{\alpha}_{2 i} (\bar{x}_{2 i + 1}, x_{2 i}) -
-                \varphi^{\alpha}_{2 i
-  + 1} (x_{2 i + 2}, \bar{x}_{2 i + 1})]
-                \times\\
-  & \times [\partial_{\alpha} \varphi^{\alpha'}_{2 i}
-                (\bar{x}_{2 i + 1},
-  x_{2 i}) + \partial_{\alpha}'
-                \varphi^{\alpha'}_{2 i + 1} (x_{2 i + 2},
-  \bar{x}_{2 i +
-                1})]\\
-  + & \frac{\epsilon}{4}  (x^{\alpha}_{2 i + 2} -
-                x^{\alpha}_{2 i}) 
-  [\varphi^{\alpha'}_{2 i} (\bar{x}_{2 i +
-                1}, x_{2 i}) - \varphi^{\alpha'}_{2
-  i + 1} (x_{2 i + 2},
-                \bar{x}_{2 i + 1})] \times\\
-  & \times [\partial_{\alpha'}
-                \varphi^{\alpha}_{2 i} (\bar{x}_{2 i + 1},
-  x_{2 i}) +
-                \partial_{\alpha'}' \varphi^{\alpha}_{2 i + 1} (x_{2 i + 2},
- 
-                \bar{x}_{2 i + 1})]\\
-  + & \frac{\epsilon}{8}  (x^{\alpha}_{2
-                i + 2} - x^{\alpha}_{2 i}) 
-  (x^{\alpha'}_{2 i + 2} -
-                x^{\alpha'}_{2 i})  \sum_{\beta = 1}^n
-  [\partial_{\beta}
-                \varphi^{\alpha}_{2 i} (\bar{x}_{2 i + 1}, x_{2 i}) +
- 
-                \partial_{\beta}' \varphi^{\alpha}_{2 i + 1} (x_{2 i + 2},
-                \bar{x}_{2 i +
-  1})] \times\\
-  & \times [\partial_{\beta}
-                \varphi^{\alpha'}_{2 i} (\bar{x}_{2 i + 1}, x_{2
-  i}) +
-                \partial_{\beta}' \varphi^{\alpha'}_{2 i + 1} (x_{2 i + 2},
-                \bar{x}_{2
-  i + 1})] .
-\end{array}\)
-              </center></class>
-            </div>
-          </div>
-        </div></font>
-      </div>
-      <span style="margin-left: 0em"></span>
-      <a id="footnr-17"></a>
-      <sup><class style="font-style: normal"><a href="#footnote-17">17</a></class></sup>
-    </p>
-    <font color="#000080"><font style="font-size: 70.7%"><center>
-      \(\displaystyle \begin{array}{rl}
-  & \mathbb{E} \left[ \frac{1}{2}
-      \left( \sum_{\alpha = 1}^n V^{\alpha} (y)
-  \right)^2 \right]\\
-  = &
-      \frac{\epsilon}{4} \sum_{\alpha = 1}^n [\varphi^{\alpha} (\bar{x}_{2 i
-      +
-  1}, x_{2 i}) - \varphi^{\alpha} (x_{2 i + 2}, \bar{x}_{2 i +
-      1})]^2\\
-  + & \frac{\epsilon}{4} \sum_{\alpha, \alpha' = 1}^n
-      (x^{\alpha}_{2 i + 2} -
-  x^{\alpha}_{2 i})  [\partial_{\alpha'}
-      \varphi^{\alpha} (\bar{x}_{2 i + 1},
-  x_{2 i}) + \partial_{\alpha'}'
-      \varphi^{\alpha} (x_{2 i + 2}, \bar{x}_{2 i +
-  1})] \times\\
-  & \times
-      [\varphi^{\alpha'} (\bar{x}_{2 i + 1}, x_{2 i}) -
-  \varphi^{\alpha'}
-      (x_{2 i + 2}, \bar{x}_{2 i + 1})]\\
-  + & \frac{\epsilon}{16}
-      \sum_{\alpha, \alpha', \beta = 1}^n (x^{\alpha}_{2 i
-  + 2} -
-      x^{\alpha}_{2 i})  [\partial_{\beta} \varphi^{\alpha} (\bar{x}_{2 i +
- 
-      1}, x_{2 i}) + \partial_{\beta}' \varphi^{\alpha} (x_{2 i + 2},
-      \bar{x}_{2 i
-  + 1})] \times\\
-  & \times (x^{\alpha'}_{2 i + 2} -
-      x^{\alpha'}_{2 i})  [\partial_{\beta}
-  \varphi^{\alpha'} (\bar{x}_{2 i
-      + 1}, x_{2 i}) + \partial_{\beta}'
-  \varphi^{\alpha'} (x_{2 i + 2},
-      \bar{x}_{2 i + 1})]
-\end{array}\)
-    </center></font></font>
-    <p>
-      Plugging all these back to the integral, and defining \(x'_i = x_{2 i} /
-      \sqrt{2}\) for all \(i\), we find, (up to an irrelevant constant term),
-    </p>
-    <font style="font-size: 84.1%"><center>
-      \(\displaystyle - \ln \left[ \int_{\mathbb{R}^d} \mathrm{d} x_{2 i + 1}
-      \exp \left(
-\sum_{\alpha = 1}^n J^{\alpha} \right) \right] =
-      \sum_{\alpha = 1}^n \left[
-\frac{1}{2 \epsilon} \left( {x'}^{\alpha}_{i
-      + 1} {- x'}^{\alpha}_i \right)^2
-- \left( {x'}^{\alpha}_{i + 1} -
-      x^{\alpha}_i \right) {\varphi'}^{\alpha}
-(x'_{i + 1}, x'_i) {+ \epsilon
-      \xi'}^{\alpha} (x_{i + 1}', x_i') \right],\)
-    </center></font>
-    <p>
-      where
-    </p>
-    <center>
-      \(\displaystyle {\varphi'}^{\alpha} (x'_{i + 1}, x'_i) :=
-      \frac{1}{\sqrt{2}} [\varphi^{\alpha}
-(\bar{x}_{2 i + 1}, x_{2 i}) +
-      \varphi^{\alpha} (x_{2 i + 2}, \bar{x}_{2 i +
-1})]\)
-    </center>
-    <p>
-      and
-    </p>
-    <font style="font-size: 84.1%"><center>
-      \(\displaystyle {\xi'}^{\alpha}_i (x_{i + 1}', x_i') :=
-      {\color{red}{\xi^{\alpha} (\bar{x}_{2
-i + 1}, x_{2 i}) + \xi^{\alpha}
-      (x_{2 i + 2}, \bar{x}_{2 i + 1})}} {-
-\frac{1}{2} [\partial_{\alpha}
-      \varphi^{\alpha} (\bar{x}_{2 i + 1}, x_{2 i}) -
-\partial_{\alpha}'
-      \varphi^{\alpha} (x_{2 i + 2}, \bar{x}_{2 i + 1})]} {-
-\frac{1}{4}
-      [\varphi^{\alpha} (\bar{x}_{2 i + 1}, x_{2 i}) - \varphi^{\alpha}
-(x_{2
-      i + 2}, \bar{x}_{2 i + 1})]^2} {- \frac{1}{8} (x^{\alpha}_{2 i + 2}
-      -
-x^{\alpha}_{2 i})  [\Delta \varphi^{\alpha} (\bar{x}_{2 i + 1}, x_{2
-      i}) +
-\Delta' \varphi^{\alpha} (x_{2 i + 2}, \bar{x}_{2 i + 1})]} {-
-      \frac{1}{4}
-\sum_{\alpha' = 1}^n (x^{\alpha}_{2 i + 2} - x^{\alpha}_{2
-      i}) 
-[\partial_{\alpha'} \varphi^{\alpha} (\bar{x}_{2 i + 1}, x_{2 i})
-      +
-\partial_{\alpha'}' \varphi^{\alpha} (x_{2 i + 2}, \bar{x}_{2 i + 1})]
-      
-[\varphi^{\alpha'} (\bar{x}_{2 i + 1}, x_{2 i}) - \varphi^{\alpha'}
-      (x_{2 i +
-2}, \bar{x}_{2 i + 1})] - \frac{1}{16} \sum_{\alpha', \beta =
-      1}^n
-(x^{\alpha}_{2 i + 2} - x^{\alpha}_{2 i})  [\partial_{\beta}
-      \varphi^{\alpha}
-(\bar{x}_{2 i + 1}, x_{2 i}) + \partial_{\beta}'
-      \varphi^{\alpha} (x_{2 i +
-2}, \bar{x}_{2 i + 1})]  (x^{\alpha'}_{2 i +
-      2} - x^{\alpha'}_{2 i}) 
-[\partial_{\beta} \varphi^{\alpha'} (\bar{x}_{2
-      i + 1}, x_{2 i}) +
-\partial_{\beta}' \varphi^{\alpha'} (x_{2 i + 2},
-      \bar{x}_{2 i + 1})]} +
-\mathcal{O} \left( \sqrt{\epsilon} \right),\)
-    </center></font>
-    <p>
-      where we have indicated the source of the terms by color. This is held
-      for all \(i\), thus we arrive at
-    </p>
-    <center>
-      \(\displaystyle S' (x') = \sum_{i = - \infty}^{+ \infty} \sum_{\alpha =
-      1}^n \left[ \frac{1}{2
-\epsilon} \left( {x'}^{\alpha}_{i + 1} {-
-      x'}^{\alpha}_i \right)^2 - \left(
-{x'}^{\alpha}_{i + 1} {-
-      x'}^{\alpha}_i \right) {\varphi'}^{\alpha} (x'_{i +
-1}, x'_i) {+
-      \epsilon \xi'}^{\alpha} (x_{i + 1}', x_i') \right],\)
-    </center>
-    <p>
-      which has exactly the same format as \(S\) (equation <a href="#equation:rg action">31</a>).
+      Final remark on cut-off \(N_{\operatorname{cut}} = 2\). If choose
+      \(N_{\operatorname{cut}} > 2\), it is hard to see how to integrate the
+      improper integral <a href="#equation:path integral step 2">30</a>, and even to show why it is finite.
+      For example, if \(N_{\operatorname{cut}} = 4\), the \((\Delta t / 4!)
+      K^{\alpha \beta \gamma \sigma}_4 (x) k_{\alpha} k_{\beta}
+k_{\gamma}
+      k_{\sigma}\) term will dominate the integral when \(k\) is far from
+      origin. But we cannot ensure that this term will suppress the integrand
+      as \(\| k \| \rightarrow + \infty\) so as to make the improper integral
+      finite. We cannot even diagonalize the fourth order symmetric tensor
+      \(K_4 (x)\) (because diagonalizing a fourth order symmetric tensor has
+      \(\mathcal{O} (d^4)\) restrictions, but a coordinate transformation has
+      only \(\mathcal{O} (d^2)\) degrees of freedom, so this cannot be done
+      except for specific situations).
     </p>
   </body>
 </html>
