@@ -3410,12 +3410,10 @@
 
   <\equation*>
     q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>=<around*|(|<frac|2\<mathpi\>|\<Delta\>t>|)><rsup|d/2>
-    <around*|[|det R<around*|(|x|)>|]> exp<around*|(|-<frac|\<Delta\>t|2><around*|[|R<around*|(|x|)>
-    <around*|(|<frac|\<epsilon\>|\<Delta\>t>-f<around*|(|x|)>|)>|]><rsup|2>|)>,
+    <around*|[|det R<around*|(|x|)>|]> exp<around*|(|-<frac|\<Delta\>t|2><big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|R<rsub|\<alpha\>\<beta\>><around*|(|x|)>
+    <around*|(|<frac|\<epsilon\><rsup|\<beta\>>|\<Delta\>t>-f<rsup|\<beta\>><around*|(|x|)>|)>|]><rsup|2>|)>.
   </equation*>
 
-  where the <math|<around*|[|\<cdots\>|]><rsup|2>> represents vector square,
-  like <math|y<rsup|2>=<big|sum><rsub|\<alpha\>=1><rsup|d>y<rsub|\<alpha\>>y<rsub|\<alpha\>>>.
   Now, the determinant gets rid of root (and fraction). Remark that
   <math|R<around*|(|x|)>> may not be a symmetric matrix.
 
@@ -3466,8 +3464,8 @@
   <\equation*>
     q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>=<around*|(|<frac|2\<mathpi\>|\<Delta\>t<rsup|3>>|)><rsup|d/2>
     <big|int>\<mathd\>\<psi\><big|int>\<mathd\><wide|\<psi\>|\<bar\>>
-    exp<around*|(|-<frac|\<Delta\>t|2><around*|[|R<around*|(|x|)>
-    <around*|(|<frac|\<epsilon\>|\<Delta\>t>-f<around*|(|x|)>|)>|]><rsup|2>-\<Delta\>t
+    exp<around*|(|-<frac|\<Delta\>t|2><big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|R<rsub|\<alpha\>\<beta\>><around*|(|x|)>
+    <around*|(|<frac|\<epsilon\><rsup|\<beta\>>|\<Delta\>t>-f<rsup|\<beta\>><around*|(|x|)>|)>|]><rsup|2>-\<Delta\>t
     R<rsub|\<alpha\>\<beta\>><around*|(|x|)> \<psi\><rsup|\<alpha\>>
     <wide|\<psi\>|\<bar\>><rsup|\<beta\>>|)>.
   </equation*>
@@ -3493,7 +3491,8 @@
 
   <\equation>
     S<around*|(|x,\<psi\>,<wide|\<psi\>|\<bar\>>|)>\<assign\><big|sum><rsub|i=0><rsup|N-1>\<Delta\>t<around*|{|<frac|1|2>
-    <around*|[|R<around*|(|x<rsub|i>|)> <around*|(|<frac|x<rsub|i+1>-x<rsub|i>|\<Delta\>t>-f<around*|(|x<rsub|i>|)>|)>|]><rsup|2>+R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>
+    <big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>
+    <around*|(|<frac|x<rsub|i+1><rsup|\<beta\>>-x<rsub|i><rsup|\<beta\>>|\<Delta\>t>-f<rsup|\<beta\>><around*|(|x<rsub|i>|)>|)>|]><rsup|2>+R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>
     \<psi\><rsub|i><rsup|\<alpha\>> <wide|\<psi\>|\<bar\>><rsub|i><rsup|\<beta\>>+\<omicron\><around*|(|1|)>|}>.<label|equation:langevin
     action>
   </equation>
@@ -3507,8 +3506,8 @@
 
   <\equation*>
     S<around*|(|x,\<psi\>,<wide|\<psi\>|\<bar\>>|)>\<rightarrow\><big|int><rsub|0><rsup|t<rsub|f>>\<mathd\>t<around*|{|<frac|1|2>
-    <around*|[|R<around*|(|x<around*|(|t|)>|)>
-    <around*|(|<frac|\<mathd\>x|\<mathd\>t><around*|(|t|)>-f<around*|(|x<around*|(|t|)>|)>|)>|]><rsup|2>+R<rsub|\<alpha\>\<beta\>><around*|(|x<around*|(|t|)>|)>
+    <big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|R<rsub|\<alpha\>\<beta\>><around*|(|x<around*|(|t|)>|)>
+    <around*|(|<frac|\<mathd\>x<rsup|\<beta\>>|\<mathd\>t><around*|(|t|)>-f<rsup|\<beta\>><around*|(|x<around*|(|t|)>|)>|)>|]><rsup|2>+R<rsub|\<alpha\>\<beta\>><around*|(|x<around*|(|t|)>|)>
     \<psi\><rsup|\<alpha\>><around*|(|t|)>
     <wide|\<psi\>|\<bar\>><rsup|\<beta\>><around*|(|t|)>|}>,
   </equation*>

@@ -4187,15 +4187,15 @@ R_{\gamma \beta}\). So, we have (insert the omitted
       \(\displaystyle q_{\Delta t} (x + \epsilon |x) = \left( \frac{2
       \pi}{\Delta t} \right)^{d / 2}
 [\det R (x)] \exp \left( - \frac{\Delta
-      t}{2} \left[ R (x)  \left(
-\frac{\epsilon}{\Delta t} - f (x) \right)
-      \right]^2 \right),\)
+      t}{2} \sum_{\alpha = 1}^d \left[
+R_{\alpha \beta} (x)  \left(
+      \frac{\epsilon^{\beta}}{\Delta t} - f^{\beta} (x)
+\right) \right]^2
+      \right) .\)
     </center>
     <p>
-      where the \([\cdots]^2\) represents vector square, like \(y^2 =
-      \sum_{\alpha = 1}^d y_{\alpha} y_{\alpha}\). Now, the determinant gets
-      rid of root (and fraction). Remark that \(R (x)\) may not be a symmetric
-      matrix.
+      Now, the determinant gets rid of root (and fraction). Remark that \(R
+      (x)\) may not be a symmetric matrix.
     </p>
     <p>
       Next, we use Berezin integral to convert the determinant \(\det R (x)\)
@@ -4248,10 +4248,12 @@ t^d \det R (x),\)
       \pi}{\Delta t^3} \right)^{d /
 2}  \int \mathrm{d} \psi \int \mathrm{d}
       \bar{\psi} \exp \left( - \frac{\Delta
-t}{2} \left[ R (x)  \left(
-      \frac{\epsilon}{\Delta t} - f (x) \right) \right]^2
-- \Delta t R_{\alpha
-      \beta} (x) \psi^{\alpha}  \bar{\psi}^{\beta} \right) .\)
+t}{2} \sum_{\alpha = 1}^d \left[
+      R_{\alpha \beta} (x)  \left(
+\frac{\epsilon^{\beta}}{\Delta t} -
+      f^{\beta} (x) \right) \right]^2 - \Delta t
+R_{\alpha \beta} (x)
+      \psi^{\alpha}  \bar{\psi}^{\beta} \right) .\)
     </center>
     <p>
       
@@ -4285,12 +4287,14 @@ t}{2} \left[ R (x)  \left(
       <tr>
         <td width="100%" align="center">\(\displaystyle S (x, \psi, \bar{\psi}) := \sum_{i =
         0}^{N - 1} \Delta t \left\{ \frac{1}{2} 
-\left[ R (x_i)  \left(
-        \frac{x_{i + 1} - x_i}{\Delta t} - f (x_i) \right)
-\right]^2 +
-        R_{\alpha \beta} (x_i) \psi_i^{\alpha}  \bar{\psi}_i^{\beta}
-        +
-\omicron (1) \right\} . \)</td>
+\sum_{\alpha = 1}^d \left[
+        R_{\alpha \beta} (x_i)  \left( \frac{x_{i +
+1}^{\beta} -
+        x_i^{\beta}}{\Delta t} - f^{\beta} (x_i) \right) \right]^2 +
+R_{\alpha
+        \beta} (x_i) \psi_i^{\alpha}  \bar{\psi}_i^{\beta} + \omicron
+        (1)
+\right\} . \)</td>
         <td align="right">(31)</td>
       </tr>
     </table>
@@ -4306,10 +4310,12 @@ t}{2} \left[ R (x)  \left(
     <center>
       \(\displaystyle S (x, \psi, \bar{\psi}) \rightarrow \int_0^{t_f}
       \mathrm{d} t \left\{
-\frac{1}{2}  \left[ R (x (t))  \left(
-      \frac{\mathrm{d} x}{\mathrm{d} t} (t) -
-f (x (t)) \right) \right]^2 +
-      R_{\alpha \beta} (x (t)) \psi^{\alpha} (t) 
+\frac{1}{2}  \sum_{\alpha = 1}^d \left[ R_{\alpha
+      \beta} (x (t))  \left(
+\frac{\mathrm{d} x^{\beta}}{\mathrm{d} t} (t) -
+      f^{\beta} \left( x \left( t
+\right) \right) \right) \right]^2 +
+      R_{\alpha \beta} (x (t)) \psi^{\alpha} (t)
 \bar{\psi}^{\beta} (t)
       \right\},\)
     </center>
