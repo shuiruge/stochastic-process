@@ -5,7 +5,112 @@
 <\body>
   <section|Drafts>
 
+  <subsection|Coordinate Transformation>
+
+  TODO: Can we absorb the <math|R> matrix by coordinate transformation? First
+  notice that the transition density <math|q<rsub|\<Delta\>t><around*|(|x<rsub|i+1>\|x<rsub|i>|)>>
+  is Gaussian on <math|<around*|(|x<rsub|i+1>-x<rsub|i>|)>> with covariance
+  proportional to <math|\<Delta\>t>. Thus, we can expand
+
+  <\equation*>
+    <wide|R|~><rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i+1>|)>=<wide|R|~><rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>+\<partial\><rsub|\<gamma\>><wide|R|~><rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)><around*|(|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>|)>+<with|font|cal|O><around*|(|<around*|\<\|\|\>|x<rsub|i+1>-x|\<\|\|\>><rsup|2>|)>,
+  </equation*>
+
+  thus
+
+  <\equation*>
+    <wide|R|~><rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i+1>|)>x<rsup|\<beta\>><rsub|i+1>-<wide|R|~><rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>x<rsup|\<beta\>><rsub|i>=<around*|[|<wide|R|~><rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>+\<partial\><rsub|\<beta\>><wide|R|~><rsub|\<alpha\>\<gamma\>><around*|(|x<rsub|i>|)>x<rsup|\<gamma\>><rsub|i>|]><around*|(|x<rsup|\<beta\>><rsub|i+1>-x<rsub|i><rsup|\<beta\>>|)>+<with|font|cal|O><around*|(|<around*|\<\|\|\>|x<rsub|i+1>-x|\<\|\|\>><rsup|2>|)>.
+  </equation*>
+
+  If we define
+
+  <\equation*>
+    R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>\<assign\><wide|R|~><rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>+\<partial\><rsub|\<beta\>><wide|R|~><rsub|\<alpha\>\<gamma\>><around*|(|x<rsub|i>|)>x<rsup|\<gamma\>><rsub|i>,
+  </equation*>
+
+  then
+
+  <\equation*>
+    R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)><around*|(|x<rsup|\<beta\>><rsub|i+1>-x<rsub|i><rsup|\<beta\>>|)>=<wide|R|~><rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i+1>|)>x<rsup|\<beta\>><rsub|i+1>-<wide|R|~><rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>x<rsup|\<beta\>><rsub|i>+<with|font|cal|O><around*|(|<around*|\<\|\|\>|x<rsub|i+1>-x|\<\|\|\>><rsup|2>|)>.
+  </equation*>
+
+  In addition, define
+
+  <\equation*>
+    <wide|f|~><rsup|\<alpha\>><around*|(|x<rsub|i>|)>\<assign\><around*|[|<wide|R|~><rsup|-1><around*|(|x<rsub|i>|)>|]><rsup|\<alpha\>\<beta\>>R<rsub|\<beta\>\<gamma\>><around*|(|x<rsub|i>|)>f<rsup|\<gamma\>><around*|(|x<rsub|i>|)>,
+  </equation*>
+
+  we have
+
+  <\equation*>
+    R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>f<rsup|\<beta\>><around*|(|x<rsub|i>|)>=<wide|R|~><rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)><wide|f|~><rsup|\<beta\>><around*|(|x<rsub|i>|)>.
+  </equation*>
+
+  Altogether, we have,
+
+  <\align>
+    <tformat|<table|<row|<cell|>|<cell|-<frac|1|2\<Delta\>t><big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)><around*|(|x<rsup|\<beta\>><rsub|i+1>-x<rsub|i><rsup|\<beta\>>|)>-R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>f<rsup|\<beta\>><around*|(|x<rsub|i>|)>\<Delta\>t+<with|font|cal|O><around*|(|<around*|\<\|\|\>|x<rsub|i+1>-x|\<\|\|\>><rsup|2>|)>|]><rsup|2>>>|<row|<cell|=>|<cell|-<frac|1|2\<Delta\>t><big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|<wide|R|~><rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i+1>|)>x<rsup|\<beta\>><rsub|i+1>-<wide|R|~><rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>x<rsup|\<beta\>><rsub|i>-<wide|R|~><rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)><wide|f|~><rsup|\<beta\>><around*|(|x<rsub|i>|)>\<Delta\>t|]><rsup|2>.>>>>
+  </align>
+
+  The <math|<with|font|cal|O><around*|(|<around*|\<\|\|\>|x<rsub|i+1>-x|\<\|\|\>><rsup|2>|)>>
+  term is negligible, since it contributes to the action by a
+  <math|<with|font|cal|O><around*|(|<around*|\<\|\|\>|x<rsub|i+1>-x|\<\|\|\>><rsup|3>/\<Delta\>t|)>+<with|font|cal|O><around*|(|<around*|\<\|\|\>|x<rsub|i+1>-x|\<\|\|\>><rsup|2>|)>>
+  term, which is estimated as <math|<with|font|cal|O><around*|(|<sqrt|\<Delta\>t>|)>=\<omicron\><around*|(|1|)>>
+  as <math|\<Delta\>t\<rightarrow\>0>.??
+
+  \;
+
+  Consider a diffeomorphism <math|x<rprime|'><rsub|i>=x<rprime|'><rsub|i><around*|(|x|)>>
+  for each <math|i>, thus
+
   <subsection|Super-symmetry in Langevin Process (TODO)>
+
+  Recall that
+
+  <\equation>
+    S<around*|(|x,\<psi\>,<wide|\<psi\>|\<bar\>>|)>\<assign\><big|sum><rsub|i=0><rsup|N-1>\<Delta\>t<around*|{|<frac|1|2>
+    <big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>
+    <around*|(|<frac|x<rsub|i+1><rsup|\<beta\>>-x<rsub|i><rsup|\<beta\>>|\<Delta\>t>-f<rsup|\<beta\>><around*|(|x<rsub|i>|)>|)>|]><rsup|2>+R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>
+    \<psi\><rsub|i><rsup|\<alpha\>> <wide|\<psi\>|\<bar\>><rsub|i><rsup|\<beta\>>+\<omicron\><around*|(|1|)>|}>.<label|equation:langevin
+    action>
+  </equation>
+
+  Let
+
+  <\equation*>
+    u<rsup|i><rsub|\<alpha\>><around*|(|x|)>\<assign\>R<rsub|\<alpha\>\<gamma\>><around*|(|x<rsub|i>|)>
+    <around*|(|<frac|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>|\<Delta\>t>-f<rsup|\<gamma\>><around*|(|x<rsub|i>|)>|)>.
+  </equation*>
+
+  Then
+
+  <\align>
+    <tformat|<table|<row|<cell|<frac|\<partial\>u<rsup|i><rsub|\<alpha\>>|\<partial\>x<rsub|j><rsup|\<beta\>>><around*|(|x|)>=>|<cell|\<partial\><rsub|\<beta\>>R<rsub|\<alpha\>\<gamma\>><around*|(|x<rsub|i>|)>\<delta\><rsup|i
+    j><around*|(|<frac|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>|\<Delta\>t>-f<rsup|\<gamma\>><around*|(|x<rsub|i>|)>|)>+R<rsub|\<alpha\>\<gamma\>><around*|(|x<rsub|i>|)>
+    <around*|(|<frac|\<delta\><rsup|i+1,j>\<delta\><rsup|\<gamma\>><rsub|\<beta\>>-\<delta\><rsup|i
+    j>\<delta\><rsup|\<gamma\>><rsub|\<beta\>>|\<Delta\>t>-\<partial\><rsub|\<beta\>>f<rsup|\<gamma\>><around*|(|x<rsub|i>|)>\<delta\><rsup|i
+    j>|)>>>|<row|<cell|=>|<cell|\<delta\><rsup|i
+    j><around*|[|\<partial\><rsub|\<beta\>>R<rsub|\<alpha\>\<gamma\>><around*|(|x<rsub|i>|)><around*|(|<frac|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>|\<Delta\>t>-f<rsup|\<gamma\>><around*|(|x<rsub|i>|)>|)>-<frac|R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>|\<Delta\>t>-R<rsub|\<alpha\>\<gamma\>><around*|(|x<rsub|i>|)>\<partial\><rsub|\<beta\>>f<rsup|\<gamma\>><around*|(|x<rsub|i>|)>|]>>>|<row|<cell|+>|<cell|\<delta\><rsup|i+1,j><frac|R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>|\<Delta\>t>.>>>>
+  </align>
+
+  Thus,
+
+  <\align>
+    <tformat|<table|<row|<cell|<frac|\<partial\>u<rsup|i><rsub|\<alpha\>>|\<partial\>x<rsub|j><rsup|\<beta\>>><around*|(|x|)>\<psi\><rsub|i><rsup|\<alpha\>><wide|\<psi\>|\<bar\>><rsub|j><rsup|\<beta\>>=>|<cell|\<psi\><rsub|i><rsup|\<alpha\>><wide|\<psi\>|\<bar\>><rsub|i><rsup|\<beta\>><around*|[|\<partial\><rsub|\<beta\>>R<rsub|\<alpha\>\<gamma\>><around*|(|x<rsub|i>|)><around*|(|<frac|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>|\<Delta\>t>-f<rsup|\<gamma\>><around*|(|x<rsub|i>|)>|)>-<frac|R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>|\<Delta\>t>-R<rsub|\<alpha\>\<gamma\>><around*|(|x<rsub|i>|)>\<partial\><rsub|\<beta\>>f<rsup|\<gamma\>><around*|(|x<rsub|i>|)>|]>>>|<row|<cell|+>|<cell|\<psi\><rsub|i><rsup|\<alpha\>><wide|\<psi\>|\<bar\>><rsub|i+1><rsup|\<beta\>><frac|R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>|\<Delta\>t>.>>>>
+  </align>
+
+  If <math|R<rsub|\<alpha\>\<beta\>><around*|(|x|)>\<equiv\>\<delta\><rsub|\<alpha\>\<beta\>>>,
+  then
+
+  <\equation*>
+    <frac|\<partial\>u<rsup|i><rsub|\<alpha\>>|\<partial\>x<rsub|j><rsup|\<beta\>>><around*|(|x|)>=<around*|(|\<delta\><rsup|i+1,j>-\<delta\><rsup|i
+    j>|)>\<delta\><rsub|\<alpha\>\<beta\>><frac|1|\<Delta\>t>-\<delta\><rsup|i
+    j>\<partial\><rsub|\<beta\>>f<rsub|\<alpha\>><around*|(|x<rsub|i>|)>
+  </equation*>
+
+  <\equation*>
+    \;
+  </equation*>
 
   Now, at each <math|t>, consider the infinitesimal variation that mixes real
   number and Grassmann numbers
@@ -735,29 +840,33 @@
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-2|<tuple|1.1|1>>
     <associate|auto-3|<tuple|1.2|2>>
-    <associate|auto-4|<tuple|1.3|2>>
-    <associate|auto-5|<tuple|1.4|3>>
-    <associate|auto-6|<tuple|1.5|3>>
-    <associate|auto-7|<tuple|1.5.1|?>>
-    <associate|auto-8|<tuple|1.5.2|?>>
-    <associate|equation:path integral step 1|<tuple|4|1>>
-    <associate|equation:rg action|<tuple|2|?>>
-    <associate|equation:rg integral|<tuple|3|?>>
-    <associate|equation:susy transformation|<tuple|1|?>>
-    <associate|footnote-1|<tuple|1|1>>
+    <associate|auto-4|<tuple|1.3|5>>
+    <associate|auto-5|<tuple|1.4|7>>
+    <associate|auto-6|<tuple|1.5|7>>
+    <associate|auto-7|<tuple|1.6|7>>
+    <associate|auto-8|<tuple|1.6.1|8>>
+    <associate|auto-9|<tuple|1.6.2|?>>
+    <associate|equation:langevin action|<tuple|1|1>>
+    <associate|equation:path integral step 1|<tuple|5|5>>
+    <associate|equation:rg action|<tuple|3|3>>
+    <associate|equation:rg integral|<tuple|4|3>>
+    <associate|equation:susy transformation|<tuple|2|1>>
+    <associate|footnote-1|<tuple|1|2>>
     <associate|footnote-2|<tuple|2|3>>
-    <associate|footnote-3|<tuple|3|?>>
-    <associate|footnote-4|<tuple|4|?>>
-    <associate|footnote-5|<tuple|5|?>>
-    <associate|footnr-1|<tuple|1|1>>
+    <associate|footnote-3|<tuple|3|3>>
+    <associate|footnote-4|<tuple|4|4>>
+    <associate|footnote-5|<tuple|5|5>>
+    <associate|footnote-6|<tuple|6|7>>
+    <associate|footnr-1|<tuple|1|2>>
     <associate|footnr-2|<tuple|2|3>>
-    <associate|footnr-3|<tuple|3|?>>
-    <associate|footnr-4|<tuple|4|?>>
-    <associate|footnr-5|<tuple|5|?>>
+    <associate|footnr-3|<tuple|3|3>>
+    <associate|footnr-4|<tuple|4|4>>
+    <associate|footnr-5|<tuple|5|5>>
+    <associate|footnr-6|<tuple|6|7>>
     <associate|section: How Far Will Information Propagate in Markovian
-    Process?|<tuple|1.2|?>>
+    Process?|<tuple|1.3|2>>
     <associate|section: Master Equation on Euclidean Alphabet Can Be
-    Formulated as Path Integral|<tuple|1.3|1>>
+    Formulated as Path Integral|<tuple|1.4|5>>
   </collection>
 </references>
 
@@ -768,27 +877,36 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1><vspace|0.5fn>
 
-      <with|par-left|<quote|1tab>|1.1<space|2spc>Master Equation on Euclidean
-      Alphabet Can Be Formulated as Path Integral (TODO)
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.1<space|2spc>Super-symmetry in Langevin
+      Process (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-2>>
 
-      <with|par-left|<quote|1tab>|1.2<space|2spc>Example: Action in Deep
-      Learning (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.2<space|2spc>How Far Will Information
+      Propagate in Markovian Process? (TODO)
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-3>>
 
-      <with|par-left|<quote|1tab>|1.3<space|2spc>* History: Structures in
-      Nature Arise from Least-Action Principle
+      <with|par-left|<quote|1tab>|1.3<space|2spc>Master Equation on Euclidean
+      Alphabet Can Be Formulated as Path Integral (TODO)
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-4>>
 
-      <with|par-left|<quote|2tab>|1.3.1<space|2spc>WBE Theory and
-      Universality <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.4<space|2spc>Example: Action in Deep
+      Learning (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-5>>
 
-      <with|par-left|<quote|2tab>|1.3.2<space|2spc>Renormalization Group and
-      Criticality <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.5<space|2spc>* History: Structures in
+      Nature Arise from Least-Action Principle
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-6>>
+
+      <with|par-left|<quote|2tab>|1.5.1<space|2spc>WBE Theory and
+      Universality <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-7>>
+
+      <with|par-left|<quote|2tab>|1.5.2<space|2spc>Renormalization Group and
+      Criticality <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-8>>
     </associate>
   </collection>
 </auxiliary>

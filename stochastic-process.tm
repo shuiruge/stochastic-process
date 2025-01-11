@@ -116,17 +116,21 @@
     Principle in Classical Mechanics <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-26>>
 
-    <with|par-left|1tab|4.3<space|2spc>Least-Action Principle of Distribution
-    Has No Redundancy <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <with|par-left|1tab|4.3<space|2spc>Preliminary: Grassmann Number and
+    Berezin Integral (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-27>>
 
-    <with|par-left|1tab|4.4<space|2spc>Data Fitting Is Equivalent to
-    Least-Action Principle of Distribution
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <with|par-left|1tab|4.4<space|2spc>Langevin Process Can Be Formulated as
+    Path Integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-28>>
 
-    <with|par-left|1tab|4.5<space|2spc>Langevin Process Can Be Formulated as
-    Path Integral (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <with|par-left|1tab|4.5<space|2spc>Least-Action Principle of Distribution
+    Has No Redundancy (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-29>>
+
+    <with|par-left|1tab|4.6<space|2spc>Data Fitting Is Equivalent to
+    Least-Action Principle of Distribution
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-30>>
   </table-of-contents>
 
@@ -2978,26 +2982,365 @@
   Redundancy>, action is completely determined by the real world distribution
   (the correspondence of real world datum), with nothing redundant.
 
-  <subsection|Least-Action Principle of Distribution Has No
-  Redundancy><label|section: Least-Action Principle of Distribution Has No
+  <subsection|Preliminary: Grassmann Number and Berezin Integral
+  (TODO)><label|section: Preliminary: Grassmann Number and Berezin Integral>
+
+  We have to briefly introduce Grassmann number, on which Berezin integral is
+  based. Grassmann number is an extension of complex number,by introducing in
+  the anti-commutative numbers. Given a set of anti-commutative numbers
+  <math|<around*|{|\<zeta\><rsub|i>\|i=1,\<ldots\>,n|}>>, where we treat each
+  <math|<rsub|i>> as an abstract variable. We demand that the
+  anti-commutative relation between <math|\<zeta\>>s
+
+  <\equation*>
+    \<zeta\><rsub|i> \<zeta\><rsub|j>=-\<zeta\><rsub|j> \<zeta\><rsub|i>.
+  </equation*>
+
+  But for any complex number <math|z>, we demand a commutative relation
+
+  <\equation*>
+    z \<zeta\><rsub|i>=\<zeta\><rsub|i> z.
+  </equation*>
+
+  TODO
+
+  <subsection|Langevin Process Can Be Formulated as Path
+  Integral><label|section: Master Equation on Euclidean Alphabet Can Be
+  Formulated as Path Integral>
+
+  In this section, we are to formulate the master equation into path
+  integral. The path integral formulation was found by Paul Dirac in 1933 who
+  was trying to using Lagrangian in quantum mechanism. It was then developed
+  by physicist Richard Feynman and mathematician Mark Kac in 1947. Now, path
+  integral is applied not only to quantum field theory, but also many other
+  areas such as stochastic process.
+
+  To derive a path integral formulation for master equation, we follow the
+  standard derivation of path integral for quantum mechanism.<\footnote>
+    For example, section 1.2 of <with|font-shape|italic|Quantum Field Theory
+    in a Nutshell>, by A. Zee, second edition.
+  </footnote> In this derivation, we first consider the discrete time master
+  equation <reference|equation:discrete time master equation>. The evolution
+  is given by a series of the transition density
+  <math|q<rsub|\<Delta\>t><around*|(|x<rsub|i+1>\|x<rsub|i>|)>> with the
+  iterative step <math|i\<in\><around*|{|0,1,\<ldots\>,N|}>>. By repeatedly
+  applying master equation <reference|equation:discrete time master
+  equation>, we get
+
+  <\equation>
+    p<around*|(|x<rsub|N>,N \<Delta\>t|)>=<big|int><rsub|\<cal-X\>>\<mathd\>x<rsub|N-1>\<cdots\><big|int><rsub|\<cal-X\>>\<mathd\>x<rsub|0>
+    q<rsub|\<Delta\>t><around*|(|x<rsub|N>\|x<rsub|N-1>|)>\<cdots\>
+    q<rsub|\<Delta\>t><around*|(|x<rsub|1>\|x<rsub|0>|)>
+    p<around*|(|x<rsub|0>,0|)>.<label|equation:path integral step 1>
+  </equation>
+
+  \;
+
+  The next step is assuming <math|\<Delta\>t> is small and re-expressing
+  <math|q<rsub|\<Delta\>t><around*|(|x<rsub|i+1>\|x<rsub|i>|)>> in
+  exponential. That is, we are to calculate <math|ln
+  q<rsub|\<Delta\>t><around*|(|x<rsub|i+1>\|x<rsub|i>|)>> when
+  <math|\<Delta\>t> is sufficiently small. To make it well-defined, we assume
+  that <math|r<around*|(|x,y|)>\<gtr\>0> for any <math|x,y\<in\>\<cal-X\>>
+  with <math|x\<neq\>y>. This is essential and sufficient for
+  <math|q<rsub|\<Delta\>t><around*|(|x\|y|)>\<gtr\>0>, at least when
+  <math|\<Delta\>t> is small.
+
+  Since transition rate has completely determined the Markovian process (see
+  section <reference|section: Transition Rate Determines Transition
+  Density>), we are to express the <math|ln
+  q<rsub|\<Delta\>t><around*|(|x\|y|)>> in terms of <math|r>. This, however,
+  cannot be straight-forward since the leading term of
+  <math|q<rsub|\<Delta\>t><around*|(|x\|y|)>> is
+  <math|\<delta\><around*|(|x-y|)>> which cannot be converted into
+  exponential. But, we can consider its Fourier transform, since
+  <math|\<delta\><around*|(|x-y|)>>, if regarding as a Dirac's delta
+  function, has exponential Fourier coefficient
+  <math|exp<around*|(|-\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>|)>>.
+  This suggest us to consider the Fourier transform of transition rate, as
+
+  <\equation*>
+    <wide|r|^><around*|(|x,k|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
+    exp<around*|(|\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>
+    r<around*|(|x+\<epsilon\>,x|)>.
+  </equation*>
+
+  This forces the alphabet <math|\<cal-X\>> to be Euclidean space
+  <math|\<bbb-R\><rsup|d>>, because we cannot perform the same thing on
+  Kronecker's delta when the alphabet is discrete, or when the alphabet is
+  continuous but not Euclidean. Then, we have
+
+  <\equation*>
+    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>=\<delta\><around*|(|\<epsilon\>|)>+r<around*|(|x+\<epsilon\>,x|)>
+    \<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k
+    \ exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>
+    <around*|[|1+<wide|r|^><around*|(|x,k|)>
+    \<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>|]>.
+  </equation*>
+
+  Now, the <math|<around*|[|\<cdots\>|]>> part can be converted into
+  exponential as <math|exp<around*|(|<wide|r|^><around*|(|x,k|)>
+  \<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>|)>>, so that
+
+  <\equation*>
+    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k
+    \ exp<around*|{|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>+<wide|r|^><around*|(|x,k|)>
+    \<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>|}>.
+  </equation*>
+
+  We are to integrate over <math|k>. If we Taylor expand
+  <math|<wide|r|^><around*|(|x,k|)>> by <math|\<mathi\>k> at <math|k=0>, then
+  the expansion coefficient is
+
+  <\equation*>
+    lim<rsub|k\<rightarrow\>0><frac|\<partial\>|\<partial\><around*|(|\<mathi\>k<rsub|\<alpha\><rsub|1>>|)>>\<cdots\><frac|\<partial\>|\<partial\><around*|(|\<mathi\>k<rsub|\<alpha\><rsub|n>>|)>><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
+    exp<around*|(|\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>
+    r<around*|(|x+\<epsilon\>,x|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
+    <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|)>
+    r<around*|(|x+\<epsilon\>,x|)>=K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>.
+  </equation*>
+
+  We meet the moments of transition rate again (it first appears in section
+  <reference|section: Cut-off in the Moments of Transition Rate Is Essential
+  for Spatial Smoothness>). Thus, we have
+
+  <\equation*>
+    <wide|r|^><around*|(|x,k|)>=K<rsub|1><rsup|\<alpha\>><around*|(|x|)>
+    <around*|(|\<mathi\>k<rsub|\<alpha\>>|)>+<frac|1|2!>
+    K<rsub|2><rsup|\<alpha\>\<beta\>><around*|(|x|)>
+    <around*|(|\<mathi\>k<rsub|\<alpha\>>|)>
+    <around*|(|\<mathi\>k<rsub|\<beta\>>|)>+<frac|1|3!>K<rsub|3><rsup|\<alpha\>\<beta\>\<gamma\>><around*|(|x|)>
+    <around*|(|\<mathi\>k<rsub|\<alpha\>>|)>
+    <around*|(|\<mathi\>k<rsub|\<beta\>>|)>
+    <around*|(|\<mathi\>k<rsub|\<gamma\>>|)>+\<cdots\>,
+  </equation*>
+
+  where the zeroth order term vanishes because of the property of transition
+  rate <math|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
+  r<around*|(|x+\<epsilon\>\|x|)>=0>. Then, we find
+  <math|q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>> to be
+
+  <\equation>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k
+    \ exp<around*|(|<around*|[|K<rsub|1><rsup|\<alpha\>><around*|(|x|)>
+    \<Delta\>t-\<epsilon\><rsup|\<alpha\>>|]>
+    \<mathi\>k<rsub|\<alpha\>>-<frac|\<Delta\>t|2!>K<rsub|2><rsup|\<alpha\>\<beta\>><around*|(|x|)>
+    k<rsub|\<alpha\>>k<rsub|\<beta\>>-<frac|\<mathi\>\<Delta\>t|3!>K<rsub|3><rsup|\<alpha\>\<beta\>\<gamma\>><around*|(|x|)>
+    k<rsub|\<alpha\>>k<rsub|\<beta\>> k<rsub|\<gamma\>>+\<cdots\>+\<omicron\><around*|(|\<Delta\>t|)>|)>.<label|equation:path
+    integral step 2>
+  </equation>
+
+  The summation terminates at the cut-off <math|N<rsub|cut>> of
+  <math|K<rsub|n>> (for the necessity of cut-off, see section
+  <reference|section: Cut-off in the Moments of Transition Rate Is Essential
+  for Spatial Smoothness>).\ 
+
+  This integral is complicated except for <math|N<rsub|cut>=2> where it
+  becomes a Gaussian integral, and the Markovian process deduces to a
+  Langevin process, defined in section <reference|section: Langevin Process
+  Is a Markovian Process with Ncut=2>. In this situation, we have (re-denote
+  <math|K<rsub|1>> by <math|f> and <math|K<rsub|2>> by <math|\<Sigma\>> as in
+  section <reference|section: Langevin Process Is a Markovian Process with
+  Ncut=2>)
+
+  <\equation*>
+    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k
+    \ exp<around*|(|<around*|[|f<rsup|\<alpha\>><around*|(|x|)>
+    \<Delta\>t-\<epsilon\><rsup|\<alpha\>>|]>
+    \<mathi\>k<rsub|\<alpha\>>-<frac|\<Delta\>t|2!>\<Sigma\><rsup|\<alpha\>\<beta\>><around*|(|x|)>
+    k<rsub|\<alpha\>>k<rsub|\<beta\>>+\<omicron\><around*|(|\<Delta\>t|)>|)>.
+  </equation*>
+
+  As proved in the same section, <math|\<Sigma\>> is everywhere positive
+  definite. Then by the formula of Gaussian integral, which holds for any
+  positive definite matrix <math|A>,
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x exp<around*|(|-<frac|1|2>
+    A<rsub|\<alpha\>\<beta\>> x<rsup|\<alpha\>>
+    x<rsup|\<beta\>>+b<rsub|\<alpha\>> x<rsup|\<alpha\>>|)>=<sqrt|<frac|<around*|(|2\<mathpi\>|)><rsup|d>|det
+    A>> exp<around*|(|<frac|1|2> <around*|(|A<rsup|-1>|)><rsup|\<alpha\>\<beta\>>
+    b<rsub|\<alpha\>> b<rsub|\<beta\>>|)>,
+  </equation*>
+
+  we find (replace <math|A<rsub|\<alpha\>\<beta\>>> by
+  <math|\<Sigma\><rsup|\<alpha\>\<beta\>><around*|(|x|)> \<Delta\>t> and
+  <math|b<rsub|\<alpha\>>> by <math|\<mathi\>
+  <around*|[|f<rsup|\<alpha\>><around*|(|x|)>
+  \<Delta\>t-\<epsilon\><rsup|\<alpha\>>|]>>)
+
+  <\equation*>
+    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>=<around*|(|<frac|2\<mathpi\>|\<Delta\>t>|)><rsup|d/2><frac|1|<sqrt|det
+    \<Sigma\><around*|(|x|)>>> exp<around*|(|-<frac|\<Delta\>t|2><around*|[|\<Sigma\><rsup|-1><around*|(|x|)>|]><rsub|\<alpha\>\<beta\>>
+    <around*|[|<frac|\<epsilon\><rsup|\<alpha\>>|\<Delta\>t>-f<rsup|\<alpha\>><around*|(|x|)>|]>
+    <around*|[|<frac|\<epsilon\><rsup|\<beta\>>|\<Delta\>t>-f<rsup|\<beta\>><around*|(|x|)>|]>+\<omicron\><around*|(|\<Delta\>t|)>|)>.
+  </equation*>
+
+  It indicates that the transition density of Langevin process is
+  approximately Gaussian.
+
+  Now, non-constant terms are all in the exponential except for the
+  <math|<around*|[|det \<Sigma\><around*|(|x|)>|]><rsup|-1/2>> factor. We are
+  to move it into exponential too. We first use Cholesky factorization to
+  remove the root, and then using Berezin integral to convert determinant to
+  exponential.
+
+  To introduce Cholesky factorization, we fix the argument <math|x> and omit
+  it for simplicity, so <math|\<Sigma\><around*|(|x|)>> is written as
+  <math|\<Sigma\>>. Since <math|\<Sigma\>> is symmetric and positive
+  definite, we can diagonalize it using an orthogonal matrix <math|E> as
+  <math|\<Sigma\>=E<rsup|T> \<Lambda\> E>, where the diagonal
+  <math|\<Lambda\><rsub|\<alpha\>\<beta\>>=\<delta\><rsub|\<alpha\>\<beta\>>
+  \<lambda\><rsub|\<beta\>>> with <math|\<lambda\><rsub|\<beta\>>\<gtr\>0>.
+  Define <math|<sqrt|\<Lambda\>><rsub|\<alpha\>\<beta\>>\<assign\>\<delta\><rsub|\<alpha\>\<beta\>>
+  <sqrt|\<lambda\><rsub|\<beta\>>>>, thus
+  <math|\<Lambda\>=<sqrt|\<Lambda\>><rsup|T> <sqrt|\<Lambda\>>>, and
+  <math|\<Sigma\>=C<rsup|T> C> where <math|C\<assign\><sqrt|\<Lambda\>> E>.
+  We thus factorize <math|\<Sigma\>> into the \Psquare\Q of <math|C>. This
+  was first discovered by French military officer André-Louis Cholesky, who
+  was killed in battle a few months before the end of World War I, dead at
+  age 31. Instead of the matrix-valued field <math|C>, we use its inverse
+  (since both <math|E> and <math|<sqrt|\<Lambda\>>> are invertible)
+  <math|R\<assign\>C<rsup|-1>>, thus <math|\<Sigma\><rsup|-1>=R<rsup|T> R>,
+  or <math|<around*|(|\<Sigma\><rsup|-1>|)><rsub|\<alpha\>\<beta\>>=<big|sum><rsub|\<gamma\>=1><rsup|d>R<rsub|\<gamma\>\<alpha\>>R<rsub|\<gamma\>\<beta\>>>.
+  So, we have (insert the omitted <math|x> again)
+
+  <\equation*>
+    <around*|[|det \<Sigma\><around*|(|x|)>|]><rsup|-1/2>=det
+    R<around*|(|x|)>,
+  </equation*>
+
+  and thus
+
+  <\equation*>
+    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>=<around*|(|<frac|2\<mathpi\>|\<Delta\>t>|)><rsup|d/2>
+    <around*|[|det R<around*|(|x|)>|]> exp<around*|(|-<frac|\<Delta\>t|2><big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|R<rsub|\<alpha\>\<beta\>><around*|(|x|)>
+    <around*|(|<frac|\<epsilon\><rsup|\<beta\>>|\<Delta\>t>-f<rsup|\<beta\>><around*|(|x|)>|)>|]><rsup|2>+\<omicron\><around*|(|\<Delta\>t|)>|)>.
+  </equation*>
+
+  Now, the determinant gets rid of root (and fraction). Remark that
+  <math|R<around*|(|x|)>> may not be a symmetric matrix.
+
+  Next, we use Berezin integral to convert the determinant <math|det
+  R<around*|(|x|)>> to exponential. By the formula of Berezin integral for
+  any <math|A\<in\>\<bbb-C\><rsup|d\<times\>d>> (introduced in section
+  <reference|section: Preliminary: Grassmann Number and Berezin Integral>),
+
+  <\equation*>
+    <big|int>\<mathd\>\<zeta\><big|int>\<mathd\>\<eta\>
+    exp<around*|(|-A<rsub|\<alpha\>\<beta\>> \<zeta\><rsup|\<alpha\>>
+    \<eta\><rsup|\<beta\>>|)>=det A,
+  </equation*>
+
+  where <math|\<zeta\>> and <math|\<eta\>> are multi-dimensional Grassmann
+  numbers, we have (replacing <math|A> by <math|R<around*|(|x|)>\<Delta\>t>)
+
+  <\equation*>
+    <big|int>\<mathd\>\<zeta\><big|int>\<mathd\>\<eta\>
+    exp<around*|(|-\<Delta\>t R<rsub|\<alpha\>\<beta\>><around*|(|x|)>
+    \<zeta\><rsup|\<alpha\>> \<eta\><rsup|\<beta\>>|)>=det<around*|[|R<around*|(|x|)>\<Delta\>t|]>=\<Delta\>t<rsup|d>
+    det R<around*|(|x|)>,
+  </equation*>
+
+  we convert the determinant into exponential, as
+
+  <\equation*>
+    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>=<around*|(|<frac|2\<mathpi\>|\<Delta\>t<rsup|3>>|)><rsup|d/2>
+    <big|int>\<mathd\>\<theta\><big|int>\<mathd\>\<eta\>
+    \ exp<around*|(|-<frac|\<Delta\>t|2><big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|R<rsub|\<alpha\>\<beta\>><around*|(|x|)>
+    <around*|(|<frac|\<epsilon\><rsup|\<beta\>>|\<Delta\>t>-f<rsup|\<beta\>><around*|(|x|)>|)>|]><rsup|2>-\<Delta\>t
+    R<rsub|\<alpha\>\<beta\>><around*|(|x|)>\<zeta\><rsup|\<alpha\>>
+    \<eta\><rsup|\<beta\>>|)>.
+  </equation*>
+
+  \;
+
+  Plugging back to equation <reference|equation:path integral step 1>, we get
+
+  <\equation*>
+    p<around*|(|x<rsub|N>,N \<Delta\>t|)>=<big|int>\<mathD\><around*|(|x,\<zeta\>,\<eta\>|)>
+    exp<around*|(|-S<around*|(|x,\<zeta\>,\<eta\>|)>|)>
+    p<around*|(|x<rsub|0>,0|)>,
+  </equation*>
+
+  where the measurement is defined by
+
+  <\equation*>
+    <big|int>\<mathD\><around*|(|x,\<zeta\>,\<eta\>|)>\<assign\><around*|(|<frac|2\<mathpi\>|\<Delta\>t<rsup|3>>|)><rsup|N
+    d/2><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|0>\<cdots\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|N-1><big|int>\<mathd\>\<zeta\><rsub|0><big|int>\<mathd\>\<eta\><rsub|0>\<cdots\><big|int>\<mathd\>\<zeta\><rsub|N-1><big|int>\<mathd\>\<eta\><rsub|N-1>
+  </equation*>
+
+  and the \Paction\Q of Langevin process is
+
+  <\equation>
+    S<around*|(|x,\<zeta\>,\<eta\>|)>\<assign\><big|sum><rsub|i=0><rsup|N-1>\<Delta\>t<around*|{|<frac|1|2>
+    <big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>
+    <around*|(|<frac|x<rsub|i+1><rsup|\<beta\>>-x<rsub|i><rsup|\<beta\>>|\<Delta\>t>-f<rsup|\<beta\>><around*|(|x<rsub|i>|)>|)>|]><rsup|2>+R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>\<zeta\><rsup|\<alpha\>><rsub|i>\<eta\><rsub|i><rsup|\<beta\>>+\<omicron\><around*|(|1|)>|}>.<label|equation:langevin
+    action>
+  </equation>
+
+  \;
+
+  By formally taking <math|\<Delta\>t\<rightarrow\>0> and
+  <math|N\<rightarrow\>+\<infty\>> while keeping <math|N \<Delta\>t> finite,
+  and replacing the discrete index <math|i> with a continuous variable
+  <math|t\<in\><around*|[|0,t<rsub|f>|]>>, the action becomes
+
+  <\equation*>
+    S<around*|(|x,\<zeta\>,\<eta\>|)>\<rightarrow\><big|int><rsub|0><rsup|t<rsub|f>>\<mathd\>t<around*|{|<frac|1|2>
+    <big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|R<rsub|\<alpha\>\<beta\>><around*|(|x<around*|(|t|)>|)>
+    <around*|(|<frac|\<mathd\>x<rsup|\<beta\>>|\<mathd\>t><around*|(|t|)>-f<rsup|\<beta\>><around*|(|x<around*|(|t|)>|)>|)>|]><rsup|2>+R<rsub|\<alpha\>\<beta\>><around*|(|x<around*|(|t|)>|)>
+    \<zeta\><rsup|\<alpha\>><around*|(|t|)>
+    \<eta\><rsup|\<beta\>><around*|(|t|)>|}>,
+  </equation*>
+
+  in which <math|<around*|(|\<mathd\>x/\<mathd\>t|)><around*|(|t|)>\<assign\><around*|(|x<rsub|i+1>-x<rsub|i>|)>/\<Delta\>t>.
+  These are formal definitions, and we will never really take the limit
+  <math|\<Delta\>t\<rightarrow\>0> and <math|N\<rightarrow\>+\<infty\>> since
+  it is numerically not well-defined. For example, the
+  <math|<big|int>\<mathD\><around*|(|x,\<zeta\>,\<eta\>|)>> diverges, so is
+  the <math|<around*|(|\<mathd\>x/\<mathd\>t|)><around*|(|t|)>>.
+
+  As a summary, we find the master equation of Langevin process can be
+  formulated as a path integral, in which the action is given by equation
+  <reference|equation:langevin action>, in which <math|\<zeta\>> and
+  <math|\<eta\>> are independent Grassmann numbers.
+
+  Final remark on cut-off <math|N<rsub|cut>=2>. If choose
+  <math|N<rsub|cut>\<gtr\>2>, it is hard to see how to integrate the improper
+  integral <reference|equation:path integral step 2>, and even to show why it
+  is finite. For example, if <math|N<rsub|cut>=4>, the
+  <math|<around*|(|\<Delta\>t/4!|)>K<rsup|\<alpha\>\<beta\>\<gamma\>\<sigma\>><rsub|4><around*|(|x|)>
+  k<rsub|\<alpha\>>k<rsub|\<beta\>>k<rsub|\<gamma\>>k<rsub|\<sigma\>>> term
+  will dominate the integral when <math|k> is far from origin. But we cannot
+  ensure that this term will suppress the integrand as
+  <math|<around*|\<\|\|\>|k|\<\|\|\>>\<rightarrow\>+\<infty\>> so as to make
+  the improper integral finite. We cannot even diagonalize the fourth order
+  symmetric tensor <math|K<rsub|4><around*|(|x|)>> (because diagonalizing a
+  fourth order symmetric tensor has <math|<with|font|cal|O><around*|(|d<rsup|4>|)>>
+  restrictions, but a coordinate transformation has only
+  <math|<with|font|cal|O><around*|(|d<rsup|2>|)>> degrees of freedom, so this
+  cannot be done except for specific situations).
+
+  <subsection|Least-Action Principle of Distribution Has No Redundancy
+  (TODO)><label|section: Least-Action Principle of Distribution Has No
   Redundancy>
+
+  a <strong|movie of evolution>.
 
   Dynamics in classical mechanics are always deterministic. That is, once the
   initial conditions (for initial value problem) or the boundaries (for
   boundary value problem) are fixed, then the path is fully determined, in
   which randomness is forbidden. There are, however, many phenomena in nature
-  that have <em|intrinsic> randomness. For example, Langevin process
-  <math|\<mathd\>X<around*|(|t|)>=f<around*|(|X<around*|(|t|)>|)>
-  \<mathd\>t+\<mathd\>W<around*|(|t|)>>, which was originally used to
-  describe molecular movement, has a stochastic term
-  <math|\<mathd\>W<around*|(|t|)>> obeying a normal distribution with
-  variance proportional to <math|\<mathd\>t>. The dynamics of starling flocks
-  also has intrinsic randomness, which is the \Pfree will\Q of each bird, so
-  is ant colony, human society, and any interactive system in which each
-  element has some level of intrinsic uncertainty. For these cases, the real
-  world datum is not simply a path, but a distribution of path. Precisely, we
-  use a distribution <math|Q> to describe real world phenomenon that has
-  intrinsic randomness.
+  that have <em|intrinsic> randomness. For example, Langevin process is
+  originally used to describe molecular movement, which has randomness
+  obeying a normal distribution with variance proportional to time interval.
+  The dynamics of starling flocks also has intrinsic randomness, which is the
+  \Pfree will\Q of each bird, so is ant colony, human society, and any
+  interactive system in which each element has some level of intrinsic
+  uncertainty. For these cases, the real world datum is not simply a path,
+  but a distribution of path. Precisely, we use a distribution <math|Q> to
+  describe real world phenomenon that has intrinsic randomness.
 
   For any density function <math|q<around*|(|x|)>>, we can always define, up
   to an arbitrary constant,
@@ -3201,344 +3544,9 @@
   discrete random variables, Metropolis-Hastings (section <reference|section:
   Example: Metropolis-Hastings Algorithm>) is available.
 
-  <subsection|Langevin Process Can Be Formulated as Path Integral
-  (TODO)><label|section: Master Equation on Euclidean Alphabet Can Be
-  Formulated as Path Integral>
-
-  In this section, we are to formulate the master equation into path
-  integral. The path integral formulation was found by Paul Dirac in 1933 who
-  was trying to using Lagrangian in quantum mechanism. It was then developed
-  by Richard Feynman in 1948. Now, path integral is applied not only to
-  quantum field theory, but also many other areas such as stochastic process.
-
-  To derive a path integral formulation for master equation, we follow the
-  standard derivation of path integral for quantum mechanism.<\footnote>
-    For example, section 1.2 of <with|font-shape|italic|Quantum Field Theory
-    in a Nutshell>, by A. Zee, second edition.
-  </footnote> In this derivation, we first consider the discrete time master
-  equation <reference|equation:discrete time master equation>. The evolution
-  is given by a series of the transition density
-  <math|q<rsub|\<Delta\>t><around*|(|x<rsub|i+1>\|x<rsub|i>|)>> with the
-  iterative step <math|i\<in\><around*|{|0,1,\<ldots\>,N|}>>. By repeatedly
-  applying master equation <reference|equation:discrete time master
-  equation>, we get
-
-  <\equation>
-    p<around*|(|x<rsub|N>,N \<Delta\>t|)>=<big|int><rsub|\<cal-X\>>\<mathd\>x<rsub|N-1>\<cdots\><big|int><rsub|\<cal-X\>>\<mathd\>x<rsub|0>
-    q<rsub|\<Delta\>t><around*|(|x<rsub|N>\|x<rsub|N-1>|)>\<cdots\>
-    q<rsub|\<Delta\>t><around*|(|x<rsub|1>\|x<rsub|0>|)>
-    p<around*|(|x<rsub|0>,0|)>.<label|equation:path integral step 1>
-  </equation>
-
-  \;
-
-  The next step is assuming <math|\<Delta\>t> is small and re-expressing
-  <math|q<rsub|\<Delta\>t><around*|(|x<rsub|i+1>\|x<rsub|i>|)>> in
-  exponential. That is, we are to calculate <math|ln
-  q<rsub|\<Delta\>t><around*|(|x<rsub|i+1>\|x<rsub|i>|)>> when
-  <math|\<Delta\>t> is sufficiently small. To make it well-defined, we assume
-  that <math|r<around*|(|x,y|)>\<gtr\>0> for any <math|x,y\<in\>\<cal-X\>>
-  with <math|x\<neq\>y>. This is essential and sufficient for
-  <math|q<rsub|\<Delta\>t><around*|(|x\|y|)>\<gtr\>0>, at least when
-  <math|\<Delta\>t> is small.
-
-  Since transition rate has completely determined the Markovian process (see
-  section <reference|section: Transition Rate Determines Transition
-  Density>), we are to express the <math|ln
-  q<rsub|\<Delta\>t><around*|(|x\|y|)>> in terms of <math|r>. This, however,
-  cannot be straight-forward since the leading term of
-  <math|q<rsub|\<Delta\>t><around*|(|x\|y|)>> is
-  <math|\<delta\><around*|(|x-y|)>> which cannot be converted into
-  exponential. But, we can consider its Fourier transform, since
-  <math|\<delta\><around*|(|x-y|)>>, if regarding as a Dirac's delta
-  function, has exponential Fourier coefficient
-  <math|exp<around*|(|-\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>|)>>.
-  This suggest us to consider the Fourier transform of transition rate, as
-
   <\equation*>
-    <wide|r|^><around*|(|x,k|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
-    exp<around*|(|\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>
-    r<around*|(|x+\<epsilon\>,x|)>.
+    \;
   </equation*>
-
-  This forces the alphabet <math|\<cal-X\>> to be Euclidean space
-  <math|\<bbb-R\><rsup|d>>, because we cannot perform the same thing on
-  Kronecker's delta when the alphabet is discrete, or when the alphabet is
-  continuous but not Euclidean. Then, we have
-
-  <\equation*>
-    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>=\<delta\><around*|(|\<epsilon\>|)>+r<around*|(|x+\<epsilon\>,x|)>
-    \<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k
-    \ exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>
-    <around*|[|1+<wide|r|^><around*|(|x,k|)>
-    \<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>|]>.
-  </equation*>
-
-  Now, the <math|<around*|[|\<cdots\>|]>> part can be converted into
-  exponential as <math|exp<around*|(|<wide|r|^><around*|(|x,k|)>
-  \<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>|)>>, so that
-
-  <\equation*>
-    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k
-    \ exp<around*|{|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>+<wide|r|^><around*|(|x,k|)>
-    \<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>|}>.
-  </equation*>
-
-  We are to integrate over <math|k>. If we Taylor expand
-  <math|<wide|r|^><around*|(|x,k|)>> by <math|\<mathi\>k> at <math|k=0>, then
-  the expansion coefficient is
-
-  <\equation*>
-    lim<rsub|k\<rightarrow\>0><frac|\<partial\>|\<partial\><around*|(|\<mathi\>k<rsub|\<alpha\><rsub|1>>|)>>\<cdots\><frac|\<partial\>|\<partial\><around*|(|\<mathi\>k<rsub|\<alpha\><rsub|n>>|)>><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
-    exp<around*|(|\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>
-    r<around*|(|x+\<epsilon\>,x|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
-    <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|)>
-    r<around*|(|x+\<epsilon\>,x|)>=K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>.
-  </equation*>
-
-  We meet the moments of transition rate again (it first appears in section
-  <reference|section: Cut-off in the Moments of Transition Rate Is Essential
-  for Spatial Smoothness>). Thus, we have
-
-  <\equation*>
-    <wide|r|^><around*|(|x,k|)>=K<rsub|1><rsup|\<alpha\>><around*|(|x|)>
-    <around*|(|\<mathi\>k<rsub|\<alpha\>>|)>+<frac|1|2!>
-    K<rsub|2><rsup|\<alpha\>\<beta\>><around*|(|x|)>
-    <around*|(|\<mathi\>k<rsub|\<alpha\>>|)>
-    <around*|(|\<mathi\>k<rsub|\<beta\>>|)>+<frac|1|3!>K<rsub|3><rsup|\<alpha\>\<beta\>\<gamma\>><around*|(|x|)>
-    <around*|(|\<mathi\>k<rsub|\<alpha\>>|)>
-    <around*|(|\<mathi\>k<rsub|\<beta\>>|)>
-    <around*|(|\<mathi\>k<rsub|\<gamma\>>|)>+\<cdots\>,
-  </equation*>
-
-  where the zeroth order term vanishes because of the property of transition
-  rate <math|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
-  r<around*|(|x+\<epsilon\>\|x|)>=0>. Then, we find
-  <math|q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>> to be
-
-  <\equation>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k
-    \ exp<around*|(|<around*|[|K<rsub|1><rsup|\<alpha\>><around*|(|x|)>
-    \<Delta\>t-\<epsilon\><rsup|\<alpha\>>|]>
-    \<mathi\>k<rsub|\<alpha\>>-<frac|\<Delta\>t|2!>K<rsub|2><rsup|\<alpha\>\<beta\>><around*|(|x|)>
-    k<rsub|\<alpha\>>k<rsub|\<beta\>>-<frac|\<mathi\>\<Delta\>t|3!>K<rsub|3><rsup|\<alpha\>\<beta\>\<gamma\>><around*|(|x|)>
-    k<rsub|\<alpha\>>k<rsub|\<beta\>> k<rsub|\<gamma\>>+\<cdots\>+\<omicron\><around*|(|\<Delta\>t|)>|)>.<label|equation:path
-    integral step 2>
-  </equation>
-
-  The summation terminates at the cut-off <math|N<rsub|cut>> of
-  <math|K<rsub|n>> (for the necessity of cut-off, see section
-  <reference|section: Cut-off in the Moments of Transition Rate Is Essential
-  for Spatial Smoothness>).\ 
-
-  This integral is complicated except for <math|N<rsub|cut>=2> where it
-  becomes a Gaussian integral, and the Markovian process deduces to a
-  Langevin process, defined in section <reference|section: Langevin Process
-  Is a Markovian Process with Ncut=2>. In this situation, we have (re-denote
-  <math|K<rsub|1>> by <math|f> and <math|K<rsub|2>> by <math|\<Sigma\>> as in
-  section <reference|section: Langevin Process Is a Markovian Process with
-  Ncut=2>)
-
-  <\equation*>
-    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k
-    \ exp<around*|(|<around*|[|f<rsup|\<alpha\>><around*|(|x|)>
-    \<Delta\>t-\<epsilon\><rsup|\<alpha\>>|]>
-    \<mathi\>k<rsub|\<alpha\>>-<frac|\<Delta\>t|2!>\<Sigma\><rsup|\<alpha\>\<beta\>><around*|(|x|)>
-    k<rsub|\<alpha\>>k<rsub|\<beta\>>+\<omicron\><around*|(|\<Delta\>t|)>|)>.
-  </equation*>
-
-  As proved in the same section, <math|\<Sigma\>> is everywhere positive
-  definite. Then by the formula of Gaussian integral, which holds for any
-  positive definite matrix <math|A>,
-
-  <\equation*>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x exp<around*|(|-<frac|1|2>
-    A<rsub|\<alpha\>\<beta\>> x<rsup|\<alpha\>>
-    x<rsup|\<beta\>>+b<rsub|\<alpha\>> x<rsup|\<alpha\>>|)>=<sqrt|<frac|<around*|(|2\<mathpi\>|)><rsup|d>|det
-    A>> exp<around*|(|<frac|1|2> <around*|(|A<rsup|-1>|)><rsup|\<alpha\>\<beta\>>
-    b<rsub|\<alpha\>> b<rsub|\<beta\>>|)>,
-  </equation*>
-
-  we find (replace <math|A<rsub|\<alpha\>\<beta\>>> by
-  <math|\<Sigma\><rsup|\<alpha\>\<beta\>><around*|(|x|)> \<Delta\>t> and
-  <math|b<rsub|\<alpha\>>> by <math|\<mathi\>
-  <around*|[|f<rsup|\<alpha\>><around*|(|x|)>
-  \<Delta\>t-\<epsilon\><rsup|\<alpha\>>|]>>)
-
-  <\equation*>
-    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>=<around*|(|<frac|2\<mathpi\>|\<Delta\>t>|)><rsup|d/2><frac|1|<sqrt|det
-    \<Sigma\><around*|(|x|)>>> exp<around*|(|-<frac|\<Delta\>t|2><around*|[|\<Sigma\><rsup|-1><around*|(|x|)>|]><rsub|\<alpha\>\<beta\>>
-    <around*|[|<frac|\<epsilon\><rsup|\<alpha\>>|\<Delta\>t>-f<rsup|\<alpha\>><around*|(|x|)>|]>
-    <around*|[|<frac|\<epsilon\><rsup|\<beta\>>|\<Delta\>t>-f<rsup|\<beta\>><around*|(|x|)>|]>+\<omicron\><around*|(|\<Delta\>t|)>|)>.
-  </equation*>
-
-  It indicates that the transition density of Langevin process is
-  approximately Gaussian.
-
-  Now, non-constant terms are all in the exponential except for the
-  <math|<around*|[|det \<Sigma\><around*|(|x|)>|]><rsup|-1/2>> factor. We are
-  to move it into exponential too. We first use Cholesky factorization to
-  remove the root, and then using Berezin integral to convert determinant to
-  exponential.
-
-  To introduce Cholesky factorization, we fix the argument <math|x> and omit
-  it for simplicity, so <math|\<Sigma\><around*|(|x|)>> is written as
-  <math|\<Sigma\>>. Since <math|\<Sigma\>> is symmetric and positive
-  definite, we can diagonalize it using an orthogonal matrix <math|E> as
-  <math|\<Sigma\>=E<rsup|T> \<Lambda\> E>, where the diagonal
-  <math|\<Lambda\><rsub|\<alpha\>\<beta\>>=\<delta\><rsub|\<alpha\>\<beta\>>
-  \<lambda\><rsub|\<beta\>>> with <math|\<lambda\><rsub|\<beta\>>\<gtr\>0>.
-  Define <math|<sqrt|\<Lambda\>><rsub|\<alpha\>\<beta\>>\<assign\>\<delta\><rsub|\<alpha\>\<beta\>>
-  <sqrt|\<lambda\><rsub|\<beta\>>>>, thus
-  <math|\<Lambda\>=<sqrt|\<Lambda\>><rsup|T> <sqrt|\<Lambda\>>>, and
-  <math|\<Sigma\>=C<rsup|T> C> where <math|C\<assign\><sqrt|\<Lambda\>> E>.
-  We thus factorize <math|\<Sigma\>> into the \Psquare\Q of <math|C>. This
-  was first discovered by French military officer André-Louis Cholesky, who
-  was killed in battle a few months before the end of World War I, dead at
-  age 31. Instead of the matrix-valued field <math|C>, we use its inverse
-  (since both <math|E> and <math|<sqrt|\<Lambda\>>> are invertible)
-  <math|R\<assign\>C<rsup|-1>>, thus <math|\<Sigma\><rsup|-1>=R<rsup|T> R>,
-  or <math|<around*|(|\<Sigma\><rsup|-1>|)><rsub|\<alpha\>\<beta\>>=<big|sum><rsub|\<gamma\>=1><rsup|d>R<rsub|\<gamma\>\<alpha\>>R<rsub|\<gamma\>\<beta\>>>.
-  So, we have (insert the omitted <math|x> again)
-
-  <\equation*>
-    <around*|[|det \<Sigma\><around*|(|x|)>|]><rsup|-1/2>=det
-    R<around*|(|x|)>,
-  </equation*>
-
-  and thus
-
-  <\equation*>
-    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>=<around*|(|<frac|2\<mathpi\>|\<Delta\>t>|)><rsup|d/2>
-    <around*|[|det R<around*|(|x|)>|]> exp<around*|(|-<frac|\<Delta\>t|2><big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|R<rsub|\<alpha\>\<beta\>><around*|(|x|)>
-    <around*|(|<frac|\<epsilon\><rsup|\<beta\>>|\<Delta\>t>-f<rsup|\<beta\>><around*|(|x|)>|)>|]><rsup|2>|)>.
-  </equation*>
-
-  Now, the determinant gets rid of root (and fraction). Remark that
-  <math|R<around*|(|x|)>> may not be a symmetric matrix.
-
-  Next, we use Berezin integral to convert the determinant <math|det
-  R<around*|(|x|)>> to exponential. We have to briefly introduce Grassmann
-  number, on which Berezin integral is based. Grassmann number is an
-  extension of complex number,by introducing in the anti-commutative numbers.
-  Given a set of anti-commutative numbers
-  <math|<around*|{|\<theta\><rsub|i>\|i=1,\<ldots\>,n|}>>, where we treat
-  each <math|\<theta\><rsub|i>> as an abstract variable. We demand that the
-  anti-commutative relation between <math|\<theta\>>s
-
-  <\equation*>
-    \<theta\><rsub|i> \<theta\><rsub|j>=-\<theta\><rsub|j> \<theta\><rsub|i>.
-  </equation*>
-
-  But for any complex number <math|z>, we demand a commutative relation
-
-  <\equation*>
-    z \<theta\><rsub|i>=\<theta\><rsub|i> z.
-  </equation*>
-
-  TODO
-
-  By the formula of Berezin integral for any
-  <math|A\<in\>\<bbb-C\><rsup|d\<times\>d>>,
-
-  <\equation*>
-    <big|int>\<mathd\>\<theta\><big|int>\<mathd\>\<eta\>
-    exp<around*|(|-A<rsub|\<alpha\>\<beta\>> \<theta\><rsup|\<alpha\>>
-    \<eta\><rsup|\<beta\>>|)>=det A,
-  </equation*>
-
-  where <math|\<theta\>> and <math|\<eta\>> are multi-dimensional Grassmann
-  numbers, we have (replacing the Grassmann numbers <math|\<theta\>> and
-  <math|\<eta\>> by <math|\<psi\>> and <math|<wide|\<psi\>|\<bar\>>>
-  respectively, and the matrix <math|A> by <math|R<around*|(|x|)>>)
-
-  <\equation*>
-    <big|int>\<mathd\>\<psi\><big|int>\<mathd\><wide|\<psi\>|\<bar\>>
-    exp<around*|(|-\<Delta\>t R<rsub|\<alpha\>\<beta\>><around*|(|x|)>
-    \<psi\><rsup|\<alpha\>> <wide|\<psi\>|\<bar\>><rsup|\<beta\>>|)>=det<around*|[|R<around*|(|x|)>
-    \<Delta\>t|]>=\<Delta\>t<rsup|d> det R<around*|(|x|)>,
-  </equation*>
-
-  we convert the determinant into exponential, as
-
-  <\equation*>
-    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>=<around*|(|<frac|2\<mathpi\>|\<Delta\>t<rsup|3>>|)><rsup|d/2>
-    <big|int>\<mathd\>\<psi\><big|int>\<mathd\><wide|\<psi\>|\<bar\>>
-    exp<around*|(|-<frac|\<Delta\>t|2><big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|R<rsub|\<alpha\>\<beta\>><around*|(|x|)>
-    <around*|(|<frac|\<epsilon\><rsup|\<beta\>>|\<Delta\>t>-f<rsup|\<beta\>><around*|(|x|)>|)>|]><rsup|2>-\<Delta\>t
-    R<rsub|\<alpha\>\<beta\>><around*|(|x|)> \<psi\><rsup|\<alpha\>>
-    <wide|\<psi\>|\<bar\>><rsup|\<beta\>>|)>.
-  </equation*>
-
-  \;
-
-  Plugging back to equation <reference|equation:path integral step 1>, we get
-
-  <\equation*>
-    p<around*|(|x<rsub|N>,N \<Delta\>t|)>=<big|int>\<mathD\><around*|[|x,\<psi\>,<wide|\<psi\>|\<bar\>>|]>
-    exp<around*|(|-S<around*|(|x,\<psi\>,<wide|\<psi\>|\<bar\>>|)>|)>
-    p<around*|(|x<rsub|0>,0|)>,
-  </equation*>
-
-  where the measurement is defined by
-
-  <\equation*>
-    <big|int>\<mathD\><around*|[|x,\<psi\>,<wide|\<psi\>|\<bar\>>|]>\<assign\><around*|(|<frac|2\<mathpi\>|\<Delta\>t<rsup|3>>|)><rsup|N
-    d/2><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|0>\<cdots\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|N-1><big|int>\<mathd\>\<psi\><rsub|0><big|int>\<mathd\><wide|\<psi\>|\<bar\>><rsub|0>\<cdots\><big|int>\<mathd\>\<psi\><rsub|N-1><big|int>\<mathd\><wide|\<psi\>|\<bar\>><rsub|N-1>
-  </equation*>
-
-  and the \Paction of Langevin process\Q is
-
-  <\equation>
-    S<around*|(|x,\<psi\>,<wide|\<psi\>|\<bar\>>|)>\<assign\><big|sum><rsub|i=0><rsup|N-1>\<Delta\>t<around*|{|<frac|1|2>
-    <big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>
-    <around*|(|<frac|x<rsub|i+1><rsup|\<beta\>>-x<rsub|i><rsup|\<beta\>>|\<Delta\>t>-f<rsup|\<beta\>><around*|(|x<rsub|i>|)>|)>|]><rsup|2>+R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>
-    \<psi\><rsub|i><rsup|\<alpha\>> <wide|\<psi\>|\<bar\>><rsub|i><rsup|\<beta\>>+\<omicron\><around*|(|1|)>|}>.<label|equation:langevin
-    action>
-  </equation>
-
-  \;
-
-  By formally taking <math|\<Delta\>t\<rightarrow\>0> and
-  <math|N\<rightarrow\>+\<infty\>> while keeping <math|N \<Delta\>t> finite,
-  and replacing the discrete index <math|i> with a continuous variable
-  <math|t\<in\><around*|[|0,t<rsub|f>|]>>, the action becomes
-
-  <\equation*>
-    S<around*|(|x,\<psi\>,<wide|\<psi\>|\<bar\>>|)>\<rightarrow\><big|int><rsub|0><rsup|t<rsub|f>>\<mathd\>t<around*|{|<frac|1|2>
-    <big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|R<rsub|\<alpha\>\<beta\>><around*|(|x<around*|(|t|)>|)>
-    <around*|(|<frac|\<mathd\>x<rsup|\<beta\>>|\<mathd\>t><around*|(|t|)>-f<rsup|\<beta\>><around*|(|x<around*|(|t|)>|)>|)>|]><rsup|2>+R<rsub|\<alpha\>\<beta\>><around*|(|x<around*|(|t|)>|)>
-    \<psi\><rsup|\<alpha\>><around*|(|t|)>
-    <wide|\<psi\>|\<bar\>><rsup|\<beta\>><around*|(|t|)>|}>,
-  </equation*>
-
-  in which <math|<around*|(|\<mathd\>x/\<mathd\>t|)><around*|(|t|)>\<assign\><around*|(|x<rsub|i+1>-x<rsub|i>|)>/\<Delta\>t>.
-  These are formal definitions, and we will never really take the limit
-  <math|\<Delta\>t\<rightarrow\>0> and <math|N\<rightarrow\>+\<infty\>> since
-  it is numerically not well-defined. For example, the
-  <math|<big|int>\<mathD\><around*|[|x,\<psi\>,<wide|\<psi\>|\<bar\>>|]>>
-  diverges, so is the <math|<around*|(|\<mathd\>x/\<mathd\>t|)><around*|(|t|)>>.
-
-  As a summary, we find the master equation of Langevin process can be
-  formulated as a path integral, in which the action is given by equation
-  <reference|equation:langevin action>, in which <math|\<psi\>> and
-  <math|<wide|\<psi\>|\<bar\>>> are independent Grassmann numbers.
-
-  Final remark on cut-off <math|N<rsub|cut>=2>. If choose
-  <math|N<rsub|cut>\<gtr\>2>, it is hard to see how to integrate the improper
-  integral <reference|equation:path integral step 2>, and even to show why it
-  is finite. For example, if <math|N<rsub|cut>=4>, the
-  <math|<around*|(|\<Delta\>t/4!|)>K<rsup|\<alpha\>\<beta\>\<gamma\>\<sigma\>><rsub|4><around*|(|x|)>
-  k<rsub|\<alpha\>>k<rsub|\<beta\>>k<rsub|\<gamma\>>k<rsub|\<sigma\>>> term
-  will dominate the integral when <math|k> is far from origin. But we cannot
-  ensure that this term will suppress the integrand as
-  <math|<around*|\<\|\|\>|k|\<\|\|\>>\<rightarrow\>+\<infty\>> so as to make
-  the improper integral finite. We cannot even diagonalize the fourth order
-  symmetric tensor <math|K<rsub|4><around*|(|x|)>> (because diagonalizing a
-  fourth order symmetric tensor has <math|<with|font|cal|O><around*|(|d<rsup|4>|)>>
-  restrictions, but a coordinate transformation has only
-  <math|<with|font|cal|O><around*|(|d<rsup|2>|)>> degrees of freedom, so this
-  cannot be done except for specific situations).
 </body>
 
 <\initial>
@@ -3570,10 +3578,11 @@
     <associate|auto-25|<tuple|4.1|25>>
     <associate|auto-26|<tuple|4.2|25>>
     <associate|auto-27|<tuple|4.3|26>>
-    <associate|auto-28|<tuple|4.4|27>>
-    <associate|auto-29|<tuple|1|28>>
+    <associate|auto-28|<tuple|4.4|26>>
+    <associate|auto-29|<tuple|4.5|29>>
     <associate|auto-3|<tuple|1.2|2>>
-    <associate|auto-30|<tuple|4.5|28>>
+    <associate|auto-30|<tuple|4.6|30>>
+    <associate|auto-31|<tuple|1|31>>
     <associate|auto-4|<tuple|1.3|3>>
     <associate|auto-5|<tuple|1.4|3>>
     <associate|auto-6|<tuple|2|4>>
@@ -3583,28 +3592,28 @@
     <associate|equation:Detailed Balance|<tuple|8|8>>
     <associate|equation:Detailed Balance for transition density|<tuple|9|8>>
     <associate|equation:Fokker-Planck equation|<tuple|19|23>>
-    <associate|equation:action of distribution|<tuple|25|26>>
+    <associate|equation:action of distribution|<tuple|28|29>>
     <associate|equation:circle|<tuple|15|14>>
-    <associate|equation:data-fitting iteration|<tuple|27|27>>
-    <associate|equation:data-fitting result|<tuple|28|27>>
+    <associate|equation:data-fitting iteration|<tuple|30|30>>
+    <associate|equation:data-fitting result|<tuple|31|30>>
     <associate|equation:define stationary density function|<tuple|14|14>>
     <associate|equation:detailed balance condition for
     Langevin|<tuple|21|24>>
     <associate|equation:discrete time master equation|<tuple|5|5>>
     <associate|equation:discrete time master equation v0|<tuple|2|5>>
     <associate|equation:equation:metropolis-hastings|<tuple|12|13>>
-    <associate|equation:generic density|<tuple|26|27>>
+    <associate|equation:generic density|<tuple|29|30>>
     <associate|equation:harmonic oscillator action|<tuple|22|25>>
     <associate|equation:km expansion|<tuple|16|19>>
-    <associate|equation:langevin action|<tuple|31|31>>
+    <associate|equation:langevin action|<tuple|27|29>>
     <associate|equation:langevin transition rate|<tuple|18|22>>
     <associate|equation:least-action principle v0|<tuple|23|25>>
     <associate|equation:least-action principle v1|<tuple|24|26>>
     <associate|equation:master equation|<tuple|4|5>>
     <associate|equation:master equation v0|<tuple|3|5>>
     <associate|equation:metropolis-hastings origin|<tuple|13|13>>
-    <associate|equation:path integral step 1|<tuple|29|29>>
-    <associate|equation:path integral step 2|<tuple|30|29>>
+    <associate|equation:path integral step 1|<tuple|25|27>>
+    <associate|equation:path integral step 2|<tuple|26|27>>
     <associate|equation:relative entropy derivative|<tuple|11|9>>
     <associate|equation:stationary Fokker-Planck equation|<tuple|20|23>>
     <associate|equation:transition density normalization|<tuple|1|5>>
@@ -3613,14 +3622,14 @@
     <associate|equation:transition rate determines transition density
     v2|<tuple|7|7>>
     <associate|equation:wiener process|<tuple|17|22>>
-    <associate|figure: Least-Action|<tuple|1|28>>
+    <associate|figure: Least-Action|<tuple|1|31>>
     <associate|footnote-1|<tuple|1|2>>
     <associate|footnote-10|<tuple|10|17>>
     <associate|footnote-11|<tuple|11|17>>
     <associate|footnote-12|<tuple|12|20>>
     <associate|footnote-13|<tuple|13|20>>
     <associate|footnote-14|<tuple|14|26>>
-    <associate|footnote-15|<tuple|15|29>>
+    <associate|footnote-15|<tuple|15|27>>
     <associate|footnote-2|<tuple|2|2>>
     <associate|footnote-3|<tuple|3|2>>
     <associate|footnote-4|<tuple|4|2>>
@@ -3635,7 +3644,7 @@
     <associate|footnr-12|<tuple|12|20>>
     <associate|footnr-13|<tuple|13|20>>
     <associate|footnr-14|<tuple|14|26>>
-    <associate|footnr-15|<tuple|15|29>>
+    <associate|footnr-15|<tuple|15|27>>
     <associate|footnr-2|<tuple|2|2>>
     <associate|footnr-3|<tuple|3|2>>
     <associate|footnr-4|<tuple|4|2>>
@@ -3650,7 +3659,7 @@
     <associate|section: Cut-off in the Moments of Transition Rate Is
     Essential for Spatial Smoothness|<tuple|3.2|15>>
     <associate|section: Data Fitting Is Equivalent to Least-Action Principle
-    of Distribution|<tuple|4.4|27>>
+    of Distribution|<tuple|4.6|30>>
     <associate|section: Detailed Balance Condition and Connectivity
     Monotonically Reduce Relative Entropy|<tuple|2.5|9>>
     <associate|section: Detailed Balance Provides Stationary
@@ -3665,15 +3674,17 @@
     Ncut=2|<tuple|3.6|22>>
     <associate|section: Least-Action Principle|<tuple|4|25>>
     <associate|section: Least-Action Principle of Distribution Has No
-    Redundancy|<tuple|4.3|26>>
+    Redundancy|<tuple|4.5|29>>
     <associate|section: Master Equation Describes the Evolution of Markov
     Process|<tuple|2.2|4>>
     <associate|section: Master Equation on Euclidean Alphabet Can Be
-    Formulated as Path Integral|<tuple|4.5|28>>
+    Formulated as Path Integral|<tuple|4.4|26>>
     <associate|section: Master Equation, Detailed Balance, and Relative
     Entropy|<tuple|2|4>>
     <associate|section: Monte-Carlo Simulation and Guarantee of
     Relaxation|<tuple|2.6|10>>
+    <associate|section: Preliminary: Grassmann Number and Berezin
+    Integral|<tuple|4.3|26>>
     <associate|section: Randomness Is Absent in the First Moment of
     Transition Rate|<tuple|3.4|20>>
     <associate|section: Relative Entropy|<tuple|1|1>>
@@ -3714,7 +3725,7 @@
       <with|mode|<quote|math>|x<rsub|1>> a local minimum of
       <with|mode|<quote|math>|S<around*|(|\<cdummy\>,\<theta\>|)>>, and
       <with|mode|<quote|math>|S<around*|(|\<cdummy\>,\<theta\>|)>> is
-      optimized to be the dashed green curve.>|<pageref|auto-29>>
+      optimized to be the dashed green curve.>|<pageref|auto-31>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Relative
@@ -3829,17 +3840,22 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-26>>
 
-      <with|par-left|<quote|1tab>|4.3<space|2spc>Least-Action Principle of
-      Distribution Has No Redundancy <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|4.3<space|2spc>Preliminary: Grassmann
+      Number and Berezin Integral (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-27>>
 
-      <with|par-left|<quote|1tab>|4.4<space|2spc>Data Fitting Is Equivalent
-      to Least-Action Principle of Distribution
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|4.4<space|2spc>Langevin Process Can Be
+      Formulated as Path Integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-28>>
 
-      <with|par-left|<quote|1tab>|4.5<space|2spc>Langevin Process Can Be
-      Formulated as Path Integral (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|4.5<space|2spc>Least-Action Principle of
+      Distribution Has No Redundancy (TODO)
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-29>>
+
+      <with|par-left|<quote|1tab>|4.6<space|2spc>Data Fitting Is Equivalent
+      to Least-Action Principle of Distribution
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-30>>
     </associate>
   </collection>
