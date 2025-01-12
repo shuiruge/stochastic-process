@@ -125,13 +125,17 @@
     <no-break><pageref|auto-28>>
 
     <with|par-left|1tab|4.5<space|2spc>Least-Action Principle of Distribution
-    Has No Redundancy (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    Has No Redundancy <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-29>>
 
     <with|par-left|1tab|4.6<space|2spc>Data Fitting Is Equivalent to
     Least-Action Principle of Distribution
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-30>>
+
+    <with|par-left|1tab|4.7<space|2spc>How Far Will Information Propagate in
+    Markovian Process? (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-32>>
   </table-of-contents>
 
   <section|Relative Entropy><label|section: Relative Entropy>
@@ -3005,15 +3009,25 @@
   TODO
 
   <subsection|Langevin Process Can Be Formulated as Path
-  Integral><label|section: Master Equation on Euclidean Alphabet Can Be
-  Formulated as Path Integral>
+  Integral><label|section: Langevin Process Can Be Formulated as Path
+  Integral>
 
   In this section, we are to formulate the master equation into path
   integral. The path integral formulation was found by Paul Dirac in 1933 who
   was trying to using Lagrangian in quantum mechanism. It was then developed
   by physicist Richard Feynman and mathematician Mark Kac in 1947. Now, path
   integral is applied not only to quantum field theory, but also many other
-  areas such as stochastic process.
+  areas such as stochastic process. Path integral generally has the formalism
+
+  <\equation>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|1>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|n>
+    exp<around*|(|-S<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>|)>,<label|equation:general
+    path integral>
+  </equation>
+
+  where a series <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>> is called
+  a \Ppath\Q, and the <math|S> is called the \Paction\Q of path. Apparently,
+  it is an integral of all possible paths, thus named as \Ppath integral\Q.
 
   To derive a path integral formulation for master equation, we follow the
   standard derivation of path integral for quantum mechanism.<\footnote>
@@ -3036,28 +3050,18 @@
 
   \;
 
-  The next step is assuming <math|\<Delta\>t> is small and re-expressing
+  The next step is making <math|\<Delta\>t> small and re-expressing
   <math|q<rsub|\<Delta\>t><around*|(|x<rsub|i+1>\|x<rsub|i>|)>> in
-  exponential. That is, we are to calculate <math|ln
-  q<rsub|\<Delta\>t><around*|(|x<rsub|i+1>\|x<rsub|i>|)>> when
-  <math|\<Delta\>t> is sufficiently small. To make it well-defined, we assume
-  that <math|r<around*|(|x,y|)>\<gtr\>0> for any <math|x,y\<in\>\<cal-X\>>
-  with <math|x\<neq\>y>. This is essential and sufficient for
-  <math|q<rsub|\<Delta\>t><around*|(|x\|y|)>\<gtr\>0>, at least when
-  <math|\<Delta\>t> is small.
-
-  Since transition rate has completely determined the Markovian process (see
-  section <reference|section: Transition Rate Determines Transition
-  Density>), we are to express the <math|ln
-  q<rsub|\<Delta\>t><around*|(|x\|y|)>> in terms of <math|r>. This, however,
-  cannot be straight-forward since the leading term of
-  <math|q<rsub|\<Delta\>t><around*|(|x\|y|)>> is
+  exponential. This, however, cannot be straight-forward since the leading
+  term of <math|q<rsub|\<Delta\>t><around*|(|x\|y|)>> is
   <math|\<delta\><around*|(|x-y|)>> which cannot be converted into
   exponential. But, we can consider its Fourier transform, since
   <math|\<delta\><around*|(|x-y|)>>, if regarding as a Dirac's delta
-  function, has exponential Fourier coefficient
-  <math|exp<around*|(|-\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>|)>>.
-  This suggest us to consider the Fourier transform of transition rate, as
+  function, has Fourier coefficient <math|exp<around*|(|-\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>|)>>.
+  This suggest us to consider the Fourier transform of transition rate (as
+  discussed in section <reference|section: Transition Rate Determines
+  Transition Density>, transition rate has completely determined the
+  Markovian process), as
 
   <\equation*>
     <wide|r|^><around*|(|x,k|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
@@ -3065,10 +3069,10 @@
     r<around*|(|x+\<epsilon\>,x|)>.
   </equation*>
 
-  This forces the alphabet <math|\<cal-X\>> to be Euclidean space
+  <em|This forces the alphabet <math|\<cal-X\>> to be Euclidean space
   <math|\<bbb-R\><rsup|d>>, because we cannot perform the same thing on
   Kronecker's delta when the alphabet is discrete, or when the alphabet is
-  continuous but not Euclidean. Then, we have
+  continuous but not Euclidean.> Then, we have
 
   <\equation*>
     q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>=\<delta\><around*|(|\<epsilon\>|)>+r<around*|(|x+\<epsilon\>,x|)>
@@ -3179,11 +3183,12 @@
   It indicates that the transition density of Langevin process is
   approximately Gaussian.
 
-  Now, non-constant terms are all in the exponential except for the
-  <math|<around*|[|det \<Sigma\><around*|(|x|)>|]><rsup|-1/2>> factor. We are
-  to move it into exponential too. We first use Cholesky factorization to
-  remove the root, and then using Berezin integral to convert determinant to
-  exponential.
+  To match the path integral formulism <reference|equation:general path
+  integral>, in which all integration variables are in the exponential, we
+  have to convert the <math|<around*|[|det
+  \<Sigma\><around*|(|x|)>|]><rsup|-1/2>> factor into exponential too. To do
+  so, we first use Cholesky factorization to remove the root, and then use
+  Berezin integral to convert determinant to exponential.
 
   To introduce Cholesky factorization, we fix the argument <math|x> and omit
   it for simplicity, so <math|\<Sigma\><around*|(|x|)>> is written as
@@ -3253,21 +3258,21 @@
     \<eta\><rsup|\<beta\>>|)>.
   </equation*>
 
-  \;
+  In physics, the Grassmann variables <math|\<zeta\>> and <math|\<eta\>> are
+  called \Pghost variables\Q.
 
   Plugging back to equation <reference|equation:path integral step 1>, we get
 
   <\equation*>
     p<around*|(|x<rsub|N>,N \<Delta\>t|)>=<big|int>\<mathD\><around*|(|x,\<zeta\>,\<eta\>|)>
-    exp<around*|(|-S<around*|(|x,\<zeta\>,\<eta\>|)>|)>
+    exp<around*|(|-S<around*|(|x,\<zeta\>,\<eta\>|)>+C|)>
     p<around*|(|x<rsub|0>,0|)>,
   </equation*>
 
   where the measurement is defined by
 
   <\equation*>
-    <big|int>\<mathD\><around*|(|x,\<zeta\>,\<eta\>|)>\<assign\><around*|(|<frac|2\<mathpi\>|\<Delta\>t<rsup|3>>|)><rsup|N
-    d/2><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|0>\<cdots\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|N-1><big|int>\<mathd\>\<zeta\><rsub|0><big|int>\<mathd\>\<eta\><rsub|0>\<cdots\><big|int>\<mathd\>\<zeta\><rsub|N-1><big|int>\<mathd\>\<eta\><rsub|N-1>
+    <big|int>\<mathD\><around*|(|x,\<zeta\>,\<eta\>|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|0>\<cdots\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|N-1><big|int>\<mathd\>\<zeta\><rsub|0><big|int>\<mathd\>\<eta\><rsub|0>\<cdots\><big|int>\<mathd\>\<zeta\><rsub|N-1><big|int>\<mathd\>\<eta\><rsub|N-1>
   </equation*>
 
   and the \Paction\Q of Langevin process is
@@ -3279,9 +3284,27 @@
     action>
   </equation>
 
-  \;
+  The <math|C\<assign\><around*|(|d/2|)><around*|(|ln 2\<mathpi\>-3ln
+  \<Delta\>t|)>> is independent of <math|x>, <math|\<zeta\>>, or
+  <math|\<eta\>>, thus is regarded as constant.
 
-  By formally taking <math|\<Delta\>t\<rightarrow\>0> and
+  When <math|R<around*|(|x|)>> is constant, we can choose a proper
+  coordinates of <math|x> such that <math|R> becomes identity matrix, thus
+  the ghost variables disappears since <math|<big|int>\<mathd\>\<zeta\><big|int>\<mathd\>\<eta\>
+  exp<around*|(|<big|sum><rsub|\<alpha\>>\<zeta\><rsup|\<alpha\>>\<eta\><rsup|\<alpha\>>|)>=1>.
+  In this situation, the <math|S> becomes
+
+  <\equation>
+    S<around*|(|x|)>\<assign\><big|sum><rsub|i=0><rsup|N-1>\<Delta\>t<around*|{|<frac|1|2>
+    <big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|<around*|(|<frac|x<rsub|i+1><rsup|\<alpha\>>-x<rsub|i><rsup|\<alpha\>>|\<Delta\>t>-f<rsup|\<alpha\>><around*|(|x<rsub|i>|)>|)>|]><rsup|2>+\<omicron\><around*|(|1|)>|}>,<label|equation:langevin
+    action constant R>
+  </equation>
+
+  and accordingly, the measurement becomes
+  <math|<big|int>D<around*|(|x|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|0>\<cdots\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|N-1>>.
+  The expression is greatly simplified when <math|R> is constant.
+
+  The final step is formally taking <math|\<Delta\>t\<rightarrow\>0> and
   <math|N\<rightarrow\>+\<infty\>> while keeping <math|N \<Delta\>t> finite,
   and replacing the discrete index <math|i> with a continuous variable
   <math|t\<in\><around*|[|0,t<rsub|f>|]>>, the action becomes
@@ -3297,14 +3320,13 @@
   in which <math|<around*|(|\<mathd\>x/\<mathd\>t|)><around*|(|t|)>\<assign\><around*|(|x<rsub|i+1>-x<rsub|i>|)>/\<Delta\>t>.
   These are formal definitions, and we will never really take the limit
   <math|\<Delta\>t\<rightarrow\>0> and <math|N\<rightarrow\>+\<infty\>> since
-  it is numerically not well-defined. For example, the
-  <math|<big|int>\<mathD\><around*|(|x,\<zeta\>,\<eta\>|)>> diverges, so is
-  the <math|<around*|(|\<mathd\>x/\<mathd\>t|)><around*|(|t|)>>.
+  it is numerically not well-defined. For example, the constant <math|C>
+  diverges, so is the <math|<around*|(|\<mathd\>x/\<mathd\>t|)><around*|(|t|)>>.
 
   As a summary, we find the master equation of Langevin process can be
   formulated as a path integral, in which the action is given by equation
   <reference|equation:langevin action>, in which <math|\<zeta\>> and
-  <math|\<eta\>> are independent Grassmann numbers.
+  <math|\<eta\>> are Grassmann variables.
 
   Final remark on cut-off <math|N<rsub|cut>=2>. If choose
   <math|N<rsub|cut>\<gtr\>2>, it is hard to see how to integrate the improper
@@ -3322,28 +3344,57 @@
   <math|<with|font|cal|O><around*|(|d<rsup|2>|)>> degrees of freedom, so this
   cannot be done except for specific situations).
 
-  <subsection|Least-Action Principle of Distribution Has No Redundancy
-  (TODO)><label|section: Least-Action Principle of Distribution Has No
+  <subsection|Least-Action Principle of Distribution Has No
+  Redundancy><label|section: Least-Action Principle of Distribution Has No
   Redundancy>
-
-  a <strong|movie of evolution>.
 
   Dynamics in classical mechanics are always deterministic. That is, once the
   initial conditions (for initial value problem) or the boundaries (for
   boundary value problem) are fixed, then the path is fully determined, in
   which randomness is forbidden. There are, however, many phenomena in nature
-  that have <em|intrinsic> randomness. For example, Langevin process is
-  originally used to describe molecular movement, which has randomness
-  obeying a normal distribution with variance proportional to time interval.
-  The dynamics of starling flocks also has intrinsic randomness, which is the
+  that have <em|intrinsic> randomness. For example, molecular movement obeys
+  a normal distribution with variance proportional to time interval. The
+  dynamics of starling flocks also has intrinsic randomness, which is the
   \Pfree will\Q of each bird, so is ant colony, human society, and any
   interactive system in which each element has some level of intrinsic
   uncertainty. For these cases, the real world datum is not simply a path,
   but a distribution of path. Precisely, we use a distribution <math|Q> to
   describe real world phenomenon that has intrinsic randomness.
 
-  For any density function <math|q<around*|(|x|)>>, we can always define, up
-  to an arbitrary constant,
+  This is what we have derived in section <reference|section: Langevin
+  Process Can Be Formulated as Path Integral>. From probabilistic
+  perspective, the right hand side of equation <reference|equation:path
+  integral step 1> can be viewed as marginalizing the random variables
+  <math|<around*|(|X<rsub|0>,\<ldots\>,X<rsub|N-1>|)>>, and the product
+  <math|q<around*|(|x<rsub|N>\|x<rsub|N-1>|)>\<cdots\>
+  q<around*|(|x<rsub|1>\|x<rsub|0>|)>> can be seen as the density function of
+  <math|<around*|(|X<rsub|1>,\<ldots\>,X<rsub|N>|)>>, where we have omitted
+  the subscript <math|\<Delta\>t> for simplicity. To see this clearly, we
+  first notice that <math|q<around*|(|x<rsub|2>\|x<rsub|1>|)>=q<around*|(|x<rsub|2>\|x<rsub|0>,x<rsub|1>|)>>
+  holds for any <math|x<rsub|0>>, because
+  <math|q<around*|(|x<rsub|2>\|x<rsub|1>|)>> is not explicitly dependent on
+  <math|x<rsub|0>>. Then, we have <math|q<around*|(|x<rsub|2>\|x<rsub|1>|)>q<around*|(|x<rsub|1>\|x<rsub|0>|)>q<around*|(|x<rsub|0>|)>=q<around*|(|x<rsub|2>\|x<rsub|0>,x<rsub|1>|)>q<around*|(|x<rsub|1>\|x<rsub|0>|)>q<around*|(|x<rsub|0>|)>>.
+  Repeatedly using the definition of conditional density, it becomes
+  <math|q<around*|(|x<rsub|2>\|x<rsub|0>,x<rsub|1>|)>
+  q<around*|(|x<rsub|0>,x<rsub|1>|)>=q<around*|(|x<rsub|0>,x<rsub|1>,x<rsub|2>|)>>.
+  Dividing <math|q<around*|(|x<rsub|0>|)>> on both sides, we get
+  <math|q<around*|(|x<rsub|1>,x<rsub|2>\|x<rsub|0>|)>=q<around*|(|x<rsub|2>\|x<rsub|1>|)>q<around*|(|x<rsub|1>\|x<rsub|0>|)>>.
+  Repeating this step, we will find
+
+  <\equation*>
+    q<around*|(|x<rsub|N>\|x<rsub|N-1>|)>\<cdots\>q<around*|(|x<rsub|1>\|x<rsub|0>|)>=q<around*|(|x<rsub|1>,\<ldots\>,x<rsub|N>\|x<rsub|0>|)>,
+  </equation*>
+
+  recognized as a conditional density of random variables
+  <math|<around*|(|X<rsub|1>,\<ldots\>,X<rsub|N>|)>> given <math|x<rsub|0>>.
+  If we regard the series <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|N>|)>>
+  as a \Pmovie\Q of evolution of the stochastic system, in which each
+  <math|x<rsub|i>> can be seen as a \Pframe\Q, then the density function
+  <math|q> characterizes the distribution of evolution.
+
+  For any density function <math|q<around*|(|x|)>> with
+  <math|x\<in\>\<bbb-R\><rsup|d>>, we can always define, up to an arbitrary
+  constant,
 
   <\equation>
     S<around*|(|x|)>\<assign\>-*ln q<around*|(|x|)>+const.<label|equation:action
@@ -3351,11 +3402,10 @@
   </equation>
 
   Thus, <math|q<around*|(|x|)>=exp<around*|(|-S<around*|(|x|)>|)>/Z> where
-  <math|Z\<assign\><big|int><rsub|\<cal-X\>>\<mathd\>x
-  exp<around*|(|-S<around*|(|x|)>|)>>. This <math|S> has some properties that
-  can be analog to the action in classical mechanics. First, if
-  <math|\<cal-X\>=\<bbb-R\><rsup|d>>, then we find, by plugging in the
-  definition of <math|S>,
+  <math|Z\<assign\><big|int>\<mathd\>x exp<around*|(|-S<around*|(|x|)>|)>>.
+  This <math|S> has some properties that can be analog to the action in
+  classical mechanics. Indeed, by plugging in the definition of <math|S>, we
+  find
 
   <\equation*>
     <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x q<around*|(|x|)>
@@ -3367,7 +3417,9 @@
 
   The integrand of the right most expression is a divergence, so it results
   in a boundary integral. But since <math|q>, as a density function, is
-  normalized, the boundary integral shall vanish. So, we conclude that
+  normalized, the boundary integral shall vanish as
+  <math|<around*|\<\|\|\>|x|\<\|\|\>>\<rightarrow\>+\<infty\>>. So, we
+  conclude that
 
   <\equation*>
     \<bbb-E\><rsub|Q><around*|[|<frac|\<partial\>S|\<partial\>x<rsup|\<alpha\>>>|]>=0.
@@ -3394,8 +3446,9 @@
   distribution which characterizes the real world. We are to figure out a
   method to fit the real world distribution by given some samples of it.
 
-  Let <math|P<around*|(|\<theta\>|)>> represent a parametrized distribution
-  with parameters <math|\<theta\>>. From its density function,
+  Let <math|P<around*|(|\<theta\>|)>> represent a distribution parametrized
+  by <math|\<theta\>\<in\>\<bbb-R\><rsup|m>>. Its alphabet <math|\<cal-X\>>
+  is either discrete or continuous. From its density function,
   <math|p<around*|(|\<cdummy\>,\<theta\>|)>>, we get a parameterized action
   <math|S<around*|(|\<cdummy\>,\<theta\>|)>> such that
 
@@ -3404,20 +3457,20 @@
     density>
   </equation>
 
-  where <math|Z<around*|(|\<theta\>|)>=<big|int><rsub|\<cal-X\>>\<mathd\>x
+  where <math|Z<around*|(|\<theta\>|)>=<big|int>\<mathd\>x
   exp<around*|(|-S<around*|(|x,\<theta\>|)>|)>> for ensuring the
-  normalization <math|<big|int><rsub|\<cal-X\>>\<mathd\>x
-  p<around*|(|x,\<theta\>|)>=1>. This is consistent with the action defined
-  by equation <reference|equation:action of distribution>, except that the
-  action here is parameterized, and that we omit the constant <math|\<beta\>>
-  since it is irrelevant throughout this section.
+  normalization <math|<big|int>\<mathd\>x p<around*|(|x,\<theta\>|)>=1>. This
+  is consistent with the action defined by equation
+  <reference|equation:action of distribution>, except that the action here is
+  parameterized, and that we omit the constant <math|\<beta\>> since it is
+  irrelevant throughout this section.
 
   What we have is a collection of data, sampled from an unknown distribution
   <math|Q>. And we are to adjust the parameters <math|\<theta\>> so that
   <math|P<around*|(|\<theta\>|)>> approximates <math|Q>. To do so, we
   minimize the relative entropy between <math|Q> and
   <math|P<around*|(|\<theta\>|)>>, which is defined as
-  <math|H<around*|(|Q,P<around*|(|\<theta\>|)>|)>\<assign\><big|int><rsub|\<cal-X\>>\<mathd\>x
+  <math|H<around*|(|Q,P<around*|(|\<theta\>|)>|)>\<assign\><big|int>\<mathd\>x
   q<around*|(|x|)> ln <around*|(|q<around*|(|x|)>/p<around*|(|x,\<theta\>|)>|)>>.
   This expression is formal. Since we do not know the density function of
   <math|Q>, all that we can do with <math|Q> is computing the expectation
@@ -3538,11 +3591,314 @@
   in equation <reference|equation:data-fitting iteration>, we can employ
   Monte-Carlo simulation with the transition rate satisfying detailed balance
   condition with <math|P<around*|(|\<theta\>|)>> as the stationary
-  distribution. For continuous random variables, Monte-Carlo simulation with
-  Langevin dynamics (section <reference|section: Detailed Balance of Langevin
-  Process Lacks Source-Free Degree of Freedom>) is efficient; and for
-  discrete random variables, Metropolis-Hastings (section <reference|section:
-  Example: Metropolis-Hastings Algorithm>) is available.
+  distribution. For discrete random variables, Monte-Carlo simulation with
+  Metropolis-Hastings algorithm (section <reference|section: Example:
+  Metropolis-Hastings Algorithm>) is available; and for continuous random
+  variables, Langevin dynamics (section <reference|section: Detailed Balance
+  of Langevin Process Lacks Source-Free Degree of Freedom>) will be more
+  efficient.
+
+  <subsection|How Far Will Information Propagate in Markovian Process?
+  (TODO)><label|section: How Far Will Information Propagate in Markovian
+  Process?>
+
+  We are to determine how far information will propagate during the iteration
+  of Langevin process. For this kind of problem, physicists have invented a
+  technique called renormalization group. This technique was first proposed
+  by Murray Gell-Mann and Francis Low in 1954, applied to quantum field
+  theory of fundamental particles. Following this research, Kenneth Wilson,
+  who was a PhD student of Gell-Mann, started his malathion in 1961. He
+  published his first paper on renormalization group eight years later, in
+  1969. This technique was then further developed and applied to many areas
+  in and even out of physics, such as biology, society, and finance.
+
+  To show how it works, we start with an action that is generalized from
+  action <reference|equation:langevin action constant R>, which is
+
+  <\equation>
+    S<around*|(|x|)>=<big|sum><rsub|i=-\<infty\>><rsup|+\<infty\>><big|sum><rsub|\<alpha\>=1><rsup|n><around*|[|<frac|<around*|(|x<rsup|\<alpha\>><rsub|i+1>-x<rsup|\<alpha\>><rsub|i>|)><rsup|2>|2\<epsilon\>>-<around*|(|x<rsup|\<alpha\>><rsub|i+1>-x<rsup|\<alpha\>><rsub|i>|)>
+    \<varphi\><rsup|\<alpha\>><around*|(|x<rsub|i+1>,x<rsub|i>|)>+\<epsilon\>
+    \<xi\><rsup|\<alpha\>><around*|(|x<rsub|i+1>,x<rsub|i>|)>|]>,<label|equation:rg
+    action>
+  </equation>
+
+  where <math|\<varphi\>,\<xi\>:\<bbb-R\><rsup|d>\<times\>\<bbb-R\><rsup|d>\<rightarrow\>\<bbb-R\><rsup|d>>.
+  Comparing with action <reference|equation:langevin action constant R>,
+  <math|\<epsilon\>=\<Delta\>t>, <math|\<varphi\><around*|(|x<rsub|i+1>,x<rsub|i>|)>=f<around*|(|x<rsub|i>|)>>,
+  and <math|\<xi\><around*|(|x<rsub|i+1>,x<rsub|i>|)>=f<rsup|2><around*|(|x<rsub|i>|)>/2>.
+  There are another two differences between them. Here, we do not fix
+  boundary (namely, the fixed boundary <math|x<rsub|N>> in action
+  <reference|equation:langevin action constant R>), and let the index
+  <math|i> run from <math|-\<infty\>> to <math|+\<infty\>> rather than from
+  <math|0> to <math|N>. As we will see later in this section, these
+  differences are crucial for renormalization group. In the end of this
+  section, we will show how to add the condition back and restrict the range
+  of index <math|i>.
+
+  Renormalization group technique bases on the fact that there are as many
+  even numbers as integers. This is a famous result that was first claimed by
+  George Cantor. For our purpose, we marginalize all the variable
+  <math|x<rsub|i>> in <math|q<around*|(|x|)>> where <math|i> is odd. Namely,
+  we are to compute an \Peffective action\Q <math|S<rprime|'>> defined by
+
+  <\equation>
+    S<rprime|'><around*|(|x|)>\<assign\>-ln<around*|[|<big|prod><rsub|i\<in\>\<bbb-Z\>><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|2i+1>
+    exp<around*|(|-S<around*|(|x|)>|)>|]>,<label|equation:rg integral>
+  </equation>
+
+  where <math|S<rprime|'><around*|(|\<ldots\>,x<rsub|-4>,x<rsub|-2>,x<rsub|0>,x<rsub|2>,x<rsub|4>,\<ldots\>|)>>
+  contains only the variables with even index. Interestingly, it is to be
+  revealed that, by a proper re-scaling of <math|x>, <math|S<rprime|'>> has
+  exactly the same format as <math|S>.
+
+  Given <math|i>, we are to show how to marginalize <math|x<rsub|2i+1>>. This
+  variables appear in two terms in action <reference|equation:rg action>,
+  with indices <math|2i+1> and <math|2i>. So, we are to integrate
+  <math|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|2i+1>exp<around*|(|<big|sum><rsub|\<alpha\>=1><rsup|n>J<rsup|\<alpha\>>|)>>
+  where
+
+  <\align>
+    <tformat|<table|<row|<cell|J<rsup|\<alpha\>>\<assign\>>|<cell|-<frac|<around*|(|x<rsup|\<alpha\>><rsub|2i+1>-x<rsup|\<alpha\>><rsub|2i>|)><rsup|2>|2\<epsilon\>>-<frac|<around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i+1>|)><rsup|2>|2\<epsilon\>>>>|<row|<cell|>|<cell|+<around*|(|x<rsup|\<alpha\>><rsub|2i+1>-x<rsup|\<alpha\>><rsub|2i>|)>
+    \<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+1>,x<rsub|2i>|)>+<around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i+1>|)>
+    \<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,x<rsub|2i+1>|)>>>|<row|<cell|>|<cell|-\<epsilon\>
+    \<xi\><rsup|\<alpha\>><around*|(|x<rsub|2i+1>,x<rsub|2i>|)>-\<epsilon\>
+    \<xi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,x<rsub|2i+1>|)>.>>>>
+  </align>
+
+  This integral is hard to calculate. A general strategy is using
+  perturbative method. In our situation, <math|\<epsilon\>> serves as the
+  small quantity for perturbation.
+
+  First, we have an algebraic identity<\footnote>
+    Directly, expand <math|<around*|(|x-y|)><rsup|2>+<around*|(|y-z|)><rsup|2>=x<rsup|2>-2x
+    y+y<rsup|2>+y<rsup|2>-2y z+z<rsup|2>>. Then, collect the <math|y> terms
+    together, as <math|2<around*|(|y<rsup|2>-<around*|(|x+z|)>
+    y|)>=2<around*|(|y-<around*|(|x+z|)> y+<around*|(|x+z|)><rsup|2>/4|)>-<around*|(|x+z|)><rsup|2>/2=2<around*|(|y-<around*|(|x+z|)>/2|)><rsup|2>-<around*|(|x+z|)><rsup|2>/2>,
+    in which the last term can be further combined with the rest terms
+    <math|x<rsup|2>+z<rsup|2>>, as <math|-<around*|(|x+z|)><rsup|2>/2+x<rsup|2>+z<rsup|2>=<around*|(|x-z|)><rsup|2>/2>.
+    Altogether, we find
+
+    <\equation*>
+      <around*|(|x-y|)><rsup|2>+<around*|(|y-z|)><rsup|2>=2<around*|(|y-<frac|x+z|2>|)><rsup|2>+<frac|1|2><around*|(|x-z|)><rsup|2>.
+    </equation*>
+
+    If replace <math|x\<rightarrow\>x<rsup|\<alpha\>><rsub|2i>>,
+    <math|y\<rightarrow\>x<rsup|\<alpha\>><rsub|2i+1>>, and
+    <math|z\<rightarrow\>x<rsup|\<alpha\>><rsub|2i+2>>, then we get what we
+    need.
+  </footnote>
+
+  <\equation*>
+    <frac|<around*|(|x<rsup|\<alpha\>><rsub|2i+1>-x<rsup|\<alpha\>><rsub|2i>|)><rsup|2>|2\<epsilon\>>+<frac|<around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i+1>|)><rsup|2>|2\<epsilon\>>=<frac|1|\<epsilon\>><around*|[|x<rsup|\<alpha\>><rsub|2i+1>-<frac|x<rsup|\<alpha\>><rsub|2i>+
+    x<rsup|\<alpha\>><rsub|2i+2>|2>|]><rsup|2>+<frac|1|4\<epsilon\>><around*|(|x<rsup|\<alpha\>><rsub|2i>-
+    x<rsup|\<alpha\>><rsub|2i+2>|)><rsup|2>.
+  </equation*>
+
+  Remark that the second term looks like the first term in action
+  <reference|equation:rg action>, except for an <math|1/2> factor. Then,
+  <math|J<rsup|\<alpha\>>> becomes
+
+  <\align>
+    <tformat|<table|<row|<cell|J<rsup|\<alpha\>>=>|<cell|-<frac|1|\<epsilon\>><around*|[|x<rsup|\<alpha\>><rsub|2i+1>-<frac|x<rsup|\<alpha\>><rsub|2i>+
+    x<rsup|\<alpha\>><rsub|2i+2>|2>|]><rsup|2>-<frac|1|4\<epsilon\>><around*|(|x<rsup|\<alpha\>><rsub|2i>-
+    x<rsup|\<alpha\>><rsub|2i+2>|)><rsup|2>>>|<row|<cell|>|<cell|+<around*|(|x<rsup|\<alpha\>><rsub|2i+1>-x<rsup|\<alpha\>><rsub|2i>|)>
+    \<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+1>,x<rsub|2i>|)>+<around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i+1>|)>
+    \<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,x<rsub|2i+1>|)>>>|<row|<cell|>|<cell|-\<epsilon\>
+    \<xi\><rsup|\<alpha\>><around*|(|x<rsub|2i+1>,x<rsub|2i>|)>-\<epsilon\>
+    \<xi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,x<rsub|2i+1>|)>.>>>>
+  </align>
+
+  The first term is a quadratic form of <math|x<rsub|2i+1>>. It suggests that
+  we shall treat the integral as a perturbation to the Gaussian integral, and
+  use perturbative method to integrate it out. Following this strategy, we
+  define <math|<wide|x|\<bar\>><rsub|2i+1>\<assign\><around*|(|x<rsub|2i+2>+
+  x<rsub|2i>|)>/2> and <math|y\<assign\>x<rsub|2i+1>-<wide|x|\<bar\>><rsub|2i+1>>.
+  <math|>And the integral becomes
+
+  <\small>
+    <\equation*>
+      <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|2i+1>exp<around*|(|<big|sum><rsub|\<alpha\>=1><rsup|n>J<rsup|\<alpha\>>|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+      exp<around*|(|-<frac|1|2><big|sum><rsub|\<alpha\>=1><rsup|n><around*|(|<frac|y<rsup|\<alpha\>>|<sqrt|\<epsilon\>/2>>|)><rsup|2>+\<cdots\>|)>.
+    </equation*>
+  </small>
+
+  It means the <math|y> obeys a normal distribution with zero mean and
+  diagonal covariance <math|\<Sigma\><rsub|\<alpha\>\<beta\>>=<around*|(|\<epsilon\>/2|)>
+  \<delta\><rsub|\<alpha\>\<beta\>>>. We have a rough estimation
+  <math|y=<with|font|cal|O><around*|(|<sqrt|\<epsilon\>>|)>>.
+
+  Next, we process the other lines in <math|J<rsup|\<alpha\>>>. Using
+  <math|x<rsub|2i+1>=y+<wide|x|\<bar\>><rsub|2i+1>> and
+  <math|<wide|x|\<bar\>><rsub|2i+1>-x<rsub|2i>=x<rsub|2i+2>-<wide|x|\<bar\>><rsub|2i+1>=<around*|(|x<rsub|2i+2>-x<rsub|2i>|)>/2>,
+  the second line can be expanded, up to <math|<with|font|cal|O><around*|(|\<epsilon\><rsup|3/2>|)>>,
+  as
+
+  <\small>
+    <\align>
+      <tformat|<table|<row|<cell|>|<cell|<around*|(|y<rsup|\<alpha\>>+<wide|x|\<bar\>><rsub|2i+1><rsup|\<alpha\>>-x<rsup|\<alpha\>><rsub|2i>|)>
+      \<varphi\><rsup|\<alpha\>><around*|(|y+<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+<around*|(|x<rsup|\<alpha\>><rsub|2i+2>-y<rsup|\<alpha\>>-<wide|x|\<bar\>><rsub|2i+1><rsup|\<alpha\>>|)>
+      \<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,y+<wide|x|\<bar\>><rsub|2i+1>|)>>>|<row|<cell|=>|<cell|<frac|1|2><around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)>
+      <around*|[|\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>>>|<row|<cell|+>|<cell|y<rsup|\<alpha\>>
+      <around*|[|\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>-\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>>>|<row|<cell|+>|<cell|<frac|1|2>y<rsup|\<beta\>>
+      <around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)>
+      <around*|[|\<partial\><rsub|\<beta\>>\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+\<partial\><rsub|\<beta\>><rprime|'>\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>>>|<row|<cell|+>|<cell|y<rsup|\<alpha\>>
+      y<rsup|\<beta\>> <around*|[|\<partial\><rsub|\<beta\>>\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>-\<partial\><rsub|\<beta\>><rprime|'>\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>>>|<row|<cell|+>|<cell|<frac|1|4>y<rsup|\<beta\>>
+      y<rsup|\<gamma\>> <around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)>
+      <around*|[|\<partial\><rsub|\<beta\>>\<partial\><rsub|\<gamma\>>\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+\<partial\><rsub|\<beta\>><rprime|'>\<partial\><rprime|'><rsub|\<gamma\>>\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>>>>>
+    </align>
+  </small>
+
+  where we have denoted <math|\<partial\>\<varphi\>> as the partial
+  derivative taken on the first argument, and
+  <math|\<partial\><rprime|'>\<varphi\>> on the second. Notice that we have
+  used Einstein convention in this expansion (see the conventions in section
+  <reference|section: Kramers-Moyal Expansion and Langevin Process>), hiding
+  the summations of indices <math|\<beta\>> and <math|\<gamma\>>. Also up to
+  <math|<with|font|cal|O><around*|(|\<epsilon\><rsup|3/2>|)>>, the third line
+  simply becomes <math|-\<epsilon\> \<xi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>-\<epsilon\>
+  \<xi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>>.
+  Altogether, the integral becomes
+
+  <\small>
+    <\equation*>
+      exp<around*|(|<big|sum><rsub|\<alpha\>=1><rsup|n>I<rsup|\<alpha\>>|)>\<times\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+      exp<around*|(|-<frac|1|2><big|sum><rsub|\<alpha\>=1><rsup|n><around*|(|<frac|y<rsup|\<alpha\>>|<sqrt|\<epsilon\>/2>>|)><rsup|2>+<big|sum><rsub|\<alpha\>=1><rsup|n>V<rsup|\<alpha\>><around*|(|y|)>+<with|font|cal|O><around*|(|\<epsilon\><rsup|3/2>|)>|)>,
+    </equation*>
+  </small>
+
+  with the \Pinteractive part\Q
+
+  <\small>
+    <\align>
+      <tformat|<table|<row|<cell|V<rsup|\<alpha\>><around*|(|y|)>\<assign\>>|<cell|y<rsup|\<alpha\>>
+      <around*|[|\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>-\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>>>|<row|<cell|+>|<cell|<frac|1|2>y<rsup|\<beta\>>
+      <around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)>
+      <around*|[|\<partial\><rsub|\<beta\>>\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+\<partial\><rsub|\<beta\>><rprime|'>\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>>>|<row|<cell|+>|<cell|y<rsup|\<alpha\>>
+      y<rsup|\<beta\>> <around*|[|\<partial\><rsub|\<beta\>>\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>-\<partial\><rsub|\<beta\>><rprime|'>\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>>>|<row|<cell|+>|<cell|<frac|1|4>y<rsup|\<beta\>>
+      y<rsup|\<gamma\>> <around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)>
+      <around*|[|\<partial\><rsub|\<beta\>>\<partial\><rsub|\<gamma\>>\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+\<partial\><rsub|\<beta\>><rprime|'>\<partial\><rprime|'><rsub|\<gamma\>>\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>,>>>>
+    </align>
+  </small>
+
+  which depends on <math|y> and is <math|<with|font|cal|O><around*|(|<sqrt|\<epsilon\>>|)>>,
+  and the \Pindependent part\Q (the color is for later usage)
+
+  <\small>
+    <\equation*>
+      I<rsup|\<alpha\>>\<assign\>-<frac|1|4\<epsilon\>><around*|(|x<rsup|\<alpha\>><rsub|2i>-
+      x<rsup|\<alpha\>><rsub|2i+2>|)><rsup|2>+<frac|1|2><around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)>
+      <around*|[|\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]><with|color|red|-\<epsilon\>
+      \<xi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>-\<epsilon\>
+      \<xi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>>,
+    </equation*>
+  </small>
+
+  which is independent of <math|y>. We Taylor expands the second factor as
+
+  <\small>
+    <\equation*>
+      <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+      exp<around*|(|-<frac|1|2><big|sum><rsub|\<alpha\>=1><rsup|n><around*|(|<frac|y<rsup|\<alpha\>>|<sqrt|\<epsilon\>/2>>|)><rsup|2>+<big|sum><rsub|\<alpha\>=1><rsup|n>V<rsup|\<alpha\>><around*|(|y|)>+<with|font|cal|O><around*|(|\<epsilon\><rsup|3/2>|)>|)>=\<bbb-E\><rsub|Y><around*|[|1+<big|sum><rsub|\<alpha\>=1><rsup|n>V<rsup|\<alpha\>><around*|(|y|)>+<frac|1|2><around*|(|<big|sum><rsub|\<alpha\>=1><rsup|n>V<rsup|\<alpha\>><around*|(|y|)>|)><rsup|2>+<with|font|cal|O><around*|(|\<epsilon\><rsup|3/2>|)>|]>,
+    </equation*>
+  </small>
+
+  where <math|\<bbb-E\><rsub|Y><around*|[|\<ldots\>|]>> is defined by the
+  Gaussian integral of <math|y>. We will neglect the constant factor
+  <math|<around*|(|\<mathpi\> \<epsilon\>|)><rsup|-n/2>>, so that
+  <math|\<bbb-E\><rsub|Y><around*|[|1|]>=1>. This constant factor can be
+  absorbed into the action as an irrelevant constant term. Plugging in the
+  definition of <math|V<rsup|\<alpha\>><around*|(|y|)>> with
+  <math|\<bbb-E\><rsub|Y><around*|[|y<rsup|\<alpha\>>|]>=0> and
+  <math|\<bbb-E\><rsub|Y><around*|[|y<rsup|\<alpha\>>
+  y<rsup|\<beta\>>|]>=\<delta\><rsub|\<alpha\>\<beta\>> \<epsilon\>/2>, we
+  get (color for later usage)
+
+  <\very-small>
+    <with|color|dark green|<\equation*>
+      <big|sum><rsub|\<alpha\>=1><rsup|n>\<bbb-E\><around*|[|V<rsup|\<alpha\>><around*|(|y|)>|]>=<frac|\<epsilon\>|2><big|sum><rsub|\<alpha\>=1><rsup|n><around*|[|\<partial\><rsub|\<alpha\>>\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>-\<partial\><rsub|\<alpha\>><rprime|'>\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>+<frac|1|4>
+      <around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)>
+      <around*|[|\<Delta\>\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+\<Delta\><rprime|'>\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>|]>,
+    </equation*>>
+  </very-small>
+
+  where the Laplacian <math|\<Delta\><rprime|'>\<assign\><big|sum><rsub|\<alpha\>=1><rsup|n>\<partial\><rsub|\<alpha\>>\<partial\><rsub|\<alpha\>>>,
+  and the same <math|\<Delta\><rprime|'>\<assign\><big|sum><rsub|\<alpha\>=1><rsup|n>\<partial\><rprime|'><rsub|\<alpha\>>\<partial\><rprime|'><rsub|\<alpha\>>>.
+  Also, we have (color for later usage)<\footnote>
+    We have <math|\<bbb-E\><rsub|Y><around*|[|<around*|(|1/2|)><around*|(|<big|sum><rsub|\<alpha\>=1><rsup|n>V<rsup|\<alpha\>><around*|(|y|)>|)><rsup|2>|]>=<around*|(|1/2|)><big|sum><rsub|\<alpha\>,\<alpha\><rprime|'>=1><rsup|n>\<bbb-E\><rsub|Y><around*|[|V<rsup|\<alpha\>><around*|(|y|)>
+    V<rsup|\<alpha\><rprime|'>><around*|(|y|)>|]>>, where
+
+    <\align>
+      <tformat|<table|<row|<cell|>|<cell|\<bbb-E\><rsub|Y><around*|[|V<rsup|\<alpha\>><around*|(|y|)>V<rsup|\<alpha\><rprime|'>><around*|(|y|)>|]>>>|<row|<cell|=>|<cell|<frac|\<delta\><rsub|\<alpha\>\<alpha\><rprime|'>>
+      \<epsilon\>|2> <around*|[|\<varphi\><rsup|\<alpha\>><rsub|2i><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>-\<varphi\><rsup|\<alpha\>><rsub|2i+1><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]><rsup|2>>>|<row|<cell|+>|<cell|<frac|\<epsilon\>|4>
+      <around*|(|x<rsup|\<alpha\><rprime|'>><rsub|2i+2>-x<rsup|\<alpha\><rprime|'>><rsub|2i>|)>
+      <around*|[|\<varphi\><rsup|\<alpha\>><rsub|2i><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>-\<varphi\><rsup|\<alpha\>><rsub|2i+1><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>\<times\>>>|<row|<cell|>|<cell|\<times\><around*|[|\<partial\><rsub|\<alpha\>>\<varphi\><rsup|\<alpha\><rprime|'>><rsub|2i><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+\<partial\><rsub|\<alpha\>><rprime|'>\<varphi\><rsup|\<alpha\><rprime|'>><rsub|2i+1><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>>>|<row|<cell|+>|<cell|<frac|\<epsilon\>|4>
+      <around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)>
+      <around*|[|\<varphi\><rsup|\<alpha\><rprime|'>><rsub|2i><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>-\<varphi\><rsup|\<alpha\><rprime|'>><rsub|2i+1><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>\<times\>>>|<row|<cell|>|<cell|\<times\><around*|[|\<partial\><rsub|\<alpha\><rprime|'>>\<varphi\><rsup|\<alpha\>><rsub|2i><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+\<partial\><rsub|\<alpha\><rprime|'>><rprime|'>\<varphi\><rsup|\<alpha\>><rsub|2i+1><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>>>|<row|<cell|+>|<cell|<frac|\<epsilon\>|8>
+      <around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)>
+      <around*|(|x<rsup|\<alpha\><rprime|'>><rsub|2i+2>-x<rsup|\<alpha\><rprime|'>><rsub|2i>|)>
+      <big|sum><rsub|\<beta\>=1><rsup|n><around*|[|\<partial\><rsub|\<beta\>>\<varphi\><rsup|\<alpha\>><rsub|2i><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+\<partial\><rsub|\<beta\>><rprime|'>\<varphi\><rsup|\<alpha\>><rsub|2i+1><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>\<times\>>>|<row|<cell|>|<cell|\<times\><around*|[|\<partial\><rsub|\<beta\>>\<varphi\><rsup|\<alpha\><rprime|'>><rsub|2i><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+\<partial\><rsub|\<beta\>><rprime|'>\<varphi\><rsup|\<alpha\><rprime|'>><rsub|2i+1><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>.>>>>
+    </align>
+  </footnote>
+
+  <with|color|dark blue|<\very-small>
+    <\align>
+      <tformat|<table|<row|<cell|>|<cell|\<bbb-E\><around*|[|<frac|1|2><around*|(|<big|sum><rsub|\<alpha\>=1><rsup|n>V<rsup|\<alpha\>><around*|(|y|)>|)><rsup|2>|]>>>|<row|<cell|=>|<cell|<frac|\<epsilon\>|4><big|sum><rsub|\<alpha\>=1><rsup|n><around*|[|\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>-\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]><rsup|2>>>|<row|<cell|+>|<cell|<frac|\<epsilon\>|4><big|sum><rsub|\<alpha\>,\<alpha\><rprime|'>=1><rsup|n><around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)>
+      <around*|[|\<partial\><rsub|\<alpha\><rprime|'>>\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+\<partial\><rsub|\<alpha\><rprime|'>><rprime|'>\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>\<times\>>>|<row|<cell|>|<cell|\<times\><around*|[|\<varphi\><rsup|\<alpha\><rprime|'>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>-\<varphi\><rsup|\<alpha\><rprime|'>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>>>|<row|<cell|+>|<cell|<frac|\<epsilon\>|16><big|sum><rsub|\<alpha\>,\<alpha\><rprime|'>,\<beta\>=1><rsup|n><around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)>
+      <around*|[|\<partial\><rsub|\<beta\>>\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+\<partial\><rsub|\<beta\>><rprime|'>\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>\<times\>>>|<row|<cell|>|<cell|\<times\><around*|(|x<rsup|\<alpha\><rprime|'>><rsub|2i+2>-x<rsup|\<alpha\><rprime|'>><rsub|2i>|)>
+      <around*|[|\<partial\><rsub|\<beta\>>\<varphi\><rsup|\<alpha\><rprime|'>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+\<partial\><rsub|\<beta\>><rprime|'>\<varphi\><rsup|\<alpha\><rprime|'>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>>>>>
+    </align>
+  </very-small>>
+
+  Plugging all these back to the integral, and defining
+  <math|x<rprime|'><rsub|i>=x<rsub|2i>/<sqrt|2>> for all <math|i>, we find,
+  (up to an irrelevant constant term),
+
+  <\small>
+    <\equation*>
+      -ln<around*|[|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|2i+1>exp<around*|(|<big|sum><rsub|\<alpha\>=1><rsup|n>J<rsup|\<alpha\>>|)>|]>=<big|sum><rsub|\<alpha\>=1><rsup|n><around*|[|<frac|1|2\<epsilon\>><around*|(|x<rprime|'><rsup|\<alpha\>><rsub|i+1>-
+      x<rprime|'><rsup|\<alpha\>><rsub|i>|)><rsup|2>-<around*|(|x<rprime|'><rsup|\<alpha\>><rsub|i+1>-x<rsup|\<alpha\>><rsub|i>|)>
+      \<varphi\><rprime|'><rsup|\<alpha\>><around*|(|x<rprime|'><rsub|i+1>,x<rprime|'><rsub|i>|)>+\<epsilon\>
+      \<xi\><rprime|'><rsup|\<alpha\>><around*|(|x<rsub|i+1><rprime|'>,x<rsub|i><rprime|'>|)>|]>,
+    </equation*>
+  </small>
+
+  where
+
+  <\equation*>
+    \<varphi\><rprime|'><rsup|\<alpha\>><around*|(|x<rprime|'><rsub|i+1>,x<rprime|'><rsub|i>|)>\<assign\><frac|1|<sqrt|2>><around*|[|\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>
+  </equation*>
+
+  and
+
+  <\small>
+    <\equation*>
+      \<xi\><rprime|'><rsup|\<alpha\>><rsub|i><around*|(|x<rsub|i+1><rprime|'>,x<rsub|i><rprime|'>|)>\<assign\><with|color|red|\<xi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+
+      \<xi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>><with|color|dark
+      green|-<frac|1|2><around*|[|\<partial\><rsub|\<alpha\>>\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>-\<partial\><rsub|\<alpha\>><rprime|'>\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>><with|color|dark
+      blue|-<frac|1|4><around*|[|\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>-\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]><rsup|2>><with|color|dark
+      green|-<frac|1|8><around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)>
+      <around*|[|\<Delta\>\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+\<Delta\><rprime|'>\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>><with|color|dark
+      blue|-<frac|1|4><big|sum><rsub|\<alpha\><rprime|'>=1><rsup|n><around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)>
+      <around*|[|\<partial\><rsub|\<alpha\><rprime|'>>\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+\<partial\><rsub|\<alpha\><rprime|'>><rprime|'>\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>
+      <around*|[|\<varphi\><rsup|\<alpha\><rprime|'>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>-\<varphi\><rsup|\<alpha\><rprime|'>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>-<frac|1|16><big|sum><rsub|\<alpha\><rprime|'>,\<beta\>=1><rsup|n><around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)>
+      <around*|[|\<partial\><rsub|\<beta\>>\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+\<partial\><rsub|\<beta\>><rprime|'>\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>
+      <around*|(|x<rsup|\<alpha\><rprime|'>><rsub|2i+2>-x<rsup|\<alpha\><rprime|'>><rsub|2i>|)>
+      <around*|[|\<partial\><rsub|\<beta\>>\<varphi\><rsup|\<alpha\><rprime|'>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+\<partial\><rsub|\<beta\>><rprime|'>\<varphi\><rsup|\<alpha\><rprime|'>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>>+<with|font|cal|O><around*|(|<sqrt|\<epsilon\>>|)>,
+    </equation*>
+  </small>
+
+  where we have indicated the source of the terms by color. This is held for
+  all <math|i>, thus we arrive at
+
+  <\equation*>
+    S<rprime|'><around*|(|x<rprime|'>|)>=<big|sum><rsub|i=-\<infty\>><rsup|+\<infty\>><big|sum><rsub|\<alpha\>=1><rsup|n><around*|[|<frac|1|2\<epsilon\>><around*|(|x<rprime|'><rsup|\<alpha\>><rsub|i+1>-
+    x<rprime|'><rsup|\<alpha\>><rsub|i>|)><rsup|2>-<around*|(|x<rprime|'><rsup|\<alpha\>><rsub|i+1>-x<rprime|'><rsup|\<alpha\>><rsub|i>|)>
+    \<varphi\><rprime|'><rsup|\<alpha\>><around*|(|x<rprime|'><rsub|i+1>,x<rprime|'><rsub|i>|)>+\<epsilon\>
+    \<xi\><rprime|'><rsup|\<alpha\>><around*|(|x<rsub|i+1><rprime|'>,x<rsub|i><rprime|'>|)>|]>,
+  </equation*>
+
+  which has exactly the same format as <math|S> (equation
+  <reference|equation:rg action>).
 
   <\equation*>
     \;
@@ -3583,6 +3939,7 @@
     <associate|auto-3|<tuple|1.2|2>>
     <associate|auto-30|<tuple|4.6|30>>
     <associate|auto-31|<tuple|1|31>>
+    <associate|auto-32|<tuple|4.7|32>>
     <associate|auto-4|<tuple|1.3|3>>
     <associate|auto-5|<tuple|1.4|3>>
     <associate|auto-6|<tuple|2|4>>
@@ -3592,29 +3949,33 @@
     <associate|equation:Detailed Balance|<tuple|8|8>>
     <associate|equation:Detailed Balance for transition density|<tuple|9|8>>
     <associate|equation:Fokker-Planck equation|<tuple|19|23>>
-    <associate|equation:action of distribution|<tuple|28|29>>
+    <associate|equation:action of distribution|<tuple|30|29>>
     <associate|equation:circle|<tuple|15|14>>
-    <associate|equation:data-fitting iteration|<tuple|30|30>>
-    <associate|equation:data-fitting result|<tuple|31|30>>
+    <associate|equation:data-fitting iteration|<tuple|32|31>>
+    <associate|equation:data-fitting result|<tuple|33|31>>
     <associate|equation:define stationary density function|<tuple|14|14>>
     <associate|equation:detailed balance condition for
     Langevin|<tuple|21|24>>
     <associate|equation:discrete time master equation|<tuple|5|5>>
     <associate|equation:discrete time master equation v0|<tuple|2|5>>
     <associate|equation:equation:metropolis-hastings|<tuple|12|13>>
-    <associate|equation:generic density|<tuple|29|30>>
+    <associate|equation:general path integral|<tuple|25|26>>
+    <associate|equation:generic density|<tuple|31|30>>
     <associate|equation:harmonic oscillator action|<tuple|22|25>>
     <associate|equation:km expansion|<tuple|16|19>>
-    <associate|equation:langevin action|<tuple|27|29>>
+    <associate|equation:langevin action|<tuple|28|28>>
+    <associate|equation:langevin action constant R|<tuple|29|29>>
     <associate|equation:langevin transition rate|<tuple|18|22>>
     <associate|equation:least-action principle v0|<tuple|23|25>>
     <associate|equation:least-action principle v1|<tuple|24|26>>
     <associate|equation:master equation|<tuple|4|5>>
     <associate|equation:master equation v0|<tuple|3|5>>
     <associate|equation:metropolis-hastings origin|<tuple|13|13>>
-    <associate|equation:path integral step 1|<tuple|25|27>>
-    <associate|equation:path integral step 2|<tuple|26|27>>
+    <associate|equation:path integral step 1|<tuple|26|27>>
+    <associate|equation:path integral step 2|<tuple|27|27>>
     <associate|equation:relative entropy derivative|<tuple|11|9>>
+    <associate|equation:rg action|<tuple|34|32>>
+    <associate|equation:rg integral|<tuple|35|32>>
     <associate|equation:stationary Fokker-Planck equation|<tuple|20|23>>
     <associate|equation:transition density normalization|<tuple|1|5>>
     <associate|equation:transition rate determines transition
@@ -3630,6 +3991,8 @@
     <associate|footnote-13|<tuple|13|20>>
     <associate|footnote-14|<tuple|14|26>>
     <associate|footnote-15|<tuple|15|27>>
+    <associate|footnote-16|<tuple|16|32>>
+    <associate|footnote-17|<tuple|17|34>>
     <associate|footnote-2|<tuple|2|2>>
     <associate|footnote-3|<tuple|3|2>>
     <associate|footnote-4|<tuple|4|2>>
@@ -3645,6 +4008,8 @@
     <associate|footnr-13|<tuple|13|20>>
     <associate|footnr-14|<tuple|14|26>>
     <associate|footnr-15|<tuple|15|27>>
+    <associate|footnr-16|<tuple|16|32>>
+    <associate|footnr-17|<tuple|17|34>>
     <associate|footnr-2|<tuple|2|2>>
     <associate|footnr-3|<tuple|3|2>>
     <associate|footnr-4|<tuple|4|2>>
@@ -3668,8 +4033,12 @@
     Source-Free Degree of Freedom|<tuple|3.8|23>>
     <associate|section: Example: Metropolis-Hastings
     Algorithm|<tuple|2.7|13>>
+    <associate|section: How Far Will Information Propagate in Markovian
+    Process?|<tuple|4.7|32>>
     <associate|section: Kramers-Moyal Expansion and Langevin
     Process|<tuple|3|14>>
+    <associate|section: Langevin Process Can Be Formulated as Path
+    Integral|<tuple|4.4|26>>
     <associate|section: Langevin Process Is a Markovian Process with
     Ncut=2|<tuple|3.6|22>>
     <associate|section: Least-Action Principle|<tuple|4|25>>
@@ -3677,8 +4046,6 @@
     Redundancy|<tuple|4.5|29>>
     <associate|section: Master Equation Describes the Evolution of Markov
     Process|<tuple|2.2|4>>
-    <associate|section: Master Equation on Euclidean Alphabet Can Be
-    Formulated as Path Integral|<tuple|4.4|26>>
     <associate|section: Master Equation, Detailed Balance, and Relative
     Entropy|<tuple|2|4>>
     <associate|section: Monte-Carlo Simulation and Guarantee of
@@ -3849,14 +4216,18 @@
       <no-break><pageref|auto-28>>
 
       <with|par-left|<quote|1tab>|4.5<space|2spc>Least-Action Principle of
-      Distribution Has No Redundancy (TODO)
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      Distribution Has No Redundancy <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-29>>
 
       <with|par-left|<quote|1tab>|4.6<space|2spc>Data Fitting Is Equivalent
       to Least-Action Principle of Distribution
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-30>>
+
+      <with|par-left|<quote|1tab>|4.7<space|2spc>How Far Will Information
+      Propagate in Markovian Process? (TODO)
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-32>>
     </associate>
   </collection>
 </auxiliary>

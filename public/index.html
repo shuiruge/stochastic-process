@@ -154,16 +154,24 @@
         Classical Mechanics <span style="margin-left: 5mm"></span> <a href="#auto-26">25</a>
       </p>
       <p>
-        4.3<span style="margin-left: 1em"></span>Least-Action Principle of Distribution Has No
-        Redundancy <span style="margin-left: 5mm"></span> <a href="#auto-27">26</a>
+        4.3<span style="margin-left: 1em"></span>Preliminary: Grassmann Number and Berezin
+        Integral (TODO) <span style="margin-left: 5mm"></span> <a href="#auto-27">26</a>
       </p>
       <p>
-        4.4<span style="margin-left: 1em"></span>Data Fitting Is Equivalent to Least-Action
-        Principle of Distribution <span style="margin-left: 5mm"></span> <a href="#auto-28">27</a>
+        4.4<span style="margin-left: 1em"></span>Langevin Process Can Be Formulated as Path
+        Integral <span style="margin-left: 5mm"></span> <a href="#auto-28">26</a>
       </p>
       <p>
-        4.5<span style="margin-left: 1em"></span>Langevin Process Can Be Formulated as Path
-        Integral (TODO) <span style="margin-left: 5mm"></span> <a href="#auto-30">28</a>
+        4.5<span style="margin-left: 1em"></span>Least-Action Principle of Distribution Has No
+        Redundancy <span style="margin-left: 5mm"></span> <a href="#auto-29">29</a>
+      </p>
+      <p>
+        4.6<span style="margin-left: 1em"></span>Data Fitting Is Equivalent to Least-Action
+        Principle of Distribution <span style="margin-left: 5mm"></span> <a href="#auto-30">30</a>
+      </p>
+      <p>
+        4.7<span style="margin-left: 1em"></span>How Far Will Information Propagate in Markovian
+        Process? (TODO) <span style="margin-left: 5mm"></span> <a href="#auto-32">32</a>
       </p>
     </div>
     <h2 id="auto-1"><a id="section: Relative Entropy"></a>1<span style="margin-left: 1em"></span>Relative Entropy<span style="margin-left: 1em"></span></h2>
@@ -3681,275 +3689,57 @@ x_1) = T^2  [x_{\star} ((i + 1) / T) - 2 x_{\star}
       Knowing the extremum of a function cannot imply the shape of the
       function. The action has much more degrees of freedom than that is
       needed for revealing the real world datum in classical mechanics. But
-      combined with uncertainty, as we will see in section <a href="#section: Least-Action Principle of Distribution Has No Redundancy">4.3</a>,
+      combined with uncertainty, as we will see in section <a href="#section: Least-Action Principle of Distribution Has No Redundancy">4.5</a>,
       action is completely determined by the real world distribution (the
       correspondence of real world datum), with nothing redundant.
     </p>
-    <h3 id="auto-27"><a id="section: Least-Action Principle of Distribution Has No Redundancy"></a>4.3<span style="margin-left: 1em"></span>Least-Action Principle of
-    Distribution Has No Redundancy<span style="margin-left: 1em"></span></h3>
+    <h3 id="auto-27"><a id="section: Preliminary: Grassmann Number and Berezin Integral"></a>4.3<span style="margin-left: 1em"></span>Preliminary: Grassmann Number
+    and Berezin Integral (TODO)<span style="margin-left: 1em"></span></h3>
     <p>
-      Dynamics in classical mechanics are always deterministic. That is, once
-      the initial conditions (for initial value problem) or the boundaries
-      (for boundary value problem) are fixed, then the path is fully
-      determined, in which randomness is forbidden. There are, however, many
-      phenomena in nature that have <em>intrinsic</em> randomness. For
-      example, Langevin process \(\mathrm{d} X (t) = f (X (t)) \mathrm{d} t +
-      \mathrm{d} W (t)\), which was originally used to describe molecular
-      movement, has a stochastic term \(\mathrm{d} W (t)\) obeying a normal
-      distribution with variance proportional to \(\mathrm{d} t\). The
-      dynamics of starling flocks also has intrinsic randomness, which is the
-      &ldquo;free will&rdquo; of each bird, so is ant colony, human society,
-      and any interactive system in which each element has some level of
-      intrinsic uncertainty. For these cases, the real world datum is not
-      simply a path, but a distribution of path. Precisely, we use a
-      distribution \(Q\) to describe real world phenomenon that has intrinsic
-      randomness.
-    </p>
-    <p>
-      For any density function \(q (x)\), we can always define, up to an
-      arbitrary constant,
-    </p>
-    <table width="100%">
-      <tr>
-        <td width="100%" align="center">\(\displaystyle S (x) := - \ln q (x)
-        +\operatorname{const}. \)</td>
-        <td align="right">(25)</td>
-      </tr>
-    </table>
-    <p>
-      Thus, \(q (x) = \exp (- S (x)) / Z\) where \(Z := \int_{\mathcal{X}}
-      \mathrm{d} x \exp (- S (x))\). This \(S\) has some properties that can
-      be analog to the action in classical mechanics. First, if
-      \(\mathcal{X}=\mathbb{R}^d\), then we find, by plugging in the
-      definition of \(S\),
+      We have to briefly introduce Grassmann number, on which Berezin integral
+      is based. Grassmann number is an extension of complex number,by
+      introducing in the anti-commutative numbers. Given a set of
+      anti-commutative numbers \(\{ \zeta_i |i = 1, \ldots, n \}\), where we
+      treat each \(_i\) as an abstract variable. We demand that the
+      anti-commutative relation between \(\zeta\)s
     </p>
     <center>
-      \(\displaystyle \int_{\mathbb{R}^d} \mathrm{d} x q (x)  \frac{\partial
-      S}{\partial x^{\alpha}}
-(x) = - \int_{\mathbb{R}^d} \mathrm{d} x q (x) 
-      \frac{\partial}{\partial
-x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
-      \mathrm{d} x
-\frac{\partial}{\partial x^{\alpha}} q (x) .\)
+      \(\displaystyle \zeta_i \zeta_j = - \zeta_j \zeta_i .\)
     </center>
     <p>
-      The integrand of the right most expression is a divergence, so it
-      results in a boundary integral. But since \(q\), as a density function,
-      is normalized, the boundary integral shall vanish. So, we conclude that
+      But for any complex number \(z\), we demand a commutative relation
     </p>
     <center>
-      \(\displaystyle \mathbb{E}_Q \left[ \frac{\partial S}{\partial
-      x^{\alpha}} \right] = 0.\)
+      \(\displaystyle z \zeta_i = \zeta_i z.\)
     </center>
     <p>
-      This is analog to equation <a href="#equation:least-action principle v1">24</a>, where the minimum
-      \(x_{\star}\) is replaced by the expectation \(\mathbb{E}_Q\). Secondly,
-      distribution \(Q\) most likely samples (recall section <a href="#section: A Brief Review of Probability">1.1</a>
-      that distribution has a sampler) the \(x\) that maximizes \(q\), thus
-      minimizes \(S\). For these reasons, we illustrate the \(S\) defined by
-      \(q\) as the action of \(Q\). Contrary to the action in classical
-      mechanics, the \(S\) here is completely determined by the real world
-      distribution \(Q\) (because it is defined by the density function
-      \(q\)), without any redundancy. This is the direct implication that
-      distribution involves more information than its most likely datum.
+      TODO
     </p>
-    <h3 id="auto-28"><a id="section: Data Fitting Is Equivalent to Least-Action Principle of Distribution"></a>4.4<span style="margin-left: 1em"></span>Data Fitting Is Equivalent to
-    Least-Action Principle of Distribution<span style="margin-left: 1em"></span></h3>
-    <p>
-      Given a collection of real world data, we are to find a distribution
-      that fits the data. These data can be seen as samples from an unknown
-      distribution which characterizes the real world. We are to figure out a
-      method to fit the real world distribution by given some samples of it.
-    </p>
-    <p>
-      Let \(P (\theta)\) represent a parametrized distribution with parameters
-      \(\theta\). From its density function, \(p (\cdot, \theta)\), we get a
-      parameterized action \(S (\cdot, \theta)\) such that
-    </p>
-    <table width="100%">
-      <tr>
-        <td width="100%" align="center">\(\displaystyle p (x, \theta) = \exp (- S (x,
-        \theta)) / Z (\theta), \)</td>
-        <td align="right">(26)</td>
-      </tr>
-    </table>
-    <p>
-      where \(Z (\theta) = \int_{\mathcal{X}} \mathrm{d} x \exp (- S (x,
-      \theta))\) for ensuring the normalization \(\int_{\mathcal{X}}
-      \mathrm{d} x p (x, \theta) = 1\). This is consistent with the action
-      defined by equation <a href="#equation:action of distribution">25</a>, except that the action here is
-      parameterized, and that we omit the constant \(\beta\) since it is
-      irrelevant throughout this section.
-    </p>
-    <p>
-      What we have is a collection of data, sampled from an unknown
-      distribution \(Q\). And we are to adjust the parameters \(\theta\) so
-      that \(P (\theta)\) approximates \(Q\). To do so, we minimize the
-      relative entropy between \(Q\) and \(P (\theta)\), which is defined as
-      \(H (Q, P (\theta)) := \int_{\mathcal{X}} \mathrm{d} x q (x) \ln (q (x)
-      / p (x,
-\theta))\). This expression is formal. Since we do not know the
-      density function of \(Q\), all that we can do with \(Q\) is computing
-      the expectation \(\mathbb{E}_Q [f] = (1 / | Q |) \sum_{x \in Q} f (x)\)
-      for any function \(f\), where we use \(Q\) as a set of data. With this
-      realization, we have, after plugging equation <a href="#equation:generic density">26</a> into \(H
-      (Q, P (\theta))\),
-    </p>
-    <center>
-      \(\displaystyle H (Q, P (\theta)) = \int_{\mathcal{X}} \mathrm{d} x q
-      (x) \ln q (x) +
-\int_{\mathcal{X}} \mathrm{d} x q (x) S (x, \theta) +
-      \int_{\mathcal{X}}
-\mathrm{d} x q (x) \ln Z (\theta) .\)
-    </center>
-    <p>
-      By omitting the \(\theta\)-independent terms, we get the loss function
-    </p>
-    <center>
-      \(\displaystyle L (\theta) := \int_{\mathcal{X}} \mathrm{d} x q (x) S
-      (x, \theta) + \ln Z
-(\theta) .\)
-    </center>
-    <p>
-      The parameters that minimize \(L (\theta)\) also minimize \(H (Q, P
-      (\theta))\), and vice versa. We can find the \(\theta_{\star} :=
-      \operatorname{argmin}L\) by iteratively updating \(\theta\) along the
-      direction \(- \partial L / \partial \theta\). To calculate \(- \partial
-      L / \partial \theta\), we start at
-    </p>
-    <center>
-      \(\displaystyle - \frac{\partial L}{\partial \theta^{\alpha}} (\theta) =
-      - \int_{\mathcal{X}}
-\mathrm{d} x q (x)  \frac{\partial S}{\partial
-      \theta^{\alpha}} (x, \theta) -
-\frac{1}{Z (\theta)}  \frac{\partial
-      Z}{\partial \theta^{\alpha}} (\theta) .\)
-    </center>
-    <p>
-      The first term is recognized as \(-\mathbb{E}_Q [\partial S / \partial
-      \theta^{\alpha}]\). For the second term, since \(Z (\theta) =
-      \int_{\mathcal{X}} \mathrm{d} x \exp (- S (x, \theta))\), we have
-    </p>
-    <center>
-      \(\displaystyle - \frac{1}{Z (\theta)}  \frac{\partial Z}{\partial
-      \theta^{\alpha}} (\theta) =
-\int_{\mathcal{X}} \mathrm{d} x {\frac{\exp
-      (- S (x, \theta))}{Z (\theta)}} 
-\frac{\partial S}{\partial
-      \theta^{\alpha}} (x, \theta) = \int_{\mathcal{X}}
-\mathrm{d} x p (x,
-      \theta)  \frac{\partial S}{\partial \theta^{\alpha}} (x,
-\theta),\)
-    </center>
-    <p>
-      where in the last equality, we used the definition of \(p (x, \theta)\)
-      (the green factor). This final expression is just the \(\mathbb{E}_{P
-      (\theta)} [\partial S / \partial \theta^{\alpha}]\). Altogether, we
-      arrive at
-    </p>
-    <table width="100%">
-      <tr>
-        <td width="100%" align="center">\(\displaystyle - \frac{\partial L}{\partial
-        \theta^{\alpha}} (\theta) =\mathbb{E}_{P
-(\theta)} \left[
-        \frac{\partial S}{\partial \theta^{\alpha}} (\cdot, \theta)
-\right]
-        -\mathbb{E}_Q \left[ \frac{\partial S}{\partial
-        \theta^{\alpha}}
-(\cdot, \theta) \right] . \)</td>
-        <td align="right">(27)</td>
-      </tr>
-    </table>
-    <p>
-      At the minimum, we shall have \(\partial L / \partial \theta = 0\).
-      Then, we find that \(\theta_{\star}\) obeys
-    </p>
-    <table width="100%">
-      <tr>
-        <td width="100%" align="center">\(\displaystyle \mathbb{E}_{P (\theta_{\star})}
-        \left[ \frac{\partial S}{\partial
-\theta^{\alpha}} (\cdot,
-        \theta_{\star}) \right] =\mathbb{E}_Q \left[
-\frac{\partial
-        S}{\partial \theta^{\alpha}} (\cdot, \theta_{\star}) \right] . \)</td>
-        <td align="right">(28)</td>
-      </tr>
-    </table>
-    <p>
-      
-    </p>
-    <p>
-      It can be read from equation <a href="#equation:data-fitting iteration">27</a> that minimizing \(L\) is to
-      increase \(S (\cdot, \theta)\) on the sampled points (the first term)
-      while decrease it on data points (the second term). As figure <a href="#figure: Least-Action">1</a>
-      illustrates, this way of optimization will site real world data onto
-      local minima of \(S (\cdot, \theta)\), <em>in statistical sense</em>.
-    </p>
-    <div style="margin-top: 1em; margin-bottom: 1em">
-      <table style="width: 100%">
-        <tbody><tr>
-          <td style="text-align: center; padding-left: 0em; padding-right: 0em"><img src="index-1.png" style="margin-left: -0.0134736842105263em; margin-bottom: 0em; margin-right: -0.0134736842105241em; margin-top: 0em; vertical-align: -14.3223684210526em; height: 28.6447368421053em"></img></td>
-        </tr><tr>
-          <td style="text-align: center; padding-left: 0em; padding-right: 0em; height: 0.5em"></td>
-        </tr><tr>
-          <td style="text-align: center; padding-left: 0em; padding-right: 0em; padding-left: 1.5em; padding-right: 1.5em"><div class="caption">
-            <font style="font-size: 84.1%"><p>
-              <b>Figure 1. </b><a id="auto-29"></a><a id="figure: Least-Action"></a> This figure illustrate
-              how \(\min_{\theta} L (\theta)\) will site a real world datum
-              onto a local minimum of \(S (\cdot, \theta)\). The green curve
-              represents the current not-yet-optimized \(S (\cdot, \theta)\).
-              The \(x_1\) (red point) is a real world datum while \(x_2\)
-              (blue point), which is currently a local minimum of \(S (\cdot,
-              \theta)\), is not. Minimizing \(L\) by tuning \(\theta\) pushes
-              the \(\mathbb{E}_Q [S (\cdot, \theta)]\) down to lower value,
-              corresponding to the red downward double-arrow on \(x_1\). Also,
-              since \(x_2\) is a local minimum, the data points sampled from
-              \(p (x, \theta) \propto \exp (- S (x, \theta))\) will accumulate
-              around \(x_2\). So, minimizing \(L\) also pulls the
-              \(\mathbb{E}_{P (\theta)} [S (\cdot, \theta)]\) up to greater
-              value, corresponding to the blue upward double-arrow on \(x_2\).
-              Altogether, it makes \(x_1\) a local minimum of \(S (\cdot,
-              \theta)\), and \(S (\cdot, \theta)\) is optimized to be the
-              dashed green curve.
-            </p></font>
-          </div></td>
-        </tr></tbody>
-      </table>
-    </div>
-    <p>
-      In this way, we find an analytical distribution \(P (\theta)\) that
-      approximates the empirical distribution \(Q\). The \(S (\cdot, \theta)\)
-      that defines \(P (\theta)\) describes the interaction between the
-      different components of an entity. This entity may be of physics, like a
-      collection of particles. But it can also be words, genes, flock of
-      birds, and so on.
-    </p>
-    <p>
-      As an example, if we want to get the action that characterizes the
-      stochastic dynamics of starling flocks, we take movies for many flocks.
-      Each movie is a series of frames that log the positions of each bird at
-      each time instant. These movies provide the real world data. The
-      parameterized action \(S\) can be expressed by a neural network. Then,
-      iterating by equation <a href="#equation:data-fitting iteration">27</a> until \(\| \partial L / \partial
-      \theta \|\) has been small enough gives an \(S (\cdot, \theta_{\star})\)
-      that mimics the stochastic dynamics of starling flocks. To compute the
-      expectation \(\mathbb{E}_{P (\theta)} [\ldots]\) in equation <a href="#equation:data-fitting iteration">27</a>,
-      we can employ Monte-Carlo simulation with the transition rate satisfying
-      detailed balance condition with \(P (\theta)\) as the stationary
-      distribution. For continuous random variables, Monte-Carlo simulation
-      with Langevin dynamics (section <a href="#section: Detailed Balance of Langevin Process Lacks Source-Free Degree of Freedom">3.8</a>) is efficient; and for
-      discrete random variables, Metropolis-Hastings (section <a href="#section: Example: Metropolis-Hastings Algorithm">2.7</a>)
-      is available.
-    </p>
-    <h3 id="auto-30"><a id="section: Master Equation on Euclidean Alphabet Can Be Formulated as Path Integral"></a>4.5<span style="margin-left: 1em"></span>Langevin Process Can Be
-    Formulated as Path Integral (TODO)<span style="margin-left: 1em"></span></h3>
+    <h3 id="auto-28"><a id="section: Langevin Process Can Be Formulated as Path Integral"></a>4.4<span style="margin-left: 1em"></span>Langevin Process Can Be
+    Formulated as Path Integral<span style="margin-left: 1em"></span></h3>
     <p>
       In this section, we are to formulate the master equation into path
       integral. The path integral formulation was found by Paul Dirac in 1933
       who was trying to using Lagrangian in quantum mechanism. It was then
-      developed by Richard Feynman in 1948. Now, path integral is applied not
-      only to quantum field theory, but also many other areas such as
-      stochastic process.
+      developed by physicist Richard Feynman and mathematician Mark Kac in
+      1947. Now, path integral is applied not only to quantum field theory,
+      but also many other areas such as stochastic process. Path integral
+      generally has the formalism
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle \int_{\mathbb{R}^d} \mathrm{d} x_1
+        \cdots \int_{\mathbb{R}^d} \mathrm{d} x_n
+\exp (- S (x_1, \ldots,
+        x_n)), \)</td>
+        <td align="right">(25)</td>
+      </tr>
+    </table>
+    <p>
+      where a series \((x_1, \ldots, x_n)\) is called a &ldquo;path&rdquo;,
+      and the \(S\) is called the &ldquo;action&rdquo; of path. Apparently, it
+      is an integral of all possible paths, thus named as &ldquo;path
+      integral&rdquo;.
     </p>
     <p>
       To derive a path integral formulation for master equation, we follow the
@@ -3985,31 +3775,23 @@ x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
         \mathrm{d} x_0 q_{\Delta t} (x_N |x_{N - 1}) \cdots
 q_{\Delta t} (x_1
         |x_0) p (x_0, 0) . \)</td>
-        <td align="right">(29)</td>
+        <td align="right">(26)</td>
       </tr>
     </table>
     <p>
       
     </p>
     <p>
-      The next step is assuming \(\Delta t\) is small and re-expressing
-      \(q_{\Delta t} (x_{i + 1} |x_i)\) in exponential. That is, we are to
-      calculate \(\ln q_{\Delta t} (x_{i + 1} |x_i)\) when \(\Delta t\) is
-      sufficiently small. To make it well-defined, we assume that \(r (x, y) >
-      0\) for any \(x, y \in \mathcal{X}\) with \(x \neq y\). This is
-      essential and sufficient for \(q_{\Delta t} (x|y) > 0\), at least when
-      \(\Delta t\) is small.
-    </p>
-    <p>
-      Since transition rate has completely determined the Markovian process
-      (see section <a href="#section: Transition Rate Determines Transition Density">2.3</a>), we are to express the \(\ln q_{\Delta t}
-      (x|y)\) in terms of \(r\). This, however, cannot be straight-forward
-      since the leading term of \(q_{\Delta t} (x|y)\) is \(\delta (x - y)\)
-      which cannot be converted into exponential. But, we can consider its
-      Fourier transform, since \(\delta (x - y)\), if regarding as a Dirac's
-      delta function, has exponential Fourier coefficient \(\exp (- \mathrm{i}
-      k_{\alpha} (x^{\alpha} - y^{\alpha}))\). This suggest us to consider the
-      Fourier transform of transition rate, as
+      The next step is making \(\Delta t\) small and re-expressing \(q_{\Delta
+      t} (x_{i + 1} |x_i)\) in exponential. This, however, cannot be
+      straight-forward since the leading term of \(q_{\Delta t} (x|y)\) is
+      \(\delta (x - y)\) which cannot be converted into exponential. But, we
+      can consider its Fourier transform, since \(\delta (x - y)\), if
+      regarding as a Dirac's delta function, has Fourier coefficient \(\exp (-
+      \mathrm{i} k_{\alpha} (x^{\alpha} - y^{\alpha}))\). This suggest us to
+      consider the Fourier transform of transition rate (as discussed in
+      section <a href="#section: Transition Rate Determines Transition Density">2.3</a>, transition rate has completely determined the
+      Markovian process), as
     </p>
     <center>
       \(\displaystyle \hat{r} (x, k) := \int_{\mathbb{R}^d} \mathrm{d}
@@ -4018,10 +3800,10 @@ k_{\alpha} \epsilon^{\alpha}) r (x + \epsilon,
       x) .\)
     </center>
     <p>
-      This forces the alphabet \(\mathcal{X}\) to be Euclidean space
+      <em>This forces the alphabet \(\mathcal{X}\) to be Euclidean space
       \(\mathbb{R}^d\), because we cannot perform the same thing on
       Kronecker's delta when the alphabet is discrete, or when the alphabet is
-      continuous but not Euclidean. Then, we have
+      continuous but not Euclidean.</em> Then, we have
     </p>
     <center>
       \(\displaystyle q_{\Delta t} (x + \epsilon |x) = \delta (\epsilon) + r
@@ -4092,7 +3874,7 @@ K_2^{\alpha \beta} (x)  (\mathrm{i}
         (x) k_{\alpha} k_{\beta} k_{\gamma} + \cdots + \omicron (\Delta
 t)
         \right) . \)</td>
-        <td align="right">(30)</td>
+        <td align="right">(27)</td>
       </tr>
     </table>
     <p>
@@ -4151,10 +3933,11 @@ b_{\beta} \right),\)
       approximately Gaussian.
     </p>
     <p>
-      Now, non-constant terms are all in the exponential except for the
-      \([\det \Sigma (x)]^{- 1 / 2}\) factor. We are to move it into
-      exponential too. We first use Cholesky factorization to remove the root,
-      and then using Berezin integral to convert determinant to exponential.
+      To match the path integral formulism <a href="#equation:general path integral">25</a>, in which all
+      integration variables are in the exponential, we have to convert the
+      \([\det \Sigma (x)]^{- 1 / 2}\) factor into exponential too. To do so,
+      we first use Cholesky factorization to remove the root, and then use
+      Berezin integral to convert determinant to exponential.
     </p>
     <p>
       To introduce Cholesky factorization, we fix the argument \(x\) and omit
@@ -4190,8 +3973,8 @@ R_{\gamma \beta}\). So, we have (insert the omitted
       t}{2} \sum_{\alpha = 1}^d \left[
 R_{\alpha \beta} (x)  \left(
       \frac{\epsilon^{\beta}}{\Delta t} - f^{\beta} (x)
-\right) \right]^2
-      \right) .\)
+\right) \right]^2 +
+      \omicron (\Delta t) \right) .\)
     </center>
     <p>
       Now, the determinant gets rid of root (and fraction). Remark that \(R
@@ -4199,46 +3982,24 @@ R_{\alpha \beta} (x)  \left(
     </p>
     <p>
       Next, we use Berezin integral to convert the determinant \(\det R (x)\)
-      to exponential. We have to briefly introduce Grassmann number, on which
-      Berezin integral is based. Grassmann number is an extension of complex
-      number,by introducing in the anti-commutative numbers. Given a set of
-      anti-commutative numbers \(\{ \theta_i |i = 1, \ldots, n \}\), where we
-      treat each \(\theta_i\) as an abstract variable. We demand that the
-      anti-commutative relation between \(\theta\)s
+      to exponential. By the formula of Berezin integral for any \(A \in
+      \mathbb{C}^{d \times d}\) (introduced in section <a href="#section: Preliminary: Grassmann Number and Berezin Integral">4.3</a>),
     </p>
     <center>
-      \(\displaystyle \theta_i \theta_j = - \theta_j \theta_i .\)
-    </center>
-    <p>
-      But for any complex number \(z\), we demand a commutative relation
-    </p>
-    <center>
-      \(\displaystyle z \theta_i = \theta_i z.\)
-    </center>
-    <p>
-      TODO
-    </p>
-    <p>
-      By the formula of Berezin integral for any \(A \in \mathbb{C}^{d \times
-      d}\),
-    </p>
-    <center>
-      \(\displaystyle \int \mathrm{d} \theta \int \mathrm{d} \eta \exp (-
+      \(\displaystyle \int \mathrm{d} \zeta \int \mathrm{d} \eta \exp (-
       A_{\alpha \beta}
-\theta^{\alpha} \eta^{\beta}) = \det A,\)
+\zeta^{\alpha} \eta^{\beta}) = \det A,\)
     </center>
     <p>
-      where \(\theta\) and \(\eta\) are multi-dimensional Grassmann numbers,
-      we have (replacing the Grassmann numbers \(\theta\) and \(\eta\) by
-      \(\psi\) and \(\bar{\psi}\) respectively, and the matrix \(A\) by \(R
-      (x)\))
+      where \(\zeta\) and \(\eta\) are multi-dimensional Grassmann numbers, we
+      have (replacing \(A\) by \(R (x) \Delta t\))
     </p>
     <center>
-      \(\displaystyle \int \mathrm{d} \psi \int \mathrm{d} \bar{\psi} \exp (-
-      \Delta t R_{\alpha
-\beta} (x) \psi^{\alpha}  \bar{\psi}^{\beta}) = \det
-      [R (x) \Delta t] = \Delta
-t^d \det R (x),\)
+      \(\displaystyle \int \mathrm{d} \zeta \int \mathrm{d} \eta \exp (-
+      \Delta t R_{\alpha \beta}
+(x) \zeta^{\alpha} \eta^{\beta}) = \det [R (x)
+      \Delta t] = \Delta t^d \det R
+(x),\)
     </center>
     <p>
       we convert the determinant into exponential, as
@@ -4246,97 +4007,121 @@ t^d \det R (x),\)
     <center>
       \(\displaystyle q_{\Delta t} (x + \epsilon |x) = \left( \frac{2
       \pi}{\Delta t^3} \right)^{d /
-2}  \int \mathrm{d} \psi \int \mathrm{d}
-      \bar{\psi} \exp \left( - \frac{\Delta
+2}  \int \mathrm{d} \theta \int \mathrm{d}
+      \eta \exp \left( - \frac{\Delta
 t}{2} \sum_{\alpha = 1}^d \left[
       R_{\alpha \beta} (x)  \left(
 \frac{\epsilon^{\beta}}{\Delta t} -
       f^{\beta} (x) \right) \right]^2 - \Delta t
 R_{\alpha \beta} (x)
-      \psi^{\alpha}  \bar{\psi}^{\beta} \right) .\)
+      \zeta^{\alpha} \eta^{\beta} \right) .\)
     </center>
     <p>
-      
+      In physics, the Grassmann variables \(\zeta\) and \(\eta\) are called
+      &ldquo;ghost variables&rdquo;.
     </p>
     <p>
-      Plugging back to equation <a href="#equation:path integral step 1">29</a>, we get
+      Plugging back to equation <a href="#equation:path integral step 1">26</a>, we get
     </p>
     <center>
-      \(\displaystyle p (x_N, N \Delta t) = \int \mathrm{D} [x, \psi,
-      \bar{\psi}] \exp (- S (x,
-\psi, \bar{\psi})) p (x_0, 0),\)
+      \(\displaystyle p (x_N, N \Delta t) = \int \mathrm{D} (x, \zeta, \eta)
+      \exp (- S (x, \zeta,
+\eta) + C) p (x_0, 0),\)
     </center>
     <p>
       where the measurement is defined by
     </p>
     <center>
-      \(\displaystyle \int \mathrm{D} [x, \psi, \bar{\psi}] := \left( \frac{2
-      \pi}{\Delta t^3}
-\right)^{N d / 2} \int_{\mathbb{R}^n} \mathrm{d} x_0
-      \cdots
-\int_{\mathbb{R}^n} \mathrm{d} x_{N - 1} \int \mathrm{d} \psi_0
-      \int
-\mathrm{d} \bar{\psi}_0 \cdots \int \mathrm{d} \psi_{N - 1} \int
-      \mathrm{d}
-\bar{\psi}_{N - 1}\)
+      \(\displaystyle \int \mathrm{D} (x, \zeta, \eta) := \int_{\mathbb{R}^n}
+      \mathrm{d} x_0 \cdots
+\int_{\mathbb{R}^n} \mathrm{d} x_{N - 1} \int
+      \mathrm{d} \zeta_0 \int
+\mathrm{d} \eta_0 \cdots \int \mathrm{d}
+      \zeta_{N - 1} \int \mathrm{d} \eta_{N
+- 1}\)
     </center>
     <p>
-      and the &ldquo;action of Langevin process&rdquo; is
+      and the &ldquo;action&rdquo; of Langevin process is
     </p>
     <table width="100%">
       <tr>
-        <td width="100%" align="center">\(\displaystyle S (x, \psi, \bar{\psi}) := \sum_{i =
+        <td width="100%" align="center">\(\displaystyle S (x, \zeta, \eta) := \sum_{i =
         0}^{N - 1} \Delta t \left\{ \frac{1}{2} 
 \sum_{\alpha = 1}^d \left[
         R_{\alpha \beta} (x_i)  \left( \frac{x_{i +
 1}^{\beta} -
         x_i^{\beta}}{\Delta t} - f^{\beta} (x_i) \right) \right]^2 +
 R_{\alpha
-        \beta} (x_i) \psi_i^{\alpha}  \bar{\psi}_i^{\beta} + \omicron
-        (1)
-\right\} . \)</td>
-        <td align="right">(31)</td>
+        \beta} (x_i) \zeta^{\alpha}_i \eta_i^{\beta} + \omicron (1) \right\}
+.
+        \)</td>
+        <td align="right">(28)</td>
       </tr>
     </table>
     <p>
-      
+      The \(C := (d / 2) (\ln 2 \pi - 3 \ln \Delta t)\) is independent of
+      \(x\), \(\zeta\), or \(\eta\), thus is regarded as constant.
     </p>
     <p>
-      By formally taking \(\Delta t \rightarrow 0\) and \(N \rightarrow +
-      \infty\) while keeping \(N \Delta t\) finite, and replacing the discrete
-      index \(i\) with a continuous variable \(t \in [0, t_f]\), the action
-      becomes
+      When \(R (x)\) is constant, we can choose a proper coordinates of \(x\)
+      such that \(R\) becomes identity matrix, thus the ghost variables
+      disappears since \(\int \mathrm{d} \zeta \int \mathrm{d} \eta \exp
+      \left( \sum_{\alpha}
+\zeta^{\alpha} \eta^{\alpha} \right) = 1\). In this
+      situation, the \(S\) becomes
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle S (x) := \sum_{i = 0}^{N - 1} \Delta
+        t \left\{ \frac{1}{2}  \sum_{\alpha =
+1}^d \left[ \left( \frac{x_{i +
+        1}^{\alpha} - x_i^{\alpha}}{\Delta t} -
+f^{\alpha} (x_i) \right)
+        \right]^2 + \omicron (1) \right\}, \)</td>
+        <td align="right">(29)</td>
+      </tr>
+    </table>
+    <p>
+      and accordingly, the measurement becomes \(\int D (x) :=
+      \int_{\mathbb{R}^n} \mathrm{d} x_0 \cdots \int_{\mathbb{R}^n}
+\mathrm{d}
+      x_{N - 1}\). The expression is greatly simplified when \(R\) is
+      constant.
+    </p>
+    <p>
+      The final step is formally taking \(\Delta t \rightarrow 0\) and \(N
+      \rightarrow + \infty\) while keeping \(N \Delta t\) finite, and
+      replacing the discrete index \(i\) with a continuous variable \(t \in
+      [0, t_f]\), the action becomes
     </p>
     <center>
-      \(\displaystyle S (x, \psi, \bar{\psi}) \rightarrow \int_0^{t_f}
-      \mathrm{d} t \left\{
-\frac{1}{2}  \sum_{\alpha = 1}^d \left[ R_{\alpha
-      \beta} (x (t))  \left(
-\frac{\mathrm{d} x^{\beta}}{\mathrm{d} t} (t) -
-      f^{\beta} \left( x \left( t
-\right) \right) \right) \right]^2 +
-      R_{\alpha \beta} (x (t)) \psi^{\alpha} (t)
-\bar{\psi}^{\beta} (t)
-      \right\},\)
+      \(\displaystyle S (x, \zeta, \eta) \rightarrow \int_0^{t_f} \mathrm{d} t
+      \left\{ \frac{1}{2} 
+\sum_{\alpha = 1}^d \left[ R_{\alpha \beta} (x (t))
+      \left( \frac{\mathrm{d}
+x^{\beta}}{\mathrm{d} t} (t) - f^{\beta} \left(
+      x (t) \right) \right)
+\right]^2 + R_{\alpha \beta} (x (t))
+      \zeta^{\alpha} (t) \eta^{\beta} (t)
+\right\},\)
     </center>
     <p>
       in which \((\mathrm{d} x / \mathrm{d} t) (t) := (x_{i + 1} - x_i) /
       \Delta t\). These are formal definitions, and we will never really take
       the limit \(\Delta t \rightarrow 0\) and \(N \rightarrow + \infty\)
-      since it is numerically not well-defined. For example, the \(\int
-      \mathrm{D} [x, \psi, \bar{\psi}]\) diverges, so is the \((\mathrm{d} x /
-      \mathrm{d} t) (t)\).
+      since it is numerically not well-defined. For example, the constant
+      \(C\) diverges, so is the \((\mathrm{d} x / \mathrm{d} t) (t)\).
     </p>
     <p>
       As a summary, we find the master equation of Langevin process can be
       formulated as a path integral, in which the action is given by equation
-      <a href="#equation:langevin action">31</a>, in which \(\psi\) and \(\bar{\psi}\) are independent
-      Grassmann numbers.
+      <a href="#equation:langevin action">28</a>, in which \(\zeta\) and \(\eta\) are Grassmann
+      variables.
     </p>
     <p>
       Final remark on cut-off \(N_{\operatorname{cut}} = 2\). If choose
       \(N_{\operatorname{cut}} > 2\), it is hard to see how to integrate the
-      improper integral <a href="#equation:path integral step 2">30</a>, and even to show why it is finite.
+      improper integral <a href="#equation:path integral step 2">27</a>, and even to show why it is finite.
       For example, if \(N_{\operatorname{cut}} = 4\), the \((\Delta t / 4!)
       K^{\alpha \beta \gamma \sigma}_4 (x) k_{\alpha} k_{\beta}
 k_{\gamma}
@@ -4349,5 +4134,830 @@ k_{\gamma}
       only \(\mathcal{O} (d^2)\) degrees of freedom, so this cannot be done
       except for specific situations).
     </p>
+    <h3 id="auto-29"><a id="section: Least-Action Principle of Distribution Has No Redundancy"></a>4.5<span style="margin-left: 1em"></span>Least-Action Principle of
+    Distribution Has No Redundancy<span style="margin-left: 1em"></span></h3>
+    <p>
+      Dynamics in classical mechanics are always deterministic. That is, once
+      the initial conditions (for initial value problem) or the boundaries
+      (for boundary value problem) are fixed, then the path is fully
+      determined, in which randomness is forbidden. There are, however, many
+      phenomena in nature that have <em>intrinsic</em> randomness. For
+      example, molecular movement obeys a normal distribution with variance
+      proportional to time interval. The dynamics of starling flocks also has
+      intrinsic randomness, which is the &ldquo;free will&rdquo; of each bird,
+      so is ant colony, human society, and any interactive system in which
+      each element has some level of intrinsic uncertainty. For these cases,
+      the real world datum is not simply a path, but a distribution of path.
+      Precisely, we use a distribution \(Q\) to describe real world phenomenon
+      that has intrinsic randomness.
+    </p>
+    <p>
+      This is what we have derived in section <a href="#section: Langevin Process Can Be Formulated as Path Integral">4.4</a>. From
+      probabilistic perspective, the right hand side of equation <a href="#equation:path integral step 1">26</a>
+      can be viewed as marginalizing the random variables \((X_0, \ldots, X_{N
+      - 1})\), and the product \(q (x_N |x_{N - 1}) \cdots q (x_1 |x_0)\) can
+      be seen as the density function of \((X_1, \ldots, X_N)\), where we have
+      omitted the subscript \(\Delta t\) for simplicity. To see this clearly,
+      we first notice that \(q (x_2 |x_1) = q (x_2 |x_0, x_1)\) holds for any
+      \(x_0\), because \(q (x_2 |x_1)\) is not explicitly dependent on
+      \(x_0\). Then, we have \(q (x_2 |x_1) q (x_1 |x_0) q (x_0) = q (x_2
+      |x_0, x_1) q (x_1 |x_0) q (x_0)\). Repeatedly using the definition of
+      conditional density, it becomes \(q (x_2 |x_0, x_1) q (x_0, x_1) = q
+      (x_0, x_1, x_2)\). Dividing \(q (x_0)\) on both sides, we get \(q (x_1,
+      x_2 |x_0) = q (x_2 |x_1) q (x_1 |x_0)\). Repeating this step, we will
+      find
+    </p>
+    <center>
+      \(\displaystyle q (x_N |x_{N - 1}) \cdots q (x_1 |x_0) = q (x_1, \ldots,
+      x_N |x_0),\)
+    </center>
+    <p>
+      recognized as a conditional density of random variables \((X_1, \ldots,
+      X_N)\) given \(x_0\). If we regard the series \((x_1, \ldots, x_N)\) as
+      a &ldquo;movie&rdquo; of evolution of the stochastic system, in which
+      each \(x_i\) can be seen as a &ldquo;frame&rdquo;, then the density
+      function \(q\) characterizes the distribution of evolution.
+    </p>
+    <p>
+      For any density function \(q (x)\) with \(x \in \mathbb{R}^d\), we can
+      always define, up to an arbitrary constant,
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle S (x) := - \ln q (x)
+        +\operatorname{const}. \)</td>
+        <td align="right">(30)</td>
+      </tr>
+    </table>
+    <p>
+      Thus, \(q (x) = \exp (- S (x)) / Z\) where \(Z := \int \mathrm{d} x \exp
+      (- S (x))\). This \(S\) has some properties that can be analog to the
+      action in classical mechanics. Indeed, by plugging in the definition of
+      \(S\), we find
+    </p>
+    <center>
+      \(\displaystyle \int_{\mathbb{R}^d} \mathrm{d} x q (x)  \frac{\partial
+      S}{\partial x^{\alpha}}
+(x) = - \int_{\mathbb{R}^d} \mathrm{d} x q (x) 
+      \frac{\partial}{\partial
+x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
+      \mathrm{d} x
+\frac{\partial}{\partial x^{\alpha}} q (x) .\)
+    </center>
+    <p>
+      The integrand of the right most expression is a divergence, so it
+      results in a boundary integral. But since \(q\), as a density function,
+      is normalized, the boundary integral shall vanish as \(\| x \|
+      \rightarrow + \infty\). So, we conclude that
+    </p>
+    <center>
+      \(\displaystyle \mathbb{E}_Q \left[ \frac{\partial S}{\partial
+      x^{\alpha}} \right] = 0.\)
+    </center>
+    <p>
+      This is analog to equation <a href="#equation:least-action principle v1">24</a>, where the minimum
+      \(x_{\star}\) is replaced by the expectation \(\mathbb{E}_Q\). Secondly,
+      distribution \(Q\) most likely samples (recall section <a href="#section: A Brief Review of Probability">1.1</a>
+      that distribution has a sampler) the \(x\) that maximizes \(q\), thus
+      minimizes \(S\). For these reasons, we illustrate the \(S\) defined by
+      \(q\) as the action of \(Q\). Contrary to the action in classical
+      mechanics, the \(S\) here is completely determined by the real world
+      distribution \(Q\) (because it is defined by the density function
+      \(q\)), without any redundancy. This is the direct implication that
+      distribution involves more information than its most likely datum.
+    </p>
+    <h3 id="auto-30"><a id="section: Data Fitting Is Equivalent to Least-Action Principle of Distribution"></a>4.6<span style="margin-left: 1em"></span>Data Fitting Is Equivalent to
+    Least-Action Principle of Distribution<span style="margin-left: 1em"></span></h3>
+    <p>
+      Given a collection of real world data, we are to find a distribution
+      that fits the data. These data can be seen as samples from an unknown
+      distribution which characterizes the real world. We are to figure out a
+      method to fit the real world distribution by given some samples of it.
+    </p>
+    <p>
+      Let \(P (\theta)\) represent a distribution parametrized by \(\theta \in
+      \mathbb{R}^m\). Its alphabet \(\mathcal{X}\) is either discrete or
+      continuous. From its density function, \(p (\cdot, \theta)\), we get a
+      parameterized action \(S (\cdot, \theta)\) such that
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle p (x, \theta) = \exp (- S (x,
+        \theta)) / Z (\theta), \)</td>
+        <td align="right">(31)</td>
+      </tr>
+    </table>
+    <p>
+      where \(Z (\theta) = \int \mathrm{d} x \exp (- S (x, \theta))\) for
+      ensuring the normalization \(\int \mathrm{d} x p (x, \theta) = 1\). This
+      is consistent with the action defined by equation <a href="#equation:action of distribution">30</a>,
+      except that the action here is parameterized, and that we omit the
+      constant \(\beta\) since it is irrelevant throughout this section.
+    </p>
+    <p>
+      What we have is a collection of data, sampled from an unknown
+      distribution \(Q\). And we are to adjust the parameters \(\theta\) so
+      that \(P (\theta)\) approximates \(Q\). To do so, we minimize the
+      relative entropy between \(Q\) and \(P (\theta)\), which is defined as
+      \(H (Q, P (\theta)) := \int \mathrm{d} x q (x) \ln (q (x) / p (x,
+      \theta))\). This expression is formal. Since we do not know the density
+      function of \(Q\), all that we can do with \(Q\) is computing the
+      expectation \(\mathbb{E}_Q [f] = (1 / | Q |) \sum_{x \in Q} f (x)\) for
+      any function \(f\), where we use \(Q\) as a set of data. With this
+      realization, we have, after plugging equation <a href="#equation:generic density">31</a> into \(H
+      (Q, P (\theta))\),
+    </p>
+    <center>
+      \(\displaystyle H (Q, P (\theta)) = \int_{\mathcal{X}} \mathrm{d} x q
+      (x) \ln q (x) +
+\int_{\mathcal{X}} \mathrm{d} x q (x) S (x, \theta) +
+      \int_{\mathcal{X}}
+\mathrm{d} x q (x) \ln Z (\theta) .\)
+    </center>
+    <p>
+      By omitting the \(\theta\)-independent terms, we get the loss function
+    </p>
+    <center>
+      \(\displaystyle L (\theta) := \int_{\mathcal{X}} \mathrm{d} x q (x) S
+      (x, \theta) + \ln Z
+(\theta) .\)
+    </center>
+    <p>
+      The parameters that minimize \(L (\theta)\) also minimize \(H (Q, P
+      (\theta))\), and vice versa. We can find the \(\theta_{\star} :=
+      \operatorname{argmin}L\) by iteratively updating \(\theta\) along the
+      direction \(- \partial L / \partial \theta\). To calculate \(- \partial
+      L / \partial \theta\), we start at
+    </p>
+    <center>
+      \(\displaystyle - \frac{\partial L}{\partial \theta^{\alpha}} (\theta) =
+      - \int_{\mathcal{X}}
+\mathrm{d} x q (x)  \frac{\partial S}{\partial
+      \theta^{\alpha}} (x, \theta) -
+\frac{1}{Z (\theta)}  \frac{\partial
+      Z}{\partial \theta^{\alpha}} (\theta) .\)
+    </center>
+    <p>
+      The first term is recognized as \(-\mathbb{E}_Q [\partial S / \partial
+      \theta^{\alpha}]\). For the second term, since \(Z (\theta) =
+      \int_{\mathcal{X}} \mathrm{d} x \exp (- S (x, \theta))\), we have
+    </p>
+    <center>
+      \(\displaystyle - \frac{1}{Z (\theta)}  \frac{\partial Z}{\partial
+      \theta^{\alpha}} (\theta) =
+\int_{\mathcal{X}} \mathrm{d} x {\frac{\exp
+      (- S (x, \theta))}{Z (\theta)}} 
+\frac{\partial S}{\partial
+      \theta^{\alpha}} (x, \theta) = \int_{\mathcal{X}}
+\mathrm{d} x p (x,
+      \theta)  \frac{\partial S}{\partial \theta^{\alpha}} (x,
+\theta),\)
+    </center>
+    <p>
+      where in the last equality, we used the definition of \(p (x, \theta)\)
+      (the green factor). This final expression is just the \(\mathbb{E}_{P
+      (\theta)} [\partial S / \partial \theta^{\alpha}]\). Altogether, we
+      arrive at
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle - \frac{\partial L}{\partial
+        \theta^{\alpha}} (\theta) =\mathbb{E}_{P
+(\theta)} \left[
+        \frac{\partial S}{\partial \theta^{\alpha}} (\cdot, \theta)
+\right]
+        -\mathbb{E}_Q \left[ \frac{\partial S}{\partial
+        \theta^{\alpha}}
+(\cdot, \theta) \right] . \)</td>
+        <td align="right">(32)</td>
+      </tr>
+    </table>
+    <p>
+      At the minimum, we shall have \(\partial L / \partial \theta = 0\).
+      Then, we find that \(\theta_{\star}\) obeys
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle \mathbb{E}_{P (\theta_{\star})}
+        \left[ \frac{\partial S}{\partial
+\theta^{\alpha}} (\cdot,
+        \theta_{\star}) \right] =\mathbb{E}_Q \left[
+\frac{\partial
+        S}{\partial \theta^{\alpha}} (\cdot, \theta_{\star}) \right] . \)</td>
+        <td align="right">(33)</td>
+      </tr>
+    </table>
+    <p>
+      
+    </p>
+    <p>
+      It can be read from equation <a href="#equation:data-fitting iteration">32</a> that minimizing \(L\) is to
+      increase \(S (\cdot, \theta)\) on the sampled points (the first term)
+      while decrease it on data points (the second term). As figure <a href="#figure: Least-Action">1</a>
+      illustrates, this way of optimization will site real world data onto
+      local minima of \(S (\cdot, \theta)\), <em>in statistical sense</em>.
+    </p>
+    <div style="margin-top: 1em; margin-bottom: 1em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em"><img src="index-1.png" style="margin-left: -0.0134736842105263em; margin-bottom: 0em; margin-right: -0.0134736842105241em; margin-top: 0em; vertical-align: -14.3223684210526em; height: 28.6447368421053em"></img></td>
+        </tr><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em; height: 0.5em"></td>
+        </tr><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em; padding-left: 1.5em; padding-right: 1.5em"><div class="caption">
+            <font style="font-size: 84.1%"><p>
+              <b>Figure 1. </b><a id="auto-31"></a><a id="figure: Least-Action"></a> This figure illustrate
+              how \(\min_{\theta} L (\theta)\) will site a real world datum
+              onto a local minimum of \(S (\cdot, \theta)\). The green curve
+              represents the current not-yet-optimized \(S (\cdot, \theta)\).
+              The \(x_1\) (red point) is a real world datum while \(x_2\)
+              (blue point), which is currently a local minimum of \(S (\cdot,
+              \theta)\), is not. Minimizing \(L\) by tuning \(\theta\) pushes
+              the \(\mathbb{E}_Q [S (\cdot, \theta)]\) down to lower value,
+              corresponding to the red downward double-arrow on \(x_1\). Also,
+              since \(x_2\) is a local minimum, the data points sampled from
+              \(p (x, \theta) \propto \exp (- S (x, \theta))\) will accumulate
+              around \(x_2\). So, minimizing \(L\) also pulls the
+              \(\mathbb{E}_{P (\theta)} [S (\cdot, \theta)]\) up to greater
+              value, corresponding to the blue upward double-arrow on \(x_2\).
+              Altogether, it makes \(x_1\) a local minimum of \(S (\cdot,
+              \theta)\), and \(S (\cdot, \theta)\) is optimized to be the
+              dashed green curve.
+            </p></font>
+          </div></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <p>
+      In this way, we find an analytical distribution \(P (\theta)\) that
+      approximates the empirical distribution \(Q\). The \(S (\cdot, \theta)\)
+      that defines \(P (\theta)\) describes the interaction between the
+      different components of an entity. This entity may be of physics, like a
+      collection of particles. But it can also be words, genes, flock of
+      birds, and so on.
+    </p>
+    <p>
+      As an example, if we want to get the action that characterizes the
+      stochastic dynamics of starling flocks, we take movies for many flocks.
+      Each movie is a series of frames that log the positions of each bird at
+      each time instant. These movies provide the real world data. The
+      parameterized action \(S\) can be expressed by a neural network. Then,
+      iterating by equation <a href="#equation:data-fitting iteration">32</a> until \(\| \partial L / \partial
+      \theta \|\) has been small enough gives an \(S (\cdot, \theta_{\star})\)
+      that mimics the stochastic dynamics of starling flocks. To compute the
+      expectation \(\mathbb{E}_{P (\theta)} [\ldots]\) in equation <a href="#equation:data-fitting iteration">32</a>,
+      we can employ Monte-Carlo simulation with the transition rate satisfying
+      detailed balance condition with \(P (\theta)\) as the stationary
+      distribution. For discrete random variables, Monte-Carlo simulation with
+      Metropolis-Hastings algorithm (section <a href="#section: Example: Metropolis-Hastings Algorithm">2.7</a>) is available;
+      and for continuous random variables, Langevin dynamics (section <a href="#section: Detailed Balance of Langevin Process Lacks Source-Free Degree of Freedom">3.8</a>)
+      will be more efficient.
+    </p>
+    <h3 id="auto-32"><a id="section: How Far Will Information Propagate in Markovian Process?"></a>4.7<span style="margin-left: 1em"></span>How Far Will Information
+    Propagate in Markovian Process? (TODO)<span style="margin-left: 1em"></span></h3>
+    <p>
+      We are to determine how far information will propagate during the
+      iteration of Langevin process. For this kind of problem, physicists have
+      invented a technique called renormalization group. This technique was
+      first proposed by Murray Gell-Mann and Francis Low in 1954, applied to
+      quantum field theory of fundamental particles. Following this research,
+      Kenneth Wilson, who was a PhD student of Gell-Mann, started his
+      malathion in 1961. He published his first paper on renormalization group
+      eight years later, in 1969. This technique was then further developed
+      and applied to many areas in and even out of physics, such as biology,
+      society, and finance.
+    </p>
+    <p>
+      To show how it works, we start with an action that is generalized from
+      action <a href="#equation:langevin action constant R">29</a>, which is
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle S (x) = \sum_{i = - \infty}^{+
+        \infty} \sum_{\alpha = 1}^n \left[
+\frac{(x^{\alpha}_{i + 1} -
+        x^{\alpha}_i)^2}{2 \epsilon} - (x^{\alpha}_{i + 1}
+- x^{\alpha}_i)
+        \varphi^{\alpha} (x_{i + 1}, x_i) + \epsilon \xi^{\alpha}
+(x_{i + 1},
+        x_i) \right], \)</td>
+        <td align="right">(34)</td>
+      </tr>
+    </table>
+    <p>
+      where \(\varphi, \xi : \mathbb{R}^d \times \mathbb{R}^d \rightarrow
+      \mathbb{R}^d\). Comparing with action <a href="#equation:langevin action constant R">29</a>, \(\epsilon =
+      \Delta t\), \(\varphi (x_{i + 1}, x_i) = f (x_i)\), and \(\xi (x_{i +
+      1}, x_i) = f^2 (x_i) / 2\). There are another two differences between
+      them. Here, we do not fix boundary (namely, the fixed boundary \(x_N\)
+      in action <a href="#equation:langevin action constant R">29</a>), and let the index \(i\) run from \(-
+      \infty\) to \(+ \infty\) rather than from \(0\) to \(N\). As we will see
+      later in this section, these differences are crucial for renormalization
+      group. In the end of this section, we will show how to add the condition
+      back and restrict the range of index \(i\).
+    </p>
+    <p>
+      Renormalization group technique bases on the fact that there are as many
+      even numbers as integers. This is a famous result that was first claimed
+      by George Cantor. For our purpose, we marginalize all the variable
+      \(x_i\) in \(q (x)\) where \(i\) is odd. Namely, we are to compute an
+      &ldquo;effective action&rdquo; \(S'\) defined by
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle S' (x) := - \ln \left[ \prod_{i \in
+        \mathbb{Z}} \int_{\mathbb{R}^d} \mathrm{d}
+x_{2 i + 1} \exp (- S (x))
+        \right], \)</td>
+        <td align="right">(35)</td>
+      </tr>
+    </table>
+    <p>
+      where \(S' (\ldots, x_{- 4}, x_{- 2}, x_0, x_2, x_4, \ldots)\) contains
+      only the variables with even index. Interestingly, it is to be revealed
+      that, by a proper re-scaling of \(x\), \(S'\) has exactly the same
+      format as \(S\).
+    </p>
+    <p>
+      Given \(i\), we are to show how to marginalize \(x_{2 i + 1}\). This
+      variables appear in two terms in action <a href="#equation:rg action">34</a>, with indices
+      \(2 i + 1\) and \(2 i\). So, we are to integrate \(\int_{\mathbb{R}^d}
+      \mathrm{d} x_{2 i + 1} \exp \left( \sum_{\alpha = 1}^n
+J^{\alpha}
+      \right)\) where
+    </p>
+    <center>
+      \(\displaystyle \begin{array}{rl}
+  J^{\alpha} := & -
+      \frac{(x^{\alpha}_{2 i + 1} - x^{\alpha}_{2 i})^2}{2
+  \epsilon} -
+      \frac{(x^{\alpha}_{2 i + 2} - x^{\alpha}_{2 i + 1})^2}{2
+  \epsilon}\\
+ 
+      & + (x^{\alpha}_{2 i + 1} - x^{\alpha}_{2 i}) \varphi^{\alpha} (x_{2 i
+      +
+  1}, x_{2 i}) + (x^{\alpha}_{2 i + 2} - x^{\alpha}_{2 i + 1})
+ 
+      \varphi^{\alpha} (x_{2 i + 2}, x_{2 i + 1})\\
+  & - \epsilon
+      \xi^{\alpha} (x_{2 i + 1}, x_{2 i}) - \epsilon \xi^{\alpha}
+  (x_{2 i +
+      2}, x_{2 i + 1}) .
+\end{array}\)
+    </center>
+    <p>
+      This integral is hard to calculate. A general strategy is using
+      perturbative method. In our situation, \(\epsilon\) serves as the small
+      quantity for perturbation.
+    </p>
+    <p>
+      First, we have an algebraic identity
+      <div class="footnote">
+        <font style="font-size: 77.1%"><div align="justify">
+          <div style="margin-left: 0px">
+            <div style="margin-right: 0px">
+              <class style="font-style: normal"><p>
+                16. Directly, expand \((x - y)^2 + (y - z)^2 = x^2 - 2 x y +
+                y^2 + y^2 - 2 y z + z^2\). Then, collect the \(y\) terms
+                together, as \(2 (y^2 - (x + z) y) = 2 (y - (x + z) y + (x +
+                z)^2 / 4) - (x + z)^2 / 2 = 2 (y
+- (x + z) / 2)^2 - (x + z)^2
+                / 2\), in which the last term can be further combined with the
+                rest terms \(x^2 + z^2\), as \(- (x + z)^2 / 2 + x^2 + z^2 =
+                (x - z)^2 / 2\). Altogether, we find
+              </p><center>
+                \(\displaystyle (x - y)^2 + (y - z)^2 = 2 \left( y - \frac{x +
+                z}{2} \right)^2 + \frac{1}{2}
+(x - z)^2 .\)
+              </center><p>
+                If replace \(x \rightarrow x^{\alpha}_{2 i}\), \(y \rightarrow
+                x^{\alpha}_{2 i + 1}\), and \(z \rightarrow x^{\alpha}_{2 i +
+                2}\), then we get what we need.
+              </p></class>
+            </div>
+          </div>
+        </div></font>
+      </div>
+      <span style="margin-left: 0em"></span>
+      <a id="footnr-16"></a>
+      <sup><class style="font-style: normal"><a href="#footnote-16">16</a></class></sup>
+    </p>
+    <center>
+      \(\displaystyle \frac{(x^{\alpha}_{2 i + 1} - x^{\alpha}_{2 i})^2}{2
+      \epsilon} +
+\frac{(x^{\alpha}_{2 i + 2} - x^{\alpha}_{2 i + 1})^2}{2
+      \epsilon} =
+\frac{1}{\epsilon} \left[ x^{\alpha}_{2 i + 1} -
+      \frac{x^{\alpha}_{2 i} +
+x^{\alpha}_{2 i + 2}}{2} \right]^2 + \frac{1}{4
+      \epsilon} (x^{\alpha}_{2 i} -
+x^{\alpha}_{2 i + 2})^2 .\)
+    </center>
+    <p>
+      Remark that the second term looks like the first term in action <a href="#equation:rg action">34</a>,
+      except for an \(1 / 2\) factor. Then, \(J^{\alpha}\) becomes
+    </p>
+    <center>
+      \(\displaystyle \begin{array}{rl}
+  J^{\alpha} = & - \frac{1}{\epsilon}
+      \left[ x^{\alpha}_{2 i + 1} -
+  \frac{x^{\alpha}_{2 i} + x^{\alpha}_{2 i
+      + 2}}{2} \right]^2 - \frac{1}{4
+  \epsilon} (x^{\alpha}_{2 i} -
+      x^{\alpha}_{2 i + 2})^2\\
+  & + (x^{\alpha}_{2 i + 1} - x^{\alpha}_{2
+      i}) \varphi^{\alpha} (x_{2 i +
+  1}, x_{2 i}) + (x^{\alpha}_{2 i + 2} -
+      x^{\alpha}_{2 i + 1})
+  \varphi^{\alpha} (x_{2 i + 2}, x_{2 i + 1})\\
+ 
+      & - \epsilon \xi^{\alpha} (x_{2 i + 1}, x_{2 i}) - \epsilon
+      \xi^{\alpha}
+  (x_{2 i + 2}, x_{2 i + 1}) .
+\end{array}\)
+    </center>
+    <p>
+      The first term is a quadratic form of \(x_{2 i + 1}\). It suggests that
+      we shall treat the integral as a perturbation to the Gaussian integral,
+      and use perturbative method to integrate it out. Following this
+      strategy, we define \(\bar{x}_{2 i + 1} := (x_{2 i + 2} + x_{2 i}) / 2\)
+      and \(y := x_{2 i + 1} - \bar{x}_{2 i + 1}\). \(\)And the integral
+      becomes
+    </p>
+    <font style="font-size: 84.1%"><center>
+      \(\displaystyle \int_{\mathbb{R}^d} \mathrm{d} x_{2 i + 1} \exp \left(
+      \sum_{\alpha = 1}^n
+J^{\alpha} \right) = \int_{\mathbb{R}^d} \mathrm{d}
+      y \exp \left( -
+\frac{1}{2} \sum_{\alpha = 1}^n \left(
+      \frac{y^{\alpha}}{\sqrt{\epsilon / 2}}
+\right)^2 + \cdots \right) .\)
+    </center></font>
+    <p>
+      It means the \(y\) obeys a normal distribution with zero mean and
+      diagonal covariance \(\Sigma_{\alpha \beta} = (\epsilon / 2)
+      \delta_{\alpha \beta}\). We have a rough estimation \(y = \mathcal{O}
+      \left( \sqrt{\epsilon} \right)\).
+    </p>
+    <p>
+      Next, we process the other lines in \(J^{\alpha}\). Using \(x_{2 i + 1}
+      = y + \bar{x}_{2 i + 1}\) and \(\bar{x}_{2 i + 1} - x_{2 i} = x_{2 i +
+      2} - \bar{x}_{2 i + 1} = (x_{2 i + 2} -
+x_{2 i}) / 2\), the second line
+      can be expanded, up to \(\mathcal{O} (\epsilon^{3 / 2})\), as
+    </p>
+    <font style="font-size: 84.1%"><center>
+      \(\displaystyle \begin{array}{rl}
+  & (y^{\alpha} + \bar{x}_{2 i +
+      1}^{\alpha} - x^{\alpha}_{2 i})
+  \varphi^{\alpha} (y + \bar{x}_{2 i +
+      1}, x_{2 i}) + (x^{\alpha}_{2 i + 2} -
+  y^{\alpha} - \bar{x}_{2 i +
+      1}^{\alpha}) \varphi^{\alpha} (x_{2 i + 2}, y +
+  \bar{x}_{2 i + 1})\\
+ 
+      = & \frac{1}{2} (x^{\alpha}_{2 i + 2} - x^{\alpha}_{2 i}) 
+      [\varphi^{\alpha}
+  (\bar{x}_{2 i + 1}, x_{2 i}) + \varphi^{\alpha}
+      (x_{2 i + 2}, \bar{x}_{2 i +
+  1})]\\
+  + & y^{\alpha} 
+      [\varphi^{\alpha} (\bar{x}_{2 i + 1}, x_{2 i}) -
+  \varphi^{\alpha}
+      (x_{2 i + 2}, \bar{x}_{2 i + 1})]\\
+  + & \frac{1}{2} y^{\beta} 
+      (x^{\alpha}_{2 i + 2} - x^{\alpha}_{2 i}) 
+  [\partial_{\beta}
+      \varphi^{\alpha} (\bar{x}_{2 i + 1}, x_{2 i}) +
+  \partial_{\beta}'
+      \varphi^{\alpha} (x_{2 i + 2}, \bar{x}_{2 i + 1})]\\
+  + & y^{\alpha}
+      y^{\beta}  [\partial_{\beta} \varphi^{\alpha} (\bar{x}_{2 i +
+  1}, x_{2
+      i}) - \partial_{\beta}' \varphi^{\alpha} (x_{2 i + 2}, \bar{x}_{2 i
+  +
+      1})]\\
+  + & \frac{1}{4} y^{\beta} y^{\gamma}  (x^{\alpha}_{2 i + 2} -
+      x^{\alpha}_{2
+  i})  [\partial_{\beta} \partial_{\gamma}
+      \varphi^{\alpha} (\bar{x}_{2 i +
+  1}, x_{2 i}) + \partial_{\beta}'
+      \partial'_{\gamma} \varphi^{\alpha} (x_{2 i
+  + 2}, \bar{x}_{2 i +
+      1})]
+\end{array}\)
+    </center></font>
+    <p>
+      where we have denoted \(\partial \varphi\) as the partial derivative
+      taken on the first argument, and \(\partial' \varphi\) on the second.
+      Notice that we have used Einstein convention in this expansion (see the
+      conventions in section <a href="#section: Kramers-Moyal Expansion and Langevin Process">3</a>), hiding the summations of indices
+      \(\beta\) and \(\gamma\). Also up to \(\mathcal{O} (\epsilon^{3 / 2})\),
+      the third line simply becomes \(- \epsilon \xi^{\alpha} (\bar{x}_{2 i +
+      1}, x_{2 i}) - \epsilon \xi^{\alpha}
+(x_{2 i + 2}, \bar{x}_{2 i + 1})\).
+      Altogether, the integral becomes
+    </p>
+    <font style="font-size: 84.1%"><center>
+      \(\displaystyle \exp \left( \sum_{\alpha = 1}^n I^{\alpha} \right)
+      \times \int_{\mathbb{R}^d}
+\mathrm{d} y \exp \left( - \frac{1}{2}
+      \sum_{\alpha = 1}^n \left(
+\frac{y^{\alpha}}{\sqrt{\epsilon / 2}}
+      \right)^2 + \sum_{\alpha = 1}^n
+V^{\alpha} (y) + \mathcal{O}
+      (\epsilon^{3 / 2}) \right),\)
+    </center></font>
+    <p>
+      with the &ldquo;interactive part&rdquo;
+    </p>
+    <font style="font-size: 84.1%"><center>
+      \(\displaystyle \begin{array}{rl}
+  V^{\alpha} (y) := & y^{\alpha} 
+      [\varphi^{\alpha} (\bar{x}_{2 i + 1}, x_{2
+  i}) - \varphi^{\alpha}
+      (x_{2 i + 2}, \bar{x}_{2 i + 1})]\\
+  + & \frac{1}{2} y^{\beta} 
+      (x^{\alpha}_{2 i + 2} - x^{\alpha}_{2 i}) 
+  [\partial_{\beta}
+      \varphi^{\alpha} (\bar{x}_{2 i + 1}, x_{2 i}) +
+  \partial_{\beta}'
+      \varphi^{\alpha} (x_{2 i + 2}, \bar{x}_{2 i + 1})]\\
+  + & y^{\alpha}
+      y^{\beta}  [\partial_{\beta} \varphi^{\alpha} (\bar{x}_{2 i +
+  1}, x_{2
+      i}) - \partial_{\beta}' \varphi^{\alpha} (x_{2 i + 2}, \bar{x}_{2 i
+  +
+      1})]\\
+  + & \frac{1}{4} y^{\beta} y^{\gamma}  (x^{\alpha}_{2 i + 2} -
+      x^{\alpha}_{2
+  i})  [\partial_{\beta} \partial_{\gamma}
+      \varphi^{\alpha} (\bar{x}_{2 i +
+  1}, x_{2 i}) + \partial_{\beta}'
+      \partial'_{\gamma} \varphi^{\alpha} (x_{2 i
+  + 2}, \bar{x}_{2 i +
+      1})],
+\end{array}\)
+    </center></font>
+    <p>
+      which depends on \(y\) and is \(\mathcal{O} \left( \sqrt{\epsilon}
+      \right)\), and the &ldquo;independent part&rdquo; (the color is for
+      later usage)
+    </p>
+    <font style="font-size: 84.1%"><center>
+      \(\displaystyle I^{\alpha} := - \frac{1}{4 \epsilon} (x^{\alpha}_{2 i} -
+      x^{\alpha}_{2 i +
+2})^2 + \frac{1}{2} (x^{\alpha}_{2 i + 2} -
+      x^{\alpha}_{2 i}) 
+[\varphi^{\alpha} (\bar{x}_{2 i + 1}, x_{2 i}) +
+      \varphi^{\alpha} (x_{2 i +
+2}, \bar{x}_{2 i + 1})] {\color{red}{-
+      \epsilon \xi^{\alpha} (\bar{x}_{2 i +
+1}, x_{2 i}) - \epsilon
+      \xi^{\alpha} (x_{2 i + 2}, \bar{x}_{2 i + 1})}},\)
+    </center></font>
+    <p>
+      which is independent of \(y\). We Taylor expands the second factor as
+    </p>
+    <font style="font-size: 84.1%"><center>
+      \(\displaystyle \int_{\mathbb{R}^d} \mathrm{d} y \exp \left( -
+      \frac{1}{2} \sum_{\alpha = 1}^n
+\left( \frac{y^{\alpha}}{\sqrt{\epsilon
+      / 2}} \right)^2 + \sum_{\alpha = 1}^n
+V^{\alpha} (y) + \mathcal{O}
+      (\epsilon^{3 / 2}) \right) =\mathbb{E}_Y \left[ 1
++ \sum_{\alpha = 1}^n
+      V^{\alpha} (y) + \frac{1}{2} \left( \sum_{\alpha = 1}^n
+V^{\alpha} (y)
+      \right)^2 + \mathcal{O} (\epsilon^{3 / 2}) \right],\)
+    </center></font>
+    <p>
+      where \(\mathbb{E}_Y [\ldots]\) is defined by the Gaussian integral of
+      \(y\). We will neglect the constant factor \((\pi \epsilon)^{- n / 2}\),
+      so that \(\mathbb{E}_Y [1] = 1\). This constant factor can be absorbed
+      into the action as an irrelevant constant term. Plugging in the
+      definition of \(V^{\alpha} (y)\) with \(\mathbb{E}_Y [y^{\alpha}] = 0\)
+      and \(\mathbb{E}_Y [y^{\alpha} y^{\beta}] = \delta_{\alpha \beta}
+      \epsilon / 2\), we get (color for later usage)
+    </p>
+    <font style="font-size: 70.7%"><p>
+      <font color="#008000"><center>
+        \(\displaystyle \sum_{\alpha = 1}^n \mathbb{E} [V^{\alpha} (y)] =
+        \frac{\epsilon}{2}
+\sum_{\alpha = 1}^n \left[ \partial_{\alpha}
+        \varphi^{\alpha} (\bar{x}_{2 i +
+1}, x_{2 i}) - \partial_{\alpha}'
+        \varphi^{\alpha} (x_{2 i + 2}, \bar{x}_{2 i
++ 1}) + \frac{1}{4} 
+        \left( x^{\alpha}_{2 i + 2} - x^{\alpha}_{2 i} \right) 
+[\Delta
+        \varphi^{\alpha} (\bar{x}_{2 i + 1}, x_{2 i}) +
+        \Delta'
+\varphi^{\alpha} (x_{2 i + 2}, \bar{x}_{2 i + 1})] \right],\)
+      </center></font>
+    </p></font>
+    <p>
+      where the Laplacian \(\Delta' := \sum_{\alpha = 1}^n \partial_{\alpha}
+      \partial_{\alpha}\), and the same \(\Delta' := \sum_{\alpha = 1}^n
+      \partial'_{\alpha} \partial'_{\alpha}\). Also, we have (color for later
+      usage)
+      <div class="footnote">
+        <font style="font-size: 77.1%"><div align="justify">
+          <div style="margin-left: 0px">
+            <div style="margin-right: 0px">
+              <class style="font-style: normal"><p>
+                17. We have \(\mathbb{E}_Y \left[ (1 / 2) \left( \sum_{\alpha
+                = 1}^n V^{\alpha} (y)
+\right)^2 \right] = (1 / 2)
+                \sum_{\alpha, \alpha' = 1}^n \mathbb{E}_Y
+[V^{\alpha} (y)
+                V^{\alpha'} (y)]\), where
+              </p><center>
+                \(\displaystyle \begin{array}{rl}
+  & \mathbb{E}_Y [V^{\alpha}
+                (y) V^{\alpha'} (y)]\\
+  = & \frac{\delta_{\alpha \alpha'}
+                \epsilon}{2}  [\varphi^{\alpha}_{2 i}
+  (\bar{x}_{2 i + 1},
+                x_{2 i}) - \varphi^{\alpha}_{2 i + 1} (x_{2 i + 2},
+ 
+                \bar{x}_{2 i + 1})]^2\\
+  + & \frac{\epsilon}{4} 
+                (x^{\alpha'}_{2 i + 2} - x^{\alpha'}_{2 i}) 
+ 
+                [\varphi^{\alpha}_{2 i} (\bar{x}_{2 i + 1}, x_{2 i}) -
+                \varphi^{\alpha}_{2 i
+  + 1} (x_{2 i + 2}, \bar{x}_{2 i + 1})]
+                \times\\
+  & \times [\partial_{\alpha} \varphi^{\alpha'}_{2 i}
+                (\bar{x}_{2 i + 1},
+  x_{2 i}) + \partial_{\alpha}'
+                \varphi^{\alpha'}_{2 i + 1} (x_{2 i + 2},
+  \bar{x}_{2 i +
+                1})]\\
+  + & \frac{\epsilon}{4}  (x^{\alpha}_{2 i + 2} -
+                x^{\alpha}_{2 i}) 
+  [\varphi^{\alpha'}_{2 i} (\bar{x}_{2 i +
+                1}, x_{2 i}) - \varphi^{\alpha'}_{2
+  i + 1} (x_{2 i + 2},
+                \bar{x}_{2 i + 1})] \times\\
+  & \times [\partial_{\alpha'}
+                \varphi^{\alpha}_{2 i} (\bar{x}_{2 i + 1},
+  x_{2 i}) +
+                \partial_{\alpha'}' \varphi^{\alpha}_{2 i + 1} (x_{2 i + 2},
+ 
+                \bar{x}_{2 i + 1})]\\
+  + & \frac{\epsilon}{8}  (x^{\alpha}_{2
+                i + 2} - x^{\alpha}_{2 i}) 
+  (x^{\alpha'}_{2 i + 2} -
+                x^{\alpha'}_{2 i})  \sum_{\beta = 1}^n
+  [\partial_{\beta}
+                \varphi^{\alpha}_{2 i} (\bar{x}_{2 i + 1}, x_{2 i}) +
+ 
+                \partial_{\beta}' \varphi^{\alpha}_{2 i + 1} (x_{2 i + 2},
+                \bar{x}_{2 i +
+  1})] \times\\
+  & \times [\partial_{\beta}
+                \varphi^{\alpha'}_{2 i} (\bar{x}_{2 i + 1}, x_{2
+  i}) +
+                \partial_{\beta}' \varphi^{\alpha'}_{2 i + 1} (x_{2 i + 2},
+                \bar{x}_{2
+  i + 1})] .
+\end{array}\)
+              </center></class>
+            </div>
+          </div>
+        </div></font>
+      </div>
+      <span style="margin-left: 0em"></span>
+      <a id="footnr-17"></a>
+      <sup><class style="font-style: normal"><a href="#footnote-17">17</a></class></sup>
+    </p>
+    <font color="#000080"><font style="font-size: 70.7%"><center>
+      \(\displaystyle \begin{array}{rl}
+  & \mathbb{E} \left[ \frac{1}{2}
+      \left( \sum_{\alpha = 1}^n V^{\alpha} (y)
+  \right)^2 \right]\\
+  = &
+      \frac{\epsilon}{4} \sum_{\alpha = 1}^n [\varphi^{\alpha} (\bar{x}_{2 i
+      +
+  1}, x_{2 i}) - \varphi^{\alpha} (x_{2 i + 2}, \bar{x}_{2 i +
+      1})]^2\\
+  + & \frac{\epsilon}{4} \sum_{\alpha, \alpha' = 1}^n
+      (x^{\alpha}_{2 i + 2} -
+  x^{\alpha}_{2 i})  [\partial_{\alpha'}
+      \varphi^{\alpha} (\bar{x}_{2 i + 1},
+  x_{2 i}) + \partial_{\alpha'}'
+      \varphi^{\alpha} (x_{2 i + 2}, \bar{x}_{2 i +
+  1})] \times\\
+  & \times
+      [\varphi^{\alpha'} (\bar{x}_{2 i + 1}, x_{2 i}) -
+  \varphi^{\alpha'}
+      (x_{2 i + 2}, \bar{x}_{2 i + 1})]\\
+  + & \frac{\epsilon}{16}
+      \sum_{\alpha, \alpha', \beta = 1}^n (x^{\alpha}_{2 i
+  + 2} -
+      x^{\alpha}_{2 i})  [\partial_{\beta} \varphi^{\alpha} (\bar{x}_{2 i +
+ 
+      1}, x_{2 i}) + \partial_{\beta}' \varphi^{\alpha} (x_{2 i + 2},
+      \bar{x}_{2 i
+  + 1})] \times\\
+  & \times (x^{\alpha'}_{2 i + 2} -
+      x^{\alpha'}_{2 i})  [\partial_{\beta}
+  \varphi^{\alpha'} (\bar{x}_{2 i
+      + 1}, x_{2 i}) + \partial_{\beta}'
+  \varphi^{\alpha'} (x_{2 i + 2},
+      \bar{x}_{2 i + 1})]
+\end{array}\)
+    </center></font></font>
+    <p>
+      Plugging all these back to the integral, and defining \(x'_i = x_{2 i} /
+      \sqrt{2}\) for all \(i\), we find, (up to an irrelevant constant term),
+    </p>
+    <font style="font-size: 84.1%"><center>
+      \(\displaystyle - \ln \left[ \int_{\mathbb{R}^d} \mathrm{d} x_{2 i + 1}
+      \exp \left(
+\sum_{\alpha = 1}^n J^{\alpha} \right) \right] =
+      \sum_{\alpha = 1}^n \left[
+\frac{1}{2 \epsilon} \left( {x'}^{\alpha}_{i
+      + 1} {- x'}^{\alpha}_i \right)^2
+- \left( {x'}^{\alpha}_{i + 1} -
+      x^{\alpha}_i \right) {\varphi'}^{\alpha}
+(x'_{i + 1}, x'_i) {+ \epsilon
+      \xi'}^{\alpha} (x_{i + 1}', x_i') \right],\)
+    </center></font>
+    <p>
+      where
+    </p>
+    <center>
+      \(\displaystyle {\varphi'}^{\alpha} (x'_{i + 1}, x'_i) :=
+      \frac{1}{\sqrt{2}} [\varphi^{\alpha}
+(\bar{x}_{2 i + 1}, x_{2 i}) +
+      \varphi^{\alpha} (x_{2 i + 2}, \bar{x}_{2 i +
+1})]\)
+    </center>
+    <p>
+      and
+    </p>
+    <font style="font-size: 84.1%"><center>
+      \(\displaystyle {\xi'}^{\alpha}_i (x_{i + 1}', x_i') :=
+      {\color{red}{\xi^{\alpha} (\bar{x}_{2
+i + 1}, x_{2 i}) + \xi^{\alpha}
+      (x_{2 i + 2}, \bar{x}_{2 i + 1})}} {-
+\frac{1}{2} [\partial_{\alpha}
+      \varphi^{\alpha} (\bar{x}_{2 i + 1}, x_{2 i}) -
+\partial_{\alpha}'
+      \varphi^{\alpha} (x_{2 i + 2}, \bar{x}_{2 i + 1})]} {-
+\frac{1}{4}
+      [\varphi^{\alpha} (\bar{x}_{2 i + 1}, x_{2 i}) - \varphi^{\alpha}
+(x_{2
+      i + 2}, \bar{x}_{2 i + 1})]^2} {- \frac{1}{8} (x^{\alpha}_{2 i + 2}
+      -
+x^{\alpha}_{2 i})  [\Delta \varphi^{\alpha} (\bar{x}_{2 i + 1}, x_{2
+      i}) +
+\Delta' \varphi^{\alpha} (x_{2 i + 2}, \bar{x}_{2 i + 1})]} {-
+      \frac{1}{4}
+\sum_{\alpha' = 1}^n (x^{\alpha}_{2 i + 2} - x^{\alpha}_{2
+      i}) 
+[\partial_{\alpha'} \varphi^{\alpha} (\bar{x}_{2 i + 1}, x_{2 i})
+      +
+\partial_{\alpha'}' \varphi^{\alpha} (x_{2 i + 2}, \bar{x}_{2 i + 1})]
+      
+[\varphi^{\alpha'} (\bar{x}_{2 i + 1}, x_{2 i}) - \varphi^{\alpha'}
+      (x_{2 i +
+2}, \bar{x}_{2 i + 1})] - \frac{1}{16} \sum_{\alpha', \beta =
+      1}^n
+(x^{\alpha}_{2 i + 2} - x^{\alpha}_{2 i})  [\partial_{\beta}
+      \varphi^{\alpha}
+(\bar{x}_{2 i + 1}, x_{2 i}) + \partial_{\beta}'
+      \varphi^{\alpha} (x_{2 i +
+2}, \bar{x}_{2 i + 1})]  (x^{\alpha'}_{2 i +
+      2} - x^{\alpha'}_{2 i}) 
+[\partial_{\beta} \varphi^{\alpha'} (\bar{x}_{2
+      i + 1}, x_{2 i}) +
+\partial_{\beta}' \varphi^{\alpha'} (x_{2 i + 2},
+      \bar{x}_{2 i + 1})]} +
+\mathcal{O} \left( \sqrt{\epsilon} \right),\)
+    </center></font>
+    <p>
+      where we have indicated the source of the terms by color. This is held
+      for all \(i\), thus we arrive at
+    </p>
+    <center>
+      \(\displaystyle S' (x') = \sum_{i = - \infty}^{+ \infty} \sum_{\alpha =
+      1}^n \left[ \frac{1}{2
+\epsilon} \left( {x'}^{\alpha}_{i + 1} {-
+      x'}^{\alpha}_i \right)^2 - \left(
+{x'}^{\alpha}_{i + 1} {-
+      x'}^{\alpha}_i \right) {\varphi'}^{\alpha} (x'_{i +
+1}, x'_i) {+
+      \epsilon \xi'}^{\alpha} (x_{i + 1}', x_i') \right],\)
+    </center>
+    <p>
+      which has exactly the same format as \(S\) (equation <a href="#equation:rg action">34</a>).
+    </p>
+    <center>
+      \(\displaystyle \)
+    </center>
   </body>
 </html>
