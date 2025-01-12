@@ -154,24 +154,24 @@
         Classical Mechanics <span style="margin-left: 5mm"></span> <a href="#auto-26">25</a>
       </p>
       <p>
-        4.3<span style="margin-left: 1em"></span>Preliminary: Grassmann Number and Berezin
-        Integral (TODO) <span style="margin-left: 5mm"></span> <a href="#auto-27">26</a>
+        4.3<span style="margin-left: 1em"></span>Preliminary: Grassmann Variable and Berezin
+        Integral <span style="margin-left: 5mm"></span> <a href="#auto-27">26</a>
       </p>
       <p>
         4.4<span style="margin-left: 1em"></span>Langevin Process Can Be Formulated as Path
-        Integral <span style="margin-left: 5mm"></span> <a href="#auto-28">26</a>
+        Integral <span style="margin-left: 5mm"></span> <a href="#auto-28">28</a>
       </p>
       <p>
         4.5<span style="margin-left: 1em"></span>Least-Action Principle of Distribution Has No
-        Redundancy <span style="margin-left: 5mm"></span> <a href="#auto-29">29</a>
+        Redundancy <span style="margin-left: 5mm"></span> <a href="#auto-29">30</a>
       </p>
       <p>
         4.6<span style="margin-left: 1em"></span>Data Fitting Is Equivalent to Least-Action
-        Principle of Distribution <span style="margin-left: 5mm"></span> <a href="#auto-30">30</a>
+        Principle of Distribution <span style="margin-left: 5mm"></span> <a href="#auto-30">31</a>
       </p>
       <p>
         4.7<span style="margin-left: 1em"></span>How Far Will Information Propagate in Markovian
-        Process? (TODO) <span style="margin-left: 5mm"></span> <a href="#auto-32">32</a>
+        Process? (TODO) <span style="margin-left: 5mm"></span> <a href="#auto-32">33</a>
       </p>
     </div>
     <h2 id="auto-1"><a id="section: Relative Entropy"></a>1<span style="margin-left: 1em"></span>Relative Entropy<span style="margin-left: 1em"></span></h2>
@@ -3693,27 +3693,221 @@ x_1) = T^2  [x_{\star} ((i + 1) / T) - 2 x_{\star}
       action is completely determined by the real world distribution (the
       correspondence of real world datum), with nothing redundant.
     </p>
-    <h3 id="auto-27"><a id="section: Preliminary: Grassmann Number and Berezin Integral"></a>4.3<span style="margin-left: 1em"></span>Preliminary: Grassmann Number
-    and Berezin Integral (TODO)<span style="margin-left: 1em"></span></h3>
+    <h3 id="auto-27"><a id="section: Preliminary: Grassmann Variable and Berezin Integral"></a>4.3<span style="margin-left: 1em"></span>Preliminary: Grassmann Variable
+    and Berezin Integral<span style="margin-left: 1em"></span></h3>
     <p>
-      We have to briefly introduce Grassmann number, on which Berezin integral
-      is based. Grassmann number is an extension of complex number,by
-      introducing in the anti-commutative numbers. Given a set of
-      anti-commutative numbers \(\{ \zeta_i |i = 1, \ldots, n \}\), where we
-      treat each \(_i\) as an abstract variable. We demand that the
-      anti-commutative relation between \(\zeta\)s
+      We have to briefly introduce Grassmann variable, on which Berezin
+      integral is based. Grassmann variable is an extension of real (or
+      complex) variable,by introducing in the anti-commutative variables.
+      Given a set of variables \(\{ \zeta_i |i = 1, \ldots, n \}\), we demand
+      that the anti-commutative relation between \(\zeta\)s
     </p>
     <center>
       \(\displaystyle \zeta_i \zeta_j = - \zeta_j \zeta_i .\)
     </center>
     <p>
-      But for any complex number \(z\), we demand a commutative relation
+      But for any real (or complex) variable \(x\), we demand a commutative
+      relation
     </p>
     <center>
-      \(\displaystyle z \zeta_i = \zeta_i z.\)
+      \(\displaystyle x \zeta_i = \zeta_i x.\)
     </center>
     <p>
-      TODO
+      Because of anti-commutation, we have \(\zeta_i \zeta_i = - \zeta_i
+      \zeta_i\), thus \(\zeta_i \zeta_i = 0\). So, a polynomial of single
+      Grassmann variable is always linear, as \(f (\zeta) = a + b \zeta\)
+      where coefficients \(a, b \in \mathbb{R}\). And a polynomial of two
+      Grassmann variables, \(\zeta\) and \(\eta\), is
+    </p>
+    <center>
+      \(\displaystyle f (\zeta, \eta) = a + b \zeta + c \eta + d \zeta \eta,\)
+    </center>
+    <p>
+      where coefficients are real numbers. Extra term like \(\zeta \eta \zeta
+      = - \zeta \zeta \eta = \zeta \zeta \eta\), thus vanishes. Generally, a
+      polynomial of \(n\) Grassmann variables has terms with no more than
+      \(n\) factors.
+    </p>
+    <p>
+      A function can be defined via its Taylor expansion in real number. So,
+      the exponential function for Grassmann number is defined by
+    </p>
+    <center>
+      \(\displaystyle \exp (\zeta) = 1 + \zeta + \frac{1}{2!} \zeta^2 +
+      \frac{1}{3!} \zeta^3 +
+\cdots .\)
+    </center>
+    <p>
+      If \(\zeta\) is a single Grassmann variable, we have \(\exp (\zeta) = 1
+      + \zeta\) since other terms are all vanishing. This linearity, however,
+      breaks when consider more Grassmann variables. For example, consider
+      \(\exp \left( \sum_{i = 1}^n \zeta_i \eta_i \right)\) where \(\zeta\)
+      and \(\eta\) are multiple Grassmann variables. The maximal order is
+    </p>
+    <center>
+      \(\displaystyle \frac{1}{n!} \left( \sum_{i = 1}^n \zeta_i \eta_i
+      \right)^n = \zeta_1 \eta_1
+\cdots \zeta_n \eta_n,\)
+    </center>
+    <p>
+      since \(\zeta_i \eta_i\) and \(\zeta_j \eta_j\) is commutative.
+    </p>
+    <p>
+      Now, we introduce the integral on Grassmann variables. The integral is a
+      linear operator, defined by
+    </p>
+    <center>
+      \(\displaystyle \int \mathrm{d} \zeta_i \zeta_j = \delta_{i j} .\)
+    </center>
+    <p>
+      The integral measures \(\{ \mathrm{d} \zeta_i |i = 1, \ldots, n \}\) are
+      also anti-commutative, namely
+    </p>
+    <center>
+      \(\displaystyle \mathrm{d} \zeta_i \mathrm{d} \zeta_j = - \mathrm{d}
+      \zeta_j \mathrm{d}
+\zeta_i .\)
+    </center>
+    <p>
+      So, as an example, we have
+    </p>
+    <font style="font-size: 84.1%"><table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle \int \mathrm{d} \eta_n \int
+        \mathrm{d} \zeta_n \cdots \int \mathrm{d} \eta_1
+\int \mathrm{d}
+        \zeta_1 \exp \left( \sum_{i = 1}^n \zeta_i \eta_i \right) =
+\cdots +
+        \left[ \int \mathrm{d} \eta_n \int \mathrm{d} \zeta_n \cdots
+        \int
+\mathrm{d} \eta_1 \int \mathrm{d} \zeta_1 (\zeta_1 \eta_1 \cdots
+        \zeta_n
+\eta_n) \right] = 1, \)</td>
+        <td align="right">(25)</td>
+      </tr>
+    </table></font>
+    <p>
+      where the \([\cdots]\) terms are all vanishing because they do not have
+      sufficiently many Grassmann variables.
+    </p>
+    <p>
+      Next, we investigate how linear transformation effects the integral
+      measure. To do so, consider a \(d\)-dimensional Grassmann variable, in
+      which each component is a single Grassmann variable, \(\zeta = (\zeta^1,
+      \ldots, \zeta^d)\). If we take the linear transformation
+    </p>
+    <center>
+      \(\displaystyle \zeta'_{\alpha} = A_{\alpha \beta} \zeta^{\beta},\)
+    </center>
+    <p>
+      then the product
+    </p>
+    <center>
+      \(\displaystyle \zeta'_1 \cdots \zeta'_d = (A_{1 \beta} \zeta^{\beta})
+      \cdots (A_{d \beta}
+\zeta^{\beta}) = \sum_{\operatorname{perm} (\beta)}
+      A_{1 \beta_1} A_{2
+\beta_2} \cdots A_{d \beta_d} \zeta^{\beta_1} \cdots
+      \zeta^{\beta_d},\)
+    </center>
+    <p>
+      where the summation includes all permutations of \((\beta_1, \ldots,
+      \beta_d)\). If we re-arrange the \(\zeta^{\beta_1} \cdots
+      \zeta^{\beta_d}\) factor to \(\zeta^1 \cdots \zeta^d\), then there comes
+      a factor \((- 1)^{\operatorname{sign} (\beta)}\), where
+      \(\operatorname{sign} (\beta)\) is the signature of the permutation
+      \((\beta_1, \ldots, \beta_d)\). For example, \((2, 1, 3, 4, \ldots, d)\)
+      has signature \(1\) since by only one permutation \(1 \leftrightarrow
+      2\), can we recover the natural order \((1, 2, 3, 4, \ldots, d)\). So,
+    </p>
+    <center>
+      \(\displaystyle \zeta'_1 \cdots \zeta'_d = \zeta^1 \cdots \zeta^d
+      \times
+\sum_{\operatorname{perm} (\beta)} (- 1)^{\operatorname{sign}
+      (\beta)} A_{1
+\beta_1} A_{2 \beta_2} \cdots A_{d \beta_d} .\)
+    </center>
+    <p>
+      The right hand side is recognized as \(\)\(\zeta^1 \cdots \zeta^d \times
+      \det A\). On the other hand, since both \(\int \mathrm{d} \zeta_d \cdots
+      \int \mathrm{d} \zeta_1  (\zeta_1 \cdots
+\zeta_d)\) and \(\int
+      \mathrm{d} \zeta'_d \cdots \int \mathrm{d} \zeta'_1  (\zeta'_1
+      \cdots
+\zeta'_d)\) results in one, namely
+    </p>
+    <center>
+      \(\displaystyle \int \mathrm{d} \zeta'_d \cdots \int \mathrm{d} \zeta'_1
+      (\zeta'_1 \cdots
+\zeta'_d) = \int \mathrm{d} \zeta_d \cdots \int
+      \mathrm{d} \zeta_1  (\zeta_1
+\cdots \zeta_d),\)
+    </center>
+    <p>
+      we find the transformation of integral measure, as
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle \int \mathrm{d} \zeta'_d \cdots \int
+        \mathrm{d} \zeta'_1 = \det A \times \int
+\mathrm{d} \zeta_d \cdots
+        \int \mathrm{d} \zeta_1 . \)</td>
+        <td align="right">(26)</td>
+      </tr>
+    </table>
+    <p>
+      
+    </p>
+    <p>
+      After introducing Grassmann variable and the integration on multiple
+      such variables, we come to the formula of Berezin integral, which is an
+      analogy of Gaussian integral for Grassmann variables. Consider the
+      Gaussian-like integral
+    </p>
+    <center>
+      \(\displaystyle \int \mathrm{d} \zeta \mathrm{d} \eta \exp (A_{\alpha
+      \beta} \zeta^{\alpha}
+\eta^{\beta}),\)
+    </center>
+    <p>
+      where \(A \in \mathbb{R}^{d \times d}\) (or \(\mathbb{C}^{d \times d}\))
+      and we have briefly denoted
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle \int \mathrm{d} \zeta \mathrm{d}
+        \eta := \int \mathrm{d} \zeta_d \int
+\mathrm{d} \eta_d \cdots \int
+        \mathrm{d} \zeta_1 \int \mathrm{d} \eta_1 . \)</td>
+        <td align="right">(27)</td>
+      </tr>
+    </table>
+    <p>
+      Defining \(\zeta'_{\beta} := A_{\alpha \beta} \zeta^{\alpha}\) and using
+      equation <a href="#equation:grassmann integral transform">26</a>, it becomes
+    </p>
+    <center>
+      \(\displaystyle \int \mathrm{d} \zeta \mathrm{d} \eta \exp (A_{\alpha
+      \beta} \zeta^{\alpha}
+\eta^{\beta}) = \det A \times \int \mathrm{d}
+      \zeta' \mathrm{d} \eta \exp
+(\zeta'_{\beta} \eta^{\beta}) .\)
+    </center>
+    <p>
+      The rightmost factor has been evaluated in equation <a href="#equation:berezin integral exp">25</a>,
+      which results in \(1\), thus
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle \int \mathrm{d} \zeta \mathrm{d}
+        \eta \exp (A_{\alpha \beta} \zeta^{\alpha}
+\eta^{\beta}) = \det A.
+        \)</td>
+        <td align="right">(28)</td>
+      </tr>
+    </table>
+    <p>
+      where
     </p>
     <h3 id="auto-28"><a id="section: Langevin Process Can Be Formulated as Path Integral"></a>4.4<span style="margin-left: 1em"></span>Langevin Process Can Be
     Formulated as Path Integral<span style="margin-left: 1em"></span></h3>
@@ -3732,7 +3926,7 @@ x_1) = T^2  [x_{\star} ((i + 1) / T) - 2 x_{\star}
         \cdots \int_{\mathbb{R}^d} \mathrm{d} x_n
 \exp (- S (x_1, \ldots,
         x_n)), \)</td>
-        <td align="right">(25)</td>
+        <td align="right">(29)</td>
       </tr>
     </table>
     <p>
@@ -3775,7 +3969,7 @@ x_1) = T^2  [x_{\star} ((i + 1) / T) - 2 x_{\star}
         \mathrm{d} x_0 q_{\Delta t} (x_N |x_{N - 1}) \cdots
 q_{\Delta t} (x_1
         |x_0) p (x_0, 0) . \)</td>
-        <td align="right">(26)</td>
+        <td align="right">(30)</td>
       </tr>
     </table>
     <p>
@@ -3874,7 +4068,7 @@ K_2^{\alpha \beta} (x)  (\mathrm{i}
         (x) k_{\alpha} k_{\beta} k_{\gamma} + \cdots + \omicron (\Delta
 t)
         \right) . \)</td>
-        <td align="right">(27)</td>
+        <td align="right">(31)</td>
       </tr>
     </table>
     <p>
@@ -3933,7 +4127,7 @@ b_{\beta} \right),\)
       approximately Gaussian.
     </p>
     <p>
-      To match the path integral formulism <a href="#equation:general path integral">25</a>, in which all
+      To match the path integral formulism <a href="#equation:general path integral">29</a>, in which all
       integration variables are in the exponential, we have to convert the
       \([\det \Sigma (x)]^{- 1 / 2}\) factor into exponential too. To do so,
       we first use Cholesky factorization to remove the root, and then use
@@ -3982,24 +4176,25 @@ R_{\alpha \beta} (x)  \left(
     </p>
     <p>
       Next, we use Berezin integral to convert the determinant \(\det R (x)\)
-      to exponential. By the formula of Berezin integral for any \(A \in
-      \mathbb{C}^{d \times d}\) (introduced in section <a href="#section: Preliminary: Grassmann Number and Berezin Integral">4.3</a>),
+      to exponential. Recall the formula of Berezin integral for any \(A \in
+      \mathbb{R}^{d \times d}\) (introduced in section <a href="#section: Preliminary: Grassmann Variable and Berezin Integral">4.3</a>),
     </p>
     <center>
-      \(\displaystyle \int \mathrm{d} \zeta \int \mathrm{d} \eta \exp (-
-      A_{\alpha \beta}
-\zeta^{\alpha} \eta^{\beta}) = \det A,\)
+      \(\displaystyle \int \mathrm{d} \zeta \mathrm{d} \eta \exp (- A_{\alpha
+      \beta} \zeta^{\alpha}
+\eta^{\beta}) = \det A,\)
     </center>
     <p>
-      where \(\zeta\) and \(\eta\) are multi-dimensional Grassmann numbers, we
-      have (replacing \(A\) by \(R (x) \Delta t\))
+      where \(\zeta\) and \(\eta\) are multi-dimensional Grassmann variables,
+      and the integral measure \(\int \mathrm{d} \zeta \mathrm{d} \eta\) is
+      defined by equation <a href="#equation:berezin integral measurement">27</a>. Replacing \(A\) by \(R (x) \Delta
+      t\), we find
     </p>
     <center>
-      \(\displaystyle \int \mathrm{d} \zeta \int \mathrm{d} \eta \exp (-
-      \Delta t R_{\alpha \beta}
-(x) \zeta^{\alpha} \eta^{\beta}) = \det [R (x)
-      \Delta t] = \Delta t^d \det R
-(x),\)
+      \(\displaystyle \int \mathrm{d} \zeta \mathrm{d} \eta \exp (- \Delta t
+      R_{\alpha \beta} (x)
+\zeta^{\alpha} \eta^{\beta}) = \det [R (x) \Delta
+      t] = \Delta t^d \det R (x),\)
     </center>
     <p>
       we convert the determinant into exponential, as
@@ -4007,21 +4202,21 @@ R_{\alpha \beta} (x)  \left(
     <center>
       \(\displaystyle q_{\Delta t} (x + \epsilon |x) = \left( \frac{2
       \pi}{\Delta t^3} \right)^{d /
-2}  \int \mathrm{d} \theta \int \mathrm{d}
-      \eta \exp \left( - \frac{\Delta
-t}{2} \sum_{\alpha = 1}^d \left[
-      R_{\alpha \beta} (x)  \left(
-\frac{\epsilon^{\beta}}{\Delta t} -
-      f^{\beta} (x) \right) \right]^2 - \Delta t
-R_{\alpha \beta} (x)
-      \zeta^{\alpha} \eta^{\beta} \right) .\)
+2}  \int \mathrm{d} \zeta \mathrm{d} \eta
+      \exp \left( - \frac{\Delta t}{2}
+\sum_{\alpha = 1}^d \left[ R_{\alpha
+      \beta} (x)  \left(
+\frac{\epsilon^{\beta}}{\Delta t} - f^{\beta} (x)
+      \right) \right]^2 - \Delta t
+R_{\alpha \beta} (x) \zeta^{\alpha}
+      \eta^{\beta} \right) .\)
     </center>
     <p>
       In physics, the Grassmann variables \(\zeta\) and \(\eta\) are called
       &ldquo;ghost variables&rdquo;.
     </p>
     <p>
-      Plugging back to equation <a href="#equation:path integral step 1">26</a>, we get
+      Plugging back to equation <a href="#equation:path integral step 1">30</a>, we get
     </p>
     <center>
       \(\displaystyle p (x_N, N \Delta t) = \int \mathrm{D} (x, \zeta, \eta)
@@ -4029,16 +4224,15 @@ R_{\alpha \beta} (x)
 \eta) + C) p (x_0, 0),\)
     </center>
     <p>
-      where the measurement is defined by
+      where the integral measure is defined by
     </p>
     <center>
       \(\displaystyle \int \mathrm{D} (x, \zeta, \eta) := \int_{\mathbb{R}^n}
       \mathrm{d} x_0 \cdots
 \int_{\mathbb{R}^n} \mathrm{d} x_{N - 1} \int
-      \mathrm{d} \zeta_0 \int
-\mathrm{d} \eta_0 \cdots \int \mathrm{d}
-      \zeta_{N - 1} \int \mathrm{d} \eta_{N
-- 1}\)
+      \mathrm{d} \zeta_0 \mathrm{d}
+\eta_0 \cdots \int \mathrm{d} \zeta_{N -
+      1} \mathrm{d} \eta_{N - 1}\)
     </center>
     <p>
       and the &ldquo;action&rdquo; of Langevin process is
@@ -4055,7 +4249,7 @@ R_{\alpha
         \beta} (x_i) \zeta^{\alpha}_i \eta_i^{\beta} + \omicron (1) \right\}
 .
         \)</td>
-        <td align="right">(28)</td>
+        <td align="right">(32)</td>
       </tr>
     </table>
     <p>
@@ -4078,11 +4272,11 @@ R_{\alpha
         1}^{\alpha} - x_i^{\alpha}}{\Delta t} -
 f^{\alpha} (x_i) \right)
         \right]^2 + \omicron (1) \right\}, \)</td>
-        <td align="right">(29)</td>
+        <td align="right">(33)</td>
       </tr>
     </table>
     <p>
-      and accordingly, the measurement becomes \(\int D (x) :=
+      and accordingly, the integral measure becomes \(\int D (x) :=
       \int_{\mathbb{R}^n} \mathrm{d} x_0 \cdots \int_{\mathbb{R}^n}
 \mathrm{d}
       x_{N - 1}\). The expression is greatly simplified when \(R\) is
@@ -4115,13 +4309,13 @@ x^{\beta}}{\mathrm{d} t} (t) - f^{\beta} \left(
     <p>
       As a summary, we find the master equation of Langevin process can be
       formulated as a path integral, in which the action is given by equation
-      <a href="#equation:langevin action">28</a>, in which \(\zeta\) and \(\eta\) are Grassmann
+      <a href="#equation:langevin action">32</a>, in which \(\zeta\) and \(\eta\) are Grassmann
       variables.
     </p>
     <p>
       Final remark on cut-off \(N_{\operatorname{cut}} = 2\). If choose
       \(N_{\operatorname{cut}} > 2\), it is hard to see how to integrate the
-      improper integral <a href="#equation:path integral step 2">27</a>, and even to show why it is finite.
+      improper integral <a href="#equation:path integral step 2">31</a>, and even to show why it is finite.
       For example, if \(N_{\operatorname{cut}} = 4\), the \((\Delta t / 4!)
       K^{\alpha \beta \gamma \sigma}_4 (x) k_{\alpha} k_{\beta}
 k_{\gamma}
@@ -4153,7 +4347,7 @@ k_{\gamma}
     </p>
     <p>
       This is what we have derived in section <a href="#section: Langevin Process Can Be Formulated as Path Integral">4.4</a>. From
-      probabilistic perspective, the right hand side of equation <a href="#equation:path integral step 1">26</a>
+      probabilistic perspective, the right hand side of equation <a href="#equation:path integral step 1">30</a>
       can be viewed as marginalizing the random variables \((X_0, \ldots, X_{N
       - 1})\), and the product \(q (x_N |x_{N - 1}) \cdots q (x_1 |x_0)\) can
       be seen as the density function of \((X_1, \ldots, X_N)\), where we have
@@ -4186,7 +4380,7 @@ k_{\gamma}
       <tr>
         <td width="100%" align="center">\(\displaystyle S (x) := - \ln q (x)
         +\operatorname{const}. \)</td>
-        <td align="right">(30)</td>
+        <td align="right">(34)</td>
       </tr>
     </table>
     <p>
@@ -4244,13 +4438,13 @@ x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
       <tr>
         <td width="100%" align="center">\(\displaystyle p (x, \theta) = \exp (- S (x,
         \theta)) / Z (\theta), \)</td>
-        <td align="right">(31)</td>
+        <td align="right">(35)</td>
       </tr>
     </table>
     <p>
       where \(Z (\theta) = \int \mathrm{d} x \exp (- S (x, \theta))\) for
       ensuring the normalization \(\int \mathrm{d} x p (x, \theta) = 1\). This
-      is consistent with the action defined by equation <a href="#equation:action of distribution">30</a>,
+      is consistent with the action defined by equation <a href="#equation:action of distribution">34</a>,
       except that the action here is parameterized, and that we omit the
       constant \(\beta\) since it is irrelevant throughout this section.
     </p>
@@ -4264,7 +4458,7 @@ x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
       function of \(Q\), all that we can do with \(Q\) is computing the
       expectation \(\mathbb{E}_Q [f] = (1 / | Q |) \sum_{x \in Q} f (x)\) for
       any function \(f\), where we use \(Q\) as a set of data. With this
-      realization, we have, after plugging equation <a href="#equation:generic density">31</a> into \(H
+      realization, we have, after plugging equation <a href="#equation:generic density">35</a> into \(H
       (Q, P (\theta))\),
     </p>
     <center>
@@ -4329,7 +4523,7 @@ x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
         -\mathbb{E}_Q \left[ \frac{\partial S}{\partial
         \theta^{\alpha}}
 (\cdot, \theta) \right] . \)</td>
-        <td align="right">(32)</td>
+        <td align="right">(36)</td>
       </tr>
     </table>
     <p>
@@ -4344,14 +4538,14 @@ x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
         \theta_{\star}) \right] =\mathbb{E}_Q \left[
 \frac{\partial
         S}{\partial \theta^{\alpha}} (\cdot, \theta_{\star}) \right] . \)</td>
-        <td align="right">(33)</td>
+        <td align="right">(37)</td>
       </tr>
     </table>
     <p>
       
     </p>
     <p>
-      It can be read from equation <a href="#equation:data-fitting iteration">32</a> that minimizing \(L\) is to
+      It can be read from equation <a href="#equation:data-fitting iteration">36</a> that minimizing \(L\) is to
       increase \(S (\cdot, \theta)\) on the sampled points (the first term)
       while decrease it on data points (the second term). As figure <a href="#figure: Least-Action">1</a>
       illustrates, this way of optimization will site real world data onto
@@ -4402,10 +4596,10 @@ x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
       Each movie is a series of frames that log the positions of each bird at
       each time instant. These movies provide the real world data. The
       parameterized action \(S\) can be expressed by a neural network. Then,
-      iterating by equation <a href="#equation:data-fitting iteration">32</a> until \(\| \partial L / \partial
+      iterating by equation <a href="#equation:data-fitting iteration">36</a> until \(\| \partial L / \partial
       \theta \|\) has been small enough gives an \(S (\cdot, \theta_{\star})\)
       that mimics the stochastic dynamics of starling flocks. To compute the
-      expectation \(\mathbb{E}_{P (\theta)} [\ldots]\) in equation <a href="#equation:data-fitting iteration">32</a>,
+      expectation \(\mathbb{E}_{P (\theta)} [\ldots]\) in equation <a href="#equation:data-fitting iteration">36</a>,
       we can employ Monte-Carlo simulation with the transition rate satisfying
       detailed balance condition with \(P (\theta)\) as the stationary
       distribution. For discrete random variables, Monte-Carlo simulation with
@@ -4429,7 +4623,7 @@ x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
     </p>
     <p>
       To show how it works, we start with an action that is generalized from
-      action <a href="#equation:langevin action constant R">29</a>, which is
+      action <a href="#equation:langevin action constant R">33</a>, which is
     </p>
     <table width="100%">
       <tr>
@@ -4441,16 +4635,16 @@ x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
         \varphi^{\alpha} (x_{i + 1}, x_i) + \epsilon \xi^{\alpha}
 (x_{i + 1},
         x_i) \right], \)</td>
-        <td align="right">(34)</td>
+        <td align="right">(38)</td>
       </tr>
     </table>
     <p>
       where \(\varphi, \xi : \mathbb{R}^d \times \mathbb{R}^d \rightarrow
-      \mathbb{R}^d\). Comparing with action <a href="#equation:langevin action constant R">29</a>, \(\epsilon =
+      \mathbb{R}^d\). Comparing with action <a href="#equation:langevin action constant R">33</a>, \(\epsilon =
       \Delta t\), \(\varphi (x_{i + 1}, x_i) = f (x_i)\), and \(\xi (x_{i +
       1}, x_i) = f^2 (x_i) / 2\). There are another two differences between
       them. Here, we do not fix boundary (namely, the fixed boundary \(x_N\)
-      in action <a href="#equation:langevin action constant R">29</a>), and let the index \(i\) run from \(-
+      in action <a href="#equation:langevin action constant R">33</a>), and let the index \(i\) run from \(-
       \infty\) to \(+ \infty\) rather than from \(0\) to \(N\). As we will see
       later in this section, these differences are crucial for renormalization
       group. In the end of this section, we will show how to add the condition
@@ -4469,7 +4663,7 @@ x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
         \mathbb{Z}} \int_{\mathbb{R}^d} \mathrm{d}
 x_{2 i + 1} \exp (- S (x))
         \right], \)</td>
-        <td align="right">(35)</td>
+        <td align="right">(39)</td>
       </tr>
     </table>
     <p>
@@ -4480,7 +4674,7 @@ x_{2 i + 1} \exp (- S (x))
     </p>
     <p>
       Given \(i\), we are to show how to marginalize \(x_{2 i + 1}\). This
-      variables appear in two terms in action <a href="#equation:rg action">34</a>, with indices
+      variables appear in two terms in action <a href="#equation:rg action">38</a>, with indices
       \(2 i + 1\) and \(2 i\). So, we are to integrate \(\int_{\mathbb{R}^d}
       \mathrm{d} x_{2 i + 1} \exp \left( \sum_{\alpha = 1}^n
 J^{\alpha}
@@ -4554,7 +4748,7 @@ x^{\alpha}_{2 i + 2}}{2} \right]^2 + \frac{1}{4
 x^{\alpha}_{2 i + 2})^2 .\)
     </center>
     <p>
-      Remark that the second term looks like the first term in action <a href="#equation:rg action">34</a>,
+      Remark that the second term looks like the first term in action <a href="#equation:rg action">38</a>,
       except for an \(1 / 2\) factor. Then, \(J^{\alpha}\) becomes
     </p>
     <center>
@@ -4884,80 +5078,100 @@ V^{\alpha} (y)
 - \left( {x'}^{\alpha}_{i + 1} -
       x^{\alpha}_i \right) {\varphi'}^{\alpha}
 (x'_{i + 1}, x'_i) {+ \epsilon
-      \xi'}^{\alpha} (x_{i + 1}', x_i') \right],\)
+      \xi'}^{\alpha} (x_{i + 1}', x_i') + \mathcal{O}
+(\epsilon^{3 / 2})
+      \right],\)
     </center></font>
     <p>
       where
     </p>
-    <center>
-      \(\displaystyle {\varphi'}^{\alpha} (x'_{i + 1}, x'_i) :=
-      \frac{1}{\sqrt{2}} [\varphi^{\alpha}
-(\bar{x}_{2 i + 1}, x_{2 i}) +
-      \varphi^{\alpha} (x_{2 i + 2}, \bar{x}_{2 i +
-1})]\)
-    </center>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle {\varphi'}^{\alpha} (x'_{i + 1},
+        x'_i) := \frac{1}{\sqrt{2}} [\varphi^{\alpha}
+(\bar{x}_{2 i + 1}, x_{2
+        i}) + \varphi^{\alpha} (x_{2 i + 2}, \bar{x}_{2 i +
+1})]\)</td>
+        <td align="right">(40)</td>
+      </tr>
+    </table>
     <p>
       and
     </p>
-    <font style="font-size: 84.1%"><center>
-      \(\displaystyle {\xi'}^{\alpha}_i (x_{i + 1}', x_i') :=
-      {\color{red}{\xi^{\alpha} (\bar{x}_{2
-i + 1}, x_{2 i}) + \xi^{\alpha}
-      (x_{2 i + 2}, \bar{x}_{2 i + 1})}} {-
-\frac{1}{2} [\partial_{\alpha}
-      \varphi^{\alpha} (\bar{x}_{2 i + 1}, x_{2 i}) -
-\partial_{\alpha}'
-      \varphi^{\alpha} (x_{2 i + 2}, \bar{x}_{2 i + 1})]} {-
-\frac{1}{4}
-      [\varphi^{\alpha} (\bar{x}_{2 i + 1}, x_{2 i}) - \varphi^{\alpha}
-(x_{2
-      i + 2}, \bar{x}_{2 i + 1})]^2} {- \frac{1}{8} (x^{\alpha}_{2 i + 2}
-      -
-x^{\alpha}_{2 i})  [\Delta \varphi^{\alpha} (\bar{x}_{2 i + 1}, x_{2
-      i}) +
-\Delta' \varphi^{\alpha} (x_{2 i + 2}, \bar{x}_{2 i + 1})]} {-
-      \frac{1}{4}
-\sum_{\alpha' = 1}^n (x^{\alpha}_{2 i + 2} - x^{\alpha}_{2
-      i}) 
-[\partial_{\alpha'} \varphi^{\alpha} (\bar{x}_{2 i + 1}, x_{2 i})
-      +
-\partial_{\alpha'}' \varphi^{\alpha} (x_{2 i + 2}, \bar{x}_{2 i + 1})]
-      
-[\varphi^{\alpha'} (\bar{x}_{2 i + 1}, x_{2 i}) - \varphi^{\alpha'}
-      (x_{2 i +
-2}, \bar{x}_{2 i + 1})] - \frac{1}{16} \sum_{\alpha', \beta =
-      1}^n
-(x^{\alpha}_{2 i + 2} - x^{\alpha}_{2 i})  [\partial_{\beta}
-      \varphi^{\alpha}
-(\bar{x}_{2 i + 1}, x_{2 i}) + \partial_{\beta}'
-      \varphi^{\alpha} (x_{2 i +
-2}, \bar{x}_{2 i + 1})]  (x^{\alpha'}_{2 i +
-      2} - x^{\alpha'}_{2 i}) 
-[\partial_{\beta} \varphi^{\alpha'} (\bar{x}_{2
-      i + 1}, x_{2 i}) +
-\partial_{\beta}' \varphi^{\alpha'} (x_{2 i + 2},
-      \bar{x}_{2 i + 1})]} +
-\mathcal{O} \left( \sqrt{\epsilon} \right),\)
-    </center></font>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle \begin{array}{rl}
+ 
+        {\xi'}^{\alpha}_i (x_{i + 1}', x_i') := & {\color{red}{\xi^{\alpha}
+ 
+        (\bar{x}_{2 i + 1}, x_{2 i}) + \xi^{\alpha} (x_{2 i + 2}, \bar{x}_{2 i
+        +
+  1})}}\\
+  - & {\frac{1}{2} [\partial_{\alpha} \varphi^{\alpha}
+        (\bar{x}_{2 i + 1},
+  x_{2 i}) - \partial_{\alpha}' \varphi^{\alpha}
+        (x_{2 i + 2}, \bar{x}_{2 i +
+  1})]}\\
+  - & {\frac{1}{8}
+        (x^{\alpha}_{2 i + 2} - x^{\alpha}_{2 i})  [\Delta
+  \varphi^{\alpha}
+        (\bar{x}_{2 i + 1}, x_{2 i}) + \Delta' \varphi^{\alpha}
+  (x_{2 i +
+        2}, \bar{x}_{2 i + 1})]}\\
+  - & {\frac{1}{4} [\varphi^{\alpha}
+        (\bar{x}_{2 i + 1}, x_{2 i}) -
+  \varphi^{\alpha} (x_{2 i + 2},
+        \bar{x}_{2 i + 1})]^2}\\
+  - & {\frac{1}{4} \sum_{\alpha' = 1}^n
+        (x^{\alpha}_{2 i + 2} - x^{\alpha}_{2
+  i})  [\partial_{\alpha'}
+        \varphi^{\alpha} (\bar{x}_{2 i + 1}, x_{2 i}) +
+  \partial_{\alpha'}'
+        \varphi^{\alpha} (x_{2 i + 2}, \bar{x}_{2 i + 1})]
+  \times}\\
+  &
+        {\times [\varphi^{\alpha'} (\bar{x}_{2 i + 1}, x_{2 i}) -
+ 
+        \varphi^{\alpha'} (x_{2 i + 2}, \bar{x}_{2 i + 1})]}\\
+  - &
+        {\frac{1}{16} \sum_{\alpha', \beta = 1}^n (x^{\alpha}_{2 i + 2} -
+ 
+        x^{\alpha}_{2 i})  [\partial_{\beta} \varphi^{\alpha} (\bar{x}_{2 i +
+        1},
+  x_{2 i}) + \partial_{\beta}' \varphi^{\alpha} (x_{2 i + 2},
+        \bar{x}_{2 i +
+  1})] \times}\\
+  & {\times (x^{\alpha'}_{2 i + 2} -
+        x^{\alpha'}_{2 i})  [\partial_{\beta}
+  \varphi^{\alpha'} (\bar{x}_{2
+        i + 1}, x_{2 i}) + \partial_{\beta}'
+  \varphi^{\alpha'} (x_{2 i + 2},
+        \bar{x}_{2 i + 1})]},
+\end{array}\)</td>
+        <td align="right">(41)</td>
+      </tr>
+    </table>
     <p>
       where we have indicated the source of the terms by color. This is held
       for all \(i\), thus we arrive at
     </p>
-    <center>
-      \(\displaystyle S' (x') = \sum_{i = - \infty}^{+ \infty} \sum_{\alpha =
-      1}^n \left[ \frac{1}{2
-\epsilon} \left( {x'}^{\alpha}_{i + 1} {-
-      x'}^{\alpha}_i \right)^2 - \left(
-{x'}^{\alpha}_{i + 1} {-
-      x'}^{\alpha}_i \right) {\varphi'}^{\alpha} (x'_{i +
-1}, x'_i) {+
-      \epsilon \xi'}^{\alpha} (x_{i + 1}', x_i') \right],\)
-    </center>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle S' (x') = \sum_{i = - \infty}^{+
+        \infty} \sum_{\alpha = 1}^n \left[ \frac{1}{2
+\epsilon} \left(
+        {x'}^{\alpha}_{i + 1} {- x'}^{\alpha}_i \right)^2 -
+        \left(
+{x'}^{\alpha}_{i + 1} {- x'}^{\alpha}_i \right) \varphi^{\prime
+        \alpha} (x'_{i
++ 1}, x'_i) {+ \epsilon \xi'}^{\alpha} (x_{i + 1}',
+        x_i') + \mathcal{O}
+(\epsilon^{3 / 2}) \right],\)</td>
+        <td align="right">(42)</td>
+      </tr>
+    </table>
     <p>
-      which has exactly the same format as \(S\) (equation <a href="#equation:rg action">34</a>).
+      which has exactly the same format as \(S\) (equation <a href="#equation:rg action">38</a>).
     </p>
-    <center>
-      \(\displaystyle \)
-    </center>
   </body>
 </html>

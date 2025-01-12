@@ -116,8 +116,8 @@
     Principle in Classical Mechanics <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-26>>
 
-    <with|par-left|1tab|4.3<space|2spc>Preliminary: Grassmann Number and
-    Berezin Integral (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <with|par-left|1tab|4.3<space|2spc>Preliminary: Grassmann Variable and
+    Berezin Integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-27>>
 
     <with|par-left|1tab|4.4<space|2spc>Langevin Process Can Be Formulated as
@@ -2986,27 +2986,191 @@
   Redundancy>, action is completely determined by the real world distribution
   (the correspondence of real world datum), with nothing redundant.
 
-  <subsection|Preliminary: Grassmann Number and Berezin Integral
-  (TODO)><label|section: Preliminary: Grassmann Number and Berezin Integral>
+  <subsection|Preliminary: Grassmann Variable and Berezin
+  Integral><label|section: Preliminary: Grassmann Variable and Berezin
+  Integral>
 
-  We have to briefly introduce Grassmann number, on which Berezin integral is
-  based. Grassmann number is an extension of complex number,by introducing in
-  the anti-commutative numbers. Given a set of anti-commutative numbers
-  <math|<around*|{|\<zeta\><rsub|i>\|i=1,\<ldots\>,n|}>>, where we treat each
-  <math|<rsub|i>> as an abstract variable. We demand that the
-  anti-commutative relation between <math|\<zeta\>>s
+  We have to briefly introduce Grassmann variable, on which Berezin integral
+  is based. Grassmann variable is an extension of real (or complex)
+  variable,by introducing in the anti-commutative variables. Given a set of
+  variables <math|<around*|{|\<zeta\><rsub|i>\|i=1,\<ldots\>,n|}>>, we demand
+  that the anti-commutative relation between <math|\<zeta\>>s
 
   <\equation*>
     \<zeta\><rsub|i> \<zeta\><rsub|j>=-\<zeta\><rsub|j> \<zeta\><rsub|i>.
   </equation*>
 
-  But for any complex number <math|z>, we demand a commutative relation
+  But for any real (or complex) variable <math|x>, we demand a commutative
+  relation
 
   <\equation*>
-    z \<zeta\><rsub|i>=\<zeta\><rsub|i> z.
+    x \<zeta\><rsub|i>=\<zeta\><rsub|i> x.
   </equation*>
 
-  TODO
+  Because of anti-commutation, we have <math|\<zeta\><rsub|i>\<zeta\><rsub|i>=-\<zeta\><rsub|i>\<zeta\><rsub|i>>,
+  thus <math|\<zeta\><rsub|i>\<zeta\><rsub|i>=0>. So, a polynomial of single
+  Grassmann variable is always linear, as <math|f<around*|(|\<zeta\>|)>=a+b
+  \<zeta\>> where coefficients <math|a,b\<in\>\<bbb-R\>>. And a polynomial of
+  two Grassmann variables, <math|\<zeta\>> and <math|\<eta\>>, is
+
+  <\equation*>
+    f<around*|(|\<zeta\>,\<eta\>|)>=a+b \<zeta\>+c \<eta\>+d \<zeta\>\<eta\>,
+  </equation*>
+
+  where coefficients are real numbers. Extra term like <math|\<zeta\> \<eta\>
+  \<zeta\>=-\<zeta\> \<zeta\> \<eta\>=\<zeta\> \<zeta\> \<eta\>>, thus
+  vanishes. Generally, a polynomial of <math|n> Grassmann variables has terms
+  with no more than <math|n> factors.
+
+  A function can be defined via its Taylor expansion in real number. So, the
+  exponential function for Grassmann number is defined by
+
+  <\equation*>
+    exp<around*|(|\<zeta\>|)>=1+\<zeta\>+<frac|1|2!>\<zeta\><rsup|2>+<frac|1|3!>\<zeta\><rsup|3>+\<cdots\>.
+  </equation*>
+
+  If <math|\<zeta\>> is a single Grassmann variable, we have
+  <math|exp<around*|(|\<zeta\>|)>=1+\<zeta\>> since other terms are all
+  vanishing. This linearity, however, breaks when consider more Grassmann
+  variables. For example, consider <math|exp<around*|(|<big|sum><rsub|i=1><rsup|n>\<zeta\><rsub|i>
+  \<eta\><rsub|i>|)>> where <math|\<zeta\>> and <math|\<eta\>> are multiple
+  Grassmann variables. The maximal order is
+
+  <\equation*>
+    <frac|1|n!><around*|(|<big|sum><rsub|i=1><rsup|n>\<zeta\><rsub|i>
+    \<eta\><rsub|i>|)><rsup|n>=\<zeta\><rsub|1>\<eta\><rsub|1>\<cdots\>\<zeta\><rsub|n>\<eta\><rsub|n>,
+  </equation*>
+
+  since <math|\<zeta\><rsub|i>\<eta\><rsub|i>> and
+  <math|\<zeta\><rsub|j>\<eta\><rsub|j>> is commutative.
+
+  Now, we introduce the integral on Grassmann variables. The integral is a
+  linear operator, defined by
+
+  <\equation*>
+    <big|int>\<mathd\>\<zeta\><rsub|i> \<zeta\><rsub|j>=\<delta\><rsub|i j>.
+  </equation*>
+
+  The integral measures <math|<around*|{|\<mathd\>\<zeta\><rsub|i>\|i=1,\<ldots\>,n|}>>
+  are also anti-commutative, namely
+
+  <\equation*>
+    \<mathd\>\<zeta\><rsub|i>\<mathd\>\<zeta\><rsub|j>=-\<mathd\>\<zeta\><rsub|j>\<mathd\>\<zeta\><rsub|i>.
+  </equation*>
+
+  So, as an example, we have
+
+  <\small>
+    <\equation>
+      <big|int>\<mathd\>\<eta\><rsub|n><big|int>\<mathd\>\<zeta\><rsub|n>\<cdots\><big|int>\<mathd\>\<eta\><rsub|1><big|int>\<mathd\>\<zeta\><rsub|1>
+      exp<around*|(|<big|sum><rsub|i=1><rsup|n>\<zeta\><rsub|i>
+      \<eta\><rsub|i>|)>=\<cdots\>+<around*|[|<big|int>\<mathd\>\<eta\><rsub|n><big|int>\<mathd\>\<zeta\><rsub|n>\<cdots\><big|int>\<mathd\>\<eta\><rsub|1><big|int>\<mathd\>\<zeta\><rsub|1><around*|(|\<zeta\><rsub|1>\<eta\><rsub|1>\<cdots\>\<zeta\><rsub|n>\<eta\><rsub|n>|)>|]>=1,<label|equation:berezin
+      integral exp>
+    </equation>
+  </small>
+
+  where the <math|<around*|[|\<cdots\>|]>> terms are all vanishing because
+  they do not have sufficiently many Grassmann variables.
+
+  Next, we investigate how linear transformation effects the integral
+  measure. To do so, consider a <math|d>-dimensional Grassmann variable, in
+  which each component is a single Grassmann variable,
+  <math|\<zeta\>=<around*|(|\<zeta\><rsup|1>,\<ldots\>,\<zeta\><rsup|d>|)>>.
+  If we take the linear transformation
+
+  <\equation*>
+    \<zeta\><rprime|'><rsub|\<alpha\>>=A<rsub|\<alpha\>\<beta\>>
+    \<zeta\><rsup|\<beta\>>,
+  </equation*>
+
+  then the product
+
+  <\equation*>
+    \<zeta\><rprime|'><rsub|1>\<cdots\>\<zeta\><rprime|'><rsub|d>=<around*|(|A<rsub|1\<beta\>>\<zeta\><rsup|\<beta\>>|)>\<cdots\><around*|(|A<rsub|d\<beta\>>\<zeta\><rsup|\<beta\>>|)>=<big|sum><rsub|perm<around*|(|\<beta\>|)>>A<rsub|1\<beta\><rsub|1>>A<rsub|2
+    \<beta\><rsub|2>>\<cdots\>A<rsub|d \<beta\><rsub|d>>
+    \<zeta\><rsup|\<beta\><rsub|1>>\<cdots\>\<zeta\><rsup|\<beta\><rsub|d>>,
+  </equation*>
+
+  where the summation includes all permutations of
+  <math|<around*|(|\<beta\><rsub|1>,\<ldots\>,\<beta\><rsub|d>|)>>. If we
+  re-arrange the <math|\<zeta\><rsup|\<beta\><rsub|1>>\<cdots\>\<zeta\><rsup|\<beta\><rsub|d>>>
+  factor to <math|\<zeta\><rsup|1>\<cdots\>\<zeta\><rsup|d>>, then there
+  comes a factor <math|<around*|(|-1|)><rsup|sign<around*|(|\<beta\>|)>>>,
+  where <math|sign<around*|(|\<beta\>|)>> is the signature of the permutation
+  <math|<around*|(|\<beta\><rsub|1>,\<ldots\>,\<beta\><rsub|d>|)>>. For
+  example, <math|<around*|(|2,1,3,4,\<ldots\>,d|)>> has signature <math|1>
+  since by only one permutation <math|1\<leftrightarrow\>2>, can we recover
+  the natural order <math|<around*|(|1,2,3,4,\<ldots\>,d|)>>. So,
+
+  <\equation*>
+    \<zeta\><rprime|'><rsub|1>\<cdots\>\<zeta\><rprime|'><rsub|d>=\<zeta\><rsup|1>\<cdots\>\<zeta\><rsup|d>\<times\><big|sum><rsub|perm<around*|(|\<beta\>|)>><around*|(|-1|)><rsup|sign<around*|(|\<beta\>|)>>A<rsub|1\<beta\><rsub|1>>A<rsub|2
+    \<beta\><rsub|2>>\<cdots\>A<rsub|d \<beta\><rsub|d>>.
+  </equation*>
+
+  The right hand side is recognized as <math|><math|\<zeta\><rsup|1>\<cdots\>\<zeta\><rsup|d>\<times\>det
+  A>. On the other hand, since both <math|<big|int>\<mathd\>\<zeta\><rsub|d>\<cdots\><big|int>\<mathd\>\<zeta\><rsub|1>
+  <around*|(|\<zeta\><rsub|1>\<cdots\>\<zeta\><rsub|d>|)>> and
+  <math|<big|int>\<mathd\>\<zeta\><rprime|'><rsub|d>\<cdots\><big|int>\<mathd\>\<zeta\><rprime|'><rsub|1>
+  <around*|(|\<zeta\><rprime|'><rsub|1>\<cdots\>\<zeta\><rprime|'><rsub|d>|)>>
+  results in one, namely
+
+  <\equation*>
+    <big|int>\<mathd\>\<zeta\><rprime|'><rsub|d>\<cdots\><big|int>\<mathd\>\<zeta\><rprime|'><rsub|1>
+    <around*|(|\<zeta\><rprime|'><rsub|1>\<cdots\>\<zeta\><rprime|'><rsub|d>|)>=<big|int>\<mathd\>\<zeta\><rsub|d>\<cdots\><big|int>\<mathd\>\<zeta\><rsub|1>
+    <around*|(|\<zeta\><rsub|1>\<cdots\>\<zeta\><rsub|d>|)>,
+  </equation*>
+
+  we find the transformation of integral measure, as
+
+  <\equation>
+    <big|int>\<mathd\>\<zeta\><rprime|'><rsub|d>\<cdots\><big|int>\<mathd\>\<zeta\><rprime|'><rsub|1>=det
+    A\<times\><big|int>\<mathd\>\<zeta\><rsub|d>\<cdots\><big|int>\<mathd\>\<zeta\><rsub|1>.<label|equation:grassmann
+    integral transform>
+  </equation>
+
+  \;
+
+  After introducing Grassmann variable and the integration on multiple such
+  variables, we come to the formula of Berezin integral, which is an analogy
+  of Gaussian integral for Grassmann variables. Consider the Gaussian-like
+  integral
+
+  <\equation*>
+    <big|int>\<mathd\>\<zeta\>\<mathd\>\<eta\>
+    exp<around*|(|A<rsub|\<alpha\>\<beta\>> \<zeta\><rsup|\<alpha\>>
+    \<eta\><rsup|\<beta\>>|)>,
+  </equation*>
+
+  where <math|A\<in\>\<bbb-R\><rsup|d\<times\>d>> (or
+  <math|\<bbb-C\><rsup|d\<times\>d>>) and we have briefly denoted
+
+  <\equation>
+    <big|int>\<mathd\>\<zeta\>\<mathd\>\<eta\>\<assign\><big|int>\<mathd\>\<zeta\><rsub|d><big|int>\<mathd\>\<eta\><rsub|d>\<cdots\><big|int>\<mathd\>\<zeta\><rsub|1><big|int>\<mathd\>\<eta\><rsub|1>.<label|equation:berezin
+    integral measurement>
+  </equation>
+
+  Defining <math|\<zeta\><rprime|'><rsub|\<beta\>>\<assign\>A<rsub|\<alpha\>\<beta\>>
+  \<zeta\><rsup|\<alpha\>>> and using equation <reference|equation:grassmann
+  integral transform>, it becomes
+
+  <\equation*>
+    <big|int>\<mathd\>\<zeta\>\<mathd\>\<eta\>
+    exp<around*|(|A<rsub|\<alpha\>\<beta\>> \<zeta\><rsup|\<alpha\>>
+    \<eta\><rsup|\<beta\>>|)>=det A\<times\><big|int>\<mathd\>\<zeta\><rprime|'>\<mathd\>\<eta\>
+    exp<around*|(|\<zeta\><rprime|'><rsub|\<beta\>>
+    \<eta\><rsup|\<beta\>>|)>.
+  </equation*>
+
+  The rightmost factor has been evaluated in equation
+  <reference|equation:berezin integral exp>, which results in <math|1>, thus
+
+  <\equation>
+    <big|int>\<mathd\>\<zeta\>\<mathd\>\<eta\>
+    exp<around*|(|A<rsub|\<alpha\>\<beta\>> \<zeta\><rsup|\<alpha\>>
+    \<eta\><rsup|\<beta\>>|)>=det A.<label|equation:berezin integral>
+  </equation>
+
+  where
 
   <subsection|Langevin Process Can Be Formulated as Path
   Integral><label|section: Langevin Process Can Be Formulated as Path
@@ -3227,23 +3391,25 @@
   <math|R<around*|(|x|)>> may not be a symmetric matrix.
 
   Next, we use Berezin integral to convert the determinant <math|det
-  R<around*|(|x|)>> to exponential. By the formula of Berezin integral for
-  any <math|A\<in\>\<bbb-C\><rsup|d\<times\>d>> (introduced in section
-  <reference|section: Preliminary: Grassmann Number and Berezin Integral>),
+  R<around*|(|x|)>> to exponential. Recall the formula of Berezin integral
+  for any <math|A\<in\>\<bbb-R\><rsup|d\<times\>d>> (introduced in section
+  <reference|section: Preliminary: Grassmann Variable and Berezin Integral>),
 
   <\equation*>
-    <big|int>\<mathd\>\<zeta\><big|int>\<mathd\>\<eta\>
+    <big|int>\<mathd\>\<zeta\>\<mathd\>\<eta\>
     exp<around*|(|-A<rsub|\<alpha\>\<beta\>> \<zeta\><rsup|\<alpha\>>
     \<eta\><rsup|\<beta\>>|)>=det A,
   </equation*>
 
   where <math|\<zeta\>> and <math|\<eta\>> are multi-dimensional Grassmann
-  numbers, we have (replacing <math|A> by <math|R<around*|(|x|)>\<Delta\>t>)
+  variables, and the integral measure <math|<big|int>\<mathd\>\<zeta\>\<mathd\>\<eta\>>
+  is defined by equation <reference|equation:berezin integral measurement>.
+  Replacing <math|A> by <math|R<around*|(|x|)>\<Delta\>t>, we find
 
   <\equation*>
-    <big|int>\<mathd\>\<zeta\><big|int>\<mathd\>\<eta\>
-    exp<around*|(|-\<Delta\>t R<rsub|\<alpha\>\<beta\>><around*|(|x|)>
-    \<zeta\><rsup|\<alpha\>> \<eta\><rsup|\<beta\>>|)>=det<around*|[|R<around*|(|x|)>\<Delta\>t|]>=\<Delta\>t<rsup|d>
+    <big|int>\<mathd\>\<zeta\>\<mathd\>\<eta\> exp<around*|(|-\<Delta\>t
+    R<rsub|\<alpha\>\<beta\>><around*|(|x|)> \<zeta\><rsup|\<alpha\>>
+    \<eta\><rsup|\<beta\>>|)>=det<around*|[|R<around*|(|x|)>\<Delta\>t|]>=\<Delta\>t<rsup|d>
     det R<around*|(|x|)>,
   </equation*>
 
@@ -3251,7 +3417,7 @@
 
   <\equation*>
     q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>=<around*|(|<frac|2\<mathpi\>|\<Delta\>t<rsup|3>>|)><rsup|d/2>
-    <big|int>\<mathd\>\<theta\><big|int>\<mathd\>\<eta\>
+    <big|int>\<mathd\>\<zeta\>\<mathd\>\<eta\>
     \ exp<around*|(|-<frac|\<Delta\>t|2><big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|R<rsub|\<alpha\>\<beta\>><around*|(|x|)>
     <around*|(|<frac|\<epsilon\><rsup|\<beta\>>|\<Delta\>t>-f<rsup|\<beta\>><around*|(|x|)>|)>|]><rsup|2>-\<Delta\>t
     R<rsub|\<alpha\>\<beta\>><around*|(|x|)>\<zeta\><rsup|\<alpha\>>
@@ -3269,10 +3435,10 @@
     p<around*|(|x<rsub|0>,0|)>,
   </equation*>
 
-  where the measurement is defined by
+  where the integral measure is defined by
 
   <\equation*>
-    <big|int>\<mathD\><around*|(|x,\<zeta\>,\<eta\>|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|0>\<cdots\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|N-1><big|int>\<mathd\>\<zeta\><rsub|0><big|int>\<mathd\>\<eta\><rsub|0>\<cdots\><big|int>\<mathd\>\<zeta\><rsub|N-1><big|int>\<mathd\>\<eta\><rsub|N-1>
+    <big|int>\<mathD\><around*|(|x,\<zeta\>,\<eta\>|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|0>\<cdots\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|N-1><big|int>\<mathd\>\<zeta\><rsub|0>\<mathd\>\<eta\><rsub|0>\<cdots\><big|int>\<mathd\>\<zeta\><rsub|N-1>\<mathd\>\<eta\><rsub|N-1>
   </equation*>
 
   and the \Paction\Q of Langevin process is
@@ -3300,7 +3466,7 @@
     action constant R>
   </equation>
 
-  and accordingly, the measurement becomes
+  and accordingly, the integral measure becomes
   <math|<big|int>D<around*|(|x|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|0>\<cdots\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|N-1>>.
   The expression is greatly simplified when <math|R> is constant.
 
@@ -3858,51 +4024,46 @@
       -ln<around*|[|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|2i+1>exp<around*|(|<big|sum><rsub|\<alpha\>=1><rsup|n>J<rsup|\<alpha\>>|)>|]>=<big|sum><rsub|\<alpha\>=1><rsup|n><around*|[|<frac|1|2\<epsilon\>><around*|(|x<rprime|'><rsup|\<alpha\>><rsub|i+1>-
       x<rprime|'><rsup|\<alpha\>><rsub|i>|)><rsup|2>-<around*|(|x<rprime|'><rsup|\<alpha\>><rsub|i+1>-x<rsup|\<alpha\>><rsub|i>|)>
       \<varphi\><rprime|'><rsup|\<alpha\>><around*|(|x<rprime|'><rsub|i+1>,x<rprime|'><rsub|i>|)>+\<epsilon\>
-      \<xi\><rprime|'><rsup|\<alpha\>><around*|(|x<rsub|i+1><rprime|'>,x<rsub|i><rprime|'>|)>|]>,
+      \<xi\><rprime|'><rsup|\<alpha\>><around*|(|x<rsub|i+1><rprime|'>,x<rsub|i><rprime|'>|)>+<with|font|cal|O><around*|(|\<epsilon\><rsup|3/2>|)>|]>,
     </equation*>
   </small>
 
   where
 
-  <\equation*>
+  <\equation>
     \<varphi\><rprime|'><rsup|\<alpha\>><around*|(|x<rprime|'><rsub|i+1>,x<rprime|'><rsub|i>|)>\<assign\><frac|1|<sqrt|2>><around*|[|\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>
-  </equation*>
+  </equation>
 
   and
 
-  <\small>
-    <\equation*>
-      \<xi\><rprime|'><rsup|\<alpha\>><rsub|i><around*|(|x<rsub|i+1><rprime|'>,x<rsub|i><rprime|'>|)>\<assign\><with|color|red|\<xi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+
-      \<xi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>><with|color|dark
-      green|-<frac|1|2><around*|[|\<partial\><rsub|\<alpha\>>\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>-\<partial\><rsub|\<alpha\>><rprime|'>\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>><with|color|dark
-      blue|-<frac|1|4><around*|[|\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>-\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]><rsup|2>><with|color|dark
-      green|-<frac|1|8><around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)>
-      <around*|[|\<Delta\>\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+\<Delta\><rprime|'>\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>><with|color|dark
-      blue|-<frac|1|4><big|sum><rsub|\<alpha\><rprime|'>=1><rsup|n><around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)>
-      <around*|[|\<partial\><rsub|\<alpha\><rprime|'>>\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+\<partial\><rsub|\<alpha\><rprime|'>><rprime|'>\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>
-      <around*|[|\<varphi\><rsup|\<alpha\><rprime|'>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>-\<varphi\><rsup|\<alpha\><rprime|'>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>-<frac|1|16><big|sum><rsub|\<alpha\><rprime|'>,\<beta\>=1><rsup|n><around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)>
-      <around*|[|\<partial\><rsub|\<beta\>>\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+\<partial\><rsub|\<beta\>><rprime|'>\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>
-      <around*|(|x<rsup|\<alpha\><rprime|'>><rsub|2i+2>-x<rsup|\<alpha\><rprime|'>><rsub|2i>|)>
-      <around*|[|\<partial\><rsub|\<beta\>>\<varphi\><rsup|\<alpha\><rprime|'>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+\<partial\><rsub|\<beta\>><rprime|'>\<varphi\><rsup|\<alpha\><rprime|'>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>>+<with|font|cal|O><around*|(|<sqrt|\<epsilon\>>|)>,
-    </equation*>
-  </small>
+  <\equation>
+    <tabular|<tformat|<cwith|1|-1|1|1|cell-halign|r>|<table|<row|<cell|\<xi\><rprime|'><rsup|\<alpha\>><rsub|i><around*|(|x<rsub|i+1><rprime|'>,x<rsub|i><rprime|'>|)>\<assign\>>|<cell|<with|color|red|\<xi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+
+    \<xi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>>>>|<row|<cell|->|<cell|<with|color|dark
+    green|<frac|1|2><around*|[|\<partial\><rsub|\<alpha\>>\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>-\<partial\><rsub|\<alpha\>><rprime|'>\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>>>>|<row|<cell|->|<cell|<with|color|dark
+    green|<frac|1|8><around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)>
+    <around*|[|\<Delta\>\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+\<Delta\><rprime|'>\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>>>>|<row|<cell|->|<cell|<with|color|dark
+    blue|<frac|1|4><around*|[|\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>-\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]><rsup|2>>>>|<row|<cell|->|<cell|<with|color|dark
+    blue|<frac|1|4><big|sum><rsub|\<alpha\><rprime|'>=1><rsup|n><around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)>
+    <around*|[|\<partial\><rsub|\<alpha\><rprime|'>>\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+\<partial\><rsub|\<alpha\><rprime|'>><rprime|'>\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>\<times\>>>>|<row|<cell|>|<cell|<with|color|dark
+    blue|\<times\><around*|[|\<varphi\><rsup|\<alpha\><rprime|'>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>-\<varphi\><rsup|\<alpha\><rprime|'>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>>>>|<row|<cell|->|<cell|<with|color|dark
+    blue|<frac|1|16><big|sum><rsub|\<alpha\><rprime|'>,\<beta\>=1><rsup|n><around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)>
+    <around*|[|\<partial\><rsub|\<beta\>>\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+\<partial\><rsub|\<beta\>><rprime|'>\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>\<times\>>>>|<row|<cell|>|<cell|<with|color|dark
+    blue|\<times\><around*|(|x<rsup|\<alpha\><rprime|'>><rsub|2i+2>-x<rsup|\<alpha\><rprime|'>><rsub|2i>|)>
+    <around*|[|\<partial\><rsub|\<beta\>>\<varphi\><rsup|\<alpha\><rprime|'>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+\<partial\><rsub|\<beta\>><rprime|'>\<varphi\><rsup|\<alpha\><rprime|'>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>>,>>>>>
+  </equation>
 
   where we have indicated the source of the terms by color. This is held for
   all <math|i>, thus we arrive at
 
-  <\equation*>
+  <\equation>
     S<rprime|'><around*|(|x<rprime|'>|)>=<big|sum><rsub|i=-\<infty\>><rsup|+\<infty\>><big|sum><rsub|\<alpha\>=1><rsup|n><around*|[|<frac|1|2\<epsilon\>><around*|(|x<rprime|'><rsup|\<alpha\>><rsub|i+1>-
     x<rprime|'><rsup|\<alpha\>><rsub|i>|)><rsup|2>-<around*|(|x<rprime|'><rsup|\<alpha\>><rsub|i+1>-x<rprime|'><rsup|\<alpha\>><rsub|i>|)>
     \<varphi\><rprime|'><rsup|\<alpha\>><around*|(|x<rprime|'><rsub|i+1>,x<rprime|'><rsub|i>|)>+\<epsilon\>
-    \<xi\><rprime|'><rsup|\<alpha\>><around*|(|x<rsub|i+1><rprime|'>,x<rsub|i><rprime|'>|)>|]>,
-  </equation*>
+    \<xi\><rprime|'><rsup|\<alpha\>><around*|(|x<rsub|i+1><rprime|'>,x<rsub|i><rprime|'>|)>+<with|font|cal|O><around*|(|\<epsilon\><rsup|3/2>|)>|]>,
+  </equation>
 
   which has exactly the same format as <math|S> (equation
   <reference|equation:rg action>).
-
-  <\equation*>
-    \;
-  </equation*>
 </body>
 
 <\initial>
@@ -3934,12 +4095,12 @@
     <associate|auto-25|<tuple|4.1|25>>
     <associate|auto-26|<tuple|4.2|25>>
     <associate|auto-27|<tuple|4.3|26>>
-    <associate|auto-28|<tuple|4.4|26>>
-    <associate|auto-29|<tuple|4.5|29>>
+    <associate|auto-28|<tuple|4.4|28>>
+    <associate|auto-29|<tuple|4.5|30>>
     <associate|auto-3|<tuple|1.2|2>>
-    <associate|auto-30|<tuple|4.6|30>>
-    <associate|auto-31|<tuple|1|31>>
-    <associate|auto-32|<tuple|4.7|32>>
+    <associate|auto-30|<tuple|4.6|31>>
+    <associate|auto-31|<tuple|1|32>>
+    <associate|auto-32|<tuple|4.7|33>>
     <associate|auto-4|<tuple|1.3|3>>
     <associate|auto-5|<tuple|1.4|3>>
     <associate|auto-6|<tuple|2|4>>
@@ -3949,33 +4110,37 @@
     <associate|equation:Detailed Balance|<tuple|8|8>>
     <associate|equation:Detailed Balance for transition density|<tuple|9|8>>
     <associate|equation:Fokker-Planck equation|<tuple|19|23>>
-    <associate|equation:action of distribution|<tuple|30|29>>
+    <associate|equation:action of distribution|<tuple|34|31>>
+    <associate|equation:berezin integral|<tuple|28|27>>
+    <associate|equation:berezin integral exp|<tuple|25|27>>
+    <associate|equation:berezin integral measurement|<tuple|27|27>>
     <associate|equation:circle|<tuple|15|14>>
-    <associate|equation:data-fitting iteration|<tuple|32|31>>
-    <associate|equation:data-fitting result|<tuple|33|31>>
+    <associate|equation:data-fitting iteration|<tuple|36|32>>
+    <associate|equation:data-fitting result|<tuple|37|32>>
     <associate|equation:define stationary density function|<tuple|14|14>>
     <associate|equation:detailed balance condition for
     Langevin|<tuple|21|24>>
     <associate|equation:discrete time master equation|<tuple|5|5>>
     <associate|equation:discrete time master equation v0|<tuple|2|5>>
     <associate|equation:equation:metropolis-hastings|<tuple|12|13>>
-    <associate|equation:general path integral|<tuple|25|26>>
-    <associate|equation:generic density|<tuple|31|30>>
+    <associate|equation:general path integral|<tuple|29|28>>
+    <associate|equation:generic density|<tuple|35|31>>
+    <associate|equation:grassmann integral transform|<tuple|26|27>>
     <associate|equation:harmonic oscillator action|<tuple|22|25>>
     <associate|equation:km expansion|<tuple|16|19>>
-    <associate|equation:langevin action|<tuple|28|28>>
-    <associate|equation:langevin action constant R|<tuple|29|29>>
+    <associate|equation:langevin action|<tuple|32|30>>
+    <associate|equation:langevin action constant R|<tuple|33|30>>
     <associate|equation:langevin transition rate|<tuple|18|22>>
     <associate|equation:least-action principle v0|<tuple|23|25>>
     <associate|equation:least-action principle v1|<tuple|24|26>>
     <associate|equation:master equation|<tuple|4|5>>
     <associate|equation:master equation v0|<tuple|3|5>>
     <associate|equation:metropolis-hastings origin|<tuple|13|13>>
-    <associate|equation:path integral step 1|<tuple|26|27>>
-    <associate|equation:path integral step 2|<tuple|27|27>>
+    <associate|equation:path integral step 1|<tuple|30|28>>
+    <associate|equation:path integral step 2|<tuple|31|28>>
     <associate|equation:relative entropy derivative|<tuple|11|9>>
-    <associate|equation:rg action|<tuple|34|32>>
-    <associate|equation:rg integral|<tuple|35|32>>
+    <associate|equation:rg action|<tuple|38|33>>
+    <associate|equation:rg integral|<tuple|39|33>>
     <associate|equation:stationary Fokker-Planck equation|<tuple|20|23>>
     <associate|equation:transition density normalization|<tuple|1|5>>
     <associate|equation:transition rate determines transition
@@ -3983,16 +4148,16 @@
     <associate|equation:transition rate determines transition density
     v2|<tuple|7|7>>
     <associate|equation:wiener process|<tuple|17|22>>
-    <associate|figure: Least-Action|<tuple|1|31>>
+    <associate|figure: Least-Action|<tuple|1|32>>
     <associate|footnote-1|<tuple|1|2>>
     <associate|footnote-10|<tuple|10|17>>
     <associate|footnote-11|<tuple|11|17>>
     <associate|footnote-12|<tuple|12|20>>
     <associate|footnote-13|<tuple|13|20>>
     <associate|footnote-14|<tuple|14|26>>
-    <associate|footnote-15|<tuple|15|27>>
-    <associate|footnote-16|<tuple|16|32>>
-    <associate|footnote-17|<tuple|17|34>>
+    <associate|footnote-15|<tuple|15|28>>
+    <associate|footnote-16|<tuple|16|34>>
+    <associate|footnote-17|<tuple|17|35>>
     <associate|footnote-2|<tuple|2|2>>
     <associate|footnote-3|<tuple|3|2>>
     <associate|footnote-4|<tuple|4|2>>
@@ -4007,9 +4172,9 @@
     <associate|footnr-12|<tuple|12|20>>
     <associate|footnr-13|<tuple|13|20>>
     <associate|footnr-14|<tuple|14|26>>
-    <associate|footnr-15|<tuple|15|27>>
-    <associate|footnr-16|<tuple|16|32>>
-    <associate|footnr-17|<tuple|17|34>>
+    <associate|footnr-15|<tuple|15|28>>
+    <associate|footnr-16|<tuple|16|34>>
+    <associate|footnr-17|<tuple|17|35>>
     <associate|footnr-2|<tuple|2|2>>
     <associate|footnr-3|<tuple|3|2>>
     <associate|footnr-4|<tuple|4|2>>
@@ -4024,7 +4189,7 @@
     <associate|section: Cut-off in the Moments of Transition Rate Is
     Essential for Spatial Smoothness|<tuple|3.2|15>>
     <associate|section: Data Fitting Is Equivalent to Least-Action Principle
-    of Distribution|<tuple|4.6|30>>
+    of Distribution|<tuple|4.6|31>>
     <associate|section: Detailed Balance Condition and Connectivity
     Monotonically Reduce Relative Entropy|<tuple|2.5|9>>
     <associate|section: Detailed Balance Provides Stationary
@@ -4034,23 +4199,23 @@
     <associate|section: Example: Metropolis-Hastings
     Algorithm|<tuple|2.7|13>>
     <associate|section: How Far Will Information Propagate in Markovian
-    Process?|<tuple|4.7|32>>
+    Process?|<tuple|4.7|33>>
     <associate|section: Kramers-Moyal Expansion and Langevin
     Process|<tuple|3|14>>
     <associate|section: Langevin Process Can Be Formulated as Path
-    Integral|<tuple|4.4|26>>
+    Integral|<tuple|4.4|28>>
     <associate|section: Langevin Process Is a Markovian Process with
     Ncut=2|<tuple|3.6|22>>
     <associate|section: Least-Action Principle|<tuple|4|25>>
     <associate|section: Least-Action Principle of Distribution Has No
-    Redundancy|<tuple|4.5|29>>
+    Redundancy|<tuple|4.5|30>>
     <associate|section: Master Equation Describes the Evolution of Markov
     Process|<tuple|2.2|4>>
     <associate|section: Master Equation, Detailed Balance, and Relative
     Entropy|<tuple|2|4>>
     <associate|section: Monte-Carlo Simulation and Guarantee of
     Relaxation|<tuple|2.6|10>>
-    <associate|section: Preliminary: Grassmann Number and Berezin
+    <associate|section: Preliminary: Grassmann Variable and Berezin
     Integral|<tuple|4.3|26>>
     <associate|section: Randomness Is Absent in the First Moment of
     Transition Rate|<tuple|3.4|20>>
@@ -4208,7 +4373,7 @@
       <no-break><pageref|auto-26>>
 
       <with|par-left|<quote|1tab>|4.3<space|2spc>Preliminary: Grassmann
-      Number and Berezin Integral (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      Variable and Berezin Integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-27>>
 
       <with|par-left|<quote|1tab>|4.4<space|2spc>Langevin Process Can Be
