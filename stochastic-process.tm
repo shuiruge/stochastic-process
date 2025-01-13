@@ -3797,9 +3797,12 @@
   <reference|equation:langevin action constant R>), and let the index
   <math|i> run from <math|-\<infty\>> to <math|+\<infty\>> rather than from
   <math|0> to <math|N>. As we will see later in this section, these
-  differences are crucial for renormalization group. In the end of this
-  section, we will show how to add the condition back and restrict the range
-  of index <math|i>.
+  differences are crucial for renormalization group. To add the boundaries
+  back and restrict the range of index <math|i>, all we need to do is
+  calculating the expectation <math|<big|int>\<mathd\>x<rsub|0><big|int>\<mathd\>x<rsub|N>
+  exp<around*|(|-S<around*|(|x|)>|)> \<delta\><around*|(|x<rsub|0>-y<rsub|0>|)>
+  \<delta\><around*|(|x<rsub|N>-y<rsub|N>|)>> for boundaries <math|y<rsub|0>>
+  and <math|y<rsub|N>>.
 
   Renormalization group technique bases on the fact that there are as many
   even numbers as integers. This is a famous result that was first claimed by
@@ -3959,7 +3962,9 @@
     </equation*>
   </small>
 
-  which is independent of <math|y>. We Taylor expands the second factor as
+  which is independent of <math|y>. We Taylor expands
+  <math|exp<around*|(|<big|sum><rsub|\<alpha\>>V<rsup|\<alpha\>><around*|(|y|)>|)>>
+  as
 
   <\small>
     <\equation*>
@@ -3987,7 +3992,7 @@
     </equation*>>
   </very-small>
 
-  where the Laplacian <math|\<Delta\><rprime|'>\<assign\><big|sum><rsub|\<alpha\>=1><rsup|n>\<partial\><rsub|\<alpha\>>\<partial\><rsub|\<alpha\>>>,
+  where the Laplacian <math|\<Delta\>\<assign\><big|sum><rsub|\<alpha\>=1><rsup|n>\<partial\><rsub|\<alpha\>>\<partial\><rsub|\<alpha\>>>,
   and the same <math|\<Delta\><rprime|'>\<assign\><big|sum><rsub|\<alpha\>=1><rsup|n>\<partial\><rprime|'><rsub|\<alpha\>>\<partial\><rprime|'><rsub|\<alpha\>>>.
   Also, we have (color for later usage)<\footnote>
     We have <math|\<bbb-E\><rsub|Y><around*|[|<around*|(|1/2|)><around*|(|<big|sum><rsub|\<alpha\>=1><rsup|n>V<rsup|\<alpha\>><around*|(|y|)>|)><rsup|2>|]>=<around*|(|1/2|)><big|sum><rsub|\<alpha\>,\<alpha\><rprime|'>=1><rsup|n>\<bbb-E\><rsub|Y><around*|[|V<rsup|\<alpha\>><around*|(|y|)>
@@ -4015,16 +4020,21 @@
     </align>
   </very-small>>
 
-  Plugging all these back to the integral, and defining
-  <math|x<rprime|'><rsub|i>=x<rsub|2i>/<sqrt|2>> for all <math|i>, we find,
-  (up to an irrelevant constant term),
+  Plugging all these back to the integral, and defining for all <math|i>
+
+  <\equation>
+    x<rprime|'><rsub|i>\<assign\><frac|x<rsub|2i>|<sqrt|2>>,<label|equation:rg
+    transform 1>
+  </equation>
+
+  we find, (up to an irrelevant constant term),
 
   <\small>
     <\equation*>
       -ln<around*|[|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|2i+1>exp<around*|(|<big|sum><rsub|\<alpha\>=1><rsup|n>J<rsup|\<alpha\>>|)>|]>=<big|sum><rsub|\<alpha\>=1><rsup|n><around*|[|<frac|1|2\<epsilon\>><around*|(|x<rprime|'><rsup|\<alpha\>><rsub|i+1>-
       x<rprime|'><rsup|\<alpha\>><rsub|i>|)><rsup|2>-<around*|(|x<rprime|'><rsup|\<alpha\>><rsub|i+1>-x<rsup|\<alpha\>><rsub|i>|)>
       \<varphi\><rprime|'><rsup|\<alpha\>><around*|(|x<rprime|'><rsub|i+1>,x<rprime|'><rsub|i>|)>+\<epsilon\>
-      \<xi\><rprime|'><rsup|\<alpha\>><around*|(|x<rsub|i+1><rprime|'>,x<rsub|i><rprime|'>|)>+<with|font|cal|O><around*|(|\<epsilon\><rsup|3/2>|)>|]>,
+      \<xi\><rprime|'><rsup|\<alpha\>><around*|(|x<rsub|i+1><rprime|'>,x<rsub|i><rprime|'>|)>+\<omicron\><around*|(|\<epsilon\>|)>|]>,
     </equation*>
   </small>
 
@@ -4032,6 +4042,7 @@
 
   <\equation>
     \<varphi\><rprime|'><rsup|\<alpha\>><around*|(|x<rprime|'><rsub|i+1>,x<rprime|'><rsub|i>|)>\<assign\><frac|1|<sqrt|2>><around*|[|\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>
+    <label|equation:rg transform 2>
   </equation>
 
   and
@@ -4049,7 +4060,8 @@
     blue|<frac|1|16><big|sum><rsub|\<alpha\><rprime|'>,\<beta\>=1><rsup|n><around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)>
     <around*|[|\<partial\><rsub|\<beta\>>\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+\<partial\><rsub|\<beta\>><rprime|'>\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>\<times\>>>>|<row|<cell|>|<cell|<with|color|dark
     blue|\<times\><around*|(|x<rsup|\<alpha\><rprime|'>><rsub|2i+2>-x<rsup|\<alpha\><rprime|'>><rsub|2i>|)>
-    <around*|[|\<partial\><rsub|\<beta\>>\<varphi\><rsup|\<alpha\><rprime|'>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+\<partial\><rsub|\<beta\>><rprime|'>\<varphi\><rsup|\<alpha\><rprime|'>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>>,>>>>>
+    <around*|[|\<partial\><rsub|\<beta\>>\<varphi\><rsup|\<alpha\><rprime|'>><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+\<partial\><rsub|\<beta\>><rprime|'>\<varphi\><rsup|\<alpha\><rprime|'>><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>>,>>>>><label|equation:rg
+    transform 3>
   </equation>
 
   where we have indicated the source of the terms by color. This is held for
@@ -4059,11 +4071,79 @@
     S<rprime|'><around*|(|x<rprime|'>|)>=<big|sum><rsub|i=-\<infty\>><rsup|+\<infty\>><big|sum><rsub|\<alpha\>=1><rsup|n><around*|[|<frac|1|2\<epsilon\>><around*|(|x<rprime|'><rsup|\<alpha\>><rsub|i+1>-
     x<rprime|'><rsup|\<alpha\>><rsub|i>|)><rsup|2>-<around*|(|x<rprime|'><rsup|\<alpha\>><rsub|i+1>-x<rprime|'><rsup|\<alpha\>><rsub|i>|)>
     \<varphi\><rprime|'><rsup|\<alpha\>><around*|(|x<rprime|'><rsub|i+1>,x<rprime|'><rsub|i>|)>+\<epsilon\>
-    \<xi\><rprime|'><rsup|\<alpha\>><around*|(|x<rsub|i+1><rprime|'>,x<rsub|i><rprime|'>|)>+<with|font|cal|O><around*|(|\<epsilon\><rsup|3/2>|)>|]>,
+    \<xi\><rprime|'><rsup|\<alpha\>><around*|(|x<rsub|i+1><rprime|'>,x<rsub|i><rprime|'>|)>+\<omicron\><around*|(|\<epsilon\>|)>|]>,<label|equation:rg
+    transform 4>
   </equation>
 
   which has exactly the same format as <math|S> (equation
-  <reference|equation:rg action>).
+  <reference|equation:rg action>). The iterative equations
+  <reference|equation:rg transform 1>, <reference|equation:rg transform 2>,
+  <reference|equation:rg transform 3>, and <reference|equation:rg transform
+  4> are called <strong|renormalization group transformation>.
+
+  As an example, consider the linear function
+  <math|f<rsub|\<alpha\>><around*|(|x|)>=A<rsub|\<alpha\>\<beta\>>
+  x<rsup|\<beta\>>>, where <math|A\<in\>\<bbb-R\><rsup|d\<times\>d>>. Then,
+  initially we have <math|\<varphi\><rsub|\<alpha\>><around*|(|x<rsub|i+1>,x<rsub|i>|)>=A<rsub|\<alpha\>\<beta\>>
+  x<rsub|i><rsup|\<beta\>>> and <math|\<xi\><rsub|\<alpha\>><around*|(|x<rsub|i+1>,x<rsub|i>|)>=<around*|(|A<rsub|\<alpha\>\<beta\>>
+  x<rsub|i><rsup|\<beta\>>|)><rsup|2>/2>. We focus on the transformation of
+  <math|\<varphi\>>. The generic form of <math|\<varphi\>> is
+
+  <\equation*>
+    \<varphi\><rsub|\<alpha\>><around*|(|x<rsub|i+1>,x<rsub|i>|)>=u
+    A<rsub|\<alpha\>\<beta\>> x<rsub|i+1><rsup|\<beta\>>+v
+    A<rsub|\<alpha\>\<beta\>> x<rsub|i><rsup|\<beta\>>,
+  </equation*>
+
+  where <math|u> and <math|v> are coefficients (\Pcouplings\Q in physics).
+  With this generic form, we find (recall that
+  <math|<wide|x|\<bar\>><rsub|2i+1>=<around*|(|x<rsub|2i+2>+x<rsub|2i>|)>/2>)
+
+  <\small>
+    <\align>
+      <tformat|<table|<row|<cell|\<varphi\><rprime|'><rsub|\<alpha\>><around*|(|x<rsub|i+1><rprime|'>,x<rsub|i><rprime|'>|)>=>|<cell|<frac|1|<sqrt|2>><around*|[|\<varphi\><rsub|a><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+\<varphi\><rsub|a><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>>>|<row|<cell|=>|<cell|<frac|1|<sqrt|2>><around*|[|<around*|(|u
+      A<rsub|\<alpha\>\<beta\>> <frac|x<rsub|2i+2><rsup|\<beta\>>+x<rsub|2i><rsup|\<beta\>>|2>+v
+      A<rsub|\<alpha\>\<beta\>> x<rsub|2i><rsup|\<beta\>>|)>+<around*|(|u
+      A<rsub|\<alpha\>\<beta\>> x<rsub|2i+2><rsup|\<beta\>>+v
+      A<rsub|\<alpha\>\<beta\>> <frac|x<rsub|2i+2><rsup|\<beta\>>+x<rsub|2i><rsup|\<beta\>>|2>|)>|]>>>|<row|<cell|=>|<cell|<frac|1|<sqrt|2>><around*|[|<around*|(|<frac|3u|2>+<frac|v|2>|)>
+      A<rsub|\<alpha\>\<beta\>> x<rsub|2i+2><rsup|\<beta\>>+<around*|(|<frac|u|2>+<frac|3v|2>|)>
+      A<rsub|\<alpha\>\<beta\>> x<rsub|2i><rsup|\<beta\>>|]>.>>>>
+    </align>
+  </small>
+
+  Inserting the <math|x<rprime|'>=x/<sqrt|2>>, we get
+
+  <\equation*>
+    \<varphi\><rprime|'><rsub|\<alpha\>><around*|(|x<rsub|i+1><rprime|'>,x<rsub|i><rprime|'>|)>=<around*|(|<frac|3u+v|2>|)>
+    A<rsub|\<alpha\>\<beta\>> x<rprime|'><rsup|\<beta\>><rsub|i+1>+<around*|(|<frac|u+3v|2>|)>
+    A<rsub|\<alpha\>\<beta\>> x<rprime|'><rsup|\<beta\>><rsub|i>.
+  </equation*>
+
+  So, we have the iteration
+
+  <\equation*>
+    u\<rightarrow\><frac|3u+v|2><infix-and>v\<rightarrow\><frac|u+3v|2>.
+  </equation*>
+
+  It has fixed point <math|u<rsub|\<star\>>=<around*|(|3u<rsub|\<star\>>+v<rsub|\<star\>>|)>/2>,
+  <math|v<rsub|\<star\>>=<around*|(|3v<rsub|\<star\>>+u<rsub|\<star\>>|)>/2>,
+  which has solution <math|u<rsub|\<star\>>=-v<rsub|\<star\>>>. This fixed
+  point, however, is not stable. And with the initial value <math|u=0> and
+  <math|v=1>, both <math|u> and <math|v> will become greater and greater
+  during the iteration, with the tendency <math|u/v\<rightarrow\>1> (instead
+  of <math|-1>), which is revealed by numerical experiments. Thus we cannot
+  arrive at the fixed point. Instead, it contributes to the action <math|S>
+  by an item
+
+  <\equation*>
+    -u A<rsub|\<alpha\>\<beta\>> <around*|(|x<rsup|\<alpha\>><rsub|i+1>-x<rsub|i><rsup|\<alpha\>>|)>
+    <around*|(|x<rsup|\<beta\>><rsub|i+1>+x<rsub|i><rsup|\<beta\>>|)>
+  </equation*>
+
+  which becomes more and more prominent by the renormalization group
+  transformation.
+
+  \;
 </body>
 
 <\initial>
@@ -4101,6 +4181,7 @@
     <associate|auto-30|<tuple|4.6|31>>
     <associate|auto-31|<tuple|1|32>>
     <associate|auto-32|<tuple|4.7|33>>
+    <associate|auto-33|<tuple|4.8|36>>
     <associate|auto-4|<tuple|1.3|3>>
     <associate|auto-5|<tuple|1.4|3>>
     <associate|auto-6|<tuple|2|4>>
@@ -4141,6 +4222,10 @@
     <associate|equation:relative entropy derivative|<tuple|11|9>>
     <associate|equation:rg action|<tuple|38|33>>
     <associate|equation:rg integral|<tuple|39|33>>
+    <associate|equation:rg transform 1|<tuple|40|?>>
+    <associate|equation:rg transform 2|<tuple|42|?>>
+    <associate|equation:rg transform 3|<tuple|43|?>>
+    <associate|equation:rg transform 4|<tuple|43|?>>
     <associate|equation:stationary Fokker-Planck equation|<tuple|20|23>>
     <associate|equation:transition density normalization|<tuple|1|5>>
     <associate|equation:transition rate determines transition
@@ -4393,6 +4478,10 @@
       Propagate in Markovian Process? (TODO)
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-32>>
+
+      <with|par-left|<quote|1tab>|4.8<space|2spc>* Example: Criticality in
+      Feed-Forward Network (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-33>>
     </associate>
   </collection>
 </auxiliary>
