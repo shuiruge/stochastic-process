@@ -134,7 +134,7 @@
     <no-break><pageref|auto-30>>
 
     <with|par-left|1tab|4.7<space|2spc>How Far Will Information Propagate in
-    Markovian Process? (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    Langevin Process? <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-32>>
   </table-of-contents>
 
@@ -3764,8 +3764,8 @@
   of Langevin Process Lacks Source-Free Degree of Freedom>) will be more
   efficient.
 
-  <subsection|How Far Will Information Propagate in Markovian Process?
-  (TODO)><label|section: How Far Will Information Propagate in Markovian
+  <subsection|How Far Will Information Propagate in Langevin
+  Process?><label|section: How Far Will Information Propagate in Langevin
   Process?>
 
   We are to determine how far information will propagate during the iteration
@@ -4143,6 +4143,13 @@
   which becomes more and more prominent by the renormalization group
   transformation.
 
+  Going back to the problem that how far information propagates during the
+  iteration of Langevin process. Taking renormalization group transformation
+  <math|n> times reveals the interaction between <math|x<rsub|0>> and
+  <math|x<rsub|2<rsup|n>>>. It indicates that information at <math|x<rsub|0>>
+  will propagate to infinity. In fact, information will accumulate during
+  propagation, becoming more and more significant.
+
   \;
 </body>
 
@@ -4181,7 +4188,6 @@
     <associate|auto-30|<tuple|4.6|31>>
     <associate|auto-31|<tuple|1|32>>
     <associate|auto-32|<tuple|4.7|33>>
-    <associate|auto-33|<tuple|4.8|36>>
     <associate|auto-4|<tuple|1.3|3>>
     <associate|auto-5|<tuple|1.4|3>>
     <associate|auto-6|<tuple|2|4>>
@@ -4222,10 +4228,10 @@
     <associate|equation:relative entropy derivative|<tuple|11|9>>
     <associate|equation:rg action|<tuple|38|33>>
     <associate|equation:rg integral|<tuple|39|33>>
-    <associate|equation:rg transform 1|<tuple|40|?>>
-    <associate|equation:rg transform 2|<tuple|42|?>>
-    <associate|equation:rg transform 3|<tuple|43|?>>
-    <associate|equation:rg transform 4|<tuple|43|?>>
+    <associate|equation:rg transform 1|<tuple|40|35>>
+    <associate|equation:rg transform 2|<tuple|41|35>>
+    <associate|equation:rg transform 3|<tuple|42|35>>
+    <associate|equation:rg transform 4|<tuple|43|36>>
     <associate|equation:stationary Fokker-Planck equation|<tuple|20|23>>
     <associate|equation:transition density normalization|<tuple|1|5>>
     <associate|equation:transition rate determines transition
@@ -4283,7 +4289,7 @@
     Source-Free Degree of Freedom|<tuple|3.8|23>>
     <associate|section: Example: Metropolis-Hastings
     Algorithm|<tuple|2.7|13>>
-    <associate|section: How Far Will Information Propagate in Markovian
+    <associate|section: How Far Will Information Propagate in Langevin
     Process?|<tuple|4.7|33>>
     <associate|section: Kramers-Moyal Expansion and Langevin
     Process|<tuple|3|14>>
@@ -4475,13 +4481,8 @@
       <no-break><pageref|auto-30>>
 
       <with|par-left|<quote|1tab>|4.7<space|2spc>How Far Will Information
-      Propagate in Markovian Process? (TODO)
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      Propagate in Langevin Process? <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-32>>
-
-      <with|par-left|<quote|1tab>|4.8<space|2spc>* Example: Criticality in
-      Feed-Forward Network (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-33>>
     </associate>
   </collection>
 </auxiliary>
