@@ -4147,10 +4147,8 @@
   iteration of Langevin process. Taking renormalization group transformation
   <math|n> times reveals the interaction between <math|x<rsub|0>> and
   <math|x<rsub|2<rsup|n>>>. It indicates that information at <math|x<rsub|0>>
-  will propagate to infinity. In fact, information will accumulate during
-  propagation, becoming more and more significant.
-
-  \;
+  will propagate to infinity. In fact, information will be amplified during
+  propagation.
 </body>
 
 <\initial>
