@@ -2160,7 +2160,8 @@
   (recall that <math|\<sharp\>> is the ceiling function).
 
   <section|Kramers\UMoyal Expansion Formulates Transition Rate by Its
-  Moments>
+  Moments><label|section: Kramers\UMoyal Expansion Formulates Transition Rate
+  by Its Moments>
 
   Since all <math|K>s are finite, and we only have finite <math|K>s, we can
   relate the <math|K>s to the transition rate <math|r> explicitly. To do so,
@@ -2714,8 +2715,8 @@
 
   where in the last line, we have used <math|\<partial\><rsub|\<alpha\>>\<delta\><around*|(|-x|)>=-\<partial\><rsub|\<alpha\>>\<delta\><around*|(|x|)>>
   and <math|\<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>\<delta\><around*|(|-x|)>=\<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>\<delta\><around*|(|x|)>>
-  (derived in the end of section <reference|section: Transition Rate of
-  Langevin Process Is a Generalized Function>).
+  (derived in the end of section <reference|section: Kramers\UMoyal Expansion
+  Formulates Transition Rate by Its Moments>).
 
   As generalized functions, we are to examine these two expressions by using
   an arbitrary test function <math|\<varphi\>\<in\>S<around*|(|\<bbb-R\><rsup|d>|)>>.
@@ -3928,7 +3929,7 @@
   derivative taken on the first argument, and
   <math|\<partial\><rprime|'>\<varphi\>> on the second. Notice that we have
   used Einstein's convention in this expansion (see the conventions in
-  section <reference|section: Kramers-Moyal Expansion and Langevin Process>),
+  chapter <reference|section: Kramers-Moyal Expansion and Langevin Process>),
   hiding the summations of indices <math|\<beta\>> and <math|\<gamma\>>. Also
   up to <math|<with|font|cal|O><around*|(|\<epsilon\><rsup|3/2>|)>>, the
   third line simply becomes <math|-\<epsilon\>
@@ -4299,6 +4300,8 @@
     Algorithm|<tuple|2.7|19>>
     <associate|section: How Far Will Information Propagate in Langevin
     Process?|<tuple|4.7|42>>
+    <associate|section: Kramers\UMoyal Expansion Formulates Transition Rate
+    by Its Moments|<tuple|3.3|27>>
     <associate|section: Kramers-Moyal Expansion and Langevin
     Process|<tuple|3|23>>
     <associate|section: Langevin Process Can Be Formulated as Path
