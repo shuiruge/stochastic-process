@@ -2,8 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:x="https://www.texmacs.org/2002/extensions" xmlns:m="http://www.w3.org/1998/Math/MathML">
   <head>
-    <title>A Brief Note about Information, Stochastic Process, and
-    Least-Action Principle</title>
+    <title>Stochastic Process</title>
     <meta charset="utf-8" content="TeXmacs 2.1.4" name="generator"></meta>
     <style type="text/css">
       body { text-align: justify } h5 { display: inline; padding-right: 1em }
@@ -36,147 +35,168 @@
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" language="javascript"></script>
   </head>
   <body>
-    <table class="title-block" style="margin-bottom: 2em">
+    <p style="margin-bottom: 25%">
+      
+    </p>
+    <table class="title-block">
       <tr>
-        <td><table class="title-block" style="margin-top: 0.5em; margin-bottom: 0.5em">
+        <td><font style="font-size: 141.4%"><table class="title-block" style="margin-top: 0.5em; margin-bottom: 0.5em">
           <tr>
-            <td><font style="font-size: 168.2%"><strong>A Brief Note about Information,
-            Stochastic Process, and Least-Action
-            Principle</strong></font></td>
+            <td><font style="font-size: 237.835%"><strong>Stochastic Process</strong></font></td>
           </tr>
-        </table></td>
+        </table><table class="title-block" style="margin-top: 0.25em; margin-bottom: 0.5em">
+          <tr>
+            <td><font style="font-size: 183.396%"><strong>A Brief Note about Information, Markovian
+            Process, and Least-Action Principle</strong></font></td>
+          </tr>
+        </table></font></td>
       </tr>
     </table>
-    <h2>Table of contents<span style="margin-left: 1em"></span></h2>
+    <p>
+      
+    </p>
+    <p style="margin-bottom: 15%">
+      
+    </p>
+    <p>
+      
+    </p>
+    <h1>Table of contents<span style="margin-left: 1em"></span></h1>
     <div class="compact-block" style="text-indent: 0em">
       <p style="margin-top: 1em; margin-bottom: 0.5em">
         <b>1<span style="margin-left: 1em"></span>Relative Entropy</b> <span style="margin-left: 5mm"></span> <a
-        href="#auto-1">1</a>
+        href="#auto-1">7</a>
       </p>
       <p>
         1.1<span style="margin-left: 1em"></span>A Brief Review of Probability <span style="margin-left: 5mm"></span>
-        <a href="#auto-2">1</a>
+        <a href="#auto-2">7</a>
       </p>
       <p>
         1.2<span style="margin-left: 1em"></span>Shannon Entropy Is Plausible for Discrete
-        Random Variable <span style="margin-left: 5mm"></span> <a href="#auto-3">2</a>
+        Random Variable <span style="margin-left: 5mm"></span> <a href="#auto-3">7</a>
       </p>
       <p>
         1.3<span style="margin-left: 1em"></span>Shannon Entropy Fails for Continuous Random
-        Variable <span style="margin-left: 5mm"></span> <a href="#auto-4">3</a>
+        Variable <span style="margin-left: 5mm"></span> <a href="#auto-4">8</a>
       </p>
       <p>
         1.4<span style="margin-left: 1em"></span>Relative Entropy Is the Unique Solution to the
-        Axiom <span style="margin-left: 5mm"></span> <a href="#auto-5">3</a>
+        Axiom <span style="margin-left: 5mm"></span> <a href="#auto-5">9</a>
       </p>
       <p style="margin-top: 1em; margin-bottom: 0.5em">
-        <b>2<span style="margin-left: 1em"></span>Master Equation, Detailed Balance, and
-        Relative Entropy</b> <span style="margin-left: 5mm"></span> <a href="#auto-6">4</a>
+        <b>2<span style="margin-left: 1em"></span>Master Equation and Detailed Balance</b> <span
+        style="margin-left: 5mm"></span> <a href="#auto-6">11</a>
       </p>
       <p>
-        2.1<span style="margin-left: 1em"></span>Conventions in This Section <span style="margin-left: 5mm"></span>
-        <a href="#auto-7">4</a>
+        2.1<span style="margin-left: 1em"></span>Conventions in This Chapter <span style="margin-left: 5mm"></span>
+        <a href="#auto-7">11</a>
       </p>
       <p>
         2.2<span style="margin-left: 1em"></span>Master Equation Describes the Evolution of
-        Markov Process <span style="margin-left: 5mm"></span> <a href="#auto-8">4</a>
+        Markov Process <span style="margin-left: 5mm"></span> <a href="#auto-8">11</a>
       </p>
       <p>
         2.3<span style="margin-left: 1em"></span>Transition Rate Determines Transition Density
-        <span style="margin-left: 5mm"></span> <a href="#auto-9">6</a>
+        <span style="margin-left: 5mm"></span> <a href="#auto-9">12</a>
       </p>
       <p>
         2.4<span style="margin-left: 1em"></span>Detailed Balance Provides Stationary
-        Distribution <span style="margin-left: 5mm"></span> <a href="#auto-10">8</a>
+        Distribution <span style="margin-left: 5mm"></span> <a href="#auto-10">15</a>
       </p>
       <p>
         2.5<span style="margin-left: 1em"></span>Detailed Balance with Connectivity
-        Monotonically Reduces Relative Entropy <span style="margin-left: 5mm"></span> <a href="#auto-11">9</a>
+        Monotonically Reduces Relative Entropy <span style="margin-left: 5mm"></span> <a href="#auto-11">15</a>
       </p>
       <p>
         2.6<span style="margin-left: 1em"></span>Monte-Carlo Simulation and Guarantee of
-        Relaxation <span style="margin-left: 5mm"></span> <a href="#auto-12">10</a>
+        Relaxation <span style="margin-left: 5mm"></span> <a href="#auto-12">17</a>
       </p>
       <p>
         2.7<span style="margin-left: 1em"></span>Example: Metropolis-Hastings Algorithm <span
-        style="margin-left: 5mm"></span> <a href="#auto-13">13</a>
+        style="margin-left: 5mm"></span> <a href="#auto-13">19</a>
       </p>
       <p>
         2.8<span style="margin-left: 1em"></span>* Existence of Stationary Density Function
-        <span style="margin-left: 5mm"></span> <a href="#auto-14">14</a>
+        <span style="margin-left: 5mm"></span> <a href="#auto-14">20</a>
       </p>
       <p style="margin-top: 1em; margin-bottom: 0.5em">
         <b>3<span style="margin-left: 1em"></span>Kramers-Moyal Expansion and Langevin
-        Process</b> <span style="margin-left: 5mm"></span> <a href="#auto-15">14</a>
+        Process</b> <span style="margin-left: 5mm"></span> <a href="#auto-15">23</a>
       </p>
       <p>
-        3.1<span style="margin-left: 1em"></span>Conventions in This Section <span style="margin-left: 5mm"></span>
-        <a href="#auto-16">15</a>
+        3.1<span style="margin-left: 1em"></span>Conventions in This Chapter <span style="margin-left: 5mm"></span>
+        <a href="#auto-16">23</a>
       </p>
       <p>
         3.2<span style="margin-left: 1em"></span>Cut-off in the Moments of Transition Rate Is
-        Essential for Spatial Smoothness <span style="margin-left: 5mm"></span> <a href="#auto-17">15</a>
+        Essential for Spatial Smoothness <span style="margin-left: 5mm"></span> <a href="#auto-17">23</a>
       </p>
       <p>
         3.3<span style="margin-left: 1em"></span>Kramers&ndash;Moyal Expansion Formulates
-        Transition Rate by Its Moments <span style="margin-left: 5mm"></span> <a href="#auto-18">19</a>
+        Transition Rate by Its Moments <span style="margin-left: 5mm"></span> <a href="#auto-18">27</a>
       </p>
       <p>
         3.4<span style="margin-left: 1em"></span>Randomness Is Absent in the First Moment of
-        Transition Rate <span style="margin-left: 5mm"></span> <a href="#auto-19">20</a>
+        Transition Rate <span style="margin-left: 5mm"></span> <a href="#auto-19">28</a>
       </p>
       <p>
         3.5<span style="margin-left: 1em"></span>Randomness Appears in the Second Moment of
-        Transition Rate <span style="margin-left: 5mm"></span> <a href="#auto-20">21</a>
+        Transition Rate <span style="margin-left: 5mm"></span> <a href="#auto-20">29</a>
       </p>
       <p>
         3.6<span style="margin-left: 1em"></span>Langevin Process Is a Markovian Process with
-        \(N_{\operatorname{cut}} = 2\) <span style="margin-left: 5mm"></span> <a href="#auto-21">22</a>
+        \(N_{\operatorname{cut}} = 2\) <span style="margin-left: 5mm"></span> <a href="#auto-21">30</a>
       </p>
       <p>
         3.7<span style="margin-left: 1em"></span>Stationary Solution of Langevin Process Has
-        Source-Free Degree of Freedom <span style="margin-left: 5mm"></span> <a href="#auto-22">23</a>
+        Source-Free Degree of Freedom <span style="margin-left: 5mm"></span> <a href="#auto-22">31</a>
       </p>
       <p>
         3.8<span style="margin-left: 1em"></span>Detailed Balance of Langevin Process Lacks
-        Source-Free Degree of Freedom <span style="margin-left: 5mm"></span> <a href="#auto-23">23</a>
+        Source-Free Degree of Freedom <span style="margin-left: 5mm"></span> <a href="#auto-23">31</a>
       </p>
       <p style="margin-top: 1em; margin-bottom: 0.5em">
         <b>4<span style="margin-left: 1em"></span>Least-Action Principle</b> <span style="margin-left: 5mm"></span>
-        <a href="#auto-24">25</a>
+        <a href="#auto-24">33</a>
       </p>
       <p>
-        4.1<span style="margin-left: 1em"></span>Conventions in This Section <span style="margin-left: 5mm"></span>
-        <a href="#auto-25">25</a>
+        4.1<span style="margin-left: 1em"></span>Conventions in This Chapter <span style="margin-left: 5mm"></span>
+        <a href="#auto-25">33</a>
       </p>
       <p>
         4.2<span style="margin-left: 1em"></span>A Brief Review of Least-Action Principle in
-        Classical Mechanics <span style="margin-left: 5mm"></span> <a href="#auto-26">25</a>
+        Classical Mechanics <span style="margin-left: 5mm"></span> <a href="#auto-26">33</a>
       </p>
       <p>
         4.3<span style="margin-left: 1em"></span>Preliminary: Grassmann Variable and Berezin
-        Integral <span style="margin-left: 5mm"></span> <a href="#auto-27">26</a>
+        Integral <span style="margin-left: 5mm"></span> <a href="#auto-27">34</a>
       </p>
       <p>
         4.4<span style="margin-left: 1em"></span>Langevin Process Can Be Formulated as Path
-        Integral <span style="margin-left: 5mm"></span> <a href="#auto-28">28</a>
+        Integral <span style="margin-left: 5mm"></span> <a href="#auto-28">36</a>
       </p>
       <p>
         4.5<span style="margin-left: 1em"></span>Least-Action Principle of Distribution Has No
-        Redundancy <span style="margin-left: 5mm"></span> <a href="#auto-29">30</a>
+        Redundancy <span style="margin-left: 5mm"></span> <a href="#auto-29">39</a>
       </p>
       <p>
         4.6<span style="margin-left: 1em"></span>Data Fitting Is Equivalent to Least-Action
-        Principle of Distribution <span style="margin-left: 5mm"></span> <a href="#auto-30">31</a>
+        Principle of Distribution <span style="margin-left: 5mm"></span> <a href="#auto-30">40</a>
       </p>
       <p>
         4.7<span style="margin-left: 1em"></span>How Far Will Information Propagate in Langevin
-        Process? <span style="margin-left: 5mm"></span> <a href="#auto-32">33</a>
+        Process? <span style="margin-left: 5mm"></span> <a href="#auto-32">42</a>
       </p>
     </div>
-    <h2 id="auto-1"><a id="section: Relative Entropy"></a>1<span style="margin-left: 1em"></span>Relative Entropy<span style="margin-left: 1em"></span></h2>
-    <h3 id="auto-2"><a id="section: A Brief Review of Probability"></a>1.1<span style="margin-left: 1em"></span>A Brief Review of
-    Probability<span style="margin-left: 1em"></span></h3>
+    <h1 id="auto-1"><a id="section: Relative Entropy"></a>Chapter 1<br />Relative Entropy</h1>
+    <p>
+      In this chapter, we discuss the axiomatization of information. By
+      figuring out how Shannon entropy fails for continuous random variable,
+      we build a proper axiomatic system on which the expression of
+      information is found to be unique.
+    </p>
+    <h2 id="auto-2"><a id="section: A Brief Review of Probability"></a>1.1<span style="margin-left: 1em"></span>A Brief Review of
+    Probability<span style="margin-left: 1em"></span></h2>
     <p>
       <em>Those that are not deterministic are denoted by capital
       letters.</em> But, a capital letter may also denote something that is
@@ -193,7 +213,7 @@
           <div style="margin-left: 0px">
             <div style="margin-right: 0px">
               <class style="font-style: normal"><p>
-                1. Some textures call it <b>sample space</b>. But
+                1.1. Some textures call it <b>sample space</b>. But
                 &ldquo;space&rdquo; usually hints for extra structures such as
                 vector space or topological space. So, we use
                 &ldquo;alphabet&rdquo; instead (following David Mackay, see
@@ -205,8 +225,8 @@
         </div></font>
       </div>
       <span style="margin-left: 0em"></span>
-      <a id="footnr-1"></a>
-      <sup><class style="font-style: normal"><a href="#footnote-1">1</a></class></sup>
+      <a id="footnr-1.1"></a>
+      <sup><class style="font-style: normal"><a href="#footnote-1.1">1.1</a></class></sup>
       And for each value in the alphabet, we assign a
       <em>positive</em>
       value called
@@ -219,7 +239,7 @@
           <div style="margin-left: 0px">
             <div style="margin-right: 0px">
               <class style="font-style: normal"><p>
-                2. In many textures, the density or mass function is
+                1.2. In many textures, the density or mass function is
                 non-negative (rather than being positive). Being positive is
                 beneficial because, for example, we will discuss the logarithm
                 of density or mass function, for which being zero is invalid.
@@ -232,8 +252,8 @@
         </div></font>
       </div>
       <span style="margin-left: 0em"></span>
-      <a id="footnr-2"></a>
-      <sup><class style="font-style: normal"><a href="#footnote-2">2</a></class></sup>
+      <a id="footnr-1.2"></a>
+      <sup><class style="font-style: normal"><a href="#footnote-1.2">1.2</a></class></sup>
       We use
       <strong>distribution</strong>
       for not only the mass or density on the alphabet, but also a sampler
@@ -273,8 +293,8 @@
       with \(Z = z\). The frequency of \(Y = y\) found in the filtered samples
       is approximated by \(p (y|z)\).
     </p>
-    <h3 id="auto-3"><a id="section: Shannon Entropy Is Plausible for Discrete Random Variable"></a>1.2<span style="margin-left: 1em"></span>Shannon Entropy Is Plausible for
-    Discrete Random Variable<span style="margin-left: 1em"></span></h3>
+    <h2 id="auto-3"><a id="section: Shannon Entropy Is Plausible for Discrete Random Variable"></a>1.2<span style="margin-left: 1em"></span>Shannon Entropy Is Plausible for
+    Discrete Random Variable<span style="margin-left: 1em"></span></h2>
     <p>
       The Shannon entropy is well-defined for discrete random variable. Let
       \(X\) a discrete random variables with alphabet \(\{ 1, \ldots, n \}\)
@@ -325,17 +345,17 @@
           <div style="margin-left: 0px">
             <div style="margin-right: 0px">
               <class style="font-style: normal"><p>
-                3. See the appendix A of <i>Information Theory and Statistical
-                Mechanics</i> by E. T. Jaynes, 1957. A free PDF version can be
-                found on Internet: <a href="https://bayes.wustl.edu/etj/articles/theory.1.pdf">https://bayes.wustl.edu/etj/articles/theory.1.pdf</a>.
+                1.3. See the appendix A of <i>Information Theory and
+                Statistical Mechanics</i> by E. T. Jaynes, 1957. A free PDF
+                version can be found on Internet: <a href="https://bayes.wustl.edu/etj/articles/theory.1.pdf">https://bayes.wustl.edu/etj/articles/theory.1.pdf</a>.
               </p></class>
             </div>
           </div>
         </div></font>
       </div>
       <span style="margin-left: 0em"></span>
-      <a id="footnr-3"></a>
-      <sup><class style="font-style: normal"><a href="#footnote-3">3</a></class></sup>
+      <a id="footnr-1.3"></a>
+      <sup><class style="font-style: normal"><a href="#footnote-1.3">1.3</a></class></sup>
       This conditional entropy is, argued by others, quite strong and not
       sufficiently natural. The problem is that this stronger axiom is
       essential for Shannon entropy to arise. Otherwise, there will be other
@@ -347,7 +367,7 @@
           <div style="margin-left: 0px">
             <div style="margin-right: 0px">
               <class style="font-style: normal"><p>
-                4. <i>On measures of information and entropy</i> by
+                1.4. <i>On measures of information and entropy</i> by
                 Alfr&eacute;d R&eacute;nyi, 1961. A free PDF version can be
                 found on Internet: <a href="http://digitalassets.lib.berkeley.edu/math/ucb/text/math_s4_v1_article-27.pdf">http://digitalassets.lib.berkeley.edu/math/ucb/text/math_s4_v1_article-27.pdf</a>.
               </p></class>
@@ -356,15 +376,15 @@
         </div></font>
       </div>
       <span style="margin-left: 0em"></span>
-      <a id="footnr-4"></a>
-      <sup><class style="font-style: normal"><a href="#footnote-4">4</a></class></sup>
+      <a id="footnr-1.4"></a>
+      <sup><class style="font-style: normal"><a href="#footnote-1.4">1.4</a></class></sup>
     </p>
     <p>
       As we will see, when extending the alphabet to continuum, this problem
       naturally ceases.
     </p>
-    <h3 id="auto-4"><a id="section: Shannon Entropy Fails for Continuous Random Variable"></a>1.3<span style="margin-left: 1em"></span>Shannon Entropy Fails for
-    Continuous Random Variable<span style="margin-left: 1em"></span></h3>
+    <h2 id="auto-4"><a id="section: Shannon Entropy Fails for Continuous Random Variable"></a>1.3<span style="margin-left: 1em"></span>Shannon Entropy Fails for
+    Continuous Random Variable<span style="margin-left: 1em"></span></h2>
     <p>
       The Shannon entropy, however, cannot be directly generalized to
       continuous random variable. Usually, the entropy for continuous random
@@ -395,7 +415,7 @@
       in section <a href="#section: Shannon Entropy Is Plausible for Discrete Random Variable">1.2</a> as follow.
     </p>
     <p style="margin-top: 1em">
-      <strong>Axiom <class style="font-style: normal">1</class>. </strong><i>Given distributions
+      <strong>Axiom <class style="font-style: normal">1.1</class>. </strong><i>Given distributions
       \(P\) and \(Q\) on the same alphabet, \(H\) is the uncertainty caused by
       \(P\) when \(Q\) is known, satisfying the following conditions:</i>
     </p>
@@ -429,8 +449,8 @@
       additivity of surprise: if \(X\) has two independent parts, the total
       surprise shall be the sum of each.
     </p>
-    <h3 id="auto-5">1.4<span style="margin-left: 1em"></span>Relative Entropy Is the Unique Solution to
-    the Axiom<span style="margin-left: 1em"></span></h3>
+    <h2 id="auto-5">1.4<span style="margin-left: 1em"></span>Relative Entropy Is the Unique Solution to
+    the Axiom<span style="margin-left: 1em"></span></h2>
     <p>
       We are to derive the explicit expression of \(H\) based on the three
       axioms. The result is found to be unique.
@@ -547,22 +567,27 @@ a) = 0\), we get \(\partial_1 h (a x, a y) x + \partial_2 h (a
       \(\int \mathrm{d} x p \ln (p / q)\)). So, the two issues of Shannon
       entropy cease in relative entropy.
     </p>
-    <h2 id="auto-6"><a id="section: Master Equation, Detailed Balance, and Relative Entropy"></a>2<span style="margin-left: 1em"></span>Master Equation, Detailed Balance,
-    and Relative Entropy<span style="margin-left: 1em"></span></h2>
-    <h3 id="auto-7">2.1<span style="margin-left: 1em"></span>Conventions in This Section<span style="margin-left: 1em"></span></h3>
+    <h1 id="auto-6"><a id="section: Master Equation and Detailed Balance"></a>Chapter 2<br />Master Equation and Detailed
+    Balance</h1>
+    <p>
+      In this chapter, we discuss continuous-time Markovian process. Using the
+      result obtained in chapter <a href="#section: Relative Entropy">1</a>, we declare how a Markovian
+      process relaxes to its stationary equilibrium.
+    </p>
+    <h2 id="auto-7"><a id="section: Conventions in This Chapter 2"></a>2.1<span style="margin-left: 1em"></span>Conventions in This Chapter<span
+    style="margin-left: 1em"></span></h2>
     <p>
       Let \(X\) a multi-dimensional random variables, being, discrete,
       continuous, or partially discrete and partially continuous, with
       alphabet \(\mathcal{X}\) and distribution \(P\). Even though the
       discussion in this section applies to both discrete and continuous
-      random variables (except for section <a href="#section: Master Equation on Euclidean Alphabet Is a Path Integral">?</a>), we use the
-      notation of the continuous. The reason is that converting from discrete
-      to continuous may cause problems (section <a href="#section: Shannon Entropy Fails for Continuous Random Variable">1.3</a>), while the
-      inverse will be safe and direct as long as any smooth structure of \(X\)
-      is not employed throughout the discussion.
+      random variables, we use the notation of the continuous. The reason is
+      that converting from discrete to continuous may cause problems (section
+      <a href="#section: Shannon Entropy Fails for Continuous Random Variable">1.3</a>), while the inverse will be safe and direct as long as
+      any smooth structure of \(X\) is not employed throughout the discussion.
     </p>
-    <h3 id="auto-8"><a id="section: Master Equation Describes the Evolution of Markov Process"></a>2.2<span style="margin-left: 1em"></span>Master Equation Describes the
-    Evolution of Markov Process<span style="margin-left: 1em"></span></h3>
+    <h2 id="auto-8"><a id="section: Master Equation Describes the Evolution of Markov Process"></a>2.2<span style="margin-left: 1em"></span>Master Equation Describes the
+    Evolution of Markov Process<span style="margin-left: 1em"></span></h2>
     <p>
       Without losing generality, consider a pile of sand on a desk. The desk
       has been fenced in so that the sands will not flow out of the desk.
@@ -588,7 +613,7 @@ a) = 0\), we get \(\partial_1 h (a x, a y) x + \partial_2 h (a
       <tr>
         <td width="100%" align="center">\(\displaystyle \int_{\mathcal{X}} \mathrm{d} y q_{t
         \rightarrow t'} (y|x) = 1. \)</td>
-        <td align="right">(1)</td>
+        <td align="right">(2.1)</td>
       </tr>
     </table>
     <p>
@@ -612,14 +637,14 @@ a) = 0\), we get \(\partial_1 h (a x, a y) x + \partial_2 h (a
       t)] .\)
     </center>
     <p>
-      By inserting equation (<a href="#equation:transition density normalization">1</a>), we find
+      By inserting equation (<a href="#equation:transition density normalization">2.1</a>), we find
     </p>
     <table width="100%">
       <tr>
         <td width="100%" align="center">\(\displaystyle p (x, t') = \int_{\mathcal{X}}
         \mathrm{d} y q_{t \rightarrow t'} (x|y) p (y,
 t), \)</td>
-        <td align="right">(2)</td>
+        <td align="right">(2.2)</td>
       </tr>
     </table>
     <p>
@@ -652,7 +677,7 @@ t), \)</td>
         <td width="100%" align="center">\(\displaystyle \frac{\partial p}{\partial t} (x, t)
         = \int_{\mathcal{X}} \mathrm{d} y r_t (x,
 y) p (y, t), \)</td>
-        <td align="right">(3)</td>
+        <td align="right">(2.3)</td>
       </tr>
     </table>
     <p>
@@ -681,20 +706,20 @@ y) p (y, t), \)</td>
         <td width="100%" align="center">\(\displaystyle \frac{\partial p}{\partial t} (x, t)
         = \int_{\mathcal{X}} \mathrm{d} y r (x,
 y) p (y, t) . \)</td>
-        <td align="right">(4)</td>
+        <td align="right">(2.4)</td>
       </tr>
     </table>
     <p>
       <em>Since we only deal with Markovian stochastic process throughout this
-      note, when referring to master equation, we mean equation <a href="#equation:master equation">4</a>.
-      And to discrete time master equation, equation <a href="#equation:discrete time master equation">5</a>:</em>
+      note, when referring to master equation, we mean equation <a href="#equation:master equation">2.4</a>.
+      And to discrete time master equation, equation <a href="#equation:discrete time master equation">2.5</a>:</em>
     </p>
     <table width="100%">
       <tr>
         <td width="100%" align="center">\(\displaystyle p (x, t + \Delta t) =
         \int_{\mathcal{X}} \mathrm{d} y q_{\Delta t} (x, y) p
 (y, t) . \)</td>
-        <td align="right">(5)</td>
+        <td align="right">(2.5)</td>
       </tr>
     </table>
     <p>
@@ -702,7 +727,7 @@ y) p (y, t) . \)</td>
     </p>
     <p>
       Before finishing this section, we discuss the demanded conditions for
-      transition rate. The normalization of transition density <a href="#equation:transition density normalization">1</a>
+      transition rate. The normalization of transition density <a href="#equation:transition density normalization">2.1</a>
       implies that \(\int_{\mathcal{X}} \mathrm{d} x r (x, y) = 0\). This can
       be seen by Taylor expanding \(q_{\Delta t}\) by \(\Delta t\), as
       \(q_{\Delta t} (x|y) = \delta (x - y) + r (x, y) \Delta t + \omicron
@@ -711,7 +736,7 @@ y) p (y, t) . \)</td>
       the non-negativity of \(q_{\Delta t}\) implies \(r (x, y) \geqslant 0\)
       when \(x \neq y\). Since \(p\) is a density function of distribution,
       and density function is defined to be positive (see section <a href="#section: A Brief Review of Probability">1.1</a>),
-      the equation <a href="#equation:discrete time master equation v0">2</a> must conserve this positivity. We are to
+      the equation <a href="#equation:discrete time master equation v0">2.2</a> must conserve this positivity. We are to
       show that this is guaranteed by the master equation itself, without any
       extra condition demanded for the transition rate. It is convenient to
       use discrete notations, thus replace \(x \rightarrow i\), \(y
@@ -730,8 +755,8 @@ y) p (y, t) . \)</td>
       transition rate \(r\) to be \(r (x, y) \geqslant 0\) when \(x \neq y\)
       and \(\int_{\mathcal{X}} \mathrm{d} x r (x, y) = 0\).
     </p>
-    <h3 id="auto-9"><a id="section: Transition Rate Determines Transition Density"></a>2.3<span style="margin-left: 1em"></span>Transition Rate Determines
-    Transition Density<span style="margin-left: 1em"></span></h3>
+    <h2 id="auto-9"><a id="section: Transition Rate Determines Transition Density"></a>2.3<span style="margin-left: 1em"></span>Transition Rate Determines
+    Transition Density<span style="margin-left: 1em"></span></h2>
     <p>
       We wonder, given a transition rate, can we obtain the corresponding
       transition density? Generally, we cannot get the global (finite) from
@@ -741,9 +766,9 @@ y) p (y, t) . \)</td>
       are to show how this happens.
     </p>
     <p>
-      We can use the master equation <a href="#equation:master equation">4</a> to calculate \(\partial^n
-      p / \partial t^n\) for any \(n\). For \(n = 2\), by inserting master
-      equation <a href="#equation:master equation">4</a> (to the blue term), we have
+      We can use the master equation <a href="#equation:master equation">2.4</a> to calculate
+      \(\partial^n p / \partial t^n\) for any \(n\). For \(n = 2\), by
+      inserting master equation <a href="#equation:master equation">2.4</a> (to the blue term), we have
     </p>
     <center>
       \(\displaystyle \frac{\partial^2 p}{\partial t^2} (z, t) =
@@ -757,8 +782,8 @@ y) p (y, t) . \)</td>
 p}{\partial t} (y, t)} .\)
     </center>
     <p>
-      We then insert master equation <a href="#equation:master equation">4</a> again (to the green term),
-      and find
+      We then insert master equation <a href="#equation:master equation">2.4</a> again (to the green
+      term), and find
     </p>
     <center>
       \(\displaystyle \frac{\partial^2 p}{\partial t^2} (z, t) =
@@ -787,7 +812,7 @@ x) p (x, t) .\)
       \(r\), is independent of \(t\): a Markovian property.
     </p>
     <p>
-      On the other hand, Taylor expand the both sides of equation <a href="#equation:discrete time master equation">5</a>
+      On the other hand, Taylor expand the both sides of equation <a href="#equation:discrete time master equation">2.5</a>
       by \(\Delta t\) gives, at \((\Delta t)^{n + 1}\) order,
     </p>
     <center>
@@ -835,7 +860,7 @@ x) .\)
           <div style="margin-left: 0px">
             <div style="margin-right: 0px">
               <class style="font-style: normal"><p>
-                5. Another derivation uses exponential mapping. By regarding
+                2.1. Another derivation uses exponential mapping. By regarding
                 \(p\) a time-dependent element in functional space, and \(r\)
                 as a linear operator, it becomes (we add a hat for indicating
                 operator, using dot \(\cdot\) for its operation)
@@ -875,8 +900,8 @@ y_2 r (z, y_2) r
         </div></font>
       </div>
       <span style="margin-left: 0em"></span>
-      <a id="footnr-5"></a>
-      <sup><class style="font-style: normal"><a href="#footnote-5">5</a></class></sup>
+      <a id="footnr-2.1"></a>
+      <sup><class style="font-style: normal"><a href="#footnote-2.1">2.1</a></class></sup>
     </p>
     <table width="100%">
       <tr>
@@ -898,7 +923,7 @@ y_2 r (z, y_2) r
         & \cdots .\\
   & 
 \end{array} \)</td>
-        <td align="right">(6)</td>
+        <td align="right">(2.6)</td>
       </tr>
     </table>
     <p>
@@ -921,8 +946,8 @@ y_2 r (z, y_2) r
 (x, t)\)
     </center>
     <p>
-      also leads to the (continuous time) master equation <a href="#equation:master equation">4</a> with
-      the same \(r\) as that of \(q_{\Delta t}\). So, we should have
+      also leads to the (continuous time) master equation <a href="#equation:master equation">2.4</a>
+      with the same \(r\) as that of \(q_{\Delta t}\). So, we should have
       \(q'_{\Delta t} = q_{\Delta t}\), which means \(f\) is not free, but
       should vanish.
     </p>
@@ -975,20 +1000,20 @@ p (x, t) = 0.\)
         \int_{\mathcal{X}} \mathrm{d} y q_{\Delta t'}
 (z|y) q_{\Delta t} (y|x)
         . \)</td>
-        <td align="right">(7)</td>
+        <td align="right">(2.7)</td>
       </tr>
     </table>
     <p>
       This provides an addition restriction to the transition density.
     </p>
     <p>
-      Interestingly, obeying equation <a href="#equation:transition rate determines transition density v2">7</a> is sufficient for
-      \(q_{\Delta t}\) to satisfy equation <a href="#equation:transition rate determines transition density">6</a>. Precisely, let
+      Interestingly, obeying equation <a href="#equation:transition rate determines transition density v2">2.7</a> is sufficient for
+      \(q_{\Delta t}\) to satisfy equation <a href="#equation:transition rate determines transition density">2.6</a>. Precisely, let
       \(q_{\Delta t} (x|y)\) is a function that is smooth on \(\Delta t\) with
       \(q_0 (x|y) = \delta (x - y)\), we are to show that, if \(q_{\Delta t}\)
-      satisfies equation <a href="#equation:transition rate determines transition density v2">7</a>, then it will obey equation <a href="#equation:transition rate determines transition density">6</a>.
-      To do so, we take derivative on equation <a href="#equation:transition rate determines transition density v2">7</a> by \(\Delta t'\)
-      at \(\Delta t' = 0\), resulting in
+      satisfies equation <a href="#equation:transition rate determines transition density v2">2.7</a>, then it will obey equation <a href="#equation:transition rate determines transition density">2.6</a>.
+      To do so, we take derivative on equation <a href="#equation:transition rate determines transition density v2">2.7</a> by \(\Delta
+      t'\) at \(\Delta t' = 0\), resulting in
     </p>
     <center>
       \(\displaystyle q^{(1)}_{\Delta t} (z|x) = \int_{\mathcal{X}} \mathrm{d}
@@ -1039,19 +1064,19 @@ q^{(n + 1)}_0 (z|x) .\)
 x)\)
     </center>
     <p>
-      again. And this implies equation <a href="#equation:transition rate determines transition density">6</a>. So, we conclude this
-      paragraph as follow: <em>obeying equation <a href="#equation:transition rate determines transition density v2">7</a> is the
+      again. And this implies equation <a href="#equation:transition rate determines transition density">2.6</a>. So, we conclude this
+      paragraph as follow: <em>obeying equation <a href="#equation:transition rate determines transition density v2">2.7</a> is the
       sufficient and essential condition for a function \(q_{\Delta t}
       (x|y)\), which is smooth on \(\Delta t\) with \(q_0 (x|y) = \delta (x -
-      y)\), to satisfy equation <a href="#equation:transition rate determines transition density">6</a>; additionally, if \(q_{\Delta
+      y)\), to satisfy equation <a href="#equation:transition rate determines transition density">2.6</a>; additionally, if \(q_{\Delta
       t} (x|y)\) is non-negative and normalized on \(x\) (namely,
       \(\int_{\mathcal{X}} \mathrm{d} x q_{\Delta t} (x|y) = 1\)), then
       \(q_{\Delta t}\) is a transition density</em>.
     </p>
-    <h3 id="auto-10"><a id="section: Detailed Balance Provides Stationary Distribution"></a>2.4<span style="margin-left: 1em"></span>Detailed Balance Provides
-    Stationary Distribution<span style="margin-left: 1em"></span></h3>
+    <h2 id="auto-10"><a id="section: Detailed Balance Provides Stationary Distribution"></a>2.4<span style="margin-left: 1em"></span>Detailed Balance Provides
+    Stationary Distribution<span style="margin-left: 1em"></span></h2>
     <p>
-      Let \(\Pi\) a stationary solution of master equation <a href="#equation:master equation">4</a>.
+      Let \(\Pi\) a stationary solution of master equation <a href="#equation:master equation">2.4</a>.
       Then, its density function \(\pi\) satisfies \(\int_{\mathcal{X}}
       \mathrm{d} y r (x, y) \pi (y) = 0\). Since we have demanded that
       \(\int_{\mathcal{X}} \mathrm{d} y r (y, x) = 0\), the stationary master
@@ -1069,7 +1094,7 @@ x)\)
       <tr>
         <td width="100%" align="center">\(\displaystyle r (x, y) \pi (y) = r (y, x) \pi (x),
         \)</td>
-        <td align="right">(8)</td>
+        <td align="right">(2.8)</td>
       </tr>
     </table>
     <p>
@@ -1077,20 +1102,20 @@ x)\)
     </p>
     <p>
       Interestingly, for a transition rate \(r\) that satisfies detailed
-      balance condition <a href="#equation:Detailed Balance">8</a>, the transition density \(q_{\Delta
-      t}\) generated by \(r\) using equation <a href="#equation:transition rate determines transition density">6</a> satisfies a
+      balance condition <a href="#equation:Detailed Balance">2.8</a>, the transition density \(q_{\Delta
+      t}\) generated by \(r\) using equation <a href="#equation:transition rate determines transition density">2.6</a> satisfies a
       similar relation
     </p>
     <table width="100%">
       <tr>
         <td width="100%" align="center">\(\displaystyle q_{\Delta t} (x|y) \pi (y) =
         q_{\Delta t} (y|x) \pi (x) . \)</td>
-        <td align="right">(9)</td>
+        <td align="right">(2.9)</td>
       </tr>
     </table>
     <p>
-      To see this, consider the third line in equation (<a href="#equation:transition rate determines transition density">6</a>), where
-      the main factor is
+      To see this, consider the third line in equation (<a href="#equation:transition rate determines transition density">2.6</a>),
+      where the main factor is
     </p>
     <center>
       \(\displaystyle \begin{array}{rl}
@@ -1111,11 +1136,11 @@ x)\)
     </center>
     <p>
       Following the same steps, we can show that all terms in equation <a
-      href="#equation:transition rate determines transition density">6</a> share the same relation, indicating \(q_{\Delta t} (z|x) \pi
-      (x) = q_{\Delta t} (x|z) \pi (z)\).
+      href="#equation:transition rate determines transition density">2.6</a> share the same relation, indicating \(q_{\Delta t} (z|x)
+      \pi (x) = q_{\Delta t} (x|z) \pi (z)\).
     </p>
-    <h3 id="auto-11"><a id="section: Detailed Balance Condition and Connectivity Monotonically Reduce Relative Entropy"></a>2.5<span style="margin-left: 1em"></span>Detailed Balance with
-    Connectivity Monotonically Reduces Relative Entropy<span style="margin-left: 1em"></span></h3>
+    <h2 id="auto-11"><a id="section: Detailed Balance Condition and Connectivity Monotonically Reduce Relative Entropy"></a>2.5<span style="margin-left: 1em"></span>Detailed Balance with
+    Connectivity Monotonically Reduces Relative Entropy<span style="margin-left: 1em"></span></h2>
     <p>
       Given the time \(t\), if the time-dependent distribution \(P (t)\) and
       the stationary distribution \(\Pi\) share the same alphabet
@@ -1128,7 +1153,7 @@ x)\)
         <td width="100%" align="center">\(\displaystyle H (P (t), \Pi) = \int_{\mathcal{X}}
         \mathrm{d} x p (x, t) \ln \frac{p (x,
 t)}{\pi (x)} .\)</td>
-        <td align="right">(10)</td>
+        <td align="right">(2.10)</td>
       </tr>
     </table>
     <p>
@@ -1139,7 +1164,7 @@ t)}{\pi (x)} .\)</td>
     <p>
       We can calculate the time-derivative of relative entropy by master
       equation
-      <a href="#equation:master equation">4</a>
+      <a href="#equation:master equation">2.4</a>
       . Generally, the time-derivative of relative entropy has no interesting
       property. But, if the \(\pi\) is more than stationary but satisfying a
       stronger condition: detailed balance, then \(\mathrm{d} H (P (t), \Pi) /
@@ -1149,7 +1174,7 @@ t)}{\pi (x)} .\)</td>
           <div style="margin-left: 0px">
             <div style="margin-right: 0px">
               <class style="font-style: normal"><p>
-                6. The proof is given as follow. Directly, we have
+                2.2. The proof is given as follow. Directly, we have
               </p><center>
                 \(\displaystyle \begin{array}{rl}
  
@@ -1179,7 +1204,7 @@ x \frac{\partial p}{\partial
                 t} (x, t) \ln \frac{p (x, t)}{\pi (x)} .\)
               </center><p>
                 Now, we replace \(\partial p / \partial t\) by master equation
-                <a href="#equation:master equation">4</a>, as
+                <a href="#equation:master equation">2.4</a>, as
               </p><center>
                 \(\displaystyle \frac{\mathrm{d}}{\mathrm{d} t} H (P (t), \Pi)
                 = \int_{\mathcal{X}} \mathrm{d}
@@ -1276,8 +1301,8 @@ x \int_{\mathcal{X}}
         </div></font>
       </div>
       <span style="margin-left: 0em"></span>
-      <a id="footnr-6"></a>
-      <sup><class style="font-style: normal"><a href="#footnote-6">6</a></class></sup>
+      <a id="footnr-2.2"></a>
+      <sup><class style="font-style: normal"><a href="#footnote-2.2">2.2</a></class></sup>
     </p>
     <table width="100%">
       <tr>
@@ -1289,7 +1314,7 @@ x \int_{\mathcal{X}}
         t)}{\pi (x)} - \frac{p (y, t)}{\pi (y)} \right)  \left(
 \ln \frac{p
         (x, t)}{\pi (x)} - \ln \frac{p (y, t)}{\pi (y)} \right) . \)</td>
-        <td align="right">(11)</td>
+        <td align="right">(2.11)</td>
       </tr>
     </table>
     <p>
@@ -1343,19 +1368,19 @@ x \int_{\mathcal{X}}
           <div style="margin-left: 0px">
             <div style="margin-right: 0px">
               <class style="font-style: normal"><p>
-                7. We have, along the path, \(p (y_1, t) / \pi (y_1) = p (y_2,
-                t) / \pi (y_2) = \cdots = p (y_n, t) / \pi
-(y_n)\), thus \(p
-                (x, t) / \pi (x) = p (z, t) / \pi (z)\) since \(x = y_1\) and
-                \(z = y_n\).
+                2.3. We have, along the path, \(p (y_1, t) / \pi (y_1) = p
+                (y_2, t) / \pi (y_2) = \cdots = p (y_n, t) / \pi
+(y_n)\), thus
+                \(p (x, t) / \pi (x) = p (z, t) / \pi (z)\) since \(x = y_1\)
+                and \(z = y_n\).
               </p></class>
             </div>
           </div>
         </div></font>
       </div>
       <span style="margin-left: 0em"></span>
-      <a id="footnr-7"></a>
-      <sup><class style="font-style: normal"><a href="#footnote-7">7</a></class></sup>
+      <a id="footnr-2.3"></a>
+      <sup><class style="font-style: normal"><a href="#footnote-2.3">2.3</a></class></sup>
       So, by repeating the previous discussion on the case &ldquo;\(r (x, y)
       > 0\) for each \(x \neq y\)&rdquo;, we find \(P (t) = \Pi\) at
       \((\mathrm{d} / \mathrm{d} t) H (P (t), \Pi) = 0\) if every two elements
@@ -1384,13 +1409,13 @@ x \int_{\mathcal{X}}
       theorem holds.
     </p>
     <p style="margin-top: 1em; margin-bottom: 1em">
-      <strong>Theorem <class style="font-style: normal">2</class>. </strong><i><a id="theorem: relaxation"></a>Let
+      <strong>Theorem <class style="font-style: normal">2.1</class>. </strong><i><a id="theorem: relaxation"></a>Let
       \(\Pi\) a distribution with alphabet \(\mathcal{X}\). If there is a
       transition rate r such that 1) every two elements in \(\mathcal{X}\) are
-      connected and that 2) the detailed balance condition <a href="#equation:Detailed Balance">8</a>
+      connected and that 2) the detailed balance condition <a href="#equation:Detailed Balance">2.8</a>
       holds for \(\Pi\) and \(r\), then for any time-dependent distribution
       \(P (t)\) with the same alphabet (at one time) evolved by the master
-      equation <a href="#equation:master equation">4</a>, \(P (t)\) will monotonically and constantly
+      equation <a href="#equation:master equation">2.4</a>, \(P (t)\) will monotonically and constantly
       relax to \(\Pi\).</i>
     </p>
     <p>
@@ -1402,11 +1427,11 @@ x \int_{\mathcal{X}}
       generic alternative to the proof, for which smooth structure on \(X\) is
       unnecessary.
     </p>
-    <h3 id="auto-12"><a id="section: Monte-Carlo Simulation and Guarantee of Relaxation"></a>2.6<span style="margin-left: 1em"></span>Monte-Carlo Simulation and
-    Guarantee of Relaxation<span style="margin-left: 1em"></span></h3>
+    <h2 id="auto-12"><a id="section: Monte-Carlo Simulation and Guarantee of Relaxation"></a>2.6<span style="margin-left: 1em"></span>Monte-Carlo Simulation and
+    Guarantee of Relaxation<span style="margin-left: 1em"></span></h2>
     <p>
       How to numerically simulate the evolution of master equation
-      <a href="#equation:master equation">4</a>
+      <a href="#equation:master equation">2.4</a>
       that tends to equilibrium (without which the simulation will not
       terminate)? Using the metaphor of sands (see section
       <a href="#section: Master Equation Describes the Evolution of Markov Process">2.2</a>
@@ -1421,7 +1446,7 @@ x \int_{\mathcal{X}}
       hand, to ensure the termination, the transition rate \(r\), together
       with the density function \(\pi\), shall satisfy the detailed balance
       condition
-      <a href="#equation:Detailed Balance">8</a>
+      <a href="#equation:Detailed Balance">2.8</a>
       . (Section
       <a href="#section: Example: Metropolis-Hastings Algorithm">2.7</a>
       will provide a method that constructs such a transition rate from the
@@ -1442,40 +1467,41 @@ x \int_{\mathcal{X}}
           <div style="margin-left: 0px">
             <div style="margin-right: 0px">
               <class style="font-style: normal"><p>
-                8. There are multiple motivations for Monte-Carlo simulation.
-                An important one comes from numerical integration. The problem
-                is calculating the integral \(\int_{\mathcal{X}} \mathrm{d} x
-                \pi (x) f (x)\) for a density function \(\pi\) and an
-                arbitrary function \(f : \mathcal{X} \rightarrow \mathbb{R}\).
-                When \(\mathcal{X}\) has finite elements, this integral is
-                easy to compute, which is \(\sum_{x \in \mathcal{X}} \pi (x) f
-                (x)\). Otherwise, this integral will be intractable.
-                Numerically, this integral becomes the expectation \((1 / |
-                \mathcal{S} |) \sum_{x \in \mathcal{S}} f (x)\) where
-                \(\mathcal{S}\) is a collection of elements randomly sampled
-                from distribution \(\Pi\), whose density function is the
-                \(\pi\). By central limit theorem (briefly, the mean of i.i.d.
-                random variables \(X_1, \ldots, X_N\) with mean \(\mathbb{E}
-                [X_i] = 0\) and variance \(\operatorname{Var} [X_i] =
-                \sigma^2\) for some \(\sigma\), has standard derivation
-                \(\sigma / \sqrt{N}\) when \(N\) is large enough), the
-                numerical error \(\left| \int_{\mathcal{X}} \mathrm{d} x \pi
-                (x) f (x) - (1 / | \mathcal{S} |)
-\sum_{x \in \mathcal{S}} f
-                (x) \right|\) is proportional to \(1 / \sqrt{| \mathcal{S}
-                |}\), which can be properly bounded as long as \(| \mathcal{S}
-                |\) is large enough. But, how to sample from a distribution if
-                you only know its density function (recall in section <a href="#section: A Brief Review of Probability">1.1</a>,
-                a distribution is the combination of its density function and
-                its sampler)? The answer is using Monte-Carlo simulation.
+                2.4. There are multiple motivations for Monte-Carlo
+                simulation. An important one comes from numerical integration.
+                The problem is calculating the integral \(\int_{\mathcal{X}}
+                \mathrm{d} x \pi (x) f (x)\) for a density function \(\pi\)
+                and an arbitrary function \(f : \mathcal{X} \rightarrow
+                \mathbb{R}\). When \(\mathcal{X}\) has finite elements, this
+                integral is easy to compute, which is \(\sum_{x \in
+                \mathcal{X}} \pi (x) f (x)\). Otherwise, this integral will be
+                intractable. Numerically, this integral becomes the
+                expectation \((1 / | \mathcal{S} |) \sum_{x \in \mathcal{S}} f
+                (x)\) where \(\mathcal{S}\) is a collection of elements
+                randomly sampled from distribution \(\Pi\), whose density
+                function is the \(\pi\). By central limit theorem (briefly,
+                the mean of i.i.d. random variables \(X_1, \ldots, X_N\) with
+                mean \(\mathbb{E} [X_i] = 0\) and variance
+                \(\operatorname{Var} [X_i] = \sigma^2\) for some \(\sigma\),
+                has standard derivation \(\sigma / \sqrt{N}\) when \(N\) is
+                large enough), the numerical error \(\left| \int_{\mathcal{X}}
+                \mathrm{d} x \pi (x) f (x) - (1 / | \mathcal{S} |)
+\sum_{x \in
+                \mathcal{S}} f (x) \right|\) is proportional to \(1 / \sqrt{|
+                \mathcal{S} |}\), which can be properly bounded as long as \(|
+                \mathcal{S} |\) is large enough. But, how to sample from a
+                distribution if you only know its density function (recall in
+                section <a href="#section: A Brief Review of Probability">1.1</a>, a distribution is the combination of
+                its density function and its sampler)? The answer is using
+                Monte-Carlo simulation.
               </p></class>
             </div>
           </div>
         </div></font>
       </div>
       <span style="margin-left: 0em"></span>
-      <a id="footnr-8"></a>
-      <sup><class style="font-style: normal"><a href="#footnote-8">8</a></class></sup>
+      <a id="footnr-2.4"></a>
+      <sup><class style="font-style: normal"><a href="#footnote-2.4">2.4</a></class></sup>
     </p>
     <p>
       Like the Euler method in solving dynamical system, however, a finite
@@ -1527,8 +1553,8 @@ t))}\) gives
     <p>
       The first line is recognized as \(H (P (t + \Delta t), P (t))\), which
       is non-negative. Following the same steps in section <a href="#section: Detailed Balance Condition and Connectivity Monotonically Reduce Relative Entropy">2.5</a>
-      (but using discrete time master equation <a href="#equation:discrete time master equation">5</a> instead, and
-      detailed balance condition <a href="#equation:Detailed Balance for transition density">9</a> for transition density), the
+      (but using discrete time master equation <a href="#equation:discrete time master equation">2.5</a> instead, and
+      detailed balance condition <a href="#equation:Detailed Balance for transition density">2.9</a> for transition density), the
       second line reduces to
     </p>
     <center>
@@ -1562,7 +1588,7 @@ t)}{\pi (y)} \right),\)
           <div style="margin-left: 0px">
             <div style="margin-right: 0px">
               <class style="font-style: normal"><p>
-                9. The first line
+                2.5. The first line
               </p><center>
                 \(\displaystyle \Delta H_1 := \int_{\mathcal{X}} \mathrm{d} x
                 p (x, t + \Delta t) \ln \frac{p
@@ -1657,8 +1683,8 @@ t^2) .\)
         </div></font>
       </div>
       <span style="margin-left: 0em"></span>
-      <a id="footnr-9"></a>
-      <sup><class style="font-style: normal"><a href="#footnote-9">9</a></class></sup>
+      <a id="footnr-2.5"></a>
+      <sup><class style="font-style: normal"><a href="#footnote-2.5">2.5</a></class></sup>
     </p>
     <center>
       \(\displaystyle \Delta H_1 = \frac{\Delta t^2}{2} \int_{\mathcal{X}}
@@ -1668,10 +1694,10 @@ t^2) .\)
 t^2),\)
     </center>
     <p>
-      where, by master equation <a href="#equation:master equation">4</a>, \((\partial / \partial t) \ln
-      p (x, t) = \int_{\mathcal{X}} \mathrm{d} x r (x,
+      where, by master equation <a href="#equation:master equation">2.4</a>, \((\partial / \partial t)
+      \ln p (x, t) = \int_{\mathcal{X}} \mathrm{d} x r (x,
 y) p (y, t) / p (x,
-      t)\). For \(\Delta H_2\), we insert equation <a href="#equation:relative entropy derivative">11</a> after
+      t)\). For \(\Delta H_2\), we insert equation <a href="#equation:relative entropy derivative">2.11</a> after
       Taylor expanding \(q_{\Delta t}\) by \(\Delta t\), and obtain
     </p>
     <center>
@@ -1714,8 +1740,8 @@ y) p (y, t) / p (x,
       sufficiently small, since the learning rate now becomes relatively too
       big.)
     </p>
-    <h3 id="auto-13"><a id="section: Example: Metropolis-Hastings Algorithm"></a>2.7<span style="margin-left: 1em"></span>Example: Metropolis-Hastings
-    Algorithm<span style="margin-left: 1em"></span></h3>
+    <h2 id="auto-13"><a id="section: Example: Metropolis-Hastings Algorithm"></a>2.7<span style="margin-left: 1em"></span>Example: Metropolis-Hastings
+    Algorithm<span style="margin-left: 1em"></span></h2>
     <p>
       Metropolis-Hastings algorithm is a simple method that constructs
       transition rate for any given stationary distribution such that detailed
@@ -1731,14 +1757,14 @@ y) p (y, t) / p (x,
         \frac{\gamma (y, x) \pi (x)}{\gamma (x, y) \pi (y)}
 \right) \gamma (x,
         y) . \)</td>
-        <td align="right">(12)</td>
+        <td align="right">(2.12)</td>
       </tr>
     </table>
     <p>
       This transition rate connects every two elements in \(\mathcal{X}\)
       (since \(\gamma (y, x) > 0\) for each \(x \neq y\)). In addition,
       together with \(\pi\), it satisfies the detailed balance condition <a
-      href="#equation:Detailed Balance">8</a>. Directly,
+      href="#equation:Detailed Balance">2.8</a>. Directly,
     </p>
     <center>
       \(\displaystyle \begin{array}{rl}
@@ -1763,9 +1789,9 @@ y) p (y, t) / p (x,
 \end{array}\)
     </center>
     <p>
-      Thus detailed balance condition holds. So, theorem <a href="#theorem: relaxation">2</a> states
-      that, <em>evolved by the master equation <a href="#equation:master equation">4</a>, any initial
-      distribution will finally relax to the stationary distribution
+      Thus detailed balance condition holds. So, theorem <a href="#theorem: relaxation">2.1</a>
+      states that, <em>evolved by the master equation <a href="#equation:master equation">2.4</a>, any
+      initial distribution will finally relax to the stationary distribution
       \(\Pi\)</em>.
     </p>
     <p>
@@ -1780,12 +1806,12 @@ y) p (y, t) / p (x,
         <td width="100%" align="center">\(\displaystyle q (x|y) := \min \left( 1, \frac{g
         (y|x) \pi (x)}{g (x|y) \pi (y)} \right) g
 (x|y), \)</td>
-        <td align="right">(13)</td>
+        <td align="right">(2.13)</td>
       </tr>
     </table>
     <p>
       where \(g\) is positive-definite on \(\mathcal{X}\). Notice that, in
-      equation <a href="#equation:metropolis-hastings origin">13</a> there is no extra time parameter like the
+      equation <a href="#equation:metropolis-hastings origin">2.13</a> there is no extra time parameter like the
       \(q_{\Delta t} (x|y)\) in section <a href="#section: Master Equation Describes the Evolution of Markov Process">2.2</a>. It can be seen as a
       fixed time interval, which can only be used for discrete time master
       equation.
@@ -1822,19 +1848,19 @@ y) p (y, t) / p (x,
     <p>
       Altogether, for each \(x, y \in \mathcal{X}\), we find \(q_{\Delta t}
       (x|y) = \delta (x - y) + r (x, y) \Delta t + \omicron (\Delta t)\).
-      <em>In practice, we use the Metropolis-Hastings algorithm <a href="#equation:metropolis-hastings origin">13</a>
-      to numerically simulate master equation <a href="#equation:master equation">4</a>.</em> But, based
-      on the discussion in section <a href="#section: Monte-Carlo Simulation and Guarantee of Relaxation">2.6</a>, the \(\Delta t\) in
+      <em>In practice, we use the Metropolis-Hastings algorithm <a href="#equation:metropolis-hastings origin">2.13</a>
+      to numerically simulate master equation <a href="#equation:master equation">2.4</a>.</em> But,
+      based on the discussion in section <a href="#section: Monte-Carlo Simulation and Guarantee of Relaxation">2.6</a>, the \(\Delta t\) in
       \(g_{\Delta t}\) shall be properly bounded to be small (or equivalently
       speaking, \(g\) shall be &ldquo;principal diagonal&rdquo;)  so as to
       ensure the relaxation \(P (t) \rightarrow \Pi\).
     </p>
-    <h3 id="auto-14">2.8<span style="margin-left: 1em"></span>* Existence of Stationary Density
-    Function<span style="margin-left: 1em"></span></h3>
+    <h2 id="auto-14">2.8<span style="margin-left: 1em"></span>* Existence of Stationary Density
+    Function<span style="margin-left: 1em"></span></h2>
     <p>
       Given a transition rate, we wonder if there exists a density function
-      such that detailed balance condition <a href="#equation:Detailed Balance">8</a> holds. Actually,
-      equation <a href="#equation:Detailed Balance">8</a> <em>defines</em> a density function. For
+      such that detailed balance condition <a href="#equation:Detailed Balance">2.8</a> holds. Actually,
+      equation <a href="#equation:Detailed Balance">2.8</a> <em>defines</em> a density function. For
       example, if both \(r (x, y)\) and \(r (y, x)\) are not zero, we can
       construct \(\pi (y)\) by given \(\pi (x)\) as \(\pi (y) = \pi (x) r (y,
       x) / r (x, y)\). Generally, if \(x\) and \(y\) are connected, then there
@@ -1869,7 +1895,7 @@ y) p (y, t) / p (x,
       <tr>
         <td width="100%" align="center">\(\displaystyle \ln \pi (y) = \ln \pi (x) + \int_P
         \mathrm{d} s \rho (s), \)</td>
-        <td align="right">(14)</td>
+        <td align="right">(2.14)</td>
       </tr>
     </table>
     <p>
@@ -1891,13 +1917,13 @@ y) p (y, t) / p (x,
       <tr>
         <td width="100%" align="center">\(\displaystyle \oint_C \mathrm{d} s \rho (s) = 0.
         \)</td>
-        <td align="right">(15)</td>
+        <td align="right">(2.15)</td>
       </tr>
     </table>
     <p>
       It means every path along two connected elements in \(\mathcal{X}\) is
-      equivalent. If the condition <a href="#equation:circle">15</a> holds, we can simplify the
-      notation in equation <a href="#equation:define stationary density function">14</a> by
+      equivalent. If the condition <a href="#equation:circle">2.15</a> holds, we can simplify
+      the notation in equation <a href="#equation:define stationary density function">2.14</a> by
     </p>
     <center>
       \(\displaystyle \ln \pi (y) = \ln \pi (x) + \int_x^y \mathrm{d} s \rho
@@ -1908,30 +1934,30 @@ y) p (y, t) / p (x,
       \(y\) are connected).
     </p>
     <p>
-      Condition <a href="#equation:circle">15</a> implies that the previous construction does
+      Condition <a href="#equation:circle">2.15</a> implies that the previous construction does
       define a \(\pi\) that holds the detailed balance condition. Given \(x, y
       \in \mathcal{X}\), we have \(\ln \pi (x) = \ln \pi (x_0) + \int_{x_0}^x
       \mathrm{d} s \rho (s)\) and \(\ln \pi (y) = \ln \pi (x_0) + \int_{x_0}^y
       \mathrm{d} s \rho (s)\). If \(x\) and \(y\) are connected, then, by
-      condition <a href="#equation:circle">15</a>,\(\) \(\rho (y, x) = \int_x^{x_0} \mathrm{d} s
-      \rho (s) + \int_{x_0}^y \mathrm{d} s
+      condition <a href="#equation:circle">2.15</a>,\(\) \(\rho (y, x) = \int_x^{x_0} \mathrm{d}
+      s \rho (s) + \int_{x_0}^y \mathrm{d} s
 \rho (s)\) (the \(\rho (y, x)\)
       indicates the path \((x, y)\), &ldquo;jumping&rdquo; directly from \(x\)
       to \(y\)), thus \(\ln \pi (y) = \ln \pi (x) + \rho (y, x)\), which is
-      just the detailed balance condition <a href="#equation:Detailed Balance">8</a>. And if \(x\) and
+      just the detailed balance condition <a href="#equation:Detailed Balance">2.8</a>. And if \(x\) and
       \(y\) are not connected, then both \(r (x, y)\) and \(r (y, x)\) shall
       vanish (recall the requirements of transition rate in section <a href="#section: Master Equation Describes the Evolution of Markov Process">2.2</a>:
       if \(r (x, y) = 0\), then \(r (y, x) = 0\)), and detailed balance
       condition holds naturally.
     </p>
     <p>
-      So, condition <a href="#equation:circle">15</a> is <em>essential and sufficient for the
-      existence of \(\pi\) that holds the detailed balance condition <a href="#equation:Detailed Balance">8</a></em>.
+      So, condition <a href="#equation:circle">2.15</a> is <em>essential and sufficient for the
+      existence of \(\pi\) that holds the detailed balance condition <a href="#equation:Detailed Balance">2.8</a></em>.
       If \(\mathcal{X}\) is a simply connected smooth manifold, then using
       Stokes's theorem, we have \(\nabla \times \rho = 0\) on \(\mathcal{X}\).
       But, generally \(\mathcal{X}\) is neither simply connected nor smooth,
       but involving independent subsystems and discrete. In these cases,
-      condition <a href="#equation:circle">15</a> becomes very complicated.
+      condition <a href="#equation:circle">2.15</a> becomes very complicated.
     </p>
     <p>
       In many applications, we consider the inverse question: given a density
@@ -1940,22 +1966,27 @@ y) p (y, t) / p (x,
       transition rate can be constructed out of the density function (such as
       in Metropolis-Hastings algorithm).
     </p>
-    <h2 id="auto-15"><a id="section: Kramers-Moyal Expansion and Langevin Process"></a>3<span style="margin-left: 1em"></span>Kramers-Moyal Expansion and
-    Langevin Process<span style="margin-left: 1em"></span></h2>
+    <h1 id="auto-15"><a id="section: Kramers-Moyal Expansion and Langevin Process"></a>Chapter 3<br />Kramers-Moyal Expansion and Langevin
+    Process</h1>
     <p>
-      We follow the discussion in section <a href="#section: Master Equation, Detailed Balance, and Relative Entropy">2</a>, but focusing on the
+      We follow the discussion in chapter <a href="#section: Master Equation and Detailed Balance">2</a>, but focusing on the
       specific situation where there is extra smooth structure on \(X\). This
       smoothness reflects on the connectivity of the alphabet \(\mathcal{X}\),
       and on the smooth &ldquo;spatial&rdquo; dependence of the density
       function and transition rate. This indicates that the conclusions in
-      section <a href="#section: Master Equation, Detailed Balance, and Relative Entropy">2</a> hold in this section, but the inverse is not
+      chapter <a href="#section: Master Equation and Detailed Balance">2</a> hold in this section, but the inverse is not
       guaranteed.
     </p>
-    <h3 id="auto-16">3.1<span style="margin-left: 1em"></span>Conventions in This Section<span style="margin-left: 1em"></span></h3>
+    <h2 id="auto-16">3.1<span style="margin-left: 1em"></span>Conventions in This Chapter<span style="margin-left: 1em"></span></h2>
     <p>
-      Follow the conventions in section <a href="#section: Master Equation, Detailed Balance, and Relative Entropy">2</a>. In addition, we employ
-      the <strong>Einstein convention</strong>. That is, we omit the sum
-      notation for the duplicated indices as long as they are
+      Follow the conventions in chapter <a href="#section: Master Equation and Detailed Balance">2</a>. In addition, thought
+      this chapter, we set the alphabet to be Euclidean to get sufficient
+      connectivity. Namely, \(\mathcal{X}=\mathbb{R}^d\) for some integer \(d
+      \geqslant 1\).
+    </p>
+    <p>
+      We employ the <strong>Einstein's convention</strong>. That is, we omit
+      the sum notation for the duplicated indices as long as they are
       &ldquo;balanced&rdquo;. For example, \(x_{\alpha} y^{\alpha}\)
       represents \(\sum_{\alpha} x_{\alpha} y^{\alpha}\). The \(\alpha\)
       appears twice in the expression, once in subscript (the \(x_{\alpha}\))
@@ -1967,19 +1998,17 @@ y) p (y, t) / p (x,
       \(\sum_{\alpha} \sum_{\beta} \partial_{\alpha} A^{\alpha}_{\beta}
       x^{\beta}\).
     </p>
-    <h3 id="auto-17"><a id="section: Cut-off in the Moments of Transition Rate Is Essential for Spatial Smoothness"></a>3.2<span style="margin-left: 1em"></span>Cut-off in the Moments of
-    Transition Rate Is Essential for Spatial Smoothness<span style="margin-left: 1em"></span></h3>
+    <h2 id="auto-17"><a id="section: Cut-off in the Moments of Transition Rate Is Essential for Spatial Smoothness"></a>3.2<span style="margin-left: 1em"></span>Cut-off in the Moments of
+    Transition Rate Is Essential for Spatial Smoothness<span style="margin-left: 1em"></span></h2>
     <p>
-      Let the alphabet \(\mathcal{X}=\mathbb{R}^d\) for some integer \(d
-      \geqslant 1\), which has sufficient connectivity. In addition, assume
-      that the density function \(p (x, t)\) of a time-dependent distribution
-      \(P (t)\) and the transition rate \(r (x, y)\) are smooth on \(x\) and
-      \(y\). Besides the smoothness of functions, however, spatial smoothness
-      demands more. To declare this, we consider the situation where the mass
-      of \(P (t)\) is centered at \(x\) initially, namely \(p (x', 0) = \delta
-      (x - x')\). Then, after a small temporal period \(\Delta t\), there is
-      some portion of mass transits to elsewhere. By master equation <a href="#equation:master equation">4</a>,
-      the change in density is
+      For spatial smoothness, we assume that the density function \(p (x, t)\)
+      of a time-dependent distribution \(P (t)\) and the transition rate \(r
+      (x, y)\) are smooth on \(x\) and \(y\). Besides the smoothness of
+      functions, however, spatial smoothness demands more. To declare this, we
+      consider the situation where the mass of \(P (t)\) is centered at \(x\)
+      initially, namely \(p (x', 0) = \delta (x - x')\). Then, after a small
+      temporal period \(\Delta t\), there is some portion of mass transits to
+      elsewhere. By master equation <a href="#equation:master equation">2.4</a>, the change in density is
     </p>
     <center>
       \(\displaystyle p (y, \Delta t) - p (y, 0) = \Delta t
@@ -2096,7 +2125,7 @@ r (x + \epsilon, x)
       are to calculate \(\mathbb{E} [\epsilon^{\alpha_1} \cdots
       \epsilon^{\alpha_n}]\) up to \(\omicron (\Delta t^2)\). This demands the
       relation between transition rate and transition density (equation <a
-      href="#equation:transition rate determines transition density">6</a>),
+      href="#equation:transition rate determines transition density">2.6</a>),
     </p>
     <center>
       \(\displaystyle q_{\Delta t} (x + \epsilon |x) = \delta (\epsilon) +
@@ -2251,7 +2280,7 @@ K_1^{\alpha_1} (x)
           <div style="margin-left: 0px">
             <div style="margin-right: 0px">
               <class style="font-style: normal"><p>
-                10. Since
+                3.1. Since
               </p><center>
                 \(\displaystyle \epsilon^{\alpha} \epsilon^{\beta} =
                 (\epsilon^{\alpha} - y^{\alpha})
@@ -2338,8 +2367,8 @@ K_1^{\alpha_1} (x) K_1^{\alpha_2} (x) + K_2^{\alpha_1
         </div></font>
       </div>
       <span style="margin-left: 0em"></span>
-      <a id="footnr-10"></a>
-      <sup><class style="font-style: normal"><a href="#footnote-10">10</a></class></sup>
+      <a id="footnr-3.1"></a>
+      <sup><class style="font-style: normal"><a href="#footnote-3.1">3.1</a></class></sup>
     </p>
     <center>
       \(\displaystyle \begin{array}{rl}
@@ -2366,7 +2395,7 @@ K_1^{\alpha_1} (x) K_1^{\alpha_2} (x) + K_2^{\alpha_1
           <div style="margin-left: 0px">
             <div style="margin-right: 0px">
               <class style="font-style: normal"><p>
-                11. Since
+                3.2. Since
               </p><center>
                 \(\displaystyle \begin{array}{rl}
   \epsilon^{\alpha}
@@ -2451,8 +2480,8 @@ K_2^{\alpha_2 \alpha_3} (x)
         </div></font>
       </div>
       <span style="margin-left: 0em"></span>
-      <a id="footnr-11"></a>
-      <sup><class style="font-style: normal"><a href="#footnote-11">11</a></class></sup>
+      <a id="footnr-3.2"></a>
+      <sup><class style="font-style: normal"><a href="#footnote-3.2">3.2</a></class></sup>
     </p>
     <center>
       \(\displaystyle F_3^{\alpha_1 \alpha_2 \alpha_3} (x) = K_2^{\alpha_1
@@ -2478,8 +2507,8 @@ K_2^{\alpha_3 \alpha_4} +\operatorname{perm}
     </p>
     <p>
       At higher order expansion of \(q_{\Delta t}\) by \(r\) (equation <a
-      href="#equation:transition rate determines transition density">6</a>), the same goes. As an example, we examine the expansion at
-      \(\mathcal{O} (\Delta t^3)\), as
+      href="#equation:transition rate determines transition density">2.6</a>), the same goes. As an example, we examine the expansion
+      at \(\mathcal{O} (\Delta t^3)\), as
     </p>
     <center>
       \(\displaystyle q_{\Delta t} (x + \epsilon |x) = \cdots + \frac{\Delta
@@ -2682,8 +2711,8 @@ F_2^{\beta_1 \beta_2} (x) + \cdots\)
       t^{\sharp (n / N_{\operatorname{cut}})})\) (recall that \(\sharp\) is
       the ceiling function).
     </p>
-    <h3 id="auto-18">3.3<span style="margin-left: 1em"></span>Kramers&ndash;Moyal Expansion Formulates
-    Transition Rate by Its Moments<span style="margin-left: 1em"></span></h3>
+    <h2 id="auto-18">3.3<span style="margin-left: 1em"></span>Kramers&ndash;Moyal Expansion Formulates
+    Transition Rate by Its Moments<span style="margin-left: 1em"></span></h2>
     <p>
       Since all \(K\)s are finite, and we only have finite \(K\)s, we can
       relate the \(K\)s to the transition rate \(r\) explicitly. To do so, we
@@ -2780,7 +2809,7 @@ K_n^{\alpha_1 \cdots
         \alpha_n} (x) (\partial_{\alpha_1} \cdots
 \partial_{\alpha_n} \delta)
         (\epsilon) . \)</td>
-        <td align="right">(16)</td>
+        <td align="right">(3.1)</td>
       </tr>
     </table>
     <p>
@@ -2792,8 +2821,8 @@ K_n^{\alpha_1 \cdots
           <div style="margin-left: 0px">
             <div style="margin-right: 0px">
               <class style="font-style: normal"><p>
-                12. If we plug expansion <a href="#equation:km expansion">16</a> into master equation,
-                then we get
+                3.3. If we plug expansion <a href="#equation:km expansion">3.1</a> into master
+                equation, then we get
               </p><center>
                 \(\displaystyle \begin{array}{rl}
   & \frac{\partial
@@ -2846,8 +2875,8 @@ K_n^{\alpha_1 \cdots
         </div></font>
       </div>
       <span style="margin-left: 0em"></span>
-      <a id="footnr-12"></a>
-      <sup><class style="font-style: normal"><a href="#footnote-12">12</a></class></sup>
+      <a id="footnr-3.3"></a>
+      <sup><class style="font-style: normal"><a href="#footnote-3.3">3.3</a></class></sup>
       Because of the Dirac's delta functions, this transition rate is a
       generalized function. That is, only when applied to a test function can
       they be evaluated.
@@ -2907,7 +2936,7 @@ x^{\alpha}) \delta (- x)\), thus
           <div style="margin-left: 0px">
             <div style="margin-right: 0px">
               <class style="font-style: normal"><p>
-                13. We are to calculate \(\int_{\mathbb{R}^d} \mathrm{d} x
+                3.4. We are to calculate \(\int_{\mathbb{R}^d} \mathrm{d} x
                 \partial_{\alpha} \partial_{\beta} \delta (-
 x) f^{\alpha
                 \beta} (x)\), where \(f \in S (\mathbb{R}^d, \mathbb{R}^{d
@@ -2975,20 +3004,20 @@ x) f^{\alpha
         </div></font>
       </div>
       <span style="margin-left: 0em"></span>
-      <a id="footnr-13"></a>
-      <sup><class style="font-style: normal"><a href="#footnote-13">13</a></class></sup>
+      <a id="footnr-3.4"></a>
+      <sup><class style="font-style: normal"><a href="#footnote-3.4">3.4</a></class></sup>
       These conclusions are to be used in section
       <a href="#section: Detailed Balance of Langevin Process Lacks Source-Free Degree of Freedom">3.8</a>
       .
     </p>
-    <h3 id="auto-19"><a id="section: Randomness Is Absent in the First Moment of Transition Rate"></a>3.4<span style="margin-left: 1em"></span>Randomness Is Absent in the
-    First Moment of Transition Rate<span style="margin-left: 1em"></span></h3>
+    <h2 id="auto-19"><a id="section: Randomness Is Absent in the First Moment of Transition Rate"></a>3.4<span style="margin-left: 1em"></span>Randomness Is Absent in the
+    First Moment of Transition Rate<span style="margin-left: 1em"></span></h2>
     <p>
       In section <a href="#section: Cut-off in the Moments of Transition Rate Is Essential for Spatial Smoothness">3.2</a>, we have found that a finite cut-off on the
       moments of transition rate is essential for spatial smoothness. We are
       to show that cut-off at \(N_{\operatorname{cut}} = 1\) (namely \(K_n =
       0\) for any \(n > 1\)) only results in a deterministic evolution. To do
-      so, we plug Kramers&ndash;Moyal expansion <a href="#equation:km expansion">16</a> into master
+      so, we plug Kramers&ndash;Moyal expansion <a href="#equation:km expansion">3.1</a> into master
       equation, and find (re-denote \(K_1\) to \(f\) for simplicity)
     </p>
     <center>
@@ -3098,8 +3127,8 @@ f^{\alpha} (x (t)) + \frac{\partial
       along the characteristic \(y (t)\) and \(y (0) \neq x (0)\). That is to
       say, transport equation is deterministic.
     </p>
-    <h3 id="auto-20">3.5<span style="margin-left: 1em"></span>Randomness Appears in the Second Moment of
-    Transition Rate<span style="margin-left: 1em"></span></h3>
+    <h2 id="auto-20">3.5<span style="margin-left: 1em"></span>Randomness Appears in the Second Moment of
+    Transition Rate<span style="margin-left: 1em"></span></h2>
     <p>
       In section <a href="#section: Randomness Is Absent in the First Moment of Transition Rate">3.4</a>, we have analyzed the cut-off at
       \(N_{\operatorname{cut}} = 1\) and found it deterministic, thus not a
@@ -3111,7 +3140,7 @@ f^{\alpha} (x (t)) + \frac{\partial
     <p>
       We examine this by using an example. Let \(K_1\) is everywhere vanishing
       and \(K_2\) is a constant identity matrix. Then, Kramers&ndash;Moyal
-      expansion <a href="#equation:km expansion">16</a> becomes
+      expansion <a href="#equation:km expansion">3.1</a> becomes
     </p>
     <center>
       \(\displaystyle r (x + \epsilon, x) = \frac{1}{2} \delta^{\alpha \beta}
@@ -3163,7 +3192,7 @@ y) p (y, t) = \frac{1}{2}
 \delta_{\alpha \beta}  (x^{\alpha}
         - y^{\alpha})  (x^{\beta} - y^{\beta})
 \right), \)</td>
-        <td align="right">(17)</td>
+        <td align="right">(3.2)</td>
       </tr>
     </table>
     <p>
@@ -3176,7 +3205,7 @@ y) p (y, t) = \frac{1}{2}
       particles automatically shakes in water. It was first explained by
       Albert Einstein in 1905. He argued that the pollen particles are
       constantly stricken by water molecules, and found the transition density
-      to be equation <a href="#equation:wiener process">17</a>. Hence, the stochastic process described
+      to be equation <a href="#equation:wiener process">3.2</a>. Hence, the stochastic process described
       by this transition density is named by <strong>Brownian motion</strong>.
       Even though the techniques used for deriving this transition density had
       been mature when Brown first observed this phenomenon, but almost one
@@ -3194,7 +3223,7 @@ y) p (y, t) = \frac{1}{2}
       this and conclude a corollary as follow.
     </p>
     <p style="margin-top: 1em; margin-bottom: 1em">
-      <strong>Corollary <class style="font-style: normal">3</class>. </strong><i>For any
+      <strong>Corollary <class style="font-style: normal">3.1</class>. </strong><i>For any
       independently identically distributed \(n\)-dimensional random variables
       \((X_1, \ldots, X_N)\) with zero mean (thus each \(X_i\) is one strike),
       the accumulation \(Y := X_1 + \cdots + X_N\) tends to obey a normal
@@ -3213,13 +3242,13 @@ y) p (y, t) = \frac{1}{2}
       \Sigma^{\alpha \beta}\). This is the <strong>central limit
       theorem</strong>, the most famous theorem in probability theory. Now, we
       have found for central limit theorem a physical description, the
-      Brownian motion, and found it as a corollary of expansion <a href="#equation:km expansion">16</a>.
+      Brownian motion, and found it as a corollary of expansion <a href="#equation:km expansion">3.1</a>.
     </p>
-    <h3 id="auto-21"><a id="section: Langevin Process Is a Markovian Process with Ncut=2"></a>3.6<span style="margin-left: 1em"></span>Langevin Process Is a Markovian
-    Process with \(N_{\operatorname{cut}} = 2\)<span style="margin-left: 1em"></span></h3>
+    <h2 id="auto-21"><a id="section: Langevin Process Is a Markovian Process with Ncut=2"></a>3.6<span style="margin-left: 1em"></span>Langevin Process Is a Markovian
+    Process with \(N_{\operatorname{cut}} = 2\)<span style="margin-left: 1em"></span></h2>
     <p>
       The most generic form of transition rate with \(N_{\operatorname{cut}} =
-      2\) is (by Kramers&ndash;Moyal expansion <a href="#equation:km expansion">16</a> with
+      2\) is (by Kramers&ndash;Moyal expansion <a href="#equation:km expansion">3.1</a> with
       \(N_{\operatorname{cut}} = 2\), and re-denote \(K_1\) by \(f\) and
       \(K_2\) by \(\Sigma\))
     </p>
@@ -3231,7 +3260,7 @@ y) p (y, t) = \frac{1}{2}
         \beta} (x) \partial_{\alpha} \partial_{\beta}
 \delta (\epsilon),
         \)</td>
-        <td align="right">(18)</td>
+        <td align="right">(3.3)</td>
       </tr>
     </table>
     <p>
@@ -3241,7 +3270,7 @@ y) p (y, t) = \frac{1}{2}
       Langevin in 1908.
     </p>
     <p>
-      Plugging equation <a href="#equation:langevin transition rate">18</a> into master equation, and applying
+      Plugging equation <a href="#equation:langevin transition rate">3.3</a> into master equation, and applying
       integration by parts as usual, we find
     </p>
     <table width="100%">
@@ -3252,7 +3281,7 @@ y) p (y, t) = \frac{1}{2}
         \partial_{\alpha} \partial_{\beta} (\Sigma^{\alpha
 \beta} (x) p (x,
         t)) . \)</td>
-        <td align="right">(19)</td>
+        <td align="right">(3.4)</td>
       </tr>
     </table>
     <p>
@@ -3289,15 +3318,15 @@ y) p (y, t) = \frac{1}{2}
     <p>
       So, \(\Sigma (x)\) is positive definite for any \(x \in \mathbb{R}^d\).
     </p>
-    <h3 id="auto-22">3.7<span style="margin-left: 1em"></span>Stationary Solution of Langevin Process Has
-    Source-Free Degree of Freedom<span style="margin-left: 1em"></span></h3>
+    <h2 id="auto-22">3.7<span style="margin-left: 1em"></span>Stationary Solution of Langevin Process Has
+    Source-Free Degree of Freedom<span style="margin-left: 1em"></span></h2>
     <p>
       In this section and section <a href="#section: Detailed Balance of Langevin Process Lacks Source-Free Degree of Freedom">3.8</a>, we use Langevin process as
       an example to explicitly show what the detailed balance condition
       appends to the stationary condition.
     </p>
     <p>
-      The master equation of Langevin process (equation <a href="#equation:Fokker-Planck equation">19</a>) has
+      The master equation of Langevin process (equation <a href="#equation:Fokker-Planck equation">3.4</a>) has
       stationary solution \(\Pi\) which satisfies (since there is only one
       variable \(x\), we use \(\partial\) instead of \(\nabla\))
     </p>
@@ -3316,7 +3345,7 @@ y) p (y, t) = \frac{1}{2}
         \partial_{\beta} (\Sigma^{\alpha \beta}
 (x) \pi (x)) + \nu^{\alpha}
         (x), \)</td>
-        <td align="right">(20)</td>
+        <td align="right">(3.5)</td>
       </tr>
     </table>
     <p>
@@ -3334,17 +3363,17 @@ y) p (y, t) = \frac{1}{2}
       vector field \(\nu\) is called <strong>free of source</strong> or
       <strong>source-free</strong>.
     </p>
-    <h3 id="auto-23"><a id="section: Detailed Balance of Langevin Process Lacks Source-Free Degree of Freedom"></a>3.8<span style="margin-left: 1em"></span>Detailed Balance of Langevin
-    Process Lacks Source-Free Degree of Freedom<span style="margin-left: 1em"></span></h3>
+    <h2 id="auto-23"><a id="section: Detailed Balance of Langevin Process Lacks Source-Free Degree of Freedom"></a>3.8<span style="margin-left: 1em"></span>Detailed Balance of Langevin
+    Process Lacks Source-Free Degree of Freedom<span style="margin-left: 1em"></span></h2>
     <p>
       After discussing stationary distribution of Fokker-Planck equation (as a
       master equation), we continue investigate when will Langevin process
-      relax an initial distribution to the stationary. By theorem <a href="#theorem: relaxation">2</a>,
+      relax an initial distribution to the stationary. By theorem <a href="#theorem: relaxation">2.1</a>,
       this is equivalent to ask: when will the transition rate of Langevin
       process satisfy detailed balance condition? Detailed balance condition
       reads \(r (x + \epsilon, x) \pi (x) = r (x, x + \epsilon) \pi (x +
-      \epsilon)\). Directly inserting equation <a href="#equation:langevin transition rate">18</a>, we get for the
-      left hand side,
+      \epsilon)\). Directly inserting equation <a href="#equation:langevin transition rate">3.3</a>, we get for
+      the left hand side,
     </p>
     <center>
       \(\displaystyle r (x + \epsilon, x) \pi (x) = - f^{\alpha} (x) \pi (x)
@@ -3498,12 +3527,12 @@ y) p (y, t) = \frac{1}{2}
         <td width="100%" align="center">\(\displaystyle f^{\alpha} (x) \pi (x) = \frac{1}{2}
         \partial_{\beta} (K^{\alpha \beta} (x)
 \pi (x)) . \)</td>
-        <td align="right">(21)</td>
+        <td align="right">(3.6)</td>
       </tr>
     </table>
     <p>
       Comparing with the stationary solution of Langevin process (equation <a
-      href="#equation:stationary Fokker-Planck equation">20</a>), the source-free vector field \(\nu\) is absent here.
+      href="#equation:stationary Fokker-Planck equation">3.5</a>), the source-free vector field \(\nu\) is absent here.
       Recall in section <a href="#section: Detailed Balance Provides Stationary Distribution">2.4</a> where detailed balance condition was
       first encountered, we said that detailed balance condition is stronger
       than just being stationary. Now, in Langevin process, this becomes
@@ -3513,16 +3542,22 @@ y) p (y, t) = \frac{1}{2}
       freedom is the cost of ensuring that any initial distribution will
       finally relax to the stationary.
     </p>
-    <h2 id="auto-24"><a id="section: Least-Action Principle"></a>4<span style="margin-left: 1em"></span>Least-Action Principle<span style="margin-left: 1em"></span></h2>
-    <h3 id="auto-25">4.1<span style="margin-left: 1em"></span>Conventions in This Section<span style="margin-left: 1em"></span></h3>
+    <h1 id="auto-24"><a id="section: Least-Action Principle"></a>Chapter 4<br />Least-Action Principle</h1>
     <p>
-      Follow the conventions in section <a href="#section: Kramers-Moyal Expansion and Langevin Process">3</a>. In addition, we use
-      \(P (\theta)\) for a parameterized distribution, where \(\theta\) is the
-      collection of parameters. Its density function is \(p (x, \theta)\),
-      where random variable \(X\) takes the value \(x\).
+      We apply the discussions in chapter <a href="#section: Kramers-Moyal Expansion and Langevin Process">3</a> to least-action
+      principle. After deriving the action of Langevin process, we investigate
+      the criticality.
     </p>
-    <h3 id="auto-26"><a id="section: A Brief Review of Least-Action Principle in Classical Mechanics"></a>4.2<span style="margin-left: 1em"></span>A Brief Review of Least-Action
-    Principle in Classical Mechanics<span style="margin-left: 1em"></span></h3>
+    <h2 id="auto-25">4.1<span style="margin-left: 1em"></span>Conventions in This Chapter<span style="margin-left: 1em"></span></h2>
+    <p>
+      Follow the conventions in chapter <a href="#section: Kramers-Moyal Expansion and Langevin Process">3</a> (except for section <a
+      href="#section: Data Fitting Is Equivalent to Least-Action Principle of Distribution">4.6</a> where the alphabet \(\mathcal{X}\) can be discrete). In
+      addition, we use \(P (\theta)\) for a parameterized distribution, where
+      \(\theta\) is the collection of parameters. Its density function is \(p
+      (x, \theta)\), where random variable \(X\) takes the value \(x\).
+    </p>
+    <h2 id="auto-26"><a id="section: A Brief Review of Least-Action Principle in Classical Mechanics"></a>4.2<span style="margin-left: 1em"></span>A Brief Review of Least-Action
+    Principle in Classical Mechanics<span style="margin-left: 1em"></span></h2>
     <p>
       In physics, least-action principle gives the dynamics of the state of an
       evolutionary system, determining how it evolves with time. The state of
@@ -3556,7 +3591,7 @@ x (1) = x_1 \}\) given the
         \frac{1}{2} \int_0^1 \mathrm{d} t
 [\dot{x}^2 (t) - \omega^2 x^2 (t)],
         \)</td>
-        <td align="right">(22)</td>
+        <td align="right">(4.1)</td>
       </tr>
     </table>
     <p>
@@ -3587,7 +3622,7 @@ x (1) = x_1 \}\) given the
       <tr>
         <td width="100%" align="center">\(\displaystyle \frac{\partial S}{\partial x (i /
         T)} (x_{\star} |x_0, x_1) = 0, \)</td>
-        <td align="right">(23)</td>
+        <td align="right">(4.2)</td>
       </tr>
     </table>
     <p>
@@ -3596,13 +3631,13 @@ x (1) = x_1 \}\) given the
     </p>
     <p>
       Take harmonic oscillator as example. To discretize its action (equation
-      <a href="#equation:harmonic oscillator action">22</a>), we replace the integral \(\int_0^1 \mathrm{d} t\) by
+      <a href="#equation:harmonic oscillator action">4.1</a>), we replace the integral \(\int_0^1 \mathrm{d} t\) by
       mean \((1 / T)  \sum_{i = 0}^T\) and \(x (t)\) by \(x (i / T)\). Thus
       the second term becomes \((\omega^2 / 2 T)  \sum_{i = 0}^T x^2 (i /
       T)\). For the first term, the derivative \(\dot{x} (t)\) is replaced by
       its difference \(T [x ((i + 1) / T) - x (i / T)]\), hence the summation
       shall terminated at \(T - 1\) instead of \(T\). Altogether, the action
-      <a href="#equation:harmonic oscillator action">22</a> is discretized as
+      <a href="#equation:harmonic oscillator action">4.1</a> is discretized as
     </p>
     <center>
       \(\displaystyle S_{\operatorname{HO}} (x|x_0, x_1) = \frac{T}{2} \sum_{i
@@ -3637,7 +3672,7 @@ x_1) = T^2  [x_{\star} ((i + 1) / T) - 2 x_{\star}
           <div style="margin-left: 0px">
             <div style="margin-right: 0px">
               <class style="font-style: normal"><p>
-                14. The dynamics with fixed boundaries is called
+                4.1. The dynamics with fixed boundaries is called
                 <strong>boundary value problem</strong>. But in physics, the
                 dynamics we obtained from the least-action principle is
                 applied to <strong>initial value problem</strong>, where the
@@ -3661,8 +3696,8 @@ x_1) = T^2  [x_{\star} ((i + 1) / T) - 2 x_{\star}
         </div></font>
       </div>
       <span style="margin-left: 0em"></span>
-      <a id="footnr-14"></a>
-      <sup><class style="font-style: normal"><a href="#footnote-14">14</a></class></sup>
+      <a id="footnr-4.1"></a>
+      <sup><class style="font-style: normal"><a href="#footnote-4.1">4.1</a></class></sup>
     </p>
     <p>
       We can generalize the least-action principle to any system, evolutionary
@@ -3677,7 +3712,7 @@ x_1) = T^2  [x_{\star} ((i + 1) / T) - 2 x_{\star}
       <tr>
         <td width="100%" align="center">\(\displaystyle \frac{\partial S}{\partial
         x^{\alpha}} (x_{\star}) = 0, \)</td>
-        <td align="right">(24)</td>
+        <td align="right">(4.3)</td>
       </tr>
     </table>
     <p>
@@ -3685,7 +3720,7 @@ x_1) = T^2  [x_{\star} ((i + 1) / T) - 2 x_{\star}
     </p>
     <p>
       There are, however, redundant degrees of freedom in action \(S\). We may
-      construct multiple actions all satisfying equation <a href="#equation:least-action principle v1">24</a>.
+      construct multiple actions all satisfying equation <a href="#equation:least-action principle v1">4.3</a>.
       Knowing the extremum of a function cannot imply the shape of the
       function. The action has much more degrees of freedom than that is
       needed for revealing the real world datum in classical mechanics. But
@@ -3693,8 +3728,8 @@ x_1) = T^2  [x_{\star} ((i + 1) / T) - 2 x_{\star}
       action is completely determined by the real world distribution (the
       correspondence of real world datum), with nothing redundant.
     </p>
-    <h3 id="auto-27"><a id="section: Preliminary: Grassmann Variable and Berezin Integral"></a>4.3<span style="margin-left: 1em"></span>Preliminary: Grassmann Variable
-    and Berezin Integral<span style="margin-left: 1em"></span></h3>
+    <h2 id="auto-27"><a id="section: Preliminary: Grassmann Variable and Berezin Integral"></a>4.3<span style="margin-left: 1em"></span>Preliminary: Grassmann Variable
+    and Berezin Integral<span style="margin-left: 1em"></span></h2>
     <p>
       We have to briefly introduce Grassmann variable, on which Berezin
       integral is based. Grassmann variable is an extension of real (or
@@ -3783,7 +3818,7 @@ x_1) = T^2  [x_{\star} ((i + 1) / T) - 2 x_{\star}
 \mathrm{d} \eta_1 \int \mathrm{d} \zeta_1 (\zeta_1 \eta_1 \cdots
         \zeta_n
 \eta_n) \right] = 1, \)</td>
-        <td align="right">(25)</td>
+        <td align="right">(4.4)</td>
       </tr>
     </table></font>
     <p>
@@ -3852,7 +3887,7 @@ x_1) = T^2  [x_{\star} ((i + 1) / T) - 2 x_{\star}
         \mathrm{d} \zeta'_1 = \det A \times \int
 \mathrm{d} \zeta_d \cdots
         \int \mathrm{d} \zeta_1 . \)</td>
-        <td align="right">(26)</td>
+        <td align="right">(4.5)</td>
       </tr>
     </table>
     <p>
@@ -3879,12 +3914,12 @@ x_1) = T^2  [x_{\star} ((i + 1) / T) - 2 x_{\star}
         \eta := \int \mathrm{d} \zeta_d \int
 \mathrm{d} \eta_d \cdots \int
         \mathrm{d} \zeta_1 \int \mathrm{d} \eta_1 . \)</td>
-        <td align="right">(27)</td>
+        <td align="right">(4.6)</td>
       </tr>
     </table>
     <p>
       Defining \(\zeta'_{\beta} := A_{\alpha \beta} \zeta^{\alpha}\) and using
-      equation <a href="#equation:grassmann integral transform">26</a>, it becomes
+      equation <a href="#equation:grassmann integral transform">4.5</a>, it becomes
     </p>
     <center>
       \(\displaystyle \int \mathrm{d} \zeta \mathrm{d} \eta \exp (A_{\alpha
@@ -3894,7 +3929,7 @@ x_1) = T^2  [x_{\star} ((i + 1) / T) - 2 x_{\star}
 (\zeta'_{\beta} \eta^{\beta}) .\)
     </center>
     <p>
-      The rightmost factor has been evaluated in equation <a href="#equation:berezin integral exp">25</a>,
+      The rightmost factor has been evaluated in equation <a href="#equation:berezin integral exp">4.4</a>,
       which results in \(1\), thus
     </p>
     <table width="100%">
@@ -3903,14 +3938,14 @@ x_1) = T^2  [x_{\star} ((i + 1) / T) - 2 x_{\star}
         \eta \exp (A_{\alpha \beta} \zeta^{\alpha}
 \eta^{\beta}) = \det A.
         \)</td>
-        <td align="right">(28)</td>
+        <td align="right">(4.7)</td>
       </tr>
     </table>
     <p>
       where
     </p>
-    <h3 id="auto-28"><a id="section: Langevin Process Can Be Formulated as Path Integral"></a>4.4<span style="margin-left: 1em"></span>Langevin Process Can Be
-    Formulated as Path Integral<span style="margin-left: 1em"></span></h3>
+    <h2 id="auto-28"><a id="section: Langevin Process Can Be Formulated as Path Integral"></a>4.4<span style="margin-left: 1em"></span>Langevin Process Can Be
+    Formulated as Path Integral<span style="margin-left: 1em"></span></h2>
     <p>
       In this section, we are to formulate the master equation into path
       integral. The path integral formulation was found by Paul Dirac in 1933
@@ -3926,7 +3961,7 @@ x_1) = T^2  [x_{\star} ((i + 1) / T) - 2 x_{\star}
         \cdots \int_{\mathbb{R}^d} \mathrm{d} x_n
 \exp (- S (x_1, \ldots,
         x_n)), \)</td>
-        <td align="right">(29)</td>
+        <td align="right">(4.8)</td>
       </tr>
     </table>
     <p>
@@ -3943,7 +3978,7 @@ x_1) = T^2  [x_{\star} ((i + 1) / T) - 2 x_{\star}
           <div style="margin-left: 0px">
             <div style="margin-right: 0px">
               <class style="font-style: normal"><p>
-                15. For example, section 1.2 of <i>Quantum Field Theory in a
+                4.2. For example, section 1.2 of <i>Quantum Field Theory in a
                 Nutshell</i>, by A. Zee, second edition.
               </p></class>
             </div>
@@ -3951,14 +3986,14 @@ x_1) = T^2  [x_{\star} ((i + 1) / T) - 2 x_{\star}
         </div></font>
       </div>
       <span style="margin-left: 0em"></span>
-      <a id="footnr-15"></a>
-      <sup><class style="font-style: normal"><a href="#footnote-15">15</a></class></sup>
+      <a id="footnr-4.2"></a>
+      <sup><class style="font-style: normal"><a href="#footnote-4.2">4.2</a></class></sup>
       In this derivation, we first consider the discrete time master equation
-      <a href="#equation:discrete time master equation">5</a>
+      <a href="#equation:discrete time master equation">2.5</a>
       . The evolution is given by a series of the transition density
       \(q_{\Delta t} (x_{i + 1} |x_i)\) with the iterative step \(i \in \{ 0,
       1, \ldots, N \}\). By repeatedly applying master equation
-      <a href="#equation:discrete time master equation">5</a>
+      <a href="#equation:discrete time master equation">2.5</a>
       , we get
     </p>
     <table width="100%">
@@ -3969,7 +4004,7 @@ x_1) = T^2  [x_{\star} ((i + 1) / T) - 2 x_{\star}
         \mathrm{d} x_0 q_{\Delta t} (x_N |x_{N - 1}) \cdots
 q_{\Delta t} (x_1
         |x_0) p (x_0, 0) . \)</td>
-        <td align="right">(30)</td>
+        <td align="right">(4.9)</td>
       </tr>
     </table>
     <p>
@@ -4068,7 +4103,7 @@ K_2^{\alpha \beta} (x)  (\mathrm{i}
         (x) k_{\alpha} k_{\beta} k_{\gamma} + \cdots + \omicron (\Delta
 t)
         \right) . \)</td>
-        <td align="right">(31)</td>
+        <td align="right">(4.10)</td>
       </tr>
     </table>
     <p>
@@ -4127,7 +4162,7 @@ b_{\beta} \right),\)
       approximately Gaussian.
     </p>
     <p>
-      To match the path integral formulism <a href="#equation:general path integral">29</a>, in which all
+      To match the path integral formulism <a href="#equation:general path integral">4.8</a>, in which all
       integration variables are in the exponential, we have to convert the
       \([\det \Sigma (x)]^{- 1 / 2}\) factor into exponential too. To do so,
       we first use Cholesky factorization to remove the root, and then use
@@ -4187,7 +4222,7 @@ R_{\alpha \beta} (x)  \left(
     <p>
       where \(\zeta\) and \(\eta\) are multi-dimensional Grassmann variables,
       and the integral measure \(\int \mathrm{d} \zeta \mathrm{d} \eta\) is
-      defined by equation <a href="#equation:berezin integral measurement">27</a>. Replacing \(A\) by \(R (x) \Delta
+      defined by equation <a href="#equation:berezin integral measurement">4.6</a>. Replacing \(A\) by \(R (x) \Delta
       t\), we find
     </p>
     <center>
@@ -4216,7 +4251,7 @@ R_{\alpha \beta} (x) \zeta^{\alpha}
       &ldquo;ghost variables&rdquo;.
     </p>
     <p>
-      Plugging back to equation <a href="#equation:path integral step 1">30</a>, we get
+      Plugging back to equation <a href="#equation:path integral step 1">4.9</a>, we get
     </p>
     <center>
       \(\displaystyle p (x_N, N \Delta t) = \int \mathrm{D} (x, \zeta, \eta)
@@ -4249,7 +4284,7 @@ R_{\alpha
         \beta} (x_i) \zeta^{\alpha}_i \eta_i^{\beta} + \omicron (1) \right\}
 .
         \)</td>
-        <td align="right">(32)</td>
+        <td align="right">(4.11)</td>
       </tr>
     </table>
     <p>
@@ -4272,7 +4307,7 @@ R_{\alpha
         1}^{\alpha} - x_i^{\alpha}}{\Delta t} -
 f^{\alpha} (x_i) \right)
         \right]^2 + \omicron (1) \right\}, \)</td>
-        <td align="right">(33)</td>
+        <td align="right">(4.12)</td>
       </tr>
     </table>
     <p>
@@ -4309,13 +4344,13 @@ x^{\beta}}{\mathrm{d} t} (t) - f^{\beta} \left(
     <p>
       As a summary, we find the master equation of Langevin process can be
       formulated as a path integral, in which the action is given by equation
-      <a href="#equation:langevin action">32</a>, in which \(\zeta\) and \(\eta\) are Grassmann
+      <a href="#equation:langevin action">4.11</a>, in which \(\zeta\) and \(\eta\) are Grassmann
       variables.
     </p>
     <p>
       Final remark on cut-off \(N_{\operatorname{cut}} = 2\). If choose
       \(N_{\operatorname{cut}} > 2\), it is hard to see how to integrate the
-      improper integral <a href="#equation:path integral step 2">31</a>, and even to show why it is finite.
+      improper integral <a href="#equation:path integral step 2">4.10</a>, and even to show why it is finite.
       For example, if \(N_{\operatorname{cut}} = 4\), the \((\Delta t / 4!)
       K^{\alpha \beta \gamma \sigma}_4 (x) k_{\alpha} k_{\beta}
 k_{\gamma}
@@ -4328,8 +4363,8 @@ k_{\gamma}
       only \(\mathcal{O} (d^2)\) degrees of freedom, so this cannot be done
       except for specific situations).
     </p>
-    <h3 id="auto-29"><a id="section: Least-Action Principle of Distribution Has No Redundancy"></a>4.5<span style="margin-left: 1em"></span>Least-Action Principle of
-    Distribution Has No Redundancy<span style="margin-left: 1em"></span></h3>
+    <h2 id="auto-29"><a id="section: Least-Action Principle of Distribution Has No Redundancy"></a>4.5<span style="margin-left: 1em"></span>Least-Action Principle of
+    Distribution Has No Redundancy<span style="margin-left: 1em"></span></h2>
     <p>
       Dynamics in classical mechanics are always deterministic. That is, once
       the initial conditions (for initial value problem) or the boundaries
@@ -4347,7 +4382,7 @@ k_{\gamma}
     </p>
     <p>
       This is what we have derived in section <a href="#section: Langevin Process Can Be Formulated as Path Integral">4.4</a>. From
-      probabilistic perspective, the right hand side of equation <a href="#equation:path integral step 1">30</a>
+      probabilistic perspective, the right hand side of equation <a href="#equation:path integral step 1">4.9</a>
       can be viewed as marginalizing the random variables \((X_0, \ldots, X_{N
       - 1})\), and the product \(q (x_N |x_{N - 1}) \cdots q (x_1 |x_0)\) can
       be seen as the density function of \((X_1, \ldots, X_N)\), where we have
@@ -4380,7 +4415,7 @@ k_{\gamma}
       <tr>
         <td width="100%" align="center">\(\displaystyle S (x) := - \ln q (x)
         +\operatorname{const}. \)</td>
-        <td align="right">(34)</td>
+        <td align="right">(4.13)</td>
       </tr>
     </table>
     <p>
@@ -4409,7 +4444,7 @@ x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
       x^{\alpha}} \right] = 0.\)
     </center>
     <p>
-      This is analog to equation <a href="#equation:least-action principle v1">24</a>, where the minimum
+      This is analog to equation <a href="#equation:least-action principle v1">4.3</a>, where the minimum
       \(x_{\star}\) is replaced by the expectation \(\mathbb{E}_Q\). Secondly,
       distribution \(Q\) most likely samples (recall section <a href="#section: A Brief Review of Probability">1.1</a>
       that distribution has a sampler) the \(x\) that maximizes \(q\), thus
@@ -4420,8 +4455,8 @@ x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
       \(q\)), without any redundancy. This is the direct implication that
       distribution involves more information than its most likely datum.
     </p>
-    <h3 id="auto-30"><a id="section: Data Fitting Is Equivalent to Least-Action Principle of Distribution"></a>4.6<span style="margin-left: 1em"></span>Data Fitting Is Equivalent to
-    Least-Action Principle of Distribution<span style="margin-left: 1em"></span></h3>
+    <h2 id="auto-30"><a id="section: Data Fitting Is Equivalent to Least-Action Principle of Distribution"></a>4.6<span style="margin-left: 1em"></span>Data Fitting Is Equivalent to
+    Least-Action Principle of Distribution<span style="margin-left: 1em"></span></h2>
     <p>
       Given a collection of real world data, we are to find a distribution
       that fits the data. These data can be seen as samples from an unknown
@@ -4438,13 +4473,13 @@ x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
       <tr>
         <td width="100%" align="center">\(\displaystyle p (x, \theta) = \exp (- S (x,
         \theta)) / Z (\theta), \)</td>
-        <td align="right">(35)</td>
+        <td align="right">(4.14)</td>
       </tr>
     </table>
     <p>
       where \(Z (\theta) = \int \mathrm{d} x \exp (- S (x, \theta))\) for
       ensuring the normalization \(\int \mathrm{d} x p (x, \theta) = 1\). This
-      is consistent with the action defined by equation <a href="#equation:action of distribution">34</a>,
+      is consistent with the action defined by equation <a href="#equation:action of distribution">4.13</a>,
       except that the action here is parameterized, and that we omit the
       constant \(\beta\) since it is irrelevant throughout this section.
     </p>
@@ -4458,7 +4493,7 @@ x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
       function of \(Q\), all that we can do with \(Q\) is computing the
       expectation \(\mathbb{E}_Q [f] = (1 / | Q |) \sum_{x \in Q} f (x)\) for
       any function \(f\), where we use \(Q\) as a set of data. With this
-      realization, we have, after plugging equation <a href="#equation:generic density">35</a> into \(H
+      realization, we have, after plugging equation <a href="#equation:generic density">4.14</a> into \(H
       (Q, P (\theta))\),
     </p>
     <center>
@@ -4523,7 +4558,7 @@ x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
         -\mathbb{E}_Q \left[ \frac{\partial S}{\partial
         \theta^{\alpha}}
 (\cdot, \theta) \right] . \)</td>
-        <td align="right">(36)</td>
+        <td align="right">(4.15)</td>
       </tr>
     </table>
     <p>
@@ -4538,16 +4573,16 @@ x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
         \theta_{\star}) \right] =\mathbb{E}_Q \left[
 \frac{\partial
         S}{\partial \theta^{\alpha}} (\cdot, \theta_{\star}) \right] . \)</td>
-        <td align="right">(37)</td>
+        <td align="right">(4.16)</td>
       </tr>
     </table>
     <p>
       
     </p>
     <p>
-      It can be read from equation <a href="#equation:data-fitting iteration">36</a> that minimizing \(L\) is to
-      increase \(S (\cdot, \theta)\) on the sampled points (the first term)
-      while decrease it on data points (the second term). As figure <a href="#figure: Least-Action">1</a>
+      It can be read from equation <a href="#equation:data-fitting iteration">4.15</a> that minimizing \(L\) is
+      to increase \(S (\cdot, \theta)\) on the sampled points (the first term)
+      while decrease it on data points (the second term). As figure <a href="#figure: Least-Action">4.1</a>
       illustrates, this way of optimization will site real world data onto
       local minima of \(S (\cdot, \theta)\), <em>in statistical sense</em>.
     </p>
@@ -4560,7 +4595,7 @@ x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
         </tr><tr>
           <td style="text-align: center; padding-left: 0em; padding-right: 0em; padding-left: 1.5em; padding-right: 1.5em"><div class="caption">
             <font style="font-size: 84.1%"><p>
-              <b>Figure 1. </b><a id="auto-31"></a><a id="figure: Least-Action"></a> This figure illustrate
+              <b>Figure 4.1. </b><a id="auto-31"></a><a id="figure: Least-Action"></a> This figure illustrate
               how \(\min_{\theta} L (\theta)\) will site a real world datum
               onto a local minimum of \(S (\cdot, \theta)\). The green curve
               represents the current not-yet-optimized \(S (\cdot, \theta)\).
@@ -4596,10 +4631,10 @@ x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
       Each movie is a series of frames that log the positions of each bird at
       each time instant. These movies provide the real world data. The
       parameterized action \(S\) can be expressed by a neural network. Then,
-      iterating by equation <a href="#equation:data-fitting iteration">36</a> until \(\| \partial L / \partial
+      iterating by equation <a href="#equation:data-fitting iteration">4.15</a> until \(\| \partial L / \partial
       \theta \|\) has been small enough gives an \(S (\cdot, \theta_{\star})\)
       that mimics the stochastic dynamics of starling flocks. To compute the
-      expectation \(\mathbb{E}_{P (\theta)} [\ldots]\) in equation <a href="#equation:data-fitting iteration">36</a>,
+      expectation \(\mathbb{E}_{P (\theta)} [\ldots]\) in equation <a href="#equation:data-fitting iteration">4.15</a>,
       we can employ Monte-Carlo simulation with the transition rate satisfying
       detailed balance condition with \(P (\theta)\) as the stationary
       distribution. For discrete random variables, Monte-Carlo simulation with
@@ -4607,8 +4642,8 @@ x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
       and for continuous random variables, Langevin dynamics (section <a href="#section: Detailed Balance of Langevin Process Lacks Source-Free Degree of Freedom">3.8</a>)
       will be more efficient.
     </p>
-    <h3 id="auto-32"><a id="section: How Far Will Information Propagate in Langevin Process?"></a>4.7<span style="margin-left: 1em"></span>How Far Will Information
-    Propagate in Langevin Process?<span style="margin-left: 1em"></span></h3>
+    <h2 id="auto-32"><a id="section: How Far Will Information Propagate in Langevin Process?"></a>4.7<span style="margin-left: 1em"></span>How Far Will Information
+    Propagate in Langevin Process?<span style="margin-left: 1em"></span></h2>
     <p>
       We are to determine how far information will propagate during the
       iteration of Langevin process. For this kind of problem, physicists have
@@ -4623,7 +4658,7 @@ x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
     </p>
     <p>
       To show how it works, we start with an action that is generalized from
-      action <a href="#equation:langevin action constant R">33</a>, which is
+      action <a href="#equation:langevin action constant R">4.12</a>, which is
     </p>
     <table width="100%">
       <tr>
@@ -4635,16 +4670,16 @@ x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
         \varphi^{\alpha} (x_{i + 1}, x_i) + \epsilon \xi^{\alpha}
 (x_{i + 1},
         x_i) \right], \)</td>
-        <td align="right">(38)</td>
+        <td align="right">(4.17)</td>
       </tr>
     </table>
     <p>
       where \(\varphi, \xi : \mathbb{R}^d \times \mathbb{R}^d \rightarrow
-      \mathbb{R}^d\). Comparing with action <a href="#equation:langevin action constant R">33</a>, \(\epsilon =
+      \mathbb{R}^d\). Comparing with action <a href="#equation:langevin action constant R">4.12</a>, \(\epsilon =
       \Delta t\), \(\varphi (x_{i + 1}, x_i) = f (x_i)\), and \(\xi (x_{i +
       1}, x_i) = f^2 (x_i) / 2\). There are another two differences between
       them. Here, we do not fix boundary (namely, the fixed boundary \(x_N\)
-      in action <a href="#equation:langevin action constant R">33</a>), and let the index \(i\) run from \(-
+      in action <a href="#equation:langevin action constant R">4.12</a>), and let the index \(i\) run from \(-
       \infty\) to \(+ \infty\) rather than from \(0\) to \(N\). As we will see
       later in this section, these differences are crucial for renormalization
       group. To add the boundaries back and restrict the range of index \(i\),
@@ -4666,7 +4701,7 @@ x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
         \mathbb{Z}} \int_{\mathbb{R}^d} \mathrm{d}
 x_{2 i + 1} \exp (- S (x))
         \right], \)</td>
-        <td align="right">(39)</td>
+        <td align="right">(4.18)</td>
       </tr>
     </table>
     <p>
@@ -4677,7 +4712,7 @@ x_{2 i + 1} \exp (- S (x))
     </p>
     <p>
       Given \(i\), we are to show how to marginalize \(x_{2 i + 1}\). This
-      variables appear in two terms in action <a href="#equation:rg action">38</a>, with indices
+      variables appear in two terms in action <a href="#equation:rg action">4.17</a>, with indices
       \(2 i + 1\) and \(2 i\). So, we are to integrate \(\int_{\mathbb{R}^d}
       \mathrm{d} x_{2 i + 1} \exp \left( \sum_{\alpha = 1}^n
 J^{\alpha}
@@ -4714,7 +4749,7 @@ J^{\alpha}
           <div style="margin-left: 0px">
             <div style="margin-right: 0px">
               <class style="font-style: normal"><p>
-                16. Directly, expand \((x - y)^2 + (y - z)^2 = x^2 - 2 x y +
+                4.3. Directly, expand \((x - y)^2 + (y - z)^2 = x^2 - 2 x y +
                 y^2 + y^2 - 2 y z + z^2\). Then, collect the \(y\) terms
                 together, as \(2 (y^2 - (x + z) y) = 2 (y - (x + z) y + (x +
                 z)^2 / 4) - (x + z)^2 / 2 = 2 (y
@@ -4736,8 +4771,8 @@ J^{\alpha}
         </div></font>
       </div>
       <span style="margin-left: 0em"></span>
-      <a id="footnr-16"></a>
-      <sup><class style="font-style: normal"><a href="#footnote-16">16</a></class></sup>
+      <a id="footnr-4.3"></a>
+      <sup><class style="font-style: normal"><a href="#footnote-4.3">4.3</a></class></sup>
     </p>
     <center>
       \(\displaystyle \frac{(x^{\alpha}_{2 i + 1} - x^{\alpha}_{2 i})^2}{2
@@ -4751,7 +4786,7 @@ x^{\alpha}_{2 i + 2}}{2} \right]^2 + \frac{1}{4
 x^{\alpha}_{2 i + 2})^2 .\)
     </center>
     <p>
-      Remark that the second term looks like the first term in action <a href="#equation:rg action">38</a>,
+      Remark that the second term looks like the first term in action <a href="#equation:rg action">4.17</a>,
       except for an \(1 / 2\) factor. Then, \(J^{\alpha}\) becomes
     </p>
     <center>
@@ -4847,13 +4882,13 @@ x_{2 i}) / 2\), the second line
     <p>
       where we have denoted \(\partial \varphi\) as the partial derivative
       taken on the first argument, and \(\partial' \varphi\) on the second.
-      Notice that we have used Einstein convention in this expansion (see the
-      conventions in section <a href="#section: Kramers-Moyal Expansion and Langevin Process">3</a>), hiding the summations of indices
-      \(\beta\) and \(\gamma\). Also up to \(\mathcal{O} (\epsilon^{3 / 2})\),
-      the third line simply becomes \(- \epsilon \xi^{\alpha} (\bar{x}_{2 i +
-      1}, x_{2 i}) - \epsilon \xi^{\alpha}
-(x_{2 i + 2}, \bar{x}_{2 i + 1})\).
-      Altogether, the integral becomes
+      Notice that we have used Einstein's convention in this expansion (see
+      the conventions in section <a href="#section: Kramers-Moyal Expansion and Langevin Process">3</a>), hiding the summations of
+      indices \(\beta\) and \(\gamma\). Also up to \(\mathcal{O} (\epsilon^{3
+      / 2})\), the third line simply becomes \(- \epsilon \xi^{\alpha}
+      (\bar{x}_{2 i + 1}, x_{2 i}) - \epsilon \xi^{\alpha}
+(x_{2 i + 2},
+      \bar{x}_{2 i + 1})\). Altogether, the integral becomes
     </p>
     <font style="font-size: 84.1%"><center>
       \(\displaystyle \exp \left( \sum_{\alpha = 1}^n I^{\alpha} \right)
@@ -4964,7 +4999,7 @@ V^{\alpha} (y)
           <div style="margin-left: 0px">
             <div style="margin-right: 0px">
               <class style="font-style: normal"><p>
-                17. We have \(\mathbb{E}_Y \left[ (1 / 2) \left( \sum_{\alpha
+                4.4. We have \(\mathbb{E}_Y \left[ (1 / 2) \left( \sum_{\alpha
                 = 1}^n V^{\alpha} (y)
 \right)^2 \right] = (1 / 2)
                 \sum_{\alpha, \alpha' = 1}^n \mathbb{E}_Y
@@ -5028,8 +5063,8 @@ V^{\alpha} (y)
         </div></font>
       </div>
       <span style="margin-left: 0em"></span>
-      <a id="footnr-17"></a>
-      <sup><class style="font-style: normal"><a href="#footnote-17">17</a></class></sup>
+      <a id="footnr-4.4"></a>
+      <sup><class style="font-style: normal"><a href="#footnote-4.4">4.4</a></class></sup>
     </p>
     <font color="#000080"><font style="font-size: 70.7%"><center>
       \(\displaystyle \begin{array}{rl}
@@ -5075,7 +5110,7 @@ V^{\alpha} (y)
       <tr>
         <td width="100%" align="center">\(\displaystyle x'_i := \frac{x_{2 i}}{\sqrt{2}},
         \)</td>
-        <td align="right">(40)</td>
+        <td align="right">(4.19)</td>
       </tr>
     </table>
     <p>
@@ -5104,7 +5139,7 @@ V^{\alpha} (y)
 (\bar{x}_{2 i + 1}, x_{2
         i}) + \varphi^{\alpha} (x_{2 i + 2}, \bar{x}_{2 i +
 1})]  \)</td>
-        <td align="right">(41)</td>
+        <td align="right">(4.20)</td>
       </tr>
     </table>
     <p>
@@ -5160,7 +5195,7 @@ V^{\alpha} (y)
   \varphi^{\alpha'} (x_{2 i + 2},
         \bar{x}_{2 i + 1})]},
 \end{array} \)</td>
-        <td align="right">(42)</td>
+        <td align="right">(4.21)</td>
       </tr>
     </table>
     <p>
@@ -5179,13 +5214,13 @@ V^{\alpha} (y)
 + 1}, x'_i) {+ \epsilon \xi'}^{\alpha} (x_{i + 1}',
         x_i') + \omicron
 (\epsilon) \right], \)</td>
-        <td align="right">(43)</td>
+        <td align="right">(4.22)</td>
       </tr>
     </table>
     <p>
-      which has exactly the same format as \(S\) (equation <a href="#equation:rg action">38</a>).
-      The iterative equations <a href="#equation:rg transform 1">40</a>, <a href="#equation:rg transform 2">41</a>, <a href="#equation:rg transform 3">42</a>,
-      and <a href="#equation:rg transform 4">43</a> are called <strong>renormalization group
+      which has exactly the same format as \(S\) (equation <a href="#equation:rg action">4.17</a>).
+      The iterative equations <a href="#equation:rg transform 1">4.19</a>, <a href="#equation:rg transform 2">4.20</a>, <a href="#equation:rg transform 3">4.21</a>,
+      and <a href="#equation:rg transform 4">4.22</a> are called <strong>renormalization group
       transformation</strong>.
     </p>
     <p>
