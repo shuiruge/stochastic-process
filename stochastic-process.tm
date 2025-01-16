@@ -173,6 +173,13 @@
   section. We use bold font for <strong|definition> and italic font for
   <em|emphasis>.
 
+  At last, this book is written by <TeX>macs, on the
+  <hlink|GPLv3|https://www.gnu.org/licenses/gpl-3.0.en.html>
+  license.<\footnote>
+    Footnotes in the HTML export of <TeX>macs are problematic. The content of
+    footnote is incorrectly placed in front of the main text.
+  </footnote>
+
   <chapter|Relative Entropy><label|section: Relative Entropy>
 
   In this chapter, we discuss the axiomatization of information. By figuring
@@ -4349,6 +4356,7 @@
     v2|<tuple|2.7|16>>
     <associate|equation:wiener process|<tuple|3.2|32>>
     <associate|figure: Least-Action|<tuple|4.1|43>>
+    <associate|footnote-1|<tuple|1|7>>
     <associate|footnote-1.1|<tuple|1.1|9>>
     <associate|footnote-1.2|<tuple|1.2|9>>
     <associate|footnote-1.3|<tuple|1.3|10>>
@@ -4365,6 +4373,7 @@
     <associate|footnote-4.1|<tuple|4.1|36>>
     <associate|footnote-4.2|<tuple|4.2|38>>
     <associate|footnote-4.3|<tuple|4.3|44>>
+    <associate|footnr-1|<tuple|1|7>>
     <associate|footnr-1.1|<tuple|1.1|9>>
     <associate|footnr-1.2|<tuple|1.2|9>>
     <associate|footnr-1.3|<tuple|1.3|10>>
