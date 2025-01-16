@@ -5,6 +5,117 @@
 <\body>
   <section|Drafts>
 
+  <subsection|>
+
+  Define
+
+  <\equation*>
+    y<rsub|\<alpha\>>\<assign\>R<rsub|\<alpha\>\<beta\>><around*|(|x|)>
+    x<rsup|\<beta\>>
+  </equation*>
+
+  and
+
+  <\equation*>
+    g<rsub|\<alpha\>><around*|(|y|)>=R<rsub|\<alpha\>\<beta\>><around*|(|x|)>
+    f<rsup|\<beta\> ><around*|(|x|)>.
+  </equation*>
+
+  Thus
+
+  <\equation*>
+    R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>
+    <around*|(|x<rsub|i+1><rsup|\<beta\>>-x<rsub|i><rsup|\<beta\>>-\<Delta\>t
+    f<rsup|\<beta\>><around*|(|x<rsub|i>|)>|)>=R<around*|(|x<rsub|i>|)>R<rsup|-1><around*|(|x<rsub|i+1>|)>y<rsub|i+1>-y<rsub|i>-\<Delta\>t
+    g<around*|(|y|)>.
+  </equation*>
+
+  We first omit the superscripts and denote
+  <math|R<around*|(|x|)>=exp<around*|(|-h<around*|(|y|)>|)>>. Thus,
+
+  <\align>
+    <tformat|<table|<row|<cell|>|<cell|R<around*|(|x<rsub|i>|)>R<rsup|-1><around*|(|x<rsub|i+1>|)>=exp<around*|(|h<around*|(|y<rsub|i+1>|)>-h<around*|(|y<rsub|i>|)>|)>>>|<row|<cell|=>|<cell|exp<around*|(|h<rprime|'><around*|(|y<rsub|i>|)><around*|(|y<rsub|i+1>-y<rsub|i>|)>+<frac|1|2>h<rprime|''><around*|(|y<rsub|i>|)><around*|(|y<rsub|i+1>-y<rsub|i>|)><rsup|2>+\<cdots\>|)>>>|<row|<cell|=>|<cell|1+h<rprime|'><around*|(|y<rsub|i>|)><around*|(|y<rsub|i+1>-y<rsub|i>|)>+<frac|1|2><around*|(|h<rprime|''><around*|(|y<rsub|i>|)>+h<rprime|'><rsup|2><around*|(|y<rsub|i>|)>|)><around*|(|y<rsub|i+1>-y<rsub|i>|)><rsup|2>+<with|font|cal|O><around*|(|<around*|\||y<rsub|i+1>-y<rsub|i>|\|><rsup|3>|)>.>>>>
+  </align>
+
+  And
+
+  <\align>
+    <tformat|<table|<row|<cell|>|<cell|h<rprime|'><around*|(|y<rsub|i>|)>y<rsub|i+1><around*|(|y<rsub|i+1>-y<rsub|i>|)>>>|<row|<cell|=>|<cell|<around*|[|h<rprime|'><around*|(|y<rsub|i+1>|)>+<around*|(|h<rprime|'><around*|(|y<rsub|i>|)>-h<rprime|'><around*|(|y<rsub|i+1>|)>|)>|]>y<rsub|i+1>y<rsub|i+1>-h<rprime|'><around*|(|y<rsub|i>|)><around*|(|<around*|(|y<rsub|i+1>-y<rsub|i>|)>+y<rsub|i>|)>y<rsub|i>>>|<row|<cell|=>|<cell|h<rprime|'><around*|(|y<rsub|i+1>|)>y<rsub|i+1>y<rsub|i+1>-<around*|[|h<rprime|''><around*|(|y<rsub|i+1>|)><around*|(|y<rsub|i+1>-y<rsub|i>|)>|]>y<rsub|i+1>y<rsub|i+1>-h<rprime|'><around*|(|y<rsub|i>|)><around*|(|y<rsub|i+1>-y<rsub|i>|)>y<rsub|i>+h<rprime|'><around*|(|y<rsub|i>|)>y<rsub|i>y<rsub|i>>>>>
+  </align>
+
+  Then, denote
+
+  <\equation*>
+    J\<assign\>h<rprime|'><around*|(|y<rsub|i>|)>y<rsub|i+1><around*|(|y<rsub|i+1>-y<rsub|i>|)>+<frac|1|2><around*|(|h<rprime|''><around*|(|y<rsub|i>|)>+h<rprime|'><rsup|2><around*|(|y<rsub|i>|)>|)>y<rsub|i+1><around*|(|y<rsub|i+1>-y<rsub|i>|)><rsup|2>,
+  </equation*>
+
+  we get
+
+  <\equation*>
+    R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>
+    <around*|(|x<rsub|i+1><rsup|\<beta\>>-x<rsub|i><rsup|\<beta\>>-\<Delta\>t
+    f<rsup|\<beta\>><around*|(|x<rsub|i>|)>|)>=y<rsub|i+1>-y<rsub|i>-\<Delta\>t
+    g<around*|(|y<rsub|i>|)>+J.
+  </equation*>
+
+  Thus,
+
+  <\align>
+    <tformat|<table|<row|<cell|>|<cell|<around*|[|R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>
+    <around*|(|x<rsub|i+1><rsup|\<beta\>>-x<rsub|i><rsup|\<beta\>>-\<Delta\>t
+    f<rsup|\<beta\>><around*|(|x<rsub|i>|)>|)>|]><rsup|2>>>|<row|<cell|=>|<cell|<around*|[|<around*|(|y<rsub|i+1>-y<rsub|i>|)>-\<Delta\>t
+    g<around*|(|y<rsub|i>|)>+J|]><rsup|2>>>|<row|<cell|+>|<cell|<around*|(|y<rsub|i+1>-y<rsub|i>|)><rsup|2>-2\<Delta\>t
+    g<around*|(|y<rsub|i>|)><around*|(|y<rsub|i+1>-y<rsub|i>|)>+2<around*|(|y<rsub|i+1>-y<rsub|i>|)>
+    J+\<Delta\>t<rsup|2> g<rsup|2><around*|(|y<rsub|i>|)>-2\<Delta\>t
+    g<around*|(|y<rsub|i>|)> J+J<rsup|2>.>>>>
+  </align>
+
+  <math|>
+
+  We have
+
+  <\align>
+    <tformat|<table|<row|<cell|>|<cell|-\<Delta\>t<around*|{|<frac|1|2>
+    <around*|[|R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>
+    <around*|(|<frac|x<rsub|i+1><rsup|\<beta\>>-x<rsub|i><rsup|\<beta\>>|\<Delta\>t>-f<rsup|\<beta\>><around*|(|x<rsub|i>|)>|)>|]><rsup|2>+\<omicron\><around*|(|1|)>|}>>>|<row|<cell|=>|<cell|-<frac|1|2\<Delta\>t>
+    <around*|[|R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>
+    x<rsub|i+1><rsup|\<beta\>>-R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>x<rsub|i><rsup|\<beta\>>-\<Delta\>t
+    R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>f<rsup|\<beta\>><around*|(|x<rsub|i>|)>|]><rsup|2>+\<omicron\><around*|(|\<Delta\>t|)>>>|<row|<cell|>|<cell|>>|<row|<cell|=>|<cell|-<frac|1|2\<Delta\>t><around*|[|R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>
+    x<rsub|i+1><rsup|\<beta\>>-R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>x<rsub|i><rsup|\<beta\>>|]><rsup|2>+<around*|[|R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>
+    x<rsub|i+1><rsup|\<beta\>>-R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>x<rsub|i><rsup|\<beta\>>|]>
+    R<rsub|\<alpha\>\<beta\><rprime|'>><around*|(|x<rsub|i>|)>f<rsup|\<beta\><rprime|'>><around*|(|x<rsub|i>|)>+\<Delta\>t
+    <around*|[|R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>f<rsup|\<beta\>><around*|(|x<rsub|i>|)>|]><rsup|2>+\<omicron\><around*|(|\<Delta\>t|)>>>>>
+  </align>
+
+  Expanding
+
+  <\align>
+    <tformat|<table|<row|<cell|R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>=>|<cell|R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i+1>|)>-<around*|[|R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i+1>|)>-R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>|]>>>|<row|<cell|=>|<cell|R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i+1>|)>-\<partial\><rsub|\<gamma\>>R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)><around*|(|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>|)>-<frac|1|2>\<partial\><rsub|\<gamma\>>\<partial\><rsub|\<gamma\><rprime|'>>R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)><around*|(|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>|)><around*|(|x<rsub|i+1><rsup|\<gamma\><rprime|'>>-x<rsub|i><rsup|\<gamma\><rprime|'>>|)>>>|<row|<cell|>|<cell|+<with|font|cal|O><around*|(|<around*|\<\|\|\>|x<rsub|i+1>-x<rsub|i>|\<\|\|\>><rsup|3>|)>.>>>>
+  </align>
+
+  We have
+
+  <\equation*>
+    <align|<tformat|<table|<row|<cell|>|<cell|-<frac|1|2\<Delta\>t>
+    <around*|[|R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>
+    x<rsub|i+1><rsup|\<beta\>>-R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>x<rsub|i><rsup|\<beta\>>-\<Delta\>t
+    R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>f<rsup|\<beta\>><around*|(|x<rsub|i>|)>|]><rsup|2>+\<omicron\><around*|(|\<Delta\>t|)>>>|<row|<cell|=>|<cell|-<frac|1|2\<Delta\>t>
+    <around*|[|R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i+1>|)>
+    x<rsub|i+1><rsup|\<beta\>>-R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>x<rsub|i><rsup|\<beta\>>-\<Delta\>t
+    R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>f<rsup|\<beta\>><around*|(|x<rsub|i>|)>-\<partial\><rsub|\<gamma\>>R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)><around*|(|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>|)>x<rsub|i+1><rsup|\<beta\>>-<frac|1|2>\<partial\><rsub|\<gamma\>>\<partial\><rsub|\<gamma\><rprime|'>>R<rsub|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)><around*|(|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>|)><around*|(|x<rsub|i+1><rsup|\<gamma\><rprime|'>>-x<rsub|i><rsup|\<gamma\><rprime|'>>|)>x<rsub|i+1><rsup|\<beta\>>|]><rsup|2>+\<omicron\><around*|(|\<Delta\>t|)>>>|<row|<cell|=>|<cell|-<frac|1|2\<Delta\>t>
+    <around*|[|R<around*|(|x<rsub|i+1>|)>
+    x<rsub|i+1>-R<around*|(|x<rsub|i>|)>x<rsub|i>|]><rsup|2>+>>|<row|<cell|+>|<cell|<frac|1|\<Delta\>t><around*|[|R<around*|(|x<rsub|i+1>|)>
+    x<rsub|i+1>-R<around*|(|x<rsub|i>|)>x<rsub|i>|]> <around*|[|\<Delta\>t
+    R<around*|(|x<rsub|i>|)>f<around*|(|x<rsub|i>|)>+\<partial\><rsub|\<gamma\>>R<around*|(|x<rsub|i>|)>x<rsub|i+1><around*|(|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>|)>+<frac|1|2>\<partial\><rsub|\<gamma\>>\<partial\><rsub|\<gamma\><rprime|'>>R<around*|(|x<rsub|i>|)>x<rsub|i+1><around*|(|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>|)><around*|(|x<rsub|i+1><rsup|\<gamma\><rprime|'>>-x<rsub|i><rsup|\<gamma\><rprime|'>>|)>|]>>>|<row|<cell|+>|<cell|<frac|1|2\<Delta\>t><around*|[|\<Delta\>t
+    R<around*|(|x<rsub|i>|)>f<around*|(|x<rsub|i>|)>+\<partial\><rsub|\<gamma\>>R<around*|(|x<rsub|i>|)>x<rsub|i+1><around*|(|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>|)>+<frac|1|2>\<partial\><rsub|\<gamma\>>\<partial\><rsub|\<gamma\><rprime|'>>R<around*|(|x<rsub|i>|)>x<rsub|i+1><around*|(|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>|)><around*|(|x<rsub|i+1><rsup|\<gamma\><rprime|'>>-x<rsub|i><rsup|\<gamma\><rprime|'>>|)>|]><rsup|2>>>>>>
+  </equation*>
+
+  <math|\<partial\><rsub|\<gamma\>>ln R<around*|(|x|)>=<frac|\<partial\><rsub|\<gamma\>>R<around*|(|x|)>|R<around*|(|x|)>>>,
+  <math|\<partial\><rsub|\<gamma\>>\<partial\><rsub|\<gamma\><rprime|'>>ln
+  R<around*|(|x|)>=<frac|\<partial\><rsub|\<gamma\>>\<partial\><rsub|\<gamma\><rprime|'>>R<around*|(|x|)>|R<around*|(|x|)>>-<frac|\<partial\><rsub|\<gamma\>>R<around*|(|x|)>\<partial\><rsub|\<gamma\><rprime|'>>R<around*|(|x|)>|R<rsup|2><around*|(|x|)>>>.
+
+  \;
+
   <subsection|Coordinate Transformation>
 
   TODO: Can we absorb the <math|R> matrix by coordinate transformation? First
@@ -539,31 +650,23 @@
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-2|<tuple|1.1|1>>
     <associate|auto-3|<tuple|1.2|1>>
-    <associate|auto-4|<tuple|1.3|3>>
-    <associate|auto-5|<tuple|1.4|5>>
-    <associate|auto-6|<tuple|1.5|7>>
-    <associate|auto-7|<tuple|1.5.1|7>>
-    <associate|auto-8|<tuple|1.5.2|8>>
-    <associate|auto-9|<tuple|1.6.2|8>>
-    <associate|equation:langevin action|<tuple|1|1>>
-    <associate|equation:path integral step 1|<tuple|3|6>>
-    <associate|equation:rg action|<tuple|3|3>>
-    <associate|equation:rg integral|<tuple|4|3>>
+    <associate|auto-4|<tuple|1.3|2>>
+    <associate|auto-5|<tuple|1.4|3>>
+    <associate|auto-6|<tuple|1.5|5>>
+    <associate|auto-7|<tuple|1.6|5>>
+    <associate|auto-8|<tuple|1.6.1|6>>
+    <associate|auto-9|<tuple|1.6.2|6>>
+    <associate|equation:langevin action|<tuple|1|2>>
+    <associate|equation:path integral step 1|<tuple|3|4>>
     <associate|equation:susy transformation|<tuple|2|2>>
-    <associate|footnote-1|<tuple|1|2>>
-    <associate|footnote-2|<tuple|2|3>>
-    <associate|footnote-3|<tuple|3|5>>
-    <associate|footnote-4|<tuple|4|6>>
-    <associate|footnote-5|<tuple|5|8>>
-    <associate|footnr-1|<tuple|1|2>>
-    <associate|footnr-2|<tuple|2|3>>
-    <associate|footnr-3|<tuple|3|5>>
-    <associate|footnr-4|<tuple|4|6>>
-    <associate|footnr-5|<tuple|5|8>>
-    <associate|section: How Far Will Information Propagate in Markovian
-    Process?|<tuple|1.3|3>>
+    <associate|footnote-1|<tuple|1|3>>
+    <associate|footnote-2|<tuple|2|4>>
+    <associate|footnote-3|<tuple|3|6>>
+    <associate|footnr-1|<tuple|1|3>>
+    <associate|footnr-2|<tuple|2|4>>
+    <associate|footnr-3|<tuple|3|6>>
     <associate|section: Master Equation on Euclidean Alphabet Can Be
-    Formulated as Path Integral|<tuple|1.3|5>>
+    Formulated as Path Integral|<tuple|1.4|3>>
   </collection>
 </references>
 
@@ -574,17 +677,16 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1><vspace|0.5fn>
 
-      <with|par-left|<quote|1tab>|1.1<space|2spc>Coordinate Transformation
+      <with|par-left|<quote|1tab>|1.1<space|2spc>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-2>>
 
-      <with|par-left|<quote|1tab>|1.2<space|2spc>Super-symmetry in Langevin
-      Process (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.2<space|2spc>Coordinate Transformation
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-3>>
 
-      <with|par-left|<quote|1tab>|1.3<space|2spc>How Far Will Information
-      Propagate in Markovian Process? (TODO)
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.3<space|2spc>Super-symmetry in Langevin
+      Process (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-4>>
 
       <with|par-left|<quote|1tab>|1.4<space|2spc>Master Equation on Euclidean
