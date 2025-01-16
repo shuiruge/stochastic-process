@@ -150,17 +150,16 @@
 
   <chapter*|Preface>
 
-  This is a little book about stochastic process. We starts with the
-  axiomatic system of information (chapter <reference|section: Relative
-  Entropy>). Then using information, we introduce the continuous-time
-  Markovian process, and show how it relax to equilibrium (chapter
-  <reference|section: Master Equation and Detailed Balance>). We then move on
-  to add spatial smoothness to Markovian process, which results in many
-  interesting results including Langevin process (chapter <reference|section:
-  Kramers-Moyal Expansion and Langevin Process>). In the end, we generalize
-  least-action principle to distribution and discuss the propagation of
-  information in Langevin process (chapter <reference|section: Least-Action
-  Principle>).
+  This is a little book about stochastic process. We start with the axiomatic
+  system of information (chapter <reference|section: Relative Entropy>). Then
+  using information, we introduce the continuous-time Markovian process, and
+  show how it relax to equilibrium (chapter <reference|section: Master
+  Equation and Detailed Balance>). We then move on to add spatial smoothness
+  to Markovian process, which results in many interesting results including
+  Langevin process (chapter <reference|section: Kramers-Moyal Expansion and
+  Langevin Process>). In the end, we generalize least-action principle to
+  distribution and discuss the propagation of information in Langevin process
+  (chapter <reference|section: Least-Action Principle>).
 
   The mathematical techniques employed here will not go beyond the basic
   calculus and linear algebra. We try to make it self-contained, and
