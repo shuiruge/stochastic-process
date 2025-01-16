@@ -167,8 +167,11 @@
   introduce new concept or technique only when it is essential. Statements
   like \Pobviously<text-dots>\Q and \Papparently<text-dots>\Q are avoided;
   and we try to display all the steps of calculation without omitting any of
-  them. For each section, the title is a sentence that briefly summarizes the
-  whole section.
+  them.
+
+  For each section, the title is a sentence that briefly summarizes the whole
+  section. We use bold font for <strong|definition> and italic font for
+  <em|emphasis>.
 
   <chapter|Relative Entropy><label|section: Relative Entropy>
 
