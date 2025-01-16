@@ -177,7 +177,8 @@
   <hlink|GPLv3|https://www.gnu.org/licenses/gpl-3.0.en.html>
   license.<\footnote>
     Footnotes in the HTML export of <TeX>macs are problematic. The content of
-    footnote is incorrectly placed in front of the main text.
+    footnote is incorrectly placed in front of the footnote label in the main
+    text.
   </footnote>
 
   <chapter|Relative Entropy><label|section: Relative Entropy>
