@@ -164,9 +164,9 @@
 
   The mathematical techniques employed here will not go beyond the basic
   calculus and linear algebra. We try to make it self-contained, and
-  introduce new concept or technique only when it is essential. Statement
-  like \Pobviously<text-dots>\Q or \Papparently<text-dots>\Q are avoided; and
-  we try to display all the steps of calculation without omitting any of
+  introduce new concept or technique only when it is essential. Statements
+  like \Pobviously<text-dots>\Q and \Papparently<text-dots>\Q are avoided;
+  and we try to display all the steps of calculation without omitting any of
   them. For each section, the title is a sentence that briefly summarizes the
   whole section.
 
