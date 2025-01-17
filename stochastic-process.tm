@@ -4277,12 +4277,9 @@
   x<rsup|\<beta\>>>, where <math|A\<in\>\<bbb-R\><rsup|d\<times\>d>>. Then,
   initially we have <math|\<varphi\><rsub|\<alpha\>><around*|(|x<rsub|i+1>,x<rsub|i>|)>=A<rsub|\<alpha\>\<beta\>>
   x<rsub|i><rsup|\<beta\>>> and <math|\<xi\><rsub|\<alpha\>><around*|(|x<rsub|i+1>,x<rsub|i>|)>=<around*|(|A<rsub|\<alpha\>A\<beta\>>
-  x<rsub|i><rsup|\<beta\>>|)><rsup|2>/2>. For simplicity, we assume that
-  <math|<around*|\<\|\|\>|A|\<\|\|\>>\<ll\>1> so that we can neglect
-  <math|\<xi\>>, which is <math|<with|font|cal|O><around*|(|<around*|\<\|\|\>|A|\<\|\|\>><rsup|2>|)>>,
-  and focus on the iteration of <math|\<varphi\>> (namely, equation
-  <reference|equation:rg transform 2>). The generic form of <math|\<varphi\>>
-  is
+  x<rsub|i><rsup|\<beta\>>|)><rsup|2>/2>. We focus on the iteration of
+  <math|\<varphi\>> (namely, equation <reference|equation:rg transform 2>).
+  The generic form of <math|\<varphi\>> is
 
   <\equation*>
     \<varphi\><rsub|\<alpha\>><around*|(|x<rsub|i+1>,x<rsub|i>|)>=u
