@@ -151,7 +151,7 @@
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-37>>
 
-    4.8<space|2spc>Example: Linear System Is Not Scale-Invariant
+    4.8<space|2spc>Example: Linear System Cannot Be Scale-Invariant
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-38>
   </table-of-contents>
@@ -4270,7 +4270,7 @@
     </align>
   </small>
 
-  <section|Example: Linear System Is Not Scale-Invariant>
+  <section|Example: Linear System Cannot Be Scale-Invariant>
 
   As an example, consider the linear function
   <math|f<rsub|\<alpha\>><around*|(|x|)>=A<rsub|\<alpha\>\<beta\>>
@@ -4692,7 +4692,7 @@
       Method <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-37>>
 
-      4.8<space|2spc>Example: Linear System Is Not Scale-Invariant
+      4.8<space|2spc>Example: Linear System Cannot Be Scale-Invariant
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-38>
     </associate>
