@@ -188,15 +188,15 @@
       </p>
       <p>
         4.7<span style="margin-left: 1em"></span>How Far Will Information Propagate in Langevin
-        Process? <span style="margin-left: 5mm"></span> <a href="#auto-33">43</a>
+        Process? <span style="margin-left: 5mm"></span> <a href="#auto-33">44</a>
       </p>
       <p>
         4.7.1<span style="margin-left: 1em"></span>Effective Action and Renormalization Group
         <span style="margin-left: 5mm"></span> <a href="#auto-34">44</a>
       </p>
       <p>
-        4.7.2<span style="margin-left: 1em"></span>Example: Linear Function <span style="margin-left: 5mm"></span>
-        <a href="#auto-35">45</a>
+        4.7.2<span style="margin-left: 1em"></span>Example: When \(f\) Is Linear <span style="margin-left: 5mm"></span>
+        <a href="#auto-35">46</a>
       </p>
       <p>
         4.7.3<span style="margin-left: 1em"></span>* Appendix: Perturbative Method <span style="margin-left: 5mm"></span>
@@ -217,7 +217,11 @@
     </p>
     <p>
       The mathematical techniques employed here will not go beyond the basic
-      calculus and linear algebra. We try to make it self-contained, and
+      calculus (Taylor expansion, improper integral, and integration by parts)
+      and linear algebra (matrix manipulations, orthogonal diagonalization,
+      and determinant). Knowing the basic probability theory (normal
+      distribution and Gaussian integral) and Fourier transformation (its
+      definition) will be helpful. We try to make it self-contained, and
       introduce new concept or technique only when it is essential. Statements
       like &ldquo;obviously<span style="margin-left: 0.16665em"></span>.<span style="margin-left: 0.16665em"></span>.<span
       style="margin-left: 0.16665em"></span>.<span style="margin-left: 0.16665em"></span>&rdquo; and &ldquo;apparently<span
@@ -4984,7 +4988,7 @@ x_{2 i}) + \varphi
       </tr>
     </table></font>
     <p>
-      So, we arrive at
+      So, up to an irrelevant constant term, we arrive at
     </p>
     <table width="100%">
       <tr>
@@ -5007,14 +5011,70 @@ x_{2 i}) + \varphi
       and <a href="#equation:rg transform 4">4.22</a> are called <strong>renormalization group
       equations</strong>.
     </p>
-    <h3 id="auto-35">4.7.2<span style="margin-left: 1em"></span>Example: Linear Function<span style="margin-left: 1em"></span></h3>
+    <p>
+      The distance that information propagates is reflected by the
+      &ldquo;normalized&rdquo; correlation (also called Pearson coefficient)
+    </p>
+    <center>
+      \(\displaystyle \operatorname{Corr} (X_0^{\alpha}, X^{\beta}_{2^n})
+      :=
+\frac{\operatorname{Cov}
+      (X_0^{\alpha},
+X^{\beta}_{2^n})}{\sqrt{\operatorname{Cov} (X_0^{\alpha},
+      X^{\alpha}_0)}
+\sqrt{\operatorname{Cov} (X_{2^n}^{\beta},
+      X^{\beta}_{2^n})}},\)
+    </center>
+    <p>
+      with the &ldquo;un-normalized&rdquo; covariance given by
+    </p>
+    <center>
+      \(\displaystyle \operatorname{Cov} (X_0^{\alpha}, X^{\beta}_{2^n}) :=
+      \int_{\mathbb{R}^d}
+\mathrm{d} x_0  \int_{\mathbb{R}^d} \mathrm{d}
+      x_{2^n} \exp (- S (x))
+x_0^{\alpha} x_{2^n}^{\beta} .\)
+    </center>
+    <p>
+      If this value approximates to zero, then the correlation between indices
+      \(0\) and \(2^n\) is negligible, indicating that information cannot
+      propagate that far. Otherwise, information can propagate from \(0\) to
+      \(2^n\) so that they can be correlated.
+    </p>
+    <p>
+      To calculate correlation, we first marginalize the indices between \(0\)
+      and \(2^n\) using renormalization group equations, which requires \(n\)
+      iterations. At each iteration,
+    </p>
+    <center>
+      \(\displaystyle \int_{\mathbb{R}^d} \mathrm{d} x_0  \int_{\mathbb{R}^d}
+      \mathrm{d} x_{2^n}
+\exp (- S (x)) x_0^{\alpha} x_{2^n}^{\beta} = 2
+      \times \int_{\mathbb{R}^d}
+\mathrm{d} x'_0  \int_{\mathbb{R}^d}
+      \mathrm{d} x'_{2^{n - 1}} \exp (- S'
+(x')) {x'_0}^{\alpha}
+      {x'}^{\beta}_{2^{n - 1}} .\)
+    </center>
+    <p>
+      where the factor \(2\) comes from \(x_{2 i} = \sqrt{2} x'_i\). The
+      iteration of \(S'\) can be very complicated such that only numerical
+      computation is possible. But, there is a special situation where the
+      iteration result in a fixed point, namely \(\varphi' = \varphi\) and
+      \(\xi' = \xi\), thus \(S' = S\). The expression of action then keeps
+      invariant. The system becomes self-similar, and the correlation becomes
+      invariant during the iteration. In this situation, we call the system is
+      <strong>scale-invariant</strong> or <strong>scale-free</strong>.
+    </p>
+    <h3 id="auto-35">4.7.2<span style="margin-left: 1em"></span>Example: When \(f\) Is Linear<span style="margin-left: 1em"></span></h3>
     <p>
       As an example, consider the linear function \(f_{\alpha} (x) = A_{\alpha
       \beta} x^{\beta}\), where \(A \in \mathbb{R}^{d \times d}\). Then,
       initially we have \(\varphi_{\alpha} (x_{i + 1}, x_i) = A_{\alpha \beta}
-      x_i^{\beta}\) and \(\xi_{\alpha} (x_{i + 1}, x_i) = (A_{\alpha \beta}
-      x_i^{\beta})^2 / 2\). We focus on the iteration of \(\varphi\) (namely,
-      equation <a href="#equation:rg transform 2">4.20</a>). The generic form of \(\varphi\) is
+      x_i^{\beta}\) and \(\xi_{\alpha} (x_{i + 1}, x_i) = (A_{\alpha A \beta}
+      x_i^{\beta})^2 / 2\). For simplicity, we assume that \(\| A \| \ll 1\)
+      so that we can neglect \(\xi\) and focus on the iteration of \(\varphi\)
+      (namely, equation <a href="#equation:rg transform 2">4.20</a>). The generic form of \(\varphi\) is
     </p>
     <center>
       \(\displaystyle \varphi_{\alpha} (x_{i + 1}, x_i) = u A_{\alpha \beta}

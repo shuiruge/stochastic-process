@@ -139,8 +139,8 @@
     Group <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-34>>
 
-    <with|par-left|1tab|4.7.2<space|2spc>Example: Linear Function
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <with|par-left|1tab|4.7.2<space|2spc>Example: When <with|mode|math|f> Is
+    Linear <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-35>>
 
     <with|par-left|1tab|4.7.3<space|2spc>* Appendix: Perturbative Method
@@ -162,11 +162,14 @@
   (chapter <reference|section: Least-Action Principle>).
 
   The mathematical techniques employed here will not go beyond the basic
-  calculus and linear algebra. We try to make it self-contained, and
-  introduce new concept or technique only when it is essential. Statements
-  like \Pobviously<text-dots>\Q and \Papparently<text-dots>\Q are avoided;
-  and we try to display all the steps of calculation without omitting any of
-  them.
+  calculus (Taylor expansion, improper integral, and integration by parts)
+  and linear algebra (matrix manipulations, orthogonal diagonalization, and
+  determinant). Knowing the basic probability theory (normal distribution and
+  Gaussian integral) and Fourier transformation (its definition) will be
+  helpful. We try to make it self-contained, and introduce new concept or
+  technique only when it is essential. Statements like
+  \Pobviously<text-dots>\Q and \Papparently<text-dots>\Q are avoided; and we
+  try to display all the steps of calculation without omitting any of them.
 
   For each section, the title is a sentence that briefly summarizes the whole
   section. We use bold font for <strong|definition> and italic font for
@@ -3993,7 +3996,7 @@
     </equation>
   </small>
 
-  So, we arrive at
+  So, up to an irrelevant constant term, we arrive at
 
   <\equation>
     S<rprime|'><around*|(|x<rprime|'>|)>=<big|sum><rsub|i=-\<infty\>><rsup|+\<infty\>><big|sum><rsub|\<alpha\>=1><rsup|n><around*|[|<frac|1|2\<epsilon\>><around*|(|x<rprime|'><rsup|\<alpha\>><rsub|i+1>-
@@ -4009,16 +4012,63 @@
   <reference|equation:rg transform 3>, and <reference|equation:rg transform
   4> are called <strong|renormalization group equations>.
 
-  <subsection|Example: Linear Function>
+  The distance that information propagates is reflected by the \Pnormalized\Q
+  correlation (also called Pearson coefficient)
+
+  <\equation*>
+    Corr<around*|(|X<rsub|0><rsup|\<alpha\>>,X<rsup|\<beta\>><rsub|2<rsup|n>>|)>\<assign\><frac|Cov<around*|(|X<rsub|0><rsup|\<alpha\>>,X<rsup|\<beta\>><rsub|2<rsup|n>>|)>|<sqrt|Cov<around*|(|X<rsub|0><rsup|\<alpha\>>,X<rsup|\<alpha\>><rsub|0>|)>><sqrt|Cov<around*|(|X<rsub|2<rsup|n>><rsup|\<beta\>>,X<rsup|\<beta\>><rsub|2<rsup|n>>|)>>>,
+  </equation*>
+
+  with the \Pun-normalized\Q covariance given by
+
+  <\equation*>
+    Cov<around*|(|X<rsub|0><rsup|\<alpha\>>,X<rsup|\<beta\>><rsub|2<rsup|n>>|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|0>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|2<rsup|n>>
+    exp<around*|(|-S<around*|(|x|)>|)> x<rsub|0><rsup|\<alpha\>>
+    x<rsub|2<rsup|n>><rsup|\<beta\>>.
+  </equation*>
+
+  If this value approximates to zero, then the correlation between indices
+  <math|0> and <math|2<rsup|n>> is negligible, indicating that information
+  cannot propagate that far. Otherwise, information can propagate from
+  <math|0> to <math|2<rsup|n>> so that they can be correlated.
+
+  To calculate correlation, we first marginalize the indices between <math|0>
+  and <math|2<rsup|n>> using renormalization group equations, which requires
+  <math|n> iterations. At each iteration,
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|0>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|2<rsup|n>>
+    exp<around*|(|-S<around*|(|x|)>|)> x<rsub|0><rsup|\<alpha\>>
+    x<rsub|2<rsup|n>><rsup|\<beta\>>=2\<times\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rprime|'><rsub|0>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rprime|'><rsub|2<rsup|n-1>>
+    exp<around*|(|-S<rprime|'><around*|(|x<rprime|'>|)>|)>
+    x<rprime|'><rsub|0><rsup|\<alpha\>> x<rprime|'><rsup|\<beta\>><rsub|2<rsup|n-1>>.
+  </equation*>
+
+  where the factor <math|2> comes from <math|x<rsub|2i>=<sqrt|2>
+  x<rprime|'><rsub|i>>. The iteration of <math|S<rprime|'>> can be very
+  complicated such that only numerical computation is possible. But, there is
+  a special situation where the iteration result in a fixed point, namely
+  <math|\<varphi\><rprime|'>=\<varphi\>> and <math|\<xi\><rprime|'>=\<xi\>>,
+  thus <math|S<rprime|'>=S>. The expression of action then keeps invariant.
+  The system becomes self-similar, and the correlation becomes invariant
+  during the iteration. In this situation, we call the system is
+  <strong|scale-invariant> or <strong|scale-free>.
+
+  <subsection|Example: When <math|f> Is Linear>
 
   As an example, consider the linear function
   <math|f<rsub|\<alpha\>><around*|(|x|)>=A<rsub|\<alpha\>\<beta\>>
   x<rsup|\<beta\>>>, where <math|A\<in\>\<bbb-R\><rsup|d\<times\>d>>. Then,
   initially we have <math|\<varphi\><rsub|\<alpha\>><around*|(|x<rsub|i+1>,x<rsub|i>|)>=A<rsub|\<alpha\>\<beta\>>
-  x<rsub|i><rsup|\<beta\>>> and <math|\<xi\><rsub|\<alpha\>><around*|(|x<rsub|i+1>,x<rsub|i>|)>=<around*|(|A<rsub|\<alpha\>\<beta\>>
-  x<rsub|i><rsup|\<beta\>>|)><rsup|2>/2>. We focus on the iteration of
-  <math|\<varphi\>> (namely, equation <reference|equation:rg transform 2>).
-  The generic form of <math|\<varphi\>> is
+  x<rsub|i><rsup|\<beta\>>> and <math|\<xi\><rsub|\<alpha\>><around*|(|x<rsub|i+1>,x<rsub|i>|)>=<around*|(|A<rsub|\<alpha\>A\<beta\>>
+  x<rsub|i><rsup|\<beta\>>|)><rsup|2>/2>. For simplicity, we assume that
+  <math|<around*|\<\|\|\>|A|\<\|\|\>>\<ll\>1> so that we can neglect
+  <math|\<xi\>> and focus on the iteration of <math|\<varphi\>> (namely,
+  equation <reference|equation:rg transform 2>). The generic form of
+  <math|\<varphi\>> is
 
   <\equation*>
     \<varphi\><rsub|\<alpha\>><around*|(|x<rsub|i+1>,x<rsub|i>|)>=u
@@ -4602,7 +4652,8 @@
       Renormalization Group <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-34>>
 
-      <with|par-left|<quote|1tab>|4.7.2<space|2spc>Example: Linear Function
+      <with|par-left|<quote|1tab>|4.7.2<space|2spc>Example: When
+      <with|mode|<quote|math>|f> Is Linear
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-35>>
 
