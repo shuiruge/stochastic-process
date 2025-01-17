@@ -4012,50 +4012,62 @@
   <reference|equation:rg transform 3>, and <reference|equation:rg transform
   4> are called <strong|renormalization group equations>.
 
-  The distance that information propagates is reflected by the \Pnormalized\Q
-  correlation (also called Pearson coefficient)
+  We have derived the renormalization group technique. Now we use it to study
+  the information propagation. The distance that information propagates is
+  reflected by the \Pnormalized\Q correlation (also called Pearson
+  coefficient)
 
   <\equation*>
-    Corr<around*|(|X<rsub|0><rsup|\<alpha\>>,X<rsup|\<beta\>><rsub|2<rsup|n>>|)>\<assign\><frac|Cov<around*|(|X<rsub|0><rsup|\<alpha\>>,X<rsup|\<beta\>><rsub|2<rsup|n>>|)>|<sqrt|Cov<around*|(|X<rsub|0><rsup|\<alpha\>>,X<rsup|\<alpha\>><rsub|0>|)>><sqrt|Cov<around*|(|X<rsub|2<rsup|n>><rsup|\<beta\>>,X<rsup|\<beta\>><rsub|2<rsup|n>>|)>>>,
+    Corr<around*|(|X<rsub|0><rsup|\<alpha\>>,X<rsup|\<beta\>><rsub|2<rsup|n>>|)>\<assign\><frac|Cov<around*|(|X<rsub|0><rsup|\<alpha\>>,X<rsup|\<beta\>><rsub|2<rsup|n>>|)>|<sqrt|Cov<around*|(|X<rsub|0><rsup|\<alpha\>>,X<rsup|\<alpha\>><rsub|0>|)>><sqrt|Cov<around*|(|X<rsub|2<rsup|n>><rsup|\<beta\>>,X<rsup|\<beta\>><rsub|2<rsup|n>>|)>>>.
   </equation*>
 
-  with the \Pun-normalized\Q covariance given by
+  As usual, the covariance is given by
 
   <\equation*>
-    Cov<around*|(|X<rsub|0><rsup|\<alpha\>>,X<rsup|\<beta\>><rsub|2<rsup|n>>|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|0>
+    Cov<around*|(|X<rsub|0><rsup|\<alpha\>>,X<rsup|\<beta\>><rsub|2<rsup|n>>|)>\<assign\><frac|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|0>
     <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|2<rsup|n>>
-    exp<around*|(|-S<around*|(|x|)>|)> x<rsub|0><rsup|\<alpha\>>
-    x<rsub|2<rsup|n>><rsup|\<beta\>>.
+    exp<around*|(|-S<around*|(|x|)>|)>|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|0><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|2<rsup|n>>
+    exp<around*|(|-S<around*|(|y|)>|)>><around*|(|x<rsub|0><rsup|\<alpha\>>-\<bbb-E\><around*|[|X<rsub|0><rsup|\<alpha\>>|]>|)>
+    <around*|(|x<rsub|2<rsup|n>><rsup|\<beta\>>-\<bbb-E\><around*|[|X<rsub|2<rsup|n>><rsup|\<beta\>>|]>|)>,
   </equation*>
 
-  If this value approximates to zero, then the correlation between indices
-  <math|0> and <math|2<rsup|n>> is negligible, indicating that information
-  cannot propagate that far. Otherwise, information can propagate from
-  <math|0> to <math|2<rsup|n>> so that they can be correlated.
+  in which the expectation is
+
+  <\equation*>
+    \<bbb-E\><around*|[|X<rsub|i><rsup|\<alpha\>>|]>\<assign\><frac|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|i>
+    exp<around*|(|-S<around*|(|x|)>|)>|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|i>
+    exp<around*|(|-S<around*|(|y|)>|)>>x<rsub|i><rsup|\<alpha\>>.
+  </equation*>
+
+  The denominators in covariance and expectation are used for eliminating the
+  irrelevant constant term in <math|S>. If the correlation
+  <math|Corr<around*|(|X<rsub|0><rsup|\<alpha\>>,X<rsup|\<beta\>><rsub|2<rsup|n>>|)>>
+  does not tend to zero, then information can propagate between indices
+  <math|0> and <math|2<rsup|n>> so that they can be correlated.
 
   To calculate correlation, we first marginalize the indices between <math|0>
   and <math|2<rsup|n>> using renormalization group equations, which requires
-  <math|n> iterations. At each iteration,
+  <math|n> iterations. At each iteration, for example, the expatiation
+  becomes
 
   <\equation*>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|0>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|2<rsup|n>>
-    exp<around*|(|-S<around*|(|x|)>|)> x<rsub|0><rsup|\<alpha\>>
-    x<rsub|2<rsup|n>><rsup|\<beta\>>=2\<times\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rprime|'><rsub|0>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rprime|'><rsub|2<rsup|n-1>>
-    exp<around*|(|-S<rprime|'><around*|(|x<rprime|'>|)>|)>
-    x<rprime|'><rsub|0><rsup|\<alpha\>> x<rprime|'><rsup|\<beta\>><rsub|2<rsup|n-1>>.
+    <frac|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|i>
+    exp<around*|(|-S<around*|(|x|)>|)>|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|i>
+    exp<around*|(|-S<around*|(|y|)>|)>>x<rsub|i><rsup|\<alpha\>>=<sqrt|2>\<times\><frac|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rprime|'><rsub|i>
+    exp<around*|(|-S<rprime|'><around*|(|x<rprime|'>|)>|)>|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rprime|'><rsub|i>
+    exp<around*|(|-S<rprime|'><around*|(|y<rprime|'>|)>|)>>x<rprime|'><rsub|i><rsup|\<alpha\>>.
   </equation*>
 
-  where the factor <math|2> comes from <math|x<rsub|2i>=<sqrt|2>
+  where the factor <math|<sqrt|2>> comes from <math|x<rsub|2i>=<sqrt|2>
   x<rprime|'><rsub|i>>. The iteration of <math|S<rprime|'>> can be very
   complicated such that only numerical computation is possible. But, there is
   a special situation where the iteration result in a fixed point, namely
   <math|\<varphi\><rprime|'>=\<varphi\>> and <math|\<xi\><rprime|'>=\<xi\>>,
-  thus <math|S<rprime|'>=S>. The expression of action then keeps invariant.
-  The system becomes self-similar, and the correlation becomes invariant
-  during the iteration. In this situation, we call the system is
-  <strong|scale-invariant> or <strong|scale-free>.
+  thus <math|S<rprime|'>=S> after an iteration. The expression of action then
+  keeps invariant during iteration, so is the correlation. In this situation,
+  we call the system <strong|self-similar>, <strong|scale-invariant>, or
+  <strong|scale-free>. The information can be propagated to infinity without
+  loosing. An ideal communication system.
 
   <subsection|Example: When <math|f> Is Linear>
 
@@ -4349,9 +4361,9 @@
     <associate|auto-30|<tuple|4.5|41>>
     <associate|auto-31|<tuple|4.6|42>>
     <associate|auto-32|<tuple|4.1|43>>
-    <associate|auto-33|<tuple|4.7|43>>
+    <associate|auto-33|<tuple|4.7|44>>
     <associate|auto-34|<tuple|4.7.1|44>>
-    <associate|auto-35|<tuple|4.7.2|45>>
+    <associate|auto-35|<tuple|4.7.2|46>>
     <associate|auto-36|<tuple|4.7.3|46>>
     <associate|auto-4|<tuple|1.2|9>>
     <associate|auto-5|<tuple|1.3|10>>
@@ -4368,8 +4380,8 @@
     <associate|equation:berezin integral exp|<tuple|4.4|37>>
     <associate|equation:berezin integral measurement|<tuple|4.6|38>>
     <associate|equation:circle|<tuple|2.15|23>>
-    <associate|equation:data-fitting iteration|<tuple|4.15|42>>
-    <associate|equation:data-fitting result|<tuple|4.16|42>>
+    <associate|equation:data-fitting iteration|<tuple|4.15|43>>
+    <associate|equation:data-fitting result|<tuple|4.16|43>>
     <associate|equation:define stationary density function|<tuple|2.14|23>>
     <associate|equation:detailed balance condition for
     Langevin|<tuple|3.6|34>>
@@ -4457,7 +4469,7 @@
     <associate|section: Example: Metropolis-Hastings
     Algorithm|<tuple|2.7|22>>
     <associate|section: How Far Will Information Propagate in Langevin
-    Process?|<tuple|4.7|43>>
+    Process?|<tuple|4.7|44>>
     <associate|section: Kramers\UMoyal Expansion Formulates Transition Rate
     by Its Moments|<tuple|3.3|29>>
     <associate|section: Kramers-Moyal Expansion and Langevin

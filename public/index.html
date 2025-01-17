@@ -188,7 +188,7 @@
       </p>
       <p>
         4.7<span style="margin-left: 1em"></span>How Far Will Information Propagate in Langevin
-        Process? <span style="margin-left: 5mm"></span> <a href="#auto-33">44</a>
+        Process? <span style="margin-left: 5mm"></span> <a href="#auto-33">43</a>
       </p>
       <p>
         4.7.1<span style="margin-left: 1em"></span>Effective Action and Renormalization Group
@@ -5012,8 +5012,10 @@ x_{2 i}) + \varphi
       equations</strong>.
     </p>
     <p>
-      The distance that information propagates is reflected by the
-      &ldquo;normalized&rdquo; correlation (also called Pearson coefficient)
+      We have derived the renormalization group technique. Now we use it to
+      study the information propagation. The distance that information
+      propagates is reflected by the &ldquo;normalized&rdquo; correlation
+      (also called Pearson coefficient)
     </p>
     <center>
       \(\displaystyle \operatorname{Corr} (X_0^{\alpha}, X^{\beta}_{2^n})
@@ -5023,48 +5025,65 @@ x_{2 i}) + \varphi
 X^{\beta}_{2^n})}{\sqrt{\operatorname{Cov} (X_0^{\alpha},
       X^{\alpha}_0)}
 \sqrt{\operatorname{Cov} (X_{2^n}^{\beta},
-      X^{\beta}_{2^n})}},\)
+      X^{\beta}_{2^n})}} .\)
     </center>
     <p>
-      with the &ldquo;un-normalized&rdquo; covariance given by
+      As usual, the covariance is given by
     </p>
     <center>
-      \(\displaystyle \operatorname{Cov} (X_0^{\alpha}, X^{\beta}_{2^n}) :=
+      \(\displaystyle \operatorname{Cov} (X_0^{\alpha}, X^{\beta}_{2^n})
+      :=
+\frac{\int_{\mathbb{R}^d} \mathrm{d} x_0  \int_{\mathbb{R}^d}
+      \mathrm{d}
+x_{2^n} \exp (- S (x))}{\int_{\mathbb{R}^d} \mathrm{d} y_0
       \int_{\mathbb{R}^d}
-\mathrm{d} x_0  \int_{\mathbb{R}^d} \mathrm{d}
-      x_{2^n} \exp (- S (x))
-x_0^{\alpha} x_{2^n}^{\beta} .\)
+\mathrm{d} y_{2^n} \exp (- S (y))} (x_0^{\alpha}
+      -\mathbb{E} [X_0^{\alpha}]) 
+(x_{2^n}^{\beta} -\mathbb{E}
+      [X_{2^n}^{\beta}]),\)
     </center>
     <p>
-      If this value approximates to zero, then the correlation between indices
-      \(0\) and \(2^n\) is negligible, indicating that information cannot
-      propagate that far. Otherwise, information can propagate from \(0\) to
-      \(2^n\) so that they can be correlated.
+      in which the expectation is
+    </p>
+    <center>
+      \(\displaystyle \mathbb{E} [X_i^{\alpha}] := \frac{\int_{\mathbb{R}^d}
+      \mathrm{d} x_i \exp (-
+S (x))}{\int_{\mathbb{R}^d} \mathrm{d} y_i \exp
+      (- S (y))} x_i^{\alpha} .\)
+    </center>
+    <p>
+      The denominators in covariance and expectation are used for eliminating
+      the irrelevant constant term in \(S\). If the correlation
+      \(\operatorname{Corr} (X_0^{\alpha}, X^{\beta}_{2^n})\) does not tend to
+      zero, then information can propagate between indices \(0\) and \(2^n\)
+      so that they can be correlated.
     </p>
     <p>
       To calculate correlation, we first marginalize the indices between \(0\)
       and \(2^n\) using renormalization group equations, which requires \(n\)
-      iterations. At each iteration,
+      iterations. At each iteration, for example, the expatiation becomes
     </p>
     <center>
-      \(\displaystyle \int_{\mathbb{R}^d} \mathrm{d} x_0  \int_{\mathbb{R}^d}
-      \mathrm{d} x_{2^n}
-\exp (- S (x)) x_0^{\alpha} x_{2^n}^{\beta} = 2
-      \times \int_{\mathbb{R}^d}
-\mathrm{d} x'_0  \int_{\mathbb{R}^d}
-      \mathrm{d} x'_{2^{n - 1}} \exp (- S'
-(x')) {x'_0}^{\alpha}
-      {x'}^{\beta}_{2^{n - 1}} .\)
+      \(\displaystyle \frac{\int_{\mathbb{R}^d} \mathrm{d} x_i \exp (- S
+      (x))}{\int_{\mathbb{R}^d}
+\mathrm{d} y_i \exp (- S (y))} x_i^{\alpha} =
+      \sqrt{2} \times
+\frac{\int_{\mathbb{R}^d} \mathrm{d} x'_i \exp (-
+      S'
+(x'))}{\int_{\mathbb{R}^d} \mathrm{d} y'_i \exp (- S' (y'))}
+      {x'_i}^{\alpha} .\)
     </center>
     <p>
-      where the factor \(2\) comes from \(x_{2 i} = \sqrt{2} x'_i\). The
-      iteration of \(S'\) can be very complicated such that only numerical
+      where the factor \(\sqrt{2}\) comes from \(x_{2 i} = \sqrt{2} x'_i\).
+      The iteration of \(S'\) can be very complicated such that only numerical
       computation is possible. But, there is a special situation where the
       iteration result in a fixed point, namely \(\varphi' = \varphi\) and
-      \(\xi' = \xi\), thus \(S' = S\). The expression of action then keeps
-      invariant. The system becomes self-similar, and the correlation becomes
-      invariant during the iteration. In this situation, we call the system is
-      <strong>scale-invariant</strong> or <strong>scale-free</strong>.
+      \(\xi' = \xi\), thus \(S' = S\) after an iteration. The expression of
+      action then keeps invariant during iteration, so is the correlation. In
+      this situation, we call the system <strong>self-similar</strong>,
+      <strong>scale-invariant</strong>, or <strong>scale-free</strong>. The
+      information can be propagated to infinity without loosing. An ideal
+      communication system.
     </p>
     <h3 id="auto-35">4.7.2<span style="margin-left: 1em"></span>Example: When \(f\) Is Linear<span style="margin-left: 1em"></span></h3>
     <p>
