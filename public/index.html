@@ -188,19 +188,27 @@
       </p>
       <p>
         4.7<span style="margin-left: 1em"></span>How Far Will Information Propagate in Langevin
-        Process? <span style="margin-left: 5mm"></span> <a href="#auto-33">43</a>
+        Process? <span style="margin-left: 5mm"></span> <a href="#auto-33">44</a>
       </p>
       <p>
-        4.7.1<span style="margin-left: 1em"></span>Effective Action and Renormalization Group
-        <span style="margin-left: 5mm"></span> <a href="#auto-34">44</a>
+        4.7.1<span style="margin-left: 1em"></span>The Generic Action <span style="margin-left: 5mm"></span> <a
+        href="#auto-34">44</a>
       </p>
       <p>
-        4.7.2<span style="margin-left: 1em"></span>Example: When \(f\) Is Linear <span style="margin-left: 5mm"></span>
-        <a href="#auto-35">46</a>
+        4.7.2<span style="margin-left: 1em"></span>Renormalization Group Equations <span style="margin-left: 5mm"></span>
+        <a href="#auto-35">44</a>
       </p>
       <p>
-        4.7.3<span style="margin-left: 1em"></span>* Appendix: Perturbative Method <span style="margin-left: 5mm"></span>
-        <a href="#auto-36">46</a>
+        4.7.3<span style="margin-left: 1em"></span>Fixed Point and Scale-Invariance <span style="margin-left: 5mm"></span>
+        <a href="#auto-36">45</a>
+      </p>
+      <p>
+        4.7.4<span style="margin-left: 1em"></span>Example: When \(f\) Is Linear <span style="margin-left: 5mm"></span>
+        <a href="#auto-37">46</a>
+      </p>
+      <p>
+        4.7.5<span style="margin-left: 1em"></span>* Appendix: Perturbative Method <span style="margin-left: 5mm"></span>
+        <a href="#auto-39">47</a>
       </p>
     </div>
     <h1 id="auto-1">Preface<span style="margin-left: 1em"></span></h1>
@@ -4723,8 +4731,7 @@ x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
       many areas in and even out of physics, such as biology, society, and
       finance.
     </p>
-    <h3 id="auto-34">4.7.1<span style="margin-left: 1em"></span>Effective Action and Renormalization
-    Group<span style="margin-left: 1em"></span></h3>
+    <h3 id="auto-34">4.7.1<span style="margin-left: 1em"></span>The Generic Action<span style="margin-left: 1em"></span></h3>
     <p>
       To show how it works, we start with an action that is generalized from
       action <a href="#equation:langevin action constant R">4.12</a>, as
@@ -4751,13 +4758,21 @@ x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
       fixed boundary \(x_N\) in action <a href="#equation:langevin action constant R">4.12</a>, resulted from master
       equation <a href="#equation:path integral step 1">4.9</a>), and let the index \(i\) run from \(-
       \infty\) to \(+ \infty\) rather than from \(0\) to \(N\). As we will see
-      later in this section, these differences are crucial for renormalization
-      group. To add the boundaries back and restrict the range of index \(i\),
-      all we need to do is calculating the expectation \(\int \mathrm{d} x_0
-      \int \mathrm{d} x_N \exp (- S (x)) \delta (x_0 - y_0)
-\delta (x_N -
-      y_N)\), which fixed the boundaries at \(x_0 = y_0\) and \(x_N = y_N\).
+      later in this section, these generalizations are crucial for deriving
+      renormalization group.
     </p>
+    <p>
+      To add the boundaries back and restrict the range of index \(i\), all we
+      need to do is calculating the expectation \(\int \mathrm{d} x_0 \int
+      \mathrm{d} x_N \exp (- S (x)) \delta (x_0 - y_0)
+\delta (x_N - y_N)\),
+      which fixed the boundaries at \(x_0 = y_0\) and \(x_N = y_N\). The
+      Dirac's delta functions also separate the indices before \(0\), those
+      between \(0\) and \(N\), and those after \(N\). In this way, the indices
+      are restricted between \(0\) and \(N\).
+    </p>
+    <h3 id="auto-35">4.7.2<span style="margin-left: 1em"></span>Renormalization Group Equations<span
+    style="margin-left: 1em"></span></h3>
     <p>
       Renormalization group technique bases on the fact that there are as many
       even numbers as integers. This is a famous result that was first claimed
@@ -4900,7 +4915,7 @@ J^{\alpha} \right) = \int_{\mathbb{R}^d} \mathrm{d}
       diagonal covariance \(\Sigma_{\alpha \beta} = (\epsilon / 2)
       \delta_{\alpha \beta}\). We have a rough estimation \(y = \mathcal{O}
       \left( \sqrt{\epsilon} \right)\). Following the standard perturbative
-      method, we find (details given in appendix <a href="#appendix: Perturbative Method">4.7.3</a>)
+      method, we find (details given in appendix <a href="#appendix: Perturbative Method">4.7.5</a>)
     </p>
     <font style="font-size: 84.1%"><center>
       \(\displaystyle - \ln \left[ \int_{\mathbb{R}^d} \mathrm{d} x_{2 i + 1}
@@ -4988,7 +5003,7 @@ x_{2 i}) + \varphi
       </tr>
     </table></font>
     <p>
-      So, up to an irrelevant constant term, we arrive at
+      So, up to an irrelevant constant term,
     </p>
     <table width="100%">
       <tr>
@@ -5011,9 +5026,11 @@ x_{2 i}) + \varphi
       and <a href="#equation:rg transform 4">4.22</a> are called <strong>renormalization group
       equations</strong>.
     </p>
+    <h3 id="auto-36">4.7.3<span style="margin-left: 1em"></span>Fixed Point and Scale-Invariance<span
+    style="margin-left: 1em"></span></h3>
     <p>
-      We have derived the renormalization group technique. Now we use it to
-      study the information propagation. The distance that information
+      Now we use the renormalization group equations to study the information
+      propagation <em>qualitatively</em>. The distance that information
       propagates is reflected by the &ldquo;normalized&rdquo; correlation
       (also called Pearson coefficient)
     </p>
@@ -5053,10 +5070,10 @@ S (x))}{\int_{\mathbb{R}^d} \mathrm{d} y_i \exp
     </center>
     <p>
       The denominators in covariance and expectation are used for eliminating
-      the irrelevant constant term in \(S\). If the correlation
-      \(\operatorname{Corr} (X_0^{\alpha}, X^{\beta}_{2^n})\) does not tend to
-      zero, then information can propagate between indices \(0\) and \(2^n\)
-      so that they can be correlated.
+      the irrelevant constant term in \(S\). If information can propagate
+      between indices \(0\) and \(2^n\), then the correlation
+      \(\operatorname{Corr} (X_0^{\alpha}, X^{\beta}_{2^n})\) cannot not tend
+      to zero.
     </p>
     <p>
       To calculate correlation, we first marginalize the indices between \(0\)
@@ -5079,21 +5096,21 @@ S (x))}{\int_{\mathbb{R}^d} \mathrm{d} y_i \exp
       computation is possible. But, there is a special situation where the
       iteration result in a fixed point, namely \(\varphi' = \varphi\) and
       \(\xi' = \xi\), thus \(S' = S\) after an iteration. The expression of
-      action then keeps invariant during iteration, so is the correlation. In
-      this situation, we call the system <strong>self-similar</strong>,
-      <strong>scale-invariant</strong>, or <strong>scale-free</strong>. The
-      information can be propagated to infinity without loosing. An ideal
-      communication system.
+      action then keeps invariant during iteration, so is the correlation. The
+      system on the fixed point is called <strong>scale-invariant</strong> or
+      <strong>scale-free</strong>. In this system, information can be
+      propagated to infinity without loosing, an optimal communication system.
     </p>
-    <h3 id="auto-35">4.7.2<span style="margin-left: 1em"></span>Example: When \(f\) Is Linear<span style="margin-left: 1em"></span></h3>
+    <h3 id="auto-37">4.7.4<span style="margin-left: 1em"></span>Example: When \(f\) Is Linear<span style="margin-left: 1em"></span></h3>
     <p>
       As an example, consider the linear function \(f_{\alpha} (x) = A_{\alpha
       \beta} x^{\beta}\), where \(A \in \mathbb{R}^{d \times d}\). Then,
       initially we have \(\varphi_{\alpha} (x_{i + 1}, x_i) = A_{\alpha \beta}
       x_i^{\beta}\) and \(\xi_{\alpha} (x_{i + 1}, x_i) = (A_{\alpha A \beta}
       x_i^{\beta})^2 / 2\). For simplicity, we assume that \(\| A \| \ll 1\)
-      so that we can neglect \(\xi\) and focus on the iteration of \(\varphi\)
-      (namely, equation <a href="#equation:rg transform 2">4.20</a>). The generic form of \(\varphi\) is
+      so that we can neglect \(\xi\), which is \(\mathcal{O} (\| A \|^2)\),
+      and focus on the iteration of \(\varphi\) (namely, equation <a href="#equation:rg transform 2">4.20</a>).
+      The generic form of \(\varphi\) is
     </p>
     <center>
       \(\displaystyle \varphi_{\alpha} (x_{i + 1}, x_i) = u A_{\alpha \beta}
@@ -5138,7 +5155,8 @@ A_{\alpha \beta} {x'}^{\beta}_{i + 1} + \left( \frac{u +
 A_{\alpha \beta} {x'}^{\beta}_i .\)
     </center>
     <p>
-      So, we have the iteration
+      So, we have the iteration (the vector field of differences are show in
+      figure <a href="#figure: vector field of differences">4.2</a>)
     </p>
     <center>
       \(\displaystyle u \rightarrow \frac{3 u + v}{2} \text{ and } v
@@ -5151,26 +5169,27 @@ A_{\alpha \beta} {x'}^{\beta}_i .\)
       And with the initial value \(u = 0\) and \(v = 1\), both \(u\) and \(v\)
       will become greater and greater during the iteration, with the tendency
       \(u / v \rightarrow 1\) (instead of \(- 1\)), which is revealed by
-      numerical experiments. Thus we cannot arrive at the fixed point.
-      Instead, it contributes to the action \(S\) by an item
+      numerical experiments. Thus a linear system cannot arrive at the fixed
+      point, thus cannot be scale-invariant.
     </p>
-    <center>
-      \(\displaystyle - u A_{\alpha \beta}  (x^{\alpha}_{i + 1} -
-      x_i^{\alpha})  (x^{\beta}_{i + 1}
-+ x_i^{\beta})\)
-    </center>
-    <p>
-      which becomes more and more prominent by the renormalization group
-      transformation.
-    </p>
-    <p>
-      Going back to the problem that how far information propagates during the
-      iteration of Langevin process. Taking renormalization group
-      transformation \(n\) times reveals the interaction between \(x_0\) and
-      \(x_{2^n}\). It indicates that information at \(x_0\) will propagate to
-      infinity. In fact, information will be amplified during propagation.
-    </p>
-    <h3 id="auto-36"><a id="appendix: Perturbative Method"></a>4.7.3<span style="margin-left: 1em"></span>* Appendix: Perturbative
+    <div style="margin-top: 1em; margin-bottom: 1em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em"><img class="image" src="index-2.png" height="168.700704" width="224.934272"></img></td>
+        </tr><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em; height: 0.5em"></td>
+        </tr><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em; padding-left: 1.5em; padding-right: 1.5em"><div class="caption">
+            <font style="font-size: 84.1%"><p>
+              <b>Figure 4.2. </b><a id="auto-38"></a><a id="figure: vector field of differences"></a> The vector field of
+              differences \(\left( \frac{3 u + v}{2} - u, \frac{u + 3 v}{2} -
+              v \right)\).
+            </p></font>
+          </div></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <h3 id="auto-39"><a id="appendix: Perturbative Method"></a>4.7.5<span style="margin-left: 1em"></span>* Appendix: Perturbative
     Method<span style="margin-left: 1em"></span></h3>
     <font style="font-size: 84.1%"><p>
       Using \(x_{2 i + 1} = y + \bar{x}_{2 i + 1}\), the second line in
