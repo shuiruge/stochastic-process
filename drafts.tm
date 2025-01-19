@@ -7,6 +7,52 @@
 
   <subsection|>
 
+  As an example, consider the linear function
+  <math|f<rsub|\<alpha\>><around*|(|x|)>=A<rsub|\<alpha\>\<beta\>>
+  x<rsup|\<beta\>>+B<rsub|\<alpha\>\<beta\>\<gamma\>>x<rsup|\<beta\>>x<rsup|\<gamma\>>>.
+  Then, initially we have <math|\<varphi\><rsub|\<alpha\>><around*|(|x<rsub|i+1>,x<rsub|i>|)>=c<rsub|\<alpha\>>+A<rsub|\<alpha\>\<beta\>>
+  x<rsub|i><rsup|\<beta\>>+B<rsub|\<alpha\>\<beta\>\<gamma\>>x<rsub|i><rsup|\<beta\>>x<rsub|i><rsup|\<gamma\>>>
+  and <math|\<xi\><rsub|\<alpha\>><around*|(|x<rsub|i+1>,x<rsub|i>|)>=<around*|(|c<rsub|\<alpha\>>+A<rsub|\<alpha\>\<beta\>>
+  x<rsub|i><rsup|\<beta\>>+B<rsub|\<alpha\>\<beta\>\<gamma\>>x<rsub|i><rsup|\<beta\>>x<rsub|i><rsup|\<gamma\>>|)><rsup|2>/2>.
+  We focus on the iteration of <math|\<varphi\>> (equation
+  <reference|equation:rg transform 2>). Recall that
+  <math|x<rsub|2i>=<sqrt|2>x<rprime|'><rsub|i>>.
+
+  <\small>
+    <\align>
+      <tformat|<table|<row|<cell|\<varphi\><rprime|'><rsub|\<alpha\>><around*|(|x<rsub|i+1><rprime|'>,x<rsub|i><rprime|'>|)>=>|<cell|<frac|1|<sqrt|2>><around*|[|\<varphi\><rsub|a><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+\<varphi\><rsub|a><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>>>|<row|<cell|=>|<cell|<frac|1|<sqrt|2>><around*|[|<around*|(|c<rsub|\<alpha\>>+A<rsub|\<alpha\>\<beta\>>
+      x<rsub|2i><rsup|\<beta\>>+B<rsub|\<alpha\>\<beta\>\<gamma\>>x<rsub|2i><rsup|\<beta\>>x<rsub|2i><rsup|\<gamma\>>|)>+<around*|(|c<rsub|\<alpha\>>+A<rsub|\<alpha\>\<beta\>>
+      <frac|x<rsub|2i+2><rsup|\<beta\>>+x<rsub|2i><rsup|\<beta\>>|2>+<frac|1|4>B<rsub|\<alpha\>\<beta\>\<gamma\>><around*|(|x<rsub|2i+2><rsup|\<beta\>>+x<rsub|2i><rsup|\<beta\>>|)><around*|(|x<rsub|2i+2><rsup|\<gamma\>>+x<rsub|2i><rsup|\<gamma\>>|)>|)>|]>>>|<row|<cell|=>|<cell|<frac|1|<sqrt|2>><around*|[|2c<rsub|\<alpha\>>+<frac|1|2>A<rsub|\<alpha\>\<beta\>>
+      x<rsub|2i+2><rsup|\<beta\>>+<frac|3|2>A<rsub|\<alpha\>\<beta\>>
+      x<rsub|2i><rsup|\<beta\>>+<frac|5|4>B<rsub|\<alpha\>\<beta\>\<gamma\>>x<rsub|2i><rsup|\<beta\>>x<rsub|2i><rsup|\<gamma\>>+<frac|1|4>B<rsub|\<alpha\>\<beta\>\<gamma\>>x<rsub|2i+2><rsup|\<beta\>>x<rsub|2i+2><rsup|\<gamma\>>+<frac|1|2>B<rsub|\<alpha\>\<beta\>\<gamma\>>x<rsub|2i+2><rsup|\<beta\>>x<rsub|2i><rsup|\<gamma\>>|]>>>|<row|<cell|=>|<cell|<sqrt|2>c<rsub|\<alpha\>>+<frac|1|2>A<rsub|\<alpha\>\<beta\>>
+      x<rprime|'><rsup|\<beta\>><rsub|i+1>+<frac|3|2>A<rsub|\<alpha\>\<beta\>>
+      x<rprime|'><rsup|\<beta\>><rsub|i>+<frac|5<sqrt|2>|4>B<rsub|\<alpha\>\<beta\>\<gamma\>>x<rprime|'><rsup|\<beta\>><rsub|i>x<rprime|'><rsup|\<gamma\>><rsub|i>+<frac|<sqrt|2>|4>B<rsub|\<alpha\>\<beta\>\<gamma\>>x<rprime|'><rsup|\<beta\>><rsub|i+1>x<rprime|'><rsup|\<gamma\>><rsub|i+1>+<frac|<sqrt|2>|2>B<rsub|\<alpha\>\<beta\>\<gamma\>>x<rprime|'><rsup|\<beta\>><rsub|i+1>x<rprime|'><rsup|\<gamma\>><rsub|i>.>>>>
+    </align>
+  </small>
+
+  So, the generic form of <math|\<varphi\>> is
+
+  <\equation*>
+    \<varphi\><rsub|\<alpha\>><around*|(|x<rsub|i+1>,x<rsub|i>|)>=c<rsub|\<alpha\>>+A<rsub|\<alpha\>\<beta\>>
+    x<rsub|i><rsup|\<beta\>>+B<rsub|\<alpha\>\<beta\>>x<rsub|i+1><rsup|\<beta\>>+C<rsub|\<alpha\>\<beta\>\<gamma\>>x<rsub|i><rsup|\<beta\>>x<rsub|i><rsup|\<gamma\>>+D<rsub|\<alpha\>\<beta\>\<gamma\>>x<rsup|\<beta\>><rsub|i+1>x<rsup|\<gamma\>><rsub|i+1>+E<rsub|\<alpha\>\<beta\>\<gamma\>>x<rsup|\<beta\>><rsub|i+1>x<rsup|\<gamma\>><rsub|i>.
+  </equation*>
+
+  <\small>
+    <\small>
+      <\align>
+        <tformat|<table|<row|<cell|>|<cell|\<varphi\><rprime|'><rsub|\<alpha\>><around*|(|x<rsub|i+1><rprime|'>,x<rsub|i><rprime|'>|)>>>|<row|<cell|=>|<cell|<frac|1|<sqrt|2>><around*|[|\<varphi\><rsub|a><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+\<varphi\><rsub|a><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>>>|<row|<cell|=>|<cell|<frac|1|<sqrt|2>><around*|[|c<rsub|\<alpha\>>+A<rsub|\<alpha\>\<beta\>>
+        x<rsub|2i><rsup|\<beta\>>+B<rsub|\<alpha\>\<beta\>><frac|x<rsub|2i+2><rsup|\<beta\>>+x<rsub|2i><rsup|\<beta\>>|2>+C<rsub|\<alpha\>\<beta\>\<gamma\>>x<rsub|2i><rsup|\<beta\>>x<rsub|2i><rsup|\<gamma\>>+D<rsub|\<alpha\>\<beta\>\<gamma\>><frac|x<rsub|2i+2><rsup|\<beta\>>+x<rsub|2i><rsup|\<beta\>>|2><frac|x<rsub|2i+2><rsup|\<gamma\>>+x<rsub|2i><rsup|\<gamma\>>|2>+E<rsub|\<alpha\>\<beta\>\<gamma\>><frac|x<rsub|2i+2><rsup|\<beta\>>+x<rsub|2i><rsup|\<beta\>>|2>x<rsup|\<gamma\>><rsub|2i>|]>>>|<row|<cell|+>|<cell|<frac|1|<sqrt|2>><around*|[|c<rsub|\<alpha\>>+A<rsub|\<alpha\>\<beta\>>
+        <frac|x<rsub|2i+2><rsup|\<beta\>>+x<rsub|2i><rsup|\<beta\>>|2>+B<rsub|\<alpha\>\<beta\>>x<rsub|2i+2><rsup|\<beta\>>+C<rsub|\<alpha\>\<beta\>\<gamma\>><frac|x<rsub|2i+2><rsup|\<beta\>>+x<rsub|2i><rsup|\<beta\>>|2><frac|x<rsub|2i+2><rsup|\<gamma\>>+x<rsub|2i><rsup|\<gamma\>>|2>+D<rsub|\<alpha\>\<beta\>\<gamma\>>x<rsup|\<beta\>><rsub|2i+2>x<rsup|\<gamma\>><rsub|2i+2>+E<rsub|\<alpha\>\<beta\>\<gamma\>>x<rsup|\<beta\>><rsub|2i+2><frac|x<rsub|2i+2><rsup|\<gamma\>>+x<rsub|2i><rsup|\<gamma\>>|2>|]>>>|<row|<cell|=>|<cell|<sqrt|2>
+        c<rsub|\<alpha\>>+<frac|1|<sqrt|2>><around*|(|<frac|3|2>A<rsub|\<alpha\>\<beta\>>+<frac|1|2>B<rsub|\<alpha\>\<beta\>>|)>x<rsub|2i><rsup|\<beta\>>+<frac|1|<sqrt|2>><around*|(|<frac|1|2>A<rsub|\<alpha\>\<beta\>>+<frac|3|2>B<rsub|\<alpha\>\<beta\>>|)>x<rsub|2i+2><rsup|\<beta\>>+<frac|1|<sqrt|2>><around*|(|<frac|5|4>C<rsub|\<alpha\>\<beta\>\<gamma\>>+<frac|1|4>D<rsub|\<alpha\>\<beta\>\<gamma\>>+<frac|1|2>E<rsub|\<alpha\>\<beta\>\<gamma\>>|)>x<rsub|2i><rsup|\<beta\>>x<rsub|2i><rsup|\<gamma\>>>>|<row|<cell|+>|<cell|<frac|1|<sqrt|2>><around*|(|<frac|1|4>C<rsub|\<alpha\>\<beta\>\<gamma\>>+<frac|5|4>D<rsub|\<alpha\>\<beta\>\<gamma\>>+<frac|1|2>E<rsub|\<alpha\>\<beta\>\<gamma\>>|)>x<rsub|2i+2><rsup|\<beta\>>x<rsub|2i+2><rsup|\<gamma\>>+<frac|1|<sqrt|2>><around*|(|<frac|1|2>C<rsub|\<alpha\>\<beta\>\<gamma\>>+<frac|1|2>D<rsub|\<alpha\>\<beta\>\<gamma\>>+E<rsub|\<alpha\>\<beta\>\<gamma\>>|)>x<rsub|2i+2><rsup|\<beta\>>x<rsub|2i><rsup|\<gamma\>>>>|<row|<cell|=>|<cell|<sqrt|2>
+        c<rsub|\<alpha\>>+<around*|(|<frac|3|2>A<rsub|\<alpha\>\<beta\>>+<frac|1|2>B<rsub|\<alpha\>\<beta\>>|)>x<rprime|'><rsub|i><rsup|\<beta\>>+<around*|(|<frac|1|2>A<rsub|\<alpha\>\<beta\>>+<frac|3|2>B<rsub|\<alpha\>\<beta\>>|)>x<rprime|'><rsup|\<beta\>><rsub|i+1>+<sqrt|2><around*|(|<frac|5|4>C<rsub|\<alpha\>\<beta\>\<gamma\>>+<frac|1|4>D<rsub|\<alpha\>\<beta\>\<gamma\>>+<frac|1|2>E<rsub|\<alpha\>\<beta\>\<gamma\>>|)>x<rprime|'><rsup|\<beta\>><rsub|i>x<rprime|'><rsup|\<gamma\>><rsub|i>>>|<row|<cell|+>|<cell|<sqrt|2><around*|(|<frac|1|4>C<rsub|\<alpha\>\<beta\>\<gamma\>>+<frac|5|4>D<rsub|\<alpha\>\<beta\>\<gamma\>>+<frac|1|2>E<rsub|\<alpha\>\<beta\>\<gamma\>>|)>x<rprime|'><rsup|\<beta\>><rsub|i+1>x<rprime|'><rsup|\<gamma\>><rsub|i+1>+<sqrt|2><around*|(|<frac|1|2>C<rsub|\<alpha\>\<beta\>\<gamma\>>+<frac|1|2>D<rsub|\<alpha\>\<beta\>\<gamma\>>+E<rsub|\<alpha\>\<beta\>\<gamma\>>|)>x<rprime|'><rsup|\<beta\>><rsub|i>x<rprime|'><rsup|\<gamma\>><rsub|i>.>>>>
+      </align>
+    </small>
+  </small>
+
+  \;
+
+  <subsection|>
+
   Define
 
   <\equation*>
@@ -648,25 +694,26 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
+    <associate|auto-10|<tuple|1.7.2|?>>
     <associate|auto-2|<tuple|1.1|1>>
-    <associate|auto-3|<tuple|1.2|1>>
-    <associate|auto-4|<tuple|1.3|2>>
-    <associate|auto-5|<tuple|1.4|3>>
-    <associate|auto-6|<tuple|1.5|5>>
-    <associate|auto-7|<tuple|1.6|5>>
-    <associate|auto-8|<tuple|1.6.1|6>>
-    <associate|auto-9|<tuple|1.6.2|6>>
-    <associate|equation:langevin action|<tuple|1|2>>
-    <associate|equation:path integral step 1|<tuple|3|4>>
-    <associate|equation:susy transformation|<tuple|2|2>>
-    <associate|footnote-1|<tuple|1|3>>
-    <associate|footnote-2|<tuple|2|4>>
-    <associate|footnote-3|<tuple|3|6>>
-    <associate|footnr-1|<tuple|1|3>>
-    <associate|footnr-2|<tuple|2|4>>
-    <associate|footnr-3|<tuple|3|6>>
+    <associate|auto-3|<tuple|1.2|2>>
+    <associate|auto-4|<tuple|1.3|3>>
+    <associate|auto-5|<tuple|1.4|4>>
+    <associate|auto-6|<tuple|1.5|6>>
+    <associate|auto-7|<tuple|1.6|6>>
+    <associate|auto-8|<tuple|1.7|7>>
+    <associate|auto-9|<tuple|1.7.1|7>>
+    <associate|equation:langevin action|<tuple|1|3>>
+    <associate|equation:path integral step 1|<tuple|3|5>>
+    <associate|equation:susy transformation|<tuple|2|3>>
+    <associate|footnote-1|<tuple|1|4>>
+    <associate|footnote-2|<tuple|2|5>>
+    <associate|footnote-3|<tuple|3|7>>
+    <associate|footnr-1|<tuple|1|4>>
+    <associate|footnr-2|<tuple|2|5>>
+    <associate|footnr-3|<tuple|3|7>>
     <associate|section: Master Equation on Euclidean Alphabet Can Be
-    Formulated as Path Integral|<tuple|1.4|3>>
+    Formulated as Path Integral|<tuple|1.5|4>>
   </collection>
 </references>
 
