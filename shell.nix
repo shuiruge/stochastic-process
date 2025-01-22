@@ -9,6 +9,7 @@ in pkgs.mkShell rec {
     pythonPackages.python
     pythonPackages.matplotlib
     pythonPackages.numpy
+    pythonPackages.scipy
     pythonPackages.ipykernel
   ];
 }

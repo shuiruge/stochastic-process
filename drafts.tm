@@ -49,6 +49,12 @@
     </small>
   </small>
 
+  As usual, <math|<around*|(|A<rsub|\<alpha\>\<beta\>>,B<rsub|\<alpha\>\<beta\>>|)>>
+  has fixed points along the straight line
+  <math|A<rsub|\<alpha\>\<beta\>>+B<rsub|\<alpha\>\<beta\>>=0>. But
+  <math|<around*|(|C<rsub|\<alpha\>\<beta\>\<gamma\>>,D<rsub|\<alpha\>\<beta\>\<gamma\>>,E<rsub|\<alpha\>\<beta\>\<gamma\>>|)>>
+  has fixed point only at origin.
+
   \;
 
   <subsection|>
@@ -694,18 +700,18 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|1.7.2|?>>
+    <associate|auto-10|<tuple|1.7.2|7>>
     <associate|auto-2|<tuple|1.1|1>>
-    <associate|auto-3|<tuple|1.2|2>>
-    <associate|auto-4|<tuple|1.3|3>>
-    <associate|auto-5|<tuple|1.4|4>>
-    <associate|auto-6|<tuple|1.5|6>>
+    <associate|auto-3|<tuple|1.2|1>>
+    <associate|auto-4|<tuple|1.3|2>>
+    <associate|auto-5|<tuple|1.4|3>>
+    <associate|auto-6|<tuple|1.5|5>>
     <associate|auto-7|<tuple|1.6|6>>
-    <associate|auto-8|<tuple|1.7|7>>
+    <associate|auto-8|<tuple|1.7|6>>
     <associate|auto-9|<tuple|1.7.1|7>>
     <associate|equation:langevin action|<tuple|1|3>>
     <associate|equation:path integral step 1|<tuple|3|5>>
-    <associate|equation:susy transformation|<tuple|2|3>>
+    <associate|equation:susy transformation|<tuple|2|4>>
     <associate|footnote-1|<tuple|1|4>>
     <associate|footnote-2|<tuple|2|5>>
     <associate|footnote-3|<tuple|3|7>>
@@ -713,7 +719,7 @@
     <associate|footnr-2|<tuple|2|5>>
     <associate|footnr-3|<tuple|3|7>>
     <associate|section: Master Equation on Euclidean Alphabet Can Be
-    Formulated as Path Integral|<tuple|1.5|4>>
+    Formulated as Path Integral|<tuple|1.5|5>>
   </collection>
 </references>
 
@@ -728,35 +734,39 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-2>>
 
-      <with|par-left|<quote|1tab>|1.2<space|2spc>Coordinate Transformation
+      <with|par-left|<quote|1tab>|1.2<space|2spc>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-3>>
 
-      <with|par-left|<quote|1tab>|1.3<space|2spc>Super-symmetry in Langevin
-      Process (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.3<space|2spc>Coordinate Transformation
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-4>>
 
-      <with|par-left|<quote|1tab>|1.4<space|2spc>Master Equation on Euclidean
-      Alphabet Can Be Formulated as Path Integral (TODO)
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.4<space|2spc>Super-symmetry in Langevin
+      Process (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-5>>
 
-      <with|par-left|<quote|1tab>|1.5<space|2spc>Example: Action in Deep
-      Learning (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.5<space|2spc>Master Equation on Euclidean
+      Alphabet Can Be Formulated as Path Integral (TODO)
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-6>>
 
-      <with|par-left|<quote|1tab>|1.6<space|2spc>* History: Structures in
-      Nature Arise from Least-Action Principle
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.6<space|2spc>Example: Action in Deep
+      Learning (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-7>>
 
-      <with|par-left|<quote|2tab>|1.6.1<space|2spc>WBE Theory and
-      Universality <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.7<space|2spc>* History: Structures in
+      Nature Arise from Least-Action Principle
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-8>>
 
-      <with|par-left|<quote|2tab>|1.6.2<space|2spc>Renormalization Group and
-      Criticality <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|2tab>|1.7.1<space|2spc>WBE Theory and
+      Universality <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-9>>
+
+      <with|par-left|<quote|2tab>|1.7.2<space|2spc>Renormalization Group and
+      Criticality <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-10>>
     </associate>
   </collection>
 </auxiliary>
