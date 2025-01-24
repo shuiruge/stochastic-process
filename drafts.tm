@@ -55,7 +55,69 @@
   <math|<around*|(|C<rsub|\<alpha\>\<beta\>\<gamma\>>,D<rsub|\<alpha\>\<beta\>\<gamma\>>,E<rsub|\<alpha\>\<beta\>\<gamma\>>|)>>
   has fixed point only at origin.
 
+  <subsection|>
+
+  <math|x<rsub|2i>=<sqrt|2>x<rprime|'><rsub|i>>
+
+  <\align>
+    <tformat|<table|<row|<cell|\<varphi\><rprime|'><around*|(|x<rsub|i+1><rprime|'>,x<rsub|i><rprime|'>|)>=>|<cell|<frac|1|<sqrt|2>><around*|[|\<varphi\><around*|(|<wide|x|\<bar\>><rsub|2i+1>,x<rsub|2i>|)>+\<varphi\><around*|(|x<rsub|2i+2>,<wide|x|\<bar\>><rsub|2i+1>|)>|]>>>|<row|<cell|=>|<cell|<frac|1|<sqrt|2>><around*|[|\<varphi\><around*|(|<frac|x<rprime|'><rsub|i+1>+x<rprime|'><rsub|i>|<sqrt|2>>,<sqrt|2>x<rprime|'><rsub|i>|)>+\<varphi\><around*|(|<sqrt|2>x<rprime|'><rsub|i+1>,<frac|x<rprime|'><rsub|i+1>+x<rprime|'><rsub|i>|<sqrt|2>>|)>|]>.>>>>
+  </align>
+
+  Thus, the scale-invariant <math|\<varphi\>> satisfies
+
+  <\equation>
+    \<varphi\><around*|(|x,y|)>=<frac|1|<sqrt|2>><around*|[|\<varphi\><around*|(|<frac|1|<sqrt|2>><around*|(|x+y|)>,<sqrt|2>y|)>+\<varphi\><around*|(|<sqrt|2>x,<frac|1|<sqrt|2>><around*|(|x+y|)>|)>|]>.
+  </equation>
+
+  Denoting <math|f<around*|(|x|)>\<assign\>\<varphi\><around*|(|x,x|)>>, we
+  have
+
+  <\equation*>
+    f<around*|(|x|)>=<sqrt|2>f<around*|(|<sqrt|2>x|)>.
+  </equation*>
+
   \;
+
+  Consider a Taylor expansion
+
+  <\equation*>
+    \<varphi\><around*|(|x,y|)>=<big|sum><rsub|m=0><rsup|+\<infty\>><big|sum><rsub|n=0><rsup|+\<infty\>><frac|1|m!n!>\<partial\><rsup|m>\<partial\><rsup|n>\<varphi\><around*|(|0,0|)>
+    x<rsup|m> y<rsup|n>.
+  </equation*>
+
+  Thus, TODO
+
+  In addition, exchanging <math|x> and <math|y> gives
+
+  <\equation*>
+    <sqrt|2>\<varphi\><around*|(|y,x|)>=\<varphi\><around*|(|<sqrt|2>y,<frac|x+y|<sqrt|2>>|)>+\<varphi\><around*|(|<frac|x+y|<sqrt|2>>,<sqrt|2>x|)>.
+  </equation*>
+
+  \;
+
+  Derivative on <math|x> gives
+
+  <\equation*>
+    \<partial\>\<varphi\><around*|(|x,y|)>=<frac|1|2>\<partial\>\<varphi\><around*|(|<frac|x+y|<sqrt|2>>,<sqrt|2>y|)>+<frac|1|2>\<partial\><rprime|'>\<varphi\><around*|(|<sqrt|2>x,<frac|x+y|<sqrt|2>>|)>+\<partial\>\<varphi\><around*|(|<sqrt|2>x,<frac|x+y|<sqrt|2>>|)>.
+  </equation*>
+
+  Derivative on <math|y> gives
+
+  <\equation*>
+    \<partial\><rprime|'>\<varphi\><around*|(|x,y|)>=<frac|1|2>\<partial\>\<varphi\><around*|(|<frac|x+y|<sqrt|2>>,<sqrt|2>y|)>+<frac|1|2>\<partial\><rprime|'>\<varphi\><around*|(|<sqrt|2>x,<frac|x+y|<sqrt|2>>|)>+\<partial\><rprime|'>\<varphi\><around*|(|<frac|x+y|<sqrt|2>>,<sqrt|2>y|)>.
+  </equation*>
+
+  Thus,
+
+  <\equation*>
+    \<partial\>\<varphi\><around*|(|x,y|)>-\<partial\><rprime|'>\<varphi\><around*|(|x,y|)>=\<partial\>\<varphi\><around*|(|<sqrt|2>x,<frac|x+y|<sqrt|2>>|)>-\<partial\><rprime|'>\<varphi\><around*|(|<frac|x+y|<sqrt|2>>,<sqrt|2>y|)>.
+  </equation*>
+
+  Taking <math|x=y> gives
+
+  <\equation*>
+    \<partial\>\<varphi\><around*|(|x,x|)>-\<partial\>\<varphi\><around*|(|<sqrt|2>x,<sqrt|2>x|)>=\<partial\><rprime|'>\<varphi\><around*|(|x,x|)>-\<partial\><rprime|'>\<varphi\><around*|(|<sqrt|2>x,<sqrt|2>x|)>.
+  </equation*>
 
   <subsection|>
 
@@ -700,18 +762,19 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|1.7.2|7>>
+    <associate|auto-10|<tuple|1.8.1|7>>
+    <associate|auto-11|<tuple|1.8.2|?>>
     <associate|auto-2|<tuple|1.1|1>>
     <associate|auto-3|<tuple|1.2|1>>
-    <associate|auto-4|<tuple|1.3|2>>
+    <associate|auto-4|<tuple|1.3|3>>
     <associate|auto-5|<tuple|1.4|3>>
     <associate|auto-6|<tuple|1.5|5>>
     <associate|auto-7|<tuple|1.6|6>>
     <associate|auto-8|<tuple|1.7|6>>
-    <associate|auto-9|<tuple|1.7.1|7>>
-    <associate|equation:langevin action|<tuple|1|3>>
-    <associate|equation:path integral step 1|<tuple|3|5>>
-    <associate|equation:susy transformation|<tuple|2|4>>
+    <associate|auto-9|<tuple|1.8|7>>
+    <associate|equation:langevin action|<tuple|2|3>>
+    <associate|equation:path integral step 1|<tuple|4|5>>
+    <associate|equation:susy transformation|<tuple|3|4>>
     <associate|footnote-1|<tuple|1|4>>
     <associate|footnote-2|<tuple|2|5>>
     <associate|footnote-3|<tuple|3|7>>
@@ -719,7 +782,7 @@
     <associate|footnr-2|<tuple|2|5>>
     <associate|footnr-3|<tuple|3|7>>
     <associate|section: Master Equation on Euclidean Alphabet Can Be
-    Formulated as Path Integral|<tuple|1.5|5>>
+    Formulated as Path Integral|<tuple|1.6|5>>
   </collection>
 </references>
 

@@ -1753,11 +1753,11 @@
 
   For spatial smoothness, we assume that the density function
   <math|p<around*|(|x,t|)>> of a time-dependent distribution
-  <math|P<around*|(|t|)>> and the transition rate <math|r<around*|(|x,y|)>>
-  are smooth on <math|x> and <math|y>. Besides the smoothness of functions,
-  however, spatial smoothness demands more. To declare this, we consider the
-  situation where the mass of <math|P<around*|(|t|)>> is centered at <math|x>
-  initially, namely <math|p<around*|(|x<rprime|'>,0|)>=\<delta\><around*|(|x-x<rprime|'>|)>>.
+  <math|P<around*|(|t|)>> are smooth on <math|x> and <math|y>. Besides the
+  smoothness of functions, however, spatial smoothness demands more. To
+  declare this, we consider the situation where the mass of
+  <math|P<around*|(|t|)>> is centered at <math|x> initially, namely
+  <math|p<around*|(|x<rprime|'>,0|)>=\<delta\><around*|(|x-x<rprime|'>|)>>.
   Then, after a small temporal period <math|\<Delta\>t>, there is some
   portion of mass transits to elsewhere. By master equation
   <reference|equation:master equation>, the change in density is
@@ -4340,7 +4340,7 @@
 
 <\references>
   <\collection>
-    <associate|appendix: Perturbative Method|<tuple|4.7.4|46>>
+    <associate|appendix: Perturbative Method|<tuple|4.7.4|47>>
     <associate|auto-1|<tuple|?|7>>
     <associate|auto-10|<tuple|2.3|14>>
     <associate|auto-11|<tuple|2.4|17>>
@@ -4371,9 +4371,9 @@
     <associate|auto-34|<tuple|4.7.1|44>>
     <associate|auto-35|<tuple|4.7.2|44>>
     <associate|auto-36|<tuple|4.7.3|46>>
-    <associate|auto-37|<tuple|4.7.4|46>>
-    <associate|auto-38|<tuple|4.8|48>>
-    <associate|auto-39|<tuple|4.2|49>>
+    <associate|auto-37|<tuple|4.7.4|47>>
+    <associate|auto-38|<tuple|4.8|49>>
+    <associate|auto-39|<tuple|4.2|50>>
     <associate|auto-4|<tuple|1.2|9>>
     <associate|auto-5|<tuple|1.3|10>>
     <associate|auto-6|<tuple|1.4|11>>
@@ -4417,8 +4417,8 @@
     <associate|equation:rg integral|<tuple|4.18|44>>
     <associate|equation:rg transform 1|<tuple|4.19|45>>
     <associate|equation:rg transform 2|<tuple|4.20|45>>
-    <associate|equation:rg transform 3|<tuple|4.21|45>>
-    <associate|equation:rg transform 4|<tuple|4.22|45>>
+    <associate|equation:rg transform 3|<tuple|4.21|46>>
+    <associate|equation:rg transform 4|<tuple|4.22|46>>
     <associate|equation:stationary Fokker-Planck equation|<tuple|3.5|33>>
     <associate|equation:transition density normalization|<tuple|2.1|13>>
     <associate|equation:transition rate determines transition
@@ -4427,7 +4427,7 @@
     v2|<tuple|2.7|16>>
     <associate|equation:wiener process|<tuple|3.2|32>>
     <associate|figure: Least-Action|<tuple|4.1|43>>
-    <associate|figure: vector field of differences|<tuple|4.2|49>>
+    <associate|figure: vector field of differences|<tuple|4.2|50>>
     <associate|footnote-1|<tuple|1|7>>
     <associate|footnote-1.1|<tuple|1.1|9>>
     <associate|footnote-1.2|<tuple|1.2|9>>
@@ -4541,7 +4541,10 @@
       optimized to be the dashed green curve.>|<pageref|auto-32>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|4.2>|| The vector field
-      of differences <with|mode|<quote|math>|<around*|(|<frac|3u+v|2>-u,<frac|u+3v|2>-v|)>>.>|<pageref|auto-39>>
+      of differences <with|mode|<quote|math>|<around*|(|<frac|3u+v|2>-u,<frac|u+3v|2>-v|)>>,
+      where <with|mode|<quote|math>|u\<assign\>A<rsub|\<alpha\>\<beta\>>> and
+      <with|mode|<quote|math>|v\<assign\>B<rsub|\<alpha\>\<beta\>>> for any
+      <with|mode|<quote|math>|\<alpha\>,\<beta\>>.>|<pageref|auto-39>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Preface>
