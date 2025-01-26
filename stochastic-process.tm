@@ -2673,7 +2673,7 @@
   <strong|Kolmogorov forward equation>, independently discovered in 1931.
 
   As a matrix-valued field, <math|\<Sigma\>> is symmetric and everywhere
-  positive definite. Symmetry means <math|\<Sigma\><rsup|\<alpha\>\<beta\>><around*|(|x|)>=\<Sigma\><rsup|\<beta\>><around*|(|x|)>>.
+  positive definite. Symmetry means <math|\<Sigma\><rsup|\<alpha\>\<beta\>><around*|(|x|)>=\<Sigma\><rsup|\<beta\>\<alpha\>><around*|(|x|)>>.
   This is a direct result of its definition
   <math|<big|int>\<mathd\>\<epsilon\> r<around*|(|x+\<epsilon\>,x|)>
   \<epsilon\><rsup|\<alpha\>>\<epsilon\><rsup|\<beta\>>>. To see why it is
@@ -2686,8 +2686,8 @@
     \<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>.
   </equation*>
 
-  Under a proper coordinates, it becomes diagonalized with the diagonal
-  element
+  Under a proper coordinate of <math|\<epsilon\>>, it becomes diagonalized
+  with the diagonal element
 
   <\equation*>
     <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
@@ -3239,9 +3239,8 @@
 
   where
 
-  <section|Langevin Process Can Be Formulated as Path
-  Integral><label|section: Langevin Process Can Be Formulated as Path
-  Integral>
+  <section|Langevin Process Can Be Formulated as Path Integral
+  (TODO)><label|section: Langevin Process Can Be Formulated as Path Integral>
 
   In this section, we are to formulate the master equation into path
   integral. The path integral formulation was found by Paul Dirac in 1933 who
@@ -3408,7 +3407,7 @@
     q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>=<around*|(|<frac|2\<mathpi\>|\<Delta\>t>|)><rsup|d/2><frac|1|<sqrt|det
     \<Sigma\><around*|(|x|)>>> exp<around*|(|-<frac|\<Delta\>t|2><around*|[|\<Sigma\><rsup|-1><around*|(|x|)>|]><rsub|\<alpha\>\<beta\>>
     <around*|[|<frac|\<epsilon\><rsup|\<alpha\>>|\<Delta\>t>-f<rsup|\<alpha\>><around*|(|x|)>|]>
-    <around*|[|<frac|\<epsilon\><rsup|\<beta\>>|\<Delta\>t>-f<rsup|\<beta\>><around*|(|x|)>|]>+\<omicron\><around*|(|\<Delta\>t|)>|)>.
+    <around*|[|<frac|\<epsilon\><rsup|\<beta\>>|\<Delta\>t>-f<rsup|\<beta\>><around*|(|x|)>|]><with|color|red|+\<omicron\><around*|(|\<Delta\>t|)>>|)>.
   </equation*>
 
   It indicates that the transition density of Langevin process is
@@ -3831,8 +3830,8 @@
   of Langevin Process Lacks Source-Free Degree of Freedom>) will be more
   efficient.
 
-  <section|How Far Will Information Propagate in Langevin
-  Process?><label|section: How Far Will Information Propagate in Langevin
+  <section|How Far Will Information Propagate in Langevin Process?
+  (TODO)><label|section: How Far Will Information Propagate in Langevin
   Process?>
 
   We are to determine how far information will propagate in Langevin process.

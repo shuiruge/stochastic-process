@@ -188,7 +188,7 @@
       </p>
       <p>
         4.7<span style="margin-left: 1em"></span>How Far Will Information Propagate in Langevin
-        Process? <span style="margin-left: 5mm"></span> <a href="#auto-33">44</a>
+        Process? <span style="margin-left: 5mm"></span> <a href="#auto-33">43</a>
       </p>
       <p>
         4.7.1<span style="margin-left: 1em"></span>The Generic Action <span style="margin-left: 5mm"></span> <a
@@ -200,7 +200,7 @@
       </p>
       <p>
         4.7.3<span style="margin-left: 1em"></span>Fixed Point and Scale-Invariance <span style="margin-left: 5mm"></span>
-        <a href="#auto-36">46</a>
+        <a href="#auto-36">45</a>
       </p>
       <p>
         4.7.4<span style="margin-left: 1em"></span>* Appendix: Perturbative Method <span style="margin-left: 5mm"></span>
@@ -2077,13 +2077,13 @@ y) p (y, t) / p (x,
     Transition Rate Is Essential for Spatial Smoothness<span style="margin-left: 1em"></span></h2>
     <p>
       For spatial smoothness, we assume that the density function \(p (x, t)\)
-      of a time-dependent distribution \(P (t)\) and the transition rate \(r
-      (x, y)\) are smooth on \(x\) and \(y\). Besides the smoothness of
-      functions, however, spatial smoothness demands more. To declare this, we
-      consider the situation where the mass of \(P (t)\) is centered at \(x\)
-      initially, namely \(p (x', 0) = \delta (x - x')\). Then, after a small
-      temporal period \(\Delta t\), there is some portion of mass transits to
-      elsewhere. By master equation <a href="#equation:master equation">2.4</a>, the change in density is
+      of a time-dependent distribution \(P (t)\) are smooth on \(x\) and
+      \(y\). Besides the smoothness of functions, however, spatial smoothness
+      demands more. To declare this, we consider the situation where the mass
+      of \(P (t)\) is centered at \(x\) initially, namely \(p (x', 0) = \delta
+      (x - x')\). Then, after a small temporal period \(\Delta t\), there is
+      some portion of mass transits to elsewhere. By master equation <a href="#equation:master equation">2.4</a>,
+      the change in density is
     </p>
     <center>
       \(\displaystyle p (y, \Delta t) - p (y, 0) = \Delta t
@@ -3368,8 +3368,8 @@ y) p (y, t) = \frac{1}{2}
     <p>
       As a matrix-valued field, \(\Sigma\) is symmetric and everywhere
       positive definite. Symmetry means \(\Sigma^{\alpha \beta} (x) =
-      \Sigma^{\beta} (x)\). This is a direct result of its definition \(\int
-      \mathrm{d} \epsilon r (x + \epsilon, x)
+      \Sigma^{\beta \alpha} (x)\). This is a direct result of its definition
+      \(\int \mathrm{d} \epsilon r (x + \epsilon, x)
       \epsilon^{\alpha}
 \epsilon^{\beta}\). To see why it is positive
       definite, we consider the expectation
@@ -3382,8 +3382,8 @@ y) p (y, t) = \frac{1}{2}
 \omicron (\Delta t) .\)
     </center>
     <p>
-      Under a proper coordinates, it becomes diagonalized with the diagonal
-      element
+      Under a proper coordinate of \(\epsilon\), it becomes diagonalized with
+      the diagonal element
     </p>
     <center>
       \(\displaystyle \int_{\mathbb{R}^d} \mathrm{d} \epsilon q_{\Delta t} (x
@@ -4020,7 +4020,7 @@ x_1) = T^2  [x_{\star} ((i + 1) / T) - 2 x_{\star}
       where
     </p>
     <h2 id="auto-29"><a id="section: Langevin Process Can Be Formulated as Path Integral"></a>4.4<span style="margin-left: 1em"></span>Langevin Process Can Be
-    Formulated as Path Integral<span style="margin-left: 1em"></span></h2>
+    Formulated as Path Integral (TODO)<span style="margin-left: 1em"></span></h2>
     <p>
       In this section, we are to formulate the master equation into path
       integral. The path integral formulation was found by Paul Dirac in 1933
@@ -4229,8 +4229,8 @@ b_{\beta} \right),\)
       \frac{\epsilon^{\alpha}}{\Delta t} - f^{\alpha}
 (x) \right]  \left[
       \frac{\epsilon^{\beta}}{\Delta t} - f^{\beta} (x) \right]
-+ \omicron
-      (\Delta t) \right) .\)
+{\color{red}{+
+      \omicron (\Delta t)}} \right) .\)
     </center>
     <p>
       It indicates that the transition density of Langevin process is
@@ -4718,7 +4718,7 @@ x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
       will be more efficient.
     </p>
     <h2 id="auto-33"><a id="section: How Far Will Information Propagate in Langevin Process?"></a>4.7<span style="margin-left: 1em"></span>How Far Will Information
-    Propagate in Langevin Process?<span style="margin-left: 1em"></span></h2>
+    Propagate in Langevin Process? (TODO)<span style="margin-left: 1em"></span></h2>
     <p>
       We are to determine how far information will propagate in Langevin
       process. For this kind of problem, physicists have invented a technique
@@ -5518,66 +5518,75 @@ x'_i) {+ \epsilon
       \beta} x^{\beta}\), where \(A \in \mathbb{R}^{d \times d}\). Then,
       initially we have \(\varphi_{\alpha} (x_{i + 1}, x_i) = A_{\alpha \beta}
       x_i^{\beta}\) and \(\xi_{\alpha} (x_{i + 1}, x_i) = (A_{\alpha A \beta}
-      x_i^{\beta})^2 / 2\). We focus on the iteration of \(\varphi\) (namely,
-      equation <a href="#equation:rg transform 2">4.20</a>). The generic form of \(\varphi\) is
+      x_i^{\beta})^2 / 2\). We focus on the iteration of \(\varphi\) (equation
+      <a href="#equation:rg transform 2">4.20</a>). The generic form of \(\varphi\) is
     </p>
     <center>
-      \(\displaystyle \varphi_{\alpha} (x_{i + 1}, x_i) = u A_{\alpha \beta}
-      x_{i + 1}^{\beta} + v
-A_{\alpha \beta} x_i^{\beta},\)
+      \(\displaystyle \varphi_{\alpha} (x_{i + 1}, x_i) = A_{\alpha \beta}
+      x_{i + 1}^{\beta} +
+B_{\alpha \beta} x_i^{\beta},\)
     </center>
     <p>
-      where \(u\) and \(v\) are coefficients (&ldquo;couplings&rdquo; in
-      physics). With this generic form, we find (recall that \(\bar{x}_{2 i +
-      1} = (x_{2 i + 2} + x_{2 i}) / 2\))
+      where the \(d \times d\)-dimensional matrices \(A\) and \(B\) are
+      coefficients (&ldquo;couplings&rdquo; in physics). With this generic
+      form, we find (recall that \(\bar{x}_{2 i + 1} = (x_{2 i + 2} + x_{2 i})
+      / 2\))
     </p>
-    <font style="font-size: 84.1%"><center>
+    <center>
       \(\displaystyle \begin{array}{rl}
   \varphi'_{\alpha} (x_{i + 1}', x_i')
       = & \frac{1}{\sqrt{2}} [\varphi_a
   (\bar{x}_{2 i + 1}, x_{2 i}) +
       \varphi_a (x_{2 i + 2}, \bar{x}_{2 i + 1})]\\
   = & \frac{1}{\sqrt{2}}
-      \left[ \left( u A_{\alpha \beta}  \frac{x_{2 i +
+      \left[ \left( A_{\alpha \beta}  \frac{x_{2 i +
   2}^{\beta} + x_{2
-      i}^{\beta}}{2} + v A_{\alpha \beta} x_{2 i}^{\beta}
-  \right) + \left( u
-      A_{\alpha \beta} x_{2 i + 2}^{\beta} + v A_{\alpha \beta}
-  \frac{x_{2 i
+      i}^{\beta}}{2} + B_{\alpha \beta} x_{2 i}^{\beta} \right)
+  + \left(
+      A_{\alpha \beta} x_{2 i + 2}^{\beta} + B_{\alpha \beta}  \frac{x_{2
+  i
       + 2}^{\beta} + x_{2 i}^{\beta}}{2} \right) \right]\\
   = &
-      \frac{1}{\sqrt{2}} \left[ \left( \frac{3 u}{2} + \frac{v}{2} \right)
+      \frac{1}{\sqrt{2}} \left[ \left( \frac{3}{2} A_{\alpha \beta} +
  
-      A_{\alpha \beta} x_{2 i + 2}^{\beta} + \left( \frac{u}{2} + \frac{3
-      v}{2}
-  \right) A_{\alpha \beta} x_{2 i}^{\beta} \right] .
+      \frac{1}{2} B_{\alpha \beta} \right) x_{2 i + 2}^{\beta} + \left(
+ 
+      \frac{1}{2} A_{\alpha \beta} + \frac{3}{2} B_{\alpha \beta} \right)
+      x_{2
+  i}^{\beta} \right] .
 \end{array}\)
-    </center></font>
+    </center>
     <p>
       Inserting the \(x_i' = x_{2 i} / \sqrt{2}\), we get
     </p>
     <center>
-      \(\displaystyle \varphi'_{\alpha} (x_{i + 1}', x_i') = \left( \frac{3 u
-      + v}{2} \right)
-A_{\alpha \beta} {x'}^{\beta}_{i + 1} + \left( \frac{u +
-      3 v}{2} \right)
-A_{\alpha \beta} {x'}^{\beta}_i .\)
+      \(\displaystyle \varphi'_{\alpha} (x_{i + 1}', x_i') = \left(
+      \frac{3}{2} A_{\alpha \beta} +
+\frac{1}{2} B_{\alpha \beta} \right)
+      {x'}^{\beta}_{i + 1} + \left( \frac{1}{2}
+A_{\alpha \beta} + \frac{3}{2}
+      B_{\alpha \beta} \right) {x'}^{\beta}_i .\)
     </center>
     <p>
       So, we have the iterations
     </p>
     <center>
-      \(\displaystyle u \rightarrow \frac{3 u + v}{2} \text{ and } v
-      \rightarrow \frac{u + 3 v}{2} .\)
+      \(\displaystyle A_{\alpha \beta} \rightarrow \frac{3}{2} A_{\alpha
+      \beta} + \frac{1}{2}
+B_{\alpha \beta} \text{ and } B_{\alpha \beta}
+      \rightarrow \frac{1}{2}
+A_{\alpha \beta} + \frac{3}{2} B_{\alpha \beta}
+      .\)
     </center>
     <p>
-      It has fixed point at \(u_{\star} = (3 u_{\star} + v_{\star}) / 2\) and
-      \(v_{\star} = (3 v_{\star} + u_{\star}) / 2\), which have solution
-      \(u_{\star} = - v_{\star}\). This fixed point, however, is not stable.
-      As it is shown in figure <a href="#figure: vector field of differences">4.2</a>, a tiny departure from the
-      line \(u + v = 0\) will push the \((u, v)\) away from the fixed point.
-      So, a linear system cannot arrive at the fixed point, thus cannot be
-      scale-invariant.
+      It has fixed point at \(A_{\star} = (3 / 2) A_{\star} + (1 / 2)
+      B_{\star}\) and \(B_{\star} = (1 / 2) A_{\star} + (3 / 2) B_{\star}\)
+      element-wise, which have solution \((A_{\star})_{\alpha \beta} = -
+      (B_{\star})_{\alpha \beta}\) for each \(\alpha, \beta\). This fixed
+      point, however, is not stable. As it is shown in figure <a href="#figure: vector field of differences">4.2</a>,
+      a tiny departure from the line \(A + B = 0\) will push the \((A, B)\)
+      away from the fixed point. So, a linear system cannot arrive at the
+      fixed point, thus cannot be scale-invariant.
     </p>
     <div style="margin-top: 1em; margin-bottom: 1em">
       <table style="width: 100%">
@@ -5590,7 +5599,8 @@ A_{\alpha \beta} {x'}^{\beta}_i .\)
             <font style="font-size: 84.1%"><p>
               <b>Figure 4.2. </b><a id="auto-39"></a><a id="figure: vector field of differences"></a> The vector field of
               differences \(\left( \frac{3 u + v}{2} - u, \frac{u + 3 v}{2} -
-              v \right)\).
+              v \right)\), where \(u := A_{\alpha \beta}\) and \(v :=
+              B_{\alpha \beta}\) for any \(\alpha, \beta\).
             </p></font>
           </div></td>
         </tr></tbody>
