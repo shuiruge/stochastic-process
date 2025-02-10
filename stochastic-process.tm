@@ -91,69 +91,73 @@
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-21>
 
+    <with|par-left|1tab|3.5.1<space|2spc>* Central Limit Theorem
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-22>>
+
     3.6<space|2spc>Langevin Process Is a Markovian Process with
     <with|mode|math|N<rsub|cut>=2> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-22>
+    <no-break><pageref|auto-23>
 
     3.7<space|2spc>Stationary Solution of Langevin Process Has Source-Free
     Degree of Freedom <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-23>
+    <no-break><pageref|auto-24>
 
     3.8<space|2spc>Detailed Balance of Langevin Process Lacks Source-Free
     Degree of Freedom <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-24>
+    <no-break><pageref|auto-25>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|4<space|2spc>Least-Action
     Principle> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-25><vspace|0.5fn>
+    <no-break><pageref|auto-26><vspace|0.5fn>
 
     4.1<space|2spc>Conventions in This Chapter
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-26>
+    <no-break><pageref|auto-27>
 
     4.2<space|2spc>A Brief Review of Least-Action Principle in Classical
     Mechanics <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-27>
+    <no-break><pageref|auto-28>
 
     4.3<space|2spc>Preliminary: Grassmann Variable and Berezin Integral
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-28>
-
-    4.4<space|2spc>Langevin Process Can Be Formulated as Path Integral
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-29>
 
-    4.5<space|2spc>Least-Action Principle of Distribution Has No Redundancy
+    4.4<space|2spc>Langevin Process Can Be Formulated as Path Integral (TODO)
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-30>
 
-    4.6<space|2spc>Data Fitting Is Equivalent to Least-Action Principle of
-    Distribution <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    4.5<space|2spc>Least-Action Principle of Distribution Has No Redundancy
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-31>
 
+    4.6<space|2spc>Data Fitting Is Equivalent to Least-Action Principle of
+    Distribution <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-32>
+
     4.7<space|2spc>How Far Will Information Propagate in Langevin Process?
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-33>
+    (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-34>
 
     <with|par-left|1tab|4.7.1<space|2spc>The Generic Action
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-34>>
+    <no-break><pageref|auto-35>>
 
     <with|par-left|1tab|4.7.2<space|2spc>Renormalization Group Equations
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-35>>
+    <no-break><pageref|auto-36>>
 
     <with|par-left|1tab|4.7.3<space|2spc>Fixed Point and Scale-Invariance
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-36>>
+    <no-break><pageref|auto-37>>
 
     <with|par-left|1tab|4.7.4<space|2spc>* Appendix: Perturbative Method
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-37>>
+    <no-break><pageref|auto-38>>
 
     4.8<space|2spc>Example: Linear System Cannot Be Scale-Invariant
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-38>
+    <no-break><pageref|auto-39>
   </table-of-contents>
 
   <chapter*|Preface>
@@ -173,11 +177,11 @@
   calculus (Taylor expansion, improper integral, and integration by parts)
   and linear algebra (matrix manipulations, orthogonal diagonalization, and
   determinant). Knowing the basic probability theory (normal distribution and
-  Gaussian integral) and Fourier transformation (its definition) will be
-  helpful. We try to make it self-contained, and introduce new concept or
-  technique only when it is essential. Statements like
-  \Pobviously<text-dots>\Q and \Papparently<text-dots>\Q are avoided; and we
-  try to display all the steps of calculation without omitting any of them.
+  Gaussian integral) will be beneficial. We try to make it self-contained,
+  and introduce new concept or technique only when it is essential.
+  Statements like \Pobviously<text-dots>\Q and \Papparently<text-dots>\Q are
+  avoided; and we try to display all the steps of calculation without
+  omitting any of them.
 
   For each section, the title is a sentence that briefly summarizes the whole
   section. We use bold font for <strong|definition> and italic font for
@@ -2565,28 +2569,132 @@
 
   Integration by parts and then integrating over <math|y> gives
 
-  <\equation*>
-    <frac|\<partial\>p|\<partial\>t><around*|(|x,t|)>=<frac|1|2>\<delta\><rsup|\<alpha\>\<beta\>>\<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>p<around*|(|x,t|)>.
-  </equation*>
+  <\equation>
+    <frac|\<partial\>p|\<partial\>t><around*|(|x,t|)>=<frac|1|2>\<delta\><rsup|\<alpha\>\<beta\>>\<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>p<around*|(|x,t|)>.<label|equation:heat
+    equation>
+  </equation>
 
   This equation is the famous <strong|heat equation> or <strong|diffusion
   equation>, first investigated by French mathematician Joseph Fourier in
-  1822 for modeling how heat diffuses. For initial value
-  <math|p<around*|(|x,0|)>>, it has the solution
+  1822 for modeling how heat diffuses. His method is now named as
+  <strong|Fourier transformation>.
+
+  Define Fourier transformation of <math|p<around*|(|x,t|)>> on <math|x> as
 
   <\equation*>
-    p<around*|(|x,t|)>=<frac|1|<sqrt|<around*|(|2\<mathpi\>t|)><rsup|n>>><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
-    exp<around*|(|-<frac|1|2t>\<delta\><rsub|\<alpha\>\<beta\>>
-    <around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>
-    <around*|(|x<rsup|\<beta\>>-y<rsup|\<beta\>>|)>|)> p<around*|(|y,0|)>,
+    <wide|p|^><around*|(|k,t|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
+    exp<around*|(|-\<mathi\> k<rsub|\<alpha\>>x<rsup|\<alpha\>>|)>
+    p<around*|(|x,t|)>.
   </equation*>
 
-  where the factor <math|1/<sqrt|\<cdots\>>> comes from normalization
-  <math|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x p<around*|(|x,t|)>=1>.
+  It has an inverse transformation
+
+  <\equation*>
+    p<around*|(|x,t|)>=<big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\>|)><rsup|d>>
+    exp<around*|(|\<mathi\>k<rsub|\<alpha\>>x<rsup|\<alpha\>>|)>
+    <wide|p|^><around*|(|k,t|)>.
+  </equation*>
+
+  This relation holds because, by plugging <math|<wide|p|^><around*|(|k,t|)>>
+  into the right hand side, we find it
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\>|)><rsup|d>>
+    exp<around*|(|\<mathi\>k<rsub|\<alpha\>>x<rsup|\<alpha\>>|)><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    exp<around*|(|-\<mathi\> k<rsub|\<alpha\>>y<rsup|\<alpha\>>|)>
+    p<around*|(|y,t|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\>|)><rsup|d>>
+    exp<around*|(|\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>|)>
+    p<around*|(|y,t|)>.
+  </equation*>
+
+  Integrating over <math|k> and using the relation<\footnote>
+    TODO: explain this.
+  </footnote>
+
+  <\equation*>
+    \<delta\><around*|(|x-y|)>=<big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\>|)><rsup|d>>
+    exp<around*|(|\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>|)>,
+  </equation*>
+
+  we find the right hand side <math|<big|int>\<mathd\>y
+  \<delta\><around*|(|x-y|)> p<around*|(|y,t|)>=p<around*|(|x,t|)>> which is
+  the left hand side. By plugging this inverse transformation into heat
+  equation <reference|equation:heat equation>, we get
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k<rprime|'>|<around*|(|2\<mathpi\>|)><rsup|d>>
+    exp<around*|(|\<mathi\>k<rprime|'><rsub|\<alpha\>>x<rsup|\<alpha\>>|)><around*|[|<frac|\<partial\><wide|p|^>|\<partial\>t><around*|(|k<rprime|'>,t|)>+<frac|1|2>\<delta\><rsup|\<alpha\>\<beta\>>k<rprime|'><rsub|\<alpha\>>k<rprime|'><rsub|\<beta\>>
+    <wide|p|^><around*|(|k<rprime|'>,t|)>|]>=0.
+  </equation*>
+
+  Multiplied by <math|exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>x<rsup|\<alpha\>>|)>>
+  on both sides and integrating over <math|x> and then <math|k<rprime|'>>, we
+  arrive at
+
+  <\equation*>
+    <frac|\<partial\><wide|p|^>|\<partial\>t><around*|(|k,t|)>+<frac|1|2>\<delta\><rsup|\<alpha\>\<beta\>>k<rsub|\<alpha\>>k<rsub|\<beta\>>
+    <wide|p|^><around*|(|k,t|)>=0.
+  </equation*>
+
+  This is an ordinary differential equation for each <math|k>. It has
+  solution
+
+  <\equation*>
+    <wide|p|^><around*|(|k,t|)>=<wide|p|^><around*|(|k,0|)>
+    exp<around*|(|-<frac|1|2>\<delta\><rsup|\<alpha\>\<beta\>>k<rsub|\<alpha\>>k<rsub|\<beta\>>
+    t|)>.
+  </equation*>
+
+  Thus, by the inverse transformation
+
+  <\equation*>
+    p<around*|(|x,t|)>=<big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\>|)><rsup|d>>
+    <wide|p|^><around*|(|k,0|)> exp<around*|(|\<mathi\>k<rsub|\<alpha\>>x<rsup|\<alpha\>>-<frac|1|2>\<delta\><rsup|\<alpha\>\<beta\>>k<rsub|\<alpha\>>k<rsub|\<beta\>>
+    t|)>.
+  </equation*>
+
+  Inserting the definition of <math|<wide|p|^><around*|(|k,0|)>>, we get
+
+  <\equation*>
+    p<around*|(|x,t|)>= <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    \ p<around*|(|y,0|)><big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\>|)><rsup|d>>
+    exp<around*|(|\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>-<frac|1|2>\<delta\><rsup|\<alpha\>\<beta\>>k<rsub|\<alpha\>>k<rsub|\<beta\>>
+    t|)>.
+  </equation*>
+
+  The second integral is Gaussian. By the formula of Gaussian integral, which
+  holds for any positive definite matrix <math|A>,
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x exp<around*|(|-<frac|1|2>
+    A<rsub|\<alpha\>\<beta\>> x<rsup|\<alpha\>>
+    x<rsup|\<beta\>>+b<rsub|\<alpha\>> x<rsup|\<alpha\>>|)>=<sqrt|<frac|<around*|(|2\<mathpi\>|)><rsup|d>|det
+    A>> exp<around*|(|<frac|1|2> <around*|(|A<rsup|-1>|)><rsup|\<alpha\>\<beta\>>
+    b<rsub|\<alpha\>> b<rsub|\<beta\>>|)>,
+  </equation*>
+
+  the second integral becomes (replacing <math|A<rsub|\<alpha\>\<beta\>>> by
+  <math|\<delta\><rsup|\<alpha\>\<beta\>> t> and <math|b<rsub|\<alpha\>>> by
+  <math|\<mathi\> <around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>>)
+
+  <\equation*>
+    <frac|1|<sqrt|<around*|(|2\<mathpi\>t|)><rsup|d>>>
+    exp<around*|(|-<frac|1|2t>\<delta\><rsub|\<alpha\>\<beta\>><around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><around*|(|x<rsup|\<beta\>>-y<rsup|\<beta\>>|)>|)>,
+  </equation*>
+
+  thus
+
+  <\equation*>
+    p<around*|(|x,t|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    \ <around*|[|<frac|1|<sqrt|<around*|(|2\<mathpi\>t|)><rsup|d>>>
+    exp<around*|(|-<frac|1|2t>\<delta\><rsub|\<alpha\>\<beta\>><around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><around*|(|x<rsup|\<beta\>>-y<rsup|\<beta\>>|)>|)>|]>
+    p<around*|(|y,0|)>.
+  </equation*>
+
   From this expression, we can read out the transition density directly, as
 
   <\equation>
-    q<rsub|t><around*|(|x\|y|)>=<frac|1|<sqrt|<around*|(|2\<mathpi\>t|)><rsup|n>>>
+    q<rsub|t><around*|(|x\|y|)>=<frac|1|<sqrt|<around*|(|2\<mathpi\>t|)><rsup|d>>>
     exp<around*|(|-<frac|1|2t>\<delta\><rsub|\<alpha\>\<beta\>>
     <around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>
     <around*|(|x<rsup|\<beta\>>-y<rsup|\<beta\>>|)>|)>,<label|equation:wiener
@@ -2607,6 +2715,8 @@
   hundred years after Brown's discover, in 1918, Norbert Wiener first
   constructed a complete mathematical theory for this stochastic process. So,
   it is also called <strong|Wiener process>.
+
+  <subsection|* Central Limit Theorem>
 
   The transition can be seen as an accumulation of a series tiny transitions,
   each is caused by one strike from a water molecule. The strike obeys a
@@ -3272,7 +3382,7 @@
   equation>, we get
 
   <\equation>
-    p<around*|(|x<rsub|N>,N \<Delta\>t|)>=<big|int><rsub|\<cal-X\>>\<mathd\>x<rsub|N-1>\<cdots\><big|int><rsub|\<cal-X\>>\<mathd\>x<rsub|0>
+    p<around*|(|x<rsub|N>,N \<Delta\>t|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N-1>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|0>
     q<rsub|\<Delta\>t><around*|(|x<rsub|N>\|x<rsub|N-1>|)>\<cdots\>
     q<rsub|\<Delta\>t><around*|(|x<rsub|1>\|x<rsub|0>|)>
     p<around*|(|x<rsub|0>,0|)>.<label|equation:path integral step 1>
@@ -4339,7 +4449,7 @@
 
 <\references>
   <\collection>
-    <associate|appendix: Perturbative Method|<tuple|4.7.4|47>>
+    <associate|appendix: Perturbative Method|<tuple|4.7.4|48>>
     <associate|auto-1|<tuple|?|7>>
     <associate|auto-10|<tuple|2.3|14>>
     <associate|auto-11|<tuple|2.4|17>>
@@ -4354,26 +4464,27 @@
     <associate|auto-2|<tuple|1|9>>
     <associate|auto-20|<tuple|3.4|30>>
     <associate|auto-21|<tuple|3.5|31>>
-    <associate|auto-22|<tuple|3.6|32>>
-    <associate|auto-23|<tuple|3.7|33>>
-    <associate|auto-24|<tuple|3.8|33>>
-    <associate|auto-25|<tuple|4|35>>
-    <associate|auto-26|<tuple|4.1|35>>
-    <associate|auto-27|<tuple|4.2|35>>
-    <associate|auto-28|<tuple|4.3|36>>
-    <associate|auto-29|<tuple|4.4|38>>
+    <associate|auto-22|<tuple|3.5.1|33>>
+    <associate|auto-23|<tuple|3.6|33>>
+    <associate|auto-24|<tuple|3.7|34>>
+    <associate|auto-25|<tuple|3.8|34>>
+    <associate|auto-26|<tuple|4|37>>
+    <associate|auto-27|<tuple|4.1|37>>
+    <associate|auto-28|<tuple|4.2|37>>
+    <associate|auto-29|<tuple|4.3|38>>
     <associate|auto-3|<tuple|1.1|9>>
-    <associate|auto-30|<tuple|4.5|41>>
-    <associate|auto-31|<tuple|4.6|42>>
-    <associate|auto-32|<tuple|4.1|43>>
-    <associate|auto-33|<tuple|4.7|44>>
-    <associate|auto-34|<tuple|4.7.1|44>>
-    <associate|auto-35|<tuple|4.7.2|44>>
-    <associate|auto-36|<tuple|4.7.3|46>>
-    <associate|auto-37|<tuple|4.7.4|47>>
-    <associate|auto-38|<tuple|4.8|49>>
-    <associate|auto-39|<tuple|4.2|50>>
+    <associate|auto-30|<tuple|4.4|40>>
+    <associate|auto-31|<tuple|4.5|43>>
+    <associate|auto-32|<tuple|4.6|44>>
+    <associate|auto-33|<tuple|4.1|45>>
+    <associate|auto-34|<tuple|4.7|46>>
+    <associate|auto-35|<tuple|4.7.1|46>>
+    <associate|auto-36|<tuple|4.7.2|46>>
+    <associate|auto-37|<tuple|4.7.3|47>>
+    <associate|auto-38|<tuple|4.7.4|48>>
+    <associate|auto-39|<tuple|4.8|50>>
     <associate|auto-4|<tuple|1.2|9>>
+    <associate|auto-40|<tuple|4.2|51>>
     <associate|auto-5|<tuple|1.3|10>>
     <associate|auto-6|<tuple|1.4|11>>
     <associate|auto-7|<tuple|2|13>>
@@ -4382,51 +4493,52 @@
     <associate|equation:Detailed Balance|<tuple|2.8|17>>
     <associate|equation:Detailed Balance for transition
     density|<tuple|2.9|17>>
-    <associate|equation:Fokker-Planck equation|<tuple|3.4|33>>
-    <associate|equation:action of distribution|<tuple|4.13|42>>
-    <associate|equation:berezin integral|<tuple|4.7|38>>
-    <associate|equation:berezin integral exp|<tuple|4.4|37>>
-    <associate|equation:berezin integral measurement|<tuple|4.6|38>>
+    <associate|equation:Fokker-Planck equation|<tuple|3.5|33>>
+    <associate|equation:action of distribution|<tuple|4.13|43>>
+    <associate|equation:berezin integral|<tuple|4.7|40>>
+    <associate|equation:berezin integral exp|<tuple|4.4|39>>
+    <associate|equation:berezin integral measurement|<tuple|4.6|40>>
     <associate|equation:circle|<tuple|2.15|23>>
-    <associate|equation:data-fitting iteration|<tuple|4.15|43>>
-    <associate|equation:data-fitting result|<tuple|4.16|43>>
+    <associate|equation:data-fitting iteration|<tuple|4.15|45>>
+    <associate|equation:data-fitting result|<tuple|4.16|45>>
     <associate|equation:define stationary density function|<tuple|2.14|23>>
     <associate|equation:detailed balance condition for
-    Langevin|<tuple|3.6|34>>
+    Langevin|<tuple|3.7|35>>
     <associate|equation:discrete time master equation|<tuple|2.5|14>>
     <associate|equation:discrete time master equation v0|<tuple|2.2|13>>
     <associate|equation:equation:metropolis-hastings|<tuple|2.12|22>>
-    <associate|equation:general path integral|<tuple|4.8|38>>
-    <associate|equation:generic density|<tuple|4.14|42>>
-    <associate|equation:grassmann integral transform|<tuple|4.5|38>>
-    <associate|equation:harmonic oscillator action|<tuple|4.1|35>>
+    <associate|equation:general path integral|<tuple|4.8|40>>
+    <associate|equation:generic density|<tuple|4.14|44>>
+    <associate|equation:grassmann integral transform|<tuple|4.5|40>>
+    <associate|equation:harmonic oscillator action|<tuple|4.1|37>>
+    <associate|equation:heat equation|<tuple|3.2|32>>
     <associate|equation:km expansion|<tuple|3.1|29>>
-    <associate|equation:langevin action|<tuple|4.11|40>>
-    <associate|equation:langevin action constant R|<tuple|4.12|41>>
-    <associate|equation:langevin transition rate|<tuple|3.3|32>>
-    <associate|equation:least-action principle v0|<tuple|4.2|35>>
-    <associate|equation:least-action principle v1|<tuple|4.3|36>>
+    <associate|equation:langevin action|<tuple|4.11|42>>
+    <associate|equation:langevin action constant R|<tuple|4.12|42>>
+    <associate|equation:langevin transition rate|<tuple|3.4|33>>
+    <associate|equation:least-action principle v0|<tuple|4.2|37>>
+    <associate|equation:least-action principle v1|<tuple|4.3|38>>
     <associate|equation:master equation|<tuple|2.4|14>>
     <associate|equation:master equation v0|<tuple|2.3|14>>
     <associate|equation:metropolis-hastings origin|<tuple|2.13|22>>
-    <associate|equation:path integral step 1|<tuple|4.9|38>>
-    <associate|equation:path integral step 2|<tuple|4.10|39>>
+    <associate|equation:path integral step 1|<tuple|4.9|40>>
+    <associate|equation:path integral step 2|<tuple|4.10|41>>
     <associate|equation:relative entropy derivative|<tuple|2.11|18>>
-    <associate|equation:rg action|<tuple|4.17|44>>
-    <associate|equation:rg integral|<tuple|4.18|44>>
-    <associate|equation:rg transform 1|<tuple|4.19|45>>
-    <associate|equation:rg transform 2|<tuple|4.20|45>>
-    <associate|equation:rg transform 3|<tuple|4.21|46>>
-    <associate|equation:rg transform 4|<tuple|4.22|46>>
-    <associate|equation:stationary Fokker-Planck equation|<tuple|3.5|33>>
+    <associate|equation:rg action|<tuple|4.17|46>>
+    <associate|equation:rg integral|<tuple|4.18|46>>
+    <associate|equation:rg transform 1|<tuple|4.19|47>>
+    <associate|equation:rg transform 2|<tuple|4.20|47>>
+    <associate|equation:rg transform 3|<tuple|4.21|47>>
+    <associate|equation:rg transform 4|<tuple|4.22|47>>
+    <associate|equation:stationary Fokker-Planck equation|<tuple|3.6|34>>
     <associate|equation:transition density normalization|<tuple|2.1|13>>
     <associate|equation:transition rate determines transition
     density|<tuple|2.6|15>>
     <associate|equation:transition rate determines transition density
     v2|<tuple|2.7|16>>
-    <associate|equation:wiener process|<tuple|3.2|32>>
-    <associate|figure: Least-Action|<tuple|4.1|43>>
-    <associate|figure: vector field of differences|<tuple|4.2|50>>
+    <associate|equation:wiener process|<tuple|3.3|33>>
+    <associate|figure: Least-Action|<tuple|4.1|45>>
+    <associate|figure: vector field of differences|<tuple|4.2|51>>
     <associate|footnote-1|<tuple|1|7>>
     <associate|footnote-1.1|<tuple|1.1|9>>
     <associate|footnote-1.2|<tuple|1.2|9>>
@@ -4441,9 +4553,10 @@
     <associate|footnote-3.2|<tuple|3.2|27>>
     <associate|footnote-3.3|<tuple|3.3|30>>
     <associate|footnote-3.4|<tuple|3.4|30>>
-    <associate|footnote-4.1|<tuple|4.1|36>>
-    <associate|footnote-4.2|<tuple|4.2|38>>
-    <associate|footnote-4.3|<tuple|4.3|45>>
+    <associate|footnote-3.5|<tuple|3.5|?>>
+    <associate|footnote-4.1|<tuple|4.1|38>>
+    <associate|footnote-4.2|<tuple|4.2|40>>
+    <associate|footnote-4.3|<tuple|4.3|46>>
     <associate|footnr-1|<tuple|1|7>>
     <associate|footnr-1.1|<tuple|1.1|9>>
     <associate|footnr-1.2|<tuple|1.2|9>>
@@ -4458,45 +4571,46 @@
     <associate|footnr-3.2|<tuple|3.2|27>>
     <associate|footnr-3.3|<tuple|3.3|30>>
     <associate|footnr-3.4|<tuple|3.4|30>>
-    <associate|footnr-4.1|<tuple|4.1|36>>
-    <associate|footnr-4.2|<tuple|4.2|38>>
-    <associate|footnr-4.3|<tuple|4.3|45>>
+    <associate|footnr-3.5|<tuple|3.5|?>>
+    <associate|footnr-4.1|<tuple|4.1|38>>
+    <associate|footnr-4.2|<tuple|4.2|40>>
+    <associate|footnr-4.3|<tuple|4.3|46>>
     <associate|section: A Brief Review of Least-Action Principle in Classical
-    Mechanics|<tuple|4.2|35>>
+    Mechanics|<tuple|4.2|37>>
     <associate|section: A Brief Review of Probability|<tuple|1.1|9>>
     <associate|section: Conventions in This Chapter 2|<tuple|2.1|13>>
     <associate|section: Cut-off in the Moments of Transition Rate Is
     Essential for Spatial Smoothness|<tuple|3.2|25>>
     <associate|section: Data Fitting Is Equivalent to Least-Action Principle
-    of Distribution|<tuple|4.6|42>>
+    of Distribution|<tuple|4.6|44>>
     <associate|section: Detailed Balance Condition and Connectivity
     Monotonically Reduce Relative Entropy|<tuple|2.5|18>>
     <associate|section: Detailed Balance Provides Stationary
     Distribution|<tuple|2.4|17>>
     <associate|section: Detailed Balance of Langevin Process Lacks
-    Source-Free Degree of Freedom|<tuple|3.8|33>>
+    Source-Free Degree of Freedom|<tuple|3.8|34>>
     <associate|section: Example: Metropolis-Hastings
     Algorithm|<tuple|2.7|22>>
     <associate|section: How Far Will Information Propagate in Langevin
-    Process?|<tuple|4.7|44>>
+    Process?|<tuple|4.7|46>>
     <associate|section: Kramers\UMoyal Expansion Formulates Transition Rate
     by Its Moments|<tuple|3.3|29>>
     <associate|section: Kramers-Moyal Expansion and Langevin
     Process|<tuple|3|25>>
     <associate|section: Langevin Process Can Be Formulated as Path
-    Integral|<tuple|4.4|38>>
+    Integral|<tuple|4.4|40>>
     <associate|section: Langevin Process Is a Markovian Process with
-    Ncut=2|<tuple|3.6|32>>
-    <associate|section: Least-Action Principle|<tuple|4|35>>
+    Ncut=2|<tuple|3.6|33>>
+    <associate|section: Least-Action Principle|<tuple|4|37>>
     <associate|section: Least-Action Principle of Distribution Has No
-    Redundancy|<tuple|4.5|41>>
+    Redundancy|<tuple|4.5|43>>
     <associate|section: Master Equation Describes the Evolution of Markov
     Process|<tuple|2.2|13>>
     <associate|section: Master Equation and Detailed Balance|<tuple|2|13>>
     <associate|section: Monte-Carlo Simulation and Guarantee of
     Relaxation|<tuple|2.6|19>>
     <associate|section: Preliminary: Grassmann Variable and Berezin
-    Integral|<tuple|4.3|36>>
+    Integral|<tuple|4.3|38>>
     <associate|section: Randomness Is Absent in the First Moment of
     Transition Rate|<tuple|3.4|30>>
     <associate|section: Relative Entropy|<tuple|1|9>>
@@ -4537,13 +4651,13 @@
       <with|mode|<quote|math>|x<rsub|1>> a local minimum of
       <with|mode|<quote|math>|S<around*|(|\<cdummy\>,\<theta\>|)>>, and
       <with|mode|<quote|math>|S<around*|(|\<cdummy\>,\<theta\>|)>> is
-      optimized to be the dashed green curve.>|<pageref|auto-32>>
+      optimized to be the dashed green curve.>|<pageref|auto-33>>
 
       <tuple|normal|<surround|<hidden-binding|<tuple>|4.2>|| The vector field
       of differences <with|mode|<quote|math>|<around*|(|<frac|3u+v|2>-u,<frac|u+3v|2>-v|)>>,
       where <with|mode|<quote|math>|u\<assign\>A<rsub|\<alpha\>\<beta\>>> and
       <with|mode|<quote|math>|v\<assign\>B<rsub|\<alpha\>\<beta\>>> for any
-      <with|mode|<quote|math>|\<alpha\>,\<beta\>>.>|<pageref|auto-39>>
+      <with|mode|<quote|math>|\<alpha\>,\<beta\>>.>|<pageref|auto-40>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Preface>
@@ -4630,70 +4744,74 @@
       Rate <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-21>
 
+      <with|par-left|<quote|1tab>|3.5.1<space|2spc>* Central Limit Theorem
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-22>>
+
       3.6<space|2spc>Langevin Process Is a Markovian Process with
       <with|mode|<quote|math>|N<rsub|cut>=2>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-22>
+      <no-break><pageref|auto-23>
 
       3.7<space|2spc>Stationary Solution of Langevin Process Has Source-Free
       Degree of Freedom <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-23>
+      <no-break><pageref|auto-24>
 
       3.8<space|2spc>Detailed Balance of Langevin Process Lacks Source-Free
       Degree of Freedom <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-24>
+      <no-break><pageref|auto-25>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Least-Action
       Principle> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-25><vspace|0.5fn>
+      <no-break><pageref|auto-26><vspace|0.5fn>
 
       4.1<space|2spc>Conventions in This Chapter
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-26>
+      <no-break><pageref|auto-27>
 
       4.2<space|2spc>A Brief Review of Least-Action Principle in Classical
       Mechanics <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-27>
+      <no-break><pageref|auto-28>
 
       4.3<space|2spc>Preliminary: Grassmann Variable and Berezin Integral
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-28>
+      <no-break><pageref|auto-29>
 
       4.4<space|2spc>Langevin Process Can Be Formulated as Path Integral
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-29>
+      (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-30>
 
       4.5<space|2spc>Least-Action Principle of Distribution Has No Redundancy
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-30>
+      <no-break><pageref|auto-31>
 
       4.6<space|2spc>Data Fitting Is Equivalent to Least-Action Principle of
       Distribution <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-31>
+      <no-break><pageref|auto-32>
 
       4.7<space|2spc>How Far Will Information Propagate in Langevin Process?
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-33>
+      (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-34>
 
       <with|par-left|<quote|1tab>|4.7.1<space|2spc>The Generic Action
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-34>>
+      <no-break><pageref|auto-35>>
 
       <with|par-left|<quote|1tab>|4.7.2<space|2spc>Renormalization Group
       Equations <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-35>>
+      <no-break><pageref|auto-36>>
 
       <with|par-left|<quote|1tab>|4.7.3<space|2spc>Fixed Point and
       Scale-Invariance <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-36>>
+      <no-break><pageref|auto-37>>
 
       <with|par-left|<quote|1tab>|4.7.4<space|2spc>* Appendix: Perturbative
       Method <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-37>>
+      <no-break><pageref|auto-38>>
 
       4.8<space|2spc>Example: Linear System Cannot Be Scale-Invariant
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-38>
+      <no-break><pageref|auto-39>
     </associate>
   </collection>
 </auxiliary>

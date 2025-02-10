@@ -3,6 +3,250 @@
 <style|article>
 
 <\body>
+  <section|General Momenta Integration>
+
+  Try to integrate
+
+  <\equation*>
+    I\<assign\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k
+    \ exp<around*|(|<around*|[|K<rsub|1><rsup|\<alpha\>>
+    \<Delta\>t-\<epsilon\><rsup|\<alpha\>>|]>
+    \<mathi\>k<rsub|\<alpha\>>-<frac|\<Delta\>t|2>K<rsub|2><rsup|\<alpha\>\<beta\>>
+    k<rsub|\<alpha\>>k<rsub|\<beta\>>+\<cdots\>+\<Delta\>t<frac|\<mathi\><rsup|n>|n!>K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>>
+    k<rsub|\<alpha\><rsub|1>>*\<cdots\>*k<rsub|\<alpha\><rsub|n>>+\<cdots\>|)>.
+  </equation*>
+
+  If regarding it as a Gaussian integral, which means
+
+  <\equation*>
+    J<around*|(|j|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k
+    \ exp<around*|(|<around*|[|K<rsub|1><rsup|\<alpha\>>
+    \<Delta\>t-\<epsilon\><rsup|\<alpha\>>+j<rsup|\<alpha\>>|]>
+    \<mathi\>k<rsub|\<alpha\>>-<frac|\<Delta\>t|2>K<rsub|2><rsup|\<alpha\>\<beta\>>
+    k<rsub|\<alpha\>>k<rsub|\<beta\>>|)>,
+  </equation*>
+
+  where <math|j<rsup|\<alpha\>>> is a \Psource term\Q, then, by the formula
+  of Gaussian integral,
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x exp<around*|(|-<frac|1|2>
+    A<rsub|\<alpha\>\<beta\>> x<rsup|\<alpha\>>
+    x<rsup|\<beta\>>+b<rsub|\<alpha\>> x<rsup|\<alpha\>>|)>=<sqrt|<frac|<around*|(|2\<mathpi\>|)><rsup|d>|det
+    A>> exp<around*|(|<frac|1|2> <around*|(|A<rsup|-1>|)><rsup|\<alpha\>\<beta\>>
+    b<rsub|\<alpha\>> b<rsub|\<beta\>>|)>,
+  </equation*>
+
+  we have, replacing <math|A> by <math|\<Delta\>t K<rsub|2>> and <math|b> by
+  <math|\<mathi\><around*|(|K<rsub|1> \<Delta\>t-\<epsilon\>+j|)>>,
+
+  <\align>
+    <tformat|<table|<row|<cell|J<around*|(|j|)>=>|<cell|<sqrt|<frac|<around*|(|2\<mathpi\>|)><rsup|d>|\<Delta\>t<rsup|d>
+    det K<rsub|2>>> exp<around*|(|-<frac|1|2\<Delta\>t>
+    <around*|(|K<rsub|2><rsup|-1>|)><rsub|\<alpha\>\<beta\>>
+    <around*|(|K<rsup|\<alpha\>><rsub|1> \<Delta\>t-\<epsilon\><rsup|\<alpha\>>+j<rsup|\<alpha\>>|)>
+    <around*|(|K<rsup|\<beta\>><rsub|1> \<Delta\>t-\<epsilon\><rsup|\<beta\>>+j<rsup|\<beta\>>|)>|)>>>|<row|<cell|=>|<cell|<sqrt|<frac|<around*|(|2\<mathpi\>|)><rsup|d>|\<Delta\>t<rsup|d>
+    det K<rsub|2>>> exp<around*|(|-<frac|1|2\<Delta\>t>
+    <around*|(|K<rsub|2><rsup|-1>|)><rsub|\<alpha\>\<beta\>>
+    <around*|(|K<rsup|\<alpha\>><rsub|1> \<Delta\>t-\<epsilon\><rsup|\<alpha\>>|)>
+    <around*|(|K<rsup|\<beta\>><rsub|1> \<Delta\>t-\<epsilon\><rsup|\<beta\>>|)>|)>>>|<row|<cell|>|<cell|\<times\>exp<around*|(|-<frac|1|2\<Delta\>t>
+    <around*|(|K<rsub|2><rsup|-1>|)><rsub|\<alpha\>\<beta\>>
+    j<rsup|\<alpha\>>j<rsup|\<beta\>>-c<rsub|\<alpha\>>j<rsup|\<alpha\>>|)>,>>>>
+  </align>
+
+  where
+
+  <\equation*>
+    c<rsub|\<alpha\>>\<assign\><around*|(|K<rsub|1><rsup|-1>|)><rsub|\<alpha\>\<beta\>><around*|(|K<rsup|\<beta\>><rsub|1>
+    -<frac|\<epsilon\><rsup|\<beta\>>|\<Delta\>t>|)>.
+  </equation*>
+
+  To compute the expectation
+
+  <\equation*>
+    E<rsub|\<alpha\><rsub|1>\<ldots\>\<alpha\><rsub|n>>\<assign\><frac|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k
+    \ exp<around*|(|<around*|[|K<rsub|1><rsup|\<alpha\>>
+    \<Delta\>t-\<epsilon\><rsup|\<alpha\>>|]>
+    \<mathi\>k<rsub|\<alpha\>>-<frac|\<Delta\>t|2>K<rsub|2><rsup|\<alpha\>\<beta\>>
+    k<rsub|\<alpha\>>k<rsub|\<beta\>>|)><around*|[|<around*|(|\<mathi\>k<rsub|\<alpha\><rsub|1>>|)>*\<cdots\>*<around*|(|\<mathi\>k<rsub|\<alpha\><rsub|n>>|)>|]>|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|'>
+    \ exp<around*|(|<around*|[|K<rsub|1><rsup|\<alpha\>>
+    \<Delta\>t-\<epsilon\><rsup|\<alpha\>>|]>
+    \<mathi\>k<rprime|'><rsub|\<alpha\>>-<frac|\<Delta\>t|2>K<rsub|2><rsup|\<alpha\>\<beta\>>
+    k<rprime|'><rsub|\<alpha\>>k<rprime|'><rsub|\<beta\>>|)>>,
+  </equation*>
+
+  then, we have
+
+  <\equation*>
+    E<rsub|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>>=lim<rsub|j\<rightarrow\>0><frac|\<partial\>|\<partial\>j<rsup|\<alpha\><rsub|1>>>\<cdots\><frac|\<partial\>|\<partial\>j<rsup|\<alpha\><rsub|n>>>exp<around*|(|-<frac|1|2\<Delta\>t>
+    <around*|(|K<rsub|2><rsup|-1>|)><rsub|\<alpha\>\<beta\>>
+    j<rsup|\<alpha\>>j<rsup|\<beta\>>-c<rsub|\<alpha\>>j<rsup|\<alpha\>>|)>.
+  </equation*>
+
+  For example, for <math|n=3>, we have
+
+  <\small>
+    <\align>
+      <tformat|<table|<row|<cell|>|<cell|<frac|\<partial\>|\<partial\>j<rsup|\<alpha\>>><frac|\<partial\>|\<partial\>j<rsup|\<beta\>>><frac|\<partial\>|\<partial\>j<rsup|\<gamma\>>>exp<around*|(|-<frac|1|2\<Delta\>t>
+      <around*|(|K<rsub|2><rsup|-1>|)><rsub|\<alpha\>\<beta\>>
+      j<rsup|\<alpha\>>j<rsup|\<beta\>>-c<rsub|\<alpha\>>j<rsup|\<alpha\>>|)>>>|<row|<cell|=>|<cell|<frac|\<partial\>|\<partial\>j<rsup|\<beta\>>><frac|\<partial\>|\<partial\>j<rsup|\<gamma\>>>exp<around*|(|-<frac|1|2\<Delta\>t>
+      <around*|(|K<rsub|2><rsup|-1>|)><rsub|\<alpha\>\<beta\>>
+      j<rsup|\<alpha\>>j<rsup|\<beta\>>-c<rsub|\<alpha\>>j<rsup|\<alpha\>>|)><around*|[|-<frac|1|\<Delta\>t>
+      <around*|(|K<rsub|2><rsup|-1>|)><rsub|\<alpha\>\<beta\>>j<rsup|\<beta\>>-c<rsub|\<alpha\>>|]>>>|<row|<cell|=>|<cell|<frac|\<partial\>|\<partial\>j<rsup|\<gamma\>>><around*|{|exp<around*|(|-<frac|1|2\<Delta\>t>
+      <around*|(|K<rsub|2><rsup|-1>|)><rsub|\<alpha\>\<beta\>>
+      j<rsup|\<alpha\>>j<rsup|\<beta\>>-c<rsub|\<alpha\>>j<rsup|\<alpha\>>|)><around*|[|-<frac|1|\<Delta\>t>
+      <around*|(|K<rsub|2><rsup|-1>|)><rsub|\<alpha\>\<beta\><rprime|'>>j<rsup|\<beta\><rprime|'>>-c<rsub|\<alpha\>>|]><around*|[|-<frac|1|\<Delta\>t>
+      <around*|(|K<rsub|2><rsup|-1>|)><rsub|\<beta\>\<beta\><rprime|'>>j<rsup|\<beta\><rprime|'>>-c<rsub|\<beta\>>|]>+exp<around*|(|-<frac|1|2\<Delta\>t>
+      <around*|(|K<rsub|2><rsup|-1>|)><rsub|\<alpha\>\<beta\>>
+      j<rsup|\<alpha\>>j<rsup|\<beta\>>-c<rsub|\<alpha\>>j<rsup|\<alpha\>>|)><around*|[|-<frac|1|\<Delta\>t>
+      <around*|(|K<rsub|2><rsup|-1>|)><rsub|\<alpha\>\<beta\>>|]>|}>>>|<row|<cell|=>|<cell|<around*|{|exp<around*|(|-<frac|1|2\<Delta\>t>
+      <around*|(|K<rsub|2><rsup|-1>|)><rsub|\<alpha\>\<beta\>>
+      j<rsup|\<alpha\>>j<rsup|\<beta\>>-c<rsub|\<alpha\>>j<rsup|\<alpha\>>|)><around*|[|-<frac|1|\<Delta\>t>
+      <around*|(|K<rsub|2><rsup|-1>|)><rsub|\<alpha\>\<beta\><rprime|'>>j<rsup|\<beta\><rprime|'>>-c<rsub|\<alpha\>>|]><around*|[|-<frac|1|\<Delta\>t>
+      <around*|(|K<rsub|2><rsup|-1>|)><rsub|\<beta\>\<beta\><rprime|'>>j<rsup|\<beta\><rprime|'>>-c<rsub|\<beta\>>|]><around*|[|-<frac|1|\<Delta\>t>
+      <around*|(|K<rsub|2><rsup|-1>|)><rsub|\<gamma\>\<beta\><rprime|'>>j<rsup|\<beta\><rprime|'>>-c<rsub|\<gamma\>>|]>+exp<around*|(|-<frac|1|2\<Delta\>t>
+      <around*|(|K<rsub|2><rsup|-1>|)><rsub|\<alpha\>\<beta\>>
+      j<rsup|\<alpha\>>j<rsup|\<beta\>>-c<rsub|\<alpha\>>j<rsup|\<alpha\>>|)><around*|[|-<frac|1|\<Delta\>t>
+      <around*|(|K<rsub|2><rsup|-1>|)><rsub|\<alpha\>\<gamma\>>|]><around*|[|-<frac|1|\<Delta\>t>
+      <around*|(|K<rsub|2><rsup|-1>|)><rsub|\<beta\>\<beta\><rprime|'>>j<rsup|\<beta\><rprime|'>>-c<rsub|\<beta\>>|]>+exp<around*|(|-<frac|1|2\<Delta\>t>
+      <around*|(|K<rsub|2><rsup|-1>|)><rsub|\<alpha\>\<beta\>>
+      j<rsup|\<alpha\>>j<rsup|\<beta\>>-c<rsub|\<alpha\>>j<rsup|\<alpha\>>|)><around*|[|-<frac|1|\<Delta\>t>
+      <around*|(|K<rsub|2><rsup|-1>|)><rsub|\<alpha\>\<beta\><rprime|'>>j<rsup|\<beta\><rprime|'>>-c<rsub|\<alpha\>>|]><around*|[|-<frac|1|\<Delta\>t>
+      <around*|(|K<rsub|2><rsup|-1>|)><rsub|\<beta\>\<gamma\>>|]>+exp<around*|(|-<frac|1|2\<Delta\>t>
+      <around*|(|K<rsub|2><rsup|-1>|)><rsub|\<alpha\>\<beta\>>
+      j<rsup|\<alpha\>>j<rsup|\<beta\>>-c<rsub|\<alpha\>>j<rsup|\<alpha\>>|)><around*|[|-<frac|1|\<Delta\>t>
+      <around*|(|K<rsub|2><rsup|-1>|)><rsub|\<alpha\>\<beta\>>|]><around*|[|-<frac|1|\<Delta\>t>
+      <around*|(|K<rsub|2><rsup|-1>|)><rsub|\<gamma\>\<beta\><rprime|'>>j<rsup|\<beta\><rprime|'>>-c<rsub|\<gamma\>>|]>|}>.>>>>
+    </align>
+  </small>
+
+  Then, taking <math|j=0>, we get
+
+  <\equation*>
+    E<rsub|\<alpha\>\<beta\>\<gamma\>>=<around*|{|-c<rsub|\<alpha\>>c<rsub|\<beta\>>c<rsub|\<gamma\>>+<frac|1|\<Delta\>t>
+    <around*|(|K<rsub|2><rsup|-1>|)><rsub|\<alpha\>\<gamma\>>c<rsub|\<beta\>>+<frac|1|\<Delta\>t>
+    <around*|(|K<rsub|2><rsup|-1>|)><rsub|\<beta\>\<gamma\>>c<rsub|\<alpha\>>+<frac|1|\<Delta\>t>
+    <around*|(|K<rsub|2><rsup|-1>|)><rsub|\<alpha\>\<beta\>>c<rsub|\<gamma\>>|}>.
+  </equation*>
+
+  When <math|\<Delta\>t\<rightarrow\>0>, <math|E<rsub|\<alpha\>\<beta\>\<gamma\>>>
+  diverges.
+
+  <section|Perturbation on Wiener Process>
+
+  Given initial value <math|p<around*|(|x,0|)>>, we are to solve the
+  (continuous-time) master equation
+
+  <\equation*>
+    <frac|\<partial\>p|\<partial\>t><around*|(|x,t|)>=<big|int><rsub|\<cal-X\>>\<mathd\>x
+    r<around*|(|x,y|)> p<around*|(|y,t|)>
+  </equation*>
+
+  for <math|p<around*|(|x,\<Delta\>t|)>> when <math|\<Delta\>t> is small.
+  This equation may not be solved analytically and exactly. We are to solve
+  it using series expansion, like the Dyson's series for
+  Schr<wide|o|\<ddot\>>dinger equation. The base of the expansion that we use
+  is designed to be Wiener process, because this is the starting point in
+  which stochastics arises. Another reason is that Wiener process is
+  exponential. For example, for Wiener process with covariance
+  <math|\<Sigma\>>, we have
+
+  <\equation*>
+    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>,x|)>=<frac|1|<sqrt|<around*|(|2\<mathpi\>
+    \<Delta\>t|)><rsup|d> det \<Sigma\>>>
+    exp<around*|(|-<frac|1|2\<Delta\>t><around*|(|\<Sigma\><rsup|-1>|)><rsub|\<alpha\>\<beta\>>
+    \<epsilon\><rsup|\<alpha\>> \<epsilon\><rsup|\<beta\>>|)>.
+  </equation*>
+
+  For general Langevin process, we expect that (replacing <math|\<Sigma\>> by
+  <math|K<rsub|2><around*|(|x|)>> and appending a <math|\<zeta\>> term)
+
+  <\equation*>
+    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>,x|)>=<frac|1|<sqrt|<around*|(|2\<mathpi\>
+    \<Delta\>t|)><rsup|d> det \<Sigma\><around*|(|x|)>>>
+    exp<around*|(|-<frac|1|2\<Delta\>t><around*|(|\<Sigma\><rsup|-1>|)><rsub|\<alpha\>\<beta\>><around*|(|x|)><around*|(|\<epsilon\><rsup|\<alpha\>>-\<Delta\>t
+    f<rsup|\<alpha\>><around*|(|x|)>|)><around*|(|\<epsilon\><rsup|\<beta\>>-\<Delta\>t
+    f<rsup|\<beta\>><around*|(|x|)>|)>+\<zeta\><around*|(|\<epsilon\>,x|)>|)>,
+  </equation*>
+
+  where <math|\<zeta\><around*|(|\<epsilon\>,x|)>=\<omicron\><around*|(|\<Delta\>t|)>>.
+  We are to write the <math|\<zeta\>> explicitly.
+
+  \;
+
+  <subsection|>
+
+  Recall the expansion of transition density,
+
+  <\equation*>
+    <tabular|<tformat|<cwith|1|-1|1|1|cell-hyphen|n>|<cwith|1|-1|1|1|cell-halign|r>|<cwith|1|-1|2|2|cell-halign|l>|<table|<row|<cell|q<rsub|\<Delta\>t><around*|(|z\|x|)>=>|<cell|\<delta\><around*|(|z-x|)>>>|<row|<cell|+>|<cell|<around*|(|\<Delta\>t|)>
+    r<around*|(|z,x|)>>>|<row|<cell|+>|<cell|<frac|<around*|(|\<Delta\>t|)><rsup|2>|2!>
+    <big|int><rsub|\<cal-X\>>\<mathd\>y r<around*|(|z,y|)>
+    r<around*|(|y,x|)>>>|<row|<cell|+>|<cell|\<cdots\>>>|<row|<cell|+>|<cell|<frac|<around*|(|\<Delta\>t|)><rsup|n+1>|<around*|(|n+1|)>!><big|int><rsub|\<cal-X\>>\<mathd\>y<rsub|1>\<cdots\><big|int><rsub|\<cal-X\>>\<mathd\>y<rsub|n>
+    r<around*|(|z,y<rsub|n>|)> r<around*|(|y<rsub|n>,y<rsub|n-1>|)>\<cdots\>r<around*|(|y<rsub|1>,x|)>>>|<row|<cell|+>|<cell|\<cdots\>.>>|<row|<cell|>|<cell|>>>>>
+  </equation*>
+
+  This may be useful since it is an expansion on <math|\<Delta\>t>. To relate
+  it to the \Pmoments\Q of transition rate, we shall use the expression
+
+  <\equation*>
+    r<around*|(|x,y|)>=<big|sum><rsub|n=1><rsup|N<rsub|cut>><frac|<around*|(|-1|)><rsup|n>|n!>K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|y|)><around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|x-y|)>.
+  </equation*>
+
+  As a simple example, consider <math|K<rsub|n>=0> except for
+  <math|K<rsub|2>>. Thus, it reduces to (re-denoting <math|K<rsub|2>> by
+  <math|\<Sigma\>>)
+
+  <\equation*>
+    r<around*|(|x,y|)>=<frac|1|2>\<Sigma\><rsup|\<alpha\>\<beta\>><around*|(|y|)><around*|(|\<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>\<delta\>|)><around*|(|x-y|)>.
+  </equation*>
+
+  Plugging it into the series expansion of <math|q<rsub|\<Delta\>t>>, we
+  find, for the second order term as example,
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y r<around*|(|z,y|)>
+    r<around*|(|y,x|)>=<frac|1|4><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    \<Sigma\><rsup|\<alpha\>\<beta\>><around*|(|y|)><around*|(|\<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>\<delta\>|)><around*|(|z-y|)>\<Sigma\><rsup|\<alpha\><rprime|'>\<beta\><rprime|'>><around*|(|x|)><around*|(|\<partial\><rsub|\<alpha\><rprime|'>>\<partial\><rsub|\<beta\><rprime|'>>\<delta\>|)><around*|(|y-x|)>.
+  </equation*>
+
+  Integration by parts on the right hand side gives
+
+  <\align>
+    <tformat|<table|<row|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    r<around*|(|z,y|)> r<around*|(|y,x|)>=>|<cell|-<frac|1|4><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    \<Sigma\><rsup|\<alpha\><rprime|'>\<beta\><rprime|'>><around*|(|x|)><frac|\<partial\><rsup|2>|\<partial\>y<rsup|\<alpha\><rprime|'>>\<partial\>y<rsup|\<beta\><rprime|'>>><around*|[|\<Sigma\><rsup|\<alpha\>\<beta\>><around*|(|y|)><frac|\<partial\><rsup|2>\<delta\>|\<partial\>z<rsup|\<alpha\>>\<partial\>z<rsup|\<beta\>>><around*|(|z-y|)>|]>\<delta\><around*|(|y-x|)>>>|<row|<cell|=>|<cell|-<frac|1|4>\<Sigma\><rsup|\<alpha\><rprime|'>\<beta\><rprime|'>><around*|(|x|)><frac|\<partial\><rsup|2>|\<partial\>x<rsup|\<alpha\><rprime|'>>\<partial\>x<rsup|\<beta\><rprime|'>>><around*|[|\<Sigma\><rsup|\<alpha\>\<beta\>><around*|(|x|)><frac|\<partial\><rsup|2>\<delta\>|\<partial\>x<rsup|\<alpha\>>\<partial\>x<rsup|\<beta\>>><around*|(|z-x|)>|]>.>>>>
+  </align>
+
+  Specifically for Wiener process, where <math|\<Sigma\>> is constant, we
+  find <math|<big|int>\<mathd\>y r<around*|(|z,y|)>
+  r<around*|(|y,x|)>\<propto\>\<delta\><rsup|<around*|(|4|)>><around*|(|z-x|)>>.
+  But generally, there will be terms proportional to
+  <math|\<Sigma\><rsup|<around*|(|1|)>><around*|(|x|)>
+  \<delta\><rsup|*<around*|(|3|)>><around*|(|z-x|)>> and
+  <math|\<Sigma\><rsup|<around*|(|2|)>><around*|(|x|)>
+  \<delta\><rsup|*<around*|(|2|)>><around*|(|z-x|)>> in
+  <math|<big|int>\<mathd\>y r<around*|(|z,y|)> r<around*|(|y,x|)>>. These
+  terms that involve the partial derivatives of <math|\<Sigma\>> contribute
+  to the corrections to the Wiener process; and the departure between
+  Langevin process and Wiener process is reflected by them. Explicitly, the
+  corresponding Langevin process has
+
+  <\equation*>
+    q<rsub|\<Delta\>t><around*|(|z,x|)>=<frac|1|<sqrt|<around*|(|2\<mathpi\>
+    \<Delta\>t|)><rsup|d> det \<Sigma\><around*|(|x|)>>>
+    exp<around*|(|-<frac|1|2\<Delta\>t><around*|(|\<Sigma\><rsup|-1>|)><rsub|\<alpha\>\<beta\>><around*|(|x|)><around*|(|z<rsup|\<alpha\>>-x<rsup|\<alpha\>>|)><around*|(|z<rsup|\<beta\>>-x<rsup|\<beta\>>|)>+\<Delta\>t
+    \<zeta\><around*|(|z,x|)>|)>,
+  </equation*>
+
+  for some <math|\<zeta\>>. We are to write the <math|\<zeta\>> explicitly.
+
+  TODO: How is the heat equation solved?
+
+  \;
+
+  \;
+
   <section|How Far Will Information Propagate in Langevin
   Process?><label|section: How Far Will Information Propagate in Langevin
   Process?>
@@ -1364,9 +1608,9 @@
   r<around*|(|x+\<epsilon\>,x|)>>, we have
 
   <\equation*>
-    <tabular|<tformat|<cwith|1|-1|1|1|cell-hyphen|n>|<cwith|1|-1|1|1|cell-halign|r>|<cwith|1|-1|2|2|cell-halign|l>|<cwith|8|13|1|1|cell-hyphen|n>|<cwith|8|13|1|1|cell-halign|r>|<cwith|8|13|2|2|cell-halign|l>|<cwith|3|3|1|1|cell-hyphen|n>|<cwith|3|3|1|1|cell-halign|r>|<cwith|3|3|2|2|cell-halign|l>|<cwith|3|3|1|1|cell-hyphen|n>|<cwith|3|3|1|1|cell-halign|r>|<cwith|3|3|2|2|cell-halign|l>|<table|<row|<cell|>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
+    <tabular|<tformat|<cwith|1|-1|1|1|cell-hyphen|n>|<cwith|1|-1|1|1|cell-halign|r>|<cwith|1|-1|2|2|cell-halign|l>|<cwith|3|3|1|1|cell-hyphen|n>|<cwith|3|3|1|1|cell-halign|r>|<cwith|3|3|2|2|cell-halign|l>|<cwith|3|3|1|1|cell-hyphen|n>|<cwith|3|3|1|1|cell-halign|r>|<cwith|3|3|2|2|cell-halign|l>|<table|<row|<cell|>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
     exp<around*|(|\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>
-    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>>>|<row|<cell|=>|<cell|1>>|<row|<cell|+>|<cell|\<Delta\>t<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k
+    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>>>|<row|<cell|=>|<cell|1>>|<row|<cell|+>|<cell|\<Delta\>t<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
     exp<around*|(|\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>
     r<around*|(|x+\<epsilon\>,x|)>>>|<row|<cell|+>|<cell|<frac|<around*|(|\<Delta\>t|)><rsup|2>|2!>
     <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
@@ -1374,13 +1618,6 @@
     exp<around*|(|\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>r<around*|(|x+\<epsilon\>,y|)>
     r<around*|(|y,x|)>>>|<row|<cell|+>|<cell|\<cdots\>>>|<row|<cell|+>|<cell|<frac|<around*|(|\<Delta\>t|)><rsup|n+1>|<around*|(|n+1|)>!><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|1>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|n>
     <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
-    exp<around*|(|\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>r<around*|(|x+\<epsilon\>,y<rsub|n>|)>
-    r<around*|(|y<rsub|n>,y<rsub|n-1>|)>\<cdots\>r<around*|(|y<rsub|1>,x|)>>>|<row|<cell|+>|<cell|\<cdots\>>>|<row|<cell|=>|<cell|1>>|<row|<cell|+>|<cell|\<Delta\>t
-    <wide|r|^><around*|(|x,k|)>>>|<row|<cell|+>|<cell|<frac|<around*|(|\<Delta\>t|)><rsup|2>|2!>
-    <big|int><rsub|\<cal-X\>>\<mathd\>y<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k
-    exp<around*|(|\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>
-    r<around*|(|x+\<epsilon\>,y|)> r<around*|(|y,x|)>>>|<row|<cell|+>|<cell|\<cdots\>>>|<row|<cell|+>|<cell|<frac|<around*|(|\<Delta\>t|)><rsup|n+1>|<around*|(|n+1|)>!><big|int><rsub|\<cal-X\>>\<mathd\>y<rsub|1>\<cdots\><big|int><rsub|\<cal-X\>>\<mathd\>y<rsub|n>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k
     exp<around*|(|\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>r<around*|(|x+\<epsilon\>,y<rsub|n>|)>
     r<around*|(|y<rsub|n>,y<rsub|n-1>|)>\<cdots\>r<around*|(|y<rsub|1>,x|)>>>|<row|<cell|+>|<cell|\<cdots\>.>>>>>
   </equation*>
@@ -1390,8 +1627,10 @@
   <\equation*>
     r<around*|(|x,y|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k
     exp<around*|(|-\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>|)>
-    <wide|r|^><around*|(|y,k|)>
+    <wide|r|^><around*|(|y,k|)>.
   </equation*>
+
+  Thus, the second order coefficient is
 
   <\align>
     <tformat|<table|<row|<cell|>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>z
@@ -1404,19 +1643,102 @@
     <around*|[|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|''>
     exp<around*|(|-\<mathi\>k<rprime|''><around*|(|y-x|)>|)>
     <wide|r|^><around*|(|x,k<rprime|''>|)>|]>>>|<row|<cell|=>|<cell|
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|'><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|''><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
-    <wide|r|^><around*|(|y,k<rprime|'>|)><wide|r|^><around*|(|x,k<rprime|''>|)>exp<around*|(|-\<mathi\>k
-    x+\<mathi\>k<rprime|'> y-\<mathi\>k<rprime|''> y+\<mathi\>k<rprime|''>
-    x|)><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>z
-    exp<around*|(|\<mathi\>z<around*|(|k-k<rprime|'>|)>|)>.>>>>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>z<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|'><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|''>
+    exp<around*|(|\<mathi\>k z-\<mathi\>k
+    x-\<mathi\>k<rprime|'>z+\<mathi\>k<rprime|'>y-\<mathi\>k<rprime|''>y+\<mathi\>k<rprime|''>x|)><wide|r|^><around*|(|y,k<rprime|'>|)><wide|r|^><around*|(|x,k<rprime|''>|)>.>>>>
   </align>
 
-  Integrating over <math|z>, and then <math|k<rprime|''>>, gives
+  Integrating over <math|z> gives
 
   <\equation*>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|'><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
-    <wide|r|^><around*|(|y,k<rprime|'>|)><wide|r|^><around*|(|x,k<rprime|'>|)>exp<around*|(|-\<mathi\><around*|(|k-k<rprime|'>|)>
-    \ x|)>.
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|'><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|''>
+    exp<around*|(|-\<mathi\>k x+\<mathi\>k<rprime|'>y-\<mathi\>k<rprime|''>y+\<mathi\>k<rprime|''>x|)><wide|r|^><around*|(|y,k<rprime|'>|)><wide|r|^><around*|(|x,k<rprime|''>|)>
+    \<delta\><around*|(|k-k<rprime|''>|)>.
+  </equation*>
+
+  Integrating over <math|k<rprime|''>> gives
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|'>
+    exp<around*|(|-\<mathi\><around*|(|k-k<rprime|'>|)>y|)><wide|r|^><around*|(|y,k<rprime|'>|)><wide|r|^><around*|(|x,k|)>.
+  </equation*>
+
+  \;
+
+  \;
+
+  We have
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    r<around*|(|x+\<epsilon\>,y|)> r<around*|(|y,x|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    r<around*|(|x+\<epsilon\>,x+y|)> r<around*|(|x+y,x|)>.
+  </equation*>
+
+  Thus,
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
+    exp<around*|(|\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>r<around*|(|x+\<epsilon\>,y|)>
+    r<around*|(|y,x|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
+    exp<around*|(|\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>r<around*|(|x+\<epsilon\>,x+y|)>
+    r<around*|(|x+y,x|)>
+  </equation*>
+
+  Since
+
+  <\equation*>
+    r<around*|(|x+y,x|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|'>
+    exp<around*|(|-\<mathi\>k<rprime|'>y|)><wide|r|^><around*|(|x,k<rprime|'>|)>,
+  </equation*>
+
+  and
+
+  <\equation*>
+    r<around*|(|x+y+<around*|(|\<epsilon\>-y|)>,x+y|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|''>
+    exp<around*|(|-\<mathi\>k<rprime|''><around*|(|\<epsilon\>-y|)>|)><wide|r|^><around*|(|x+y,k<rprime|''>|)>
+  </equation*>
+
+  we get
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
+    exp<around*|(|\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|''>
+    exp<around*|(|-\<mathi\>k<rprime|''><around*|(|\<epsilon\>-y|)>|)><wide|r|^><around*|(|x+y,k<rprime|''>|)>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|'>
+    exp<around*|(|-\<mathi\>k<rprime|'>y|)><wide|r|^><around*|(|x,k<rprime|'>|)>,
+  </equation*>
+
+  or
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|'>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|''>exp<around*|(|\<mathi\>k\<epsilon\>-\<mathi\>k<rprime|''>\<epsilon\>+\<mathi\>k<rprime|''>y-\<mathi\>k<rprime|'>y|)>
+    <wide|r|^><around*|(|x+y,k<rprime|'>|)>
+    <wide|r|^><around*|(|x,k<rprime|'>|)>.
+  </equation*>
+
+  Integrating over <math|\<epsilon\>> gives
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|'>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|''>exp<around*|(|\<mathi\>k<rprime|''>y-\<mathi\>k<rprime|'>y|)>
+    <wide|r|^><around*|(|x+y,k<rprime|''>|)>
+    <wide|r|^><around*|(|x,k<rprime|'>|)>\<delta\><around*|(|k-k<rprime|''>|)>.
+  </equation*>
+
+  Then, integrating over <math|k<rprime|''>> gives
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|'>
+    <wide|r|^><around*|(|x+y,k<rprime|'>|)>
+    <wide|r|^><around*|(|x,k<rprime|'>|)>.
   </equation*>
 </body>
 
@@ -1429,117 +1751,133 @@
 
 <\references>
   <\collection>
-    <associate|appendix: Perturbative Method|<tuple|1.4|?>>
+    <associate|appendix: Perturbative Method|<tuple|3.4|4>>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|2.4|8>>
-    <associate|auto-11|<tuple|2.5|9>>
-    <associate|auto-12|<tuple|2.6|11>>
-    <associate|auto-13|<tuple|2.7|11>>
-    <associate|auto-14|<tuple|2.8|12>>
-    <associate|auto-15|<tuple|2.9|12>>
-    <associate|auto-16|<tuple|2.9.1|?>>
-    <associate|auto-17|<tuple|2.9.2|?>>
-    <associate|auto-18|<tuple|2.10|?>>
-    <associate|auto-2|<tuple|1.1|1>>
-    <associate|auto-3|<tuple|1.2|1>>
-    <associate|auto-4|<tuple|1.3|3>>
-    <associate|auto-5|<tuple|1.4|3>>
-    <associate|auto-6|<tuple|2|5>>
-    <associate|auto-7|<tuple|2.1|5>>
-    <associate|auto-8|<tuple|2.2|6>>
-    <associate|auto-9|<tuple|2.3|7>>
-    <associate|equation:langevin action|<tuple|10|8>>
-    <associate|equation:path integral step 1|<tuple|12|10>>
-    <associate|equation:path integral step 2|<tuple|1|?>>
-    <associate|equation:rg action|<tuple|7|3>>
-    <associate|equation:rg integral|<tuple|2|1>>
-    <associate|equation:rg transform 1|<tuple|3|2>>
-    <associate|equation:rg transform 2|<tuple|4|2>>
-    <associate|equation:rg transform 3|<tuple|5|2>>
-    <associate|equation:rg transform 4|<tuple|6|2>>
-    <associate|equation:susy transformation|<tuple|11|8>>
-    <associate|equation:transition rate determines transition
-    density|<tuple|13|?>>
+    <associate|auto-10|<tuple|4.1|8>>
+    <associate|auto-11|<tuple|4.2|9>>
+    <associate|auto-12|<tuple|4.3|10>>
+    <associate|auto-13|<tuple|4.4|11>>
+    <associate|auto-14|<tuple|4.5|12>>
+    <associate|auto-15|<tuple|4.6|14>>
+    <associate|auto-16|<tuple|4.7|14>>
+    <associate|auto-17|<tuple|4.8|15>>
+    <associate|auto-18|<tuple|4.9|15>>
+    <associate|auto-19|<tuple|4.9.1|15>>
+    <associate|auto-2|<tuple|2|2>>
+    <associate|auto-20|<tuple|4.9.2|?>>
+    <associate|auto-21|<tuple|4.10|?>>
+    <associate|auto-3|<tuple|2.1|2>>
+    <associate|auto-4|<tuple|3|2>>
+    <associate|auto-5|<tuple|3.1|3>>
+    <associate|auto-6|<tuple|3.2|4>>
+    <associate|auto-7|<tuple|3.3|6>>
+    <associate|auto-8|<tuple|3.4|6>>
+    <associate|auto-9|<tuple|4|8>>
+    <associate|equation:langevin action|<tuple|10|11>>
+    <associate|equation:path integral step 1|<tuple|12|13>>
+    <associate|equation:rg action|<tuple|7|6>>
+    <associate|equation:rg integral|<tuple|2|2>>
+    <associate|equation:rg transform 1|<tuple|3|3>>
+    <associate|equation:rg transform 2|<tuple|4|3>>
+    <associate|equation:rg transform 3|<tuple|5|3>>
+    <associate|equation:rg transform 4|<tuple|6|3>>
+    <associate|equation:susy transformation|<tuple|11|11>>
     <associate|footnote-1|<tuple|1|2>>
-    <associate|footnote-2|<tuple|2|9>>
-    <associate|footnote-3|<tuple|3|10>>
-    <associate|footnote-4|<tuple|4|12>>
+    <associate|footnote-2|<tuple|2|12>>
+    <associate|footnote-3|<tuple|3|13>>
+    <associate|footnote-4|<tuple|4|15>>
     <associate|footnr-1|<tuple|1|2>>
-    <associate|footnr-2|<tuple|2|9>>
-    <associate|footnr-3|<tuple|3|10>>
-    <associate|footnr-4|<tuple|4|12>>
+    <associate|footnr-2|<tuple|2|12>>
+    <associate|footnr-3|<tuple|3|13>>
+    <associate|footnr-4|<tuple|4|15>>
     <associate|section: How Far Will Information Propagate in Langevin
-    Process?|<tuple|1|1>>
+    Process?|<tuple|3|2>>
     <associate|section: Master Equation on Euclidean Alphabet Can Be
-    Formulated as Path Integral|<tuple|2.7|9>>
+    Formulated as Path Integral|<tuple|4.7|12>>
   </collection>
 </references>
 
 <\auxiliary>
   <\collection>
     <\associate|toc>
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>How
-      Far Will Information Propagate in Langevin Process?>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1><vspace|0.5fn>
 
-      <with|par-left|<quote|1tab>|1.1<space|2spc>The Generic Action
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>How
+      Far Will Information Propagate in Langevin Process?>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-2>>
+      <no-break><pageref|auto-2><vspace|0.5fn>
 
-      <with|par-left|<quote|1tab>|1.2<space|2spc>Renormalization Group
-      Equations <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|2.1<space|2spc>The Generic Action
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-3>>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Drafts>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-4><vspace|0.5fn>
+      <with|par-left|<quote|1tab>|2.2<space|2spc>Renormalization Group
+      Equations <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-4>>
 
-      <with|par-left|<quote|1tab>|2.1<space|2spc>Equivalent Action?
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|2.3<space|2spc>Fixed Point and
+      Scale-Invariance <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-5>>
 
-      <with|par-left|<quote|1tab>|2.2<space|2spc>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|2.4<space|2spc>* Appendix: Perturbative
+      Method TODO <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-6>>
 
-      <with|par-left|<quote|1tab>|2.3<space|2spc>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Drafts>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-7>>
+      <no-break><pageref|auto-7><vspace|0.5fn>
 
-      <with|par-left|<quote|1tab>|2.4<space|2spc>
+      <with|par-left|<quote|1tab>|3.1<space|2spc>Equivalent Action?
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-8>>
 
-      <with|par-left|<quote|1tab>|2.5<space|2spc>Coordinate Transformation
+      <with|par-left|<quote|1tab>|3.2<space|2spc>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-9>>
 
-      <with|par-left|<quote|1tab>|2.6<space|2spc>Super-symmetry in Langevin
-      Process (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|3.3<space|2spc>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-10>>
 
-      <with|par-left|<quote|1tab>|2.7<space|2spc>Master Equation on Euclidean
-      Alphabet Can Be Formulated as Path Integral (TODO)
+      <with|par-left|<quote|1tab>|3.4<space|2spc>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-11>>
 
-      <with|par-left|<quote|1tab>|2.8<space|2spc>Example: Action in Deep
-      Learning (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|3.5<space|2spc>Coordinate Transformation
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-12>>
 
-      <with|par-left|<quote|1tab>|2.9<space|2spc>* History: Structures in
-      Nature Arise from Least-Action Principle
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|3.6<space|2spc>Super-symmetry in Langevin
+      Process (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-13>>
 
-      <with|par-left|<quote|2tab>|2.9.1<space|2spc>WBE Theory and
-      Universality <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|3.7<space|2spc>Master Equation on Euclidean
+      Alphabet Can Be Formulated as Path Integral (TODO)
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-14>>
 
-      <with|par-left|<quote|2tab>|2.9.2<space|2spc>Renormalization Group and
-      Criticality <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|3.8<space|2spc>Example: Action in Deep
+      Learning (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-15>>
+
+      <with|par-left|<quote|1tab>|3.9<space|2spc>* History: Structures in
+      Nature Arise from Least-Action Principle
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-16>>
+
+      <with|par-left|<quote|2tab>|3.9.1<space|2spc>WBE Theory and
+      Universality <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-17>>
+
+      <with|par-left|<quote|2tab>|3.9.2<space|2spc>Renormalization Group and
+      Criticality <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-18>>
+
+      <with|par-left|<quote|1tab>|3.10<space|2spc>Action
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-19>>
     </associate>
   </collection>
 </auxiliary>
