@@ -91,19 +91,19 @@
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-21>
 
-    <with|par-left|1tab|3.5.1<space|2spc>* Central Limit Theorem
+    3.6<space|2spc>* Wiener Process Gives Rise to Central Limit Theorem
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-22>>
+    <no-break><pageref|auto-22>
 
-    3.6<space|2spc>Langevin Process Is a Markovian Process with
+    3.7<space|2spc>Langevin Process Is a Markovian Process with
     <with|mode|math|N<rsub|cut>=2> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-23>
 
-    3.7<space|2spc>Stationary Solution of Langevin Process Has Source-Free
+    3.8<space|2spc>Stationary Solution of Langevin Process Has Source-Free
     Degree of Freedom <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-24>
 
-    3.8<space|2spc>Detailed Balance of Langevin Process Lacks Source-Free
+    3.9<space|2spc>Detailed Balance of Langevin Process Lacks Source-Free
     Degree of Freedom <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-25>
 
@@ -131,7 +131,7 @@
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-31>
 
-    4.6<space|2spc>Data Fitting Is Equivalent to Least-Action Principle of
+    4.6<space|2spc>* Data Fitting Is Equivalent to Least-Action Principle of
     Distribution <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-32>
 
@@ -171,7 +171,9 @@
   Langevin process (chapter <reference|section: Kramers-Moyal Expansion and
   Langevin Process>). In the end, we generalize least-action principle to
   distribution and discuss the propagation of information in Langevin process
-  (chapter <reference|section: Least-Action Principle>).
+  (chapter <reference|section: Least-Action Principle>). Readers may omit the
+  sections in which the titles start with <math|\<ast\>>. They are
+  interesting digressions.
 
   The mathematical techniques employed here will not go beyond the basic
   calculus (Taylor expansion, improper integral, and integration by parts)
@@ -2716,15 +2718,15 @@
   constructed a complete mathematical theory for this stochastic process. So,
   it is also called <strong|Wiener process>.
 
-  <subsection|* Central Limit Theorem>
+  <section|* Wiener Process Gives Rise to Central Limit Theorem>
 
-  The transition can be seen as an accumulation of a series tiny transitions,
-  each is caused by one strike from a water molecule. The strike obeys a
-  distribution which is identical and independent (since each strike is
-  individual) with zero mean (as a result of <math|K<rsub|1>=0>). This
-  distribution, however, is unknown. Although, we find that the accumulative
-  effect always obeys a normal distribution. We can abstract this and
-  conclude a corollary as follow.
+  Wiener process or Brownian motion can be seen as an accumulation of a
+  series tiny transitions, each is caused by one strike from a water
+  molecule. The strike obeys a distribution which is identical and
+  independent (since each strike is individual) with zero mean (as a result
+  of <math|K<rsub|1>=0>). This distribution, however, is unknown. Although,
+  we find that the accumulative effect always obeys a normal distribution. We
+  can abstract this and conclude a corollary as follow.
 
   <\corollary>
     For any independently identically distributed <math|n>-dimensional random
@@ -3779,7 +3781,7 @@
   <math|q>), without any redundancy. This is the direct implication that
   distribution involves more information than its most likely datum.
 
-  <section|Data Fitting Is Equivalent to Least-Action Principle of
+  <section|* Data Fitting Is Equivalent to Least-Action Principle of
   Distribution><label|section: Data Fitting Is Equivalent to Least-Action
   Principle of Distribution>
 
@@ -4464,10 +4466,10 @@
     <associate|auto-2|<tuple|1|9>>
     <associate|auto-20|<tuple|3.4|30>>
     <associate|auto-21|<tuple|3.5|31>>
-    <associate|auto-22|<tuple|3.5.1|33>>
-    <associate|auto-23|<tuple|3.6|33>>
-    <associate|auto-24|<tuple|3.7|34>>
-    <associate|auto-25|<tuple|3.8|34>>
+    <associate|auto-22|<tuple|3.6|33>>
+    <associate|auto-23|<tuple|3.7|33>>
+    <associate|auto-24|<tuple|3.8|34>>
+    <associate|auto-25|<tuple|3.9|34>>
     <associate|auto-26|<tuple|4|37>>
     <associate|auto-27|<tuple|4.1|37>>
     <associate|auto-28|<tuple|4.2|37>>
@@ -4588,7 +4590,7 @@
     <associate|section: Detailed Balance Provides Stationary
     Distribution|<tuple|2.4|17>>
     <associate|section: Detailed Balance of Langevin Process Lacks
-    Source-Free Degree of Freedom|<tuple|3.8|34>>
+    Source-Free Degree of Freedom|<tuple|3.9|34>>
     <associate|section: Example: Metropolis-Hastings
     Algorithm|<tuple|2.7|22>>
     <associate|section: How Far Will Information Propagate in Langevin
@@ -4600,7 +4602,7 @@
     <associate|section: Langevin Process Can Be Formulated as Path
     Integral|<tuple|4.4|40>>
     <associate|section: Langevin Process Is a Markovian Process with
-    Ncut=2|<tuple|3.6|33>>
+    Ncut=2|<tuple|3.7|33>>
     <associate|section: Least-Action Principle|<tuple|4|37>>
     <associate|section: Least-Action Principle of Distribution Has No
     Redundancy|<tuple|4.5|43>>
@@ -4744,20 +4746,20 @@
       Rate <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-21>
 
-      <with|par-left|<quote|1tab>|3.5.1<space|2spc>* Central Limit Theorem
+      3.6<space|2spc>* Wiener Process Gives Rise to Central Limit Theorem
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-22>>
+      <no-break><pageref|auto-22>
 
-      3.6<space|2spc>Langevin Process Is a Markovian Process with
+      3.7<space|2spc>Langevin Process Is a Markovian Process with
       <with|mode|<quote|math>|N<rsub|cut>=2>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-23>
 
-      3.7<space|2spc>Stationary Solution of Langevin Process Has Source-Free
+      3.8<space|2spc>Stationary Solution of Langevin Process Has Source-Free
       Degree of Freedom <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-24>
 
-      3.8<space|2spc>Detailed Balance of Langevin Process Lacks Source-Free
+      3.9<space|2spc>Detailed Balance of Langevin Process Lacks Source-Free
       Degree of Freedom <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-25>
 
@@ -4785,8 +4787,8 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-31>
 
-      4.6<space|2spc>Data Fitting Is Equivalent to Least-Action Principle of
-      Distribution <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      4.6<space|2spc>* Data Fitting Is Equivalent to Least-Action Principle
+      of Distribution <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-32>
 
       4.7<space|2spc>How Far Will Information Propagate in Langevin Process?

@@ -186,7 +186,7 @@
   where
 
   <\equation*>
-    E<rsub|CM><around*|(|x,k|)>=<big|int><rsub|0><rsup|t>\<mathd\>t<around*|[|\<mathi\>k<wide|x|\<dot\>>-\<mathi\>H<around*|(|x,k|)>|]>,
+    E<rsub|CM><around*|(|x,k|)>=<big|int><rsub|0><rsup|t>\<mathd\>t<around*|[|\<mathi\>k<wide|x|\<dot\>>-\<mathi\>H<around*|(|x,k|)>|]>
   </equation*>
 
   denotes the classical <math|E> and <math|H> is the Hamiltonian (the
@@ -221,6 +221,177 @@
 
   <with|color|red|So, can we illstrate the <math|E> (or <math|x> and
   <math|k>) as a whole, instead of integrating over <math|k>?>
+
+  <section|Operator Equation>
+
+  Define the operator
+
+  <\equation*>
+    <wide|L|^><rsub|x><around*|(|y|)>\<assign\><big|sum><rsub|n=1><rsup|N<rsub|cut>><frac|<around*|(|-1|)><rsup|n>|n!>
+    <around*|(|<frac|\<partial\>|\<partial\>x<rsup|\<alpha\><rsub|1>>>\<cdots\><frac|\<partial\>|\<partial\>x<rsup|\<alpha\><rsub|n>>>|)>
+    K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|y|)>,
+  </equation*>
+
+  which operates to everything on its right hand side. The subscript <math|x>
+  indicates the derivatives and <math|y> the dependence. Then, define
+  <math|exp<around*|(|<wide|A|^>|)>\<assign\><big|sum><rsub|n=0><rsup|+\<infty\>><wide|A|^><rsup|n>/n!>
+  for an operator <math|<wide|A|^>>.
+
+  We are to show that, given initial density <math|p<around*|(|x,0|)>>,
+
+  <\equation*>
+    p<around*|(|x,t|)>=exp<around*|(|<wide|L|^><rsub|x><around*|(|x|)> t|)>
+    p<around*|(|x,0|)>
+  </equation*>
+
+  is the solution of master equation. Indeed, by taking derivatives on
+  <math|t> on both sides, we get
+
+  <\equation*>
+    <frac|\<partial\>p|\<partial\>t><around*|(|x,t|)>=<wide|L|^><rsub|x><around*|(|x|)>
+    exp<around*|(|<wide|L|^><rsub|x><around*|(|x|)> t|)> p<around*|(|x,0|)>.
+  </equation*>
+
+  The rightmost two terms are recognized as <math|p<around*|(|x,t|)>>, thus
+
+  <\equation*>
+    <frac|\<partial\>p|\<partial\>t><around*|(|x,t|)>=<wide|L|^><rsub|x><around*|(|x|)>
+    p<around*|(|x,t|)>.
+  </equation*>
+
+  Plugging in the definition of <math|<wide|L|^><rsub|x><around*|(|x|)>>, we
+  get the master equation (in Kramers-Moyal expansion format)
+
+  <\equation*>
+    <frac|\<partial\>p|\<partial\>t><around*|(|x,t|)>=<big|sum><rsub|n=1><rsup|N<rsub|cut>><frac|<around*|(|-1|)><rsup|n>|n!>
+    <around*|(|<frac|\<partial\>|\<partial\>x<rsup|\<alpha\><rsub|1>>>\<cdots\><frac|\<partial\>|\<partial\>x<rsup|\<alpha\><rsub|n>>>|)>
+    <around*|[|K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>
+    p<around*|(|x,t|)>|]>.
+  </equation*>
+
+  \;
+
+  Now, we are to relate this operator to transition density. From both the
+  expressions
+
+  <\equation*>
+    q<rsub|t><around*|(|x\|y|)>=exp<around*|(|<wide|L|^><rsub|x><around*|(|x|)>
+    t|)> \<delta\><around*|(|x-y|)>
+  </equation*>
+
+  and
+
+  <\equation*>
+    <wide|q|~><rsub|t><around*|(|x\|y|)>=exp<around*|(|<wide|L|^><rsub|x><around*|(|y|)>
+    t|)> \<delta\><around*|(|x-y|)>,
+  </equation*>
+
+  we can get that <math|p<around*|(|x,t|)>>. For example, inserting
+  <math|<wide|q|~><rsub|t><around*|(|x\|y|)>> into discrete-time master
+  equation, we find
+
+  <\equation*>
+    p<around*|(|x,t|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    <wide|q|~><rsub|t><around*|(|x\|y|)>p<around*|(|y,0|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    exp<around*|(|<wide|L|^><rsub|x><around*|(|y|)> t|)>
+    \<delta\><around*|(|x-y|)> p<around*|(|y,0|)>=exp<around*|(|<wide|L|^><rsub|x><around*|(|x|)>
+    t|)> p<around*|(|x,0|)>.
+  </equation*>
+
+  With the inverse Fourier transformation
+
+  <\equation*>
+    \<delta\><around*|(|x-y|)>=<big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\>|)><rsup|d>>
+    exp<around*|(|\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>|)>,
+  </equation*>
+
+  <math|<wide|q|~><rsub|t><around*|(|x\|y|)>> becomes
+
+  <\equation*>
+    <wide|q|~><rsub|t><around*|(|x\|y|)>=<big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\>|)><rsup|d>>
+    exp<around*|(|<wide|L|^><rsub|x><around*|(|y|)> t|)>
+    exp<around*|(|\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>|)>.
+  </equation*>
+
+  While operating on the <math|x> in <math|exp<around*|(|\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>|)>>,
+  each <math|\<partial\>/\<partial\>x<rsup|\<alpha\>>> is replaced by
+  <math|\<mathi\>k<rsub|\<alpha\>>>, thus
+  <math|<wide|L|^><rsub|x><around*|(|y|)>> by
+
+  <\equation*>
+    <big|sum><rsub|n=1><rsup|N<rsub|cut>><frac|<around*|(|-\<mathi\>|)><rsup|n>|n!>
+    <around*|(|k<rsub|\<alpha\><rsub|1>>\<cdots\>k<rsub|\<alpha\><rsub|n>>|)>
+    K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|y|)>.
+  </equation*>
+
+  It leads to
+
+  <\equation*>
+    <wide|q|~><rsub|t><around*|(|x\|y|)>=<big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\>|)><rsup|d>>
+    exp<around*|(|\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>+<around*|[|<big|sum><rsub|n=1><rsup|N<rsub|cut>><frac|<around*|(|-\<mathi\>|)><rsup|n>|n!>
+    <around*|(|k<rsub|\<alpha\><rsub|1>>\<cdots\>k<rsub|\<alpha\><rsub|n>>|)>
+    K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|y|)>|]>
+    t|)>.
+  </equation*>
+
+  Contrarily, we cannot get this from <math|q<rsub|t><around*|(|x\|y|)>>,
+  since the <math|\<partial\>/\<partial\>x<rsup|\<alpha\>>> also operates on
+  <math|K<rsub|n>>. As an example, we set <math|K<rsub|n>=0> except for
+  <math|n=2>. In this situation,
+
+  <\equation*>
+    <wide|q|~><rsub|t><around*|(|x\|y|)>=<big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\>|)><rsup|d>>
+    exp<around*|(|\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>+<frac|1|2>K<rsub|2><rsup|\<alpha\>\<beta\>><around*|(|y|)>
+    <around*|(|\<mathi\>k<rsub|\<alpha\>>|)><around*|(|\<mathi\>k<rsub|\<beta\>>|)>
+    t|)>,
+  </equation*>
+
+  which results in
+
+  <\equation*>
+    <wide|q|~><rsub|t><around*|(|x\|y|)>=<frac|1|<sqrt|<around*|(|2\<mathpi\>
+    t|)><rsup|d> det K<rsub|2><around*|(|y|)>>>
+    exp<around*|(|-<frac|1|2t><around*|(|K<rsup|-1><rsub|2>|)><rsup|\<alpha\>\<beta\>><around*|(|y|)><around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><around*|(|x<rsup|\<beta\>>-y<rsup|\<beta\>>|)>|)>.
+  </equation*>
+
+  While, following the same steps, <math|q<rsub|t><around*|(|x\|y|)>> becomes
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\>|)><rsup|d>>
+    exp<around*|(|<around*|[|<frac|1|2>K<rsub|2><rsup|\<alpha\>\<beta\>><around*|(|x|)>
+    <frac|\<partial\>|\<partial\>x<rsup|\<alpha\>>><frac|\<partial\>|\<partial\>x<rsup|\<beta\>>>+<frac|1|2>\<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>K<rsub|2><rsup|\<alpha\>\<beta\>><around*|(|x|)>+\<partial\><rsub|\<beta\>>K<rsup|\<alpha\>\<beta\>><rsub|2><around*|(|x|)>
+    <frac|\<partial\>|\<partial\>x<rsup|\<alpha\>>>|]> t|)>
+    exp<around*|(|\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>|)>.
+  </equation*>
+
+  We cannot directly replace <math|\<partial\>/\<partial\>x<rsup|a>> by
+  <math|\<mathi\>k<rsub|\<alpha\>>> since it also operates on
+  <math|K<rsub|2><around*|(|x|)>> in the series expansion of exponential. We
+  will not expect it to be as a simple result as
+  <math|<wide|q|~><rsub|t><around*|(|x\|y|)>>.
+
+  Let us check this,
+
+  <\small>
+    <\align>
+      <tformat|<table|<row|<cell|>|<cell|<sqrt|<around*|(|2\<mathpi\>|)><rsup|d>
+      det K<rsub|2><around*|(|y|)>>\<times\><frac|\<partial\>|\<partial\>t><wide|q|~><rsub|t><around*|(|x\|y|)>>>|<row|<cell|=>|<cell|<frac|\<partial\>|\<partial\>t><around*|{|t<rsup|-d/2>
+      exp<around*|(|-<frac|1|2t><around*|(|K<rsup|-1><rsub|2>|)><rsup|\<alpha\>\<beta\>><around*|(|y|)><around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><around*|(|x<rsup|\<beta\>>-y<rsup|\<beta\>>|)>|)>|}>>>|<row|<cell|=>|<cell|-<frac|d|2t>t<rsup|-d/2>
+      exp<around*|(|-<frac|1|2t><around*|(|K<rsup|-1><rsub|2>|)><rsup|\<alpha\>\<beta\>><around*|(|y|)><around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><around*|(|x<rsup|\<beta\>>-y<rsup|\<beta\>>|)>|)>>>|<row|<cell|>|<cell|+t<rsup|-d/2>
+      exp<around*|(|-<frac|1|2t><around*|(|K<rsup|-1><rsub|2>|)><rsup|\<alpha\>\<beta\>><around*|(|y|)><around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><around*|(|x<rsup|\<beta\>>-y<rsup|\<beta\>>|)>|)><around*|[|<frac|1|2t<rsup|2>><around*|(|K<rsup|-1><rsub|2>|)><rsup|\<alpha\>\<beta\>><around*|(|y|)><around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><around*|(|x<rsup|\<beta\>>-y<rsup|\<beta\>>|)>|]>>>|<row|<cell|=>|<cell|t<rsup|-d/2>
+      exp<around*|(|-<frac|1|2t><around*|(|K<rsup|-1><rsub|2>|)><rsup|\<alpha\>\<beta\>><around*|(|y|)><around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><around*|(|x<rsup|\<beta\>>-y<rsup|\<beta\>>|)>|)><around*|[|<frac|1|2t<rsup|2>><around*|(|K<rsup|-1><rsub|2>|)><rsup|\<alpha\>\<beta\>><around*|(|y|)><around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><around*|(|x<rsup|\<beta\>>-y<rsup|\<beta\>>|)>-<frac|d|2t>|]>.>>>>
+    </align>
+  </small>
+
+  Thus,
+
+  <\equation*>
+    <frac|\<partial\>|\<partial\>t><wide|q|~><rsub|t><around*|(|x\|y|)>=<wide|q|~><rsub|t><around*|(|x\|y|)>\<times\><around*|[|<frac|1|2t<rsup|2>><around*|(|K<rsup|-1><rsub|2>|)><rsup|\<alpha\>\<beta\>><around*|(|y|)><around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><around*|(|x<rsup|\<beta\>>-y<rsup|\<beta\>>|)>-<frac|d|2t>|]>.
+  </equation*>
+
+  Can we get from this that <math|<around*|(|\<partial\><wide|q|~><rsub|t>/\<partial\>t|)><around*|(|x\|y|)>=r<around*|(|x,y|)>>?
+  This is strange since it seems that the right hand side depends on
+  <math|t>.
 
   <section|Perturbation on Wiener Process>
 
@@ -1841,51 +2012,52 @@
 
 <\references>
   <\collection>
-    <associate|appendix: Perturbative Method|<tuple|4.4|6>>
+    <associate|appendix: Perturbative Method|<tuple|5.4|8>>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|5|8>>
-    <associate|auto-11|<tuple|5.1|10>>
-    <associate|auto-12|<tuple|5.2|10>>
-    <associate|auto-13|<tuple|5.3|11>>
-    <associate|auto-14|<tuple|5.4|12>>
-    <associate|auto-15|<tuple|5.5|13>>
-    <associate|auto-16|<tuple|5.6|14>>
-    <associate|auto-17|<tuple|5.7|16>>
-    <associate|auto-18|<tuple|5.8|16>>
-    <associate|auto-19|<tuple|5.9|17>>
+    <associate|auto-10|<tuple|5.4|8>>
+    <associate|auto-11|<tuple|6|10>>
+    <associate|auto-12|<tuple|6.1|10>>
+    <associate|auto-13|<tuple|6.2|12>>
+    <associate|auto-14|<tuple|6.3|12>>
+    <associate|auto-15|<tuple|6.4|13>>
+    <associate|auto-16|<tuple|6.5|14>>
+    <associate|auto-17|<tuple|6.6|15>>
+    <associate|auto-18|<tuple|6.7|16>>
+    <associate|auto-19|<tuple|6.8|18>>
     <associate|auto-2|<tuple|2|2>>
-    <associate|auto-20|<tuple|5.9.1|17>>
-    <associate|auto-21|<tuple|5.9.2|17>>
-    <associate|auto-22|<tuple|5.10|?>>
+    <associate|auto-20|<tuple|6.9|18>>
+    <associate|auto-21|<tuple|6.9.1|19>>
+    <associate|auto-22|<tuple|6.9.2|19>>
+    <associate|auto-23|<tuple|6.10|19>>
     <associate|auto-3|<tuple|3|2>>
-    <associate|auto-4|<tuple|3.1|3>>
-    <associate|auto-5|<tuple|4|3>>
-    <associate|auto-6|<tuple|4.1|4>>
-    <associate|auto-7|<tuple|4.2|5>>
-    <associate|auto-8|<tuple|4.3|6>>
-    <associate|auto-9|<tuple|4.4|8>>
-    <associate|equation:langevin action|<tuple|11|13>>
-    <associate|equation:path integral step 1|<tuple|13|15>>
-    <associate|equation:path integral step 2|<tuple|1|?>>
-    <associate|equation:rg action|<tuple|8|8>>
-    <associate|equation:rg integral|<tuple|3|4>>
-    <associate|equation:rg transform 1|<tuple|4|5>>
-    <associate|equation:rg transform 2|<tuple|5|5>>
-    <associate|equation:rg transform 3|<tuple|6|5>>
-    <associate|equation:rg transform 4|<tuple|7|5>>
-    <associate|equation:susy transformation|<tuple|12|13>>
-    <associate|footnote-1|<tuple|1|4>>
-    <associate|footnote-2|<tuple|2|14>>
-    <associate|footnote-3|<tuple|3|15>>
-    <associate|footnote-4|<tuple|4|17>>
-    <associate|footnr-1|<tuple|1|4>>
-    <associate|footnr-2|<tuple|2|14>>
-    <associate|footnr-3|<tuple|3|15>>
-    <associate|footnr-4|<tuple|4|17>>
+    <associate|auto-4|<tuple|4|4>>
+    <associate|auto-5|<tuple|4.1|4>>
+    <associate|auto-6|<tuple|5|5>>
+    <associate|auto-7|<tuple|5.1|5>>
+    <associate|auto-8|<tuple|5.2|6>>
+    <associate|auto-9|<tuple|5.3|7>>
+    <associate|equation:langevin action|<tuple|11|15>>
+    <associate|equation:path integral step 1|<tuple|13|17>>
+    <associate|equation:path integral step 2|<tuple|1|2>>
+    <associate|equation:rg action|<tuple|8|10>>
+    <associate|equation:rg integral|<tuple|3|6>>
+    <associate|equation:rg transform 1|<tuple|4|7>>
+    <associate|equation:rg transform 2|<tuple|5|7>>
+    <associate|equation:rg transform 3|<tuple|6|7>>
+    <associate|equation:rg transform 4|<tuple|7|7>>
+    <associate|equation:susy transformation|<tuple|12|15>>
+    <associate|footnote-1|<tuple|1|6>>
+    <associate|footnote-2|<tuple|2|16>>
+    <associate|footnote-3|<tuple|3|17>>
+    <associate|footnote-4|<tuple|4|19>>
+    <associate|footnr-1|<tuple|1|6>>
+    <associate|footnr-2|<tuple|2|16>>
+    <associate|footnr-3|<tuple|3|17>>
+    <associate|footnr-4|<tuple|4|19>>
     <associate|section: How Far Will Information Propagate in Langevin
-    Process?|<tuple|4|3>>
+    Process?|<tuple|5|5>>
     <associate|section: Master Equation on Euclidean Alphabet Can Be
-    Formulated as Path Integral|<tuple|5.7|14>>
+    Formulated as Path Integral|<tuple|6.7|16>>
   </collection>
 </references>
 
@@ -1896,88 +2068,96 @@
       Momenta Integration> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1><vspace|0.5fn>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Perturbation
-      on Wiener Process> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Legendre
+      Tranformation> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-2><vspace|0.5fn>
 
-      <with|par-left|<quote|1tab>|2.1<space|2spc>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-3>>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Operator
+      Equation> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-3><vspace|0.5fn>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>How
-      Far Will Information Propagate in Langevin Process?>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Perturbation
+      on Wiener Process> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-4><vspace|0.5fn>
 
-      <with|par-left|<quote|1tab>|3.1<space|2spc>The Generic Action
+      <with|par-left|<quote|1tab>|4.1<space|2spc>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-5>>
 
-      <with|par-left|<quote|1tab>|3.2<space|2spc>Renormalization Group
-      Equations <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-6>>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|5<space|2spc>How
+      Far Will Information Propagate in Langevin Process?>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-6><vspace|0.5fn>
 
-      <with|par-left|<quote|1tab>|3.3<space|2spc>Fixed Point and
-      Scale-Invariance <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|5.1<space|2spc>The Generic Action
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-7>>
 
-      <with|par-left|<quote|1tab>|3.4<space|2spc>* Appendix: Perturbative
-      Method TODO <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|5.2<space|2spc>Renormalization Group
+      Equations <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-8>>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Drafts>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-9><vspace|0.5fn>
+      <with|par-left|<quote|1tab>|5.3<space|2spc>Fixed Point and
+      Scale-Invariance <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-9>>
 
-      <with|par-left|<quote|1tab>|4.1<space|2spc>Equivalent Action?
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|5.4<space|2spc>* Appendix: Perturbative
+      Method TODO <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-10>>
 
-      <with|par-left|<quote|1tab>|4.2<space|2spc>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|6<space|2spc>Drafts>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-11>>
+      <no-break><pageref|auto-11><vspace|0.5fn>
 
-      <with|par-left|<quote|1tab>|4.3<space|2spc>
+      <with|par-left|<quote|1tab>|6.1<space|2spc>Equivalent Action?
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-12>>
 
-      <with|par-left|<quote|1tab>|4.4<space|2spc>
+      <with|par-left|<quote|1tab>|6.2<space|2spc>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-13>>
 
-      <with|par-left|<quote|1tab>|4.5<space|2spc>Coordinate Transformation
+      <with|par-left|<quote|1tab>|6.3<space|2spc>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-14>>
 
-      <with|par-left|<quote|1tab>|4.6<space|2spc>Super-symmetry in Langevin
-      Process (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|6.4<space|2spc>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-15>>
 
-      <with|par-left|<quote|1tab>|4.7<space|2spc>Master Equation on Euclidean
-      Alphabet Can Be Formulated as Path Integral (TODO)
+      <with|par-left|<quote|1tab>|6.5<space|2spc>Coordinate Transformation
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-16>>
 
-      <with|par-left|<quote|1tab>|4.8<space|2spc>Example: Action in Deep
-      Learning (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|6.6<space|2spc>Super-symmetry in Langevin
+      Process (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-17>>
 
-      <with|par-left|<quote|1tab>|4.9<space|2spc>* History: Structures in
-      Nature Arise from Least-Action Principle
+      <with|par-left|<quote|1tab>|6.7<space|2spc>Master Equation on Euclidean
+      Alphabet Can Be Formulated as Path Integral (TODO)
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-18>>
 
-      <with|par-left|<quote|2tab>|4.9.1<space|2spc>WBE Theory and
-      Universality <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|6.8<space|2spc>Example: Action in Deep
+      Learning (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-19>>
 
-      <with|par-left|<quote|2tab>|4.9.2<space|2spc>Renormalization Group and
-      Criticality <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|6.9<space|2spc>* History: Structures in
+      Nature Arise from Least-Action Principle
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-20>>
 
-      <with|par-left|<quote|1tab>|4.10<space|2spc>Action
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|2tab>|6.9.1<space|2spc>WBE Theory and
+      Universality <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-21>>
+
+      <with|par-left|<quote|2tab>|6.9.2<space|2spc>Renormalization Group and
+      Criticality <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-22>>
+
+      <with|par-left|<quote|1tab>|6.10<space|2spc>Action
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-23>>
     </associate>
   </collection>
 </auxiliary>
