@@ -1841,166 +1841,195 @@
 
   <subsection|Action>
 
-  Is there the relation
+  Define <math|\<alpha\>> by
 
   <\equation*>
-    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k
-    \ exp<around*|{|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>+<wide|r|^><around*|(|x,k|)>
-    \<Delta\>t|}>?
-  </equation*>
-
-  Namely, is the Fourier coefficient of <math|q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>>
-  on <math|\<epsilon\>> the <math|exp<around*|{|<wide|r|^><around*|(|x,k|)>
-  \<Delta\>t|}>>?
-
-  Recall that
-
-  <\equation>
-    <tabular|<tformat|<cwith|1|-1|1|1|cell-hyphen|n>|<cwith|1|-1|1|1|cell-halign|r>|<cwith|1|-1|2|2|cell-halign|l>|<table|<row|<cell|q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>=>|<cell|\<delta\><around*|(|\<epsilon\>|)>>>|<row|<cell|+>|<cell|<around*|(|\<Delta\>t|)>
-    r<around*|(|x+\<epsilon\>,x|)>>>|<row|<cell|+>|<cell|<frac|<around*|(|\<Delta\>t|)><rsup|2>|2!>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
-    r<around*|(|x+\<epsilon\>,y|)> r<around*|(|y,x|)>>>|<row|<cell|+>|<cell|\<cdots\>>>|<row|<cell|+>|<cell|<frac|<around*|(|\<Delta\>t|)><rsup|n+1>|<around*|(|n+1|)>!><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|1>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|n>
-    r<around*|(|x+\<epsilon\>,y<rsub|n>|)>
-    r<around*|(|y<rsub|n>,y<rsub|n-1>|)>\<cdots\>r<around*|(|y<rsub|1>,x|)>>>|<row|<cell|+>|<cell|\<cdots\>.>>>>>
-  </equation>
-
-  Define <math|<wide|r|^><around*|(|x,k|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
-  exp<around*|(|\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>
-  r<around*|(|x+\<epsilon\>,x|)>>, we have
-
-  <\equation*>
-    <tabular|<tformat|<cwith|1|-1|1|1|cell-hyphen|n>|<cwith|1|-1|1|1|cell-halign|r>|<cwith|1|-1|2|2|cell-halign|l>|<cwith|3|3|1|1|cell-hyphen|n>|<cwith|3|3|1|1|cell-halign|r>|<cwith|3|3|2|2|cell-halign|l>|<cwith|3|3|1|1|cell-hyphen|n>|<cwith|3|3|1|1|cell-halign|r>|<cwith|3|3|2|2|cell-halign|l>|<table|<row|<cell|>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
-    exp<around*|(|\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>
-    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>>>|<row|<cell|=>|<cell|1>>|<row|<cell|+>|<cell|\<Delta\>t<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
-    exp<around*|(|\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>
-    r<around*|(|x+\<epsilon\>,x|)>>>|<row|<cell|+>|<cell|<frac|<around*|(|\<Delta\>t|)><rsup|2>|2!>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
-    exp<around*|(|\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>r<around*|(|x+\<epsilon\>,y|)>
-    r<around*|(|y,x|)>>>|<row|<cell|+>|<cell|\<cdots\>>>|<row|<cell|+>|<cell|<frac|<around*|(|\<Delta\>t|)><rsup|n+1>|<around*|(|n+1|)>!><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|1>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|n>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
-    exp<around*|(|\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>r<around*|(|x+\<epsilon\>,y<rsub|n>|)>
-    r<around*|(|y<rsub|n>,y<rsub|n-1>|)>\<cdots\>r<around*|(|y<rsub|1>,x|)>>>|<row|<cell|+>|<cell|\<cdots\>.>>>>>
-  </equation*>
-
-  We have
-
-  <\equation*>
-    r<around*|(|x,y|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k
-    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>|)>
-    <wide|r|^><around*|(|y,k|)>.
-  </equation*>
-
-  Thus, the second order coefficient is
-
-  <\align>
-    <tformat|<table|<row|<cell|>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>z
-    exp<around*|(|\<mathi\>k<around*|(|z-x|)>|)><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
-    r<around*|(|z,y|)> r<around*|(|y,x|)>>>|<row|<cell|=>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>z
-    exp<around*|(|\<mathi\>k<around*|(|z-x|)>|)><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<around*|[|
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|'>
-    exp<around*|(|-\<mathi\>k<rprime|'><around*|(|z-y|)>|)>
-    <wide|r|^><around*|(|y,k<rprime|'>|)>|]>
-    <around*|[|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|''>
-    exp<around*|(|-\<mathi\>k<rprime|''><around*|(|y-x|)>|)>
-    <wide|r|^><around*|(|x,k<rprime|''>|)>|]>>>|<row|<cell|=>|<cell|
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>z<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|'><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|''>
-    exp<around*|(|\<mathi\>k z-\<mathi\>k
-    x-\<mathi\>k<rprime|'>z+\<mathi\>k<rprime|'>y-\<mathi\>k<rprime|''>y+\<mathi\>k<rprime|''>x|)><wide|r|^><around*|(|y,k<rprime|'>|)><wide|r|^><around*|(|x,k<rprime|''>|)>.>>>>
-  </align>
-
-  Integrating over <math|z> gives
-
-  <\equation*>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|'><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|''>
-    exp<around*|(|-\<mathi\>k x+\<mathi\>k<rprime|'>y-\<mathi\>k<rprime|''>y+\<mathi\>k<rprime|''>x|)><wide|r|^><around*|(|y,k<rprime|'>|)><wide|r|^><around*|(|x,k<rprime|''>|)>
-    \<delta\><around*|(|k-k<rprime|''>|)>.
-  </equation*>
-
-  Integrating over <math|k<rprime|''>> gives
-
-  <\equation*>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|'>
-    exp<around*|(|-\<mathi\><around*|(|k-k<rprime|'>|)>y|)><wide|r|^><around*|(|y,k<rprime|'>|)><wide|r|^><around*|(|x,k|)>.
-  </equation*>
-
-  \;
-
-  \;
-
-  We have
-
-  <\equation*>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
-    r<around*|(|x+\<epsilon\>,y|)> r<around*|(|y,x|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
-    r<around*|(|x+\<epsilon\>,x+y|)> r<around*|(|x+y,x|)>.
+    q<rsub|\<Delta\>t><around*|(|x\|z|)>=<big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\>|)><rsup|d>>
+    \ exp<around*|{|\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>>-z<rsup|\<alpha\>>|)>+<wide|r|^><around*|(|z,k|)>
+    \<Delta\>t+\<alpha\> \<Delta\>t<rsup|2>|}>.
   </equation*>
 
   Thus,
 
   <\equation*>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
-    exp<around*|(|\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>r<around*|(|x+\<epsilon\>,y|)>
-    r<around*|(|y,x|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
-    exp<around*|(|\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>r<around*|(|x+\<epsilon\>,x+y|)>
-    r<around*|(|x+y,x|)>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
+    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>>-z<rsup|\<alpha\>>|)>|)>
+    q<rsub|\<Delta\>t><around*|(|x\|z|)>=exp<around*|{|<wide|r|^><around*|(|z,k|)>
+    \<Delta\>t+\<alpha\> \<Delta\>t<rsup|2>|}>.
   </equation*>
 
-  Since
+  We are to determine what <math|\<alpha\>> explicitly is.
+
+  To do so, we have to evaluate the Fourier transformation of
+  <math|q<rsub|\<Delta\>t><around*|(|x\|z|)>>. Recall that
+
+  <\equation>
+    <tabular|<tformat|<cwith|1|-1|1|1|cell-hyphen|n>|<cwith|1|-1|1|1|cell-halign|r>|<cwith|1|-1|2|2|cell-halign|l>|<table|<row|<cell|q<rsub|\<Delta\>t><around*|(|x\|z|)>=>|<cell|\<delta\><around*|(|x-z|)>>>|<row|<cell|+>|<cell|<around*|(|\<Delta\>t|)>
+    r<around*|(|x,z|)>>>|<row|<cell|+>|<cell|<frac|<around*|(|\<Delta\>t|)><rsup|2>|2!>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y r<around*|(|x,y|)>
+    r<around*|(|y,z|)>>>|<row|<cell|+>|<cell|\<cdots\>>>|<row|<cell|+>|<cell|<frac|<around*|(|\<Delta\>t|)><rsup|n+1>|<around*|(|n+1|)>!><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|1>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|n>
+    r<around*|(|x,y<rsub|n>|)> r<around*|(|y<rsub|n>,y<rsub|n-1>|)>\<cdots\>r<around*|(|y<rsub|1>,z|)>>>|<row|<cell|+>|<cell|\<cdots\>,>>>>>
+  </equation>
+
+  and that we have defined
 
   <\equation*>
-    r<around*|(|x+y,x|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|'>
-    exp<around*|(|-\<mathi\>k<rprime|'>y|)><wide|r|^><around*|(|x,k<rprime|'>|)>,
+    r<around*|(|x,y|)>=<big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\>|)><rsup|d>>
+    exp<around*|(|\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>|)>
+    <wide|r|^><around*|(|y,k|)>.
+  </equation*>
+
+  Thus, Fourier coefficient of <math|q<rsub|\<Delta\>t><around*|(|x\|z|)>>
+  has zero order
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
+    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>>-z<rsup|\<alpha\>>|)>|)>
+    \<delta\><around*|(|x-z|)>=1,
+  </equation*>
+
+  and first order is nothing but a check for inverse Fourier transformation,
+  as
+
+  <\align>
+    <tformat|<table|<row|<cell|>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
+    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>>-z<rsup|\<alpha\>>|)>|)>
+    r<around*|(|x,z|)>>>|<row|<cell|=>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
+    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>>-z<rsup|\<alpha\>>|)>|)>
+    <big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k<rprime|'>|<around*|(|2\<mathpi\>|)><rsup|d>>
+    exp<around*|(|\<mathi\>k<rprime|'><rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>>-z<rsup|\<alpha\>>|)>|)>
+    <wide|r|^><around*|(|z,k|)>>>|<row|<cell|=>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|'><big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>x|<around*|(|2\<mathpi\>|)><rsup|d>>
+    exp<around*|(|-\<mathi\><around*|(|k<rsub|\<alpha\>>-k<rprime|'><rsub|\<alpha\>>|)>x<rsup|\<alpha\>>+\<mathi\><around*|(|k<rsub|\<alpha\>>-k<rprime|'><rsub|\<alpha\>>|)>z<rsup|\<alpha\>>|)>
+    <wide|r|^><around*|(|z,k|)>>>|<row|<cell|=>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|'>\<delta\><around*|(|k<rsub|\<alpha\>>-k<rprime|'><rsub|\<alpha\>>|)>exp<around*|(|\<mathi\><around*|(|k<rsub|\<alpha\>>-k<rprime|'><rsub|\<alpha\>>|)>z<rsup|\<alpha\>>|)>
+    <wide|r|^><around*|(|z,k|)>>>|<row|<cell|=>|<cell|<wide|r|^><around*|(|z,k|)>.>>>>
+  </align>
+
+  Now, for the second term, we have
+
+  <\small>
+    <\align>
+      <tformat|<table|<row|<cell|>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
+      exp<around*|(|-\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>>-z<rsup|\<alpha\>>|)>|)>
+      <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y r<around*|(|x,y|)>
+      r<around*|(|y,z|)>>>|<row|<cell|=>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
+      exp<around*|(|-\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>>-z<rsup|\<alpha\>>|)>|)><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k<rprime|'>|<around*|(|2\<mathpi\>|)><rsup|d>>
+      exp<around*|(|\<mathi\>k<rprime|'><rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>|)><wide|r|^><around*|(|y,k<rprime|'>|)><big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k<rprime|''>|<around*|(|2\<mathpi\>|)><rsup|d>>
+      exp<around*|(|\<mathi\>k<rprime|''><rsub|\<alpha\>><around*|(|y<rsup|\<alpha\>>-z<rsup|\<alpha\>>|)>|)>
+      <wide|r|^><around*|(|z,k<rprime|''>|)>>>|<row|<cell|=>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|'><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|''><big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>x|<around*|(|2\<mathpi\>|)><rsup|d>><big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>y|<around*|(|2\<mathpi\>|)><rsup|d>>
+      exp<around*|(|-\<mathi\><around*|(|k<rsub|\<alpha\>>-k<rprime|'><rsub|\<alpha\>>|)>x<rsup|\<alpha\>>+\<mathi\><around*|(|k<rsub|\<alpha\>>-k<rprime|''><rsub|\<alpha\>>|)>z<rsup|\<alpha\>>-\<mathi\><around*|(|k<rprime|'><rsub|\<alpha\>>-k<rprime|''><rsub|\<alpha\>>|)>y<rsup|\<alpha\>>|)>
+      <wide|r|^><around*|(|y,k<rprime|'>|)>
+      <wide|r|^><around*|(|z,k<rprime|''>|)>.>>>>
+    </align>
+  </small>
+
+  Up to now, everything is the same like the first order. But, when
+  integrating over <math|y>, the <math|y> in
+  <math|<wide|r|^><around*|(|y,k<rprime|'>|)>> matters. So, we only get
+  (without integrating <math|y>)
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|'><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|''><big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>y|<around*|(|2\<mathpi\>|)><rsup|d>>
+    \<delta\><around*|(|k-k<rprime|'>|)> exp<around*|(|\<mathi\><around*|(|k<rsub|\<alpha\>>-k<rprime|''><rsub|\<alpha\>>|)>z<rsup|\<alpha\>>-\<mathi\><around*|(|k<rprime|'><rsub|\<alpha\>>-k<rprime|''><rsub|\<alpha\>>|)>y<rsup|\<alpha\>>|)>
+    <wide|r|^><around*|(|y,k<rprime|'>|)>
+    <wide|r|^><around*|(|z,k<rprime|''>|)>.
+  </equation*>
+
+  Integrating over <math|k<rprime|'>> (and then replace <math|k<rprime|''>>
+  by <math|k<rprime|'>>) gives
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|'><big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>y|<around*|(|2\<mathpi\>|)><rsup|d>>
+    exp<around*|(|-\<mathi\><around*|(|k<rsub|\<alpha\>>-k<rprime|'><rsub|\<alpha\>>|)><around*|(|y<rsup|\<alpha\>>-z<rsup|\<alpha\>>|)>|)>
+    <wide|r|^><around*|(|y,k|)> <wide|r|^><around*|(|z,k<rprime|'>|)>.
+  </equation*>
+
+  Accordingly, if we Taylor expand <math|\<alpha\>> by <math|\<Delta\>t> as
+
+  <\equation*>
+    \<alpha\><around*|(|z,k,\<Delta\>t|)>=\<alpha\><rsub|0><around*|(|z,k|)>+\<Delta\>t
+    \<alpha\><rsub|1><around*|(|z,k|)>+<frac|\<Delta\>t<rsup|2>|2!>
+    \<alpha\><rsub|2><around*|(|z,k|)>+\<cdots\>,
+  </equation*>
+
+  then it should be <math|><math|<wide|r|^><rsup|2><around*|(|z,k|)>+2
+  \<alpha\><rsub|0><around*|(|z,k|)>>. Namely,
+
+  <\align>
+    <tformat|<table|<row|<cell|2\<alpha\><rsub|0><around*|(|z,k|)>=>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|'><big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>y|<around*|(|2\<mathpi\>|)><rsup|d>>
+    exp<around*|(|-\<mathi\><around*|(|k<rsub|\<alpha\>>-k<rprime|'><rsub|\<alpha\>>|)><around*|(|y<rsup|\<alpha\>>-z<rsup|\<alpha\>>|)>|)>
+    <wide|r|^><around*|(|y,k|)> <wide|r|^><around*|(|z,k<rprime|'>|)>-<wide|r|^><rsup|2><around*|(|z,k|)>>>|<row|<cell|=>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|'><big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>y|<around*|(|2\<mathpi\>|)><rsup|d>>
+    exp<around*|(|-\<mathi\><around*|(|k<rsub|\<alpha\>>-k<rprime|'><rsub|\<alpha\>>|)><around*|(|y<rsup|\<alpha\>>-z<rsup|\<alpha\>>|)>|)>
+    <around*|[|<wide|r|^><around*|(|y,k|)>
+    <wide|r|^><around*|(|z,k<rprime|'>|)>-<wide|r|^><around*|(|z,k|)>
+    <wide|r|^><around*|(|z,k|)>|]>>>|<row|<cell|=>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|'><big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>y|<around*|(|2\<mathpi\>|)><rsup|d>>
+    exp<around*|(|\<mathi\>k<rprime|'><rsub|\<alpha\>>y<rsup|\<alpha\>>|)>
+    <around*|[|<wide|r|^><around*|(|z+y,k|)>
+    <wide|r|^><around*|(|z,k+k<rprime|'>|)>-<wide|r|^><around*|(|z,k|)>
+    <wide|r|^><around*|(|z,k|)>|]>.>>>>
+  </align>
+
+  Notice the symmetric situation between <math|y> and <math|k<rprime|'>>. If
+  we Taylor expand <math|<wide|r|^><around*|(|z,k+k<rprime|'>|)>> by
+  <math|<around*|(|-\<mathi\>k<rprime|'>|)>>, then its zeroth order vanishes,
+  since integrating over <math|k<rprime|'>> gives
+
+  <\align>
+    <tformat|<table|<row|<cell|>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    <big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k<rprime|'>|<around*|(|2\<mathpi\>|)><rsup|d>>exp<around*|(|\<mathi\>k<rprime|'><rsub|\<alpha\>>y<rsup|\<alpha\>>|)>
+    <around*|[|<wide|r|^><around*|(|z+y,k|)>
+    <wide|r|^><around*|(|z,k|)>-<wide|r|^><around*|(|z,k|)>
+    <wide|r|^><around*|(|z,k|)>|]>>>|<row|<cell|=>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    \<delta\><around*|(|y|)> <around*|[|<wide|r|^><around*|(|z+y,k|)>
+    <wide|r|^><around*|(|z,k|)>-<wide|r|^><around*|(|z,k|)>
+    <wide|r|^><around*|(|z,k|)>|]>>>|<row|<cell|=>|<cell|<wide|r|^><around*|(|z,k|)>
+    <wide|r|^><around*|(|z,k|)>-<wide|r|^><around*|(|z,k|)>
+    <wide|r|^><around*|(|z,k|)>=0.>>>>
+  </align>
+
+  Denote
+
+  <\equation*>
+    A<rsub|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|z,k|)>\<assign\><frac|\<partial\>|\<partial\>z<rsup|\<alpha\><rsub|1>>>\<cdots\><frac|\<partial\>|\<partial\>z<rsup|\<alpha\><rsub|n>>><wide|r|^><around*|(|z,k|)>,
   </equation*>
 
   and
 
   <\equation*>
-    r<around*|(|x+y+<around*|(|\<epsilon\>-y|)>,x+y|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|''>
-    exp<around*|(|-\<mathi\>k<rprime|''><around*|(|\<epsilon\>-y|)>|)><wide|r|^><around*|(|x+y,k<rprime|''>|)>
+    B<rsup|\<beta\><rsub|1>\<cdots\>\<beta\><rsub|n>><around*|(|z,k|)>\<assign\><frac|\<partial\>|\<partial\><around*|(|-\<mathi\>k<rsub|\<beta\><rsub|1>>|)>>\<cdots\><frac|\<partial\>|\<partial\><around*|(|-\<mathi\>k<rsub|\<beta\><rsub|n>>|)>><wide|r|^><around*|(|z,k|)>,
   </equation*>
 
-  we get
+  the <math|n>th order can be formulated as
 
   <\equation*>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
-    exp<around*|(|\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|''>
-    exp<around*|(|-\<mathi\>k<rprime|''><around*|(|\<epsilon\>-y|)>|)><wide|r|^><around*|(|x+y,k<rprime|''>|)>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|'>
-    exp<around*|(|-\<mathi\>k<rprime|'>y|)><wide|r|^><around*|(|x,k<rprime|'>|)>,
+    <frac|1|m!n!><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    <big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k<rprime|'>|<around*|(|2\<mathpi\>|)><rsup|d>>exp<around*|(|\<mathi\>k<rprime|'><rsub|\<alpha\>>y<rsup|\<alpha\>>|)>
+    <wide|r|^><around*|(|z+y,k|)>B<rsup|\<beta\><rsub|1>\<cdots\>\<beta\><rsub|n>><rsup|><around*|(|z,k|)><around*|(|-\<mathi\>k<rsub|\<beta\><rsub|1>><rprime|'>|)>\<cdots\><around*|(|-\<mathi\>k<rsub|\<beta\><rsub|n>><rprime|'>|)>.
   </equation*>
 
-  or
+  Integrating over <math|k<rprime|'>> results in
 
   <\equation*>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|'>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|''>exp<around*|(|\<mathi\>k\<epsilon\>-\<mathi\>k<rprime|''>\<epsilon\>+\<mathi\>k<rprime|''>y-\<mathi\>k<rprime|'>y|)>
-    <wide|r|^><around*|(|x+y,k<rprime|'>|)>
-    <wide|r|^><around*|(|x,k<rprime|'>|)>.
+    <frac|<around*|(|-1|)><rsup|n>|n!><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    \ <wide|r|^><around*|(|z+y,k|)>B<rsup|\<beta\><rsub|1>\<cdots\>\<beta\><rsub|n>><rsup|><around*|(|z,k|)><around*|(|\<partial\><rsub|\<beta\><rsub|1>>\<cdots\>\<partial\><rsub|\<beta\><rsub|n>>\<delta\>|)><around*|(|y|)>.
   </equation*>
 
-  Integrating over <math|\<epsilon\>> gives
+  Integration by parts then makes it (the partial derivatives are taken on
+  the first variable of <math|<wide|r|^>>, hence it is subscript)
 
   <\equation*>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|'>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|''>exp<around*|(|\<mathi\>k<rprime|''>y-\<mathi\>k<rprime|'>y|)>
-    <wide|r|^><around*|(|x+y,k<rprime|''>|)>
-    <wide|r|^><around*|(|x,k<rprime|'>|)>\<delta\><around*|(|k-k<rprime|''>|)>.
+    <frac|1|n!><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    \ <around*|(|\<partial\><rsub|\<beta\><rsub|1>>\<cdots\>\<partial\><rsub|\<beta\><rsub|n>><wide|r|^>|)><around*|(|z+y,k|)>B<rsup|\<beta\><rsub|1>\<cdots\>\<beta\><rsub|n>><rsup|><around*|(|z,k|)>\<delta\><around*|(|y|)>=<frac|1|n!>A<rsub|\<beta\><rsub|1>\<cdots\>\<beta\><rsub|n>><around*|(|z,k|)>B<rsup|\<beta\><rsub|1>\<cdots\>\<beta\><rsub|n>><rsup|><around*|(|z,k|)>.
   </equation*>
 
-  Then, integrating over <math|k<rprime|''>> gives
+  So, we arrive at
 
   <\equation*>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rprime|'>
-    <wide|r|^><around*|(|x+y,k<rprime|'>|)>
-    <wide|r|^><around*|(|x,k<rprime|'>|)>.
+    2\<alpha\><rsub|0><around*|(|z,k|)>=<big|sum><rsub|n=1><rsup|+\<infty\>><frac|1|n!>A<rsub|\<beta\><rsub|1>\<cdots\>\<beta\><rsub|n>><around*|(|z,k|)>B<rsup|\<beta\><rsub|1>\<cdots\>\<beta\><rsub|n>><rsup|><around*|(|z,k|)>.
   </equation*>
+
+  Does this limit exist? All we have known is that
+  <math|B<rsup|\<beta\><rsub|1>\<cdots\>\<beta\><rsub|n>><rsup|><around*|(|z,0|)>=K<rsub|n><rsup|\<beta\><rsub|1>\<cdots\>\<beta\><rsub|n>><around*|(|z|)>>
+  is finite and vanishes for any <math|n\<gtr\>N<rsub|cut>>.
 </body>
 
 <\initial>

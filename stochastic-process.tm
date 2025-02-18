@@ -2541,7 +2541,9 @@
   and <math|y<around*|(|0|)>\<neq\>x<around*|(|0|)>>. That is to say,
   transport equation is deterministic.
 
-  <section|Randomness Appears in the Second Moment of Transition Rate>
+  <section|Randomness Appears in the Second Moment of Transition
+  Rate><label|section: Randomness Appears in the Second Moment of Transition
+  Rate>
 
   In section <reference|section: Randomness Is Absent in the First Moment of
   Transition Rate>, we have analyzed the cut-off at <math|N<rsub|cut>=1> and
@@ -3407,7 +3409,7 @@
 
   <\equation*>
     <wide|r|^><around*|(|x,k|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
-    exp<around*|(|\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>
+    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>
     r<around*|(|x+\<epsilon\>,x|)>.
   </equation*>
 
@@ -3418,20 +3420,23 @@
 
   <\equation*>
     q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>=\<delta\><around*|(|\<epsilon\>|)>+r<around*|(|x+\<epsilon\>,x|)>
-    \<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k
+    \<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>=<big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\>|)><rsup|d>>
     \ exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>
     <around*|[|1+<wide|r|^><around*|(|x,k|)>
-    \<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>|]>.
+    \<Delta\>t|]>+\<omicron\><around*|(|\<Delta\>t|)>.
   </equation*>
 
   Now, the <math|<around*|[|\<cdots\>|]>> part can be converted into
   exponential as <math|exp<around*|(|<wide|r|^><around*|(|x,k|)>
-  \<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>|)>>, so that
+  \<Delta\>t|)>+\<omicron\><around*|(|\<Delta\>t|)>>, so that<\footnote>
+    TODO: we have to show that the <math|\<omicron\><around*|(|\<Delta\>t|)>>
+    is independent of <math|k>, thus being out of the integration.
+  </footnote>
 
   <\equation*>
-    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k
-    \ exp<around*|{|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>+<wide|r|^><around*|(|x,k|)>
-    \<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>|}>.
+    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>=<big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\>|)><rsup|d>>
+    exp<around*|{|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>+<wide|r|^><around*|(|x,k|)>
+    \<Delta\>t|}>+\<omicron\><around*|(|\<Delta\>t|)>.
   </equation*>
 
   We are to integrate over <math|k>. If we Taylor expand
@@ -4559,6 +4564,7 @@
     <associate|footnote-4.1|<tuple|4.1|38>>
     <associate|footnote-4.2|<tuple|4.2|40>>
     <associate|footnote-4.3|<tuple|4.3|46>>
+    <associate|footnote-4.4|<tuple|4.4|?>>
     <associate|footnr-1|<tuple|1|7>>
     <associate|footnr-1.1|<tuple|1.1|9>>
     <associate|footnr-1.2|<tuple|1.2|9>>
@@ -4577,6 +4583,7 @@
     <associate|footnr-4.1|<tuple|4.1|38>>
     <associate|footnr-4.2|<tuple|4.2|40>>
     <associate|footnr-4.3|<tuple|4.3|46>>
+    <associate|footnr-4.4|<tuple|4.4|?>>
     <associate|section: A Brief Review of Least-Action Principle in Classical
     Mechanics|<tuple|4.2|37>>
     <associate|section: A Brief Review of Probability|<tuple|1.1|9>>
@@ -4613,6 +4620,8 @@
     Relaxation|<tuple|2.6|19>>
     <associate|section: Preliminary: Grassmann Variable and Berezin
     Integral|<tuple|4.3|38>>
+    <associate|section: Randomness Appears in the Second Moment of Transition
+    Rate|<tuple|3.5|?>>
     <associate|section: Randomness Is Absent in the First Moment of
     Transition Rate|<tuple|3.4|30>>
     <associate|section: Relative Entropy|<tuple|1|9>>
