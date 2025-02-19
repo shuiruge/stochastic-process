@@ -132,7 +132,7 @@
   When <math|\<Delta\>t\<rightarrow\>0>, <math|E<rsub|\<alpha\>\<beta\>\<gamma\>>>
   diverges.
 
-  <section|Legendre Tranformation>
+  <section|Legendre Transformation>
 
   Generally, we have found <math|q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>>
   to be
@@ -219,7 +219,7 @@
 
   \;
 
-  <with|color|red|So, can we illstrate the <math|E> (or <math|x> and
+  <with|color|red|So, can we illustrate the <math|E> (or <math|x> and
   <math|k>) as a whole, instead of integrating over <math|k>?>
 
   <section|Operator Equation>
@@ -408,7 +408,7 @@
   it using series expansion, like the Dyson's series for
   Schr<wide|o|\<ddot\>>dinger equation. The base of the expansion that we use
   is designed to be Wiener process, because this is the starting point in
-  which stochastics arises. Another reason is that Wiener process is
+  which randomness arises. Another reason is that Wiener process is
   exponential. For example, for Wiener process with covariance
   <math|\<Sigma\>>, we have
 
@@ -972,7 +972,7 @@
 
   where <math|Z> is the normalization factor.
 
-  We have the rough esitmation that <math|x<rsub|i+1>-x<rsub|i>=<with|font|cal|O><around*|(|<sqrt|\<epsilon\>>|)>>.
+  We have the rough estimation that <math|x<rsub|i+1>-x<rsub|i>=<with|font|cal|O><around*|(|<sqrt|\<epsilon\>>|)>>.
   Taylor expansion of <math|\<varphi\>> and <math|\<xi\>> by
   <math|x<rsub|i+1>> at <math|x<rsub|i>> gives, for the second term
 
@@ -2030,6 +2030,415 @@
   Does this limit exist? All we have known is that
   <math|B<rsup|\<beta\><rsub|1>\<cdots\>\<beta\><rsub|n>><rsup|><around*|(|z,0|)>=K<rsub|n><rsup|\<beta\><rsub|1>\<cdots\>\<beta\><rsub|n>><around*|(|z|)>>
   is finite and vanishes for any <math|n\<gtr\>N<rsub|cut>>.
+
+  <section|Proof of Central Limit Theorem>
+
+  Given a distribution <math|P> of random variable <math|X> on alphabet
+  <math|\<bbb-R\><rsup|d>>, its moment generating function is defined on
+  <math|\<bbb-R\><rsup|d>>, as
+
+  <\equation*>
+    \<varphi\><rsub|X><around*|(|k|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
+    p<around*|(|x|)> exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>x<rsup|\<alpha\>>|)>.
+  </equation*>
+
+  This is nothing but the Fourier transformation of density function
+  <math|p>.
+
+  While the classical proof of central limit theorem Taylor expands the
+  moment generating function at <math|k=0> as
+
+  <\equation*>
+    \<varphi\><rsub|X><around*|(|k|)>=\<varphi\><rsub|X><around*|(|0|)>+k<rsub|\<alpha\>>\<partial\><rsup|\<alpha\>>\<varphi\><rsub|X><around*|(|0|)>+<frac|1|2>k<rsub|\<alpha\>>k<rsub|\<beta\>>\<partial\><rsup|\<alpha\>>\<partial\><rsup|\<beta\>>\<varphi\><rsub|X><around*|(|0|)>+<with|font|cal|O><around*|(|<around*|\<\|\|\>|k|\<\|\|\>><rsup|3>|)>.
+  </equation*>
+
+  The <math|\<varphi\><rsub|X><around*|(|0|)>> is unit because of
+  <math|<big|int>\<mathd\>x p<around*|(|x|)>=1>. If we further assume that
+  <math|\<bbb-E\><around*|[|X<rsup|\<alpha\>>|]>=0>, then
+  <math|\<partial\><rsup|\<alpha\>>\<varphi\><rsub|X><around*|(|0|)>=-\<mathi\><big|int>\<mathd\>x
+  p<around*|(|x|)> x<rsup|\<alpha\>>\<propto\>\<bbb-E\><around*|[|X<rsup|\<alpha\>>|]>=0>.
+  The same, <math|\<partial\><rsup|\<alpha\>>\<partial\><rsup|\<beta\>>\<varphi\><rsub|X><around*|(|0|)>>
+  is evaluated to be <math|-\<bbb-E\><around*|[|X<rsup|\<alpha\>>X<rsup|\<beta\>>|]>>,
+  which in turn is <math|Cov<around*|(|X<rsup|\<alpha\>>,X<rsup|\<beta\>>|)>>
+  since <math|\<bbb-E\><around*|[|X<rsup|\<alpha\>>|]>> has vanished. Thus,
+  we find
+
+  <\equation*>
+    \<varphi\><rsub|X><around*|(|k|)>=1-<frac|1|2>k<rsub|\<alpha\>>k<rsub|\<beta\>>
+    Cov<around*|(|X<rsup|\<alpha\>>,X<rsup|\<beta\>>|)>+<with|font|cal|O><around*|(|<around*|\<\|\|\>|k|\<\|\|\>><rsup|3>|)>.
+  </equation*>
+
+  Then, the proof employs the following two identities. First, for any
+  <math|c\<in\>\<bbb-R\>>,
+
+  <\equation*>
+    \<varphi\><rsub|c X><around*|(|k|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
+    p<around*|(|x|)> exp<around*|(|-\<mathi\>c
+    k<rsub|\<alpha\>>x<rsup|\<alpha\>>|)>=\<varphi\><rsub|X><around*|(|c
+    k|)>,
+  </equation*>
+
+  where <math|c X> obeys the same randomness as <math|X> (thus we use
+  <math|p<around*|(|x|)>> still). Secondly, if <math|Y> obeys another
+  distribution <math|Q> on alphabet <math|\<bbb-R\><rsup|d>>, independent of
+  <math|X>, then
+
+  <\align>
+    <tformat|<table|<row|<cell|\<varphi\><rsub|X+Y><around*|(|k|)>=>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    p<around*|(|x|)> q<around*|(|y|)> exp<around*|(|-\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>>+y<rsup|\<alpha\>>|)>|)>>>|<row|<cell|=>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
+    p<around*|(|x|)> exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>x<rsup|\<alpha\>>|)>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y q<around*|(|y|)>
+    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>y<rsup|\<alpha\>>|)>>>|<row|<cell|=>|<cell|\<varphi\><rsub|X><around*|(|k|)>
+    \<varphi\><rsub|Y><around*|(|k|)>.>>>>
+  </align>
+
+  Together, for a series of random variables
+  <math|<around*|(|X<rsub|1>,\<ldots\>,X<rsub|n>|)>> all obeying distribution
+  <math|P>, we apply first identity and find
+
+  <\equation*>
+    \<varphi\><rsub|<around*|(|X<rsub|1>+\<cdots\>+X<rsub|n>|)>/<sqrt|n>><around*|(|k|)>=\<varphi\><rsub|<around*|(|X<rsub|1>+\<cdots\>+X<rsub|n>|)>><around*|(|<frac|k|<sqrt|n>>|)>
+  </equation*>
+
+  Then, by applying the second identity and noticing that <math|X<rsub|i>>
+  are all independent, the right hand side becomes
+
+  <\equation*>
+    \<varphi\><rsub|<around*|(|X<rsub|1>+\<cdots\>+X<rsub|n>|)>><around*|(|<frac|k|<sqrt|n>>|)>=<around*|[|\<varphi\><rsub|X><around*|(|<frac|k|<sqrt|n>>|)>|]><rsup|n>.
+  </equation*>
+
+  Altogether, we arrive at
+
+  <\equation*>
+    \<varphi\><rsub|<around*|(|X<rsub|1>+\<cdots\>+X<rsub|n>|)>/<sqrt|n>><around*|(|k|)>=<around*|[|\<varphi\><rsub|X><around*|(|<frac|k|<sqrt|n>>|)>|]><rsup|n>.
+  </equation*>
+
+  Finally, plugging in the Taylor expansion of <math|\<varphi\><rsub|X>> to
+  the right hand side gives
+
+  <\equation*>
+    \<varphi\><rsub|<around*|(|X<rsub|1>+\<cdots\>+X<rsub|n>|)>/<sqrt|n>><around*|(|k|)>=<around*|[|1-<frac|1|2n>k<rsub|\<alpha\>>k<rsub|\<beta\>>
+    Cov<around*|(|X<rsup|\<alpha\>>,X<rsup|\<beta\>>|)>+<with|font|cal|O><around*|(|n<rsup|-3/2>|)>|]><rsup|n>.
+  </equation*>
+
+  Recall the base of natural logarithm, defined by
+
+  <\equation*>
+    \<mathe\>\<assign\>lim<rsub|n\<rightarrow\>+\<infty\>><around*|(|1+<frac|1|n>|)><rsup|n>,
+  </equation*>
+
+  thus
+
+  <\equation*>
+    lim<rsub|n\<rightarrow\>+\<infty\>><around*|(|1+<frac|x|n>|)><rsup|n>=lim<rsub|n\<rightarrow\>+\<infty\>><around*|[|<around*|(|1+<frac|1|n/x>|)><rsup|n/x>|]><rsup|x>=<around*|[|lim<rsub|n\<rightarrow\>+\<infty\>><around*|(|1+<frac|1|n/x>|)><rsup|n/x>|]><rsup|x>=\<mathe\><rsup|x>.
+  </equation*>
+
+  Replacing <math|x> by <math|-<around*|(|1/2|)>
+  k<rsub|\<alpha\>>k<rsub|\<beta\>> Cov<around*|(|X<rsup|\<alpha\>>,X<rsup|\<beta\>>|)>>
+  and omitting the <math|<with|font|cal|O><around*|(|n<rsup|-3/2>|)>> term,
+  we find
+
+  <\equation*>
+    lim<rsub|n\<rightarrow\>+\<infty\>>\<varphi\><rsub|<around*|(|X<rsub|1>+\<cdots\>+X<rsub|n>|)>/<sqrt|n>><around*|(|k|)>=exp<around*|(|-<frac|1|2>Cov<around*|(|X<rsup|\<alpha\>>,X<rsup|\<beta\>>|)>
+    k<rsub|\<alpha\>>k<rsub|\<beta\>>|)>.
+  </equation*>
+
+  Taking the inverse Fourier transformation to the right hand side
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\>|)><rsup|d>>
+    exp<around*|(|-<frac|1|2>Cov<around*|(|X<rsup|\<alpha\>>,X<rsup|\<beta\>>|)>
+    k<rsub|\<alpha\>>k<rsub|\<beta\>>+\<mathi\>k<rsub|\<alpha\>>x<rsup|\<alpha\>>|)>
+  </equation*>
+
+  then gives the distribution of <math|<around*|(|X<rsub|1>+\<cdots\>+X<rsub|n>|)>/<sqrt|n>>
+  in the limit <math|n\<rightarrow\>+\<infty\>>. And it is a normal
+  distribution with zero mean and covariance
+  <math|Cov<around*|(|X<rsup|\<alpha\>>,X<rsup|\<beta\>>|)>>. The proof ends.
+
+  This proof is imperfect. For example, we have to additionally prove that
+  density function <math|p<rsub|n>\<rightarrow\>q> as
+  <math|n\<rightarrow\>+\<infty\>> if its Fourier transformation
+  <math|<wide|p|^><rsub|n>\<rightarrow\><wide|q|^>>. If this can be safely
+  proven, we can generalize this proof to generic Markovian process. The
+  density function <math|p> is replaced by the transition density
+  <math|q<rsub|\<tau\>><around*|(|\<cdummy\>\|y|)>>. The first identity of
+  moment generating function still holds, while the second identity becomes
+  (<math|\<tau\>> and <math|z> are dependencies)
+
+  <\equation*>
+    \<varphi\><rsub|X+Y><around*|(|k\|\<tau\>,z|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    q<rsub|\<tau\>><around*|(|x\|y|)> q<rsub|\<tau\>><around*|(|y\|z|)>
+    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>>+y<rsup|\<alpha\>>|)>|)>,
+  </equation*>
+
+  where we have replaced <math|p<around*|(|x|)>> and <math|p<around*|(|y|)>>
+  by <math|q<rsub|\<tau\>><around*|(|x\|y|)>> and
+  <math|q<rsub|\<tau\>><around*|(|y\|z|)>> respectively. Even though <math|X>
+  and <math|Y> now become dependent, we assume that <math|\<tau\>> is so tiny
+  that <math|y\<approx\>z> (we have to declare what this means in statistical
+  sense), thus
+
+  <\equation*>
+    \<varphi\><rsub|X+Y><around*|(|k\|\<tau\>,z|)>\<approx\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    q<rsub|\<tau\>><around*|(|x\|z|)> q<rsub|\<tau\>><around*|(|y\|z|)>
+    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>>+y<rsup|\<alpha\>>|)>|)>.
+  </equation*>
+
+  Namely, <math|X> and <math|Y> are approximately identical and independent.
+  Then, the second identity goes as before, and
+  <math|\<varphi\><rsub|X+Y><around*|(|k\|\<tau\>,z|)>\<approx\>\<varphi\><rsub|X><around*|(|k\|\<tau\>,z|)>
+  \<varphi\><rsub|Y><around*|(|k\|\<tau\>,z|)>>. We have to estimate the
+  residual error in the final result <math|<big|int>\<mathd\>k
+  \<varphi\><rsub|<around*|(|X<rsub|1>+\<cdots\>+X<rsub|n>|)>><around*|(|k\|\<tau\>/n,z|)>
+  exp<around*|(|\<mathi\>k<rsub|\<alpha\>>x<rsup|\<alpha\>>|)>> caused by
+  this approximation. (For example, each <math|X<rsub|i>> is a strike by
+  water molecule in Brownian motion, and there are <math|n> strikes within
+  the period <math|\<tau\>>) It would be satisfactory if the residual error
+  is found to be <math|\<omicron\><around*|(|\<tau\>|)>>.
+
+  The condition <math|p<rsub|n>\<rightarrow\>q> if
+  <math|<wide|p|^><rsub|n>\<rightarrow\><wide|q|^>> can be proven by the
+  expansion by moments. The expansion can be stated as
+
+  <\equation*>
+    p<around*|(|x|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|<around*|(|-1|)><rsup|n>|n!>M<rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><rsub|n>
+    <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>|)>\<delta\><around*|(|x|)>,
+  </equation*>
+
+  where
+
+  <\equation*>
+    M<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>>\<assign\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
+    p<around*|(|x|)> <around*|(|x<rsup|\<alpha\><rsub|1>>*\<cdots\>*x<rsup|\<alpha\><rsub|n>>|)>
+  </equation*>
+
+  represents the <math|n>th order moment. To prove this expansion, we apply
+  <math|p<around*|(|x|)>> on a test function <math|\<varphi\>> in Schwartz
+  space <math|S<around*|(|\<bbb-R\><rsup|d>|)>>, and Taylor expand
+  <math|\<varphi\>> at <math|x=0>, as
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x p<around*|(|x|)>
+    \<varphi\><around*|(|x|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|1|n!><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
+    p<around*|(|x|)> <around*|(|x<rsup|\<alpha\><rsub|1>>*\<cdots\>*x<rsup|\<alpha\><rsub|n>>|)>
+    <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>.
+  </equation*>
+
+  The integral is recognized as the <math|n>th order moment. Thus,
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x p<around*|(|x|)>
+    \<varphi\><around*|(|x|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|1|n!>M<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>>
+    <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>.
+  </equation*>
+
+  On the other hand, integration by parts gives
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
+    <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|x|)>
+    \<varphi\><around*|(|x|)>=<around*|(|-1|)><rsup|n><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
+    \<delta\><around*|(|x|)> <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|x|)>=<around*|(|-1|)><rsup|n><around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>.
+  </equation*>
+
+  Together, we have
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x p<around*|(|x|)>
+    \<varphi\><around*|(|x|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|<around*|(|-1|)><rsup|n>|n!>M<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
+    <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|x|)>
+    \<varphi\><around*|(|x|)>.
+  </equation*>
+
+  Since <math|\<varphi\>> is arbitrary, we arrive at the eager expansion, as
+  long as each moment is well-defined.
+
+  Now we apply this expansion to prove the condition
+  <math|p<rsub|n>\<rightarrow\>q> if <math|<wide|p|^><rsub|n>\<rightarrow\><wide|q|^>>.
+  First of all, we notice that
+
+  <\equation*>
+    <around*|(|\<partial\><rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsup|\<alpha\><rsub|n>><wide|p|^>|)><around*|(|0|)>=lim<rsub|k\<rightarrow\>0><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
+    p<around*|(|x|)> exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>x<rsup|\<alpha\>>|)>
+    <around*|(|-\<mathi\>x<rsup|\<alpha\><rsub|1>>|)>*\<cdots\>*<around*|(|-\<mathi\>x<rsup|\<alpha\><rsub|n>>|)>=<around*|(|-\<mathi\>|)><rsup|n>M<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>>.
+  </equation*>
+
+  This is why the Fourier transformation <math|<wide|p|^>> is also called
+  moment generating function. Plugging this into the expansion, we get
+
+  <\equation*>
+    p<around*|(|x|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|<around*|(|-\<mathi\>|)><rsup|n>|n!><around*|(|\<partial\><rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsup|\<alpha\><rsub|n>><wide|p|^>|)><around*|(|0|)>
+    <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|x|)>.
+  </equation*>
+
+  With this relation, how the <math|p<rsub|m>> approaches <math|q> as
+  <math|m\<rightarrow\>+\<infty\>> becomes apparent.
+
+  <section|From Central Limit Theorem to Markovian Process>
+
+  Now, we turn attention to evaluate <math|q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>>.
+  We equally seperate <math|\<Delta\>t> by <math|n> parts, thus (re-denote
+  <math|x> by <math|x<rsub|0>> and <math|x+\<epsilon\>> by <math|x<rsub|n>>)
+
+  <\equation*>
+    q<rsub|\<Delta\>t><around*|(|x<rsub|n>\|x<rsub|0>|)>=<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|1>\<cdots\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|n-1>
+    q<rsub|\<Delta\>t/n><around*|(|x<rsub|n>\|x<rsub|n-1>|)>\<cdots\>q<rsub|\<Delta\>t/n><around*|(|x<rsub|1>\|x<rsub|0>|)>.
+  </equation*>
+
+  When <math|\<Delta\>t> is small enough, we have
+  <math|x<rsub|i>\<approx\>x<rsub|0>> for
+  <math|i\<in\><around*|{|1,\<ldots\>,n-1|}>>. Its Fourier transformation is
+  (we add an constant factor <math|exp<around*|(|\<mathi\>k<rsub|\<alpha\>>x<rsub|0><rsup|\<alpha\>>|)>>)
+
+  <\align>
+    <tformat|<table|<row|<cell|>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|n>
+    q<rsub|\<Delta\>t><around*|(|x<rsub|n>\|x<rsub|0>|)>
+    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsub|n><rsup|\<alpha\>>-x<rsub|0><rsup|\<alpha\>>|)>|)>>>|<row|<cell|=>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|1>\<cdots\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|n>
+    exp<around*|{|-\<mathi\>k<rsub| \<alpha\>><around*|(|x<rsub|n><rsup|\<alpha\>>-x<rsub|n-1><rsup|\<alpha\>>|)>|}>
+    q<rsub|\<Delta\>t/n><around*|(|x<rsub|n>\|x<rsub|n-1>|)>\<cdots\>exp<around*|(|-\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsub|1><rsup|\<alpha\>>-x<rsub|0><rsup|\<alpha\>>|)>|)>q<rsub|\<Delta\>t/n><around*|(|x<rsub|1>\|x<rsub|0>|)>.>>>>
+  </align>
+
+  Integrating over <math|x<rsub|n>> is
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|n>
+    exp<around*|{|-\<mathi\>k<rsub| \<alpha\>><around*|(|x<rsub|n><rsup|\<alpha\>>-x<rsub|n-1><rsup|\<alpha\>>|)>|}>
+    q<rsub|\<Delta\>t/n><around*|(|x<rsub|n>\|x<rsub|n-1>|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
+    exp<around*|(|-\<mathi\>k<rsub| \<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>
+    q<rsub|\<Delta\>t/n><around*|(|x<rsub|n-1>+\<epsilon\>\|x<rsub|n-1>|)>,
+  </equation*>
+
+  and we denote it by <math|<wide|q|^><rsub|\<Delta\>t/n><around*|(|x<rsub|n-1>,k|)>>.
+  Next, the integral of <math|x<rsub|n-1>> is
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|n-1>exp<around*|{|-\<mathi\>k<rsub|
+    \<alpha\>><around*|(|x<rsub|n-1><rsup|\<alpha\>>-x<rsub|n-2><rsup|\<alpha\>>|)>|}>
+    q<rsub|\<Delta\>t/n><around*|(|x<rsub|n-1>\|x<rsub|n-2>|)>
+    <wide|q|^><rsub|\<Delta\>t/n><around*|(|x<rsub|n-1>,k|)>.
+  </equation*>
+
+  We expand <math|<wide|q|^><rsub|\<Delta\>t/n><around*|(|x<rsub|n-1>,k|)>>
+  at <math|x<rsub|n-1>=x<rsub|n-2>>. Thus,
+
+  <\equation*>
+    <wide|q|^><rsub|\<Delta\>t/n><around*|(|x<rsub|n-1>,k|)>=<wide|q|^><rsub|\<Delta\>t/n><around*|(|x<rsub|n-2>,k|)>+\<partial\><rsub|\<alpha\>><wide|q|^><rsub|\<Delta\>t/n><around*|(|x<rsub|n-2>,k|)>
+    <around*|(|x<rsub|n-1><rsup|\<alpha\>>-x<rsub|n-2><rsup|\<alpha\>>|)>+\<cdots\>.
+  </equation*>
+
+  The integral of <math|x<rsub|n-1>> then becomes (shall not forget the
+  <math|<wide|q|^><rsub|\<Delta\>t/n><around*|(|x<rsub|n-1>,k|)>> in front)
+
+  <\align>
+    <tformat|<table|<row|<cell|>|<cell|<wide|q|^><rsub|\<Delta\>t/n><around*|(|x<rsub|n-2>,k|)><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|n-1>exp<around*|{|-\<mathi\>k<rsub|
+    \<alpha\>><around*|(|x<rsub|n-1><rsup|\<alpha\>>-x<rsub|n-2><rsup|\<alpha\>>|)>|}>
+    q<rsub|\<Delta\>t/n><around*|(|x<rsub|n-1>\|x<rsub|n-2>|)>>>|<row|<cell|+>|<cell|\<partial\><rsub|\<alpha\>><wide|q|^><rsub|\<Delta\>t/n><around*|(|x<rsub|n-2>,k|)><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|n-1>exp<around*|{|-\<mathi\>k<rsub|
+    \<alpha\>><around*|(|x<rsub|n-1><rsup|\<alpha\>>-x<rsub|n-2><rsup|\<alpha\>>|)>|}>
+    q<rsub|\<Delta\>t/n><around*|(|x<rsub|n-1>\|x<rsub|n-2>|)>
+    <around*|(|x<rsub|n-1><rsup|\<alpha\>>-x<rsub|n-2><rsup|\<alpha\>>|)>>>|<row|<cell|+>|<cell|\<cdots\>>>>>
+  </align>
+
+  It results in
+
+  <\equation*>
+    <around*|[|<wide|q|^><rsub|\<Delta\>t/n><around*|(|x<rsub|n-2>,k|)>|]><rsup|2>+\<partial\><rsub|\<alpha\>><wide|q|^><rsub|\<Delta\>t/n><around*|(|x<rsub|n-2>,k|)>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    exp<around*|(|-\<mathi\>k<rsub| \<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>
+    q<rsub|\<Delta\>t/n><around*|(|x<rsub|n-2>+\<epsilon\>\|x<rsub|n-2>|)>
+    \<epsilon\><rsup|\<alpha\>>+\<cdots\>.
+  </equation*>
+
+  Now, we are to estimate the integral within the second term. This integral
+  results in a function of <math|k>. Its Taylor expansion at <math|k=0> has
+  the moment <math|<big|int>\<mathd\>\<epsilon\>
+  q<rsub|\<Delta\>t/n><around*|(|x+\<epsilon\>\|x|)>
+  <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|m+1>>|)>>
+  as the <math|m>th order coefficient. In section TODO, we have derived that
+  the moment is of <math|<with|font|cal|O><around*|(|<around*|(|\<Delta\>t/n|)><rsup|\<sharp\><around*|(|<around*|(|m+1|)>/N<rsub|cut>|)>>|)>>.
+  The rest terms in <math|<around*|[|\<cdots\>|]>> is the same, but result in
+  higher order of <math|<around*|(|\<Delta\>t/n|)>>. Within all these
+  estimations, the leading order is <math|m=0>, which is
+  <math|<with|font|cal|O><around*|(|<around*|(|\<Delta\>t/n|)><rsup|\<sharp\><around*|(|1/N<rsub|cut>|)>>|)>=<with|font|cal|O><around*|(|\<Delta\>t/n|)>>
+  So, we conclude that the integral of <math|x<rsub|n-1>> is
+
+  <\equation*>
+    <around*|[|<wide|q|^><rsub|\<Delta\>t/n><around*|(|x<rsub|n-2>,k|)>|]><rsup|2>+<with|font|cal|O><around*|(|\<Delta\>t/n|)>.
+  </equation*>
+
+  Next, the integral of <math|x<rsub|n-2>> turns to be
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|n-2>exp<around*|{|-\<mathi\>k<rsub|
+    \<alpha\>><around*|(|x<rsub|n-2><rsup|\<alpha\>>-x<rsub|n-3><rsup|\<alpha\>>|)>|}>
+    q<rsub|\<Delta\>t/n><around*|(|x<rsub|n-2>\|x<rsub|n-3>|)>
+    <around*|[|<wide|q|^><rsub|\<Delta\>t/n><around*|(|x<rsub|n-2>,k|)>|]><rsup|2>+<with|font|cal|O><around*|(|\<Delta\>t/n|)>.
+  </equation*>
+
+  Following the same process, Taylor expand
+  <math|<wide|q|^><rsub|\<Delta\>t/n><around*|(|x<rsub|n-2>,k|)>> at
+  <math|x<rsub|n-2>=x<rsub|n-3>>, and then estimate the residual, we will get
+
+  <\equation*>
+    <around*|[|<wide|q|^><rsub|\<Delta\>t/n><around*|(|x<rsub|n-3>,k|)>|]><rsup|3>+<with|font|cal|O><around*|(|\<Delta\>t/n|)>.
+  </equation*>
+
+  By repeating this process until the integral of <math|x<rsub|1>>, we will
+  evaluate the whole integral, and arrive at
+
+  <\equation>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
+    q<rsub|\<Delta\>t><around*|(|x<rsub|0>+\<epsilon\>\|x<rsub|0>|)>
+    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>=<around*|[|<wide|q|^><rsub|\<Delta\>t/n><around*|(|x<rsub|0>,k|)>|]><rsup|n>+<with|font|cal|O><around*|(|\<Delta\>t|)>.<label|equation:fourier
+    transform q>
+  </equation>
+
+  The <math|n> disappears in the residue because there are <math|n> such
+  residues (each repetation contributes a moment
+  <math|<big|int>\<mathd\>\<epsilon\> q<rsub|\<Delta\>t/n><around*|(|x+\<epsilon\>\|x|)>
+  \<epsilon\><rsup|\<alpha\>>>).
+
+  Then, we Taylor expand <math|<wide|q|^><rsub|\<Delta\>t/n>> by
+  <math|\<Delta\>t/n>, as
+
+  <\equation*>
+    <wide|q|^><rsub|\<Delta\>t/n><around*|(|x<rsub|0>,k|)>=<wide|q|^><rsub|0><around*|(|x<rsub|0>,k|)>+<frac|\<Delta\>t|n><wide|q|^><rsub|0><rsup|<around*|(|1|)>><around*|(|x<rsub|0>,k|)>+<with|font|cal|O><around*|(|<around*|(|\<Delta\>t/n|)><rsup|2>|)>.
+  </equation*>
+
+  This needs the relation of <math|<wide|q|^><rsub|\<tau\>>> and the
+  transition density <math|r>. That is,
+
+  <\align>
+    <tformat|<table|<row|<cell|<wide|q|^><rsub|\<tau\>><around*|(|x,k|)>=>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
+    exp<around*|(|-\<mathi\>k<rsub| \<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>
+    q<rsub|\<tau\>><around*|(|x+\<epsilon\>\|x|)>>>|<row|<cell|=>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
+    exp<around*|(|-\<mathi\>k<rsub| \<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>
+    \<delta\><around*|(|\<epsilon\>|)>+\<tau\>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
+    exp<around*|(|-\<mathi\>k<rsub| \<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>
+    r<around*|(|x+\<epsilon\>,x|)>+<with|font|cal|O><around*|(|\<tau\>|)>>>|<row|<cell|=>|<cell|1+\<tau\>
+    <wide|r|^><around*|(|x,k|)>+<with|font|cal|O><around*|(|\<tau\><rsup|2>|)>.>>>>
+  </align>
+
+  Thus, we have <math|<wide|q|^><rsub|0><around*|(|x<rsub|0>,k|)>=1> and
+  <math|<wide|q|^><rsub|0><rsup|<around*|(|1|)>><around*|(|x<rsub|0>,k|)>=<wide|r|^><around*|(|x<rsub|0>,k|)>>.
+  Plugging into equation <reference|equation:fourier transform q>, we get
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
+    q<rsub|\<Delta\>t><around*|(|x<rsub|0>+\<epsilon\>\|x<rsub|0>|)>
+    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>=<around*|[|1+<frac|\<Delta\>t|n><wide|r|^><around*|(|x<rsub|0>,k|)>+<with|font|cal|O><around*|(|<around*|(|\<Delta\>t/n|)><rsup|2>|)>|]><rsup|n>+<with|font|cal|O><around*|(|\<Delta\>t|)>.
+  </equation*>
+
+  Taking <math|n\<rightarrow\>+\<infty\>>, it becomes (replace
+  <math|x<rsub|0>> by <math|x>)
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
+    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>
+    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>=exp<around*|(|<wide|r|^><around*|(|x,k|)>
+    \<Delta\>t|)>+<with|font|cal|O><around*|(|\<Delta\>t|)>.
+  </equation*>
 </body>
 
 <\initial>
@@ -2058,6 +2467,8 @@
     <associate|auto-21|<tuple|6.9.1|19>>
     <associate|auto-22|<tuple|6.9.2|19>>
     <associate|auto-23|<tuple|6.10|19>>
+    <associate|auto-24|<tuple|7|?>>
+    <associate|auto-25|<tuple|8|?>>
     <associate|auto-3|<tuple|3|2>>
     <associate|auto-4|<tuple|4|4>>
     <associate|auto-5|<tuple|4.1|4>>
@@ -2065,6 +2476,7 @@
     <associate|auto-7|<tuple|5.1|5>>
     <associate|auto-8|<tuple|5.2|6>>
     <associate|auto-9|<tuple|5.3|7>>
+    <associate|equation:fourier transform q|<tuple|15|?>>
     <associate|equation:langevin action|<tuple|11|15>>
     <associate|equation:path integral step 1|<tuple|13|17>>
     <associate|equation:path integral step 2|<tuple|1|2>>
