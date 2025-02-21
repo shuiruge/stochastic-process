@@ -187,7 +187,9 @@
 
   For each section, the title is a sentence that briefly summarizes the whole
   section. We use bold font for <strong|definition> and italic font for
-  <em|emphasis>.
+  <em|emphasis>. Only important equations are numbered. So, readers can
+  quickly skim through by reviewing section titles, bold and italic texts,
+  and numbered equations.
 
   At last, this book is written by <TeX>macs, on the
   <hlink|GPLv3|https://www.gnu.org/licenses/gpl-3.0.en.html>
@@ -2720,39 +2722,6 @@
   constructed a complete mathematical theory for this stochastic process. So,
   it is also called <strong|Wiener process>.
 
-  <section|* Wiener Process Gives Rise to Central Limit Theorem>
-
-  Wiener process or Brownian motion can be seen as an accumulation of a
-  series tiny transitions, each is caused by one strike from a water
-  molecule. The strike obeys a distribution which is identical and
-  independent (since each strike is individual) with zero mean (as a result
-  of <math|K<rsub|1>=0>). This distribution, however, is unknown. Although,
-  we find that the accumulative effect always obeys a normal distribution. We
-  can abstract this and conclude a corollary as follow.
-
-  <\corollary>
-    For any independently identically distributed <math|n>-dimensional random
-    variables <math|<around*|(|X<rsub|1>,\<ldots\>,X<rsub|N>|)>> with zero
-    mean (thus each <math|X<rsub|i>> is one strike), the accumulation
-    <math|Y\<assign\>X<rsub|1>+\<cdots\>+X<rsub|N>> tends to obey a normal
-    distribution as <math|N> is large enough.
-  </corollary>
-
-  Each <math|X<rsub|i>> can be seen as a strike by water molecule. Further,
-  the mean of <math|Y> can be calculated by the linearity of expectation, as
-  <math|\<bbb-E\><around*|[|Y|]>=\<bbb-E\><around*|[|X<rsub|1>|]>+\<cdots\>+\<bbb-E\><around*|[|X<rsub|N>|]>=0>.
-  And because of independency, we have <math|\<bbb-E\><around*|[|Y<rsup|\<alpha\>>
-  Y<rsup|\<beta\>>|]>=\<bbb-E\><around*|[|X<rsub|1><rsup|\<alpha\>>
-  X<rsub|1><rsup|\<beta\>>|]>+\<cdots\>+\<bbb-E\><around*|[|X<rsub|N><rsup|\<alpha\>>
-  X<rsub|N><rsup|\<beta\>>|]>>. Let <math|\<Sigma\><rsup|\<alpha\>\<beta\>>\<assign\>\<bbb-E\><around*|[|X<rsub|i><rsup|\<alpha\>>
-  X<rsup|\<beta\>><rsub|i>|]>>, which is the same for all <math|i> because
-  <math|X<rsub|i>>s are identical, we find
-  <math|\<bbb-E\><around*|[|Y<rsup|\<alpha\>> Y<rsup|\<beta\>>|]>=N
-  \<Sigma\><rsup|\<alpha\>\<beta\>>>. This is the <strong|central limit
-  theorem>, the most famous theorem in probability theory. Now, we have found
-  for central limit theorem a physical description, the Brownian motion, and
-  found it as a corollary of expansion <reference|equation:km expansion>.
-
   <section|Langevin Process Is a Markovian Process with
   <math|N<rsub|cut>=2>><label|section: Langevin Process Is a Markovian
   Process with Ncut=2>
@@ -3534,8 +3503,8 @@
   integral>, in which all integration variables are in the exponential, we
   have to convert the <math|<around*|[|det
   \<Sigma\><around*|(|x|)>|]><rsup|-1/2>> factor into exponential too. To do
-  so, we first use Cholesky factorization to remove the root, and then use
-  Berezin integral to convert determinant to exponential.
+  so, we first use Cholesky factorization to remove the square root, and then
+  use Berezin integral to convert determinant to exponential.
 
   To introduce Cholesky factorization, we fix the argument <math|x> and omit
   it for simplicity, so <math|\<Sigma\><around*|(|x|)>> is written as
@@ -3596,7 +3565,13 @@
     det R<around*|(|x|)>,
   </equation*>
 
-  we convert the determinant into exponential, as
+  we convert the determinant into exponential, as<\footnote>
+    You may convert the determinant directly into exponential by using
+    logarithm, namely <math|det R<around*|(|x|)>=exp<around*|{|ln<around*|[|det
+    R<around*|(|x|)>|]>|}>>. This fails in our situation because we expect
+    the term in the exponential to be proportional to
+    <math|\<mathLaplace\>t>.
+  </footnote>
 
   <\equation*>
     q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>=<around*|(|<frac|2\<mathpi\>|\<Delta\>t<rsup|3>>|)><rsup|d/2>
@@ -4474,22 +4449,22 @@
     <associate|auto-22|<tuple|3.6|33>>
     <associate|auto-23|<tuple|3.7|33>>
     <associate|auto-24|<tuple|3.8|34>>
-    <associate|auto-25|<tuple|3.9|34>>
-    <associate|auto-26|<tuple|4|37>>
-    <associate|auto-27|<tuple|4.1|37>>
-    <associate|auto-28|<tuple|4.2|37>>
-    <associate|auto-29|<tuple|4.3|38>>
+    <associate|auto-25|<tuple|4|34>>
+    <associate|auto-26|<tuple|4.1|37>>
+    <associate|auto-27|<tuple|4.2|37>>
+    <associate|auto-28|<tuple|4.3|37>>
+    <associate|auto-29|<tuple|4.4|38>>
     <associate|auto-3|<tuple|1.1|9>>
-    <associate|auto-30|<tuple|4.4|40>>
-    <associate|auto-31|<tuple|4.5|43>>
-    <associate|auto-32|<tuple|4.6|44>>
-    <associate|auto-33|<tuple|4.1|45>>
-    <associate|auto-34|<tuple|4.7|46>>
-    <associate|auto-35|<tuple|4.7.1|46>>
-    <associate|auto-36|<tuple|4.7.2|46>>
-    <associate|auto-37|<tuple|4.7.3|47>>
-    <associate|auto-38|<tuple|4.7.4|48>>
-    <associate|auto-39|<tuple|4.8|50>>
+    <associate|auto-30|<tuple|4.5|40>>
+    <associate|auto-31|<tuple|4.6|43>>
+    <associate|auto-32|<tuple|4.1|44>>
+    <associate|auto-33|<tuple|4.7|45>>
+    <associate|auto-34|<tuple|4.7.1|46>>
+    <associate|auto-35|<tuple|4.7.2|46>>
+    <associate|auto-36|<tuple|4.7.3|46>>
+    <associate|auto-37|<tuple|4.7.4|47>>
+    <associate|auto-38|<tuple|4.8|48>>
+    <associate|auto-39|<tuple|4.2|50>>
     <associate|auto-4|<tuple|1.2|9>>
     <associate|auto-40|<tuple|4.2|51>>
     <associate|auto-5|<tuple|1.3|10>>
@@ -4563,8 +4538,9 @@
     <associate|footnote-3.5|<tuple|3.5|32>>
     <associate|footnote-4.1|<tuple|4.1|38>>
     <associate|footnote-4.2|<tuple|4.2|40>>
-    <associate|footnote-4.3|<tuple|4.3|46>>
-    <associate|footnote-4.4|<tuple|4.4|?>>
+    <associate|footnote-4.3|<tuple|4.3|41>>
+    <associate|footnote-4.4|<tuple|4.4|46>>
+    <associate|footnote-4.5|<tuple|4.5|?>>
     <associate|footnr-1|<tuple|1|7>>
     <associate|footnr-1.1|<tuple|1.1|9>>
     <associate|footnr-1.2|<tuple|1.2|9>>
@@ -4582,8 +4558,9 @@
     <associate|footnr-3.5|<tuple|3.5|32>>
     <associate|footnr-4.1|<tuple|4.1|38>>
     <associate|footnr-4.2|<tuple|4.2|40>>
-    <associate|footnr-4.3|<tuple|4.3|46>>
-    <associate|footnr-4.4|<tuple|4.4|?>>
+    <associate|footnr-4.3|<tuple|4.3|41>>
+    <associate|footnr-4.4|<tuple|4.4|46>>
+    <associate|footnr-4.5|<tuple|4.5|?>>
     <associate|section: A Brief Review of Least-Action Principle in Classical
     Mechanics|<tuple|4.2|37>>
     <associate|section: A Brief Review of Probability|<tuple|1.1|9>>
@@ -4597,7 +4574,7 @@
     <associate|section: Detailed Balance Provides Stationary
     Distribution|<tuple|2.4|17>>
     <associate|section: Detailed Balance of Langevin Process Lacks
-    Source-Free Degree of Freedom|<tuple|3.9|34>>
+    Source-Free Degree of Freedom|<tuple|3.8|34>>
     <associate|section: Example: Metropolis-Hastings
     Algorithm|<tuple|2.7|22>>
     <associate|section: How Far Will Information Propagate in Langevin
@@ -4609,7 +4586,7 @@
     <associate|section: Langevin Process Can Be Formulated as Path
     Integral|<tuple|4.4|40>>
     <associate|section: Langevin Process Is a Markovian Process with
-    Ncut=2|<tuple|3.7|33>>
+    Ncut=2|<tuple|3.6|33>>
     <associate|section: Least-Action Principle|<tuple|4|37>>
     <associate|section: Least-Action Principle of Distribution Has No
     Redundancy|<tuple|4.5|43>>
@@ -4621,7 +4598,7 @@
     <associate|section: Preliminary: Grassmann Variable and Berezin
     Integral|<tuple|4.3|38>>
     <associate|section: Randomness Appears in the Second Moment of Transition
-    Rate|<tuple|3.5|?>>
+    Rate|<tuple|3.5|31>>
     <associate|section: Randomness Is Absent in the First Moment of
     Transition Rate|<tuple|3.4|30>>
     <associate|section: Relative Entropy|<tuple|1|9>>
