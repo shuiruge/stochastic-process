@@ -2278,7 +2278,7 @@
   <section|From Central Limit Theorem to Markovian Process>
 
   Now, we turn attention to evaluate <math|q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>>.
-  We equally seperate <math|\<Delta\>t> by <math|n> parts, thus (re-denote
+  We equally separate <math|\<Delta\>t> by <math|n> parts, thus (re-denote
   <math|x> by <math|x<rsub|0>> and <math|x+\<epsilon\>> by <math|x<rsub|n>>)
 
   <\equation*>
@@ -2394,7 +2394,7 @@
   </equation>
 
   The <math|n> disappears in the residue because there are <math|n> such
-  residues (each repetation contributes a moment
+  residues (each repetition contributes a moment
   <math|<big|int>\<mathd\>\<epsilon\> q<rsub|\<Delta\>t/n><around*|(|x+\<epsilon\>\|x|)>
   \<epsilon\><rsup|\<alpha\>>>).
 
@@ -2439,6 +2439,344 @@
     exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>=exp<around*|(|<wide|r|^><around*|(|x,k|)>
     \<Delta\>t|)>+<with|font|cal|O><around*|(|\<Delta\>t|)>.
   </equation*>
+
+  <section|Markovian Process with Euclidean Alphabet Can Be Formulated as
+  Path Integral>
+
+  In this section, we are to formulate the master equation into path
+  integral. The path integral formulation was found by Paul Dirac in 1933 who
+  was trying to using Lagrangian in quantum mechanism. It was then developed
+  by physicist Richard Feynman and mathematician Mark Kac in 1947. Now, path
+  integral is applied not only to quantum field theory, but also many other
+  areas such as stochastic process. Path integral has the general formalism
+
+  <\equation>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|1>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|n>
+    exp<around*|(|-S<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>|)>,<label|equation:general
+    path integral>
+  </equation>
+
+  where a series <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>> is called
+  a \Ppath\Q, and the <math|S> is called the \Paction\Q of path. Apparently,
+  it is an integral of all possible paths, thus named as \Ppath integral\Q.
+
+  To derive a path integral formulation for Markovian process, we consider
+  the evolution of a Markovian process, given by a series of the transition
+  density <math|q<rsub|\<Delta\>t><around*|(|x<rsub|i+1>\|x<rsub|i>|)>> with
+  the iterative step <math|i\<in\><around*|{|0,1,\<ldots\>,N|}>>. By
+  repeatedly applying (discrete time) master equation
+  <reference|equation:discrete time master equation>, we get
+
+  <\equation>
+    p<around*|(|x<rsub|N>,N \<Delta\>t|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N-1>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|0>
+    q<rsub|\<Delta\>t><around*|(|x<rsub|N>\|x<rsub|N-1>|)>\<cdots\>
+    q<rsub|\<Delta\>t><around*|(|x<rsub|1>\|x<rsub|0>|)>
+    p<around*|(|x<rsub|0>,0|)>.<label|equation:path integral master equation>
+  </equation>
+
+  \;
+
+  The next step is making <math|\<Delta\>t> small and reformulating
+  <math|q<rsub|\<Delta\>t><around*|(|x<rsub|i+1>\|x<rsub|i>|)>> as
+  exponential. This, however, cannot be straight-forward since the leading
+  term of <math|q<rsub|\<Delta\>t><around*|(|x\|y|)>> is
+  <math|\<delta\><around*|(|x-y|)>> which cannot be converted into
+  exponential. But, we can consider its Fourier transformation, since
+  <math|\<delta\><around*|(|x-y|)>>, if regarding as a Dirac's delta
+  function, has Fourier coefficient <math|exp<around*|(|-\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>|)>>.
+  This suggest us to consider the Fourier transformation of
+  <math|q<rsub|\<Delta\>t><around*|(|x\|y|)>>. <em|This forces the alphabet
+  to be Euclidean space <math|\<bbb-R\><rsup|d>>, because we cannot perform
+  the same thing on Kronecker's delta when the alphabet is discrete, or when
+  the alphabet is continuous but not Euclidean.> We are to evaluate (replace
+  <math|\<Delta\>t> by <math|\<tau\>> for indicating generality)
+
+  <\equation*>
+    <wide|q|^><rsub|\<tau\>><around*|(|x,k|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
+    q<rsub|\<tau\>><around*|(|x+\<epsilon\>\|x|)>
+    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>.
+  </equation*>
+
+  \;
+
+  To do so, we follow the strategy in the classical proof of central limit
+  theorem. First, we evenly split <math|\<Delta\>t> by <math|n> parts. Master
+  equation implies (in the same way as previous)
+
+  <\equation*>
+    q<rsub|\<Delta\>t><around*|(|x<rsub|n>\|x<rsub|0>|)>=<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|n-1>\<cdots\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|n>
+    q<rsub|\<Delta\>t/n><around*|(|x<rsub|n>\|x<rsub|n-1>|)>\<cdots\>q<rsub|\<Delta\>t/n><around*|(|x<rsub|1>\|x<rsub|0>|)>.
+  </equation*>
+
+  Thus,
+
+  <\align>
+    <tformat|<table|<row|<cell|<wide|q|^><rsub|\<Delta\>t><around*|(|x<rsub|0>,k|)>=>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|n>
+    q<rsub|\<Delta\>t><around*|(|x<rsub|n>\|x<rsub|0>|)>
+    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsub|n><rsup|\<alpha\>>-x<rsub|0><rsup|\<alpha\>>|)>|)>>>|<row|<cell|=>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|n>\<cdots\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|1>
+    exp<around*|(|-\<mathi\>k<rsub| \<alpha\>><around*|(|x<rsub|n><rsup|\<alpha\>>-x<rsub|n-1><rsup|\<alpha\>>|)>|)>
+    q<rsub|\<Delta\>t/n><around*|(|x<rsub|n>\|x<rsub|n-1>|)>\<times\>>>|<row|<cell|>|<cell|\<cdots\>\<times\>exp<around*|(|-\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsub|1><rsup|\<alpha\>>-x<rsub|0><rsup|\<alpha\>>|)>|)>q<rsub|\<Delta\>t/n><around*|(|x<rsub|1>\|x<rsub|0>|)>.>>>>
+  </align>
+
+  Integrating <math|x<rsub|n>> is straight-forward, since it is just the
+  <math|<wide|q|^><rsub|\<Delta\>t/n><around*|(|x<rsub|n-1>,k|)>>, so
+
+  <\align>
+    <tformat|<table|<row|<cell|<wide|q|^><rsub|\<Delta\>t><around*|(|x<rsub|0>,k|)>=>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|n-1>\<cdots\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|1>
+    <wide|q|^><rsub|\<Delta\>t/n><around*|(|x<rsub|n-1>,k|)>
+    exp<around*|(|-\<mathi\>k<rsub| \<alpha\>><around*|(|x<rsub|n-1><rsup|\<alpha\>>-x<rsub|n-2><rsup|\<alpha\>>|)>|)>
+    q<rsub|\<Delta\>t/n><around*|(|x<rsub|n-1>\|x<rsub|n-2>|)>\<times\>>>|<row|<cell|>|<cell|\<cdots\>\<times\>exp<around*|(|-\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsub|1><rsup|\<alpha\>>-x<rsub|0><rsup|\<alpha\>>|)>|)>q<rsub|\<Delta\>t/n><around*|(|x<rsub|1>\|x<rsub|0>|)>.>>>>
+  </align>
+
+  \;
+
+  Then, integrating <math|x<rsub|n-1>> encounters a problem, because
+  <math|x<rsub|n-1>> also appears in <math|<wide|q|^><rsub|\<Delta\>t/n><around*|(|x<rsub|n-1>,k|)>>.
+  The key is that, when <math|\<Delta\>t> is small enough, we have
+  <math|x<rsub|i>\<approx\>x<rsub|j>> for
+  <math|i,j\<in\><around*|{|1,\<ldots\>,n-1|}>>. We shall Taylor expand
+  <math|<wide|q|^><rsub|\<Delta\>t/n><around*|(|x<rsub|n-1>,k|)>> by
+  <math|x<rsub|n-1>> at <math|x<rsub|n-2>>,
+
+  <\equation*>
+    <wide|q|^><rsub|\<Delta\>t/n><around*|(|x<rsub|n-1>,k|)>=<wide|q|^><rsub|\<Delta\>t/n><around*|(|x<rsub|n-2>,k|)>+<around*|(|x<rsup|\<alpha\>><rsub|n-1>-x<rsub|n-2><rsup|\<alpha\>>|)>
+    \<partial\><rsub|\<alpha\>><wide|q|^><rsub|\<Delta\>t/n><around*|(|x<rsub|n-2>,k|)>+<around*|(|<text|higher
+    orders>|)>.
+  </equation*>
+
+  Thus,
+
+  <\small>
+    <\align>
+      <tformat|<table|<row|<cell|<wide|q|^><rsub|\<Delta\>t><around*|(|x<rsub|0>,k|)>=>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|n-1>\<cdots\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|1>
+      <wide|q|^><rsub|\<Delta\>t/n><around*|(|x<rsub|n-2>,k|)>
+      exp<around*|(|-\<mathi\>k<rsub| \<alpha\>><around*|(|x<rsub|n-1><rsup|\<alpha\>>-x<rsub|n-2><rsup|\<alpha\>>|)>|)>
+      q<rsub|\<Delta\>t/n><around*|(|x<rsub|n-1>\|x<rsub|n-2>|)>\<times\>>>|<row|<cell|>|<cell|\<cdots\>\<times\>exp<around*|(|-\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsub|1><rsup|\<alpha\>>-x<rsub|0><rsup|\<alpha\>>|)>|)>q<rsub|\<Delta\>t/n><around*|(|x<rsub|1>\|x<rsub|0>|)>>>|<row|<cell|+>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|n-1>\<cdots\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|1>
+      <around*|(|x<rsup|\<alpha\>><rsub|n-1>-x<rsub|n-2><rsup|\<alpha\>>|)>
+      \<partial\><rsub|\<alpha\>><wide|q|^><rsub|\<Delta\>t/n><around*|(|x<rsub|n-2>,k|)>
+      exp<around*|(|-\<mathi\>k<rsub| \<alpha\>><around*|(|x<rsub|n-1><rsup|\<alpha\>>-x<rsub|n-2><rsup|\<alpha\>>|)>|)>
+      q<rsub|\<Delta\>t/n><around*|(|x<rsub|n-1>\|x<rsub|n-2>|)>\<times\>>>|<row|<cell|>|<cell|\<cdots\>\<times\>exp<around*|(|-\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsub|1><rsup|\<alpha\>>-x<rsub|0><rsup|\<alpha\>>|)>|)>q<rsub|\<Delta\>t/n><around*|(|x<rsub|1>\|x<rsub|0>|)>>>|<row|<cell|+>|<cell|<around*|(|<text|higher
+      orders>|)>.>>>>
+    </align>
+  </small>
+
+  While integrating <math|x<rsub|n-1>>, the first two lines are
+  straight-forward, as
+
+  <\align>
+    <tformat|<table|<row|<cell|>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|n-2>\<cdots\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|1>
+    <around*|[|<wide|q|^><rsub|\<Delta\>t/n><around*|(|x<rsub|n-2>,k|)>|]><rsup|2>\<times\>>>|<row|<cell|\<times\>>|<cell|exp<around*|(|-\<mathi\>k<rsub|
+    \<alpha\>><around*|(|x<rsub|n-2><rsup|\<alpha\>>-x<rsub|n-3><rsup|\<alpha\>>|)>|)>
+    q<rsub|\<Delta\>t/n><around*|(|x<rsub|n-2>\|x<rsub|n-3>|)>\<cdots\>exp<around*|(|-\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsub|1><rsup|\<alpha\>>-x<rsub|0><rsup|\<alpha\>>|)>|)>q<rsub|\<Delta\>t/n><around*|(|x<rsub|1>\|x<rsub|0>|)>.>>>>
+  </align>
+
+  Now, we focus on the last two lines, estimating its order in
+  <math|<around*|(|\<Delta\>t/n|)>>. Explicitly, the integral of
+  <math|x<rsub|n-1>> is (omitting the other variables)
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|n-1>
+    <around*|(|x<rsup|\<alpha\>><rsub|n-1>-x<rsub|n-2><rsup|\<alpha\>>|)>
+    \<partial\><rsub|\<alpha\>><wide|q|^><rsub|\<Delta\>t/n><around*|(|x<rsub|n-2>,k|)>
+    exp<around*|(|-\<mathi\>k<rsub| \<alpha\>><around*|(|x<rsub|n-1><rsup|\<alpha\>>-x<rsub|n-2><rsup|\<alpha\>>|)>|)>
+    q<rsub|\<Delta\>t/n><around*|(|x<rsub|n-1>\|x<rsub|n-2>|)>
+  </equation*>
+
+  Recall that, expanded by transition rate,
+  <math|q<rsub|\<tau\>><around*|(|x\|y|)>=\<delta\><around*|(|x-y|)>+r<around*|(|x,y|)>
+  \<tau\>+<with|font|cal|O><around*|(|\<tau\><rsup|2>|)>>, and that we have
+  defined <math|<wide|r|^><around*|(|x,k|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
+  r<around*|(|x+\<epsilon\>,x|)> exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>>.
+  So, we have
+
+  <\equation>
+    <wide|q|^><rsub|\<tau\>><around*|(|x,k|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
+    q<rsub|\<tau\>><around*|(|x+\<epsilon\>\|x|)>
+    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>=1+<wide|r|^><around*|(|x,k|)>
+    \<tau\>+<with|font|cal|O><around*|(|\<tau\><rsup|2>|)>,<label|equation:fourier
+    transform q r>
+  </equation>
+
+  This implies that
+
+  <\equation*>
+    \<partial\><rsub|\<alpha\>><wide|q|^><rsub|\<Delta\>t/n><around*|(|x<rsub|n-2>,k|)>=\<partial\><rsub|\<alpha\>><wide|r|^><around*|(|x<rsub|n-2>,k|)>
+    <around*|(|\<Delta\>t/n|)>+<with|font|cal|O><around*|(|<around*|(|\<Delta\>t/n|)><rsup|2>|)>.
+  </equation*>
+
+  The integral of <math|x<rsub|n-1>> now becomes
+  (<math|\<epsilon\>\<assign\>x<rsub|n-1>-x<rsub|n-2>>)
+
+  <\equation*>
+    <around*|(|\<Delta\>t/n|)> \<partial\><rsub|\<alpha\>><wide|r|^><around*|(|x<rsub|n-2>,k|)><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
+    exp<around*|(|-\<mathi\>k<rsub| \<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>
+    q<rsub|\<Delta\>t/n><around*|(|x<rsub|n-2>+\<epsilon\>\|x<rsub|n-2>|)>
+    \<epsilon\><rsup|\<alpha\>>+<with|font|cal|O><around*|(|<around*|(|\<Delta\>t/n|)><rsup|2>|)>.
+  </equation*>
+
+  To evaluate this integral, we first recall the result in section
+  <reference|section: Cut-off in the Moments of Transition Rate Is Essential
+  for Spatial Smoothness> that
+
+  <\equation*>
+    \<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|m>>|]>\<assign\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
+    q<rsub|\<tau\>><around*|(|x+\<epsilon\>\|x|)>
+    <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|m>>|)>=<with|font|cal|O><around*|(|\<tau\><rsup|\<sharp\><around*|(|m/N<rsub|cut>|)>>|)>,
+  </equation*>
+
+  where <math|N<rsub|cut>\<less\>+\<infty\>> is the cut-off of moments of
+  transition rate. We have shown in section <reference|section: Randomness Is
+  Absent in the First Moment of Transition Rate> and section
+  <reference|section: Randomness Appears in the Second Moment of Transition
+  Rate> that <math|N<rsub|cut>\<geqslant\>2>. For using this result, we have
+  to Taylor expand
+
+  <\equation*>
+    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>=1-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>-<frac|1|2>k<rsub|\<alpha\>>k<rsub|\<beta\>>\<epsilon\><rsup|\<alpha\>>\<epsilon\><rsup|\<beta\>>+\<cdots\>.
+  </equation*>
+
+  The integral then results in a series of
+  <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|m>>|]>>
+  with <math|m\<geqslant\>1>. It has the leading order (let <math|m=1> and
+  recall that <math|\<sharp\>> denotes ceiling function)
+  <math|<with|font|cal|O><around*|(|<around*|(|\<Delta\>t/n|)><rsup|1+\<sharp\><around*|(|1/N<rsub|cut>|)>>|)>=<with|font|cal|O><around*|(|<around*|(|\<Delta\>t/n|)><rsup|2>|)>>.
+  For the same reason, the <math|<around*|(|<text|higher orders>|)>>-term in
+  <math|<wide|q|^><rsub|\<Delta\>t><around*|(|x<rsub|0>,k|)>> is higher order
+  than <math|<around*|(|\<Delta\>t/n|)><rsup|2>>. We summarize the result of
+  integrating <math|x<rsub|n-1>> as
+
+  <\align>
+    <tformat|<table|<row|<cell|<wide|q|^><rsub|\<Delta\>t><around*|(|x<rsub|0>,k|)>=>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|n-2>\<cdots\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|1>
+    <around*|[|<wide|q|^><rsub|\<Delta\>t/n><around*|(|x<rsub|n-2>,k|)>|]><rsup|2>\<times\>>>|<row|<cell|\<times\>>|<cell|exp<around*|(|-\<mathi\>k<rsub|
+    \<alpha\>><around*|(|x<rsub|n-2><rsup|\<alpha\>>-x<rsub|n-3><rsup|\<alpha\>>|)>|)>
+    q<rsub|\<Delta\>t/n><around*|(|x<rsub|n-2>\|x<rsub|n-3>|)>\<cdots\>exp<around*|(|-\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsub|1><rsup|\<alpha\>>-x<rsub|0><rsup|\<alpha\>>|)>|)>q<rsub|\<Delta\>t/n><around*|(|x<rsub|1>\|x<rsub|0>|)>>>|<row|<cell|+>|<cell|<with|font|cal|O><around*|(|<around*|(|\<Delta\>t/n|)><rsup|2>|)>.>>>>
+  </align>
+
+  \;
+
+  Integrating <math|x<rsub|n-2>> follows the same process as integrating
+  <math|x<rsub|n-1>>. The only difference is that Taylor expansion of
+  <math|<around*|[|<wide|q|^><rsub|\<Delta\>t/n><around*|(|x<rsub|n-2>,k|)>|]><rsup|2>>
+  by <math|x<rsub|n-2>> at <math|x<rsub|n-3>> gives an extra factor
+  <math|<with|color|dark green|2>>, as in
+
+  <\equation*>
+    <around*|[|<wide|q|^><rsub|\<Delta\>t/n><around*|(|x<rsub|n-2>,k|)>|]><rsup|2>=<around*|[|<wide|q|^><rsub|\<Delta\>t/n><around*|(|x<rsub|n-3>,k|)>|]><rsup|2>+<with|color|dark
+    green|2> <wide|q|^><rsub|\<Delta\>t/n><around*|(|x<rsub|n-3>,k|)>
+    \<partial\><rsub|\<alpha\>><wide|q|^><rsub|\<Delta\>t/n><around*|(|x<rsub|n-3>,k|)>
+    <around*|(|x<rsub|n-2><rsup|\<alpha\>>-x<rsub|n-3><rsup|\<alpha\>>|)>+\<cdots\>.
+  </equation*>
+
+  This factor results in the estimation as
+  <math|<with|font|cal|O><around*|(|2<around*|(|\<Delta\>t/n|)><rsup|2>|)>>,
+  and we will realize why it matters soon. So, integrating <math|x<rsub|n-2>>
+  gives
+
+  <\align>
+    <tformat|<table|<row|<cell|<wide|q|^><rsub|\<Delta\>t><around*|(|x<rsub|0>,k|)>=>|<cell|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|n-3>\<cdots\><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x<rsub|1>
+    <around*|[|<wide|q|^><rsub|\<Delta\>t/n><around*|(|x<rsub|n-3>,k|)>|]><rsup|3>\<times\>>>|<row|<cell|\<times\>>|<cell|exp<around*|(|-\<mathi\>k<rsub|
+    \<alpha\>><around*|(|x<rsub|n-3><rsup|\<alpha\>>-x<rsub|n-4><rsup|\<alpha\>>|)>|)>
+    q<rsub|\<Delta\>t/n><around*|(|x<rsub|n-3>\|x<rsub|n-4>|)>\<cdots\>exp<around*|(|-\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsub|1><rsup|\<alpha\>>-x<rsub|0><rsup|\<alpha\>>|)>|)>q<rsub|\<Delta\>t/n><around*|(|x<rsub|1>\|x<rsub|0>|)>>>|<row|<cell|+>|<cell|<with|font|cal|O><around*|(|<around*|(|1+2|)><around*|(|\<Delta\>t/n|)><rsup|2>|)>.>>>>
+  </align>
+
+  Repeating this process until all variables are integrated out, we will
+  arrive at
+
+  <\equation*>
+    <wide|q|^><rsub|\<Delta\>t><around*|(|x<rsub|0>,k|)>=<around*|[|<wide|q|^><rsub|\<Delta\>t/n><around*|(|x<rsub|0>,k|)>|]><rsup|n>+<with|font|cal|O><around*|(|<around*|(|1+\<cdots\>+n|)><around*|(|\<Delta\>t/n|)><rsup|2>|)>=<around*|[|<wide|q|^><rsub|\<Delta\>t/n><around*|(|x<rsub|0>,k|)>|]><rsup|n>+<with|font|cal|O><around*|(|\<Delta\>t<rsup|2>|)>.
+  </equation*>
+
+  Inserting equation <pageref|equation:fourier transform q r>, we get
+  <math|<wide|q|^><rsub|\<Delta\>t><around*|(|x<rsub|0>,k|)>=<around*|[|1+<wide|r|^><around*|(|x<rsub|0>,k|)>
+  \<Delta\>t/n+<with|font|cal|O><around*|(|<around*|(|\<Delta\>t/n|)><rsup|2>|)>|]><rsup|n>+<with|font|cal|O><around*|(|\<Delta\>t<rsup|2>|)>>.
+  Recall the formula
+
+  <\equation*>
+    exp<around*|(|x|)>=lim<rsub|n\<rightarrow\>+\<infty\>><around*|[|1+<frac|x|n>+\<omicron\><around*|(|<frac|x|n>|)>|]><rsup|n>.
+  </equation*>
+
+  Replacing <math|x> by <math|<wide|r|^><around*|(|x<rsub|0>,k|)> \<Delta\>t>
+  (and replace <math|x<rsub|0>> by <math|x> for display) gives
+
+  <\equation*>
+    <wide|q|^><rsub|\<Delta\>t><around*|(|x,k|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
+    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>
+    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>=exp<around*|(|<wide|r|^><around*|(|x,k|)>
+    \<Delta\>t|)>+<with|font|cal|O><around*|(|\<Delta\>t<rsup|2>|)>.
+  </equation*>
+
+  \;
+
+  For plugging back to master equation <reference|equation:path integral
+  master equation>, we have to Fourier transform
+  <math|<wide|q|^><rsub|\<Delta\>t><around*|(|x,k|)>> inversely to
+  <math|q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>>, as
+
+  <\equation*>
+    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>=<big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\>|)><rsup|d>>
+    exp<around*|(|\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)><wide|q|^><rsub|\<Delta\>t><around*|(|x,k|)>=<big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\>|)><rsup|d>>
+    <around*|{|exp<around*|(|\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>+<wide|r|^><around*|(|x,k|)>
+    \<Delta\>t|)>+<with|font|cal|O><around*|(|\<Delta\>t<rsup|2>|)>|}>.
+  </equation*>
+
+  We must be caution with the residue, since it involves <math|k> and thus
+  has to be transformed too. We do not care about the explicit dependence of
+  <math|k> in the <math|<with|font|cal|O><around*|(|\<Delta\>t<rsup|2>|)>>,
+  but Taylor expand it at <math|k=0> and obtain a series like
+
+  <\equation*>
+    \<Delta\>t<rsup|2 ><around*|(|h<rsub|0><around*|(|x|)>+h<rsub|1><rsup|\<alpha\>><around*|(|x|)>k<rsub|\<alpha\>>+<frac|1|2>h<rsub|2><rsup|\<alpha\>\<beta\>><around*|(|x|)>k<rsub|\<alpha\>>k<rsub|\<beta\>>+\<cdots\>|)>
+  </equation*>
+
+  for some unknown funcitons <math|<around*|(|h<rsub|0>,h<rsub|1>,\<ldots\>|)>>
+  depend only on <math|x>. Its inverse Fourier transformation is
+
+  <\equation*>
+    \<Delta\>t<rsup|2 ><around*|(|h<rsub|0><around*|(|x|)>
+    \<delta\><around*|(|\<epsilon\>|)>+<around*|(|-\<mathi\>|)>h<rsub|1><rsup|\<alpha\>><around*|(|x|)>
+    <around*|(|\<partial\><rsub|\<alpha\>>\<delta\>|)><around*|(|\<epsilon\>|)>+<frac|<around*|(|-\<mathi\>|)><rsup|2>|2>h<rsub|2><rsup|\<alpha\>\<beta\>><around*|(|x|)>
+    <around*|(|\<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>\<delta\>|)><around*|(|\<epsilon\>|)>+\<cdots\>|)>.
+  </equation*>
+
+  So, the inverse Fourier transformation of the residue is not a function,
+  but a generalized function. It has meaning only when \Papplied\Q onto a
+  function, and only then can we say it is
+  <math|<with|font|cal|O><around*|(|\<Delta\>t<rsup|2>|)>>. It is <em|in this
+  sense of applying onto functions> that we write
+
+  <\equation>
+    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>=<big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\>|)><rsup|d>>
+    exp<around*|(|\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>+<wide|r|^><around*|(|x,k|)>
+    \<Delta\>t|)>+<with|font|cal|O><around*|(|\<Delta\>t<rsup|2>|)>,<label|equation:transition
+    density exp>
+  </equation>
+
+  where the integration performs only on the exponential.
+
+  Now, we have converted (Fourier transformed) transition density to
+  exponential. Plugging equation <reference|equation:transition density exp>
+  back to the reformulated master equation <reference|equation:path integral
+  master equation>, we get a path integral formulation
+
+  <\equation>
+    p<around*|(|x<rsub|N>,N \<Delta\>t|)>=<big|int>D<around*|(|x,k|)>
+    exp<around*|(|<big|sum><rsub|i=0><rsup|N-1><around*|{|\<mathi\><around*|(|k<rsub|i>|)><rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>><rsub|i+1>-x<rsub|i><rsup|\<alpha\>>|)>+
+    <wide|r|^><around*|(|x<rsub|i>,k<rsub|i>|)>\<Delta\>t|}>|)>
+    p<around*|(|x<rsub|0>,0|)>+<with|font|cal|O><around*|(|N
+    \<Delta\>t<rsup|2>|)>,
+  </equation>
+
+  where we used abbreviation
+
+  <\equation*>
+    <big|int>D<around*|(|x,k|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N-1><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rsub|N-1>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|0><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rsub|0>.
+  </equation*>
+
+  The path is a poly-line on <math|\<bbb-R\><rsup|2d>> (involving both
+  <math|x\<in\>\<bbb-R\><rsup|d>> and <math|k\<in\>\<bbb-R\><rsup|d>>). The
+  residue now is devoid of <with|color|red|both <math|x>> and <math|k>, and
+  diminishes when <math|\<Delta\>t\<rightarrow\>0> (while keeping <math|N
+  \<Delta\>t> constant).
 </body>
 
 <\initial>
@@ -2467,8 +2805,9 @@
     <associate|auto-21|<tuple|6.9.1|19>>
     <associate|auto-22|<tuple|6.9.2|19>>
     <associate|auto-23|<tuple|6.10|19>>
-    <associate|auto-24|<tuple|7|?>>
-    <associate|auto-25|<tuple|8|?>>
+    <associate|auto-24|<tuple|7|21>>
+    <associate|auto-25|<tuple|8|23>>
+    <associate|auto-26|<tuple|9|25>>
     <associate|auto-3|<tuple|3|2>>
     <associate|auto-4|<tuple|4|4>>
     <associate|auto-5|<tuple|4.1|4>>
@@ -2476,8 +2815,11 @@
     <associate|auto-7|<tuple|5.1|5>>
     <associate|auto-8|<tuple|5.2|6>>
     <associate|auto-9|<tuple|5.3|7>>
-    <associate|equation:fourier transform q|<tuple|15|?>>
+    <associate|equation:fourier transform q|<tuple|15|24>>
+    <associate|equation:fourier transform q r|<tuple|18|26>>
+    <associate|equation:general path integral|<tuple|16|25>>
     <associate|equation:langevin action|<tuple|11|15>>
+    <associate|equation:path integral master equation|<tuple|17|25>>
     <associate|equation:path integral step 1|<tuple|13|17>>
     <associate|equation:path integral step 2|<tuple|1|2>>
     <associate|equation:rg action|<tuple|8|10>>
@@ -2487,14 +2829,19 @@
     <associate|equation:rg transform 3|<tuple|6|7>>
     <associate|equation:rg transform 4|<tuple|7|7>>
     <associate|equation:susy transformation|<tuple|12|15>>
+    <associate|equation:transition density exp|<tuple|19|27>>
     <associate|footnote-1|<tuple|1|6>>
     <associate|footnote-2|<tuple|2|16>>
     <associate|footnote-3|<tuple|3|17>>
     <associate|footnote-4|<tuple|4|19>>
+    <associate|footnote-5|<tuple|5|27>>
+    <associate|footnote-6|<tuple|6|28>>
     <associate|footnr-1|<tuple|1|6>>
     <associate|footnr-2|<tuple|2|16>>
     <associate|footnr-3|<tuple|3|17>>
     <associate|footnr-4|<tuple|4|19>>
+    <associate|footnr-5|<tuple|5|27>>
+    <associate|footnr-6|<tuple|6|28>>
     <associate|section: How Far Will Information Propagate in Langevin
     Process?|<tuple|5|5>>
     <associate|section: Master Equation on Euclidean Alphabet Can Be
@@ -2510,7 +2857,7 @@
       <no-break><pageref|auto-1><vspace|0.5fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Legendre
-      Tranformation> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      Transformation> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-2><vspace|0.5fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Operator
@@ -2599,6 +2946,20 @@
       <with|par-left|<quote|1tab>|6.10<space|2spc>Action
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-23>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|7<space|2spc>Proof
+      of Central Limit Theorem> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-24><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|8<space|2spc>From
+      Central Limit Theorem to Markovian Process>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-25><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|9<space|2spc>Markovian
+      Process with Euclidean Alphabet Can Be Formulated as Path Integral>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-26><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
