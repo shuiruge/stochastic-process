@@ -2485,7 +2485,7 @@
   It then implies that <math|p<around*|(|\<cdummy\>,t<rprime|'>|)>\<in\>S<around*|(|\<bbb-R\><rsup|d>|)>>
   for any <math|t<rprime|'>\<gtr\>t>. That is, <em|if a time-dependent
   density function <math|p<around*|(|\<cdummy\>,t|)>> sits in Schwartz space
-  initially, then it stays in Schwartz space during evolution.>
+  initially, then it stays in Schwartz space during the evolution.>
 
   <section|Randomness Is Absent in the First Moment of Transition
   Rate><label|section: Randomness Is Absent in the First Moment of Transition
