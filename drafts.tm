@@ -2960,6 +2960,155 @@
   <math|\<tau\>>) of <math|<big|int>\<mathd\>x
   G<rsub|\<tau\>><around*|(|x|)>\<varphi\><around*|(|x|)>> is well-defined,
   even though that of <math|G<rsub|\<tau\>>> is not.>
+
+  <section|>
+
+  Given the Fourier transformation of <math|q<rsub|\<lambda\>><around*|(|x|)>>
+  as
+
+  <\equation*>
+    <wide|q|^><rsub|\<lambda\>><around*|(|k|)>=exp<around*|(|-<frac|k<rsup|2>|2>+\<lambda\>k<rsup|4>|)>.
+  </equation*>
+
+  We wonder what is the Taylor expansion of
+  <math|q<rsub|\<lambda\>><around*|(|x|)>> by <math|\<lambda\>>.
+
+  We are to Taylor expand <math|exp<around*|(|\<lambda\> k<rsup|4>|)>> by
+  <math|\<lambda\>>. To deal with the <math|exp<around*|(|-k<rsup|2>/2|)>>
+  factor, we use convolution. The convolution of function <math|f> and
+  <math|g> is defined by
+
+  <\equation*>
+    <around*|(|f\<ast\>g|)><around*|(|x|)>\<assign\><big|int><rsub|\<bbb-R\>>\<mathd\>y
+    f<around*|(|x-y|)> g<around*|(|y|)>.
+  </equation*>
+
+  Its Fourier transformation is
+
+  <\align>
+    <tformat|<table|<row|<cell|<big|int><rsub|\<bbb-R\>>\<mathd\>x
+    <around*|(|f\<ast\>g|)><around*|(|x|)>=>|<cell|<big|int><rsub|\<bbb-R\>>\<mathd\>x<big|int><rsub|\<bbb-R\>>\<mathd\>y
+    exp<around*|(|-\<mathi\>k x|)> f<around*|(|x-y|)>
+    g<around*|(|y|)>>>|<row|<cell|=>|<cell|<big|int><rsub|\<bbb-R\>>\<mathd\>x<big|int><rsub|\<bbb-R\>>\<mathd\>y
+    exp<around*|(|-\<mathi\>k <around*|(|x-y|)>|)> f<around*|(|x-y|)>
+    exp<around*|(|-\<mathi\>k y|)>g<around*|(|y|)>.>>>>
+  </align>
+
+  Let <math|x<rprime|'>\<assign\>x-y>, thus<math|>
+
+  <\align>
+    <tformat|<table|<row|<cell|<big|int><rsub|\<bbb-R\>>\<mathd\>x
+    <around*|(|f\<ast\>g|)><around*|(|x|)>=>|<cell|<big|int><rsub|\<bbb-R\>>\<mathd\>x<rprime|'><big|int><rsub|\<bbb-R\>>\<mathd\>y
+    exp<around*|(|-\<mathi\>k x<rprime|'>|)> f<around*|(|x<rprime|'>|)>
+    exp<around*|(|-\<mathi\>k y|)>g<around*|(|y|)>.>>|<row|<cell|=>|<cell|<around*|[|<big|int><rsub|\<bbb-R\>>\<mathd\>x<rprime|'>
+    exp<around*|(|-\<mathi\>k x<rprime|'>|)>
+    f<around*|(|x<rprime|'>|)>|]>\<times\><around*|[|<big|int><rsub|\<bbb-R\>>\<mathd\>y
+    exp<around*|(|-\<mathi\>k y|)>g<around*|(|y|)>|]>>>|<row|<cell|=>|<cell|<wide|f|^><around*|(|k|)>
+    <wide|g|^><around*|(|k|)>.>>>>
+  </align>
+
+  It indicates that the inverse Fourier transformation
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\>><frac|\<mathd\>k|2\<mathpi\>>exp<around*|(|\<mathi\>k
+    x|)> <wide|f|^><around*|(|k|)> <wide|g|^><around*|(|k|)>=<around*|(|f\<ast\>g|)><around*|(|x|)>.
+  </equation*>
+
+  \;
+
+  We first consider the inverse Fourier transformation of
+  <math|exp<around*|(|-k<rsup|2>/2|)>>. Using Gaussian integral formula,
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x exp<around*|(|-<frac|1|2> a
+    x<rsup|2>+b x|)>=<sqrt|<frac|2\<mathpi\>|a>>
+    exp<around*|(|<frac|b<rsup|2>|2a>|)>,
+  </equation*>
+
+  we find (setting <math|a=1> and <math|b=\<mathi\>x>)
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\>><frac|\<mathd\>k|2\<mathpi\>>exp<around*|(|\<mathi\>k
+    x-k<rsup|2>/2|)>=<frac|1|<sqrt|2\<mathpi\>>>exp<around*|(|-<frac|x<rsup|2>|2>|)>.
+  </equation*>
+
+  \;
+
+  Next, the inverse Fourier transformation of <math|exp<around*|(|\<lambda\>
+  k<rsup|4>|)>> can be calcuated via
+
+  <\equation*>
+    exp<around*|(|\<lambda\>k<rsup|4>|)>=1+\<lambda\>k<rsup|4>+<frac|\<lambda\><rsup|2>|2>k<rsup|8>+\<cdots\>.
+  </equation*>
+
+  The expansion
+
+  <\equation*>
+    f<around*|(|x|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|<around*|(|-\<mathi\>|)><rsup|n>|n!><wide|f|^><rsup|<around*|(|n|)>><around*|(|0|)>\<delta\><rsup|<around*|(|n|)>><around*|(|x|)>
+  </equation*>
+
+  gives the inverse Fourier transformation of <math|k<rsup|4n>>. Replace
+  <math|<wide|f|^><around*|(|k|)>> by <math|k<rsup|4n>> and find that only
+  the <math|4n>-th term survives, as
+
+  <\equation*>
+    <frac|1|<around*|(|4n|)>!><around*|(|<frac|\<mathd\><rsup|4n>|\<mathd\>k<rsup|4n>>k<rsup|4n>|)>\<delta\><rsup|<around*|(|4n|)>><around*|(|x|)>=\<delta\><rsup|<around*|(|4n|)>><around*|(|x|)>.
+  </equation*>
+
+  Thus, the inverse Fourier transformation of
+  <math|exp<around*|(|\<lambda\>k<rsup|4>|)>> is
+
+  <\equation*>
+    1+\<lambda\>\<delta\><rsup|<around*|(|4|)>><around*|(|x|)>+<frac|\<lambda\><rsup|2>|2>\<delta\><rsup|<around*|(|8|)>><around*|(|x|)>+\<cdots\>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|\<lambda\><rsup|n>|n!>\<delta\><rsup|<around*|(|4n|)>><around*|(|x|)>.
+  </equation*>
+
+  \;
+
+  Altogether, we find the inverse Fourier transformation of
+  <math|exp<around*|(|-k<rsup|2>/2+\<lambda\>k<rsup|4>|)>> as a convolution
+
+  <\equation*>
+    <frac|1|<sqrt|2\<mathpi\>>><big|sum><rsub|n=0><rsup|+\<infty\>><frac|\<lambda\><rsup|n>|n!><big|int><rsub|\<bbb-R\>>\<mathd\>y
+    exp<around*|(|-<frac|<around*|(|x-y|)><rsup|2>|2>|)>\<delta\><rsup|<around*|(|4n|)>><around*|(|y|)>.
+  </equation*>
+
+  When <math|x=0>, it reduces to
+
+  <\equation*>
+    <frac|1|<sqrt|2\<mathpi\>>><big|sum><rsub|n=0><rsup|+\<infty\>><frac|\<lambda\><rsup|n>|n!><big|int><rsub|\<bbb-R\>>\<mathd\>y
+    exp<around*|(|-<frac|y<rsup|2>|2>|)>\<delta\><rsup|<around*|(|4n|)>><around*|(|y|)>.
+  </equation*>
+
+  Integration by parts gives
+
+  <\equation*>
+    <frac|1|<sqrt|2\<mathpi\>>><big|sum><rsub|n=0><rsup|+\<infty\>><frac|\<lambda\><rsup|n>|n!><big|int><rsub|\<bbb-R\>>\<mathd\>y
+    <frac|\<mathd\><rsup|4n>|\<mathd\>y<rsup|4n>>exp<around*|(|-<frac|y<rsup|2>|2>|)>\<delta\><around*|(|y|)>=<frac|1|<sqrt|2\<mathpi\>>><big|sum><rsub|n=0><rsup|+\<infty\>><frac|\<lambda\><rsup|n>|n!><around*|[|lim<rsub|y\<rightarrow\>0><frac|\<mathd\><rsup|4n>|\<mathd\>y<rsup|4n>>exp<around*|(|-<frac|y<rsup|2>|2>|)>|]>.
+  </equation*>
+
+  To evaluate the <math|a<rsub|n>\<assign\><around*|[|\<cdots\>|]>> factor,
+  we use <verbatim|wolfram-alpha> and find <math|a<rsub|1>=1\<times\>3>,
+  <math|a<rsub|2>=1\<times\>3\<times\>5\<times\>7>, and
+  <math|a<rsub|3>=1\<times\>3\<times\>5\<times\>7\<times\>9\<times\>11>. It
+  indicates that <math|a<rsub|n>=1\<times\>3\<times\>5\<times\>\<cdots\>\<times\><around*|(|4n-1|)>=<around*|(|4n-1|)>!!>.
+  Thus, we find the inverse Fourier transformation of
+  <math|exp<around*|(|-k<rsup|2>/2+\<lambda\>k<rsup|4>|)>> at origin as
+
+  <\equation*>
+    <frac|1|<sqrt|2\<mathpi\>>><around*|[|1+<big|sum><rsub|n=1><rsup|+\<infty\>><frac|\<lambda\><rsup|n>|n!><around*|(|4n-1|)>!!|]>.
+  </equation*>
+
+  To deal with the double factorial, we use the formula
+
+  <\equation*>
+    <around*|(|2n-1|)>!!=<frac|<around*|(|2n|)>!|2<rsup|n>n!>,
+  </equation*>
+
+  thus the result becomes
+
+  <\equation*>
+    <frac|1|<sqrt|2\<mathpi\>>><around*|[|1+<big|sum><rsub|n=1><rsup|+\<infty\>><frac|<around*|(|4n|)>!|n!<around*|(|2n|)>!><around*|(|<frac|\<lambda\>|4>|)><rsup|n>|]>.
+  </equation*>
 </body>
 
 <\initial>
@@ -2993,6 +3142,7 @@
     <associate|auto-26|<tuple|9|25>>
     <associate|auto-27|<tuple|10|28>>
     <associate|auto-28|<tuple|10.1|28>>
+    <associate|auto-29|<tuple|11|?>>
     <associate|auto-3|<tuple|3|2>>
     <associate|auto-4|<tuple|4|4>>
     <associate|auto-5|<tuple|4.1|4>>
