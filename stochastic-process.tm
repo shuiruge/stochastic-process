@@ -2229,12 +2229,11 @@
 
   \;
 
-  Besides, there is another requirement on <math|K<rsub|n>>. During the
+  Besides, there is additional requirement on <math|K<rsub|n>>. During the
   calculation, we have employed the condition that the partial derivatives of
-  <math|K<rsub|n><around*|(|x|)>> are well-defined. Precisely, for any
-  indices <math|<around*|(|\<alpha\><rsub|1>,\<ldots\>,\<alpha\><rsub|m>|)>>
-  and <math|<around*|(|\<beta\><rsub|1>,\<ldots\>,\<beta\><rsub|n>|)>>, we
-  have demanded that
+  <math|K<rsub|n>> are well-defined. That is, for any indices
+  <math|<around*|(|\<alpha\><rsub|1>,\<ldots\>,\<alpha\><rsub|m>|)>> and
+  <math|<around*|(|\<beta\><rsub|1>,\<ldots\>,\<beta\><rsub|n>|)>>,
 
   <\equation>
     sup<rsub|x\<in\>\<bbb-R\><rsup|d>><around*|\||\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|m>>K<rsub|n><rsup|\<beta\><rsub|1>\<cdots\>\<beta\><rsub|n>><around*|(|x|)>|\|>\<less\>+\<infty\>.<label|equation:K
@@ -2251,24 +2250,25 @@
   <math|\<varphi\>:\<bbb-R\><rsup|d>\<rightarrow\>\<bbb-R\>> in
   <strong|Schwarts space> <math|S<around*|(|\<bbb-R\><rsup|d>|)>>, which is a
   functional space in which function mapping from <math|\<bbb-R\><rsup|d>> to
-  <math|\<bbb-R\>> is smooth and rapidly falls to zero in the region far from
-  origin. Precisely, a smooth function <math|\<varphi\>\<in\>S<around*|(|\<bbb-R\><rsup|d>|)>>
-  satisfies the condition
+  <math|\<bbb-R\>> is smooth and rapidly tends to zero in the region far from
+  origin.<\footnote>
+    Precisely, a function <math|\<varphi\>\<in\>S<around*|(|\<bbb-R\><rsup|d>|)>>
+    is infinitely smooth (namely <math|\<varphi\>\<in\>C<rsup|\<infty\>><around*|(|\<bbb-R\><rsup|d>|)>>)
+    and satisfies the condition
 
-  <\equation>
-    sup<rsub|x\<in\>\<bbb-R\><rsup|d>><around*|\||x<rsup|\<alpha\><rsub|1>>\<cdots\>x<rsup|\<alpha\><rsub|m>><around*|(|\<partial\><rsub|\<beta\><rsub|1>>\<cdots\>\<partial\><rsub|\<beta\><rsub|n>>\<varphi\>|)><around*|(|x|)>|\|>\<less\>+\<infty\>
-  </equation>
+    <\equation>
+      sup<rsub|x\<in\>\<bbb-R\><rsup|d>><around*|\||x<rsup|\<alpha\><rsub|1>>\<cdots\>x<rsup|\<alpha\><rsub|m>><around*|(|\<partial\><rsub|\<beta\><rsub|1>>\<cdots\>\<partial\><rsub|\<beta\><rsub|n>>\<varphi\>|)><around*|(|x|)>|\|>\<less\>+\<infty\>
+    </equation>
 
-  for any indices <math|<around*|(|\<alpha\><rsub|1>,\<ldots\>,\<alpha\><rsub|m>|)>>
-  and <math|<around*|(|\<beta\><rsub|1>,\<ldots\>,\<beta\><rsub|n>|)>>. As
-  <math|<around*|\<\|\|\>|x|\<\|\|\>>\<rightarrow\>+\<infty\>>,
-  <math|\<varphi\>> (also its partial derivatives) falls faster than any
-  polynomial (namely, the <math|x<rsup|\<alpha\><rsub|1>>\<cdots\>x<rsup|\<alpha\><rsub|m>>>).
-  For example, Gaussian function (the density function of normal
-  distribution) is in Schwarts space <math|S<around*|(|\<bbb-R\>|)>>.
-
-  Since <math|\<varphi\>> is in Schwarts space, in which functions are
-  smooth, we can Taylor expanding <math|\<varphi\>> at origin, which gives
+    for any indices <math|<around*|(|\<alpha\><rsub|1>,\<ldots\>,\<alpha\><rsub|m>|)>>
+    and <math|<around*|(|\<beta\><rsub|1>,\<ldots\>,\<beta\><rsub|n>|)>>. As
+    <math|<around*|\<\|\|\>|x|\<\|\|\>>\<rightarrow\>+\<infty\>>,
+    <math|\<varphi\>> (also its partial derivatives) falls faster than any
+    polynomial (namely, the <math|x<rsup|\<alpha\><rsub|1>>\<cdots\>x<rsup|\<alpha\><rsub|m>>>).
+  </footnote> For example, Gaussian function (the density function of normal
+  distribution) is in Schwarts space <math|S<around*|(|\<bbb-R\>|)>>. Since
+  <math|\<varphi\>> is in Schwarts space, in which functions are smooth, we
+  can Taylor expanding <math|\<varphi\>> at origin, which gives
 
   <\equation*>
     <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
@@ -2472,17 +2472,14 @@
   </equation>
 
   This is the form of Kramers\UMoyal expansion that appears in many textures.
-  Together with condition <reference|equation:K condition> (<math|K<rsub|n>>
-  and its partial derivatives are bounded), we can show that
-  <math|<around*|(|\<partial\>p/\<partial\>t|)><around*|(|\<cdummy\>,t|)>\<in\>S<around*|(|\<bbb-R\><rsup|d>|)>>.
-  Namely, for any indices <math|<around*|(|\<alpha\><rsub|1>,\<ldots\>,\<alpha\><rsub|m>|)>>
-  and <math|<around*|(|\<beta\><rsub|1>,\<ldots\>,\<beta\><rsub|n>|)>>,
 
-  <\equation*>
-    sup<rsub|x\<in\>\<bbb-R\><rsup|d>><around*|\||<around*|(|x<rsup|\<alpha\><rsub|1>>\<cdots\>x<rsup|\<alpha\><rsub|m>>|)><around*|(|<frac|\<partial\>|\<partial\>x<rsup|\<beta\><rsub|1>>>\<cdots\><frac|\<partial\>|\<partial\>x<rsup|\<beta\><rsub|n>>><frac|\<partial\>p|\<partial\>t>|)><around*|(|x,t|)>|\|>\<less\>+\<infty\>.
-  </equation*>
-
-  It then implies that <math|p<around*|(|\<cdummy\>,t<rprime|'>|)>\<in\>S<around*|(|\<bbb-R\><rsup|d>|)>>
+  If <math|p<around*|(|\<cdummy\>,t|)>\<in\>S<around*|(|\<bbb-R\><rsup|d>|)>>,
+  then <math|p<around*|(|\<cdummy\>,t|)>> as well as its partial derivatives
+  rapidly tend to zero in the region far from origin. Together with condition
+  <reference|equation:K condition> (<math|K<rsub|n>> and its partial
+  derivatives are bounded), we can show that
+  <math|<around*|(|\<partial\>p/\<partial\>t|)><around*|(|\<cdummy\>,t|)>\<in\>S<around*|(|\<bbb-R\><rsup|d>|)>>
+  too. It then implies that <math|p<around*|(|\<cdummy\>,t<rprime|'>|)>\<in\>S<around*|(|\<bbb-R\><rsup|d>|)>>
   for any <math|t<rprime|'>\<gtr\>t>. That is, <em|if a time-dependent
   density function <math|p<around*|(|\<cdummy\>,t|)>> sits in Schwartz space
   initially, then it stays in Schwartz space during the evolution.>
@@ -4587,6 +4584,7 @@
     <associate|footnote-3.2|<tuple|3.2|27>>
     <associate|footnote-3.3|<tuple|3.3|30>>
     <associate|footnote-3.4|<tuple|3.4|32>>
+    <associate|footnote-3.5|<tuple|3.5|?>>
     <associate|footnote-4.1|<tuple|4.1|38>>
     <associate|footnote-4.2|<tuple|4.2|40>>
     <associate|footnote-4.3|<tuple|4.3|41>>
@@ -4604,8 +4602,9 @@
     <associate|footnr-2.5|<tuple|2.5|21>>
     <associate|footnr-3.1|<tuple|3.1|27>>
     <associate|footnr-3.2|<tuple|3.2|27>>
-    <associate|footnr-3.3|<tuple|3.3|30>>
+    <associate|footnr-3.3|<tuple|3.4|30>>
     <associate|footnr-3.4|<tuple|3.4|32>>
+    <associate|footnr-3.5|<tuple|3.5|?>>
     <associate|footnr-4.1|<tuple|4.1|38>>
     <associate|footnr-4.2|<tuple|4.2|40>>
     <associate|footnr-4.3|<tuple|4.3|41>>

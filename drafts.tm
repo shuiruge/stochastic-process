@@ -2829,117 +2829,137 @@
   is finite. Thus, everything goes well in the limit
   <math|\<tau\>\<rightarrow\>0>.
 
-  <section|Density Function on Euclidean Space Is in Schwartz Space>
+  <subsection|>
 
-  But, we have to show that density function that is applied by the
-  transition density is in Schwartz space. Namely, we have to show that a
-  density function <math|p<around*|(|x,t|)>> with
-  <math|x\<in\>\<bbb-R\><rsup|d>> has, for any indices
-  <math|<around*|(|\<alpha\><rsub|1>,\<ldots\>,\<alpha\><rsub|n>|)>> and
-  <math|<around*|(|\<beta\><rsub|1>,\<ldots\>,\<beta\><rsub|m>|)>> and for
-  any <math|t>,
+  Next, we are to consider <math|<wide|q|^><rsub|\<tau\>><around*|(|k|)>\<assign\>exp<around*|(|\<tau\>
+  k<rsup|2>/2|)>> on <math|\<bbb-R\>>, and how its (inverse) Fourier
+  transformation <math|q<rsub|\<tau\>><around*|(|x|)>> acts on
+  <math|\<varphi\>\<in\>S<around*|(|\<bbb-R\>|)>>. We have
+  <math|<wide|q|^><rsub|\<tau\>><around*|(|0|)>=1> and
 
   <\equation*>
-    sup<rsub|x><around*|\||<around*|(|x<rsup|\<alpha\><rsub|1>>\<cdots\>x<rsup|\<alpha\><rsub|n>>|)><around*|(|\<partial\><rsub|\<beta\><rsub|1>>\<cdots\>\<partial\><rsub|\<beta\><rsub|m>>p|)><around*|(|x,t|)>|\|>\<less\>+\<infty\>.
+    <frac|\<partial\><wide|q|^><rsub|\<tau\>>|\<partial\>k><around*|(|k|)>=\<tau\>
+    k <wide|q|^><rsub|\<tau\>><around*|(|k|)>.
   </equation*>
 
-  Notice that it implies
+  So, as <math|k\<rightarrow\>0>,
 
   <\equation*>
-    lim<rsub|<around*|\<\|\|\>|x|\<\|\|\>>\<rightarrow\>+\<infty\>>p<around*|(|x,t|)>=0
+    <frac|\<partial\><rsup|2><wide|q|^><rsub|\<tau\>>|\<partial\>k<rsup|2>><around*|(|k|)>=\<tau\>
+    \ <wide|q|^><rsub|\<tau\>><around*|(|k|)>+\<tau\>
+    k<frac|\<partial\><wide|q|^><rsub|\<tau\>>|\<partial\>k><around*|(|k|)>=<around*|(|\<tau\>
+    +\<tau\><rsup|2>k<rsup|2>|)><wide|q|^><rsub|\<tau\>><around*|(|k|)>\<rightarrow\>\<tau\>,
   </equation*>
 
-  which is essential for performing integration by parts (the boundary terms
-  vanish). Suppose that <math|p<around*|(|x,0|)>> is so, we are to show that
-  <math|p<around*|(|x,\<Delta\>t|)>> is also. We have
+  and then
 
   <\equation*>
-    p<around*|(|x,\<Delta\>t|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
-    q<rsub|\<Delta\>t><around*|(|x\|y|)> p<around*|(|y,0|)>,
+    <frac|\<partial\><rsup|3><wide|q|^><rsub|\<tau\>>|\<partial\>k<rsup|3>><around*|(|k|)>=<around*|(|3\<tau\><rsup|2>k+\<tau\><rsup|3>k<rsup|3>|)><wide|q|^><rsub|\<tau\>><around*|(|k|)>\<rightarrow\>0,
   </equation*>
+
+  and then
 
   <\equation*>
-    q<rsub|\<Delta\>t><around*|(|x\|y|)>=\<delta\><around*|(|x-y|)>+r<around*|(|x,y|)>
-    \<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>,
+    <frac|\<partial\><rsup|4><wide|q|^><rsub|\<tau\>>|\<partial\>k<rsup|4>><around*|(|k|)>=<around*|(|3\<tau\><rsup|2>+6\<tau\><rsup|3>k<rsup|2>+\<tau\><rsup|4>k<rsup|4>|)><wide|q|^><rsub|\<tau\>><around*|(|k|)>\<rightarrow\>3\<tau\><rsup|2>
   </equation*>
 
-  and Kramers-Moyal expansion
+  and then
 
   <\equation*>
-    r<around*|(|x,y|)>=<big|sum><rsub|n=1><rsup|N<rsub|cut>><frac|<around*|(|-1|)><rsup|n>|n!>K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|y|)><around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|x-y|)>.
+    <frac|\<partial\><rsup|5><wide|q|^><rsub|\<tau\>>|\<partial\>k<rsup|5>><around*|(|k|)>=<around*|(|15\<tau\><rsup|3>k+10\<tau\><rsup|4>k<rsup|3>+\<tau\><rsup|5>k<rsup|5>|)><wide|q|^><rsub|\<tau\>><around*|(|k|)>\<rightarrow\>0
   </equation*>
 
-  Then,
+  and then
 
   <\equation*>
-    p<around*|(|x,\<Delta\>t|)>=p<around*|(|x,0|)>+\<Delta\>t<big|sum><rsub|n=1><rsup|N<rsub|cut>><frac|<around*|(|-1|)><rsup|n>|n!>\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>><around*|[|K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>p<around*|(|x,0|)>|]>
-    +\<omicron\><around*|(|\<Delta\>t|)>.
+    <frac|\<partial\><rsup|6><wide|q|^><rsub|\<tau\>>|\<partial\>k<rsup|6>><around*|(|k|)>=<around*|(|15\<tau\><rsup|3>+45\<tau\><rsup|4>k<rsup|2>+15\<tau\><rsup|5>k<rsup|4>+\<tau\><rsup|6>k<rsup|6>|)><wide|q|^><rsub|\<tau\>><around*|(|k|)>\<rightarrow\>15\<tau\><rsup|3>.
   </equation*>
 
-  So, <math|p<around*|(|x,\<Delta\>t|)>\<in\>S<around*|(|\<bbb-R\><rsup|d>|)>>
-  demands that
+  It seems that <math|<wide|q|^><rsup|<around*|(|2n+1|)>><rsub|\<tau\>><around*|(|0|)>=0>
+  and
 
   <\equation*>
-    sup<rsub|x\<in\>\<bbb-R\><rsup|d>><around*|\||<around*|(|x<rsup|\<alpha\><rsub|1>>\<cdots\>x<rsup|\<alpha\><rsub|n>>|)>\<partial\><rsub|\<beta\><rsub|1>>\<cdots\>\<partial\><rsub|\<beta\><rsub|m>>\<partial\><rsub|\<gamma\><rsub|1>>\<cdots\>\<partial\><rsub|\<gamma\><rsub|l>><around*|[|K<rsub|l><rsup|\<gamma\><rsub|1>\<cdots\>\<gamma\><rsub|l>><around*|(|x|)>p<around*|(|x,0|)>|]>|\|>\<less\>+\<infty\>.
+    <wide|q|^><rsub|\<tau\>><rsup|<around*|(|2n+2|)>><around*|(|0|)>=<around*|(|2n+1|)>\<tau\>
+    <wide|q|^><rsub|\<tau\>><rsup|<around*|(|2n|)>><around*|(|0|)>,
   </equation*>
 
-  That is, <math|K<rsub|l><around*|(|x|)>> and its partial derivatives are
-  bounded on <math|\<bbb-R\><rsup|d>>, namely,
+  starting at <math|<wide|q|^><rsub|\<tau\>><rsup|<around*|(|0|)>><around*|(|0|)>=1>.
+  Indeed, we have <math|<wide|q|^><rsup|<around*|(|8|)>><around*|(|k|)>=105\<tau\><rsup|4>>.
+
+  In this way,
 
   <\equation*>
-    sup<rsub|x\<in\>\<bbb-R\><rsup|d>><around*|\||\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|m>>K<rsub|n><rsup|\<beta\><rsub|1>\<cdots\>\<beta\><rsub|n>><around*|(|x|)>|\|>\<less\>+\<infty\>.
+    <frac|<around*|(|-\<mathi\>|)><rsup|2n+2>|<around*|(|2n+2|)>!><wide|q|^><rsub|\<tau\>><rsup|<around*|(|2n+2|)>><around*|(|0|)>=<frac|-1|<around*|(|2n+2|)><around*|(|2n+1|)>><frac|<around*|(|-\<mathi\>|)><rsup|2n>|<around*|(|2n|)>!><around*|(|2n+1|)>\<tau\>
+    <wide|q|^><rsub|\<tau\>><rsup|<around*|(|2n|)>><around*|(|0|)>=<frac|-\<tau\>|<around*|(|2n+2|)>><frac|<around*|(|-\<mathi\>|)><rsup|2n>|<around*|(|2n|)>!>
+    <wide|q|^><rsub|\<tau\>><rsup|<around*|(|2n|)>><around*|(|0|)>.
   </equation*>
-
-  \;
-
-  \;
-
-  \;
-
-  \;
-
-  \;
-
-  \;
-
-  We also have
-
-  <\align>
-    <tformat|<table|<row|<cell|>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
-    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>x<rsup|\<alpha\>>|)><around*|(|x<rsup|\<alpha\><rsub|1>>\<cdots\>x<rsup|\<alpha\><rsub|n>>|)>p<around*|(|x|)>>>|<row|<cell|=>|<cell|\<mathi\><rsup|n><frac|\<partial\>|\<partial\>k<rsub|\<alpha\><rsub|1>>>\<cdots\><frac|\<partial\>|\<partial\>k<rsub|\<alpha\><rsub|n>>><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
-    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>x<rsup|\<alpha\>>|)>p<around*|(|x|)>>>|<row|<cell|=>|<cell|\<mathi\><rsup|n>
-    <around*|(|\<partial\><rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsup|\<alpha\><rsub|n>>
-    <wide|p|^>|)><around*|(|k|)>.>>>>
-  </align>
-
-  Thus, the moment
-
-  <\equation*>
-    \<bbb-E\><around*|[|x<rsup|\<alpha\><rsub|1>>\<cdots\>x<rsup|\<alpha\><rsub|n>>|]>=\<mathi\><rsup|n>
-    <around*|(|\<partial\><rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsup|\<alpha\><rsub|n>>
-    <wide|p|^>|)><around*|(|0|)>.
-  </equation*>
-
-  A bounded moment implies a bounded derivative on <math|<wide|p|^>> at
-  <math|k=0>.
-
-  Furthermore,
-
-  <\align>
-    <tformat|<table|<row|<cell|>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
-    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>x<rsup|\<alpha\>>|)><around*|(|x<rsup|\<alpha\><rsub|1>>\<cdots\>x<rsup|\<alpha\><rsub|n>>|)><around*|(|\<partial\><rsub|\<beta\><rsub|1>>\<cdots\>\<partial\><rsub|\<beta\><rsub|m>>p|)><around*|(|x|)>>>|<row|<cell|=>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
-    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>x<rsup|\<alpha\>>|)><around*|(|x<rsup|\<alpha\><rsub|1>>\<cdots\>x<rsup|\<alpha\><rsub|n>>|)><around*|[|\<partial\><rsub|\<beta\><rsub|1>>\<cdots\>\<partial\><rsub|\<beta\><rsub|m>><big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k<rprime|'>|<around*|(|2\<mathpi\>|)><rsup|d>>
-    exp<around*|(|\<mathi\>k<rprime|'><rsub|\<beta\>>x<rsup|\<beta\>>|)><wide|p|^><around*|(|k<rprime|'>|)>|]>>>|<row|<cell|=>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
-    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>x<rsup|\<alpha\>>|)><around*|(|x<rsup|\<alpha\><rsub|1>>\<cdots\>x<rsup|\<alpha\><rsub|n>>|)><around*|[|\<mathi\><rsup|m><around*|(|k<rsub|\<beta\><rsub|1>><rprime|'>\<cdots\>k<rsub|\<beta\><rsub|m>><rprime|'>|)><big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k<rprime|'>|<around*|(|2\<mathpi\>|)><rsup|d>>
-    exp<around*|(|\<mathi\>k<rprime|'><rsub|\<beta\>>x<rsup|\<beta\>>|)><wide|p|^><around*|(|k<rprime|'>|)>|]>>>|<row|<cell|=>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k<rprime|'>|<around*|(|2\<mathpi\>|)><rsup|d>>exp<around*|(|-\<mathi\><around*|(|k<rsub|\<alpha\>>-k<rsub|\<alpha\>><rprime|'>|)>x<rsup|\<alpha\>>|)><around*|(|x<rsup|\<alpha\><rsub|1>>\<cdots\>x<rsup|\<alpha\><rsub|n>>|)>\<mathi\><rsup|m><around*|(|k<rsub|\<beta\><rsub|1>><rprime|'>\<cdots\>k<rsub|\<beta\><rsub|m>><rprime|'>|)><wide|p|^><around*|(|k<rprime|'>|)>>>|<row|<cell|=>|<cell|\<mathi\><rsup|m+n><frac|\<partial\>|\<partial\>k<rsub|\<alpha\><rsub|1>>>\<cdots\><frac|\<partial\>|\<partial\>k<rsub|\<alpha\><rsub|n>>><around*|[|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k<rprime|'>|<around*|(|2\<mathpi\>|)><rsup|d>>exp<around*|(|-\<mathi\><around*|(|k<rsub|\<alpha\>>-k<rsub|\<alpha\>><rprime|'>|)>x<rsup|\<alpha\>>|)><around*|(|k<rsub|\<beta\><rsub|1>><rprime|'>\<cdots\>k<rsub|\<beta\><rsub|m>><rprime|'>|)><wide|p|^><around*|(|k<rprime|'>|)>|]>>>|<row|<cell|=>|<cell|\<mathi\><rsup|m+n><frac|\<partial\>|\<partial\>k<rsub|\<alpha\><rsub|1>>>\<cdots\><frac|\<partial\>|\<partial\>k<rsub|\<alpha\><rsub|n>>><around*|[|<big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k<rprime|'>|<around*|(|2\<mathpi\>|)><rsup|d>>\<delta\><around*|(|k<rsub|\<alpha\>>-k<rsub|\<alpha\>><rprime|'>|)><around*|(|k<rsub|\<beta\><rsub|1>><rprime|'>\<cdots\>k<rsub|\<beta\><rsub|m>><rprime|'>|)><wide|p|^><around*|(|k<rprime|'>|)>|]>>>|<row|<cell|=>|<cell|\<mathi\><rsup|m+n><frac|\<partial\>|\<partial\>k<rsub|\<alpha\><rsub|1>>>\<cdots\><frac|\<partial\>|\<partial\>k<rsub|\<alpha\><rsub|n>>><around*|[|<around*|(|k<rsub|\<beta\><rsub|1>>\<cdots\>k<rsub|\<beta\><rsub|m>>|)><wide|p|^><around*|(|k|)>|]>.>>>>
-  </align>
 
   So,
 
   <\equation*>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
-    <around*|(|x<rsup|\<alpha\><rsub|1>>\<cdots\>x<rsup|\<alpha\><rsub|n>>|)><around*|(|\<partial\><rsub|\<beta\><rsub|1>>\<cdots\>\<partial\><rsub|\<beta\><rsub|m>>p|)><around*|(|x|)>=\<mathi\><rsup|m+n>lim<rsub|k\<rightarrow\>0>\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>><around*|[|<around*|(|k<rsub|\<beta\><rsub|1>>\<cdots\>k<rsub|\<beta\><rsub|m>>|)><wide|p|^><around*|(|k|)>|]>.
+    q<rsub|-\<tau\>><around*|(|x|)>=\<delta\><around*|(|x|)>+<frac|\<tau\>|2>\<delta\><rsup|<around*|(|2|)>><around*|(|x|)>+<frac|\<tau\><rsup|2>|2\<times\>4>\<delta\><rsup|<around*|(|4|)>><around*|(|x|)>+<frac|\<tau\><rsup|3>|2\<times\>4\<times\>6>\<delta\><rsup|<around*|(|6|)>><around*|(|x|)>+<frac|\<tau\><rsup|4>|2\<times\>4\<times\>6\<times\>8>\<delta\><rsup|<around*|(|8|)>><around*|(|x|)>+\<cdots\>.
   </equation*>
+
+  Namely (recall that <math|2n!!=1\<times\>2\<times\>4\<times\>6*\<times\>8\<times\>\<cdots\>\<times\>2n>),
+
+  <\equation*>
+    q<rsub|-\<tau\>><around*|(|x|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|\<tau\><rsup|n>|2n!!>\<delta\><rsup|<around*|(|2n|)>><around*|(|x|)>.
+  </equation*>
+
+  Applying on a test function <math|\<varphi\>\<in\>S<around*|(|\<bbb-R\>|)>>,
+  we have
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\>>\<mathd\>x q<rsub|-\<tau\>><around*|(|x|)>\<varphi\><around*|(|x|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|\<tau\><rsup|n>|2n!!>\<varphi\><rsup|<around*|(|2n|)>><around*|(|0|)>.
+  </equation*>
+
+  This result is well-defined as <math|\<tau\>\<rightarrow\>0>.
+
+  Next, we are to show that <math|q<rsub|-\<tau\>>> is in fact the normalized
+  Gaussian function, which is
+
+  <\equation*>
+    G<rsub|\<tau\>><around*|(|x|)>\<assign\><frac|1|<sqrt|2\<mathpi\>>\<tau\>>exp<around*|(|-<frac|x<rsup|2>|2\<tau\>>|)>.
+  </equation*>
+
+  Then, we have
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\>>\<mathd\>x G<rsub|\<tau\>><around*|(|x|)>\<varphi\><around*|(|x|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|1|<around*|(|2n|)>!>\<varphi\><rsup|<around*|(|2n|)>><around*|(|0|)><around*|[|<big|int><rsub|\<bbb-R\>>\<mathd\>x
+    G<rsub|\<tau\>><around*|(|x|)>x<rsup|2n>|]>,
+  </equation*>
+
+  where odd terms vanish since <math|G<rsub|\<tau\>>> is even. The moments of
+  standard normal distribution are known, as
+  <math|\<bbb-E\><around*|[|X<rsup|2n>|]>=1\<times\>3\<times\>5\<times\>7\<times\>\<cdots\>\<times\><around*|(|2n-1|)>>.
+  Thus,
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\>>\<mathd\>x G<rsub|\<tau\>><around*|(|x|)>x<rsup|2n>=1\<times\>3\<times\>5\<times\>7\<times\>\<cdots\>\<times\><around*|(|2n-1|)>
+    \<tau\><rsup|n>.
+  </equation*>
+
+  This implies that
+
+  <\equation*>
+    \;
+  </equation*>
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\>>\<mathd\>x G<rsub|\<tau\>><around*|(|x|)>\<varphi\><around*|(|x|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|\<tau\><rsup|n>|<around*|(|2n|)>!!>\<varphi\><rsup|<around*|(|2n|)>><around*|(|0|)>.
+  </equation*>
+
+  Thus,
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\>>\<mathd\>x <around*|[|G<rsub|\<tau\>><around*|(|x|)>-q<rsub|-\<tau\>><around*|(|x|)>|]>\<varphi\><around*|(|x|)>=0
+  </equation*>
+
+  holds for all <math|\<varphi\>\<in\>S<around*|(|\<bbb-R\>|)>>, resulting in
+  <math|q<rsub|-\<tau\>>=G<rsub|\<tau\>>>. So, <em|the Taylor expansion (by
+  <math|\<tau\>>) of <math|<big|int>\<mathd\>x
+  G<rsub|\<tau\>><around*|(|x|)>\<varphi\><around*|(|x|)>> is well-defined,
+  even though that of <math|G<rsub|\<tau\>>> is not.>
 </body>
 
 <\initial>
@@ -2972,7 +2992,7 @@
     <associate|auto-25|<tuple|8|23>>
     <associate|auto-26|<tuple|9|25>>
     <associate|auto-27|<tuple|10|28>>
-    <associate|auto-28|<tuple|11|28>>
+    <associate|auto-28|<tuple|10.1|28>>
     <associate|auto-3|<tuple|3|2>>
     <associate|auto-4|<tuple|4|4>>
     <associate|auto-5|<tuple|4.1|4>>
@@ -3126,10 +3146,9 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-27><vspace|0.5fn>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|11<space|2spc>Density
-      Function on Euclidean Space Is in Schwartz Space>
+      <with|par-left|<quote|1tab>|10.1<space|2spc>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-28><vspace|0.5fn>
+      <no-break><pageref|auto-28>>
     </associate>
   </collection>
 </auxiliary>
