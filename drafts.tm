@@ -1105,10 +1105,16 @@
 
   <subsection|Equivalent Action?>
 
+  <with|color|red|Conclusion: this derivation is wrong. Because the
+  <math|p<around*|(|x\|y|)>> is a density function only when it is
+  normalized, which implies <math|\<zeta\><around*|(|y|)>=\<psi\><rsup|2><around*|(|y|)>/2>.
+  But, the normalization is an essential condition of Gibbs' inequality
+  <math|H<around*|(|P,Q|)>\<geqslant\>0>.>
+
   Consider the action
 
   <\equation>
-    S<around*|(|x|)>=<big|sum><rsub|i=-\<infty\>><rsup|+\<infty\>><big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|<frac|<around*|(|x<rsup|\<alpha\>><rsub|i+1>-x<rsup|\<alpha\>><rsub|i>|)><rsup|2>|2\<epsilon\>>-<around*|(|x<rsup|\<alpha\>><rsub|i+1>-x<rsup|\<alpha\>><rsub|i>|)>
+    S<around*|(|x|)>=<big|sum><rsub|i=-\<infty\>><rsup|+\<infty\>><big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|<frac|<around*|(|x<rsup|\<alpha\>><rsub|i+1>-x<rsup|\<alpha\>><rsub|i>|)><rsup|2>|2\<epsilon\>>+<around*|(|x<rsup|\<alpha\>><rsub|i+1>-x<rsup|\<alpha\>><rsub|i>|)>
     \<varphi\><rsup|\<alpha\>><around*|(|x<rsub|i+1>,x<rsub|i>|)>+\<epsilon\>
     \<xi\><rsup|\<alpha\>><around*|(|x<rsub|i+1>,x<rsub|i>|)>+\<omicron\><around*|(|\<epsilon\>|)>|]>,<label|equation:rg
     action>
@@ -1120,8 +1126,8 @@
 
   <\equation*>
     q<rsub|\<epsilon\>><around*|(|x<rsub|i+1>\|x<rsub|i>|)>=Z<rsup|-1>
-    exp<around*|(|<big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|-<frac|<around*|(|x<rsup|\<alpha\>><rsub|i+1>-x<rsup|\<alpha\>><rsub|i>|)><rsup|2>|2\<epsilon\>>+<around*|(|x<rsup|\<alpha\>><rsub|i+1>-x<rsup|\<alpha\>><rsub|i>|)>
-    \<varphi\><rsup|\<alpha\>><around*|(|x<rsub|i+1>,x<rsub|i>|)>-\<epsilon\>
+    exp<around*|(|-<big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|<frac|<around*|(|x<rsup|\<alpha\>><rsub|i+1>-x<rsup|\<alpha\>><rsub|i>|)><rsup|2>|2\<epsilon\>>+<around*|(|x<rsup|\<alpha\>><rsub|i+1>-x<rsup|\<alpha\>><rsub|i>|)>
+    \<varphi\><rsup|\<alpha\>><around*|(|x<rsub|i+1>,x<rsub|i>|)>+\<epsilon\>
     \<xi\><rsup|\<alpha\>><around*|(|x<rsub|i+1>,x<rsub|i>|)>+\<omicron\><around*|(|\<epsilon\>|)>|]>|)>,
   </equation*>
 
@@ -1139,7 +1145,7 @@
   and for the third term
 
   <\equation*>
-    -\<epsilon\> \<xi\><rsup|\<alpha\>><around*|(|x<rsub|i+1>,x<rsub|i>|)>=-\<epsilon\>
+    \<epsilon\> \<xi\><rsup|\<alpha\>><around*|(|x<rsub|i+1>,x<rsub|i>|)>=\<epsilon\>
     \<xi\><rsup|\<alpha\>><around*|(|x<rsub|i>,x<rsub|i>|)>+\<omicron\><around*|(|\<epsilon\>|)>.
   </equation*>
 
@@ -1147,8 +1153,8 @@
 
   <\very-small>
     <\equation*>
-      q<rsub|\<epsilon\>><around*|(|x<rsub|i+1>\|x<rsub|i>|)>\<propto\>exp<around*|(|<big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|-<frac|<around*|(|x<rsup|\<alpha\>><rsub|i+1>-x<rsup|\<alpha\>><rsub|i>|)><rsup|2>|2\<epsilon\>>+<around*|(|x<rsup|\<alpha\>><rsub|i+1>-x<rsup|\<alpha\>><rsub|i>|)>
-      \<varphi\><rsup|\<alpha\>><around*|(|x<rsub|i>,x<rsub|i>|)>+<around*|(|x<rsup|\<alpha\>><rsub|i+1>-x<rsup|\<alpha\>><rsub|i>|)><around*|(|x<rsup|\<beta\>><rsub|i+1>-x<rsup|\<beta\>><rsub|i>|)>\<partial\><rsub|\<beta\>>\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|i>,x<rsub|i>|)>-\<epsilon\>
+      q<rsub|\<epsilon\>><around*|(|x<rsub|i+1>\|x<rsub|i>|)>\<propto\>exp<around*|(|-<big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|<frac|<around*|(|x<rsup|\<alpha\>><rsub|i+1>-x<rsup|\<alpha\>><rsub|i>|)><rsup|2>|2\<epsilon\>>+<around*|(|x<rsup|\<alpha\>><rsub|i+1>-x<rsup|\<alpha\>><rsub|i>|)>
+      \<varphi\><rsup|\<alpha\>><around*|(|x<rsub|i>,x<rsub|i>|)>+<around*|(|x<rsup|\<alpha\>><rsub|i+1>-x<rsup|\<alpha\>><rsub|i>|)><around*|(|x<rsup|\<beta\>><rsub|i+1>-x<rsup|\<beta\>><rsub|i>|)>\<partial\><rsub|\<beta\>>\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|i>,x<rsub|i>|)>+\<epsilon\>
       \<xi\><rsup|\<alpha\>><around*|(|x<rsub|i>,x<rsub|i>|)>+\<omicron\><around*|(|\<epsilon\>|)>|]>|)>.
     </equation*>
   </very-small>
@@ -1157,8 +1163,8 @@
   function
 
   <\equation*>
-    p<around*|(|x\|y|)>=Z<rsup|-1>exp<around*|(|<big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|-<frac|<around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><rsup|2>|2\<epsilon\>>+<around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>
-    \<psi\><rsup|\<alpha\>><around*|(|y|)>-\<epsilon\>
+    p<around*|(|x\|y|)>=Z<rsup|-1>exp<around*|(|-<big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|<frac|<around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><rsup|2>|2\<epsilon\>>+<around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>
+    \<psi\><rsup|\<alpha\>><around*|(|y|)>+\<epsilon\>
     \<zeta\><rsup|\<alpha\>><around*|(|y|)>+\<omicron\><around*|(|\<epsilon\>|)>|]>|)>,
   </equation*>
 
@@ -1167,85 +1173,105 @@
   is defined by (not the <math|q<rsub|\<epsilon\>>>)
 
   <\equation*>
-    q<around*|(|x\|y|)>=V<rsup|-1> exp<around*|(|<big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|-<frac|<around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><rsup|2>|2\<epsilon\>>+<around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>
-    \<varphi\><rsup|\<alpha\>><around*|(|x,y|)>-\<epsilon\>
-    \<xi\><rsup|\<alpha\>><around*|(|x,y|)>+\<gamma\>|]>|)>,
+    q<around*|(|x\|y|)>=V<rsup|-1> exp<around*|(|-<big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|<frac|<around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><rsup|2>|2\<epsilon\>>+<around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>
+    \<varphi\><rsup|\<alpha\>><around*|(|x,y|)>+\<epsilon\>
+    \<xi\><rsup|\<alpha\>><around*|(|x,y|)>+\<gamma\><around*|(|x,y,\<epsilon\>|)>|]>|)>,
   </equation*>
 
   where <math|Z> is also the normalization factor. Given <math|\<varphi\>>
   and <math|\<xi\>>, we are to determine the <math|\<psi\>>, <math|\<zeta\>>,
   and <math|\<gamma\>> such that the relative entropy
   <math|H<around*|(|P<around*|(|y|)>,Q<around*|(|y|)>|)>=0>. We are to show
-  that <math|\<gamma\>=const+\<omicron\><around*|(|\<epsilon\>|)>>. By the
-  definition of relative entropy, we have
+  that <math|\<gamma\><around*|(|x,y,\<epsilon\>|)>=const+\<omicron\><around*|(|\<epsilon\>|)>>.
+  By the definition of relative entropy, we have
 
-  <\align>
-    <tformat|<table|<row|<cell|H<around*|(|P<around*|(|y|)>,Q<around*|(|y|)>|)>=>|<cell|\<bbb-E\><rsub|P<around*|(|y|)>><around*|[|ln
-    p<around*|(|x\|y|)>-ln q<around*|(|x\|y|)>|]>>>|<row|<cell|=>|<cell|\<bbb-E\><rsub|P<around*|(|y|)>><around*|[|<big|sum><rsub|\<alpha\>=1><rsup|d><around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>
-    <around*|[|\<psi\><rsup|\<alpha\>><around*|(|y|)>-\<varphi\><rsup|\<alpha\>><around*|(|x,y|)>|]>-\<epsilon\>
-    <around*|[|\<zeta\><rsup|\<alpha\>><around*|(|y|)>-\<xi\><rsup|\<alpha\>><around*|(|x,y|)>|]>-\<gamma\>+\<omicron\><around*|(|\<epsilon\>|)>+ln<frac|V|Z>|]>.>>>>
-  </align>
+  <\small>
+    <\align>
+      <tformat|<table|<row|<cell|H<around*|(|P<around*|(|y|)>,Q<around*|(|y|)>|)>=>|<cell|\<bbb-E\><rsub|x\<sim\>P<around*|(|y|)>><around*|[|ln
+      p<around*|(|x\|y|)>-ln q<around*|(|x\|y|)>|]>>>|<row|<cell|=>|<cell|\<bbb-E\><rsub|x\<sim\>P<around*|(|y|)>><around*|[|<big|sum><rsub|\<alpha\>=1><rsup|d><around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>
+      <around*|[|\<varphi\><rsup|\<alpha\>><around*|(|x,y|)>-\<psi\><rsup|\<alpha\>><around*|(|y|)>|]>+\<epsilon\>
+      <around*|[|\<xi\><rsup|\<alpha\>><around*|(|x,y|)>-\<zeta\><rsup|\<alpha\>><around*|(|y|)>|]>+\<gamma\><around*|(|x,y,\<epsilon\>|)>+\<omicron\><around*|(|\<epsilon\>|)>+ln<frac|V|Z>|]>.>>>>
+    </align>
+  </small>
 
   Taylor expanding <math|\<varphi\>> and <math|\<xi\>> on <math|x> at
   <math|x=y>, we get
 
   <\align>
-    <tformat|<table|<row|<cell|<around*|[|\<cdots\>|]>=<big|sum><rsub|\<alpha\>=1><rsup|d>>|<cell|<around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><around*|[|\<psi\><rsup|\<alpha\>><around*|(|y|)>-\<varphi\><rsup|\<alpha\>><around*|(|y,y|)>|]>-<around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><around*|(|x<rsup|\<beta\>>-y<rsup|\<beta\>>|)>\<partial\><rsub|\<beta\>>\<varphi\><rsup|\<alpha\>><around*|(|y,y|)>+\<cdots\>>>|<row|<cell|>|<cell|-\<epsilon\>
-    <around*|[|\<zeta\><rsup|\<alpha\>><around*|(|y|)>-\<xi\><rsup|\<alpha\>><around*|(|y,y|)>|]>+\<epsilon\><around*|(|x<rsup|\<beta\>>-y<rsup|\<beta\>>|)>\<partial\><rsub|\<beta\>>\<xi\><rsup|\<alpha\>><around*|(|y,y|)>+\<cdots\>>>|<row|<cell|>|<cell|-\<gamma\>+\<omicron\><around*|(|\<epsilon\>|)>+ln<frac|V|Z>.>>>>
+    <tformat|<table|<row|<cell|<around*|[|\<cdots\>|]>=<big|sum><rsub|\<alpha\>=1><rsup|d>>|<cell|<around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><around*|[|\<varphi\><rsup|\<alpha\>><around*|(|y,y|)>-\<psi\><rsup|\<alpha\>><around*|(|y|)>|]>+<around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><around*|(|x<rsup|\<beta\>>-y<rsup|\<beta\>>|)>\<partial\><rsub|\<beta\>>\<varphi\><rsup|\<alpha\>><around*|(|y,y|)>+\<cdots\>>>|<row|<cell|>|<cell|+\<epsilon\>
+    <around*|[|\<xi\><rsup|\<alpha\>><around*|(|y,y|)>-\<zeta\><rsup|\<alpha\>><around*|(|y|)>|]>+\<epsilon\><around*|(|x<rsup|\<beta\>>-y<rsup|\<beta\>>|)>\<partial\><rsub|\<beta\>>\<xi\><rsup|\<alpha\>><around*|(|y,y|)>+\<cdots\>>>|<row|<cell|>|<cell|+\<gamma\><around*|(|x,y,\<epsilon\>|)>+\<omicron\><around*|(|\<epsilon\>|)>+ln<frac|V|Z>.>>>>
   </align>
 
   On the other hand, since
 
   <\align>
-    <tformat|<table|<row|<cell|p<around*|(|x\|y|)>=>|<cell|Z<rsup|-1>exp<around*|(|<big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|-<frac|<around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><rsup|2>|2\<epsilon\>>+<around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>
-    \<psi\><rsup|\<alpha\>><around*|(|y|)>-\<epsilon\>
-    \<zeta\><rsup|\<alpha\>><around*|(|y|)>+\<omicron\><around*|(|\<epsilon\>|)>|]>|)>>>|<row|<cell|=>|<cell|Z<rsup|-1>exp<around*|(|-\<epsilon\><big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|\<zeta\><rsup|\<alpha\>><around*|(|y|)>-<frac|1|2><around*|(|\<psi\><rsup|\<alpha\>><around*|(|y|)>|)><rsup|2>|]>|)>\<times\>exp<around*|(|<big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|-<frac|<around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>-\<epsilon\>
+    <tformat|<table|<row|<cell|p<around*|(|x\|y|)>=>|<cell|Z<rsup|-1>exp<around*|(|-<big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|<frac|<around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><rsup|2>|2\<epsilon\>>+<around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>
+    \<psi\><rsup|\<alpha\>><around*|(|y|)>+\<epsilon\>
+    \<zeta\><rsup|\<alpha\>><around*|(|y|)>+\<omicron\><around*|(|\<epsilon\>|)>|]>|)>>>|<row|<cell|=>|<cell|Z<rsup|-1>exp<around*|(|-\<epsilon\><big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|\<zeta\><rsup|\<alpha\>><around*|(|y|)>-<frac|1|2><around*|(|\<psi\><rsup|\<alpha\>><around*|(|y|)>|)><rsup|2>|]>|)>\<times\>exp<around*|(|<big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|-<frac|<around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>+\<epsilon\>
     \<psi\><rsup|\<alpha\>><around*|(|y|)>|)><rsup|2>|2\<epsilon\>>+\<omicron\><around*|(|\<epsilon\>|)>|]>|)>.>>>>
   </align>
 
   This is recognized as a normal distribution, with covariance
   <math|\<epsilon\>\<delta\><rsup|\<alpha\>\<beta\>>> and mean
-  <math|y<rsup|\<alpha\>>+\<epsilon\> \<psi\><rsup|\<alpha\>><around*|(|y|)>>.
+  <math|y<rsup|\<alpha\>>-\<epsilon\> \<psi\><rsup|\<alpha\>><around*|(|y|)>>.
   We have
 
   <\equation*>
-    \<bbb-E\><rsub|P<around*|(|y|)>><around*|[|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|]>=\<epsilon\>\<psi\><rsup|\<alpha\>><around*|(|y|)>,
+    \<bbb-E\><rsub|x\<sim\>P<around*|(|y|)>><around*|[|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|]>=-\<epsilon\>\<psi\><rsup|\<alpha\>><around*|(|y|)>,
   </equation*>
 
   and
 
+  <\align>
+    <tformat|<table|<row|<cell|>|<cell|\<bbb-E\><rsub|x\<sim\>P<around*|(|y|)>><around*|[|<around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><around*|(|x<rsup|\<beta\>>-y<rsup|\<beta\>>|)>|]>>>|<row|<cell|=>|<cell|\<bbb-E\><rsub|x\<sim\>P<around*|(|y|)>><around*|[|<around*|(|<around*|[|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>+\<epsilon\>
+    \<psi\><rsup|\<alpha\>><around*|(|y|)>|]>-\<epsilon\>
+    \<psi\><rsup|\<alpha\>><around*|(|y|)>|)><around*|(|<around*|[|x<rsup|\<beta\>>-y<rsup|\<beta\>>+\<epsilon\>
+    \<psi\><rsup|\<beta\>><around*|(|y|)>|]>-\<epsilon\>
+    \<psi\><rsup|\<beta\>><around*|(|y|)>|)>|]>>>|<row|<cell|=>|<cell|\<epsilon\>\<delta\><rsub|\<alpha\>\<beta\>>+\<epsilon\><rsup|2>
+    \<psi\><rsup|\<alpha\>><around*|(|y|)>\<psi\><rsup|\<beta\>><around*|(|y|)>.>>>>
+  </align>
+
+  For <math|n>-th orders (recall that <math|\<sharp\>> is the ceiling
+  function),
+
   <\equation*>
-    \<bbb-E\><rsub|P<around*|(|y|)>><around*|[|<around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><around*|(|x<rsup|\<beta\>>-y<rsup|\<beta\>>|)>|]>=\<epsilon\>\<delta\><rsub|\<alpha\>\<beta\>>+\<epsilon\><rsup|2>
-    \<psi\><rsup|\<alpha\>><around*|(|y|)>\<psi\><rsup|\<beta\>><around*|(|y|)>.
+    \<bbb-E\><rsub|x\<sim\>P<around*|(|y|)>><around*|[|<around*|(|x<rsup|\<alpha\><rsub|1>>-y<rsup|\<alpha\><rsub|1>>|)>\<cdots\><around*|(|x<rsup|\<alpha\><rsub|n>>-y<rsup|\<alpha\><rsub|n>>|)>|]>=<with|font|cal|O><around*|(|\<epsilon\><rsup|\<sharp\><around*|(|n/2|)>>|)>.
+  </equation*>
+
+  For the residue, let <math|\<omicron\><around*|(|\<epsilon\>|)>=\<rho\><rsub|\<epsilon\>><around*|(|x,y|)>>
+  explicitly. Thus,
+
+  <\equation*>
+    \<bbb-E\><rsub|x\<sim\>P<around*|(|y|)>><around*|[|\<rho\><rsub|\<epsilon\>><around*|(|x,y|)>|]>=\<rho\><rsub|\<epsilon\>><around*|(|y,y|)>+\<bbb-E\><rsub|x\<sim\>P<around*|(|y|)>><around*|[|<around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>|]>\<partial\><rprime|'><rsub|\<alpha\>>\<rho\><rsub|\<epsilon\>><around*|(|y,y|)>+\<cdots\>=\<omicron\><around*|(|\<epsilon\>|)>.
   </equation*>
 
   Thus,
 
   <\equation*>
-    <tabular|<tformat|<cwith|5|5|1|1|cell-halign|r>|<cwith|9|9|1|1|cell-halign|r>|<table|<row|<cell|H<around*|(|P<around*|(|y|)>,Q<around*|(|y|)>|)>=>|<cell|<big|sum><rsub|\<alpha\>=1><rsup|d>>|<cell|\<bbb-E\><rsub|P<around*|(|y|)>><around*|[|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|]><around*|[|\<psi\><rsup|\<alpha\>><around*|(|y|)>-\<varphi\><rsup|\<alpha\>><around*|(|y,y|)>|]>-\<bbb-E\><rsub|P<around*|(|y|)>><around*|[|<around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><around*|(|x<rsup|\<beta\>>-y<rsup|\<beta\>>|)>|]>\<partial\><rsub|\<beta\>>\<varphi\><rsup|\<alpha\>><around*|(|y,y|)>>>|<row|<cell|>|<cell|>|<cell|+\<cdots\>>>|<row|<cell|>|<cell|>|<cell|-\<epsilon\>
-    <around*|[|\<zeta\><rsup|\<alpha\>><around*|(|y|)>-\<xi\><rsup|\<alpha\>><around*|(|y,y|)>|]>+\<epsilon\>\<bbb-E\><rsub|P<around*|(|y|)>><around*|[|x<rsup|\<beta\>>-y<rsup|\<beta\>>|]>\<partial\><rsub|\<beta\>>\<xi\><rsup|\<alpha\>><around*|(|y,y|)>+\<cdots\>>>|<row|<cell|>|<cell|>|<cell|-\<gamma\>+\<omicron\><around*|(|\<epsilon\>|)>+ln<frac|V|Z>.>>|<row|<cell|=>|<cell|<big|sum><rsub|\<alpha\>=1><rsup|d>>|<cell|\<epsilon\>\<psi\><rsup|\<alpha\>><around*|(|y|)><around*|[|\<psi\><rsup|\<alpha\>><around*|(|y|)>-\<varphi\><rsup|\<alpha\>><around*|(|y,y|)>|]>-\<epsilon\>\<partial\><rsub|\<alpha\>>\<varphi\><rsup|\<alpha\>><around*|(|y,y|)>+\<epsilon\><rsup|2>
-    \<psi\><rsup|\<alpha\>><around*|(|y|)>\<psi\><rsup|\<beta\>><around*|(|y|)>\<partial\><rsub|\<beta\>>\<varphi\><rsup|\<alpha\>><around*|(|y,y|)>>>|<row|<cell|>|<cell|>|<cell|+\<cdots\>>>|<row|<cell|>|<cell|>|<cell|-\<epsilon\>
-    <around*|[|\<zeta\><rsup|\<alpha\>><around*|(|y|)>-\<xi\><rsup|\<alpha\>><around*|(|y,y|)>|]>+\<epsilon\><rsup|2>\<psi\><rsup|\<beta\>><around*|(|y|)>\<partial\><rsub|\<beta\>>\<xi\><rsup|\<alpha\>><around*|(|y,y|)>+\<cdots\>>>|<row|<cell|>|<cell|>|<cell|-\<gamma\>+\<omicron\><around*|(|\<epsilon\>|)>+ln<frac|V|Z>>>|<row|<cell|=>|<cell|<big|sum><rsub|\<alpha\>=1><rsup|d>>|<cell|\<epsilon\><around*|{|\<psi\><rsup|\<alpha\>><around*|(|y|)><around*|[|\<psi\><rsup|\<alpha\>><around*|(|y|)>-\<varphi\><rsup|\<alpha\>><around*|(|y,y|)>|]>-<around*|[|\<partial\><rsub|\<alpha\>>\<varphi\><rsup|\<alpha\>><around*|(|y,y|)>+\<zeta\><rsup|\<alpha\>><around*|(|y|)>-\<xi\><rsup|\<alpha\>><around*|(|y,y|)>|]>|}>>>|<row|<cell|>|<cell|>|<cell|-\<gamma\>+\<omicron\><around*|(|\<epsilon\>|)>+ln<frac|V|Z>.>>>>>
+    <tabular|<tformat|<cwith|5|5|1|1|cell-halign|r>|<cwith|9|9|1|1|cell-halign|r>|<table|<row|<cell|H<around*|(|P<around*|(|y|)>,Q<around*|(|y|)>|)>=>|<cell|<big|sum><rsub|\<alpha\>=1><rsup|d>>|<cell|\<bbb-E\><rsub|x\<sim\>P<around*|(|y|)>><around*|[|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|]><around*|[|\<varphi\><rsup|\<alpha\>><around*|(|y,y|)>-\<psi\><rsup|\<alpha\>><around*|(|y|)>|]>>>|<row|<cell|>|<cell|>|<cell|+\<bbb-E\><rsub|x\<sim\>P<around*|(|y|)>><around*|[|<around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><around*|(|x<rsup|\<beta\>>-y<rsup|\<beta\>>|)>|]>\<partial\><rsub|\<beta\>>\<varphi\><rsup|\<alpha\>><around*|(|y,y|)>+\<cdots\>>>|<row|<cell|>|<cell|>|<cell|+\<epsilon\>
+    <around*|[|\<xi\><rsup|\<alpha\>><around*|(|y,y|)>-\<zeta\><rsup|\<alpha\>><around*|(|y|)>|]>+\<epsilon\>\<bbb-E\><rsub|x\<sim\>P<around*|(|y|)>><around*|[|x<rsup|\<beta\>>-y<rsup|\<beta\>>|]>\<partial\><rsub|\<beta\>>\<xi\><rsup|\<alpha\>><around*|(|y,y|)>+\<cdots\>>>|<row|<cell|>|<cell|>|<cell|+\<gamma\><around*|(|x,y,\<epsilon\>|)>+\<omicron\><around*|(|\<epsilon\>|)>+ln<frac|V|Z>.>>|<row|<cell|=>|<cell|<big|sum><rsub|\<alpha\>=1><rsup|d>>|<cell|-\<epsilon\>\<psi\><rsup|\<alpha\>><around*|(|y|)><around*|[|\<varphi\><rsup|\<alpha\>><around*|(|y,y|)>-\<psi\><rsup|\<alpha\>><around*|(|y|)>|]>>>|<row|<cell|>|<cell|>|<cell|+\<epsilon\>\<partial\><rsub|\<alpha\>>\<varphi\><rsup|\<alpha\>><around*|(|y,y|)>+\<epsilon\><rsup|2>
+    \<psi\><rsup|\<alpha\>><around*|(|y|)>\<psi\><rsup|\<beta\>><around*|(|y|)>\<partial\><rsub|\<beta\>>\<varphi\><rsup|\<alpha\>><around*|(|y,y|)>+\<cdots\>>>|<row|<cell|>|<cell|>|<cell|+\<epsilon\>
+    <around*|[|\<xi\><rsup|\<alpha\>><around*|(|y,y|)>-\<zeta\><rsup|\<alpha\>><around*|(|y|)>|]>-\<epsilon\><rsup|2>\<psi\><rsup|\<beta\>><around*|(|y|)>\<partial\><rsub|\<beta\>>\<xi\><rsup|\<alpha\>><around*|(|y,y|)>+\<cdots\>>>|<row|<cell|>|<cell|>|<cell|+\<gamma\><around*|(|x,y,\<epsilon\>|)>+\<omicron\><around*|(|\<epsilon\>|)>+ln<frac|V|Z>>>|<row|<cell|=>|<cell|<big|sum><rsub|\<alpha\>=1><rsup|d>>|<cell|\<epsilon\><around*|{|\<psi\><rsup|\<alpha\>><around*|(|y|)><around*|[|\<psi\><rsup|\<alpha\>><around*|(|y|)>-\<varphi\><rsup|\<alpha\>><around*|(|y,y|)>|]>+<around*|[|\<partial\><rsub|\<alpha\>>\<varphi\><rsup|\<alpha\>><around*|(|y,y|)>+\<xi\><rsup|\<alpha\>><around*|(|y,y|)>-\<zeta\><rsup|\<alpha\>><around*|(|y|)>|]>|}>>>|<row|<cell|>|<cell|>|<cell|+\<gamma\><around*|(|x,y,\<epsilon\>|)>+\<omicron\><around*|(|\<epsilon\>|)>+ln<frac|V|Z>.>>>>>
   </equation*>
 
   If let <math|\<psi\><rsup|\<alpha\>><around*|(|y|)>\<assign\>\<varphi\><rsup|\<alpha\>><around*|(|y,y|)>>,
-  <math|\<zeta\><rsup|\<alpha\>><around*|(|y|)>\<assign\>\<xi\><rsup|\<alpha\>><around*|(|y,y|)>-\<partial\><rsub|\<alpha\>>\<varphi\><rsup|\<alpha\>><around*|(|y,y|)>>,
-  and <math|\<gamma\>=\<omicron\><around*|(|\<epsilon\>|)>+ln<around*|(|V/Z|)>>,
+  <math|\<zeta\><rsup|\<alpha\>><around*|(|y|)>\<assign\>\<xi\><rsup|\<alpha\>><around*|(|y,y|)>+\<partial\><rsub|\<alpha\>>\<varphi\><rsup|\<alpha\>><around*|(|y,y|)>>,
+  and <math|\<gamma\><around*|(|x,y,\<epsilon\>|)>=\<omicron\><around*|(|\<epsilon\>|)>+ln<around*|(|V/Z|)>>,
   we get <math|H<around*|(|P<around*|(|y|)>,Q<around*|(|y|)>|)>=0>. So, we
   get
 
   <\equation*>
-    q<rsub|\<epsilon\>><around*|(|x<rsub|i+1>\|x<rsub|i>|)>\<propto\>exp<around*|(|<big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|-<frac|<around*|(|x<rsup|\<alpha\>><rsub|i+1>-x<rsup|\<alpha\>><rsub|i>|)><rsup|2>|2\<epsilon\>>+<around*|(|x<rsup|\<alpha\>><rsub|i+1>-x<rsup|\<alpha\>><rsub|i>|)>
-    \<varphi\><rsup|\<alpha\>><around*|(|x<rsub|i>,x<rsub|i>|)>-\<epsilon\>
-    <around*|[|\<xi\><rsup|\<alpha\>><around*|(|x<rsub|i>,x<rsub|i>|)>-\<partial\><rsub|\<alpha\>>\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|i>,x<rsub|i>|)>|]>+\<omicron\><around*|(|\<epsilon\>|)>|]>|)>,
+    q<rsub|\<epsilon\>><around*|(|x<rsub|i+1>\|x<rsub|i>|)>\<propto\>exp<around*|(|-<big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|<frac|<around*|(|x<rsup|\<alpha\>><rsub|i+1>-x<rsup|\<alpha\>><rsub|i>|)><rsup|2>|2\<epsilon\>>+<around*|(|x<rsup|\<alpha\>><rsub|i+1>-x<rsup|\<alpha\>><rsub|i>|)>
+    \<varphi\><rsup|\<alpha\>><around*|(|x<rsub|i>,x<rsub|i>|)>+\<epsilon\>
+    <around*|[|\<xi\><rsup|\<alpha\>><around*|(|x<rsub|i>,x<rsub|i>|)>+\<partial\><rsub|\<alpha\>>\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|i>,x<rsub|i>|)>|]>+\<omicron\><around*|(|\<epsilon\>|)>|]>|)>,
   </equation*>
 
   and thus
 
   <\equation>
-    S<around*|(|x|)>=<big|sum><rsub|i=-\<infty\>><rsup|+\<infty\>><big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|<frac|<around*|(|x<rsup|\<alpha\>><rsub|i+1>-x<rsup|\<alpha\>><rsub|i>|)><rsup|2>|2\<epsilon\>>-<around*|(|x<rsup|\<alpha\>><rsub|i+1>-x<rsup|\<alpha\>><rsub|i>|)>
+    S<around*|(|x|)>=<big|sum><rsub|i=-\<infty\>><rsup|+\<infty\>><big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|<frac|<around*|(|x<rsup|\<alpha\>><rsub|i+1>-x<rsup|\<alpha\>><rsub|i>|)><rsup|2>|2\<epsilon\>>+<around*|(|x<rsup|\<alpha\>><rsub|i+1>-x<rsup|\<alpha\>><rsub|i>|)>
     \<varphi\><rsup|\<alpha\>><around*|(|x<rsub|i>,x<rsub|i>|)>+\<epsilon\>
-    <around*|[|\<xi\><rsup|\<alpha\>><around*|(|x<rsub|i>,x<rsub|i>|)>-\<partial\><rsub|\<alpha\>>\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|i>,x<rsub|i>|)>|]>+\<omicron\><around*|(|\<epsilon\>|)>|]>.
+    <around*|[|\<xi\><rsup|\<alpha\>><around*|(|x<rsub|i>,x<rsub|i>|)>+\<partial\><rsub|\<alpha\>>\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|i>,x<rsub|i>|)>|]>+\<omicron\><around*|(|\<epsilon\>|)>|]>.
   </equation>
 
   <subsection|>
@@ -4225,6 +4251,646 @@
   <math|u\<assign\>A<rsub|\<alpha\>\<beta\>>> and
   <math|v\<assign\>B<rsub|\<alpha\>\<beta\>>> for any
   <math|\<alpha\>,\<beta\>>.>
+
+  <section|Renormalization Group (Version 1)>
+
+  Renormalization group was first proposed by Murray Gell-Mann and Francis
+  Low in 1954, applied to quantum field theory of fundamental particles.
+  Following this research, Kenneth Wilson, who was a PhD student of
+  Gell-Mann, started his malathion in 1961. He published his first paper on
+  renormalization group eight years later, in 1969. This technique was then
+  further developed and applied to many areas in and even out of physics,
+  such as biology, society, and finance.
+
+  To show how it works, we start with an action that is generalized from
+  action <reference|equation:langevin action constant R>, as
+
+  <\equation>
+    S<around*|(|x|)>=<big|sum><rsub|i=-\<infty\>><rsup|+\<infty\>><big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|<frac|<around*|(|x<rsup|\<alpha\>><rsub|i+1>-x<rsup|\<alpha\>><rsub|i>|)><rsup|2>|2\<Delta\>t>+<around*|(|x<rsup|\<alpha\>><rsub|i+1>-x<rsup|\<alpha\>><rsub|i>|)>
+    \<varphi\><rsup|\<alpha\>><around*|(|x<rsub|i>|)>+\<xi\><rsup|\<alpha\>><around*|(|x<rsub|i>|)>\<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>|]>,<label|equation:rg
+    action>
+  </equation>
+
+  where <math|\<varphi\>,\<xi\>:\<bbb-R\><rsup|d>\<rightarrow\>\<bbb-R\><rsup|d>>
+  and the residue <math|\<omicron\><around*|(|\<Delta\>t|)>> is smooth on
+  <math|x>. Comparing with action <reference|equation:langevin action
+  constant covariance>, we find <math|\<varphi\><around*|(|x|)>=f<around*|(|x|)>>,
+  and <math|\<xi\><around*|(|x|)>=f<rsup|2><around*|(|x|)>/2>. There are
+  another two differences between them. Here, we do not fix boundary (namely,
+  the fixed boundary <math|x<rsub|N>> in action <reference|equation:langevin
+  action constant covariance>, resulted from master equation
+  <reference|equation:path integral master equation>), and let the index
+  <math|i> run from <math|-\<infty\>> to <math|+\<infty\>> rather than from
+  <math|0> to <math|N>. As we will see later in this section, these
+  generalizations are crucial for deriving renormalization group. To fixed
+  the boundary and limit the index range, all we need to do is inserting two
+  Dirac's delta functions into the path integral as
+
+  <\equation*>
+    <big|int>D<around*|(|x|)> exp<around*|(|-S<around*|(|x|)>|)>
+    \<delta\><around*|(|x<rsub|0>-y|)> \<delta\><around*|(|x<rsub|N>-z|)>.
+  </equation*>
+
+  It fixes <math|X<rsub|0>> to <math|y> and <math|X<rsub|N>> to <math|z>, and
+  seperates the index range into three <em|independent> parts: from
+  <math|-\<infty\>> to <math|0>, from <math|0> to <math|N>, and from <math|N>
+  to <math|+\<infty\>>. We simply pick up the second part for our interest.
+
+  Renormalization group technique bases on the fact that there are as many
+  even numbers as integers. This is a famous result that was first claimed by
+  George Cantor. For our purpose, we marginalize all the variable
+  <math|x<rsub|i>> in <math|q<around*|(|x|)>> where <math|i> is odd. Namely,
+  we are to compute the <strong|effective action> <math|S<rprime|'>> defined
+  by
+
+  <\equation>
+    S<rprime|'><around*|(|x|)>\<assign\>-ln<around*|[|<big|prod><rsub|i\<in\>\<bbb-Z\>><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|2i+1>
+    exp<around*|(|-S<around*|(|x|)>|)>|]>,<label|equation:rg integral>
+  </equation>
+
+  where <math|S<rprime|'><around*|(|\<ldots\>,x<rsub|-4>,x<rsub|-2>,x<rsub|0>,x<rsub|2>,x<rsub|4>,\<ldots\>|)>>
+  contains only the variables with even index. Because of Cantor's discovery,
+  <math|S<rprime|'>> has the same number of arguments as <math|S>. Further,
+  it is to be revealed that, by a proper re-scaling of <math|x>,
+  <math|S<rprime|'>> will have exactly the same form as <math|S>, difference
+  only in parameter (for example, the couplings in the expression). This
+  process, transforming the action in its paramter space, is called
+  <strong|renormalization group transformation>.
+
+  Why does renormalization group help investigate long range propagation of
+  information? For example, consider the situation where
+  <math|\<varphi\><rsup|\<alpha\>><around*|(|x|)>> and
+  <math|\<xi\><rsup|\<alpha\>><around*|(|x|)>> are independent of
+  <math|x<rsup|\<gamma\>>>, so that <math|X<rsup|\<alpha\>>> cannot affect
+  <math|X<rsup|\<gamma\>>> directly. But if there exists a component
+  <math|X<rsup|\<beta\>>> which interacts with both <math|X<rsup|\<alpha\>>>
+  and <math|X<rsup|\<gamma\>>>, then <math|X<rsup|\<beta\>>> as a medium
+  propagates information from <math|X<rsup|\<alpha\>>> to
+  <math|X<rsup|\<gamma\>>>. When <math|X<rsub|2i+1>> is marginalized, the
+  original indirect path <math|X<rsub|2i><rsup|\<alpha\>>\<rightarrow\>X<rsub|2i+1><rsup|\<beta\>>\<rightarrow\>X<rsup|\<gamma\>><rsub|2i+2>>
+  is merged to be direct <math|X<rsub|2i><rsup|\<alpha\>>\<rightarrow\>X<rsup|\<gamma\>><rsub|2i+2>>.
+  So, we can manifestly find the long range interaction (or propagation)
+  between components emerges from replicating renormalization group
+  transformation.
+
+  <subsection|Renormalization Group: Preliminary Situation><label|section:
+  Renormalization Group in Preliminary Situation>
+
+  We are to show how to perform the integration <reference|equation:rg
+  integral> for any <math|i>. But in this section, we first investigate a
+  simple situation, where <math|\<varphi\>> and <math|\<xi\>> are constants.
+  As in the case of Wiener process discussed in section <reference|section:
+  How Far Will Information Propagate in Langevin Process?>, components are
+  independent with each other. Although, it has serveral benefits.
+  Considering a simple situation helps us get familiar with the calculation,
+  which might be very complex. Secondly, its result provides some insights to
+  the essense. It also helps check the result of the full calculation.
+
+  The <math|x<rsub|2i+1>> appears in action <reference|equation:rg action> in
+  terms with subscripts <math|2i+1> and <math|2i>. So, we are to integrate
+  <math|<big|int>\<mathd\>x<rsub|2i+1>exp<around*|(|-<big|sum><rsub|\<alpha\>>J<rsup|\<alpha\>>|)>>
+  where
+
+  <\equation*>
+    J<rsup|\<alpha\>>\<assign\><frac|<around*|(|x<rsup|\<alpha\>><rsub|2i+1>-x<rsup|\<alpha\>><rsub|2i>|)><rsup|2>|2\<Delta\>t>+<frac|<around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i+1>|)><rsup|2>|2\<Delta\>t>+<around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)>
+    \<varphi\><rsup|\<alpha\>>+2\<xi\><rsup|\<alpha\>>\<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>.
+  </equation*>
+
+  We first notice the algebraic identity
+
+  <\equation*>
+    <frac|<around*|(|x<rsup|\<alpha\>><rsub|2i+1>-x<rsup|\<alpha\>><rsub|2i>|)><rsup|2>|2\<Delta\>t>+<frac|<around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i+1>|)><rsup|2>|2\<Delta\>t>=<frac|<around*|(|
+    x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)><rsup|2>|4\<Delta\>t>+<frac|1|\<Delta\>t><around*|[|x<rsup|\<alpha\>><rsub|2i+1>-<frac|x<rsup|\<alpha\>><rsub|2i>+
+    x<rsup|\<alpha\>><rsub|2i+2>|2>|]><rsup|2>.
+  </equation*>
+
+  Remark that the first term on the right hand side looks like that in action
+  <reference|equation:rg action>, except for an <math|1/2> factor. Then, by
+  defining <math|y\<assign\>x<rsub|2i+1>-<around*|(|x<rsub|2i+2>+
+  x<rsub|2i>|)>/2>, the integral becomes
+
+  <\equation*>
+    exp<around*|(|-<big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|<frac|<around*|(|
+    x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)><rsup|2>|4\<Delta\>t>+<around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)>
+    \<varphi\><rsup|\<alpha\>>+2\<xi\><rsup|\<alpha\>>\<Delta\>t|]>|)><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    <big|prod><rsub|\<alpha\>=1><rsup|d>exp<around*|(|-<frac|<around*|(|y<rsup|\<alpha\>>|)><rsup|2>|\<Delta\>t>+\<omicron\><around*|(|\<Delta\>t|)>|)>.
+  </equation*>
+
+  The integral of <math|y> has Taylor expansion
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    <big|prod><rsub|\<alpha\>=1><rsup|d>exp<around*|(|-<frac|<around*|(|y<rsup|\<alpha\>>|)><rsup|2>|\<Delta\>t>|)>+<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    <big|prod><rsub|\<alpha\>=1><rsup|d>exp<around*|(|-<frac|<around*|(|y<rsup|\<alpha\>>|)><rsup|2>|\<Delta\>t>|)>
+    \<omicron\><around*|(|\<Delta\>t|)>.
+  </equation*>
+
+  The first term is a constant. For the second term, we can view
+  <math|\<omicron\><around*|(|\<Delta\>t|)>> as a function
+  <math|\<rho\><rsub|\<Delta\>t><around*|(|y|)>>. Since
+  <math|\<rho\><rsub|\<Delta\>t>> is smooth, we can Taylor expand it at
+  <math|y=0>, as
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    <big|prod><rsub|\<alpha\>=1><rsup|d>exp<around*|(|-<frac|<around*|(|y<rsup|\<alpha\>>|)><rsup|2>|\<Delta\>t>|)>
+    \<rho\><rsub|\<Delta\>t><around*|(|0|)>+<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    <big|prod><rsub|\<alpha\>=1><rsup|d>exp<around*|(|-<frac|<around*|(|y<rsup|\<alpha\>>|)><rsup|2>|\<Delta\>t>|)>
+    \<partial\><rsub|\<beta\>>\<rho\><rsub|\<Delta\>t><around*|(|0|)>y<rsup|\<beta\>>+\<cdots\>.
+  </equation*>
+
+  This is a series of moments of normal distribution with zero mean and
+  variance <sqrt|\<Delta\>t/2> (up to a normalization factor
+  <math|<around*|(|\<mathpi\> \<Delta\>t|)><rsup|d/2>>). The higher the order
+  of moment it is, the more <math|<sqrt|\<Delta\>t>> factors it contains. So,
+  the series converges to the same order of
+  <math|\<rho\><rsub|\<Delta\>t><around*|(|0|)>>, which is
+  <math|\<omicron\><around*|(|\<Delta\>t|)>>. So, the integral results in a
+  constant plus an <math|\<omicron\><around*|(|\<Delta\>t|)>>, or
+  <math|exp<around*|(|const+\<omicron\><around*|(|\<Delta\>t|)>|)>>. Hence,
+  up to a constant, we find
+
+  <\equation*>
+    -ln<around*|[|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|2i+1>exp<around*|(|-<big|sum><rsub|\<alpha\>=1><rsup|d>J<rsup|\<alpha\>>|)>|]>=<big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|<frac|<around*|(|
+    x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)><rsup|2>|4\<Delta\>t>+<around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)>
+    \<varphi\><rsup|\<alpha\>>+2\<xi\><rsup|\<alpha\>>\<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>|]>.
+  </equation*>
+
+  Plugging back to equation <reference|equation:rg integral>, we arrive at
+
+  <\equation*>
+    S<rprime|'><around*|(|x|)>=<big|sum><rsub|i=-\<infty\>><rsup|+\<infty\>><big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|<frac|<around*|(|
+    x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)><rsup|2>|4\<Delta\>t>+<around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)>
+    \<varphi\><rsup|\<alpha\>>+2\<xi\><rsup|\<alpha\>>\<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>|]>.
+  </equation*>
+
+  To match the form of action <reference|equation:rg action>, we have to
+  define <math|x<rprime|'><rsub|i>\<assign\>x<rsub|2i>/<sqrt|2>>,
+  <math|\<varphi\><rprime|'>\<assign\><sqrt|2>\<varphi\>>, and
+  <math|\<xi\><rprime|'>\<assign\>2\<xi\>>. Then, it becomes
+
+  <\equation*>
+    S<rprime|'><around*|(|x<rprime|'>|)>=<big|sum><rsub|i=-\<infty\>><rsup|+\<infty\>><big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|<frac|<around*|(|x<rprime|'><rsup|\<alpha\>><rsub|i+1>-
+    x<rprime|'><rsup|\<alpha\>><rsub|i>|)><rsup|2>|2\<Delta\>t>+<around*|(|x<rprime|'><rsup|\<alpha\>><rsub|i+1>-
+    x<rprime|'><rsup|\<alpha\>><rsub|i>|)>
+    \<varphi\><rprime|'><rsup|\<alpha\>>+\<xi\><rprime|'><rsup|\<alpha\>>\<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>|]>,
+  </equation*>
+
+  which is exactly the same form as action <reference|equation:rg action>.
+
+  What does this result indicates. Integrating over odd frames is \Pzooming
+  out\Q along the temporal dimension, <math|i\<rightarrow\>i/2>. To recover
+  the original action, we have to \Pzoom out\Q along spatial dimension,
+  <math|x\<rightarrow\>x/<sqrt|2>>. Interestingly, there is an extra square
+  root for spatial dimension.<\footnote>
+    In fact, this is a natural result of central limit theorem, or the so
+    called \Psquare root rule\Q, which is the theoritical base of Monte-Carlo
+    simulation.
+  </footnote> Accordingly, <math|\<varphi\>> is rescaled by an increment,
+  <math|\<varphi\>\<rightarrow\><sqrt|2>\<varphi\>>, and
+  <math|\<xi\>\<rightarrow\>2\<xi\>>. Since <math|\<varphi\>> is <math|f> in
+  action <reference|equation:langevin action constant covariance>, and
+  <math|\<xi\>> is <math|f<rsup|2>/2>, we find this relation is kept by the
+  marginalization.
+
+  The <math|\<varphi\>> (or <math|f>) plays the role of \Pvelocity\Q.
+  Precisely, since we have rescaled the temporal dimension by factor
+  <math|1/2>, velocity should be rescaled by a factor <math|2> (because
+  velocity is inversely proportional to time). Then, if we also rescaled the
+  spatial dimension by the same factor <math|1/2>, then velocity should be
+  further rescaled by factor <math|1/2> (because velocity is proportional to
+  distance). But, the fact is that spatial dimension is rescaled by factor
+  <math|1/<sqrt|2>>. Thus, the total rescaling for velocity is
+  <math|2/<sqrt|2>=<sqrt|2>>, intead of <math|2/2=1>. Speed becomes faster
+  because of the different rescaling factors for temporal and spatial
+  dimensions.
+
+  <subsection|Renormalization Group: Step 1>
+
+  After dealing with the simple situation in section <reference|section:
+  Renormalization Group in Preliminary Situation>, we turn to the full
+  calculation of effective action <math|S<rprime|'>>. We start at
+
+  <\align>
+    <tformat|<table|<row|<cell|>|<cell|J<rsup|\<alpha\>>\<assign\><frac|<around*|(|
+    x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)><rsup|2>|4\<Delta\>t>+<frac|1|\<Delta\>t><around*|[|x<rsup|\<alpha\>><rsub|2i+1>-<frac|x<rsup|\<alpha\>><rsub|2i>+
+    x<rsup|\<alpha\>><rsub|2i+2>|2>|]><rsup|2>>>|<row|<cell|+>|<cell|<around*|(|x<rsup|\<alpha\>><rsub|2i+1>-x<rsup|\<alpha\>><rsub|2i>|)>
+    \<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i>|)>+<around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i+1>|)>
+    \<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+1>|)>+<around*|[|\<xi\><rsup|\<alpha\>><around*|(|x<rsub|2i>|)>+\<xi\><rsup|\<alpha\>><around*|(|x<rsub|2i+1>|)>|]>\<Delta\>t.>>>>
+  </align>
+
+  For convience, define <math|<wide|x|\<bar\>>\<assign\><around*|(|x<rsub|2i+2>+
+  x<rsub|2i>|)>/2>, thus <math|y=x<rsub|2i+1>-<wide|x|\<bar\>>>. Thus, the
+  second term in the first line becomes <math|<around*|(|y<rsup|\<alpha\>>|)><rsup|2>/\<Delta\>t>.
+  It might indicate a Gaussian integral again, with zero mean and variance
+  <math|<sqrt|\<Delta\>t/2>>. But since the <math|\<varphi\>> and
+  <math|\<xi\>> depend on <math|x<rsub|2i+1>>, thus <math|y>, the integral is
+  not purely Gaussian. Instead, it is a perturbation to the original Gaussian
+  integral. The perturbation is characterized by the small <math|\<Delta\>t>,
+  since roughly we have the estimation <math|y=<with|font|cal|O><around*|(|<sqrt|\<Delta\>t>|)>>.
+  Indeed, Taylor expanding the second line of <math|J<rsup|\<alpha\>>> gives
+  (denote <math|\<Delta\>x\<assign\><around*|(|x<rsub|2i+2>-x<rsub|2i>|)>/2>)
+
+  <\align>
+    <tformat|<table|<row|<cell|>|<cell|<around*|(|\<Delta\>x+y|)>
+    \<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i>|)>+<around*|(|\<Delta\>x-y|)>
+    \<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>>+y|)>+<around*|[|\<xi\><rsup|\<alpha\>><around*|(|x<rsub|2i>|)>+\<xi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>>+y|)>|]>\<Delta\>t.>>|<row|<cell|=>|<cell|\<Delta\>x<rsup|\<alpha\>>
+    <around*|[|\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i>|)>+\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>>|)>|]>+<around*|[|\<xi\><rsup|\<alpha\>><around*|(|x<rsub|2i>|)>+\<xi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>>|)>|]>
+    \<Delta\>t>>|<row|<cell|+>|<cell|y<rsup|\<alpha\>>
+    <around*|[|\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i>|)>-\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>>|)>|]>+\<Delta\>x<rsup|\<alpha\>>y<rsup|\<beta\>>\<partial\><rsub|\<beta\>>\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>>|)>>>|<row|<cell|+>|<cell|<frac|1|2>\<Delta\>x<rsup|\<alpha\>>y<rsup|\<beta\>>y<rsup|\<gamma\>>\<partial\><rsub|\<beta\>>\<partial\><rsub|\<gamma\>>\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>>|)>-y<rsup|\<alpha\>>y<rsup|\<beta\>>\<partial\><rsub|\<beta\>>\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>>|)>>>|<row|<cell|+>|<cell|\<omicron\><around*|(|\<Delta\>t|)>.>>>>
+  </align>
+
+  So, we find
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|2i+1>exp<around*|(|-<big|sum><rsub|\<alpha\>=1><rsup|d>J<rsup|\<alpha\>>|)>=exp<around*|(|-<big|sum><rsub|\<alpha\>=1><rsup|d>I<rsup|\<alpha\>>|)>\<times\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    exp<around*|(|-<frac|1|2><big|sum><rsub|\<alpha\>=1><rsup|d><around*|(|<frac|y<rsup|\<alpha\>>|<sqrt|\<Delta\>t/2>>|)><rsup|2>-<big|sum><rsub|\<alpha\>=1><rsup|d>V<rsup|\<alpha\>>+\<omicron\><around*|(|\<Delta\>t|)>|)>,
+  </equation*>
+
+  where
+
+  <\equation*>
+    I<rsup|\<alpha\>>\<assign\><frac|<around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)><rsup|2>|4\<Delta\>t>+\<Delta\>x<rsup|\<alpha\>><around*|[|\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i>|)>+\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>>|)>|]>+<around*|[|\<xi\><rsup|\<alpha\>><around*|(|x<rsub|2i>|)>+\<xi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>>|)>|]>\<Delta\>t
+  </equation*>
+
+  collects the terms independent of <math|y>, and
+
+  <\equation*>
+    V<rsup|\<alpha\>>\<assign\>y<rsup|\<alpha\>>
+    <around*|[|\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i>|)>-\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>>|)>|]>+\<Delta\>x<rsup|\<alpha\>>y<rsup|\<beta\>>\<partial\><rsub|\<beta\>>\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>>|)>+<frac|1|2>\<Delta\>x<rsup|\<alpha\>>y<rsup|\<beta\>>y<rsup|\<gamma\>>\<partial\><rsub|\<beta\>>\<partial\><rsub|\<gamma\>>\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>>|)>-y<rsup|\<alpha\>>y<rsup|\<beta\>>\<partial\><rsub|\<beta\>>\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>>|)>
+  </equation*>
+
+  is perturbative. Taylor expanding the right hand side by
+  <math|V<rsup|\<alpha\>>> gives
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|2i+1>exp<around*|(|-<big|sum><rsub|\<alpha\>=1><rsup|d>J<rsup|\<alpha\>>|)>=exp<around*|(|-<big|sum><rsub|\<alpha\>=1><rsup|d>I<rsup|\<alpha\>>|)>\<times\><around*|{|1-<big|sum><rsub|\<alpha\>=1><rsup|d>\<bbb-E\><rsub|Y><around*|[|V<rsup|\<alpha\>>|]>+<frac|1|2><big|sum><rsub|\<alpha\>,\<beta\>=1><rsup|d>\<bbb-E\><rsub|Y><around*|[|V<rsup|\<alpha\>>V<rsup|\<beta\>>|]>+\<omicron\><around*|(|\<Delta\>t|)>|}>,
+  </equation*>
+
+  where <math|\<bbb-E\><rsub|Y><around*|[|\<ldots\>|]>> represents the
+  Gaussian integral of <math|y>. We will neglect the constant factor
+  <math|<around*|(|\<mathpi\> \<epsilon\>|)><rsup|-d/2>>, so that
+  <math|\<bbb-E\><rsub|Y><around*|[|1|]>=1>. This constant factor can be
+  absorbed into the action as an irrelevant constant term. In addition, we
+  have moved the residue <math|\<omicron\><around*|(|\<Delta\>t|)>> out of
+  the integral for the same reason in the prelimiary section. Thus,
+
+  <\equation*>
+    S<rprime|'><around*|(|x|)>=<big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|I<rsup|\<alpha\>>+\<bbb-E\><rsub|Y><around*|[|V<rsup|\<alpha\>>|]>-<frac|1|2><big|sum><rsub|\<beta\>=1><rsup|d>\<bbb-E\><rsub|Y><around*|[|V<rsup|\<alpha\>>V<rsup|\<beta\>>|]>|]>+\<omicron\><around*|(|\<Delta\>t|)>
+  </equation*>
+
+  Plugging in the definition of <math|V<rsup|\<alpha\>><around*|(|y|)>>,
+  together with <math|\<bbb-E\><rsub|Y><around*|[|y<rsup|\<alpha\>>|]>=0> and
+  <math|\<bbb-E\><rsub|Y><around*|[|y<rsup|\<alpha\>>
+  y<rsup|\<beta\>>|]>=<around*|(|\<Delta\>t/2|)>
+  \<delta\><rsub|\<alpha\>\<beta\>>>, we get
+
+  <\equation*>
+    \<bbb-E\><around*|[|V<rsup|\<alpha\>><around*|(|y|)>|]>=\<Delta\>t<around*|[|<frac|1|4>\<Delta\>x<rsup|\<alpha\>>\<vartriangle\>\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>>|)>-<frac|1|2>\<partial\><rsub|\<alpha\>>\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>>|)>|]>,
+  </equation*>
+
+  where <math|\<vartriangle\>\<assign\>\<delta\><rsup|\<alpha\>\<beta\>>\<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>>
+  represents Laplacian operator, and
+
+  <\align>
+    <tformat|<table|<row|<cell|<frac|1|2><big|sum><rsub|\<beta\>=1><rsup|d>\<bbb-E\><rsub|Y><around*|[|V<rsup|\<alpha\>>V<rsup|\<beta\>>|]>=>|<cell|<frac|\<Delta\>t|4><around*|[|\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i>|)>-\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>>|)>|]><rsup|2>>>|<row|<cell|+>|<cell|<frac|\<Delta\>t|2><big|sum><rsub|\<beta\>=1><rsup|d><around*|[|\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i>|)>-\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>>|)>|]>\<Delta\>x<rsup|\<beta\>>\<partial\><rsub|\<alpha\>>\<varphi\><rsup|\<beta\>><around*|(|<wide|x|\<bar\>>|)>>>|<row|<cell|+>|<cell|<frac|\<Delta\>t|4><big|sum><rsub|\<beta\>,\<gamma\>=1><rsup|d>\<Delta\>x<rsup|\<alpha\>>\<Delta\>x<rsup|\<beta\>>\<partial\><rsub|\<gamma\>>\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>>|)>\<partial\><rsub|\<gamma\>>\<varphi\><rsup|\<beta\>><around*|(|<wide|x|\<bar\>>|)>.>>>>
+  </align>
+
+  Thus,
+
+  <\equation*>
+    S<rprime|'><around*|(|x|)>=<big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|<frac|<around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)><rsup|2>|4\<Delta\>t>+<frac|1|2><around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)><around*|[|\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i>|)>+\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>>|)>|]>+\<Delta\>t
+    \<chi\><rsup|a><around*|(|x<rsub|2i>,x<rsub|2i+2>|)>|]>+\<omicron\><around*|(|\<Delta\>t|)>,
+  </equation*>
+
+  where
+
+  <\equation*>
+    \<chi\><rsup|a><around*|(|x<rsub|2i>,x<rsub|2i+2>|)>\<assign\><around*|[|\<xi\><rsup|\<alpha\>><around*|(|x<rsub|2i>|)>+\<xi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>>|)>|]>+<frac|1|8><around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)>\<vartriangle\>\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>>|)>-<frac|1|2>\<partial\><rsub|\<alpha\>>\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>>|)>-<frac|1|4><around*|[|\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i>|)>-\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>>|)>|]><rsup|2>-<frac|1|4><big|sum><rsub|\<beta\>=1><rsup|d><around*|[|\<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i>|)>-\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>>|)>|]><around*|(|x<rsup|\<beta\>><rsub|2i+2>-x<rsup|\<beta\>><rsub|2i>|)>\<partial\><rsub|\<alpha\>>\<varphi\><rsup|\<beta\>><around*|(|<wide|x|\<bar\>>|)>-<frac|1|16><big|sum><rsub|\<beta\>,\<gamma\>=1><rsup|d><around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)><around*|(|x<rsup|\<beta\>><rsub|2i+2>-x<rsup|\<beta\>><rsub|2i>|)>\<partial\><rsub|\<gamma\>>\<varphi\><rsup|\<alpha\>><around*|(|<wide|x|\<bar\>>|)>\<partial\><rsub|\<gamma\>>\<varphi\><rsup|\<beta\>><around*|(|<wide|x|\<bar\>>|)>.
+  </equation*>
+
+  When <math|\<varphi\>> is constant, we find
+  <math|\<chi\><rsup|\<alpha\>>=2\<xi\><rsup|\<alpha\>><around*|(|x<rsub|2i>|)>>.
+  This is consistent with the result obtained in the preliminary section
+  <reference|section: Renormalization Group in Preliminary Situation>.
+
+  <section|Renormalization Group>
+
+  Renormalization group was first proposed by Murray Gell-Mann and Francis
+  Low in 1954, applied to quantum field theory of fundamental particles.
+  Following this research, Kenneth Wilson, who was a PhD student of
+  Gell-Mann, started his malathion in 1961. He published his first paper on
+  renormalization group eight years later, in 1969. This technique was then
+  further developed and applied to many areas in and even out of physics,
+  such as biology, society, and finance.
+
+  To show how it works, we start with an action that is generalized from
+  action <reference|equation:langevin action constant R>, as
+
+  <\equation>
+    S<around*|(|x|)>=<big|sum><rsub|i=-\<infty\>><rsup|+\<infty\>><big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|<frac|<around*|(|x<rsup|\<alpha\>><rsub|i+1>-x<rsup|\<alpha\>><rsub|i>|)><rsup|2>|2\<Delta\>t>+<around*|(|x<rsup|\<alpha\>><rsub|i+1>-x<rsup|\<alpha\>><rsub|i>|)>
+    \<varphi\><rsup|\<alpha\>><around*|(|x<rsub|i+1>,x<rsub|i>|)>+\<xi\><rsup|\<alpha\>><around*|(|x<rsub|i+1>,x<rsub|i>|)>\<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>|]>,<label|equation:rg
+    action>
+  </equation>
+
+  where <math|\<varphi\>,\<xi\>:\<bbb-R\><rsup|d>\<rightarrow\>\<bbb-R\><rsup|d>>
+  and the residue <math|\<omicron\><around*|(|\<Delta\>t|)>> is smooth on
+  <math|x>. Comparing with action <reference|equation:langevin action
+  constant covariance>, we find <math|\<varphi\><around*|(|x,y|)>=f<around*|(|y|)>>,
+  and <math|\<xi\><around*|(|x,y|)>=f<rsup|2><around*|(|y|)>/2>. There are
+  another two differences between them. Here, we do not fix boundary (namely,
+  the fixed boundary <math|x<rsub|N>> in action <reference|equation:langevin
+  action constant covariance>, resulted from master equation
+  <reference|equation:path integral master equation>), and let the index
+  <math|i> run from <math|-\<infty\>> to <math|+\<infty\>> rather than from
+  <math|0> to <math|N>. As we will see later in this section, these
+  generalizations are crucial for deriving renormalization group. To fixed
+  the boundary and limit the index range, all we need to do is inserting two
+  Dirac's delta functions into the path integral as
+
+  <\equation*>
+    <big|int>D<around*|(|x|)> exp<around*|(|-S<around*|(|x|)>|)>
+    \<delta\><around*|(|x<rsub|0>-y|)> \<delta\><around*|(|x<rsub|N>-z|)>.
+  </equation*>
+
+  It fixes <math|X<rsub|0>> to <math|y> and <math|X<rsub|N>> to <math|z>, and
+  seperates the index range into three <em|independent> parts: from
+  <math|-\<infty\>> to <math|0>, from <math|0> to <math|N>, and from <math|N>
+  to <math|+\<infty\>>. We simply pick up the second part for our interest.
+
+  Renormalization group technique bases on the fact that there are as many
+  even numbers as integers. This is a famous result that was first claimed by
+  George Cantor. For our purpose, we marginalize all the variable
+  <math|x<rsub|i>> in <math|q<around*|(|x|)>> where <math|i> is odd. Namely,
+  we are to compute the <strong|effective action> <math|S<rprime|'>> defined
+  by
+
+  <\equation>
+    S<rprime|'><around*|(|x|)>\<assign\>-ln<around*|[|<big|prod><rsub|i\<in\>\<bbb-Z\>><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|2i+1>
+    exp<around*|(|-S<around*|(|x|)>|)>|]>,<label|equation:rg integral>
+  </equation>
+
+  where <math|S<rprime|'><around*|(|\<ldots\>,x<rsub|-4>,x<rsub|-2>,x<rsub|0>,x<rsub|2>,x<rsub|4>,\<ldots\>|)>>
+  contains only the variables with even index. Because of Cantor's discovery,
+  <math|S<rprime|'>> has the same number of arguments as <math|S>. Further,
+  it is to be revealed that, by a proper re-scaling of <math|x>,
+  <math|S<rprime|'>> will have exactly the same form as <math|S>, difference
+  only in parameter (for example, the couplings in the expression). This
+  process, transforming the action in its paramter space, is called
+  <strong|renormalization group transformation>.
+
+  Why does renormalization group help investigate long range propagation of
+  information? For example, consider the situation where
+  <math|f<rsup|\<alpha\>><around*|(|x|)>> (thus,
+  <math|\<varphi\><rsup|\<alpha\>>> and <math|\<xi\><rsup|\<alpha\>>>) is
+  independent of <math|x<rsup|\<gamma\>>>, so that <math|X<rsup|\<alpha\>>>
+  cannot affect <math|X<rsup|\<gamma\>>> directly. But if there exists a
+  component <math|X<rsup|\<beta\>>> which interacts with both
+  <math|X<rsup|\<alpha\>>> and <math|X<rsup|\<gamma\>>>, then
+  <math|X<rsup|\<beta\>>> as a medium propagates information from
+  <math|X<rsup|\<alpha\>>> to <math|X<rsup|\<gamma\>>>. When
+  <math|X<rsub|2i+1>> is marginalized, the original indirect path
+  <math|X<rsub|2i><rsup|\<alpha\>>\<rightarrow\>X<rsub|2i+1><rsup|\<beta\>>\<rightarrow\>X<rsup|\<gamma\>><rsub|2i+2>>
+  is merged to be direct <math|X<rsub|2i><rsup|\<alpha\>>\<rightarrow\>X<rsup|\<gamma\>><rsub|2i+2>>.
+  So, we can manifestly find the long range interaction (or propagation)
+  between components emerges from replicating renormalization group
+  transformation.
+
+  <subsection|Renormalization Group: Preliminary Situation (Version
+  2)><label|section: Renormalization Group in Preliminary Situation>
+
+  We are to show how to perform the integration <reference|equation:rg
+  integral> for any <math|i>. But in this section, we first investigate a
+  simple situation, where <math|\<varphi\>> and <math|\<xi\>> are constants.
+  As in the case of Wiener process discussed in section <reference|section:
+  How Far Will Information Propagate in Langevin Process?>, components are
+  independent with each other. Although, it has serveral benefits.
+  Considering a simple situation helps us get familiar with the calculation,
+  which might be very complex. Secondly, its result provides some insights to
+  the essense. It also helps check the result of the full calculation.
+
+  The <math|x<rsub|2i+1>> appears in action <reference|equation:rg action> in
+  terms with subscripts <math|2i+1> and <math|2i>. So, we are to integrate
+  <math|<big|int>\<mathd\>x<rsub|2i+1>exp<around*|(|-<big|sum><rsub|\<alpha\>>J<rsup|\<alpha\>>|)>>
+  where
+
+  <\equation*>
+    J<rsup|\<alpha\>>\<assign\><frac|<around*|(|x<rsup|\<alpha\>><rsub|2i+1>-x<rsup|\<alpha\>><rsub|2i>|)><rsup|2>|2\<Delta\>t>+<frac|<around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i+1>|)><rsup|2>|2\<Delta\>t>+<around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)>
+    \<varphi\><rsup|\<alpha\>>+2\<xi\><rsup|\<alpha\>>\<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>.
+  </equation*>
+
+  We first notice the algebraic identity
+
+  <\equation*>
+    <frac|<around*|(|x<rsup|\<alpha\>><rsub|2i+1>-x<rsup|\<alpha\>><rsub|2i>|)><rsup|2>|2\<Delta\>t>+<frac|<around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i+1>|)><rsup|2>|2\<Delta\>t>=<frac|<around*|(|
+    x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)><rsup|2>|4\<Delta\>t>+<frac|1|\<Delta\>t><around*|[|x<rsup|\<alpha\>><rsub|2i+1>-<frac|x<rsup|\<alpha\>><rsub|2i>+
+    x<rsup|\<alpha\>><rsub|2i+2>|2>|]><rsup|2>.
+  </equation*>
+
+  Remark that the first term on the right hand side looks like that in action
+  <reference|equation:rg action>, except for an <math|1/2> factor. Then, by
+  defining <math|y\<assign\>x<rsub|2i+1>-<around*|(|x<rsub|2i+2>+
+  x<rsub|2i>|)>/2>, the integral becomes
+
+  <\equation*>
+    exp<around*|(|-<big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|<frac|<around*|(|
+    x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)><rsup|2>|4\<Delta\>t>+<around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)>
+    \<varphi\><rsup|\<alpha\>>+2\<xi\><rsup|\<alpha\>>\<Delta\>t|]>|)><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    <big|prod><rsub|\<alpha\>=1><rsup|d>exp<around*|(|-<frac|<around*|(|y<rsup|\<alpha\>>|)><rsup|2>|\<Delta\>t>+\<omicron\><around*|(|\<Delta\>t|)>|)>.
+  </equation*>
+
+  The integral of <math|y> has Taylor expansion
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    <big|prod><rsub|\<alpha\>=1><rsup|d>exp<around*|(|-<frac|<around*|(|y<rsup|\<alpha\>>|)><rsup|2>|\<Delta\>t>|)>+<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    <big|prod><rsub|\<alpha\>=1><rsup|d>exp<around*|(|-<frac|<around*|(|y<rsup|\<alpha\>>|)><rsup|2>|\<Delta\>t>|)>
+    \<omicron\><around*|(|\<Delta\>t|)>.
+  </equation*>
+
+  The first term is a constant. For the second term, we can view
+  <math|\<omicron\><around*|(|\<Delta\>t|)>> as a function
+  <math|\<rho\><rsub|\<Delta\>t><around*|(|y|)>>. Since
+  <math|\<rho\><rsub|\<Delta\>t>> is smooth, we can Taylor expand it at
+  <math|y=0>, as
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    <big|prod><rsub|\<alpha\>=1><rsup|d>exp<around*|(|-<frac|<around*|(|y<rsup|\<alpha\>>|)><rsup|2>|\<Delta\>t>|)>
+    \<rho\><rsub|\<Delta\>t><around*|(|0|)>+<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    <big|prod><rsub|\<alpha\>=1><rsup|d>exp<around*|(|-<frac|<around*|(|y<rsup|\<alpha\>>|)><rsup|2>|\<Delta\>t>|)>
+    \<partial\><rsub|\<beta\>>\<rho\><rsub|\<Delta\>t><around*|(|0|)>y<rsup|\<beta\>>+\<cdots\>.
+  </equation*>
+
+  This is a series of moments of normal distribution with zero mean and
+  variance <sqrt|\<Delta\>t/2> (up to a normalization factor
+  <math|<around*|(|\<mathpi\> \<Delta\>t|)><rsup|d/2>>). The higher the order
+  of moment it is, the more <math|<sqrt|\<Delta\>t>> factors it contains. So,
+  the series converges to the same order of
+  <math|\<rho\><rsub|\<Delta\>t><around*|(|0|)>>, which is
+  <math|\<omicron\><around*|(|\<Delta\>t|)>>. So, the integral results in a
+  constant plus an <math|\<omicron\><around*|(|\<Delta\>t|)>>, or
+  <math|exp<around*|(|const+\<omicron\><around*|(|\<Delta\>t|)>|)>>. Hence,
+  up to a constant, we find
+
+  <\equation*>
+    -ln<around*|[|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|2i+1>exp<around*|(|-<big|sum><rsub|\<alpha\>=1><rsup|d>J<rsup|\<alpha\>>|)>|]>=<big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|<frac|<around*|(|
+    x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)><rsup|2>|4\<Delta\>t>+<around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)>
+    \<varphi\><rsup|\<alpha\>>+2\<xi\><rsup|\<alpha\>>\<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>|]>.
+  </equation*>
+
+  Plugging back to equation <reference|equation:rg integral>, we arrive at
+
+  <\equation*>
+    S<rprime|'><around*|(|x|)>=<big|sum><rsub|i=-\<infty\>><rsup|+\<infty\>><big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|<frac|<around*|(|
+    x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)><rsup|2>|4\<Delta\>t>+<around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)>
+    \<varphi\><rsup|\<alpha\>>+2\<xi\><rsup|\<alpha\>>\<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>|]>.
+  </equation*>
+
+  To match the form of action <reference|equation:rg action>, we have to
+  define <math|x<rprime|'><rsub|i>\<assign\>x<rsub|2i>/<sqrt|2>>,
+  <math|\<varphi\><rprime|'>\<assign\><sqrt|2>\<varphi\>>, and
+  <math|\<xi\><rprime|'>\<assign\>2\<xi\>>. Then, it becomes
+
+  <\equation*>
+    S<rprime|'><around*|(|x<rprime|'>|)>=<big|sum><rsub|i=-\<infty\>><rsup|+\<infty\>><big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|<frac|<around*|(|x<rprime|'><rsup|\<alpha\>><rsub|i+1>-
+    x<rprime|'><rsup|\<alpha\>><rsub|i>|)><rsup|2>|2\<Delta\>t>+<around*|(|x<rprime|'><rsup|\<alpha\>><rsub|i+1>-
+    x<rprime|'><rsup|\<alpha\>><rsub|i>|)>
+    \<varphi\><rprime|'><rsup|\<alpha\>>+\<xi\><rprime|'><rsup|\<alpha\>>\<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>|]>,
+  </equation*>
+
+  which is exactly the same form as action <reference|equation:rg action>.
+
+  What does this result indicates. Integrating over odd frames is \Pzooming
+  out\Q along the temporal dimension, <math|i\<rightarrow\>i/2>. To recover
+  the original action, we have to \Pzoom out\Q along spatial dimension,
+  <math|x\<rightarrow\>x/<sqrt|2>>. Interestingly, there is an extra square
+  root for spatial dimension.<\footnote>
+    In fact, this is a natural result of central limit theorem, or the so
+    called \Psquare root rule\Q, which is the theoritical base of Monte-Carlo
+    simulation.
+  </footnote> Accordingly, <math|\<varphi\>> is rescaled by an increment,
+  <math|\<varphi\>\<rightarrow\><sqrt|2>\<varphi\>>, and
+  <math|\<xi\>\<rightarrow\>2\<xi\>>. Since <math|\<varphi\>> is <math|f> in
+  action <reference|equation:langevin action constant covariance>, and
+  <math|\<xi\>> is <math|f<rsup|2>/2>, we find this relation is kept by the
+  marginalization.
+
+  The <math|\<varphi\>> (or <math|f>) plays the role of \Pvelocity\Q.
+  Precisely, since we have rescaled the temporal dimension by factor
+  <math|1/2>, velocity should be rescaled by a factor <math|2> (because
+  velocity is inversely proportional to time). Then, if we also rescaled the
+  spatial dimension by the same factor <math|1/2>, then velocity should be
+  further rescaled by factor <math|1/2> (because velocity is proportional to
+  distance). But, the fact is that spatial dimension is rescaled by factor
+  <math|1/<sqrt|2>>. Thus, the total rescaling for velocity is
+  <math|2/<sqrt|2>=<sqrt|2>>, intead of <math|2/2=1>. Speed becomes faster
+  because of the different rescaling factors for temporal and spatial
+  dimensions.
+
+  <subsection|Renormalization Group: Step 1>
+
+  After dealing with the simple situation in section <reference|section:
+  Renormalization Group in Preliminary Situation>, we turn to the full
+  calculation of effective action <math|S<rprime|'>>. We first simplify the
+  notation, replacing <math|x<rsub|2i+2>> by <math|y>, <math|x<rsub|2i>> by
+  <math|y<rprime|'>>, and <math|x<rsub|2i+1>> by <math|z>, then denoting
+  <math|<wide|y|\<bar\>>\<assign\><around*|(|y+y<rprime|'>|)>/2>. With these
+  notations, we have
+
+  <\align>
+    <tformat|<table|<row|<cell|J<rsup|\<alpha\>>\<assign\>>|<cell|<frac|<around*|(|
+    x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i>|)><rsup|2>|4\<Delta\>t>+<frac|1|\<Delta\>t><around*|[|x<rsup|\<alpha\>><rsub|2i+1>-<frac|x<rsup|\<alpha\>><rsub|2i>+
+    x<rsup|\<alpha\>><rsub|2i+2>|2>|]><rsup|2>>>|<row|<cell|>|<cell|+<around*|(|x<rsub|2i+1><rsup|\<alpha\>>-x<rsup|\<alpha\>><rsub|2i>|)>
+    \<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+1>,x<rsub|2i>|)>+<around*|(|x<rsup|\<alpha\>><rsub|2i+2>-x<rsup|\<alpha\>><rsub|2i+1>|)>
+    \<varphi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,x<rsub|2i+1>|)>>>|<row|<cell|>|<cell|+<around*|[|\<xi\><rsup|\<alpha\>><around*|(|x<rsub|2i+1>,x<rsub|2i>|)>+\<xi\><rsup|\<alpha\>><around*|(|x<rsub|2i+2>,x<rsub|2i+1>|)>|]>\<Delta\>t>>|<row|<cell|=>|<cell|<frac|<around*|(|
+    y<rsup|\<alpha\>>-y<rprime|'><rsup|\<alpha\>>|)><rsup|2>|4\<Delta\>t>+<frac|1|\<Delta\>t><around*|(|z<rsup|\<alpha\>>-<wide|y|\<bar\>><rsup|\<alpha\>>|)><rsup|2>>>|<row|<cell|>|<cell|+<around*|(|z<rsup|\<alpha\>>-y<rprime|'><rsup|\<alpha\>>|)>
+    \<varphi\><rsup|\<alpha\>><around*|(|z,y<rprime|'>|)>+<around*|(|y<rsup|\<alpha\>>-z<rsup|\<alpha\>>|)>
+    \<varphi\><rsup|\<alpha\>><around*|(|y,z|)>+<around*|[|\<xi\><rsup|\<alpha\>><around*|(|z,y<rprime|'>|)>+\<xi\><rsup|\<alpha\>><around*|(|y,z|)>|]>\<Delta\>t.>>>>
+  </align>
+
+  Because the <math|\<varphi\>> and <math|\<xi\>> depend on <math|y>, the
+  integral <math|<big|int>\<mathd\>z exp<around*|(|-<big|sum><rsub|\<alpha\>>J<rsup|\<alpha\>>|)>>
+  is not Gaussian anymore. Instead, it is a perturbation to the original
+  Gaussian integral. The small <math|\<Delta\>t> serves the perturbative
+  parameter, since roughly we have the estimation
+  <math|z-<wide|y|\<bar\>>=<with|font|cal|O><around*|(|<sqrt|\<Delta\>t>|)>>.
+  Then, we Taylor expand the last line of <math|J<rsup|\<alpha\>>> by
+  <math|z> at <math|z=<wide|y|\<bar\>>>. For further simplify the notation,
+  we denote <math|\<Delta\>y\<assign\><around*|(|y-y<rprime|'>|)>/2>, thus
+  <math|<wide|y|\<bar\>>-y<rprime|'>=y-<wide|y|\<bar\>>=\<Delta\>y>. Also,
+  <math|\<varphi\><rsub|+>\<assign\>\<varphi\><rsup|\<alpha\>><around*|(|y,<wide|y|\<bar\>>|)>+\<varphi\><rsup|\<alpha\>><around*|(|<wide|y|\<bar\>>,y<rprime|'>|)>>,
+  <math|\<varphi\><rsub|->\<assign\>\<varphi\><rsup|\<alpha\>><around*|(|y,<wide|y|\<bar\>>|)>-\<varphi\><rsup|\<alpha\>><around*|(|<wide|y|\<bar\>>,y<rprime|'>|)>>,
+  and partial derivative on either <math|\<partial\>\<varphi\><rsub|+>> or
+  <math|\<partial\>\<varphi\><rsub|->> is taken on the
+  <math|<wide|y|\<bar\>>>. So, the Taylor expansion up to
+  <math|\<omicron\><around*|(|\<Delta\>t|)>> becomes
+
+  <\align>
+    <tformat|<table|<row|<cell|>|<cell|\<Delta\>y<rsup|\<alpha\>>\<varphi\><rsub|+>-<around*|(|z<rsup|\<alpha\>>-<wide|y|\<bar\>><rsup|\<alpha\>>|)>\<varphi\><rsub|->+\<Delta\>y<rsup|\<alpha\>><around*|(|z<rsup|\<beta\>>-<wide|y|\<bar\>><rsup|\<beta\>>|)>\<partial\><rsub|\<beta\>>\<varphi\><rsub|+>>>|<row|<cell|->|<cell|<around*|(|z<rsup|\<alpha\>>-<wide|y|\<bar\>><rsup|\<alpha\>>|)><around*|(|z<rsup|\<beta\>>-<wide|y|\<bar\>><rsup|\<beta\>>|)>\<partial\><rsub|\<beta\>>\<varphi\><rsub|-><frac|1|2>\<Delta\>y<rsup|\<alpha\>><around*|(|z<rsup|\<beta\>>-<wide|y|\<bar\>><rsup|\<beta\>>|)><around*|(|z<rsup|\<gamma\>>-<wide|y|\<bar\>><rsup|\<gamma\>>|)>\<partial\><rprime|'><rsub|\<beta\>>\<partial\><rprime|'><rsub|\<gamma\>>\<varphi\><rsub|+>>>|<row|<cell|+>|<cell|<around*|[|\<xi\><rsup|\<alpha\>><around*|(|y,<wide|y|\<bar\>>|)>+\<xi\><rsup|\<alpha\>><around*|(|<wide|y|\<bar\>>,y<rprime|'>|)>|]>\<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>,>>>>
+  </align>
+
+  So, we find
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>z
+    exp<around*|(|-<big|sum><rsub|\<alpha\>=1><rsup|d>J<rsup|\<alpha\>>|)>=exp<around*|(|-<big|sum><rsub|\<alpha\>=1><rsup|d>I<rsup|\<alpha\>>|)>\<times\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>z
+    exp<around*|(|-<frac|1|2><big|sum><rsub|\<alpha\>=1><rsup|d><around*|(|<frac|z<rsup|\<alpha\>>-<wide|y|\<bar\>><rsup|\<alpha\>>|<sqrt|\<Delta\>t/2>>|)><rsup|2>-<big|sum><rsub|\<alpha\>=1><rsup|d>V<rsup|\<alpha\>>+\<omicron\><around*|(|\<Delta\>t|)>|)>,
+  </equation*>
+
+  where
+
+  <\equation*>
+    I<rsup|\<alpha\>>\<assign\><frac|<around*|(|
+    y<rsup|\<alpha\>>-y<rprime|'><rsup|\<alpha\>>|)><rsup|2>|4\<Delta\>t>+\<Delta\>y<rsup|\<alpha\>>\<varphi\><rsub|+>+<around*|[|\<xi\><rsup|\<alpha\>><around*|(|<wide|y|\<bar\>>,y<rprime|'>|)>+\<xi\><rsup|\<alpha\>><around*|(|y,<wide|y|\<bar\>>|)>|]>\<Delta\>t
+  </equation*>
+
+  collects the terms independent of <math|y>, and
+
+  <\align>
+    <tformat|<table|<row|<cell|V<rsup|\<alpha\>>\<assign\>>|<cell|-<around*|(|z<rsup|\<alpha\>>-<wide|y|\<bar\>><rsup|\<alpha\>>|)>
+    \<varphi\><rsub|-><rsup|\<alpha\>>+\<Delta\>y<rsup|\<alpha\>><around*|(|z<rsup|\<beta\>>-<wide|y|\<bar\>><rsup|\<beta\>>|)>\<partial\><rsub|\<beta\>>\<varphi\><rsub|+><rsup|\<alpha\>>>>|<row|<cell|>|<cell|-<around*|(|z<rsup|\<alpha\>>-<wide|y|\<bar\>><rsup|\<alpha\>>|)><around*|(|z<rsup|\<beta\>>-<wide|y|\<bar\>><rsup|\<beta\>>|)>\<partial\><rsub|\<beta\>>\<varphi\><rsub|-><rsup|\<alpha\>>+<frac|1|2>\<Delta\>y<rsup|\<alpha\>><around*|(|z<rsup|\<beta\>>-<wide|y|\<bar\>><rsup|\<beta\>>|)><around*|(|z<rsup|\<gamma\>>-<wide|y|\<bar\>><rsup|\<gamma\>>|)>\<partial\><rsub|\<beta\>>\<partial\><rsub|\<gamma\>>\<varphi\><rsub|+><rsup|\<alpha\>>>>>>
+  </align>
+
+  is perturbative. Taylor expanding the right hand side by
+  <math|V<rsup|\<alpha\>>> gives
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|2i+1>exp<around*|(|-<big|sum><rsub|\<alpha\>=1><rsup|d>J<rsup|\<alpha\>>|)>=exp<around*|(|-<big|sum><rsub|\<alpha\>=1><rsup|d>I<rsup|\<alpha\>>|)>\<times\><around*|{|1-<big|sum><rsub|\<alpha\>=1><rsup|d>\<bbb-E\><rsub|Y><around*|[|V<rsup|\<alpha\>>|]>+<frac|1|2><big|sum><rsub|\<alpha\>,\<beta\>=1><rsup|d>\<bbb-E\><rsub|Y><around*|[|V<rsup|\<alpha\>>V<rsup|\<beta\>>|]>+\<omicron\><around*|(|\<Delta\>t|)>|}>,
+  </equation*>
+
+  where <math|\<bbb-E\><rsub|Y><around*|[|\<ldots\>|]>> represents the
+  Gaussian integral of <math|y>. We will neglect the constant factor
+  <math|<around*|(|\<mathpi\> \<epsilon\>|)><rsup|-d/2>>, so that
+  <math|\<bbb-E\><rsub|Y><around*|[|1|]>=1>. This constant factor can be
+  absorbed into the action as an irrelevant constant term. In addition, we
+  have moved the residue <math|\<omicron\><around*|(|\<Delta\>t|)>> out of
+  the integral for the same reason in the prelimiary section
+  <reference|section: Renormalization Group in Preliminary Situation>. Thus,
+
+  <\equation*>
+    S<rprime|'><around*|(|x|)>=<big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|I<rsup|\<alpha\>>+\<bbb-E\><rsub|Y><around*|[|V<rsup|\<alpha\>>|]>-<frac|1|2><big|sum><rsub|\<beta\>=1><rsup|d>\<bbb-E\><rsub|Y><around*|[|V<rsup|\<alpha\>>V<rsup|\<beta\>>|]>|]>+\<omicron\><around*|(|\<Delta\>t|)>
+  </equation*>
+
+  Plugging in the definition of <math|V<rsup|\<alpha\>><around*|(|y|)>>,
+  together with <math|\<bbb-E\><rsub|Y><around*|[|z<rsup|\<alpha\>>-<wide|y|\<bar\>><rsup|\<alpha\>>|]>=0>
+  and <math|\<bbb-E\><rsub|Y><around*|[|<around*|(|z<rsup|\<alpha\>>-<wide|y|\<bar\>><rsup|\<alpha\>>|)><around*|(|z<rsup|\<beta\>>-<wide|y|\<bar\>><rsup|\<beta\>>|)>|]>=<around*|(|\<Delta\>t/2|)>
+  \<delta\><rsub|\<alpha\>\<beta\>>>, we get
+
+  <\equation*>
+    \<bbb-E\><around*|[|V<rsup|\<alpha\>><around*|(|y|)>|]>=\<Delta\>t<around*|[|<frac|1|4>\<Delta\>y<rsup|\<alpha\>>\<vartriangle\><rprime|'>\<varphi\><rsub|+><rsup|\<alpha\>>-<frac|1|2>\<partial\><rsub|\<alpha\>>\<varphi\><rsub|-><rsup|\<alpha\>>|]>,
+  </equation*>
+
+  where <math|\<vartriangle\>\<assign\>\<delta\><rsup|\<alpha\>\<beta\>>\<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>>
+  represents Laplacian operator, and
+
+  <\equation*>
+    <frac|1|2><big|sum><rsub|\<beta\>=1><rsup|d>\<bbb-E\><rsub|Y><around*|[|V<rsup|\<alpha\>>V<rsup|\<beta\>>|]>=<frac|\<Delta\>t|4><around*|(|\<varphi\><rsub|-><rsup|\<alpha\>>|)><rsup|2>-<frac|\<Delta\>t|2><big|sum><rsub|\<beta\>=1><rsup|d>\<Delta\>y<rsup|\<beta\>>\<varphi\><rsub|-><rsup|\<alpha\>>\<partial\><rsub|\<alpha\>>\<varphi\><rsup|\<beta\>><rsub|+>+<frac|\<Delta\>t|4><big|sum><rsub|\<beta\>,\<gamma\>=1><rsup|d>\<Delta\>y<rsup|\<alpha\>>\<Delta\>y<rsup|\<beta\>>\<partial\><rsub|\<gamma\>>\<varphi\><rsub|+><rsup|\<alpha\>>\<partial\><rsub|\<gamma\>>\<varphi\><rsub|+><rsup|\<beta\>>.
+  </equation*>
+
+  Plugging in the <math|\<bbb-E\><rsub|Y><around*|[|V<rsup|\<alpha\>>|]>> and
+  <math|<around*|(|1/2|)><big|sum><rsub|\<beta\>>\<bbb-E\><rsub|Y><around*|[|V<rsup|\<alpha\>>V<rsup|\<beta\>>|]>>,
+  we find TODO
 </body>
 
 <\initial>
@@ -4272,6 +4938,12 @@
     <associate|auto-39|<tuple|14|41>>
     <associate|auto-4|<tuple|4|5>>
     <associate|auto-40|<tuple|1|42>>
+    <associate|auto-41|<tuple|15|?>>
+    <associate|auto-42|<tuple|15.1|?>>
+    <associate|auto-43|<tuple|15.2|?>>
+    <associate|auto-44|<tuple|16|?>>
+    <associate|auto-45|<tuple|16.1|?>>
+    <associate|auto-46|<tuple|16.2|?>>
     <associate|auto-5|<tuple|4.1|6>>
     <associate|auto-6|<tuple|5|7>>
     <associate|auto-7|<tuple|5.1|7>>
@@ -4286,8 +4958,8 @@
     <associate|equation:path integral step 1|<tuple|13|18>>
     <associate|equation:path integral step 2|<tuple|1|3>>
     <associate|equation:residue zeta|<tuple|25|34>>
-    <associate|equation:rg action|<tuple|27|36>>
-    <associate|equation:rg integral|<tuple|28|37>>
+    <associate|equation:rg action|<tuple|35|36>>
+    <associate|equation:rg integral|<tuple|36|37>>
     <associate|equation:rg transform 1|<tuple|29|38>>
     <associate|equation:rg transform 2|<tuple|30|38>>
     <associate|equation:rg transform 3|<tuple|31|38>>
@@ -4302,16 +4974,22 @@
     <associate|footnote-4|<tuple|4|20>>
     <associate|footnote-5|<tuple|5|34>>
     <associate|footnote-6|<tuple|6|37>>
+    <associate|footnote-7|<tuple|7|?>>
+    <associate|footnote-8|<tuple|8|?>>
     <associate|footnr-1|<tuple|1|8>>
     <associate|footnr-2|<tuple|2|17>>
     <associate|footnr-3|<tuple|3|18>>
     <associate|footnr-4|<tuple|4|20>>
     <associate|footnr-5|<tuple|5|34>>
     <associate|footnr-6|<tuple|6|37>>
+    <associate|footnr-7|<tuple|7|?>>
+    <associate|footnr-8|<tuple|8|?>>
     <associate|section: How Far Will Information Propagate in Langevin
     Process?|<tuple|13|36>>
     <associate|section: Master Equation on Euclidean Alphabet Can Be
     Formulated as Path Integral|<tuple|6.7|18>>
+    <associate|section: Renormalization Group in Preliminary
+    Situation|<tuple|16.1|?>>
   </collection>
 </references>
 
