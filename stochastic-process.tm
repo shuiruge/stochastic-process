@@ -4709,22 +4709,24 @@
 
   <\equation*>
     S<rprime|'><around*|(|x<rprime|'>|)>=<big|sum><rsub|i=-\<infty\>><rsup|+\<infty\>><big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|<frac|<around*|(|
-    x<rprime|'><rsup|\<alpha\>><rsub|i+1>-x<rprime|'><rsup|\<alpha\>><rsub|i>|)><rsup|2>|2\<Delta\>t>+\<varphi\><rprime|'><around*|(|x<rprime|'><rsub|i+1>,x<rprime|'><rsub|i>|)>+\<xi\><rprime|'><around*|(|x<rprime|'><rsub|i+1>,x<rprime|'><rsub|i>|)>\<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>|]>,
+    x<rprime|'><rsup|\<alpha\>><rsub|i+1>-x<rprime|'><rsup|\<alpha\>><rsub|i>|)><rsup|2>|2\<Delta\>t>+\<varphi\><rprime|'><rsup|\<alpha\>><around*|(|x<rprime|'><rsub|i+1>,x<rprime|'><rsub|i>|)>+\<xi\><rprime|'><rsup|\<alpha\>><around*|(|x<rprime|'><rsub|i+1>,x<rprime|'><rsub|i>|)>\<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>|]>,
   </equation*>
 
   together with the renormalization group transformations
 
   <\small>
     <\equation*>
-      \<varphi\><rprime|'><around*|(|x,y|)>\<assign\>\<varphi\><around*|(|<sqrt|2>x,<frac|x+y|<sqrt|2>>|)>+\<varphi\><around*|(|<frac|x+y|<sqrt|2>>,<sqrt|2>y|)>
+      \<varphi\><rprime|'><rsup|\<alpha\>><around*|(|x,y|)>\<assign\>\<varphi\><rsup|\<alpha\>><around*|(|<sqrt|2>x,<frac|x+y|<sqrt|2>>|)>+\<varphi\><rsup|\<alpha\>><around*|(|<frac|x+y|<sqrt|2>>,<sqrt|2>y|)>
     </equation*>
   </small>
 
-  and
+  and (<math|\<partial\>> applies on the first variable, and
+  <math|\<partial\><rprime|'>> on the second, the same for Laplacian
+  operators <math|\<Delta\>> and <math|\<Delta\><rprime|'>>)
 
   <\small>
     <\align>
-      <tformat|<table|<row|<cell|\<xi\><rprime|'><around*|(|x,y|)>\<assign\>>|<cell|\<xi\><rsup|\<alpha\>><around*|(|<sqrt|2>x,<frac|x+y|<sqrt|2>>|)>+\<xi\><rsup|\<alpha\>><around*|(|<frac|x+y|<sqrt|2>>,<sqrt|2>y|)>>>|<row|<cell|+<frac|1|4>>|<cell|<around*|[|\<Delta\><rprime|'>\<varphi\><rsup|\<alpha\>><around*|(|<sqrt|2>x,<frac|x+y|<sqrt|2>>|)>+\<Delta\>\<varphi\><rsup|\<alpha\>><around*|(|<frac|x+y|<sqrt|2>>,<sqrt|2>y|)>|]>>>|<row|<cell|-<frac|1|4><big|sum><rsub|\<beta\>,\<gamma\>=1><rsup|d>>|<cell|<around*|[|\<partial\><rprime|'><rsub|\<gamma\>>\<varphi\><rsup|\<alpha\>><around*|(|<sqrt|2>x,<frac|x+y|<sqrt|2>>|)>+\<partial\><rsub|\<gamma\>>\<varphi\><rsup|\<alpha\>><around*|(|<frac|x+y|<sqrt|2>>,<sqrt|2>y|)>|]>\<times\>>>|<row|<cell|>|<cell|\<times\><around*|[|\<partial\><rprime|'><rsub|\<gamma\>>\<varphi\><rsup|\<beta\>><around*|(|<sqrt|2>x,<frac|x+y|<sqrt|2>>|)>+\<partial\><rsub|\<gamma\>>\<varphi\><rsup|\<beta\>><around*|(|<frac|x+y|<sqrt|2>>,<sqrt|2>y|)>|]>.>>>>
+      <tformat|<table|<row|<cell|\<xi\><rprime|'><rsup|\<alpha\>><around*|(|x,y|)>\<assign\>>|<cell|\<xi\><rsup|\<alpha\>><around*|(|<sqrt|2>x,<frac|x+y|<sqrt|2>>|)>+\<xi\><rsup|\<alpha\>><around*|(|<frac|x+y|<sqrt|2>>,<sqrt|2>y|)>>>|<row|<cell|+<frac|1|4>>|<cell|<around*|[|\<Delta\><rprime|'>\<varphi\><rsup|\<alpha\>><around*|(|<sqrt|2>x,<frac|x+y|<sqrt|2>>|)>+\<Delta\>\<varphi\><rsup|\<alpha\>><around*|(|<frac|x+y|<sqrt|2>>,<sqrt|2>y|)>|]>>>|<row|<cell|-<frac|1|4><big|sum><rsub|\<beta\>,\<gamma\>=1><rsup|d>>|<cell|<around*|[|\<partial\><rprime|'><rsub|\<gamma\>>\<varphi\><rsup|\<alpha\>><around*|(|<sqrt|2>x,<frac|x+y|<sqrt|2>>|)>+\<partial\><rsub|\<gamma\>>\<varphi\><rsup|\<alpha\>><around*|(|<frac|x+y|<sqrt|2>>,<sqrt|2>y|)>|]>\<times\>>>|<row|<cell|>|<cell|\<times\><around*|[|\<partial\><rprime|'><rsub|\<gamma\>>\<varphi\><rsup|\<beta\>><around*|(|<sqrt|2>x,<frac|x+y|<sqrt|2>>|)>+\<partial\><rsub|\<gamma\>>\<varphi\><rsup|\<beta\>><around*|(|<frac|x+y|<sqrt|2>>,<sqrt|2>y|)>|]>.>>>>
     </align>
   </small>
 
