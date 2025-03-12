@@ -107,56 +107,60 @@
     Degree of Freedom <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-25>
 
+    3.9<space|2spc>Transition Rate Determines Transition Density, Again
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-26>
+
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|4<space|2spc>Least-Action
     Principle> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-26><vspace|0.5fn>
+    <no-break><pageref|auto-27><vspace|0.5fn>
 
     4.1<space|2spc>Conventions in This Chapter
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-27>
+    <no-break><pageref|auto-28>
 
     4.2<space|2spc>A Brief Review of Least-Action Principle in Classical
     Mechanics <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-28>
+    <no-break><pageref|auto-29>
 
     4.3<space|2spc>Markovian Process with Euclidean Alphabet Can Be
     Formulated as Path Integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-29>
+    <no-break><pageref|auto-30>
 
     4.4<space|2spc>Langevin Process with Constant Covariance Has a Path
     Integral on Alphabet <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-30>
+    <no-break><pageref|auto-31>
 
     4.5<space|2spc>* Grassmann Variable, Berezin Integral, and Ghosts
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-31>
+    <no-break><pageref|auto-32>
 
     4.6<space|2spc>Least-Action Principle of Distribution Has No Redundancy
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-32>
+    <no-break><pageref|auto-33>
 
     4.7<space|2spc>* Data Fitting Is Equivalent to Least-Action Principle of
     Distribution <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-33>
+    <no-break><pageref|auto-34>
 
     4.8<space|2spc>How Far Will Information Propagate in Langevin Process?
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-35>
+    <no-break><pageref|auto-36>
 
     4.9<space|2spc>Effective Action and Renormalization Group Transformation
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-36>
+    <no-break><pageref|auto-37>
 
     <with|par-left|1tab|4.9.1<space|2spc>A Preliminary Situation
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-37>>
+    <no-break><pageref|auto-38>>
 
     <with|par-left|1tab|4.9.2<space|2spc>The Full Calculation
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-38>>
+    <no-break><pageref|auto-39>>
 
     4.10<space|2spc> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-39>
+    <no-break><pageref|auto-40>
   </table-of-contents>
 
   <chapter*|Preface>
@@ -2993,59 +2997,60 @@
   a generic transition rate to reveal its transition density. We start with
   an approximate derivation, and tackle the residue later.
 
-  First, we have the Fourier transformation of transition rate
+  First, the Fourier transformation of transition rate is
 
-  <\equation*>
-    <wide|r|^><around*|(|x,k|)>=<big|int>\<mathd\>\<epsilon\>
+  <\equation>
+    <wide|r|^><around*|(|x,k|)>\<assign\><big|int>\<mathd\>\<epsilon\>
     r<around*|(|x+\<epsilon\>,x|)> exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>.
-  </equation*>
+  </equation>
 
-  And we approximate transition density as
+  Then, we approximate transition density as
   <math|q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>\<approx\>\<delta\><around*|(|\<epsilon\>|)>+r<around*|(|x+\<epsilon\>,x|)>
-  \<Delta\>t>. Then, transition density has Fourier transformation
+  \<Delta\>t>. It implies the Fourier transformation of transition density
 
-  <\equation*>
-    <wide|q|^><rsub|\<Delta\>t><around*|(|x,k|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
+  <\align>
+    <tformat|<table|<row|<cell|<wide|q|^><rsub|\<Delta\>t><around*|(|x,k|)>\<assign\>>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
     q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>
-    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>\<approx\>1+<wide|r|^><around*|(|x,k|)>
-    \<Delta\>t\<approx\>exp<around*|(|<wide|r|^><around*|(|x,k|)>
-    \<Delta\>t|)>.
-  </equation*>
+    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>>>|<row|<cell|\<approx\>>|<cell|1+<wide|r|^><around*|(|x,k|)>
+    \<Delta\>t>>|<row|<cell|\<approx\>>|<cell|exp<around*|(|<wide|r|^><around*|(|x,k|)>
+    \<Delta\>t|)>.>>>>
+  </align>
 
-  Then roughtly, it has inverse Fourier transformation
+  By applying inverse Fourier transformations on both sides, we expect
+  <math|q<rsub|\<Delta\>t>\<approx\><wide|q|~><rsub|\<Delta\>t>> where
 
-  <\equation*>
-    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>\<approx\><big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\>|)><rsup|d>>
-    <wide|q|^><rsub|\<Delta\>t><around*|(|x,k|)>=<big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\>|)><rsup|d>>
+  <\equation>
+    <wide|q|~><rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\>|)><rsup|d>>
     exp<around*|(|\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>+<wide|r|^><around*|(|x,k|)>
-    \<Delta\>t|)>.
-  </equation*>
+    \<Delta\>t|)> <label|equation:transition rate determines transition
+    density approx>
+  </equation>
 
-  So, we expect to find another way of expressing transition density by
-  transition rate. Comparing with equation <reference|equation:transition
-  rate determines transition density>, where the alphabet is generic, the
-  alphabet at here has to be Euclidean (for performing Fourier
+  is the inverse Fourier transformation of
+  <math|exp<around*|(|<wide|r|^><around*|(|x,k|)>\<Delta\>t|)>>. So, we
+  expect to find another way of expressing transition density by transition
+  rate. Comparing with equation <reference|equation:transition rate
+  determines transition density>, where the alphabet is generic, the alphabet
+  in equation <reference|equation:transition rate determines transition
+  density approx> has to be Euclidean (for performing Fourier
   transformation).
 
-  To make this relation precise, we have to estimate the residue. The result
-  is far from trivial and it is found that the residue is well-defined only
-  when it is applied to Schwartz space. That is, for any
+  To make the relation <math|q<rsub|\<Delta\>t>\<approx\><wide|q|~><rsub|\<Delta\>t>>
+  precise, we have to estimate the residue. The result is far from trivial
+  and it is found that the residue is well-defined and negligible only when
+  it is applied to Schwartz space. That is, for any
   <math|\<varphi\>\<in\>S<around*|(|\<bbb-R\><rsup|d>|)>>, we have
 
   <\equation>
     <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
     q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>
-    \<varphi\><around*|(|\<epsilon\>|)>=<big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\>|)><rsup|d>>
-    exp<around*|(|<wide|r|^><around*|(|x,-k|)>
-    \<Delta\>t|)><wide|\<varphi\>|^><around*|(|k|)>+\<omicron\><around*|(|\<Delta\>t|)>,<label|equation:transition
+    \<varphi\><around*|(|\<epsilon\>|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
+    <wide|q|~><rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>
+    \<varphi\><around*|(|\<epsilon\>|)>+\<omicron\><around*|(|\<Delta\>t|)>.<label|equation:transition
     rate determines transition density v2>
   </equation>
 
-  where <math|<wide|\<varphi\>|^>> is the Fourier transformation of
-  <math|\<varphi\>>. The first term in the right hand side is obtained using
-  the approximate relation. It claims that only by applying onto a test
-  function in Schwartz space is the residue well-defined and negligible. We
-  devote the rest of this section to estimate the residue in equation
+  We devote the rest of this section to estimate the residue in equation
   <reference|equation:transition rate determines transition density v2>.
 
   To explicitly evaluate the residue, we have to consider the full expansion
@@ -5092,25 +5097,23 @@
     <associate|auto-23|<tuple|3.6|33>>
     <associate|auto-24|<tuple|3.7|34>>
     <associate|auto-25|<tuple|3.8|34>>
-    <associate|auto-26|<tuple|3.9|37>>
-    <associate|auto-27|<tuple|4|37>>
-    <associate|auto-28|<tuple|4.1|37>>
+    <associate|auto-26|<tuple|3.9|35>>
+    <associate|auto-27|<tuple|4|39>>
+    <associate|auto-28|<tuple|4.1|39>>
     <associate|auto-29|<tuple|4.2|39>>
     <associate|auto-3|<tuple|1.1|9>>
-    <associate|auto-30|<tuple|4.3|42>>
-    <associate|auto-31|<tuple|4.4|43>>
-    <associate|auto-32|<tuple|4.5|46>>
-    <associate|auto-33|<tuple|4.6|47>>
-    <associate|auto-34|<tuple|4.7|48>>
-    <associate|auto-35|<tuple|4.1|49>>
-    <associate|auto-36|<tuple|4.8|50>>
-    <associate|auto-37|<tuple|4.9|51>>
-    <associate|auto-38|<tuple|4.9.1|52>>
+    <associate|auto-30|<tuple|4.3|41>>
+    <associate|auto-31|<tuple|4.4|44>>
+    <associate|auto-32|<tuple|4.5|45>>
+    <associate|auto-33|<tuple|4.6|48>>
+    <associate|auto-34|<tuple|4.7|49>>
+    <associate|auto-35|<tuple|4.1|50>>
+    <associate|auto-36|<tuple|4.8|51>>
+    <associate|auto-37|<tuple|4.9|52>>
+    <associate|auto-38|<tuple|4.9.1|53>>
     <associate|auto-39|<tuple|4.9.2|54>>
     <associate|auto-4|<tuple|1.2|9>>
-    <associate|auto-40|<tuple|4.10|?>>
-    <associate|auto-41|<tuple|4.10|?>>
-    <associate|auto-42|<tuple|4.10|?>>
+    <associate|auto-40|<tuple|4.10|56>>
     <associate|auto-5|<tuple|1.3|10>>
     <associate|auto-6|<tuple|1.4|10>>
     <associate|auto-7|<tuple|1.5|11>>
@@ -5119,55 +5122,57 @@
     <associate|equation:Detailed Balance|<tuple|2.8|17>>
     <associate|equation:Detailed Balance for transition
     density|<tuple|2.9|17>>
-    <associate|equation:Fokker-Planck equation|<tuple|3.9|34>>
+    <associate|equation:Fokker-Planck equation|<tuple|3.9|33>>
     <associate|equation:K condition|<tuple|3.3|29>>
-    <associate|equation:action of distribution|<tuple|4.20|46>>
-    <associate|equation:berezin integral|<tuple|4.17|45>>
-    <associate|equation:berezin integral exp|<tuple|4.14|44>>
-    <associate|equation:berezin integral measurement|<tuple|4.16|45>>
+    <associate|equation:action of distribution|<tuple|4.20|48>>
+    <associate|equation:berezin integral|<tuple|4.17|47>>
+    <associate|equation:berezin integral exp|<tuple|4.14|46>>
+    <associate|equation:berezin integral measurement|<tuple|4.16|47>>
     <associate|equation:circle|<tuple|2.15|23>>
-    <associate|equation:data-fitting iteration|<tuple|4.22|48>>
-    <associate|equation:data-fitting result|<tuple|4.23|48>>
+    <associate|equation:data-fitting iteration|<tuple|4.22|50>>
+    <associate|equation:data-fitting result|<tuple|4.23|50>>
     <associate|equation:define stationary density function|<tuple|2.14|23>>
     <associate|equation:detailed balance condition for
     Langevin|<tuple|3.11|35>>
     <associate|equation:discrete time master equation|<tuple|2.5|14>>
     <associate|equation:discrete time master equation v0|<tuple|2.2|13>>
     <associate|equation:equation:metropolis-hastings|<tuple|2.12|22>>
-    <associate|equation:general path integral|<tuple|4.4|39>>
-    <associate|equation:generic density|<tuple|4.21|47>>
-    <associate|equation:grassmann integral transform|<tuple|4.15|44>>
-    <associate|equation:harmonic oscillator action|<tuple|4.1|37>>
+    <associate|equation:general path integral|<tuple|4.4|41>>
+    <associate|equation:generic density|<tuple|4.21|49>>
+    <associate|equation:grassmann integral transform|<tuple|4.15|46>>
+    <associate|equation:harmonic oscillator action|<tuple|4.1|39>>
     <associate|equation:heat equation|<tuple|3.6|32>>
     <associate|equation:km expansion|<tuple|3.4|30>>
     <associate|equation:km expansion v2|<tuple|3.5|31>>
-    <associate|equation:langevin action constant covariance|<tuple|4.13|43>>
-    <associate|equation:langevin action general|<tuple|4.19|46>>
-    <associate|equation:langevin process after cholesky|<tuple|4.18|45>>
+    <associate|equation:langevin action constant covariance|<tuple|4.13|45>>
+    <associate|equation:langevin action general|<tuple|4.19|48>>
+    <associate|equation:langevin process after cholesky|<tuple|4.18|47>>
     <associate|equation:langevin transition rate|<tuple|3.8|33>>
-    <associate|equation:least-action principle v0|<tuple|4.2|38>>
-    <associate|equation:least-action principle v1|<tuple|4.3|38>>
+    <associate|equation:least-action principle v0|<tuple|4.2|40>>
+    <associate|equation:least-action principle v1|<tuple|4.3|40>>
     <associate|equation:master equation|<tuple|2.4|14>>
     <associate|equation:master equation v0|<tuple|2.3|14>>
     <associate|equation:metropolis-hastings origin|<tuple|2.13|22>>
-    <associate|equation:path integral master equation|<tuple|4.5|39>>
-    <associate|equation:path integral of markov process|<tuple|4.7|39>>
-    <associate|equation:path integral step 2|<tuple|4.11|42>>
+    <associate|equation:path integral master equation|<tuple|4.5|41>>
+    <associate|equation:path integral of markov process|<tuple|4.7|41>>
+    <associate|equation:path integral step 2|<tuple|4.11|44>>
     <associate|equation:relative entropy derivative|<tuple|2.11|18>>
-    <associate|equation:residue zeta|<tuple|3.14|40>>
-    <associate|equation:rg action|<tuple|4.24|50>>
-    <associate|equation:rg integral|<tuple|4.25|50>>
+    <associate|equation:residue zeta|<tuple|4.9|42>>
+    <associate|equation:rg action|<tuple|4.24|52>>
+    <associate|equation:rg integral|<tuple|4.25|52>>
     <associate|equation:stationary Fokker-Planck equation|<tuple|3.10|34>>
-    <associate|equation:to ghosts|<tuple|4.12|43>>
-    <associate|equation:transition density coef recur|<tuple|4.8|40>>
-    <associate|equation:transition density exp|<tuple|4.6|39>>
+    <associate|equation:to ghosts|<tuple|4.12|45>>
+    <associate|equation:transition density coef recur|<tuple|4.8|42>>
+    <associate|equation:transition density exp|<tuple|4.6|41>>
     <associate|equation:transition density normalization|<tuple|2.1|13>>
     <associate|equation:transition rate determines transition
     density|<tuple|2.6|15>>
     <associate|equation:transition rate determines transition density
-    v2|<tuple|3.12|16>>
+    approx|<tuple|3.13|36>>
+    <associate|equation:transition rate determines transition density
+    v2|<tuple|3.14|36>>
     <associate|equation:wiener process|<tuple|3.7|33>>
-    <associate|figure: Least-Action|<tuple|4.1|48>>
+    <associate|figure: Least-Action|<tuple|4.1|50>>
     <associate|footnote-1|<tuple|1|7>>
     <associate|footnote-1.1|<tuple|1.1|9>>
     <associate|footnote-1.2|<tuple|1.2|9>>
@@ -5183,13 +5188,13 @@
     <associate|footnote-3.3|<tuple|3.3|29>>
     <associate|footnote-3.4|<tuple|3.4|30>>
     <associate|footnote-3.5|<tuple|3.5|32>>
-    <associate|footnote-3.6|<tuple|3.6|?>>
-    <associate|footnote-4.1|<tuple|4.1|38>>
-    <associate|footnote-4.2|<tuple|4.2|41>>
-    <associate|footnote-4.3|<tuple|4.3|45>>
-    <associate|footnote-4.4|<tuple|4.4|49>>
-    <associate|footnote-4.5|<tuple|4.5|52>>
-    <associate|footnote-4.6|<tuple|4.6|53>>
+    <associate|footnote-3.6|<tuple|3.6|37>>
+    <associate|footnote-4.1|<tuple|4.1|40>>
+    <associate|footnote-4.2|<tuple|4.2|43>>
+    <associate|footnote-4.3|<tuple|4.3|47>>
+    <associate|footnote-4.4|<tuple|4.4|51>>
+    <associate|footnote-4.5|<tuple|4.5|54>>
+    <associate|footnote-4.6|<tuple|4.6|55>>
     <associate|footnr-1|<tuple|1|7>>
     <associate|footnr-1.1|<tuple|1.1|9>>
     <associate|footnr-1.2|<tuple|1.2|9>>
@@ -5205,24 +5210,24 @@
     <associate|footnr-3.3|<tuple|3.3|29>>
     <associate|footnr-3.4|<tuple|3.4|30>>
     <associate|footnr-3.5|<tuple|3.5|32>>
-    <associate|footnr-3.6|<tuple|3.6|?>>
-    <associate|footnr-4.1|<tuple|4.1|38>>
-    <associate|footnr-4.2|<tuple|4.2|41>>
-    <associate|footnr-4.3|<tuple|4.3|45>>
-    <associate|footnr-4.4|<tuple|4.4|49>>
-    <associate|footnr-4.5|<tuple|4.5|52>>
-    <associate|footnr-4.6|<tuple|4.6|53>>
+    <associate|footnr-3.6|<tuple|3.6|37>>
+    <associate|footnr-4.1|<tuple|4.1|40>>
+    <associate|footnr-4.2|<tuple|4.2|43>>
+    <associate|footnr-4.3|<tuple|4.3|47>>
+    <associate|footnr-4.4|<tuple|4.4|51>>
+    <associate|footnr-4.5|<tuple|4.5|54>>
+    <associate|footnr-4.6|<tuple|4.6|55>>
     <associate|section: * Grassmann Variable, Berezin Integral, and
-    Ghosts|<tuple|4.5|43>>
+    Ghosts|<tuple|4.5|45>>
     <associate|section: A Brief Review of Least-Action Principle in Classical
-    Mechanics|<tuple|4.2|37>>
+    Mechanics|<tuple|4.2|39>>
     <associate|section: A Brief Review of Probability|<tuple|1.2|9>>
     <associate|section: Conventions in This Chapter 1|<tuple|1.1|9>>
     <associate|section: Conventions in This Chapter 2|<tuple|2.1|13>>
     <associate|section: Cut-off in the Moments of Transition Rate Is
     Essential for Spatial Smoothness|<tuple|3.2|25>>
     <associate|section: Data Fitting Is Equivalent to Least-Action Principle
-    of Distribution|<tuple|4.7|47>>
+    of Distribution|<tuple|4.7|49>>
     <associate|section: Detailed Balance Condition and Connectivity
     Monotonically Reduce Relative Entropy|<tuple|2.5|18>>
     <associate|section: Detailed Balance Provides Stationary
@@ -5230,26 +5235,24 @@
     <associate|section: Detailed Balance of Langevin Process Lacks
     Source-Free Degree of Freedom|<tuple|3.8|34>>
     <associate|section: Effective Action and Renormalization Group
-    Transformation|<tuple|4.9|50>>
+    Transformation|<tuple|4.9|52>>
     <associate|section: Example: Metropolis-Hastings
     Algorithm|<tuple|2.7|22>>
     <associate|section: How Far Will Information Propagate in Langevin
-    Process?|<tuple|4.8|49>>
+    Process?|<tuple|4.8|51>>
     <associate|section: Kramers\UMoyal Expansion Formulates Transition Rate
     by Its Moments|<tuple|3.3|29>>
     <associate|section: Kramers-Moyal Expansion and Langevin
     Process|<tuple|3|25>>
-    <associate|section: Langevin Process Is Approximately
-    Gaussian|<tuple|3.8|?>>
     <associate|section: Langevin Process Is a Markovian Process with
     Ncut=2|<tuple|3.6|33>>
     <associate|section: Langevin Process with Constant Covariance Has a Path
-    Integral on Alphabet|<tuple|4.4|42>>
-    <associate|section: Least-Action Principle|<tuple|4|37>>
+    Integral on Alphabet|<tuple|4.4|44>>
+    <associate|section: Least-Action Principle|<tuple|4|39>>
     <associate|section: Least-Action Principle of Distribution Has No
-    Redundancy|<tuple|4.6|46>>
+    Redundancy|<tuple|4.6|48>>
     <associate|section: Markovian Process with Euclidean Alphabet Can Be
-    Formulated as Path Integral|<tuple|4.3|39>>
+    Formulated as Path Integral|<tuple|4.3|41>>
     <associate|section: Master Equation Describes the Evolution of Markov
     Process|<tuple|2.2|13>>
     <associate|section: Master Equation and Detailed Balance|<tuple|2|13>>
@@ -5261,9 +5264,9 @@
     Transition Rate|<tuple|3.4|31>>
     <associate|section: Relative Entropy|<tuple|1|9>>
     <associate|section: Renormalization Group in Full
-    Calculation|<tuple|4.9.2|52>>
+    Calculation|<tuple|4.9.2|54>>
     <associate|section: Renormalization Group in Preliminary
-    Situation|<tuple|4.9.1|51>>
+    Situation|<tuple|4.9.1|53>>
     <associate|section: Shannon Entropy Fails for Continuous Random
     Variable|<tuple|1.4|10>>
     <associate|section: Shannon Entropy Is Plausible for Discrete Random
@@ -5301,7 +5304,7 @@
       <with|mode|<quote|math>|x<rsub|1>> a local minimum of
       <with|mode|<quote|math>|S<around*|(|\<cdummy\>,\<theta\>|)>>, and
       <with|mode|<quote|math>|S<around*|(|\<cdummy\>,\<theta\>|)>> is
-      optimized to be the dashed green curve.>|<pageref|auto-34>>
+      optimized to be the dashed green curve.>|<pageref|auto-35>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Preface>
@@ -5405,56 +5408,60 @@
       Degree of Freedom <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-25>
 
+      3.9<space|2spc>Transition Rate Determines Transition Density, Again
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-26>
+
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Least-Action
       Principle> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-26><vspace|0.5fn>
+      <no-break><pageref|auto-27><vspace|0.5fn>
 
       4.1<space|2spc>Conventions in This Chapter
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-27>
+      <no-break><pageref|auto-28>
 
       4.2<space|2spc>A Brief Review of Least-Action Principle in Classical
       Mechanics <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-28>
+      <no-break><pageref|auto-29>
 
       4.3<space|2spc>Markovian Process with Euclidean Alphabet Can Be
       Formulated as Path Integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-29>
+      <no-break><pageref|auto-30>
 
       4.4<space|2spc>Langevin Process with Constant Covariance Has a Path
       Integral on Alphabet <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-30>
+      <no-break><pageref|auto-31>
 
       4.5<space|2spc>* Grassmann Variable, Berezin Integral, and Ghosts
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-31>
+      <no-break><pageref|auto-32>
 
       4.6<space|2spc>Least-Action Principle of Distribution Has No Redundancy
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-32>
+      <no-break><pageref|auto-33>
 
       4.7<space|2spc>* Data Fitting Is Equivalent to Least-Action Principle
       of Distribution <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-33>
+      <no-break><pageref|auto-34>
 
       4.8<space|2spc>How Far Will Information Propagate in Langevin Process?
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-35>
+      <no-break><pageref|auto-36>
 
       4.9<space|2spc>Effective Action and Renormalization Group
       Transformation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-36>
+      <no-break><pageref|auto-37>
 
       <with|par-left|<quote|1tab>|4.9.1<space|2spc>A Preliminary Situation
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-37>>
+      <no-break><pageref|auto-38>>
 
       <with|par-left|<quote|1tab>|4.9.2<space|2spc>The Full Calculation
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-38>>
+      <no-break><pageref|auto-39>>
 
       4.10<space|2spc> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-39>
+      <no-break><pageref|auto-40>
     </associate>
   </collection>
 </auxiliary>
