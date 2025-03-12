@@ -2738,294 +2738,6 @@
   constructed a complete mathematical theory for this stochastic process. So,
   it is also called <strong|Wiener process>.
 
-  <section|Transition Rate Determines Transition Density, Again>
-
-  We have seen how Fourier's idea successfully solves the heat equation in
-  section <reference|section: Randomness Appears in the Second Moment of
-  Transition Rate>. In this section, we are to generalize Fourier's idea to
-  generic Markovian process. Namely, we are to use Fourier transformation to
-  a generic transition rate to reveal its transition density. We start with
-  an approximate derivation, and tackle the residue later.
-
-  First, we have the Fourier transformation of transition rate
-
-  <\equation*>
-    <wide|r|^><around*|(|x,k|)>=<big|int>\<mathd\>\<epsilon\>
-    r<around*|(|x+\<epsilon\>,x|)> exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>.
-  </equation*>
-
-  And we approximate transition density as
-  <math|q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>\<approx\>\<delta\><around*|(|\<epsilon\>|)>+r<around*|(|x+\<epsilon\>,x|)>
-  \<Delta\>t>. Then, transition density has Fourier transformation
-
-  <\equation*>
-    <wide|q|^><rsub|\<Delta\>t><around*|(|x,k|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
-    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>
-    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>\<approx\>1+<wide|r|^><around*|(|x,k|)>
-    \<Delta\>t\<approx\>exp<around*|(|<wide|r|^><around*|(|x,k|)>
-    \<Delta\>t|)>.
-  </equation*>
-
-  Then roughtly, it has inverse Fourier transformation
-
-  <\equation*>
-    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>\<approx\><big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\>|)><rsup|d>>
-    <wide|q|^><rsub|\<Delta\>t><around*|(|x,k|)>=<big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\>|)><rsup|d>>
-    exp<around*|(|\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>+<wide|r|^><around*|(|x,k|)>
-    \<Delta\>t|)>.
-  </equation*>
-
-  So, we expect to find another way of expressing transition density by
-  transition rate. Comparing with equation <reference|equation:transition
-  rate determines transition density>, where the alphabet is generic, the
-  alphabet at here has to be Euclidean (for performing Fourier
-  transformation).
-
-  To make this relation precise, we have to estimate the residue. The result
-  is far from trivial and it is found that the residue is well-defined only
-  when it is applied to Schwartz space. That is, for any
-  <math|\<varphi\>\<in\>S<around*|(|\<bbb-R\><rsup|d>|)>>, we have
-
-  <\equation>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
-    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>
-    \<varphi\><around*|(|\<epsilon\>|)>=<big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\>|)><rsup|d>>
-    exp<around*|(|<wide|r|^><around*|(|x,k|)>
-    \<Delta\>t|)><wide|\<varphi\>|^><around*|(|-k|)>+\<omicron\><around*|(|\<Delta\>t|)>.<label|equation:transition
-    rate determines transition density v2>
-  </equation>
-
-  The first term in the right hand side is the result using the approximate
-  relation. It claims that, only by applying onto a test function in Schwartz
-  space, the residue is well-defined and negligible. We devote the rest of
-  this section to derive this precise relation.
-
-  To explicitly evaluate the residue, we have to consider the full expansion
-  of <math|q<rsub|\<Delta\>t>> (equation <reference|equation:transition rate
-  determines transition density>), rather than expanding to the first order
-  of <math|\<Delta\>t>. We have evaluated the zeroth and the first order
-  coefficients in the full expansion. Now for higher orders, define
-
-  <\equation*>
-    <wide|g|^><rsub|n><around*|(|x,k|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
-    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|1>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|n-1>
-    r<around*|(|x+\<epsilon\>,y<rsub|n-1>|)>\<cdots\>r<around*|(|y<rsub|2>,y<rsub|1>|)>r<around*|(|y<rsub|1>,x|)>,
-  </equation*>
-
-  for <math|n\<geqslant\>1>. Then, the full expansion of
-  <math|q<rsub|\<Delta\>t>> gives
-
-  <\equation*>
-    <wide|q|^><rsub|\<Delta\>t><around*|(|x,k|)>=1+<big|sum><rsub|n=1><rsup|+\<infty\>><frac|\<Delta\>t<rsup|n>|n!><wide|g|^><rsub|n><around*|(|x,k|)>.
-  </equation*>
-
-  The residue hides in the <math|<wide|g|^><rsub|n><around*|(|x,k|)>>s. We
-  are to calculate <math|<wide|g|^><rsub|n><around*|(|x,k|)>> by induction,
-  starting at <math|<wide|g|^><rsub|1><around*|(|x,k|)>=<wide|r|^><around*|(|x,k|)>>.
-  Directly,
-
-  <\equation*>
-    <wide|g|^><rsub|n+1><around*|(|x,k|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|1><around*|[|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|2>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|n><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
-    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>r<around*|(|x+\<epsilon\>,y<rsub|n>|)>\<cdots\>r<around*|(|y<rsub|2>,y<rsub|1>|)>|]>r<around*|(|y<rsub|1>,x|)>.
-  </equation*>
-
-  Denoting <math|\<epsilon\><rprime|'>\<assign\>\<epsilon\>+x-y<rsub|1>>, we
-  find
-
-  <\align>
-    <tformat|<table|<row|<cell|<wide|g|^><rsub|n+1><around*|(|x,k|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|1>>|<cell|<around*|[|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|2>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|n><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\><rprime|'>
-    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rprime|'><rsup|\<alpha\>>|)>r<around*|(|y<rsub|1>+\<epsilon\>,y<rsub|n>|)>\<cdots\>r<around*|(|y<rsub|2>,y<rsub|1>|)>|]>>>|<row|<cell|>|<cell|\<times\>exp<around*|(|-\<mathi\>k<rsub|\<alpha\>><around*|(|y<rsub|1><rsup|\<alpha\>>-x<rsup|\<alpha\>>|)>|)>r<around*|(|y<rsub|1>,x|)>.>>>>
-  </align>
-
-  The <math|<around*|[|\<cdots\>|]>> factor is recognized as
-  <math|<wide|g|^><rsub|n><around*|(|x,k|)>>. Thus, (reuse the
-  <math|\<epsilon\>> notation for simplicity)
-
-  <\align>
-    <tformat|<table|<row|<cell|<wide|g|^><rsub|n+1><around*|(|x,k|)>=>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|1><wide|g|^><around*|(|y<rsub|1>,k|)>
-    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>><around*|(|y<rsub|1><rsup|\<alpha\>>-x<rsup|\<alpha\>>|)>|)>r<around*|(|y<rsub|1>,x|)>>>|<row|<cell|=>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
-    <wide|g|^><around*|(|x+\<epsilon\>,k|)>
-    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>r<around*|(|x+\<epsilon\>,x|)>.>>>>
-  </align>
-
-  Then, Taylor expanding <math|<wide|g|^><around*|(|y<rsub|1>+\<epsilon\>,k|)>>
-  by <math|\<epsilon\>> at origin results in (<math|\<partial\>> is derived
-  on the first variable, and <math|\<partial\><rprime|'>> on the second)
-
-  <\equation*>
-    <wide|g|^><rsub|n+1><around*|(|x,k|)>=<big|sum><rsub|m=0><rsup|+\<infty\>><frac|1|m!><frac|\<partial\><rsup|m><wide|g|^><rsub|n>|\<partial\>x<rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\>x<rsup|\<alpha\><rsub|m>>><around*|(|x,k|)><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
-    <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|m>>|)>
-    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>
-    r<around*|(|x+\<epsilon\>,x|)>.
-  </equation*>
-
-  The integral is recognized as partial derivatives
-  <math|\<partial\><rsup|m><wide|r|^>/<around*|[|\<partial\><around*|(|-\<mathi\>k<rsub|\<alpha\><rsub|1>>|)>\<cdots\>\<partial\><around*|(|-\<mathi\>k<rsub|\<alpha\><rsub|m>>|)>|]>>,
-  thus we arrive at
-
-  <\equation>
-    <wide|g|^><rsub|n+1><around*|(|x,k|)>=<big|sum><rsub|m=0><rsup|+\<infty\>><frac|\<mathi\><rsup|m>|m!>
-    <frac|\<partial\><rsup|m><wide|g|^><rsub|n>|\<partial\>x<rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\>x<rsup|\<alpha\><rsub|m>>><around*|(|x,k|)><frac|\<partial\><rsup|m><wide|r|^>|\<partial\>k<rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\>k<rsub|\<alpha\><rsub|m>>><around*|(|x,k|)>.<label|equation:transition
-    density coef recur>
-  </equation>
-
-  In <math|<wide|g|^><rsub|n><around*|(|x,k|)>>, the term with <math|m=0> is
-  <math|<around*|[|<wide|r|^><around*|(|x,k|)>|]><rsup|n>>. So, we conclude
-  that
-
-  <\equation*>
-    <wide|q|^><rsub|\<Delta\>t><around*|(|x,k|)>=1+<big|sum><rsub|n=1><rsup|+\<infty\>><frac|\<Delta\>t<rsup|n>|n!><wide|g|^><rsub|n><around*|(|x,k|)>=exp<around*|(|<wide|r|^><around*|(|x,k|)>
-    \<Delta\>t|)>+<wide|\<zeta\>|^><around*|(|x,k,\<Delta\>t|)>,
-  </equation*>
-
-  where <math|<wide|\<zeta\>|^><around*|(|x,k,\<Delta\>t|)>> collects the
-  terms in each <math|<wide|g|^><rsub|n><around*|(|x,k|)>> except for the
-  <math|<around*|[|<wide|r|^><around*|(|x,k|)>|]><rsup|n>>. Together with
-  equation <reference|equation:transition density coef recur>, we get
-
-  <\equation>
-    <wide|\<zeta\>|^><around*|(|x,k,\<Delta\>t|)>=<big|sum><rsub|n=2><rsup|+\<infty\>><frac|\<Delta\>t<rsup|n>|n!><big|sum><rsub|m=1><rsup|+\<infty\>><frac|\<mathi\><rsup|m>|m!>
-    <frac|\<partial\><rsup|m><wide|g|^><rsub|n-1>|\<partial\>x<rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\>x<rsup|\<alpha\><rsub|m>>><around*|(|x,k|)><frac|\<partial\><rsup|m><wide|r|^>|\<partial\>k<rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\>k<rsub|\<alpha\><rsub|m>>><around*|(|x,k|)>.<label|equation:residue
-    zeta>
-  </equation>
-
-  Since the terms like <math|<around*|[|<wide|r|^><around*|(|x,k|)>|]><rsup|n>>
-  have been absent in <math|<wide|\<zeta\>|^><around*|(|x,k,\<Delta\>t|)>>,
-  <math|m> starts at <math|1>. And since <math|<wide|g|^><rsub|1><around*|(|x,k|)>=<wide|r|^><around*|(|x,k|)>>,
-  it contributes nothing to <math|<wide|\<zeta\>|^><around*|(|x,k,\<Delta\>t|)>>,
-  and <math|n> starts at <math|2>. Thus, <math|<wide|\<zeta\>|^><around*|(|x,k,\<Delta\>t|)>=\<omicron\><around*|(|\<Delta\>t|)>>
-  and it is the residue we are seeking for. Temporally, we do not know
-  whether the series in <math|<wide|\<zeta\>|^><around*|(|x,k,\<Delta\>t|)>>
-  converges or not, but keeping the series <reference|equation:residue zeta>
-  formal (we will examine this later).
-
-  For going back to <math|q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>>,
-  we perform inverse Fourier transformation. This refers to the expansion of
-  a function <math|f> as<\footnote>
-    This can be viewed as a generalization of Kramers-Moyal expansion. In
-    fact, we are to prove this expansion by following the steps in section
-    <reference|section: Kramers\UMoyal Expansion Formulates Transition Rate
-    by Its Moments>, in which we proved Kramers-Moyal expansion. Explicitly,
-    consider a function <math|\<varphi\>\<in\>S<around*|(|\<bbb-R\><rsup|d>|)>>,
-    thus Taylor expanding <math|\<varphi\>> at origin gives
-
-    <\equation*>
-      <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x f<around*|(|x|)>
-      \<varphi\><around*|(|x|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|1|n!>
-      <around*|[|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x f<around*|(|x|)>
-      <around*|(|x<rsup|\<alpha\><rsub|1>>\<cdots\>x<rsup|\<alpha\><rsub|n>>|)>|]>
-      <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>.
-    </equation*>
-
-    We relate the integral in the <math|<around*|[|\<cdots\>|]>> to the
-    Fourier transformation <math|<wide|f|^>> by
-
-    <\equation*>
-      <around*|(|\<partial\><rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsup|\<alpha\><rsub|n>><wide|f|^>|)><around*|(|0|)>=lim<rsub|k\<rightarrow\>0><frac|\<partial\>|\<partial\>k<rsub|\<alpha\><rsub|1>>>\<cdots\><frac|\<partial\>|\<partial\>k<rsub|\<alpha\><rsub|n>>><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
-      exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>
-      f<around*|(|x|)>=<around*|(|-\<mathi\>|)><rsup|n>
-      <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x f<around*|(|x|)>
-      <around*|(|x<rsup|\<alpha\><rsub|1>>\<cdots\>x<rsup|\<alpha\><rsub|n>>|)>.
-    </equation*>
-
-    Thus,
-
-    <\equation*>
-      <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x f<around*|(|x|)>
-      \<varphi\><around*|(|x|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|\<mathi\><rsup|n>|n!>
-      <around*|(|\<partial\><rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsup|\<alpha\><rsub|n>><wide|f|^>|)><around*|(|0|)>
-      <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>.
-    </equation*>
-
-    On the other hand, because of the identity
-
-    <\equation*>
-      <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
-      \<delta\><around*|(|x|)> <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|x|)>,
-    </equation*>
-
-    integration by parts on the right hand side gives
-
-    <\equation*>
-      <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>=<around*|(|-1|)><rsup|n>
-      <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
-      <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|x|)>
-      \<varphi\><around*|(|x|)>.
-    </equation*>
-
-    Plugging this back, we find
-
-    <\equation*>
-      <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x f<around*|(|x|)>
-      \<varphi\><around*|(|x|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|<around*|(|-\<mathi\>|)><rsup|n>|n!>
-      <around*|(|\<partial\><rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsup|\<alpha\><rsub|n>><wide|f|^>|)><around*|(|0|)>
-      <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
-      <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|x|)>
-      \<varphi\><around*|(|x|)>.
-    </equation*>
-
-    Since <math|\<varphi\>> is arbitrary, we finall arrive at
-
-    <\equation*>
-      f<around*|(|x|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|<around*|(|-\<mathi\>|)><rsup|n>|n!>
-      <around*|(|\<partial\><rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsup|\<alpha\><rsub|n>><wide|f|^>|)><around*|(|0|)>
-      <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|x|)>.
-    </equation*>
-  </footnote>
-
-  <\equation>
-    f<around*|(|x|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|<around*|(|-\<mathi\>|)><rsup|n>|n!><around*|(|\<partial\><rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsup|\<alpha\><rsub|n>><wide|f|^>|)><around*|(|0|)><around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|x|)>.
-  </equation>
-
-  Notice that the left hand side of this expansion is a function, while the
-  right hand side is a series of generalized functions (the derivatives of
-  Dirac's delta function). So, this expansion has meaning only when it is
-  applied onto a test function in Schwartz space. This is just our situation,
-  where <math|q<rsub|\<Delta\>t>> is applied to its right hand side in
-  equation <reference|equation:path integral master equation>, which, as we
-  have discussed in the end of section <reference|section: Kramers\UMoyal
-  Expansion Formulates Transition Rate by Its Moments>, is in Schwartz space
-  if initially <math|p<around*|(|\<cdummy\>,0|)>> is. Replacing
-  <math|<wide|f|^><around*|(|k|)>> by <math|<wide|\<zeta\>|^><around*|(|x,k,\<Delta\>t|)>>,
-  we find
-
-  <\equation*>
-    \<zeta\><around*|(|x,\<epsilon\>,\<Delta\>t|)>=<big|sum><rsub|l=0><rsup|+\<infty\>><frac|<around*|(|-\<mathi\>|)><rsup|l>|l!><frac|\<partial\><rsup|l><wide|\<zeta\>|^>|\<partial\>k<rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\>k<rsub|\<alpha\><rsub|l>>><around*|(|x,0,\<Delta\>t|)><around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|l>>\<delta\>|)><around*|(|\<epsilon\>|)>.
-  </equation*>
-
-  Applying to <math|\<varphi\>\<in\>S<around*|(|\<bbb-R\><rsup|d>|)>> and
-  taking integration by parts gives
-
-  <\equation*>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
-    \<zeta\><around*|(|x,\<epsilon\>,\<Delta\>t|)>\<varphi\><around*|(|\<epsilon\>|)>=<big|sum><rsub|l=0><rsup|+\<infty\>><frac|\<mathi\><rsup|l>|l!><frac|\<partial\><rsup|l><wide|\<zeta\>|^>|\<partial\>k<rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\>k<rsub|\<alpha\><rsub|l>>><around*|(|x,0,\<Delta\>t|)><around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|l>>\<varphi\>|)><around*|(|0|)>.
-  </equation*>
-
-  So, we have to show that the coefficients are well-defined. Inserting
-  equation <reference|equation:residue zeta>, we find the coefficient
-
-  <\equation*>
-    <frac|\<partial\><rsup|l><wide|\<zeta\>|^>|\<partial\>k<rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\>k<rsub|\<alpha\><rsub|l>>><around*|(|x,0,\<Delta\>t|)>=<big|sum><rsub|n=2><rsup|+\<infty\>><frac|\<Delta\>t<rsup|n>|n!><big|sum><rsub|m=1><rsup|+\<infty\>><frac|\<mathi\><rsup|m>|m!>
-    <frac|\<partial\>|\<partial\>k<rsub|\<alpha\><rsub|1>>>\<cdots\><frac|\<partial\>|\<partial\>k<rsub|\<alpha\><rsub|l>>><around*|[|<frac|\<partial\><rsup|m><wide|g|^><rsub|n-1>|\<partial\>x<rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\>x<rsup|\<alpha\><rsub|m>>><around*|(|x,0|)><frac|\<partial\><rsup|m><wide|r|^>|\<partial\>k<rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\>k<rsub|\<alpha\><rsub|m>>><around*|(|x,0|)>|]>.
-  </equation*>
-
-  The terms in the series of the right hand side are all proportional to
-  partial derivatives of <math|<wide|r|^><around*|(|x,k|)>> on <math|k> at
-  origin, which is proportional to the moments of transition rate,
-  <math|K<around*|(|x|)>>. As it is concluded in section <reference|section:
-  Cut-off in the Moments of Transition Rate Is Essential for Spatial
-  Smoothness>, <math|K<rsub|n><around*|(|x|)>> vanishes for all
-  <math|n\<gtr\>N<rsub|cut>>. So, the series also terminates at finite
-  <math|m>. In the series of <math|n>, the <math|n>-th term (as a series of
-  <math|m>) approximately terminates at <math|m=n N<rsub|cut>>. And since all
-  <math|K<around*|(|x|)>> are bounded, the series of <math|m> increases
-  linearly with <math|n>. Hence, the series of <math|n> converges. It means
-  that, the application onto <math|\<varphi\>> results in a well-defined
-  residue, proportional to <math|\<Delta\>t<rsup|2>>. Now, we can conclude
-  that its residue is well-defined <em|in the sense of being applied to in
-  Schwartz space>, namely equation <reference|equation:transition rate
-  determines transition density v2> holds.
-
   <section|Langevin Process Is a Markovian Process with
   <math|N<rsub|cut>=2>><label|section: Langevin Process Is a Markovian
   Process with Ncut=2>
@@ -3271,6 +2983,295 @@
   source-free degree of freedom that appears in the stationary condition>.
   The lost degree of freedom is the cost of ensuring that any initial
   distribution will finally relax to the stationary.
+
+  <section|Transition Rate Determines Transition Density, Again>
+
+  We have seen how Fourier's idea successfully solves the heat equation in
+  section <reference|section: Randomness Appears in the Second Moment of
+  Transition Rate>. In this section, we are to generalize Fourier's idea to
+  generic Markovian process. Namely, we are to use Fourier transformation to
+  a generic transition rate to reveal its transition density. We start with
+  an approximate derivation, and tackle the residue later.
+
+  First, we have the Fourier transformation of transition rate
+
+  <\equation*>
+    <wide|r|^><around*|(|x,k|)>=<big|int>\<mathd\>\<epsilon\>
+    r<around*|(|x+\<epsilon\>,x|)> exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>.
+  </equation*>
+
+  And we approximate transition density as
+  <math|q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>\<approx\>\<delta\><around*|(|\<epsilon\>|)>+r<around*|(|x+\<epsilon\>,x|)>
+  \<Delta\>t>. Then, transition density has Fourier transformation
+
+  <\equation*>
+    <wide|q|^><rsub|\<Delta\>t><around*|(|x,k|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
+    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>
+    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>\<approx\>1+<wide|r|^><around*|(|x,k|)>
+    \<Delta\>t\<approx\>exp<around*|(|<wide|r|^><around*|(|x,k|)>
+    \<Delta\>t|)>.
+  </equation*>
+
+  Then roughtly, it has inverse Fourier transformation
+
+  <\equation*>
+    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>\<approx\><big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\>|)><rsup|d>>
+    <wide|q|^><rsub|\<Delta\>t><around*|(|x,k|)>=<big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\>|)><rsup|d>>
+    exp<around*|(|\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>+<wide|r|^><around*|(|x,k|)>
+    \<Delta\>t|)>.
+  </equation*>
+
+  So, we expect to find another way of expressing transition density by
+  transition rate. Comparing with equation <reference|equation:transition
+  rate determines transition density>, where the alphabet is generic, the
+  alphabet at here has to be Euclidean (for performing Fourier
+  transformation).
+
+  To make this relation precise, we have to estimate the residue. The result
+  is far from trivial and it is found that the residue is well-defined only
+  when it is applied to Schwartz space. That is, for any
+  <math|\<varphi\>\<in\>S<around*|(|\<bbb-R\><rsup|d>|)>>, we have
+
+  <\equation>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
+    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>
+    \<varphi\><around*|(|\<epsilon\>|)>=<big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\>|)><rsup|d>>
+    exp<around*|(|<wide|r|^><around*|(|x,-k|)>
+    \<Delta\>t|)><wide|\<varphi\>|^><around*|(|k|)>+\<omicron\><around*|(|\<Delta\>t|)>,<label|equation:transition
+    rate determines transition density v2>
+  </equation>
+
+  where <math|<wide|\<varphi\>|^>> is the Fourier transformation of
+  <math|\<varphi\>>. The first term in the right hand side is obtained using
+  the approximate relation. It claims that only by applying onto a test
+  function in Schwartz space is the residue well-defined and negligible. We
+  devote the rest of this section to estimate the residue in equation
+  <reference|equation:transition rate determines transition density v2>.
+
+  To explicitly evaluate the residue, we have to consider the full expansion
+  of <math|q<rsub|\<Delta\>t>> (equation <reference|equation:transition rate
+  determines transition density>), rather than expanding to the first order
+  of <math|\<Delta\>t>. We have evaluated the zeroth and the first order
+  coefficients in the full expansion. Now for higher orders, define
+
+  <\equation*>
+    <wide|g|^><rsub|n><around*|(|x,k|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
+    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|1>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|n-1>
+    r<around*|(|x+\<epsilon\>,y<rsub|n-1>|)>\<cdots\>r<around*|(|y<rsub|2>,y<rsub|1>|)>r<around*|(|y<rsub|1>,x|)>,
+  </equation*>
+
+  for <math|n\<geqslant\>1>. Then, the full expansion of
+  <math|q<rsub|\<Delta\>t>> gives
+
+  <\equation*>
+    <wide|q|^><rsub|\<Delta\>t><around*|(|x,k|)>=1+<big|sum><rsub|n=1><rsup|+\<infty\>><frac|\<Delta\>t<rsup|n>|n!><wide|g|^><rsub|n><around*|(|x,k|)>.
+  </equation*>
+
+  The residue hides in the <math|<wide|g|^><rsub|n><around*|(|x,k|)>>s. We
+  are to calculate <math|<wide|g|^><rsub|n><around*|(|x,k|)>> by induction,
+  starting at <math|<wide|g|^><rsub|1><around*|(|x,k|)>=<wide|r|^><around*|(|x,k|)>>.
+  Directly,
+
+  <\equation*>
+    <wide|g|^><rsub|n+1><around*|(|x,k|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|1><around*|[|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|2>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|n><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
+    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>r<around*|(|x+\<epsilon\>,y<rsub|n>|)>\<cdots\>r<around*|(|y<rsub|2>,y<rsub|1>|)>|]>r<around*|(|y<rsub|1>,x|)>.
+  </equation*>
+
+  Denoting <math|\<epsilon\><rprime|'>\<assign\>\<epsilon\>+x-y<rsub|1>>, we
+  find
+
+  <\align>
+    <tformat|<table|<row|<cell|<wide|g|^><rsub|n+1><around*|(|x,k|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|1>>|<cell|<around*|[|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|2>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|n><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\><rprime|'>
+    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rprime|'><rsup|\<alpha\>>|)>r<around*|(|y<rsub|1>+\<epsilon\>,y<rsub|n>|)>\<cdots\>r<around*|(|y<rsub|2>,y<rsub|1>|)>|]>>>|<row|<cell|>|<cell|\<times\>exp<around*|(|-\<mathi\>k<rsub|\<alpha\>><around*|(|y<rsub|1><rsup|\<alpha\>>-x<rsup|\<alpha\>>|)>|)>r<around*|(|y<rsub|1>,x|)>.>>>>
+  </align>
+
+  The <math|<around*|[|\<cdots\>|]>> factor is recognized as
+  <math|<wide|g|^><rsub|n><around*|(|x,k|)>>. Thus, (reuse the
+  <math|\<epsilon\>> notation for simplicity)
+
+  <\align>
+    <tformat|<table|<row|<cell|<wide|g|^><rsub|n+1><around*|(|x,k|)>=>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|1><wide|g|^><around*|(|y<rsub|1>,k|)>
+    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>><around*|(|y<rsub|1><rsup|\<alpha\>>-x<rsup|\<alpha\>>|)>|)>r<around*|(|y<rsub|1>,x|)>>>|<row|<cell|=>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
+    <wide|g|^><around*|(|x+\<epsilon\>,k|)>
+    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>r<around*|(|x+\<epsilon\>,x|)>.>>>>
+  </align>
+
+  Then, Taylor expanding <math|<wide|g|^><around*|(|y<rsub|1>+\<epsilon\>,k|)>>
+  by <math|\<epsilon\>> at origin results in (<math|\<partial\>> is derived
+  on the first variable, and <math|\<partial\><rprime|'>> on the second)
+
+  <\equation*>
+    <wide|g|^><rsub|n+1><around*|(|x,k|)>=<big|sum><rsub|m=0><rsup|+\<infty\>><frac|1|m!><frac|\<partial\><rsup|m><wide|g|^><rsub|n>|\<partial\>x<rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\>x<rsup|\<alpha\><rsub|m>>><around*|(|x,k|)><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
+    <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|m>>|)>
+    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>
+    r<around*|(|x+\<epsilon\>,x|)>.
+  </equation*>
+
+  The integral is recognized as partial derivatives
+  <math|\<partial\><rsup|m><wide|r|^>/<around*|[|\<partial\><around*|(|-\<mathi\>k<rsub|\<alpha\><rsub|1>>|)>\<cdots\>\<partial\><around*|(|-\<mathi\>k<rsub|\<alpha\><rsub|m>>|)>|]>>,
+  thus we arrive at
+
+  <\equation>
+    <wide|g|^><rsub|n+1><around*|(|x,k|)>=<big|sum><rsub|m=0><rsup|+\<infty\>><frac|\<mathi\><rsup|m>|m!>
+    <frac|\<partial\><rsup|m><wide|g|^><rsub|n>|\<partial\>x<rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\>x<rsup|\<alpha\><rsub|m>>><around*|(|x,k|)><frac|\<partial\><rsup|m><wide|r|^>|\<partial\>k<rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\>k<rsub|\<alpha\><rsub|m>>><around*|(|x,k|)>.<label|equation:transition
+    density coef recur>
+  </equation>
+
+  In <math|<wide|g|^><rsub|n><around*|(|x,k|)>>, the term with <math|m=0> is
+  <math|<around*|[|<wide|r|^><around*|(|x,k|)>|]><rsup|n>>. So, we conclude
+  that
+
+  <\equation*>
+    <wide|q|^><rsub|\<Delta\>t><around*|(|x,k|)>=1+<big|sum><rsub|n=1><rsup|+\<infty\>><frac|\<Delta\>t<rsup|n>|n!><wide|g|^><rsub|n><around*|(|x,k|)>=exp<around*|(|<wide|r|^><around*|(|x,k|)>
+    \<Delta\>t|)>+<wide|\<zeta\>|^><rsub|\<Delta\>t><around*|(|x,k|)>,
+  </equation*>
+
+  where <math|<wide|\<zeta\>|^><rsub|\<Delta\>t><around*|(|x,k|)>> collects
+  the terms in each <math|<wide|g|^><rsub|n><around*|(|x,k|)>> except for the
+  <math|<around*|[|<wide|r|^><around*|(|x,k|)>|]><rsup|n>>. Together with
+  equation <reference|equation:transition density coef recur>, we get
+
+  <\equation>
+    <wide|\<zeta\>|^><rsub|\<Delta\>t><around*|(|x,k|)>=<big|sum><rsub|n=2><rsup|+\<infty\>><frac|\<Delta\>t<rsup|n>|n!><big|sum><rsub|m=1><rsup|+\<infty\>><frac|\<mathi\><rsup|m>|m!>
+    <frac|\<partial\><rsup|m><wide|g|^><rsub|n-1>|\<partial\>x<rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\>x<rsup|\<alpha\><rsub|m>>><around*|(|x,k|)><frac|\<partial\><rsup|m><wide|r|^>|\<partial\>k<rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\>k<rsub|\<alpha\><rsub|m>>><around*|(|x,k|)>.<label|equation:residue
+    zeta>
+  </equation>
+
+  Since the terms like <math|<around*|[|<wide|r|^><around*|(|x,k|)>|]><rsup|n>>
+  have been absent in <math|<wide|\<zeta\>|^><rsub|\<Delta\>t><around*|(|x,k|)>>,
+  <math|m> starts at <math|1>. And since <math|<wide|g|^><rsub|1><around*|(|x,k|)>=<wide|r|^><around*|(|x,k|)>>,
+  it contributes nothing to <math|<wide|\<zeta\>|^><rsub|\<Delta\>t><around*|(|x,k|)>>,
+  and <math|n> starts at <math|2>. Thus, <math|<wide|\<zeta\>|^><rsub|\<Delta\>t><around*|(|x,k|)>=\<omicron\><around*|(|\<Delta\>t|)>>
+  and it is the residue we are seeking for. Temporally, we do not know
+  whether the series in <math|<wide|\<zeta\>|^><rsub|\<Delta\>t><around*|(|x,k|)>>
+  converges or not, but keeping the series <reference|equation:residue zeta>
+  formal (we will examine this later).
+
+  For going back to <math|q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>>,
+  we perform inverse Fourier transformation. This refers to the expansion of
+  a function <math|f> as<\footnote>
+    This can be viewed as a generalization of Kramers-Moyal expansion. In
+    fact, we are to prove this expansion by following the steps in section
+    <reference|section: Kramers\UMoyal Expansion Formulates Transition Rate
+    by Its Moments>, in which we proved Kramers-Moyal expansion. Explicitly,
+    consider a function <math|\<varphi\>\<in\>S<around*|(|\<bbb-R\><rsup|d>|)>>,
+    thus Taylor expanding <math|\<varphi\>> at origin gives
+
+    <\equation*>
+      <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x f<around*|(|x|)>
+      \<varphi\><around*|(|x|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|1|n!>
+      <around*|[|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x f<around*|(|x|)>
+      <around*|(|x<rsup|\<alpha\><rsub|1>>\<cdots\>x<rsup|\<alpha\><rsub|n>>|)>|]>
+      <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>.
+    </equation*>
+
+    We relate the integral in the <math|<around*|[|\<cdots\>|]>> to the
+    Fourier transformation <math|<wide|f|^>> by
+
+    <\equation*>
+      <around*|(|\<partial\><rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsup|\<alpha\><rsub|n>><wide|f|^>|)><around*|(|0|)>=lim<rsub|k\<rightarrow\>0><frac|\<partial\>|\<partial\>k<rsub|\<alpha\><rsub|1>>>\<cdots\><frac|\<partial\>|\<partial\>k<rsub|\<alpha\><rsub|n>>><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
+      exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>
+      f<around*|(|x|)>=<around*|(|-\<mathi\>|)><rsup|n>
+      <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x f<around*|(|x|)>
+      <around*|(|x<rsup|\<alpha\><rsub|1>>\<cdots\>x<rsup|\<alpha\><rsub|n>>|)>.
+    </equation*>
+
+    Thus,
+
+    <\equation*>
+      <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x f<around*|(|x|)>
+      \<varphi\><around*|(|x|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|\<mathi\><rsup|n>|n!>
+      <around*|(|\<partial\><rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsup|\<alpha\><rsub|n>><wide|f|^>|)><around*|(|0|)>
+      <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>.
+    </equation*>
+
+    On the other hand, because of the identity
+
+    <\equation*>
+      <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
+      \<delta\><around*|(|x|)> <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|x|)>,
+    </equation*>
+
+    integration by parts on the right hand side gives
+
+    <\equation*>
+      <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>=<around*|(|-1|)><rsup|n>
+      <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
+      <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|x|)>
+      \<varphi\><around*|(|x|)>.
+    </equation*>
+
+    Plugging this back, we find
+
+    <\equation*>
+      <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x f<around*|(|x|)>
+      \<varphi\><around*|(|x|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|<around*|(|-\<mathi\>|)><rsup|n>|n!>
+      <around*|(|\<partial\><rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsup|\<alpha\><rsub|n>><wide|f|^>|)><around*|(|0|)>
+      <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
+      <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|x|)>
+      \<varphi\><around*|(|x|)>.
+    </equation*>
+
+    Since <math|\<varphi\>> is arbitrary, we finall arrive at
+
+    <\equation*>
+      f<around*|(|x|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|<around*|(|-\<mathi\>|)><rsup|n>|n!>
+      <around*|(|\<partial\><rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsup|\<alpha\><rsub|n>><wide|f|^>|)><around*|(|0|)>
+      <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|x|)>.
+    </equation*>
+  </footnote>
+
+  <\equation>
+    f<around*|(|x|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|<around*|(|-\<mathi\>|)><rsup|n>|n!><around*|(|\<partial\><rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsup|\<alpha\><rsub|n>><wide|f|^>|)><around*|(|0|)><around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|x|)>.
+  </equation>
+
+  Notice that the left hand side of this expansion is a function, while the
+  right hand side is a series of generalized functions (the derivatives of
+  Dirac's delta function). So, this expansion has meaning only when it is
+  applied onto a test function in Schwartz space. This is just our situation,
+  where <math|q<rsub|\<Delta\>t>> is applied to its right hand side in
+  equation <reference|equation:path integral master equation>, which, as we
+  have discussed in the end of section <reference|section: Kramers\UMoyal
+  Expansion Formulates Transition Rate by Its Moments>, is in Schwartz space
+  if initially <math|p<around*|(|\<cdummy\>,0|)>> is. Replacing
+  <math|<wide|f|^><around*|(|k|)>> by <math|<wide|\<zeta\>|^><rsub|\<Delta\>t><around*|(|x,k|)>>,
+  we find
+
+  <\equation*>
+    <wide|\<zeta\>|^><rsub|\<Delta\>t><around*|(|x,k|)>=<big|sum><rsub|l=0><rsup|+\<infty\>><frac|<around*|(|-\<mathi\>|)><rsup|l>|l!><frac|\<partial\><rsup|l><wide|\<zeta\>|^><rsub|\<Delta\>t>|\<partial\>k<rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\>k<rsub|\<alpha\><rsub|l>>><around*|(|x,0|)><around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|l>>\<delta\>|)><around*|(|\<epsilon\>|)>.
+  </equation*>
+
+  Applying to <math|\<varphi\>\<in\>S<around*|(|\<bbb-R\><rsup|d>|)>> and
+  taking integration by parts gives
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
+    \<zeta\><rsub|\<Delta\>t><around*|(|x,\<epsilon\>|)>\<varphi\><around*|(|\<epsilon\>|)>=<big|sum><rsub|l=0><rsup|+\<infty\>><frac|\<mathi\><rsup|l>|l!><frac|\<partial\><rsup|l><wide|\<zeta\>|^><rsub|\<Delta\>t>|\<partial\>k<rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\>k<rsub|\<alpha\><rsub|l>>><around*|(|x,0|)><around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|l>>\<varphi\>|)><around*|(|0|)>.
+  </equation*>
+
+  So, we have to show that the coefficients are well-defined. Inserting
+  equation <reference|equation:residue zeta>, we find the coefficient
+
+  <\equation*>
+    <frac|\<partial\><rsup|l><wide|\<zeta\>|^><rsub|\<Delta\>t>|\<partial\>k<rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\>k<rsub|\<alpha\><rsub|l>>><around*|(|x,0|)>=<big|sum><rsub|n=2><rsup|+\<infty\>><frac|\<Delta\>t<rsup|n>|n!><big|sum><rsub|m=1><rsup|+\<infty\>><frac|\<mathi\><rsup|m>|m!>
+    <frac|\<partial\>|\<partial\>k<rsub|\<alpha\><rsub|1>>>\<cdots\><frac|\<partial\>|\<partial\>k<rsub|\<alpha\><rsub|l>>><around*|[|<frac|\<partial\><rsup|m><wide|g|^><rsub|n-1>|\<partial\>x<rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\>x<rsup|\<alpha\><rsub|m>>><around*|(|x,0|)><frac|\<partial\><rsup|m><wide|r|^>|\<partial\>k<rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\>k<rsub|\<alpha\><rsub|m>>><around*|(|x,0|)>|]>.
+  </equation*>
+
+  The terms in the series of the right hand side are all proportional to
+  partial derivatives of <math|<wide|r|^><around*|(|x,k|)>> on <math|k> at
+  origin, which is proportional to the moments of transition rate,
+  <math|K<around*|(|x|)>>. As it is concluded in section <reference|section:
+  Cut-off in the Moments of Transition Rate Is Essential for Spatial
+  Smoothness>, <math|K<rsub|n><around*|(|x|)>> vanishes for all
+  <math|n\<gtr\>N<rsub|cut>>. So, the series also terminates at finite
+  <math|m>. In the series of <math|n>, the <math|n>-th term (as a series of
+  <math|m>) approximately terminates at <math|m=n N<rsub|cut>>. And since all
+  <math|K<around*|(|x|)>> are bounded, the series of <math|m> increases
+  linearly with <math|n>. Hence, the series of <math|n> converges. It means
+  that, the application onto <math|\<varphi\>> results in a well-defined
+  residue, proportional to <math|\<Delta\>t<rsup|2>>. Now, we can conclude
+  that its residue is well-defined <em|in the sense of being applied to in
+  Schwartz space>.
 
   <chapter|Least-Action Principle><label|section: Least-Action Principle>
 
@@ -5118,7 +5119,7 @@
     <associate|equation:Detailed Balance|<tuple|2.8|17>>
     <associate|equation:Detailed Balance for transition
     density|<tuple|2.9|17>>
-    <associate|equation:Fokker-Planck equation|<tuple|3.13|34>>
+    <associate|equation:Fokker-Planck equation|<tuple|3.9|34>>
     <associate|equation:K condition|<tuple|3.3|29>>
     <associate|equation:action of distribution|<tuple|4.20|46>>
     <associate|equation:berezin integral|<tuple|4.17|45>>
@@ -5129,7 +5130,7 @@
     <associate|equation:data-fitting result|<tuple|4.23|48>>
     <associate|equation:define stationary density function|<tuple|2.14|23>>
     <associate|equation:detailed balance condition for
-    Langevin|<tuple|3.15|35>>
+    Langevin|<tuple|3.11|35>>
     <associate|equation:discrete time master equation|<tuple|2.5|14>>
     <associate|equation:discrete time master equation v0|<tuple|2.2|13>>
     <associate|equation:equation:metropolis-hastings|<tuple|2.12|22>>
@@ -5143,7 +5144,7 @@
     <associate|equation:langevin action constant covariance|<tuple|4.13|43>>
     <associate|equation:langevin action general|<tuple|4.19|46>>
     <associate|equation:langevin process after cholesky|<tuple|4.18|45>>
-    <associate|equation:langevin transition rate|<tuple|3.12|33>>
+    <associate|equation:langevin transition rate|<tuple|3.8|33>>
     <associate|equation:least-action principle v0|<tuple|4.2|38>>
     <associate|equation:least-action principle v1|<tuple|4.3|38>>
     <associate|equation:master equation|<tuple|2.4|14>>
@@ -5153,10 +5154,10 @@
     <associate|equation:path integral of markov process|<tuple|4.7|39>>
     <associate|equation:path integral step 2|<tuple|4.11|42>>
     <associate|equation:relative entropy derivative|<tuple|2.11|18>>
-    <associate|equation:residue zeta|<tuple|4.9|40>>
+    <associate|equation:residue zeta|<tuple|3.14|40>>
     <associate|equation:rg action|<tuple|4.24|50>>
     <associate|equation:rg integral|<tuple|4.25|50>>
-    <associate|equation:stationary Fokker-Planck equation|<tuple|3.14|34>>
+    <associate|equation:stationary Fokker-Planck equation|<tuple|3.10|34>>
     <associate|equation:to ghosts|<tuple|4.12|43>>
     <associate|equation:transition density coef recur|<tuple|4.8|40>>
     <associate|equation:transition density exp|<tuple|4.6|39>>
@@ -5164,7 +5165,7 @@
     <associate|equation:transition rate determines transition
     density|<tuple|2.6|15>>
     <associate|equation:transition rate determines transition density
-    v2|<tuple|3.8|16>>
+    v2|<tuple|3.12|16>>
     <associate|equation:wiener process|<tuple|3.7|33>>
     <associate|figure: Least-Action|<tuple|4.1|48>>
     <associate|footnote-1|<tuple|1|7>>
@@ -5227,7 +5228,7 @@
     <associate|section: Detailed Balance Provides Stationary
     Distribution|<tuple|2.4|17>>
     <associate|section: Detailed Balance of Langevin Process Lacks
-    Source-Free Degree of Freedom|<tuple|3.9|34>>
+    Source-Free Degree of Freedom|<tuple|3.8|34>>
     <associate|section: Effective Action and Renormalization Group
     Transformation|<tuple|4.9|50>>
     <associate|section: Example: Metropolis-Hastings
@@ -5241,7 +5242,7 @@
     <associate|section: Langevin Process Is Approximately
     Gaussian|<tuple|3.8|?>>
     <associate|section: Langevin Process Is a Markovian Process with
-    Ncut=2|<tuple|3.7|33>>
+    Ncut=2|<tuple|3.6|33>>
     <associate|section: Langevin Process with Constant Covariance Has a Path
     Integral on Alphabet|<tuple|4.4|42>>
     <associate|section: Least-Action Principle|<tuple|4|37>>
