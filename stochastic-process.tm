@@ -107,60 +107,56 @@
     Degree of Freedom <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-25>
 
-    3.9<space|2spc>Transition Rate Determines Transition Density, Again
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-26>
-
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|4<space|2spc>Least-Action
     Principle> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-27><vspace|0.5fn>
+    <no-break><pageref|auto-26><vspace|0.5fn>
 
     4.1<space|2spc>Conventions in This Chapter
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-28>
+    <no-break><pageref|auto-27>
 
     4.2<space|2spc>A Brief Review of Least-Action Principle in Classical
     Mechanics <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-28>
+
+    4.3<space|2spc>Least-Action Principle of Distribution Has No Redundancy
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-29>
 
-    4.3<space|2spc>Markovian Process with Euclidean Alphabet Can Be
-    Formulated as Path Integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    4.4<space|2spc>* Data Fitting Is Equivalent to Least-Action Principle of
+    Distribution <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-30>
 
-    4.4<space|2spc>Langevin Process with Constant Covariance Has a Path
-    Integral on Alphabet <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-31>
-
-    4.5<space|2spc>* Grassmann Variable, Berezin Integral, and Ghosts
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    4.5<space|2spc>Markovian Process with Euclidean Alphabet Can Be
+    Formulated as Path Integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-32>
 
-    4.6<space|2spc>Least-Action Principle of Distribution Has No Redundancy
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    4.6<space|2spc>Langevin Process with Constant Covariance Has a Path
+    Integral on Alphabet <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-33>
 
-    4.7<space|2spc>* Data Fitting Is Equivalent to Least-Action Principle of
-    Distribution <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    4.7<space|2spc>* Grassmann Variable, Berezin Integral, and Ghosts
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-34>
 
     4.8<space|2spc>How Far Will Information Propagate in Langevin Process?
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-36>
+    <no-break><pageref|auto-35>
 
     4.9<space|2spc>Effective Action and Renormalization Group Transformation
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-37>
+    <no-break><pageref|auto-36>
 
     <with|par-left|1tab|4.9.1<space|2spc>A Preliminary Situation
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-38>>
+    <no-break><pageref|auto-37>>
 
     <with|par-left|1tab|4.9.2<space|2spc>The Full Calculation
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-39>>
+    <no-break><pageref|auto-38>>
 
     4.10<space|2spc> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-40>
+    <no-break><pageref|auto-39>
   </table-of-contents>
 
   <chapter*|Preface>
@@ -2988,296 +2984,6 @@
   The lost degree of freedom is the cost of ensuring that any initial
   distribution will finally relax to the stationary.
 
-  <section|Transition Rate Determines Transition Density, Again>
-
-  We have seen how Fourier's idea successfully solves the heat equation in
-  section <reference|section: Randomness Appears in the Second Moment of
-  Transition Rate>. In this section, we are to generalize Fourier's idea to
-  generic Markovian process. Namely, we are to use Fourier transformation to
-  a generic transition rate to reveal its transition density. We start with
-  an approximate derivation, and tackle the residue later.
-
-  First, the Fourier transformation of transition rate is
-
-  <\equation>
-    <wide|r|^><around*|(|x,k|)>\<assign\><big|int>\<mathd\>\<epsilon\>
-    r<around*|(|x+\<epsilon\>,x|)> exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>.
-  </equation>
-
-  Then, we approximate transition density as
-  <math|q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>\<approx\>\<delta\><around*|(|\<epsilon\>|)>+r<around*|(|x+\<epsilon\>,x|)>
-  \<Delta\>t>. It implies the Fourier transformation of transition density
-
-  <\align>
-    <tformat|<table|<row|<cell|<wide|q|^><rsub|\<Delta\>t><around*|(|x,k|)>\<assign\>>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
-    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>
-    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>>>|<row|<cell|\<approx\>>|<cell|1+<wide|r|^><around*|(|x,k|)>
-    \<Delta\>t>>|<row|<cell|\<approx\>>|<cell|exp<around*|(|<wide|r|^><around*|(|x,k|)>
-    \<Delta\>t|)>.>>>>
-  </align>
-
-  By applying inverse Fourier transformations on both sides, we expect
-  <math|q<rsub|\<Delta\>t>\<approx\><wide|q|~><rsub|\<Delta\>t>> where
-
-  <\equation>
-    <wide|q|~><rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\>|)><rsup|d>>
-    exp<around*|(|\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>+<wide|r|^><around*|(|x,k|)>
-    \<Delta\>t|)> <label|equation:transition rate determines transition
-    density approx>
-  </equation>
-
-  is the inverse Fourier transformation of
-  <math|exp<around*|(|<wide|r|^><around*|(|x,k|)>\<Delta\>t|)>>. So, we
-  expect to find another way of expressing transition density by transition
-  rate. Comparing with equation <reference|equation:transition rate
-  determines transition density>, where the alphabet is generic, the alphabet
-  in equation <reference|equation:transition rate determines transition
-  density approx> has to be Euclidean (for performing Fourier
-  transformation).
-
-  To make the relation <math|q<rsub|\<Delta\>t>\<approx\><wide|q|~><rsub|\<Delta\>t>>
-  precise, we have to estimate the residue. The result is far from trivial
-  and it is found that the residue is well-defined and negligible only when
-  it is applied to Schwartz space. That is, for any
-  <math|\<varphi\>\<in\>S<around*|(|\<bbb-R\><rsup|d>|)>>, we have
-
-  <\equation>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
-    q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>
-    \<varphi\><around*|(|\<epsilon\>|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
-    <wide|q|~><rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>
-    \<varphi\><around*|(|\<epsilon\>|)>+\<omicron\><around*|(|\<Delta\>t|)>.<label|equation:transition
-    rate determines transition density v2>
-  </equation>
-
-  We devote the rest of this section to estimate the residue in equation
-  <reference|equation:transition rate determines transition density v2>.
-
-  To explicitly evaluate the residue, we have to consider the full expansion
-  of <math|q<rsub|\<Delta\>t>> (equation <reference|equation:transition rate
-  determines transition density>), rather than expanding to the first order
-  of <math|\<Delta\>t>. We have evaluated the zeroth and the first order
-  coefficients in the full expansion. Now for higher orders, define
-
-  <\equation*>
-    <wide|g|^><rsub|n><around*|(|x,k|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
-    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|1>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|n-1>
-    r<around*|(|x+\<epsilon\>,y<rsub|n-1>|)>\<cdots\>r<around*|(|y<rsub|2>,y<rsub|1>|)>r<around*|(|y<rsub|1>,x|)>,
-  </equation*>
-
-  for <math|n\<geqslant\>1>. Then, the full expansion of
-  <math|q<rsub|\<Delta\>t>> gives
-
-  <\equation*>
-    <wide|q|^><rsub|\<Delta\>t><around*|(|x,k|)>=1+<big|sum><rsub|n=1><rsup|+\<infty\>><frac|\<Delta\>t<rsup|n>|n!><wide|g|^><rsub|n><around*|(|x,k|)>.
-  </equation*>
-
-  The residue hides in the <math|<wide|g|^><rsub|n><around*|(|x,k|)>>s. We
-  are to calculate <math|<wide|g|^><rsub|n><around*|(|x,k|)>> by induction,
-  starting at <math|<wide|g|^><rsub|1><around*|(|x,k|)>=<wide|r|^><around*|(|x,k|)>>.
-  Directly,
-
-  <\equation*>
-    <wide|g|^><rsub|n+1><around*|(|x,k|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|1><around*|[|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|2>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|n><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
-    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>r<around*|(|x+\<epsilon\>,y<rsub|n>|)>\<cdots\>r<around*|(|y<rsub|2>,y<rsub|1>|)>|]>r<around*|(|y<rsub|1>,x|)>.
-  </equation*>
-
-  Denoting <math|\<epsilon\><rprime|'>\<assign\>\<epsilon\>+x-y<rsub|1>>, we
-  find
-
-  <\align>
-    <tformat|<table|<row|<cell|<wide|g|^><rsub|n+1><around*|(|x,k|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|1>>|<cell|<around*|[|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|2>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|n><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\><rprime|'>
-    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rprime|'><rsup|\<alpha\>>|)>r<around*|(|y<rsub|1>+\<epsilon\>,y<rsub|n>|)>\<cdots\>r<around*|(|y<rsub|2>,y<rsub|1>|)>|]>>>|<row|<cell|>|<cell|\<times\>exp<around*|(|-\<mathi\>k<rsub|\<alpha\>><around*|(|y<rsub|1><rsup|\<alpha\>>-x<rsup|\<alpha\>>|)>|)>r<around*|(|y<rsub|1>,x|)>.>>>>
-  </align>
-
-  The <math|<around*|[|\<cdots\>|]>> factor is recognized as
-  <math|<wide|g|^><rsub|n><around*|(|x,k|)>>. Thus, (reuse the
-  <math|\<epsilon\>> notation for simplicity)
-
-  <\align>
-    <tformat|<table|<row|<cell|<wide|g|^><rsub|n+1><around*|(|x,k|)>=>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rsub|1><wide|g|^><around*|(|y<rsub|1>,k|)>
-    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>><around*|(|y<rsub|1><rsup|\<alpha\>>-x<rsup|\<alpha\>>|)>|)>r<around*|(|y<rsub|1>,x|)>>>|<row|<cell|=>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
-    <wide|g|^><around*|(|x+\<epsilon\>,k|)>
-    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>r<around*|(|x+\<epsilon\>,x|)>.>>>>
-  </align>
-
-  Then, Taylor expanding <math|<wide|g|^><around*|(|y<rsub|1>+\<epsilon\>,k|)>>
-  by <math|\<epsilon\>> at origin results in (<math|\<partial\>> is derived
-  on the first variable, and <math|\<partial\><rprime|'>> on the second)
-
-  <\equation*>
-    <wide|g|^><rsub|n+1><around*|(|x,k|)>=<big|sum><rsub|m=0><rsup|+\<infty\>><frac|1|m!><frac|\<partial\><rsup|m><wide|g|^><rsub|n>|\<partial\>x<rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\>x<rsup|\<alpha\><rsub|m>>><around*|(|x,k|)><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
-    <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|m>>|)>
-    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>
-    r<around*|(|x+\<epsilon\>,x|)>.
-  </equation*>
-
-  The integral is recognized as partial derivatives
-  <math|\<partial\><rsup|m><wide|r|^>/<around*|[|\<partial\><around*|(|-\<mathi\>k<rsub|\<alpha\><rsub|1>>|)>\<cdots\>\<partial\><around*|(|-\<mathi\>k<rsub|\<alpha\><rsub|m>>|)>|]>>,
-  thus we arrive at
-
-  <\equation>
-    <wide|g|^><rsub|n+1><around*|(|x,k|)>=<big|sum><rsub|m=0><rsup|+\<infty\>><frac|\<mathi\><rsup|m>|m!>
-    <frac|\<partial\><rsup|m><wide|g|^><rsub|n>|\<partial\>x<rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\>x<rsup|\<alpha\><rsub|m>>><around*|(|x,k|)><frac|\<partial\><rsup|m><wide|r|^>|\<partial\>k<rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\>k<rsub|\<alpha\><rsub|m>>><around*|(|x,k|)>.<label|equation:transition
-    density coef recur>
-  </equation>
-
-  In <math|<wide|g|^><rsub|n><around*|(|x,k|)>>, the term with <math|m=0> is
-  <math|<around*|[|<wide|r|^><around*|(|x,k|)>|]><rsup|n>>. So, we conclude
-  that
-
-  <\equation*>
-    <wide|q|^><rsub|\<Delta\>t><around*|(|x,k|)>=1+<big|sum><rsub|n=1><rsup|+\<infty\>><frac|\<Delta\>t<rsup|n>|n!><wide|g|^><rsub|n><around*|(|x,k|)>=exp<around*|(|<wide|r|^><around*|(|x,k|)>
-    \<Delta\>t|)>+<wide|\<zeta\>|^><rsub|\<Delta\>t><around*|(|x,k|)>,
-  </equation*>
-
-  where <math|<wide|\<zeta\>|^><rsub|\<Delta\>t><around*|(|x,k|)>> collects
-  the terms in each <math|<wide|g|^><rsub|n><around*|(|x,k|)>> except for the
-  <math|<around*|[|<wide|r|^><around*|(|x,k|)>|]><rsup|n>>. Together with
-  equation <reference|equation:transition density coef recur>, we get
-
-  <\equation>
-    <wide|\<zeta\>|^><rsub|\<Delta\>t><around*|(|x,k|)>=<big|sum><rsub|n=2><rsup|+\<infty\>><frac|\<Delta\>t<rsup|n>|n!><big|sum><rsub|m=1><rsup|+\<infty\>><frac|\<mathi\><rsup|m>|m!>
-    <frac|\<partial\><rsup|m><wide|g|^><rsub|n-1>|\<partial\>x<rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\>x<rsup|\<alpha\><rsub|m>>><around*|(|x,k|)><frac|\<partial\><rsup|m><wide|r|^>|\<partial\>k<rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\>k<rsub|\<alpha\><rsub|m>>><around*|(|x,k|)>.<label|equation:residue
-    zeta>
-  </equation>
-
-  Since the terms like <math|<around*|[|<wide|r|^><around*|(|x,k|)>|]><rsup|n>>
-  have been absent in <math|<wide|\<zeta\>|^><rsub|\<Delta\>t><around*|(|x,k|)>>,
-  <math|m> starts at <math|1>. And since <math|<wide|g|^><rsub|1><around*|(|x,k|)>=<wide|r|^><around*|(|x,k|)>>,
-  it contributes nothing to <math|<wide|\<zeta\>|^><rsub|\<Delta\>t><around*|(|x,k|)>>,
-  and <math|n> starts at <math|2>. Thus, <math|<wide|\<zeta\>|^><rsub|\<Delta\>t><around*|(|x,k|)>=\<omicron\><around*|(|\<Delta\>t|)>>
-  and it is the residue we are seeking for. Temporally, we do not know
-  whether the series in <math|<wide|\<zeta\>|^><rsub|\<Delta\>t><around*|(|x,k|)>>
-  converges or not, but keeping the series <reference|equation:residue zeta>
-  formal (we will examine this later).
-
-  For going back to <math|q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>>,
-  we perform inverse Fourier transformation. This refers to the expansion of
-  a function <math|f> as<\footnote>
-    This can be viewed as a generalization of Kramers-Moyal expansion. In
-    fact, we are to prove this expansion by following the steps in section
-    <reference|section: Kramers\UMoyal Expansion Formulates Transition Rate
-    by Its Moments>, in which we proved Kramers-Moyal expansion. Explicitly,
-    consider a function <math|\<varphi\>\<in\>S<around*|(|\<bbb-R\><rsup|d>|)>>,
-    thus Taylor expanding <math|\<varphi\>> at origin gives
-
-    <\equation*>
-      <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x f<around*|(|x|)>
-      \<varphi\><around*|(|x|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|1|n!>
-      <around*|[|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x f<around*|(|x|)>
-      <around*|(|x<rsup|\<alpha\><rsub|1>>\<cdots\>x<rsup|\<alpha\><rsub|n>>|)>|]>
-      <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>.
-    </equation*>
-
-    We relate the integral in the <math|<around*|[|\<cdots\>|]>> to the
-    Fourier transformation <math|<wide|f|^>> by
-
-    <\equation*>
-      <around*|(|\<partial\><rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsup|\<alpha\><rsub|n>><wide|f|^>|)><around*|(|0|)>=lim<rsub|k\<rightarrow\>0><frac|\<partial\>|\<partial\>k<rsub|\<alpha\><rsub|1>>>\<cdots\><frac|\<partial\>|\<partial\>k<rsub|\<alpha\><rsub|n>>><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
-      exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>
-      f<around*|(|x|)>=<around*|(|-\<mathi\>|)><rsup|n>
-      <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x f<around*|(|x|)>
-      <around*|(|x<rsup|\<alpha\><rsub|1>>\<cdots\>x<rsup|\<alpha\><rsub|n>>|)>.
-    </equation*>
-
-    Thus,
-
-    <\equation*>
-      <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x f<around*|(|x|)>
-      \<varphi\><around*|(|x|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|\<mathi\><rsup|n>|n!>
-      <around*|(|\<partial\><rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsup|\<alpha\><rsub|n>><wide|f|^>|)><around*|(|0|)>
-      <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>.
-    </equation*>
-
-    On the other hand, because of the identity
-
-    <\equation*>
-      <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
-      \<delta\><around*|(|x|)> <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|x|)>,
-    </equation*>
-
-    integration by parts on the right hand side gives
-
-    <\equation*>
-      <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>=<around*|(|-1|)><rsup|n>
-      <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
-      <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|x|)>
-      \<varphi\><around*|(|x|)>.
-    </equation*>
-
-    Plugging this back, we find
-
-    <\equation*>
-      <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x f<around*|(|x|)>
-      \<varphi\><around*|(|x|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|<around*|(|-\<mathi\>|)><rsup|n>|n!>
-      <around*|(|\<partial\><rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsup|\<alpha\><rsub|n>><wide|f|^>|)><around*|(|0|)>
-      <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
-      <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|x|)>
-      \<varphi\><around*|(|x|)>.
-    </equation*>
-
-    Since <math|\<varphi\>> is arbitrary, we finall arrive at
-
-    <\equation*>
-      f<around*|(|x|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|<around*|(|-\<mathi\>|)><rsup|n>|n!>
-      <around*|(|\<partial\><rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsup|\<alpha\><rsub|n>><wide|f|^>|)><around*|(|0|)>
-      <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|x|)>.
-    </equation*>
-  </footnote>
-
-  <\equation>
-    f<around*|(|x|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|<around*|(|-\<mathi\>|)><rsup|n>|n!><around*|(|\<partial\><rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsup|\<alpha\><rsub|n>><wide|f|^>|)><around*|(|0|)><around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|x|)>.
-  </equation>
-
-  Notice that the left hand side of this expansion is a function, while the
-  right hand side is a series of generalized functions (the derivatives of
-  Dirac's delta function). So, this expansion has meaning only when it is
-  applied onto a test function in Schwartz space. This is just our situation,
-  where <math|q<rsub|\<Delta\>t>> is applied to its right hand side in
-  equation <reference|equation:path integral master equation>, which, as we
-  have discussed in the end of section <reference|section: Kramers\UMoyal
-  Expansion Formulates Transition Rate by Its Moments>, is in Schwartz space
-  if initially <math|p<around*|(|\<cdummy\>,0|)>> is. Replacing
-  <math|<wide|f|^><around*|(|k|)>> by <math|<wide|\<zeta\>|^><rsub|\<Delta\>t><around*|(|x,k|)>>,
-  we find
-
-  <\equation*>
-    <wide|\<zeta\>|^><rsub|\<Delta\>t><around*|(|x,k|)>=<big|sum><rsub|l=0><rsup|+\<infty\>><frac|<around*|(|-\<mathi\>|)><rsup|l>|l!><frac|\<partial\><rsup|l><wide|\<zeta\>|^><rsub|\<Delta\>t>|\<partial\>k<rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\>k<rsub|\<alpha\><rsub|l>>><around*|(|x,0|)><around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|l>>\<delta\>|)><around*|(|\<epsilon\>|)>.
-  </equation*>
-
-  Applying to <math|\<varphi\>\<in\>S<around*|(|\<bbb-R\><rsup|d>|)>> and
-  taking integration by parts gives
-
-  <\equation*>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
-    \<zeta\><rsub|\<Delta\>t><around*|(|x,\<epsilon\>|)>\<varphi\><around*|(|\<epsilon\>|)>=<big|sum><rsub|l=0><rsup|+\<infty\>><frac|\<mathi\><rsup|l>|l!><frac|\<partial\><rsup|l><wide|\<zeta\>|^><rsub|\<Delta\>t>|\<partial\>k<rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\>k<rsub|\<alpha\><rsub|l>>><around*|(|x,0|)><around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|l>>\<varphi\>|)><around*|(|0|)>.
-  </equation*>
-
-  So, we have to show that the coefficients are well-defined. Inserting
-  equation <reference|equation:residue zeta>, we find the coefficient
-
-  <\equation*>
-    <frac|\<partial\><rsup|l><wide|\<zeta\>|^><rsub|\<Delta\>t>|\<partial\>k<rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\>k<rsub|\<alpha\><rsub|l>>><around*|(|x,0|)>=<big|sum><rsub|n=2><rsup|+\<infty\>><frac|\<Delta\>t<rsup|n>|n!><big|sum><rsub|m=1><rsup|+\<infty\>><frac|\<mathi\><rsup|m>|m!>
-    <frac|\<partial\>|\<partial\>k<rsub|\<alpha\><rsub|1>>>\<cdots\><frac|\<partial\>|\<partial\>k<rsub|\<alpha\><rsub|l>>><around*|[|<frac|\<partial\><rsup|m><wide|g|^><rsub|n-1>|\<partial\>x<rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\>x<rsup|\<alpha\><rsub|m>>><around*|(|x,0|)><frac|\<partial\><rsup|m><wide|r|^>|\<partial\>k<rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\>k<rsub|\<alpha\><rsub|m>>><around*|(|x,0|)>|]>.
-  </equation*>
-
-  The terms in the series of the right hand side are all proportional to
-  partial derivatives of <math|<wide|r|^><around*|(|x,k|)>> on <math|k> at
-  origin, which is proportional to the moments of transition rate,
-  <math|K<around*|(|x|)>>. As it is concluded in section <reference|section:
-  Cut-off in the Moments of Transition Rate Is Essential for Spatial
-  Smoothness>, <math|K<rsub|n><around*|(|x|)>> vanishes for all
-  <math|n\<gtr\>N<rsub|cut>>. So, the series also terminates at finite
-  <math|m>. In the series of <math|n>, the <math|n>-th term (as a series of
-  <math|m>) approximately terminates at <math|m=n N<rsub|cut>>. And since all
-  <math|K<around*|(|x|)>> are bounded, the series of <math|m> increases
-  linearly with <math|n>. Hence, the series of <math|n> converges. It means
-  that, the application onto <math|\<varphi\>> results in a well-defined
-  residue, proportional to <math|\<Delta\>t<rsup|2>>. Now, we can conclude
-  that its residue is well-defined <em|in the sense of being applied to in
-  Schwartz space>.
-
   <chapter|Least-Action Principle><label|section: Least-Action Principle>
 
   We apply the discussions in chapter <reference|section: Kramers-Moyal
@@ -3446,16 +3152,314 @@
   Redundancy>, action is completely determined by the real world distribution
   (the correspondence of real world datum), with nothing redundant.
 
+  <section|Least-Action Principle of Distribution Has No
+  Redundancy><label|section: Least-Action Principle of Distribution Has No
+  Redundancy>
+
+  Dynamics in classical mechanics are always deterministic. That is, once the
+  initial conditions (for initial value problem) or the boundaries (for
+  boundary value problem) are fixed, then the path is fully determined.
+  Randomness is forbidden. There are, however, many phenomena in nature that
+  have <em|intrinsic> randomness. For example, molecular movement obeys a
+  normal distribution with variance proportional to time interval. The
+  dynamics of starling flocks also has intrinsic randomness, which is the
+  \Pfree will\Q of each bird, so is ant colony, human society, and any
+  interactive system in which each element has some level of intrinsic
+  uncertainty. For these cases, the real world datum is not simply a path,
+  but a distribution of path. In this section, we are to describe these
+  phenomena in the language of Markovian process.
+
+  By repeatedly applying (discrete time) master equation
+  <reference|equation:discrete time master equation>, we get
+
+  <\equation>
+    p<around*|(|x<rsub|N>,N \<Delta\>t|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N-1>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|0>
+    q<rsub|\<Delta\>t><around*|(|x<rsub|N>\|x<rsub|N-1>|)>\<cdots\>
+    q<rsub|\<Delta\>t><around*|(|x<rsub|1>\|x<rsub|0>|)>
+    p<around*|(|x<rsub|0>,0|)>.<label|equation:master equation series>
+  </equation>
+
+  The right hand side can be viewed as marginalizing the random variables
+  <math|<around*|(|X<rsub|0>,\<ldots\>,X<rsub|N-1>|)>>, and the product
+  <math|q<around*|(|x<rsub|N>\|x<rsub|N-1>|)>\<cdots\>
+  q<around*|(|x<rsub|1>\|x<rsub|0>|)>> can be seen as the density function of
+  <math|<around*|(|X<rsub|1>,\<ldots\>,X<rsub|N>|)>>, where we have omitted
+  the subscript <math|\<Delta\>t> for simplicity. To see this clearly, we
+  first notice that <math|q<around*|(|x<rsub|2>\|x<rsub|1>|)>=q<around*|(|x<rsub|2>\|x<rsub|0>,x<rsub|1>|)>>
+  holds for any <math|x<rsub|0>>, because
+  <math|q<around*|(|x<rsub|2>\|x<rsub|1>|)>> is not explicitly dependent on
+  <math|x<rsub|0>>. Then, we have <math|q<around*|(|x<rsub|2>\|x<rsub|1>|)>q<around*|(|x<rsub|1>\|x<rsub|0>|)>q<around*|(|x<rsub|0>|)>=q<around*|(|x<rsub|2>\|x<rsub|0>,x<rsub|1>|)>q<around*|(|x<rsub|1>\|x<rsub|0>|)>q<around*|(|x<rsub|0>|)>>.
+  Repeatedly using the definition of conditional density, it becomes
+  <math|q<around*|(|x<rsub|2>\|x<rsub|0>,x<rsub|1>|)>
+  q<around*|(|x<rsub|0>,x<rsub|1>|)>=q<around*|(|x<rsub|0>,x<rsub|1>,x<rsub|2>|)>>.
+  Dividing <math|q<around*|(|x<rsub|0>|)>> on both sides, we get
+  <math|q<around*|(|x<rsub|1>,x<rsub|2>\|x<rsub|0>|)>=q<around*|(|x<rsub|2>\|x<rsub|1>|)>q<around*|(|x<rsub|1>\|x<rsub|0>|)>>.
+  Repeating this step, we will find
+
+  <\equation*>
+    q<around*|(|x<rsub|N>\|x<rsub|N-1>|)>\<cdots\>q<around*|(|x<rsub|1>\|x<rsub|0>|)>=q<around*|(|x<rsub|1>,\<ldots\>,x<rsub|N>\|x<rsub|0>|)>,
+  </equation*>
+
+  recognized as a conditional density of random variables
+  <math|<around*|(|X<rsub|1>,\<ldots\>,X<rsub|N>|)>> given <math|x<rsub|0>>.
+  If we regard the series <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|N>|)>>
+  as a \Pmovie\Q or a \Ppath\Q of evolution of the stochastic system, in
+  which each <math|x<rsub|i>> can be seen as a \Pframe\Q, then the density
+  function <math|q<around*|(|x<rsub|1>,\<ldots\>,x<rsub|N>\|x<rsub|0>|)>>
+  characterizes the distribution of evolution.
+
+  If define <math|S<around*|(|x<rsub|1>,\<ldots\>,x<rsub|N>\|x<rsub|0>|)>\<assign\>-ln
+  q<around*|(|x<rsub|1>,\<ldots\>,x<rsub|N>\|x<rsub|0>|)>>, then the master
+  equation becomes
+
+  <\equation*>
+    p<around*|(|x<rsub|N>,N \<Delta\>t|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|0>
+    p<around*|(|x<rsub|0>,0|)> <around*|[|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|1>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N-1>
+    exp<around*|(|-S<around*|(|x<rsub|1>,\<ldots\>,x<rsub|N>\|x<rsub|0>|)>|)>|]>.
+  </equation*>
+
+  So, the <math|<around*|[|\<cdots\>|]>> part transites the density function
+  <math|p<around*|(|\<cdummy\>,0|)>> to <math|p<around*|(|\<cdummy\>,N
+  \<Delta\>t|)>>. It is an integration over all possible ways of evolution.
+  If we treat <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|N>|)>> together as
+  a single <math|x>, then we can generalize this to any density function
+  <math|q<around*|(|x|)>> with <math|x\<in\>\<bbb-R\><rsup|n>>. We can always
+  define
+
+  <\equation>
+    S<around*|(|x|)>\<assign\>-*ln q<around*|(|x|)>.<label|equation:action of
+    distribution>
+  </equation>
+
+  Thus, <math|q<around*|(|x|)>=exp<around*|(|-S<around*|(|x|)>|)>>.
+
+  The <math|S> defined by <reference|equation:action of distribution> has
+  some properties that can be analog to the action in classical mechanics.
+  Indeed, by plugging in the definition of <math|S>, we find
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x q<around*|(|x|)>
+    <frac|\<partial\>S|\<partial\>x<rsup|\<alpha\>>><around*|(|x|)>=-<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
+    q<around*|(|x|)> <frac|\<partial\>|\<partial\>x<rsup|\<alpha\>>>ln
+    q<around*|(|x|)>=-<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
+    <frac|\<partial\>|\<partial\>x<rsup|\<alpha\>>>q<around*|(|x|)>.
+  </equation*>
+
+  The integrand of the right most expression is a divergence, so it results
+  in a boundary integral. But since <math|q>, as a density function, is
+  normalized, the boundary integral shall vanish as
+  <math|<around*|\<\|\|\>|x|\<\|\|\>>\<rightarrow\>+\<infty\>>. So, we
+  conclude that
+
+  <\equation*>
+    \<bbb-E\><rsub|Q><around*|[|<frac|\<partial\>S|\<partial\>x<rsup|\<alpha\>>>|]>=0.
+  </equation*>
+
+  This is analog to equation <reference|equation:least-action principle v1>,
+  where the minimum <math|x<rsub|\<star\>>> is replaced by the expectation
+  <math|\<bbb-E\><rsub|Q>>. Secondly, the distribution <math|Q> (whose
+  density function is the <math|q>) most likely samples (recall section
+  <reference|section: A Brief Review of Probability> that distribution has a
+  sampler) the <math|x> that maximizes <math|q>, thus minimizes <math|S>. For
+  these reasons, we illustrate the <math|S> defined by <math|q> as the action
+  of <math|Q>. Contrary to the action in classical mechanics, the <math|S>
+  here is completely determined by the real world distribution <math|Q>
+  (because it is defined by the density function <math|q>), without any
+  redundancy. This is the direct implication that distribution involves more
+  information than its most likely datum.
+
+  <section|* Data Fitting Is Equivalent to Least-Action Principle of
+  Distribution><label|section: Data Fitting Is Equivalent to Least-Action
+  Principle of Distribution>
+
+  Given a collection of real world data, we are to find a distribution that
+  fits the data. These data can be seen as samples from an unknown
+  distribution which characterizes the real world. We are to figure out a
+  method to fit the real world distribution by given some samples of it.
+
+  Let <math|P<around*|(|\<theta\>|)>> represent a distribution parametrized
+  by <math|\<theta\>\<in\>\<bbb-R\><rsup|m>>. Its alphabet <math|\<cal-X\>>
+  is either discrete or continuous. From its density function,
+  <math|p<around*|(|\<cdummy\>,\<theta\>|)>>, we get a parameterized action
+  <math|S<around*|(|\<cdummy\>,\<theta\>|)>> such that
+
+  <\equation>
+    p<around*|(|x,\<theta\>|)>=exp<around*|(|-S<around*|(|x,\<theta\>|)>|)>/Z<around*|(|\<theta\>|)>,<label|equation:generic
+    density>
+  </equation>
+
+  where <math|Z<around*|(|\<theta\>|)>=<big|int>\<mathd\>x
+  exp<around*|(|-S<around*|(|x,\<theta\>|)>|)>> for ensuring the
+  normalization <math|<big|int>\<mathd\>x p<around*|(|x,\<theta\>|)>=1>. This
+  is consistent with the action defined by equation
+  <reference|equation:action of distribution>, except that the action here is
+  parameterized, and that we omit the constant <math|\<beta\>> since it is
+  irrelevant throughout this section.
+
+  What we have is a collection of data, sampled from an unknown distribution
+  <math|Q>. And we are to adjust the parameters <math|\<theta\>> so that
+  <math|P<around*|(|\<theta\>|)>> approximates <math|Q>. To do so, we
+  minimize the relative entropy between <math|Q> and
+  <math|P<around*|(|\<theta\>|)>>, which is defined as
+  <math|H<around*|(|Q,P<around*|(|\<theta\>|)>|)>\<assign\><big|int>\<mathd\>x
+  q<around*|(|x|)> ln <around*|(|q<around*|(|x|)>/p<around*|(|x,\<theta\>|)>|)>>.
+  This expression is formal. Since we do not know the density function of
+  <math|Q>, all that we can do with <math|Q> is computing the expectation
+  <math|\<bbb-E\><rsub|Q><around*|[|f|]>=<around*|(|1/<around*|\||Q|\|>|)><big|sum><rsub|x\<in\>Q>f<around*|(|x|)>>
+  for any function <math|f>, where we use <math|Q> as a set of data. With
+  this realization, we have, after plugging equation
+  <reference|equation:generic density> into
+  <math|H<around*|(|Q,P<around*|(|\<theta\>|)>|)>>,
+
+  <\equation*>
+    H<around*|(|Q,P<around*|(|\<theta\>|)>|)>=<big|int><rsub|\<cal-X\>>\<mathd\>x
+    q<around*|(|x|)> ln q<around*|(|x|)>+<big|int><rsub|\<cal-X\>>\<mathd\>x
+    q<around*|(|x|)> S<around*|(|x,\<theta\>|)>+<big|int><rsub|\<cal-X\>>\<mathd\>x
+    q<around*|(|x|)> ln Z<around*|(|\<theta\>|)>.
+  </equation*>
+
+  By omitting the <math|\<theta\>>-independent terms, we get the loss
+  function
+
+  <\equation*>
+    L<around*|(|\<theta\>|)>\<assign\><big|int><rsub|\<cal-X\>>\<mathd\>x
+    q<around*|(|x|)> S<around*|(|x,\<theta\>|)>+ln Z<around*|(|\<theta\>|)>.
+  </equation*>
+
+  The parameters that minimize <math|L<around*|(|\<theta\>|)>> also minimize
+  <math|H<around*|(|Q,P<around*|(|\<theta\>|)>|)>>, and vice versa. We can
+  find the <math|\<theta\><rsub|\<star\>>\<assign\>argmin L> by iteratively
+  updating <math|\<theta\>> along the direction
+  <math|-\<partial\>L/\<partial\>\<theta\>>. To calculate
+  <math|-\<partial\>L/\<partial\>\<theta\>>, we start at
+
+  <\equation*>
+    -<frac|\<partial\>L|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|\<theta\>|)>=-<big|int><rsub|\<cal-X\>>\<mathd\>x
+    q<around*|(|x|)> <frac|\<partial\>S|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x,\<theta\>|)>-<frac|1|Z<around*|(|\<theta\>|)>>
+    <frac|\<partial\>Z|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|\<theta\>|)>.
+  </equation*>
+
+  The first term is recognized as <math|-\<bbb-E\><rsub|Q><around*|[|\<partial\>S/\<partial\>\<theta\><rsup|\<alpha\>>|]>>.
+  For the second term, since <math|Z<around*|(|\<theta\>|)>=<big|int><rsub|\<cal-X\>>\<mathd\>x
+  exp<around*|(|-S<around*|(|x,\<theta\>|)>|)>>, we have
+
+  <\equation*>
+    -<frac|1|Z<around*|(|\<theta\>|)>> <frac|\<partial\>Z|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|\<theta\>|)>=<big|int><rsub|\<cal-X\>>\<mathd\>x
+    <with|color|dark cyan|<frac|exp<around*|(|-S<around*|(|x,\<theta\>|)>|)>|Z<around*|(|\<theta\>|)>>>
+    <frac|\<partial\>S|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x,\<theta\>|)>=<big|int><rsub|\<cal-X\>>\<mathd\>x
+    p<around*|(|x,\<theta\>|)> <frac|\<partial\>S|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x,\<theta\>|)>,
+  </equation*>
+
+  where in the last equality, we used the definition of
+  <math|p<around*|(|x,\<theta\>|)>> (the green factor). This final expression
+  is just the <math|\<bbb-E\><rsub|P<around*|(|\<theta\>|)>><around*|[|\<partial\>S/\<partial\>\<theta\><rsup|\<alpha\>>|]>>.
+  Altogether, we arrive at
+
+  <\equation>
+    -<frac|\<partial\>L|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|\<theta\>|)>=\<bbb-E\><rsub|P<around*|(|\<theta\>|)>><around*|[|<frac|\<partial\>S|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|\<cdummy\>,\<theta\>|)>|]>-\<bbb-E\><rsub|Q><around*|[|<frac|\<partial\>S|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|\<cdummy\>,\<theta\>|)>|]>.<label|equation:data-fitting
+    iteration>
+  </equation>
+
+  At the minimum, we shall have <math|\<partial\>L/\<partial\>\<theta\>=0>.
+  Then, we find that <math|\<theta\><rsub|\<star\>>> obeys
+
+  <\equation>
+    \<bbb-E\><rsub|P<around*|(|\<theta\><rsub|\<star\>>|)>><around*|[|<frac|\<partial\>S|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|\<cdummy\>,\<theta\><rsub|\<star\>>|)>|]>=\<bbb-E\><rsub|Q><around*|[|<frac|\<partial\>S|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|\<cdummy\>,\<theta\><rsub|\<star\>>|)>|]>.<label|equation:data-fitting
+    result>
+  </equation>
+
+  \;
+
+  It can be read from equation <reference|equation:data-fitting iteration>
+  that minimizing <math|L> is to increase
+  <math|S<around*|(|\<cdummy\>,\<theta\>|)>> on the sampled points (the first
+  term) while decrease it on data points (the second term). As figure
+  <reference|figure: Least-Action> illustrates, this way of optimization will
+  site real world data onto local minima of
+  <math|S<around*|(|\<cdummy\>,\<theta\>|)>>, <em|in statistical sense>.
+
+  <big-figure|<with|gr-mode|<tuple|edit|spline>|gr-frame|<tuple|scale|1.00001cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|10|10|center>|gr-grid|<tuple|empty>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-line-width|0.5ln|gr-dash-style|11100|gr-color|blue|<graphics||<with|arrow-end|\|\<gtr\>|<line|<point|-6|-3>|<point|-6.0|3.0>>>|<with|arrow-end|\|\<gtr\>|<line|<point|-6|-3>|<point|6.0|-3.0>>>|<math-at|S<around*|(|x,\<theta\>|)>|<point|-6.40049278190267|3.30061515056306>>|<math-at|x|<point|6.20000992178327|-3.1>>|<with|line-width|5ln|arrow-end|\<gtr\>|opacity|50%|color|red|<line|<point|-1.3|3.2>|<point|-1.3|1.7>>>|<with|line-width|5ln|color|blue|opacity|50%|arrow-begin|\<less\>|<line|<point|0.8|-0.83096059724234>|<point|0.8|-2.33096059724234>>>|<with|dash-style|11100|line-width|0.5ln|color|red|<line|<point|-1.3|1.4>|<point|-1.3|-3.0>>>|<with|color|red|<point|-1.3|1.41877>>|<with|color|red|<math-at|x<rsub|1>|<point|-1.4|-3.3>>>|<with|color|blue|<math-at|x<rsub|2>|<point|0.7|-3.3>>>|<with|dash-style|11100|line-width|0.5ln|color|blue|<line|<point|0.8|0.5>|<point|0.8|-3.0>>>|<with|color|blue|<point|0.8|-0.6>>|<with|color|dark
+  cyan|dash-style|11100|<spline|<point|-5|1>|<point|-2.3|-0.7>|<point|0.8|0.5>|<point|3.04196914325401|2.48975575876838>|<point|4.2|2.2>>>|<with|color|dark
+  cyan|<spline|<point|-5.04362277379988|-0.0748763911166967>|<point|-2.85798620872125|2.07284242554528>|<point|0.666826517619433|-0.580225885932565>|<point|3.38308005225473|1.9970400013229>|<point|4.21690671870091|2.62872686984274>>>>>|<label|figure:
+  Least-Action> This figure illustrate how
+  <math|min<rsub|\<theta\>>L<around*|(|\<theta\>|)>> will site a real world
+  datum onto a local minimum of <math|S<around*|(|\<cdummy\>,\<theta\>|)>>.
+  The green curve represents the current not-yet-optimized
+  <math|S<around*|(|\<cdummy\>,\<theta\>|)>>. The <math|x<rsub|1>> (red
+  point) is a real world datum while <math|x<rsub|2>> (blue point), which is
+  currently a local minimum of <math|S<around*|(|\<cdummy\>,\<theta\>|)>>, is
+  not. Minimizing <math|L> by tuning <math|\<theta\>> pushes the
+  <math|\<bbb-E\><rsub|Q><around*|[|S<around*|(|\<cdummy\>,\<theta\>|)>|]>>
+  down to lower value, corresponding to the red downward double-arrow on
+  <math|x<rsub|1>>. Also, since <math|x<rsub|2>> is a local minimum, the data
+  points sampled from <math|p<around*|(|x,\<theta\>|)>\<propto\>exp<around*|(|-S<around*|(|x,\<theta\>|)>|)>>
+  will accumulate around <math|x<rsub|2>>. So, minimizing <math|L> also pulls
+  the <math|\<bbb-E\><rsub|P<around*|(|\<theta\>|)>><around*|[|S<around*|(|\<cdummy\>,\<theta\>|)>|]>>
+  up to greater value, corresponding to the blue upward double-arrow on
+  <math|x<rsub|2>>. Altogether, it makes <math|x<rsub|1>> a local minimum of
+  <math|S<around*|(|\<cdummy\>,\<theta\>|)>>, and
+  <math|S<around*|(|\<cdummy\>,\<theta\>|)>> is optimized to be the dashed
+  green curve.>
+
+  In this way, we find an analytical distribution
+  <math|P<around*|(|\<theta\>|)>> that approximates the empirical
+  distribution <math|Q>. The <math|S<around*|(|\<cdummy\>,\<theta\>|)>> that
+  defines <math|P<around*|(|\<theta\>|)>> describes the interaction between
+  the different components of an entity. This entity may be of physics, like
+  a collection of particles. But it can also be words, genes, flock of birds,
+  and so on.
+
+  As an example, if we want to get the action that characterizes the
+  stochastic dynamics of starling flocks, we take movies for many flocks.
+  Each movie is a series of frames that log the positions of each bird at
+  each time instant. These movies provide the real world data. The
+  parameterized action <math|S> can be expressed by a neural network. Then,
+  iterating by equation <reference|equation:data-fitting iteration> until
+  <math|<around*|\<\|\|\>|\<partial\>L/\<partial\>\<theta\>|\<\|\|\>>> has
+  been small enough gives an <math|S<around*|(|\<cdummy\>,\<theta\><rsub|\<star\>>|)>>
+  that mimics the stochastic dynamics of starling flocks. To compute the
+  expectation <math|\<bbb-E\><rsub|P<around*|(|\<theta\>|)>><around*|[|\<ldots\>|]>>
+  in equation <reference|equation:data-fitting iteration>, we can employ
+  Monte-Carlo simulation with the transition rate satisfying detailed balance
+  condition with <math|P<around*|(|\<theta\>|)>> as the stationary
+  distribution. For discrete random variables, Monte-Carlo simulation with
+  Metropolis-Hastings algorithm (section <reference|section: Example:
+  Metropolis-Hastings Algorithm>) is available; and for continuous random
+  variables, Langevin process (section <reference|section: Detailed Balance
+  of Langevin Process Lacks Source-Free Degree of Freedom>) will be more
+  efficient.
+
   <section|Markovian Process with Euclidean Alphabet Can Be Formulated as
   Path Integral><label|section: Markovian Process with Euclidean Alphabet Can
   Be Formulated as Path Integral>
 
-  In this section, we are to formulate the master equation into path
-  integral. The path integral formulation was found by Paul Dirac in 1933 who
-  was trying to using Lagrangian in quantum mechanism. It was then developed
-  by physicist Richard Feynman and mathematician Mark Kac in 1947. Now, path
-  integral is applied not only to quantum field theory, but also many other
-  areas such as stochastic process. Path integral has the general formalism
+  In section <reference|section: Least-Action Principle of Distribution Has
+  No Redundancy>, we have shown how to define an action using distribution.
+  Also in the same section, we found that the master equaiton can be written
+  as a integral of all possible paths, where the action (of distribution) is
+  given by
+
+  <\equation*>
+    S<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>\|x<rsub|0>|)>=-<big|sum><rsub|i=0><rsup|N-1>ln
+    q<rsub|\<Delta\>t><around*|(|x<rsub|i+1>\|x<rsub|i>|)>,
+  </equation*>
+
+  hence the transition density
+
+  <\equation*>
+    q<rsub|N\<Delta\>t><around*|(|x<rsub|N>\|x<rsub|0>|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|1>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N-1>
+    exp<around*|(|-S<around*|(|x<rsub|1>,\<ldots\>,x<rsub|N>\|x<rsub|0>|)>|)>.
+  </equation*>
+
+  If we regard the series <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|N-1>|)>>
+  as a path from <math|x<rsub|0>> to <math|x<rsub|N>>, then it is an integral
+  over all possible paths.
+
+  Path integral formulation was found by Paul Dirac in 1933 who was trying to
+  using Lagrangian in quantum mechanism. It was then developed by physicist
+  Richard Feynman and mathematician Mark Kac in 1947. Now, path integral is
+  applied not only to quantum field theory, but also many other areas such as
+  stochastic process. Path integral has the general formalism
 
   <\equation>
     <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|1>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|n>
@@ -3466,31 +3470,19 @@
   where a series <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|n>|)>> is called
   a \Ppath\Q, and the <math|S> is called the \Paction\Q of path (in section
   <reference|section: Least-Action Principle of Distribution Has No
-  Redundancy>, we will explain why we call <math|S> an action). Apparently,
-  it is an integral of all possible paths, thus named as \Ppath integral\Q.
+  Redundancy>, we explained why we should call <math|S> an action). So, we
+  just found a path integral formulation for master equation.
 
-  To derive a path integral formulation for Markovian process, we consider
-  the evolution of a Markovian process, given by a series of the transition
-  density <math|q<rsub|\<Delta\>t><around*|(|x<rsub|i+1>\|x<rsub|i>|)>> with
-  the iterative step <math|i\<in\><around*|{|0,1,\<ldots\>,N|}>>. By
-  repeatedly applying (discrete time) master equation
-  <reference|equation:discrete time master equation>, we get
-
-  <\equation>
-    p<around*|(|x<rsub|N>,N \<Delta\>t|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N-1>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|0>
-    q<rsub|\<Delta\>t><around*|(|x<rsub|N>\|x<rsub|N-1>|)>\<cdots\>
-    q<rsub|\<Delta\>t><around*|(|x<rsub|1>\|x<rsub|0>|)>
-    p<around*|(|x<rsub|0>,0|)>.<label|equation:path integral master equation>
-  </equation>
-
-  The next step is making <math|\<Delta\>t> small and reformulating
-  <math|q<rsub|\<Delta\>t><around*|(|x<rsub|i+1>\|x<rsub|i>|)>> as
-  exponential. This, however, cannot be straight-forward since the leading
-  term of <math|q<rsub|\<Delta\>t><around*|(|x\|y|)>> is
+  To obtain the action, we have to evaluate the logarithm of transition
+  density <math|ln q<rsub|\<Delta\>t><around*|(|x\|y|)>> when
+  <math|\<Delta\>t> is small. This, however, cannot be straight-forward since
+  the leading term of <math|q<rsub|\<Delta\>t><around*|(|x\|y|)>> is
   <math|\<delta\><around*|(|x-y|)>> which cannot be converted into
-  exponential. But, we can consider its Fourier transformation, since
-  <math|\<delta\><around*|(|x-y|)>>, if regarding as a Dirac's delta
-  function, has Fourier coefficient <math|exp<around*|(|-\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>|)>>.
+  exponential. But, we can consider its Fourier transformation (introduced in
+  section <reference|section: Randomness Appears in the Second Moment of
+  Transition Rate>), since <math|\<delta\><around*|(|x-y|)>>, if regarding as
+  a Dirac's delta function, has Fourier coefficient
+  <math|exp<around*|(|-\<mathi\>k<rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)>|)>>.
   This suggest us to consider the Fourier transformation of
   <math|q<rsub|\<Delta\>t><around*|(|x\|y|)>>, as
 
@@ -3550,14 +3542,14 @@
   is correct, the process that derives the result is wrong. The problem is
   about the residue. When performing inverse Fourier transformation and
   plugging into equation <reference|equation:path integral master equation>,
-  we moved the residue out of integral. But this should be done with caution,
-  since the residue contains the variables of integration too. In the rest of
-  this section, we are to show that this operation (moving residue out of
-  integral) is far from trivial, and that the residue is well-defined in the
-  end (namely in equation <reference|equation:path integral of markov
-  process>), even thought it is not so in both
-  <math|<wide|q|^><rsub|\<Delta\>t><around*|(|x,k|)>> and
-  <math|q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>>.
+  we moved the residue out of the integral. But this should be done with
+  caution, since the residue contains the variables of integration too. We
+  find that this operation (moving residue out of integral) is far from
+  trivial, and that the residue is well-defined in the end (namely in
+  equation <reference|equation:path integral of markov process>), even
+  thought it is not so in both <math|<wide|q|^><rsub|\<Delta\>t><around*|(|x,k|)>>
+  and <math|q<rsub|\<Delta\>t><around*|(|x+\<epsilon\>\|x|)>>. We devote the
+  rest of section to make this clear.
 
   To explicitly evaluate the residue <math|\<omicron\><around*|(|\<Delta\>t|)>>,
   we have to consider the full expansion of <math|q<rsub|\<Delta\>t>>
@@ -4242,261 +4234,6 @@
   \<Delta\>t|)>> is independent of <math|x>, <math|\<zeta\>>, or
   <math|\<eta\>>, thus is regarded as constant.
 
-  <section|Least-Action Principle of Distribution Has No
-  Redundancy><label|section: Least-Action Principle of Distribution Has No
-  Redundancy>
-
-  Dynamics in classical mechanics are always deterministic. That is, once the
-  initial conditions (for initial value problem) or the boundaries (for
-  boundary value problem) are fixed, then the path is fully determined.
-  Randomness is forbidden. There are, however, many phenomena in nature that
-  have <em|intrinsic> randomness. For example, molecular movement obeys a
-  normal distribution with variance proportional to time interval. The
-  dynamics of starling flocks also has intrinsic randomness, which is the
-  \Pfree will\Q of each bird, so is ant colony, human society, and any
-  interactive system in which each element has some level of intrinsic
-  uncertainty. For these cases, the real world datum is not simply a path,
-  but a distribution of path. Precisely, we use a distribution <math|Q> to
-  describe real world phenomenon that has intrinsic randomness.
-
-  This is what we have derived in section <reference|section: Markovian
-  Process with Euclidean Alphabet Can Be Formulated as Path Integral>. From
-  probabilistic perspective, the right hand side of equation
-  <reference|equation:path integral master equation> can be viewed as
-  marginalizing the random variables <math|<around*|(|X<rsub|0>,\<ldots\>,X<rsub|N-1>|)>>,
-  and the product <math|q<around*|(|x<rsub|N>\|x<rsub|N-1>|)>\<cdots\>
-  q<around*|(|x<rsub|1>\|x<rsub|0>|)>> can be seen as the density function of
-  <math|<around*|(|X<rsub|1>,\<ldots\>,X<rsub|N>|)>>, where we have omitted
-  the subscript <math|\<Delta\>t> for simplicity. To see this clearly, we
-  first notice that <math|q<around*|(|x<rsub|2>\|x<rsub|1>|)>=q<around*|(|x<rsub|2>\|x<rsub|0>,x<rsub|1>|)>>
-  holds for any <math|x<rsub|0>>, because
-  <math|q<around*|(|x<rsub|2>\|x<rsub|1>|)>> is not explicitly dependent on
-  <math|x<rsub|0>>. Then, we have <math|q<around*|(|x<rsub|2>\|x<rsub|1>|)>q<around*|(|x<rsub|1>\|x<rsub|0>|)>q<around*|(|x<rsub|0>|)>=q<around*|(|x<rsub|2>\|x<rsub|0>,x<rsub|1>|)>q<around*|(|x<rsub|1>\|x<rsub|0>|)>q<around*|(|x<rsub|0>|)>>.
-  Repeatedly using the definition of conditional density, it becomes
-  <math|q<around*|(|x<rsub|2>\|x<rsub|0>,x<rsub|1>|)>
-  q<around*|(|x<rsub|0>,x<rsub|1>|)>=q<around*|(|x<rsub|0>,x<rsub|1>,x<rsub|2>|)>>.
-  Dividing <math|q<around*|(|x<rsub|0>|)>> on both sides, we get
-  <math|q<around*|(|x<rsub|1>,x<rsub|2>\|x<rsub|0>|)>=q<around*|(|x<rsub|2>\|x<rsub|1>|)>q<around*|(|x<rsub|1>\|x<rsub|0>|)>>.
-  Repeating this step, we will find
-
-  <\equation*>
-    q<around*|(|x<rsub|N>\|x<rsub|N-1>|)>\<cdots\>q<around*|(|x<rsub|1>\|x<rsub|0>|)>=q<around*|(|x<rsub|1>,\<ldots\>,x<rsub|N>\|x<rsub|0>|)>,
-  </equation*>
-
-  recognized as a conditional density of random variables
-  <math|<around*|(|X<rsub|1>,\<ldots\>,X<rsub|N>|)>> given <math|x<rsub|0>>.
-  If we regard the series <math|<around*|(|x<rsub|1>,\<ldots\>,x<rsub|N>|)>>
-  as a \Pmovie\Q of evolution of the stochastic system, in which each
-  <math|x<rsub|i>> can be seen as a \Pframe\Q, then the density
-  <math|q<around*|(|x<rsub|1>,\<ldots\>,x<rsub|N>\|x<rsub|0>|)>>
-  characterizes the distribution of evolution.
-
-  For any density function <math|q<around*|(|x|)>> with
-  <math|x\<in\>\<bbb-R\><rsup|d>>, we can always define, up to an arbitrary
-  constant,
-
-  <\equation>
-    S<around*|(|x|)>\<assign\>-*ln q<around*|(|x|)>+const.<label|equation:action
-    of distribution>
-  </equation>
-
-  Thus, <math|q<around*|(|x|)>=exp<around*|(|-S<around*|(|x|)>|)>/Z> where
-  <math|Z\<assign\><big|int>\<mathd\>x exp<around*|(|-S<around*|(|x|)>|)>>.
-  This <math|S> has some properties that can be analog to the action in
-  classical mechanics. Indeed, by plugging in the definition of <math|S>, we
-  find
-
-  <\equation*>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x q<around*|(|x|)>
-    <frac|\<partial\>S|\<partial\>x<rsup|\<alpha\>>><around*|(|x|)>=-<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
-    q<around*|(|x|)> <frac|\<partial\>|\<partial\>x<rsup|\<alpha\>>>ln
-    q<around*|(|x|)>=-<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
-    <frac|\<partial\>|\<partial\>x<rsup|\<alpha\>>>q<around*|(|x|)>.
-  </equation*>
-
-  The integrand of the right most expression is a divergence, so it results
-  in a boundary integral. But since <math|q>, as a density function, is
-  normalized, the boundary integral shall vanish as
-  <math|<around*|\<\|\|\>|x|\<\|\|\>>\<rightarrow\>+\<infty\>>. So, we
-  conclude that
-
-  <\equation*>
-    \<bbb-E\><rsub|Q><around*|[|<frac|\<partial\>S|\<partial\>x<rsup|\<alpha\>>>|]>=0.
-  </equation*>
-
-  This is analog to equation <reference|equation:least-action principle v1>,
-  where the minimum <math|x<rsub|\<star\>>> is replaced by the expectation
-  <math|\<bbb-E\><rsub|Q>>. Secondly, distribution <math|Q> most likely
-  samples (recall section <reference|section: A Brief Review of Probability>
-  that distribution has a sampler) the <math|x> that maximizes <math|q>, thus
-  minimizes <math|S>. For these reasons, we illustrate the <math|S> defined
-  by <math|q> as the action of <math|Q>. Contrary to the action in classical
-  mechanics, the <math|S> here is completely determined by the real world
-  distribution <math|Q> (because it is defined by the density function
-  <math|q>), without any redundancy. This is the direct implication that
-  distribution involves more information than its most likely datum.
-
-  <section|* Data Fitting Is Equivalent to Least-Action Principle of
-  Distribution><label|section: Data Fitting Is Equivalent to Least-Action
-  Principle of Distribution>
-
-  Given a collection of real world data, we are to find a distribution that
-  fits the data. These data can be seen as samples from an unknown
-  distribution which characterizes the real world. We are to figure out a
-  method to fit the real world distribution by given some samples of it.
-
-  Let <math|P<around*|(|\<theta\>|)>> represent a distribution parametrized
-  by <math|\<theta\>\<in\>\<bbb-R\><rsup|m>>. Its alphabet <math|\<cal-X\>>
-  is either discrete or continuous. From its density function,
-  <math|p<around*|(|\<cdummy\>,\<theta\>|)>>, we get a parameterized action
-  <math|S<around*|(|\<cdummy\>,\<theta\>|)>> such that
-
-  <\equation>
-    p<around*|(|x,\<theta\>|)>=exp<around*|(|-S<around*|(|x,\<theta\>|)>|)>/Z<around*|(|\<theta\>|)>,<label|equation:generic
-    density>
-  </equation>
-
-  where <math|Z<around*|(|\<theta\>|)>=<big|int>\<mathd\>x
-  exp<around*|(|-S<around*|(|x,\<theta\>|)>|)>> for ensuring the
-  normalization <math|<big|int>\<mathd\>x p<around*|(|x,\<theta\>|)>=1>. This
-  is consistent with the action defined by equation
-  <reference|equation:action of distribution>, except that the action here is
-  parameterized, and that we omit the constant <math|\<beta\>> since it is
-  irrelevant throughout this section.
-
-  What we have is a collection of data, sampled from an unknown distribution
-  <math|Q>. And we are to adjust the parameters <math|\<theta\>> so that
-  <math|P<around*|(|\<theta\>|)>> approximates <math|Q>. To do so, we
-  minimize the relative entropy between <math|Q> and
-  <math|P<around*|(|\<theta\>|)>>, which is defined as
-  <math|H<around*|(|Q,P<around*|(|\<theta\>|)>|)>\<assign\><big|int>\<mathd\>x
-  q<around*|(|x|)> ln <around*|(|q<around*|(|x|)>/p<around*|(|x,\<theta\>|)>|)>>.
-  This expression is formal. Since we do not know the density function of
-  <math|Q>, all that we can do with <math|Q> is computing the expectation
-  <math|\<bbb-E\><rsub|Q><around*|[|f|]>=<around*|(|1/<around*|\||Q|\|>|)><big|sum><rsub|x\<in\>Q>f<around*|(|x|)>>
-  for any function <math|f>, where we use <math|Q> as a set of data. With
-  this realization, we have, after plugging equation
-  <reference|equation:generic density> into
-  <math|H<around*|(|Q,P<around*|(|\<theta\>|)>|)>>,
-
-  <\equation*>
-    H<around*|(|Q,P<around*|(|\<theta\>|)>|)>=<big|int><rsub|\<cal-X\>>\<mathd\>x
-    q<around*|(|x|)> ln q<around*|(|x|)>+<big|int><rsub|\<cal-X\>>\<mathd\>x
-    q<around*|(|x|)> S<around*|(|x,\<theta\>|)>+<big|int><rsub|\<cal-X\>>\<mathd\>x
-    q<around*|(|x|)> ln Z<around*|(|\<theta\>|)>.
-  </equation*>
-
-  By omitting the <math|\<theta\>>-independent terms, we get the loss
-  function
-
-  <\equation*>
-    L<around*|(|\<theta\>|)>\<assign\><big|int><rsub|\<cal-X\>>\<mathd\>x
-    q<around*|(|x|)> S<around*|(|x,\<theta\>|)>+ln Z<around*|(|\<theta\>|)>.
-  </equation*>
-
-  The parameters that minimize <math|L<around*|(|\<theta\>|)>> also minimize
-  <math|H<around*|(|Q,P<around*|(|\<theta\>|)>|)>>, and vice versa. We can
-  find the <math|\<theta\><rsub|\<star\>>\<assign\>argmin L> by iteratively
-  updating <math|\<theta\>> along the direction
-  <math|-\<partial\>L/\<partial\>\<theta\>>. To calculate
-  <math|-\<partial\>L/\<partial\>\<theta\>>, we start at
-
-  <\equation*>
-    -<frac|\<partial\>L|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|\<theta\>|)>=-<big|int><rsub|\<cal-X\>>\<mathd\>x
-    q<around*|(|x|)> <frac|\<partial\>S|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x,\<theta\>|)>-<frac|1|Z<around*|(|\<theta\>|)>>
-    <frac|\<partial\>Z|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|\<theta\>|)>.
-  </equation*>
-
-  The first term is recognized as <math|-\<bbb-E\><rsub|Q><around*|[|\<partial\>S/\<partial\>\<theta\><rsup|\<alpha\>>|]>>.
-  For the second term, since <math|Z<around*|(|\<theta\>|)>=<big|int><rsub|\<cal-X\>>\<mathd\>x
-  exp<around*|(|-S<around*|(|x,\<theta\>|)>|)>>, we have
-
-  <\equation*>
-    -<frac|1|Z<around*|(|\<theta\>|)>> <frac|\<partial\>Z|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|\<theta\>|)>=<big|int><rsub|\<cal-X\>>\<mathd\>x
-    <with|color|dark cyan|<frac|exp<around*|(|-S<around*|(|x,\<theta\>|)>|)>|Z<around*|(|\<theta\>|)>>>
-    <frac|\<partial\>S|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x,\<theta\>|)>=<big|int><rsub|\<cal-X\>>\<mathd\>x
-    p<around*|(|x,\<theta\>|)> <frac|\<partial\>S|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x,\<theta\>|)>,
-  </equation*>
-
-  where in the last equality, we used the definition of
-  <math|p<around*|(|x,\<theta\>|)>> (the green factor). This final expression
-  is just the <math|\<bbb-E\><rsub|P<around*|(|\<theta\>|)>><around*|[|\<partial\>S/\<partial\>\<theta\><rsup|\<alpha\>>|]>>.
-  Altogether, we arrive at
-
-  <\equation>
-    -<frac|\<partial\>L|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|\<theta\>|)>=\<bbb-E\><rsub|P<around*|(|\<theta\>|)>><around*|[|<frac|\<partial\>S|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|\<cdummy\>,\<theta\>|)>|]>-\<bbb-E\><rsub|Q><around*|[|<frac|\<partial\>S|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|\<cdummy\>,\<theta\>|)>|]>.<label|equation:data-fitting
-    iteration>
-  </equation>
-
-  At the minimum, we shall have <math|\<partial\>L/\<partial\>\<theta\>=0>.
-  Then, we find that <math|\<theta\><rsub|\<star\>>> obeys
-
-  <\equation>
-    \<bbb-E\><rsub|P<around*|(|\<theta\><rsub|\<star\>>|)>><around*|[|<frac|\<partial\>S|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|\<cdummy\>,\<theta\><rsub|\<star\>>|)>|]>=\<bbb-E\><rsub|Q><around*|[|<frac|\<partial\>S|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|\<cdummy\>,\<theta\><rsub|\<star\>>|)>|]>.<label|equation:data-fitting
-    result>
-  </equation>
-
-  \;
-
-  It can be read from equation <reference|equation:data-fitting iteration>
-  that minimizing <math|L> is to increase
-  <math|S<around*|(|\<cdummy\>,\<theta\>|)>> on the sampled points (the first
-  term) while decrease it on data points (the second term). As figure
-  <reference|figure: Least-Action> illustrates, this way of optimization will
-  site real world data onto local minima of
-  <math|S<around*|(|\<cdummy\>,\<theta\>|)>>, <em|in statistical sense>.
-
-  <big-figure|<with|gr-mode|<tuple|edit|spline>|gr-frame|<tuple|scale|1.00001cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|10|10|center>|gr-grid|<tuple|empty>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-line-width|0.5ln|gr-dash-style|11100|gr-color|blue|<graphics||<with|arrow-end|\|\<gtr\>|<line|<point|-6|-3>|<point|-6.0|3.0>>>|<with|arrow-end|\|\<gtr\>|<line|<point|-6|-3>|<point|6.0|-3.0>>>|<math-at|S<around*|(|x,\<theta\>|)>|<point|-6.40049278190267|3.30061515056306>>|<math-at|x|<point|6.20000992178327|-3.1>>|<with|line-width|5ln|arrow-end|\<gtr\>|opacity|50%|color|red|<line|<point|-1.3|3.2>|<point|-1.3|1.7>>>|<with|line-width|5ln|color|blue|opacity|50%|arrow-begin|\<less\>|<line|<point|0.8|-0.83096059724234>|<point|0.8|-2.33096059724234>>>|<with|dash-style|11100|line-width|0.5ln|color|red|<line|<point|-1.3|1.4>|<point|-1.3|-3.0>>>|<with|color|red|<point|-1.3|1.41877>>|<with|color|red|<math-at|x<rsub|1>|<point|-1.4|-3.3>>>|<with|color|blue|<math-at|x<rsub|2>|<point|0.7|-3.3>>>|<with|dash-style|11100|line-width|0.5ln|color|blue|<line|<point|0.8|0.5>|<point|0.8|-3.0>>>|<with|color|blue|<point|0.8|-0.6>>|<with|color|dark
-  cyan|dash-style|11100|<spline|<point|-5|1>|<point|-2.3|-0.7>|<point|0.8|0.5>|<point|3.04196914325401|2.48975575876838>|<point|4.2|2.2>>>|<with|color|dark
-  cyan|<spline|<point|-5.04362277379988|-0.0748763911166967>|<point|-2.85798620872125|2.07284242554528>|<point|0.666826517619433|-0.580225885932565>|<point|3.38308005225473|1.9970400013229>|<point|4.21690671870091|2.62872686984274>>>>>|<label|figure:
-  Least-Action> This figure illustrate how
-  <math|min<rsub|\<theta\>>L<around*|(|\<theta\>|)>> will site a real world
-  datum onto a local minimum of <math|S<around*|(|\<cdummy\>,\<theta\>|)>>.
-  The green curve represents the current not-yet-optimized
-  <math|S<around*|(|\<cdummy\>,\<theta\>|)>>. The <math|x<rsub|1>> (red
-  point) is a real world datum while <math|x<rsub|2>> (blue point), which is
-  currently a local minimum of <math|S<around*|(|\<cdummy\>,\<theta\>|)>>, is
-  not. Minimizing <math|L> by tuning <math|\<theta\>> pushes the
-  <math|\<bbb-E\><rsub|Q><around*|[|S<around*|(|\<cdummy\>,\<theta\>|)>|]>>
-  down to lower value, corresponding to the red downward double-arrow on
-  <math|x<rsub|1>>. Also, since <math|x<rsub|2>> is a local minimum, the data
-  points sampled from <math|p<around*|(|x,\<theta\>|)>\<propto\>exp<around*|(|-S<around*|(|x,\<theta\>|)>|)>>
-  will accumulate around <math|x<rsub|2>>. So, minimizing <math|L> also pulls
-  the <math|\<bbb-E\><rsub|P<around*|(|\<theta\>|)>><around*|[|S<around*|(|\<cdummy\>,\<theta\>|)>|]>>
-  up to greater value, corresponding to the blue upward double-arrow on
-  <math|x<rsub|2>>. Altogether, it makes <math|x<rsub|1>> a local minimum of
-  <math|S<around*|(|\<cdummy\>,\<theta\>|)>>, and
-  <math|S<around*|(|\<cdummy\>,\<theta\>|)>> is optimized to be the dashed
-  green curve.>
-
-  In this way, we find an analytical distribution
-  <math|P<around*|(|\<theta\>|)>> that approximates the empirical
-  distribution <math|Q>. The <math|S<around*|(|\<cdummy\>,\<theta\>|)>> that
-  defines <math|P<around*|(|\<theta\>|)>> describes the interaction between
-  the different components of an entity. This entity may be of physics, like
-  a collection of particles. But it can also be words, genes, flock of birds,
-  and so on.
-
-  As an example, if we want to get the action that characterizes the
-  stochastic dynamics of starling flocks, we take movies for many flocks.
-  Each movie is a series of frames that log the positions of each bird at
-  each time instant. These movies provide the real world data. The
-  parameterized action <math|S> can be expressed by a neural network. Then,
-  iterating by equation <reference|equation:data-fitting iteration> until
-  <math|<around*|\<\|\|\>|\<partial\>L/\<partial\>\<theta\>|\<\|\|\>>> has
-  been small enough gives an <math|S<around*|(|\<cdummy\>,\<theta\><rsub|\<star\>>|)>>
-  that mimics the stochastic dynamics of starling flocks. To compute the
-  expectation <math|\<bbb-E\><rsub|P<around*|(|\<theta\>|)>><around*|[|\<ldots\>|]>>
-  in equation <reference|equation:data-fitting iteration>, we can employ
-  Monte-Carlo simulation with the transition rate satisfying detailed balance
-  condition with <math|P<around*|(|\<theta\>|)>> as the stationary
-  distribution. For discrete random variables, Monte-Carlo simulation with
-  Metropolis-Hastings algorithm (section <reference|section: Example:
-  Metropolis-Hastings Algorithm>) is available; and for continuous random
-  variables, Langevin process (section <reference|section: Detailed Balance
-  of Langevin Process Lacks Source-Free Degree of Freedom>) will be more
-  efficient.
-
   <section|How Far Will Information Propagate in Langevin
   Process?><label|section: How Far Will Information Propagate in Langevin
   Process?>
@@ -5097,23 +4834,22 @@
     <associate|auto-23|<tuple|3.6|33>>
     <associate|auto-24|<tuple|3.7|34>>
     <associate|auto-25|<tuple|3.8|34>>
-    <associate|auto-26|<tuple|3.9|35>>
-    <associate|auto-27|<tuple|4|39>>
-    <associate|auto-28|<tuple|4.1|39>>
-    <associate|auto-29|<tuple|4.2|39>>
+    <associate|auto-26|<tuple|4|37>>
+    <associate|auto-27|<tuple|4.1|37>>
+    <associate|auto-28|<tuple|4.2|37>>
+    <associate|auto-29|<tuple|4.3|38>>
     <associate|auto-3|<tuple|1.1|9>>
-    <associate|auto-30|<tuple|4.3|41>>
-    <associate|auto-31|<tuple|4.4|44>>
-    <associate|auto-32|<tuple|4.5|45>>
-    <associate|auto-33|<tuple|4.6|48>>
-    <associate|auto-34|<tuple|4.7|49>>
-    <associate|auto-35|<tuple|4.1|50>>
-    <associate|auto-36|<tuple|4.8|51>>
-    <associate|auto-37|<tuple|4.9|52>>
-    <associate|auto-38|<tuple|4.9.1|53>>
-    <associate|auto-39|<tuple|4.9.2|54>>
+    <associate|auto-30|<tuple|4.4|40>>
+    <associate|auto-31|<tuple|4.1|41>>
+    <associate|auto-32|<tuple|4.5|41>>
+    <associate|auto-33|<tuple|4.6|45>>
+    <associate|auto-34|<tuple|4.7|46>>
+    <associate|auto-35|<tuple|4.8|49>>
+    <associate|auto-36|<tuple|4.9|50>>
+    <associate|auto-37|<tuple|4.9.1|51>>
+    <associate|auto-38|<tuple|4.9.2|52>>
+    <associate|auto-39|<tuple|4.10|54>>
     <associate|auto-4|<tuple|1.2|9>>
-    <associate|auto-40|<tuple|4.10|56>>
     <associate|auto-5|<tuple|1.3|10>>
     <associate|auto-6|<tuple|1.4|10>>
     <associate|auto-7|<tuple|1.5|11>>
@@ -5124,55 +4860,53 @@
     density|<tuple|2.9|17>>
     <associate|equation:Fokker-Planck equation|<tuple|3.9|33>>
     <associate|equation:K condition|<tuple|3.3|29>>
-    <associate|equation:action of distribution|<tuple|4.20|48>>
-    <associate|equation:berezin integral|<tuple|4.17|47>>
-    <associate|equation:berezin integral exp|<tuple|4.14|46>>
-    <associate|equation:berezin integral measurement|<tuple|4.16|47>>
+    <associate|equation:action of distribution|<tuple|4.5|39>>
+    <associate|equation:berezin integral|<tuple|4.21|48>>
+    <associate|equation:berezin integral exp|<tuple|4.18|47>>
+    <associate|equation:berezin integral measurement|<tuple|4.20|47>>
     <associate|equation:circle|<tuple|2.15|23>>
-    <associate|equation:data-fitting iteration|<tuple|4.22|50>>
-    <associate|equation:data-fitting result|<tuple|4.23|50>>
+    <associate|equation:data-fitting iteration|<tuple|4.7|40>>
+    <associate|equation:data-fitting result|<tuple|4.8|40>>
     <associate|equation:define stationary density function|<tuple|2.14|23>>
     <associate|equation:detailed balance condition for
     Langevin|<tuple|3.11|35>>
     <associate|equation:discrete time master equation|<tuple|2.5|14>>
     <associate|equation:discrete time master equation v0|<tuple|2.2|13>>
     <associate|equation:equation:metropolis-hastings|<tuple|2.12|22>>
-    <associate|equation:general path integral|<tuple|4.4|41>>
-    <associate|equation:generic density|<tuple|4.21|49>>
-    <associate|equation:grassmann integral transform|<tuple|4.15|46>>
-    <associate|equation:harmonic oscillator action|<tuple|4.1|39>>
+    <associate|equation:general path integral|<tuple|4.9|42>>
+    <associate|equation:generic density|<tuple|4.6|40>>
+    <associate|equation:grassmann integral transform|<tuple|4.19|47>>
+    <associate|equation:harmonic oscillator action|<tuple|4.1|37>>
     <associate|equation:heat equation|<tuple|3.6|32>>
     <associate|equation:km expansion|<tuple|3.4|30>>
     <associate|equation:km expansion v2|<tuple|3.5|31>>
-    <associate|equation:langevin action constant covariance|<tuple|4.13|45>>
-    <associate|equation:langevin action general|<tuple|4.19|48>>
-    <associate|equation:langevin process after cholesky|<tuple|4.18|47>>
+    <associate|equation:langevin action constant covariance|<tuple|4.17|46>>
+    <associate|equation:langevin action general|<tuple|4.23|48>>
+    <associate|equation:langevin process after cholesky|<tuple|4.22|48>>
     <associate|equation:langevin transition rate|<tuple|3.8|33>>
-    <associate|equation:least-action principle v0|<tuple|4.2|40>>
-    <associate|equation:least-action principle v1|<tuple|4.3|40>>
+    <associate|equation:least-action principle v0|<tuple|4.2|37>>
+    <associate|equation:least-action principle v1|<tuple|4.3|38>>
     <associate|equation:master equation|<tuple|2.4|14>>
+    <associate|equation:master equation series|<tuple|4.4|39>>
     <associate|equation:master equation v0|<tuple|2.3|14>>
     <associate|equation:metropolis-hastings origin|<tuple|2.13|22>>
-    <associate|equation:path integral master equation|<tuple|4.5|41>>
-    <associate|equation:path integral of markov process|<tuple|4.7|41>>
-    <associate|equation:path integral step 2|<tuple|4.11|44>>
+    <associate|equation:path integral of markov process|<tuple|4.11|42>>
+    <associate|equation:path integral step 2|<tuple|4.15|45>>
     <associate|equation:relative entropy derivative|<tuple|2.11|18>>
-    <associate|equation:residue zeta|<tuple|4.9|42>>
-    <associate|equation:rg action|<tuple|4.24|52>>
-    <associate|equation:rg integral|<tuple|4.25|52>>
+    <associate|equation:residue zeta|<tuple|4.13|43>>
+    <associate|equation:rg action|<tuple|4.24|50>>
+    <associate|equation:rg integral|<tuple|4.25|50>>
     <associate|equation:stationary Fokker-Planck equation|<tuple|3.10|34>>
-    <associate|equation:to ghosts|<tuple|4.12|45>>
-    <associate|equation:transition density coef recur|<tuple|4.8|42>>
-    <associate|equation:transition density exp|<tuple|4.6|41>>
+    <associate|equation:to ghosts|<tuple|4.16|45>>
+    <associate|equation:transition density coef recur|<tuple|4.12|43>>
+    <associate|equation:transition density exp|<tuple|4.10|42>>
     <associate|equation:transition density normalization|<tuple|2.1|13>>
     <associate|equation:transition rate determines transition
     density|<tuple|2.6|15>>
     <associate|equation:transition rate determines transition density
-    approx|<tuple|3.13|36>>
-    <associate|equation:transition rate determines transition density
-    v2|<tuple|3.14|36>>
+    v2|<tuple|2.7|16>>
     <associate|equation:wiener process|<tuple|3.7|33>>
-    <associate|figure: Least-Action|<tuple|4.1|50>>
+    <associate|figure: Least-Action|<tuple|4.1|41>>
     <associate|footnote-1|<tuple|1|7>>
     <associate|footnote-1.1|<tuple|1.1|9>>
     <associate|footnote-1.2|<tuple|1.2|9>>
@@ -5188,13 +4922,12 @@
     <associate|footnote-3.3|<tuple|3.3|29>>
     <associate|footnote-3.4|<tuple|3.4|30>>
     <associate|footnote-3.5|<tuple|3.5|32>>
-    <associate|footnote-3.6|<tuple|3.6|37>>
-    <associate|footnote-4.1|<tuple|4.1|40>>
-    <associate|footnote-4.2|<tuple|4.2|43>>
-    <associate|footnote-4.3|<tuple|4.3|47>>
-    <associate|footnote-4.4|<tuple|4.4|51>>
-    <associate|footnote-4.5|<tuple|4.5|54>>
-    <associate|footnote-4.6|<tuple|4.6|55>>
+    <associate|footnote-4.1|<tuple|4.1|38>>
+    <associate|footnote-4.2|<tuple|4.2|44>>
+    <associate|footnote-4.3|<tuple|4.3|48>>
+    <associate|footnote-4.4|<tuple|4.4|49>>
+    <associate|footnote-4.5|<tuple|4.5|52>>
+    <associate|footnote-4.6|<tuple|4.6|53>>
     <associate|footnr-1|<tuple|1|7>>
     <associate|footnr-1.1|<tuple|1.1|9>>
     <associate|footnr-1.2|<tuple|1.2|9>>
@@ -5210,24 +4943,23 @@
     <associate|footnr-3.3|<tuple|3.3|29>>
     <associate|footnr-3.4|<tuple|3.4|30>>
     <associate|footnr-3.5|<tuple|3.5|32>>
-    <associate|footnr-3.6|<tuple|3.6|37>>
-    <associate|footnr-4.1|<tuple|4.1|40>>
-    <associate|footnr-4.2|<tuple|4.2|43>>
-    <associate|footnr-4.3|<tuple|4.3|47>>
-    <associate|footnr-4.4|<tuple|4.4|51>>
-    <associate|footnr-4.5|<tuple|4.5|54>>
-    <associate|footnr-4.6|<tuple|4.6|55>>
+    <associate|footnr-4.1|<tuple|4.1|38>>
+    <associate|footnr-4.2|<tuple|4.2|44>>
+    <associate|footnr-4.3|<tuple|4.3|48>>
+    <associate|footnr-4.4|<tuple|4.4|49>>
+    <associate|footnr-4.5|<tuple|4.5|52>>
+    <associate|footnr-4.6|<tuple|4.6|53>>
     <associate|section: * Grassmann Variable, Berezin Integral, and
-    Ghosts|<tuple|4.5|45>>
+    Ghosts|<tuple|4.7|46>>
     <associate|section: A Brief Review of Least-Action Principle in Classical
-    Mechanics|<tuple|4.2|39>>
+    Mechanics|<tuple|4.2|37>>
     <associate|section: A Brief Review of Probability|<tuple|1.2|9>>
     <associate|section: Conventions in This Chapter 1|<tuple|1.1|9>>
     <associate|section: Conventions in This Chapter 2|<tuple|2.1|13>>
     <associate|section: Cut-off in the Moments of Transition Rate Is
     Essential for Spatial Smoothness|<tuple|3.2|25>>
     <associate|section: Data Fitting Is Equivalent to Least-Action Principle
-    of Distribution|<tuple|4.7|49>>
+    of Distribution|<tuple|4.4|40>>
     <associate|section: Detailed Balance Condition and Connectivity
     Monotonically Reduce Relative Entropy|<tuple|2.5|18>>
     <associate|section: Detailed Balance Provides Stationary
@@ -5235,11 +4967,11 @@
     <associate|section: Detailed Balance of Langevin Process Lacks
     Source-Free Degree of Freedom|<tuple|3.8|34>>
     <associate|section: Effective Action and Renormalization Group
-    Transformation|<tuple|4.9|52>>
+    Transformation|<tuple|4.9|50>>
     <associate|section: Example: Metropolis-Hastings
     Algorithm|<tuple|2.7|22>>
     <associate|section: How Far Will Information Propagate in Langevin
-    Process?|<tuple|4.8|51>>
+    Process?|<tuple|4.8|49>>
     <associate|section: Kramers\UMoyal Expansion Formulates Transition Rate
     by Its Moments|<tuple|3.3|29>>
     <associate|section: Kramers-Moyal Expansion and Langevin
@@ -5247,12 +4979,12 @@
     <associate|section: Langevin Process Is a Markovian Process with
     Ncut=2|<tuple|3.6|33>>
     <associate|section: Langevin Process with Constant Covariance Has a Path
-    Integral on Alphabet|<tuple|4.4|44>>
-    <associate|section: Least-Action Principle|<tuple|4|39>>
+    Integral on Alphabet|<tuple|4.6|45>>
+    <associate|section: Least-Action Principle|<tuple|4|37>>
     <associate|section: Least-Action Principle of Distribution Has No
-    Redundancy|<tuple|4.6|48>>
+    Redundancy|<tuple|4.3|38>>
     <associate|section: Markovian Process with Euclidean Alphabet Can Be
-    Formulated as Path Integral|<tuple|4.3|41>>
+    Formulated as Path Integral|<tuple|4.5|41>>
     <associate|section: Master Equation Describes the Evolution of Markov
     Process|<tuple|2.2|13>>
     <associate|section: Master Equation and Detailed Balance|<tuple|2|13>>
@@ -5264,9 +4996,9 @@
     Transition Rate|<tuple|3.4|31>>
     <associate|section: Relative Entropy|<tuple|1|9>>
     <associate|section: Renormalization Group in Full
-    Calculation|<tuple|4.9.2|54>>
+    Calculation|<tuple|4.9.2|52>>
     <associate|section: Renormalization Group in Preliminary
-    Situation|<tuple|4.9.1|53>>
+    Situation|<tuple|4.9.1|51>>
     <associate|section: Shannon Entropy Fails for Continuous Random
     Variable|<tuple|1.4|10>>
     <associate|section: Shannon Entropy Is Plausible for Discrete Random
@@ -5304,7 +5036,7 @@
       <with|mode|<quote|math>|x<rsub|1>> a local minimum of
       <with|mode|<quote|math>|S<around*|(|\<cdummy\>,\<theta\>|)>>, and
       <with|mode|<quote|math>|S<around*|(|\<cdummy\>,\<theta\>|)>> is
-      optimized to be the dashed green curve.>|<pageref|auto-35>>
+      optimized to be the dashed green curve.>|<pageref|auto-31>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Preface>
@@ -5408,60 +5140,56 @@
       Degree of Freedom <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-25>
 
-      3.9<space|2spc>Transition Rate Determines Transition Density, Again
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-26>
-
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Least-Action
       Principle> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-27><vspace|0.5fn>
+      <no-break><pageref|auto-26><vspace|0.5fn>
 
       4.1<space|2spc>Conventions in This Chapter
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-28>
+      <no-break><pageref|auto-27>
 
       4.2<space|2spc>A Brief Review of Least-Action Principle in Classical
       Mechanics <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-28>
+
+      4.3<space|2spc>Least-Action Principle of Distribution Has No Redundancy
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-29>
 
-      4.3<space|2spc>Markovian Process with Euclidean Alphabet Can Be
-      Formulated as Path Integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      4.4<space|2spc>* Data Fitting Is Equivalent to Least-Action Principle
+      of Distribution <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-30>
 
-      4.4<space|2spc>Langevin Process with Constant Covariance Has a Path
-      Integral on Alphabet <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-31>
-
-      4.5<space|2spc>* Grassmann Variable, Berezin Integral, and Ghosts
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      4.5<space|2spc>Markovian Process with Euclidean Alphabet Can Be
+      Formulated as Path Integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-32>
 
-      4.6<space|2spc>Least-Action Principle of Distribution Has No Redundancy
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      4.6<space|2spc>Langevin Process with Constant Covariance Has a Path
+      Integral on Alphabet <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-33>
 
-      4.7<space|2spc>* Data Fitting Is Equivalent to Least-Action Principle
-      of Distribution <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      4.7<space|2spc>* Grassmann Variable, Berezin Integral, and Ghosts
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-34>
 
       4.8<space|2spc>How Far Will Information Propagate in Langevin Process?
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-36>
+      <no-break><pageref|auto-35>
 
       4.9<space|2spc>Effective Action and Renormalization Group
       Transformation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-37>
+      <no-break><pageref|auto-36>
 
       <with|par-left|<quote|1tab>|4.9.1<space|2spc>A Preliminary Situation
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-38>>
+      <no-break><pageref|auto-37>>
 
       <with|par-left|<quote|1tab>|4.9.2<space|2spc>The Full Calculation
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-39>>
+      <no-break><pageref|auto-38>>
 
       4.10<space|2spc> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-40>
+      <no-break><pageref|auto-39>
     </associate>
   </collection>
 </auxiliary>

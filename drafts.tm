@@ -159,6 +159,30 @@
     Linear System Cannot Be Scale-Invariant>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-39><vspace|0.5fn>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|15<space|2spc>Renormalization
+    Group (Version 1)> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-41><vspace|0.5fn>
+
+    <with|par-left|1tab|15.1<space|2spc>Renormalization Group: Preliminary
+    Situation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-42>>
+
+    <with|par-left|1tab|15.2<space|2spc>Renormalization Group: Step 1
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-43>>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|16<space|2spc>Renormalization
+    Group> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-44><vspace|0.5fn>
+
+    <with|par-left|1tab|16.1<space|2spc>Renormalization Group: Preliminary
+    Situation (Version 2) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-45>>
+
+    <with|par-left|1tab|16.2<space|2spc>Renormalization Group: Step 1
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-46>>
   </table-of-contents>
 
   <section|General Momenta Integration>
@@ -4902,7 +4926,7 @@
 
 <\references>
   <\collection>
-    <associate|appendix: Perturbative Method|<tuple|13.4|39>>
+    <associate|appendix: Perturbative Method|<tuple|13.4|38>>
     <associate|auto-1|<tuple|1|2>>
     <associate|auto-10|<tuple|5.4|9>>
     <associate|auto-11|<tuple|6|11>>
@@ -4929,67 +4953,67 @@
     <associate|auto-30|<tuple|11.1|32>>
     <associate|auto-31|<tuple|12|32>>
     <associate|auto-32|<tuple|12.1|35>>
-    <associate|auto-33|<tuple|12.2|36>>
+    <associate|auto-33|<tuple|12.2|35>>
     <associate|auto-34|<tuple|13|36>>
     <associate|auto-35|<tuple|13.1|36>>
-    <associate|auto-36|<tuple|13.2|37>>
+    <associate|auto-36|<tuple|13.2|36>>
     <associate|auto-37|<tuple|13.3|38>>
-    <associate|auto-38|<tuple|13.4|39>>
-    <associate|auto-39|<tuple|14|41>>
+    <associate|auto-38|<tuple|13.4|38>>
+    <associate|auto-39|<tuple|14|40>>
     <associate|auto-4|<tuple|4|5>>
-    <associate|auto-40|<tuple|1|42>>
-    <associate|auto-41|<tuple|15|?>>
-    <associate|auto-42|<tuple|15.1|?>>
-    <associate|auto-43|<tuple|15.2|?>>
-    <associate|auto-44|<tuple|16|?>>
-    <associate|auto-45|<tuple|16.1|?>>
-    <associate|auto-46|<tuple|16.2|?>>
+    <associate|auto-40|<tuple|1|41>>
+    <associate|auto-41|<tuple|15|41>>
+    <associate|auto-42|<tuple|15.1|42>>
+    <associate|auto-43|<tuple|15.2|43>>
+    <associate|auto-44|<tuple|16|44>>
+    <associate|auto-45|<tuple|16.1|45>>
+    <associate|auto-46|<tuple|16.2|46>>
     <associate|auto-5|<tuple|4.1|6>>
     <associate|auto-6|<tuple|5|7>>
     <associate|auto-7|<tuple|5.1|7>>
     <associate|auto-8|<tuple|5.2|7>>
-    <associate|auto-9|<tuple|5.3|9>>
+    <associate|auto-9|<tuple|5.3|8>>
     <associate|equation:fourier transform q|<tuple|15|25>>
     <associate|equation:fourier transform q r|<tuple|18|27>>
     <associate|equation:general path integral|<tuple|21|32>>
     <associate|equation:langevin action|<tuple|11|16>>
     <associate|equation:path integral master equation|<tuple|22|32>>
-    <associate|equation:path integral of markov process|<tuple|23|33>>
+    <associate|equation:path integral of markov process|<tuple|23|32>>
     <associate|equation:path integral step 1|<tuple|13|18>>
     <associate|equation:path integral step 2|<tuple|1|3>>
-    <associate|equation:residue zeta|<tuple|25|34>>
-    <associate|equation:rg action|<tuple|35|36>>
-    <associate|equation:rg integral|<tuple|36|37>>
-    <associate|equation:rg transform 1|<tuple|29|38>>
-    <associate|equation:rg transform 2|<tuple|30|38>>
-    <associate|equation:rg transform 3|<tuple|31|38>>
-    <associate|equation:rg transform 4|<tuple|32|38>>
+    <associate|equation:residue zeta|<tuple|25|33>>
+    <associate|equation:rg action|<tuple|35|44>>
+    <associate|equation:rg integral|<tuple|36|45>>
+    <associate|equation:rg transform 1|<tuple|29|37>>
+    <associate|equation:rg transform 2|<tuple|30|37>>
+    <associate|equation:rg transform 3|<tuple|31|37>>
+    <associate|equation:rg transform 4|<tuple|32|37>>
     <associate|equation:susy transformation|<tuple|12|17>>
-    <associate|equation:transition density coef recur|<tuple|24|34>>
+    <associate|equation:transition density coef recur|<tuple|24|33>>
     <associate|equation:transition density exp|<tuple|19|28>>
-    <associate|figure: vector field of differences|<tuple|1|42>>
-    <associate|footnote-1|<tuple|1|8>>
+    <associate|figure: vector field of differences|<tuple|1|41>>
+    <associate|footnote-1|<tuple|1|7>>
     <associate|footnote-2|<tuple|2|17>>
     <associate|footnote-3|<tuple|3|18>>
     <associate|footnote-4|<tuple|4|20>>
     <associate|footnote-5|<tuple|5|34>>
     <associate|footnote-6|<tuple|6|37>>
-    <associate|footnote-7|<tuple|7|?>>
-    <associate|footnote-8|<tuple|8|?>>
-    <associate|footnr-1|<tuple|1|8>>
+    <associate|footnote-7|<tuple|7|43>>
+    <associate|footnote-8|<tuple|8|46>>
+    <associate|footnr-1|<tuple|1|7>>
     <associate|footnr-2|<tuple|2|17>>
     <associate|footnr-3|<tuple|3|18>>
     <associate|footnr-4|<tuple|4|20>>
     <associate|footnr-5|<tuple|5|34>>
     <associate|footnr-6|<tuple|6|37>>
-    <associate|footnr-7|<tuple|7|?>>
-    <associate|footnr-8|<tuple|8|?>>
+    <associate|footnr-7|<tuple|7|43>>
+    <associate|footnr-8|<tuple|8|46>>
     <associate|section: How Far Will Information Propagate in Langevin
     Process?|<tuple|13|36>>
     <associate|section: Master Equation on Euclidean Alphabet Can Be
     Formulated as Path Integral|<tuple|6.7|18>>
     <associate|section: Renormalization Group in Preliminary
-    Situation|<tuple|16.1|?>>
+    Situation|<tuple|16.1|45>>
   </collection>
 </references>
 
@@ -5166,6 +5190,30 @@
       Linear System Cannot Be Scale-Invariant>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-39><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|15<space|2spc>Renormalization
+      Group (Version 1)> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-41><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|15.1<space|2spc>Renormalization Group:
+      Preliminary Situation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-42>>
+
+      <with|par-left|<quote|1tab>|15.2<space|2spc>Renormalization Group: Step
+      1 <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-43>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|16<space|2spc>Renormalization
+      Group> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-44><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|16.1<space|2spc>Renormalization Group:
+      Preliminary Situation (Version 2) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-45>>
+
+      <with|par-left|<quote|1tab>|16.2<space|2spc>Renormalization Group: Step
+      1 <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-46>>
     </associate>
   </collection>
 </auxiliary>
