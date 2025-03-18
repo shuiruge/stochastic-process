@@ -1612,124 +1612,6 @@
   in <math|g<rsub|\<Delta\>t>> shall be properly bounded to be small so as to
   ensure the relaxation <math|P<around*|(|t|)>\<rightarrow\>\<Pi\>>.
 
-  <section|* Existence of Stationary Density Function>
-
-  Given a transition rate, we wonder if there exists a density function such
-  that detailed balance condition <reference|equation:Detailed Balance>
-  holds. Actually, equation <reference|equation:Detailed Balance>
-  <em|defines> a density function. For example, if both
-  <math|r<around*|(|x,y|)>> and <math|r<around*|(|y,x|)>> are not zero, we
-  can construct <math|\<pi\><around*|(|y|)>> by given
-  <math|\<pi\><around*|(|x|)>> as <math|\<pi\><around*|(|y|)>=\<pi\><around*|(|x|)>r<around*|(|x,y|)>/r<around*|(|y,x|)>>.
-  Generally, if <math|x> and <math|y> are connected, then there is a path
-  <math|P\<assign\><around*|(|p<rsub|0>,\<ldots\>,p<rsub|n>|)>> from <math|x>
-  to <math|y> with <math|p<rsub|0>=x> and <math|p<rsub|n>=y> (path and
-  connectivity are defined in section <reference|section: Detailed Balance
-  Condition and Connectivity Monotonically Reduce Relative Entropy>), and
-  define
-
-  <\align>
-    <tformat|<table|<row|<cell|\<pi\><around*|(|p<rsub|1>|)>\<assign\>>|<cell|\<pi\><around*|(|p<rsub|0>|)>
-    r<around*|(|p<rsub|0>,p<rsub|1>|)>/r<around*|(|p<rsub|1>,p<rsub|0>|)>>>|<row|<cell|\<pi\><around*|(|p<rsub|2>|)>\<assign\>>|<cell|\<pi\><around*|(|p<rsub|1>|)>
-    r<around*|(|p<rsub|1>,p<rsub|1>|)>/r<around*|(|p<rsub|2>,p<rsub|1>|)>>>|<row|<cell|\<ldots\>>|<cell|>>|<row|<cell|\<pi\><around*|(|p<rsub|n>|)>\<assign\>>|<cell|\<pi\><around*|(|p<rsub|n-1>|)>
-    r<around*|(|p<rsub|n-1>,p<rsub|n>|)>/r<around*|(|p<rsub|n>,p<rsub|n-1>|)>.>>>>
-  </align>
-
-  Thus, <math|\<pi\><around*|(|y|)>> (namely the
-  <math|\<pi\><around*|(|p<rsub|n>|)>>) is constructed out of
-  <math|\<pi\><around*|(|x|)>> (namely the
-  <math|\<pi\><around*|(|p<rsub|0>|)>>). Let
-  <math|\<rho\><around*|(|x,y|)>\<assign\>ln r<around*|(|x,y|)>-ln
-  r<around*|(|y,x|)>>, it becomes
-
-  <\equation*>
-    ln \<pi\><around*|(|y|)>=ln \<pi\><around*|(|x|)>+<big|sum><rsub|i=0><rsup|n-1>\<rho\><around*|(|p<rsub|i>,p<rsub|i+1>|)>,
-  </equation*>
-
-  or in continuous form,
-
-  <\equation>
-    ln \<pi\><around*|(|y|)>=ln \<pi\><around*|(|x|)>+<big|int><rsub|P>\<mathd\>s
-    \<rho\><around*|(|s|)>,<label|equation:define stationary density
-    function>
-  </equation>
-
-  where <math|\<rho\><around*|(|s|)>> is short for
-  <math|\<rho\><around*|(|p<rsub|s>,p<rsub|s+1>|)>> along the path <math|P>.
-  In this way, given <math|x<rsub|0>\<in\>\<cal-X\>>, we define any
-  <math|x\<in\>\<cal-X\>> that is connected to <math|x<rsub|0>> by <math|ln
-  \<pi\><around*|(|x|)>\<assign\>ln \<pi\><around*|(|x<rsub|0>|)>+<big|int>\<mathd\>s
-  \<rho\><around*|(|s|)>>. And <math|\<pi\><around*|(|x<rsub|0>|)>> is
-  determined by the normalization of <math|\<pi\>>.
-
-  But, there can be multiple paths from <math|x> to <math|y> which are
-  connected in <math|\<cal-X\>>. For example, consider two paths <math|P> and
-  <math|P<rprime|'>>, then we have
-
-  <\equation*>
-    <big|int><rsub|P>\<mathd\>s \<rho\><around*|(|s|)>=<big|int><rsub|P<rprime|'>>\<mathd\>s
-    \<rho\><around*|(|s|)>.
-  </equation*>
-
-  Generally, if <math|C> is a <strong|circle> which is a path starting at an
-  element <math|x\<in\>\<cal-X\>> and finally end at <math|x> (but not simply
-  standing at <math|x>), then
-
-  <\equation>
-    <big|oint><rsub|C>\<mathd\>s \<rho\><around*|(|s|)>=0.<label|equation:circle>
-  </equation>
-
-  It means every path along two connected elements in <math|\<cal-X\>> is
-  equivalent. If the condition <reference|equation:circle> holds, we can
-  simplify the notation in equation <reference|equation:define stationary
-  density function> by
-
-  <\equation*>
-    ln \<pi\><around*|(|y|)>=ln \<pi\><around*|(|x|)>+<big|int><rsub|x><rsup|y>\<mathd\>s
-    \<rho\><around*|(|s|)>,
-  </equation*>
-
-  where <math|<big|int><rsub|x><rsup|y>> indicates any path from <math|x> to
-  <math|y> (if <math|x> and <math|y> are connected).
-
-  Condition <reference|equation:circle> implies that the previous
-  construction does define a <math|\<pi\>> that satisfies detailed balance
-  condition. Given <math|x,y\<in\>\<cal-X\>>, we have <math|ln
-  \<pi\><around*|(|x|)>=ln \<pi\><around*|(|x<rsub|0>|)>+<big|int><rsub|x<rsub|0>><rsup|x>\<mathd\>s
-  \<rho\><around*|(|s|)>> and <math|ln \<pi\><around*|(|y|)>=ln
-  \<pi\><around*|(|x<rsub|0>|)>+<big|int><rsub|x<rsub|0>><rsup|y>\<mathd\>s
-  \<rho\><around*|(|s|)>>. If <math|x> and <math|y> are connected, then, by
-  condition <reference|equation:circle>,<math|>
-  <math|\<rho\><around*|(|x,y|)>=<big|int><rsub|x><rsup|x<rsub|0>>\<mathd\>s
-  \<rho\><around*|(|s|)>+<big|int><rsub|x<rsub|0>><rsup|y>\<mathd\>s
-  \<rho\><around*|(|s|)>> (the <math|\<rho\><around*|(|x,y|)>> corresponds to
-  the path <math|<around*|(|x,y|)>>, \Pjumping\Q directly from <math|x> to
-  <math|y>), thus <math|ln \<pi\><around*|(|y|)>=ln
-  \<pi\><around*|(|x|)>+\<rho\><around*|(|x,y|)>>, which is just the detailed
-  balance condition <reference|equation:Detailed Balance>. And if <math|x>
-  and <math|y> are not connected, then both <math|r<around*|(|x,y|)>> and
-  <math|r<around*|(|y,x|)>> shall vanish (recall the requirements of
-  transition rate in section <reference|section: Master Equation Describes
-  the Evolution of Markov Process>: if <math|r<around*|(|x,y|)>=0>, then
-  <math|r<around*|(|y,x|)>=0>), and detailed balance condition holds
-  naturally.
-
-  So, condition <reference|equation:circle> is <em|essential and sufficient
-  for the existence of <math|\<pi\>> that holds the detailed balance
-  condition <reference|equation:Detailed Balance>>. If <math|\<cal-X\>> is a
-  simply connected smooth manifold, then using Stokes's theorem, we have
-  <math|\<nabla\>\<times\>\<rho\>=0> on <math|\<cal-X\>>. But, generally
-  <math|\<cal-X\>> is neither simply connected nor smooth, but involves
-  independent subsystems or being discrete. In these situations, condition
-  <reference|equation:circle> becomes very complicated.
-
-  In many applications, we consider the inverse question: given a density
-  function, if there exists a transition rate such that detailed balance
-  condition holds. This inverse problem is much easier, and a proper
-  transition rate can be constructed out of the density function (as an
-  example, consider the Metropolis-Hastings algorithm in section
-  <reference|section: Example: Metropolis-Hastings Algorithm>).
-
   <chapter|Kramers-Moyal Expansion and Langevin Process><label|section:
   Kramers-Moyal Expansion and Langevin Process>
 
@@ -4820,31 +4702,31 @@
     <associate|auto-13|<tuple|2.5|18>>
     <associate|auto-14|<tuple|2.6|19>>
     <associate|auto-15|<tuple|2.7|22>>
-    <associate|auto-16|<tuple|2.8|23>>
-    <associate|auto-17|<tuple|3|25>>
-    <associate|auto-18|<tuple|3.1|25>>
-    <associate|auto-19|<tuple|3.2|25>>
+    <associate|auto-16|<tuple|3|23>>
+    <associate|auto-17|<tuple|3.1|25>>
+    <associate|auto-18|<tuple|3.2|25>>
+    <associate|auto-19|<tuple|3.3|25>>
     <associate|auto-2|<tuple|1|9>>
-    <associate|auto-20|<tuple|3.3|29>>
-    <associate|auto-21|<tuple|3.4|31>>
-    <associate|auto-22|<tuple|3.5|32>>
-    <associate|auto-23|<tuple|3.6|33>>
-    <associate|auto-24|<tuple|3.7|34>>
-    <associate|auto-25|<tuple|3.8|34>>
-    <associate|auto-26|<tuple|4|37>>
-    <associate|auto-27|<tuple|4.1|37>>
-    <associate|auto-28|<tuple|4.2|37>>
-    <associate|auto-29|<tuple|4.3|38>>
+    <associate|auto-20|<tuple|3.4|29>>
+    <associate|auto-21|<tuple|3.5|31>>
+    <associate|auto-22|<tuple|3.6|32>>
+    <associate|auto-23|<tuple|3.7|33>>
+    <associate|auto-24|<tuple|3.8|34>>
+    <associate|auto-25|<tuple|4|34>>
+    <associate|auto-26|<tuple|4.1|37>>
+    <associate|auto-27|<tuple|4.2|37>>
+    <associate|auto-28|<tuple|4.3|37>>
+    <associate|auto-29|<tuple|4.4|38>>
     <associate|auto-3|<tuple|1.1|9>>
-    <associate|auto-30|<tuple|4.4|40>>
-    <associate|auto-31|<tuple|4.1|41>>
-    <associate|auto-32|<tuple|4.5|41>>
-    <associate|auto-33|<tuple|4.6|45>>
-    <associate|auto-34|<tuple|4.7|46>>
-    <associate|auto-35|<tuple|4.8|49>>
-    <associate|auto-36|<tuple|4.9|50>>
-    <associate|auto-37|<tuple|4.9.1|51>>
-    <associate|auto-38|<tuple|4.9.2|52>>
+    <associate|auto-30|<tuple|4.1|40>>
+    <associate|auto-31|<tuple|4.5|41>>
+    <associate|auto-32|<tuple|4.6|41>>
+    <associate|auto-33|<tuple|4.7|45>>
+    <associate|auto-34|<tuple|4.8|46>>
+    <associate|auto-35|<tuple|4.9|49>>
+    <associate|auto-36|<tuple|4.9.1|50>>
+    <associate|auto-37|<tuple|4.9.2|51>>
+    <associate|auto-38|<tuple|4.10|52>>
     <associate|auto-39|<tuple|4.10|54>>
     <associate|auto-4|<tuple|1.2|9>>
     <associate|auto-5|<tuple|1.3|10>>
