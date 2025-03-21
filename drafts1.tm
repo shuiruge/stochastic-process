@@ -264,25 +264,107 @@
 
   holds for all <math|x>, then we say the system is <strong|scale-invariant>.
   Even though it is not invariant, but multiplied by a constant factor, this
-  factor can be illustrated by (or generalized from) the rescaling in the RG
-  transformation.
+  factor caused by the rescaling in the RG transformation.
 
   We perform <math|m> times RG transformations to a scale-invariant system,
   leading to the real influence
 
   <\equation*>
-    <frac|\<partial\>|\<partial\>x<rsup|\<alpha\>>>\<bbb-E\><rsub|Q<around*|(|x|)>><around*|[|Y<rsup|\<beta\>>|]>\<rightarrow\>\<cdots\>\<rightarrow\>\<gamma\><rsup|m>
-    <frac|\<partial\>|\<partial\>x<rsup|\<alpha\>>>\<bbb-E\><rsub|Q<around*|(|x|)>><around*|[|Y<rsup|\<beta\>>|]>,
+    I<rsub|\<alpha\>><rsup|\<beta\>><around*|(|x|)>\<rightarrow\>\<cdots\>\<rightarrow\>I<rprime|'><rsup|\<beta\>><rsub|\<alpha\>><around*|(|x|)>=\<gamma\><rsup|m>
+    I<rsub|\<alpha\>><rsup|\<beta\>><around*|(|x|)>,
   </equation*>
 
-  and the real time difference <math|\<Delta\>t\<rightarrow\>\<cdots\>\<rightarrow\>2<rsup|m>\<Delta\>t>.
-  Thus, during the RG transformations,
+  and the real time difference <math|\<Delta\>t\<rightarrow\>\<cdots\>\<rightarrow\>\<Delta\>t<rprime|'>=2<rsup|m>\<Delta\>t>.
+  Thus, we have
 
   <\equation*>
-    ln I<rsup|\<beta\>><rsub|\<alpha\>><around*|(|x|)>\<propto\>ln\<Delta\>t,
+    ln I<rprime|'><rsup|\<beta\>><rsub|\<alpha\>><around*|(|x|)>=m
+    ln\<gamma\>+ln I<rsup|\<beta\>><rsub|\<alpha\>><around*|(|x|)>
   </equation*>
 
-  which indicates a power-law.
+  and
+
+  <\equation*>
+    ln \<Delta\>t<rprime|'>=m ln 2+ln \<Delta\>t.
+  </equation*>
+
+  It implies a power-law between the real influence and the real time
+  difference, as
+
+  <\equation*>
+    ln I<rprime|'><rsup|\<beta\>><rsub|\<alpha\>><around*|(|x|)>=log<rsub|2>\<gamma\>
+    ln \<Delta\>t<rprime|'>+const.
+  </equation*>
+
+  <section|Try to Solve RGE>
+
+  Now, we are to solve the equation
+
+  <\equation*>
+    \<varphi\><rprime|'><around*|(|x,y|)>=\<varphi\><around*|(|<sqrt|2>x,<frac|x+y|<sqrt|2>>|)>+\<varphi\><around*|(|<frac|x+y|<sqrt|2>>,<sqrt|2>y|)>.
+  </equation*>
+
+  For simplicity, let <math|d=1> (thus <math|x,y\<in\>\<bbb-R\>>). We first
+  try <math|\<varphi\><around*|(|x,y|)>=a x<rsup|2>+b x y+c y<rsup|2>>. So,
+
+  <\align>
+    <tformat|<table|<row|<cell|>|<cell|\<varphi\><around*|(|<sqrt|2>x,<frac|x+y|<sqrt|2>>|)>+\<varphi\><around*|(|<frac|x+y|<sqrt|2>>,<sqrt|2>y|)>>>|<row|<cell|=>|<cell|<around*|[|2a
+    x<rsup|2>+b x <around*|(|x+y|)>+<frac|c|2>
+    <around*|(|x+y|)><rsup|2>|]>+<around*|[|<frac|a|2><around*|(|x+y|)><rsup|2>+b
+    <around*|(|x+y|)> y+2c y<rsup|2>|]>>>|<row|<cell|=>|<cell|<around*|(|<frac|5|2>a+b+<frac|1|2>c|)>x<rsup|2>+<around*|(|a+2b+c|)>x
+    y+<around*|(|<frac|1|2>a+b+<frac|5|2>c|)>y<rsup|2>.>>>>
+  </align>
+
+  Thus, we get
+
+  <\align>
+    <tformat|<table|<row|<cell|a<rprime|'>=>|<cell|<frac|5|2>a+b+<frac|1|2>c>>|<row|<cell|b<rprime|'>=>|<cell|a+2b+c>>|<row|<cell|c<rprime|'>=>|<cell|<frac|1|2>a+b+<frac|5|2>c.>>>>
+  </align>
+
+  It has stable equation
+
+  <\align>
+    <tformat|<table|<row|<cell|3a+2b+c=>|<cell|0>>|<row|<cell|a+b+c=>|<cell|0>>|<row|<cell|a+2b+3c=>|<cell|0.>>>>
+  </align>
+
+  <section|>
+
+  Assume <math|K<rsub|1>=f<around*|(|x|)>> and <math|K<rsub|2>=T \<delta\>>.
+  We then have
+
+  <\align>
+    <tformat|<table|<row|<cell|G<rsub|1><rsup|\<beta\>><around*|(|x|)>=>|<cell|f<rsup|\<gamma\><rsub|1>><around*|(|x|)>\<partial\><rsub|\<gamma\><rsub|1>>f<rsup|\<gamma\><rsub|2>><around*|(|x|)>\<partial\><rsub|\<gamma\><rsub|2>>f<rsup|\<beta\>><around*|(|x|)>>>|<row|<cell|+>|<cell|f<rsup|\<gamma\><rsub|1>><around*|(|x|)>f<rsup|\<gamma\><rsub|2>><around*|(|x|)>\<partial\><rsub|\<gamma\><rsub|1>>\<partial\><rsub|\<gamma\><rsub|2>>f<rsup|\<beta\>><around*|(|x|)>>>|<row|<cell|+>|<cell|T
+    f<rsup|\<gamma\>><around*|(|x|)>\<partial\><rsub|\<gamma\>>\<Delta\>f<rsup|\<beta\>><around*|(|x|)>>>|<row|<cell|+>|<cell|T<rsup|2>\<Delta\><rsup|2>f<rsup|\<beta\>><around*|(|x|)>,>>>>
+  </align>
+
+  where the third line is originally <math|K<rsub|1><rsup|\<gamma\><rsub|1>>K<rsub|2><rsup|\<gamma\><rsub|2>\<gamma\><rsub|3>>\<partial\><rsub|\<gamma\><rsub|1>>\<partial\><rsub|\<gamma\><rsub|2>>\<partial\><rsub|\<gamma\><rsub|3>>K<rsub|1><rsup|\<beta\>>>
+  and the fourth is originally <math|K<rsub|2><rsup|\<gamma\><rsub|1>\<gamma\><rsub|2>>K<rsub|2><rsup|\<gamma\><rsub|3>\<gamma\><rsub|4>>\<partial\><rsub|\<gamma\><rsub|1>>\<partial\><rsub|\<gamma\><rsub|2>>\<partial\><rsub|\<gamma\><rsub|3>>\<partial\><rsub|\<gamma\><rsub|4>>K<rsub|1><rsup|\<beta\>>>.
+
+  <section|Evolution Satisfies Detailed Balance Condition?>
+
+  In the book <with|font-shape|italic|Selfish Gene><\footnote>
+    The newest edition is named by <with|font-shape|italic|The Extended
+    Selfish Gene>.
+  </footnote>, biologist Richard Dawkins defined <strong|gene> as the atomic
+  self-replicating factor in Nature. Different genes may work together as a
+  \Psurvival machine\Q to accomplish more complex functions, such as hunting
+  and thinking. The environment provides challanges and the survival machines
+  compete with each other to survive for delivering their genes. As a result,
+  evolution changes the frequency (distribution) of the combinition of genes.
+  Dawkins then generalized this idea from Nature to other aspects of world
+  including human culture (herein, gene is called \Pmeme\Q) and language.
+
+  Mathematically, a gene is an element in a set <math|\<cal-X\>>. The
+  survival machine, as a combinition of genes, is an element of
+  <math|\<cal-X\><rsup|n>> for a very large <math|n>. We have to append a
+  placeholder in <math|\<cal-X\>>, like <verbatim|null>, for indicating the
+  absence of gene. As an example, a simple survival machine with only three
+  genes can be represented by <math|<around*|(|x<rsub|1>,x<rsub|2>,x<rsub|3>,<text|<math|><verbatim|null>>,\<ldots\>,<text|<math|><verbatim|null>>|)>>,
+  where the <math|x>s are elements of <math|\<cal-X\>\\<around*|{|<text|<math|><verbatim|null>>|}>>.
+  The challanges can be characterized by maximizing (or equivalently
+  minimizing) an objective function <math|L> on <math|\<cal-X\><rsup|n>>.
+
+  \;
 
   \;
 </body>
@@ -301,8 +383,13 @@
     <associate|auto-3|<tuple|1.2|1>>
     <associate|auto-4|<tuple|1.3|2>>
     <associate|auto-5|<tuple|1.4|3>>
-    <associate|auto-6|<tuple|1.5|?>>
+    <associate|auto-6|<tuple|1.5|4>>
+    <associate|auto-7|<tuple|1.6|4>>
+    <associate|auto-8|<tuple|1.7|5>>
+    <associate|auto-9|<tuple|1.8|?>>
     <associate|equation:influence|<tuple|1.1|3>>
+    <associate|footnote-1.1|<tuple|1.1|5>>
+    <associate|footnr-1.1|<tuple|1.1|5>>
   </collection>
 </references>
 
@@ -327,6 +414,17 @@
       1.4<space|2spc>What Characterizes the Influence between Components?
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-5>
+
+      1.5<space|2spc>Power-Law Merges from Scale-Invariance
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-6>
+
+      1.6<space|2spc>Try to Solve RGE <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-7>
+
+      1.7<space|2spc>Gene, Language, and Others
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-8>
     </associate>
   </collection>
 </auxiliary>
