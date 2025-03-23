@@ -2077,13 +2077,29 @@ r (x, x + \epsilon)
       <tr>
         <td width="100%" align="center">\(\displaystyle M_n (x, \Delta t) = \mathcal{O}
         (\Delta t^{\sharp (n /
-N_{\operatorname{cut}})}),\)</td>
+N_{\operatorname{cut}})}), \)</td>
         <td align="right">(3.3)</td>
       </tr>
     </table>
     <p>
       where \(\sharp\) is the ceiling function (which rounds its argument to
-      the nearest greater integer).
+      the nearest greater integer). To obtain equation <a href="#equation:smoothness">3.3</a>, we
+      have to demand that (which will be realized later)
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle \sup_{x \in \mathbb{R}^d} |
+        \partial_{\alpha_1} \cdots \partial_{\alpha_m} K_n
+(x) | < + \infty
+        \)</td>
+        <td align="right">(3.4)</td>
+      </tr>
+    </table>
+    <p>
+      holds for any indices \((\alpha_1, \ldots, \alpha_m)\). Together with
+      equation <a href="#equation:K is uniformly bounded">3.2</a>, we demand that <em>the moments of transition
+      rate and its derivatives are uniformly bounded on \(\mathbb{R}^d\)</em>.
+      We devote the rest of this section to prove equation <a href="#equation:smoothness">3.3</a>.
     </p>
     <p>
       As an example for exploration, we first cut-off at
@@ -2701,7 +2717,7 @@ N_{\operatorname{cut}})})\).
         \partial_{\alpha_1} \cdots \partial_{\alpha_m} K_n
 (x) | < + \infty .
         \)</td>
-        <td align="right">(3.4)</td>
+        <td align="right">(3.5)</td>
       </tr>
     </table>
     <p>
@@ -2835,7 +2851,7 @@ K_n^{\alpha_1 \cdots
         \alpha_n} (x) (\partial_{\alpha_1} \cdots
 \partial_{\alpha_n} \delta)
         (\epsilon) . \)</td>
-        <td align="right">(3.5)</td>
+        <td align="right">(3.6)</td>
       </tr>
     </table>
     <p>
@@ -2843,8 +2859,9 @@ K_n^{\alpha_1 \cdots
       transition rate is determined by its moments \(K_n\)s. Transition rate
       has two continuous variables (namely, the \(x\) and \(y\) in \(r (x,
       y)\)), but each \(K_n\) has only one variable and there are only finite
-      \(K_n\)s (section <a href="#section: Cut-off in the Moments of Transition Rate Is Essential for Spatial Smoothness">3.2</a>). So, <em>spatial smoothness greatly
-      reduces the degree of freedom in stochastic process</em>.
+      number of \(K_n\)s (section <a href="#section: Cut-off in the Moments of Transition Rate Is Essential for Spatial Smoothness">3.2</a>). So, <em>spatial
+      smoothness greatly reduces the degree of freedom in stochastic
+      process</em>.
     </p>
     <p>
       Because of the Dirac's delta functions, this transition rate is a
@@ -2968,7 +2985,7 @@ x) f (x) =
       
     </p>
     <p>
-      If we plug expansion <a href="#equation:km expansion">3.5</a> into master equation, then we get
+      If we plug expansion <a href="#equation:km expansion">3.6</a> into master equation, then we get
     </p>
     <center>
       \(\displaystyle \begin{array}{rl}
@@ -3028,7 +3045,7 @@ x) f (x) =
         x^{\alpha_n}} \right)  [K_n^{\alpha_1 \cdots
 \alpha_n} (x) p (x, t)] .
         \)</td>
-        <td align="right">(3.6)</td>
+        <td align="right">(3.7)</td>
       </tr>
     </table>
     <p>
@@ -3038,7 +3055,7 @@ x) f (x) =
     <p>
       If \(p (\cdot, t) \in S (\mathbb{R}^d)\), then \(p (\cdot, t)\) as well
       as its partial derivatives rapidly tend to zero in the region far from
-      origin. Together with condition <a href="#equation:K condition">3.4</a> (\(K_n\) and its
+      origin. Together with condition <a href="#equation:K condition">3.5</a> (\(K_n\) and its
       partial derivatives are bounded), we can show that \((\partial p /
       \partial t) (\cdot, t) \in S (\mathbb{R}^d)\) too. It then implies that
       \(p (\cdot, t') \in S (\mathbb{R}^d)\) for any \(t' > t\). That is,
@@ -3053,7 +3070,7 @@ x) f (x) =
       moments of transition rate is essential for spatial smoothness. We are
       to show that cut-off at \(N_{\operatorname{cut}} = 1\) (namely \(K_n =
       0\) for any \(n > 1\)) only results in a deterministic evolution. With
-      \(N_{\operatorname{cut}} = 1\), equation <a href="#equation:km expansion v2">3.6</a> reduces to
+      \(N_{\operatorname{cut}} = 1\), equation <a href="#equation:km expansion v2">3.7</a> reduces to
       (re-denote \(K_1\) to \(f\) for simplicity)
     </p>
     <center>
@@ -3152,7 +3169,7 @@ f^{\alpha} (x (t)) + \frac{\partial
     </p>
     <p>
       We examine this by using an example. Let \(K_1\) is everywhere vanishing
-      and \(K_2\) is a constant identity matrix. Then, equation <a href="#equation:km expansion v2">3.6</a>
+      and \(K_2\) is a constant identity matrix. Then, equation <a href="#equation:km expansion v2">3.7</a>
       reduces to
     </p>
     <table width="100%">
@@ -3161,7 +3178,7 @@ f^{\alpha} (x (t)) + \frac{\partial
         = \frac{1}{2} \delta^{\alpha \beta}
 \partial_{\alpha} \partial_{\beta}
         p (x, t) . \)</td>
-        <td align="right">(3.7)</td>
+        <td align="right">(3.8)</td>
       </tr>
     </table>
     <p>
@@ -3226,7 +3243,7 @@ y^{\alpha})) p (y, t) .\)
     <p>
       we find the right hand side \(\int \mathrm{d} y \delta (x - y) p (y, t)
       = p (x, t)\) which is the left hand side. By plugging this inverse
-      transformation into heat equation <a href="#equation:heat equation">3.7</a>, we get
+      transformation into heat equation <a href="#equation:heat equation">3.8</a>, we get
     </p>
     <center>
       \(\displaystyle \int_{\mathbb{R}^d} \frac{\mathrm{d} k'}{(2 \pi)^d} \exp
@@ -3313,7 +3330,7 @@ w^{\alpha}) (x^{\beta} - w^{\beta})
         \prod_{\alpha = 1}^d \frac{1}{\sqrt{2 \pi t}} \exp
 \left( - \frac{1}{2
         t} (x^{\alpha} - w^{\alpha})^2 \right), \)</td>
-        <td align="right">(3.8)</td>
+        <td align="right">(3.9)</td>
       </tr>
     </table>
     <p>
@@ -3326,7 +3343,7 @@ w^{\alpha}) (x^{\beta} - w^{\beta})
       particles automatically shakes in water. It was first explained by
       Albert Einstein in 1905. He argued that the pollen particles are
       constantly stricken by water molecules, and found the transition density
-      to be equation <a href="#equation:wiener process">3.8</a>. Hence, the stochastic process described
+      to be equation <a href="#equation:wiener process">3.9</a>. Hence, the stochastic process described
       by this transition density is named by <strong>Brownian motion</strong>.
       Even though the techniques used for deriving this transition density had
       been mature when Brown first observed this phenomenon, but almost one
@@ -3338,7 +3355,7 @@ w^{\alpha}) (x^{\beta} - w^{\beta})
     Process with \(N_{\operatorname{cut}} = 2\)<span style="margin-left: 1em"></span></h2>
     <p>
       The most generic form of transition rate with \(N_{\operatorname{cut}} =
-      2\) is (by Kramers&ndash;Moyal expansion <a href="#equation:km expansion">3.5</a> with
+      2\) is (by Kramers&ndash;Moyal expansion <a href="#equation:km expansion">3.6</a> with
       \(N_{\operatorname{cut}} = 2\), and re-denote \(K_1\) by \(f\) and
       \(K_2\) by \(\Sigma\))
     </p>
@@ -3350,7 +3367,7 @@ w^{\alpha}) (x^{\beta} - w^{\beta})
         \beta} (x) \partial_{\alpha} \partial_{\beta}
 \delta (\epsilon),
         \)</td>
-        <td align="right">(3.9)</td>
+        <td align="right">(3.10)</td>
       </tr>
     </table>
     <p>
@@ -3360,7 +3377,7 @@ w^{\alpha}) (x^{\beta} - w^{\beta})
       Langevin in 1908.
     </p>
     <p>
-      Plugging equation <a href="#equation:langevin transition rate">3.9</a> into master equation <a href="#equation:km expansion v2">3.6</a>,
+      Plugging equation <a href="#equation:langevin transition rate">3.10</a> into master equation <a href="#equation:km expansion v2">3.7</a>,
       we find
     </p>
     <table width="100%">
@@ -3371,7 +3388,7 @@ w^{\alpha}) (x^{\beta} - w^{\beta})
         \partial_{\alpha} \partial_{\beta} (\Sigma^{\alpha
 \beta} (x) p (x,
         t)) . \)</td>
-        <td align="right">(3.10)</td>
+        <td align="right">(3.11)</td>
       </tr>
     </table>
     <p>
@@ -3416,7 +3433,7 @@ w^{\alpha}) (x^{\beta} - w^{\beta})
       appends to the stationary condition.
     </p>
     <p>
-      The master equation of Langevin process (equation <a href="#equation:Fokker-Planck equation">3.10</a>) has
+      The master equation of Langevin process (equation <a href="#equation:Fokker-Planck equation">3.11</a>) has
       stationary solution \(\Pi\) which satisfies (since there is only one
       variable \(x\), we use \(\partial\) instead of \(\nabla\))
     </p>
@@ -3435,7 +3452,7 @@ w^{\alpha}) (x^{\beta} - w^{\beta})
         \partial_{\beta} (\Sigma^{\alpha \beta}
 (x) \pi (x)) + \nu^{\alpha}
         (x), \)</td>
-        <td align="right">(3.11)</td>
+        <td align="right">(3.12)</td>
       </tr>
     </table>
     <p>
@@ -3462,7 +3479,7 @@ w^{\alpha}) (x^{\beta} - w^{\beta})
       this is equivalent to ask: when will the transition rate of Langevin
       process satisfy detailed balance condition? Detailed balance condition
       reads \(r (x + \epsilon, x) \pi (x) = r (x, x + \epsilon) \pi (x +
-      \epsilon)\). Directly inserting equation <a href="#equation:langevin transition rate">3.9</a>, we get for
+      \epsilon)\). Directly inserting equation <a href="#equation:langevin transition rate">3.10</a>, we get for
       the left hand side,
     </p>
     <center>
@@ -3619,12 +3636,12 @@ w^{\alpha}) (x^{\beta} - w^{\beta})
         <td width="100%" align="center">\(\displaystyle f^{\alpha} (x) \pi (x) = \frac{1}{2}
         \partial_{\beta} (K^{\alpha \beta} (x)
 \pi (x)) . \)</td>
-        <td align="right">(3.12)</td>
+        <td align="right">(3.13)</td>
       </tr>
     </table>
     <p>
       Comparing with the stationary solution of Langevin process (equation <a
-      href="#equation:stationary Fokker-Planck equation">3.11</a>), the source-free vector field \(\nu\) is absent here.
+      href="#equation:stationary Fokker-Planck equation">3.12</a>), the source-free vector field \(\nu\) is absent here.
       Recall in section <a href="#section: Detailed Balance Provides Stationary Distribution">2.4</a> where detailed balance condition was
       first encountered, we said that detailed balance condition is stronger
       than just being stationary. Now, in Langevin process, this becomes
@@ -4270,8 +4287,8 @@ x_N)),\)
     <center>
       \(\displaystyle S (x, k) = - \sum_{i = 0}^{N - 1} \{ \mathrm{i}
       (k_i)_{\alpha} (x^{\alpha}_{i
-+ 1} - x_i^{\alpha}) + s \hat{r} (x_i,
-      k_i) \Delta t \} .\)
++ 1} - x_i^{\alpha}) + \hat{r} (x_i, k_i)
+      \Delta t \} .\)
     </center>
     <p>
       If we Taylor expand \(\hat{r} (x, k)\) by \(k\) at the origin, then the
@@ -4313,13 +4330,12 @@ k_{\alpha_n},\)
         <td width="100%" align="center">\(\displaystyle S (x, k) = - \sum_{i = 0}^{N - 1}
         \Delta t \left\{ \mathrm{i} (k_i)_{\alpha}
 \left( \frac{x^{\alpha}_{i
-        + 1} - x_i^{\alpha}}{\Delta t} - K_1^{\alpha} (x_i)
-\right) + \sum_{n
-        = 2}^{N_{\operatorname{cut}}} \frac{(-
-        \mathrm{i})^n}{n!}
-K_n^{\alpha_1 \cdots \alpha_n} (x_i)
-        (k_i)_{\alpha_1} \cdots (k_i)_{\alpha_n}
-\right\} . \)</td>
+        + 1} - x_i^{\alpha}}{\Delta t} \right) + \sum_{n
+        =
+1}^{N_{\operatorname{cut}}} \frac{(- \mathrm{i})^n}{n!}
+        K_n^{\alpha_1 \cdots
+\alpha_n} (x_i) (k_i)_{\alpha_1} \cdots
+        (k_i)_{\alpha_n} \right\} . \)</td>
         <td align="right">(4.11)</td>
       </tr>
     </table>

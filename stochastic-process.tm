@@ -1721,11 +1721,24 @@
   will find the estimation
 
   <\equation>
-    M<rsub|n><around*|(|x,\<Delta\>t|)>=<with|font|cal|O><around*|(|\<Delta\>t<rsup|\<sharp\><around*|(|n/N<rsub|cut>|)>>|)>,
+    M<rsub|n><around*|(|x,\<Delta\>t|)>=<with|font|cal|O><around*|(|\<Delta\>t<rsup|\<sharp\><around*|(|n/N<rsub|cut>|)>>|)>,<label|equation:smoothness>
   </equation>
 
   where <math|\<sharp\>> is the ceiling function (which rounds its argument
-  to the nearest greater integer).
+  to the nearest greater integer). To obtain equation
+  <reference|equation:smoothness>, we have to demand that (which will be
+  realized later)
+
+  <\equation>
+    sup<rsub|x\<in\>\<bbb-R\><rsup|d>><around*|\||\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|m>>K<rsub|n><around*|(|x|)>|\|>\<less\>+\<infty\><label|equation:K
+    condition>
+  </equation>
+
+  holds for any indices <math|<around*|(|\<alpha\><rsub|1>,\<ldots\>,\<alpha\><rsub|m>|)>>.
+  Together with equation <reference|equation:K is uniformly bounded>, we
+  demand that <em|the moments of transition rate and its derivatives are
+  uniformly bounded on <math|\<bbb-R\><rsup|d>>>. We devote the rest of this
+  section to prove equation <reference|equation:smoothness>.
 
   As an example for exploration, we first cut-off at <math|N<rsub|cut>=2>,
   namely <math|K<rsub|n>=0> for any <math|n\<gtr\>2>. We are to calculate
@@ -2211,7 +2224,7 @@
   indicates that transition rate is determined by its moments
   <math|K<rsub|n>>s. Transition rate has two continuous variables (namely,
   the <math|x> and <math|y> in <math|r<around*|(|x,y|)>>), but each
-  <math|K<rsub|n>> has only one variable and there are only finite
+  <math|K<rsub|n>> has only one variable and there are only finite number of
   <math|K<rsub|n>>s (section <reference|section: Cut-off in the Moments of
   Transition Rate Is Essential for Spatial Smoothness>). So, <em|spatial
   smoothness greatly reduces the degree of freedom in stochastic process>.
@@ -3391,7 +3404,7 @@
   \ where the action is
 
   <\equation*>
-    S<around*|(|x,k|)>=-<big|sum><rsub|i=0><rsup|N-1><around*|{|\<mathi\><around*|(|k<rsub|i>|)><rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>><rsub|i+1>-x<rsub|i><rsup|\<alpha\>>|)>+s
+    S<around*|(|x,k|)>=-<big|sum><rsub|i=0><rsup|N-1><around*|{|\<mathi\><around*|(|k<rsub|i>|)><rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>><rsub|i+1>-x<rsub|i><rsup|\<alpha\>>|)>+
     <wide|r|^><around*|(|x<rsub|i>,k<rsub|i>|)>\<Delta\>t|}>.
   </equation*>
 
@@ -3421,7 +3434,7 @@
   terminates at <math|N<rsub|cut>>. Then, the action becomes
 
   <\equation>
-    S<around*|(|x,k|)>=-<big|sum><rsub|i=0><rsup|N-1>\<Delta\>t<around*|{|\<mathi\><around*|(|k<rsub|i>|)><rsub|\<alpha\>><around*|(|<frac|x<rsup|\<alpha\>><rsub|i+1>-x<rsub|i><rsup|\<alpha\>>|\<Delta\>t>-K<rsub|1><rsup|\<alpha\>><around*|(|x<rsub|i>|)>|)>+<big|sum><rsub|n=2><rsup|N<rsub|cut>><frac|<around*|(|-\<mathi\>|)><rsup|n>|n!>K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x<rsub|i>|)><around*|(|k<rsub|i>|)><rsub|\<alpha\><rsub|1>>\<cdots\><around*|(|k<rsub|i>|)><rsub|\<alpha\><rsub|n>>|}>.<label|equation:action
+    S<around*|(|x,k|)>=-<big|sum><rsub|i=0><rsup|N-1>\<Delta\>t<around*|{|\<mathi\><around*|(|k<rsub|i>|)><rsub|\<alpha\>><around*|(|<frac|x<rsup|\<alpha\>><rsub|i+1>-x<rsub|i><rsup|\<alpha\>>|\<Delta\>t>|)>+<big|sum><rsub|n=1><rsup|N<rsub|cut>><frac|<around*|(|-\<mathi\>|)><rsup|n>|n!>K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x<rsub|i>|)><around*|(|k<rsub|i>|)><rsub|\<alpha\><rsub|1>>\<cdots\><around*|(|k<rsub|i>|)><rsub|\<alpha\><rsub|n>>|}>.<label|equation:action
     of markovian process>
   </equation>
 
@@ -4132,18 +4145,18 @@
     <associate|equation:Detailed Balance|<tuple|2.8|17>>
     <associate|equation:Detailed Balance for transition
     density|<tuple|2.9|17>>
-    <associate|equation:Fokker-Planck equation|<tuple|3.10|32>>
-    <associate|equation:K condition|<tuple|3.4|27>>
+    <associate|equation:Fokker-Planck equation|<tuple|3.11|32>>
+    <associate|equation:K condition|<tuple|3.5|27>>
     <associate|equation:K is uniformly bounded|<tuple|3.2|24>>
     <associate|equation:action of distribution|<tuple|4.5|37>>
     <associate|equation:action of markovian process|<tuple|4.11|41>>
     <associate|equation:berezin integral|<tuple|4.21|45>>
-    <associate|equation:berezin integral exp|<tuple|4.18|44>>
+    <associate|equation:berezin integral exp|<tuple|4.18|45>>
     <associate|equation:berezin integral measurement|<tuple|4.20|45>>
     <associate|equation:data-fitting iteration|<tuple|4.7|38>>
     <associate|equation:data-fitting result|<tuple|4.8|38>>
     <associate|equation:detailed balance condition for
-    Langevin|<tuple|3.12|34>>
+    Langevin|<tuple|3.13|34>>
     <associate|equation:discrete time master equation|<tuple|2.5|14>>
     <associate|equation:discrete time master equation v0|<tuple|2.2|14>>
     <associate|equation:equation:metropolis-hastings|<tuple|2.12|22>>
@@ -4151,13 +4164,13 @@
     <associate|equation:generic density|<tuple|4.6|38>>
     <associate|equation:grassmann integral transform|<tuple|4.19|45>>
     <associate|equation:harmonic oscillator action|<tuple|4.1|35>>
-    <associate|equation:heat equation|<tuple|3.7|31>>
-    <associate|equation:km expansion|<tuple|3.5|28>>
-    <associate|equation:km expansion v2|<tuple|3.6|29>>
+    <associate|equation:heat equation|<tuple|3.8|31>>
+    <associate|equation:km expansion|<tuple|3.6|28>>
+    <associate|equation:km expansion v2|<tuple|3.7|29>>
     <associate|equation:langevin action constant covariance|<tuple|4.17|44>>
     <associate|equation:langevin action general|<tuple|4.23|46>>
     <associate|equation:langevin process after cholesky|<tuple|4.22|46>>
-    <associate|equation:langevin transition rate|<tuple|3.9|32>>
+    <associate|equation:langevin transition rate|<tuple|3.10|32>>
     <associate|equation:least-action principle v0|<tuple|4.2|35>>
     <associate|equation:least-action principle v1|<tuple|4.3|36>>
     <associate|equation:master equation|<tuple|2.4|14>>
@@ -4167,7 +4180,8 @@
     <associate|equation:path integral of markov process|<tuple|4.10|40>>
     <associate|equation:relative entropy derivative|<tuple|2.11|18>>
     <associate|equation:residue zeta|<tuple|4.13|42>>
-    <associate|equation:stationary Fokker-Planck equation|<tuple|3.11|33>>
+    <associate|equation:smoothness|<tuple|3.3|24>>
+    <associate|equation:stationary Fokker-Planck equation|<tuple|3.12|33>>
     <associate|equation:to ghosts|<tuple|4.16|43>>
     <associate|equation:transition density coef recur|<tuple|4.12|41>>
     <associate|equation:transition density normalization|<tuple|2.1|13>>
@@ -4175,7 +4189,7 @@
     density|<tuple|2.6|16>>
     <associate|equation:transition rate determines transition density
     v2|<tuple|2.7|16>>
-    <associate|equation:wiener process|<tuple|3.8|32>>
+    <associate|equation:wiener process|<tuple|3.9|32>>
     <associate|figure: Least-Action|<tuple|4.1|39>>
     <associate|footnote-1|<tuple|1|7>>
     <associate|footnote-1.1|<tuple|1.1|9>>
