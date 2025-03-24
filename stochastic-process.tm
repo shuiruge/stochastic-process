@@ -4116,13 +4116,13 @@
     \<Delta\>t+\<Delta\>W<rsup|\<alpha\>>.<label|equation:langevin iteration>
   </equation>
 
-  for <math|0\<less\>\<mathLaplace\>t\<ll\>1>. The gradient
-  <math|\<nabla\><rsup|\<alpha\>>> is taken on <math|x>, and the random
-  variable <math|\<Delta\>W<rsup|\<alpha\>>> obeys a normal distribution with
-  zero mean and variance <math|\<Delta\>t>. This is the direct result of
-  section <reference|section: Langevin Process with Constant Covariance Has a
-  Path Integral on Alphabet>, in which we have shown that, when
-  <math|\<Delta\>t> is small enough, the transition density
+  for <math|0\<less\>\<mathLaplace\>t\<ll\>1>. The gradient <math|\<nabla\>>
+  is taken on <math|x>, and the random variable
+  <math|\<Delta\>W<rsup|\<alpha\>>> obeys a normal distribution with zero
+  mean and variance <math|\<Delta\>t>. This is the direct result of section
+  <reference|section: Langevin Process with Constant Covariance Has a Path
+  Integral on Alphabet>, in which we have shown that, when <math|\<Delta\>t>
+  is small enough, the transition density
   <math|q<rsub|\<Delta\>t><around*|(|x<rsub|i>\<rightarrow\>x<rsub|i+1>|)>>
   can be approximated by a normal distribution with mean
   <math|x<rsub|i><rsup|\<alpha\>>+f<rsup|\<alpha\>><around*|(|x<rsub|i>|)>\<Delta\>t>
@@ -4131,12 +4131,14 @@
   <math|-\<nabla\><rsup|\<alpha\>>S<around*|(|x,\<theta\>|)>>. This specific
   transition density satisfies detailed balance condition (see section
   <reference|section: Detailed Balance of Langevin Process Lacks Source-Free
-  Degree of Freedom>). Then, theorem <reference|theorem: relaxation> claims
-  that the iteration <reference|equation:langevin iteration> will relax the
-  samples towards the stationary distribution, which has density function
-  proportional to <math|exp<around*|(|-S<around*|(|x,\<theta\>|)>|)>>. There
-  is not need to wait until the samples have been fully relaxed. In practice,
-  we find that ten or several more iterations has been sufficient for a good
+  Degree of Freedom>, especially the equation <reference|equation:detailed
+  balance condition for Langevin>). Then, theorem <reference|theorem:
+  relaxation> claims that the iteration <reference|equation:langevin
+  iteration> will relax the samples towards the stationary distribution,
+  which has density function proportional to
+  <math|exp<around*|(|-S<around*|(|x,\<theta\>|)>|)>>. There is not need to
+  wait until the samples have been fully relaxed. In practice, we find that
+  ten or several more iterations has been sufficient for a good
   approximation. Finally, out of these iterated samples,
   <math|\<bbb-E\><rsub|P<around*|(|\<theta\>|)>><around*|[|\<cdots\>|]>> is
   evaluated. Repeating this process and iterating the <math|\<theta\>> using
@@ -4162,13 +4164,13 @@
   compared it with the least-action principle in physics. As a realistic
   result, we found an interesting perspective on data-fitting.
 
-  Like a trip to the top of a mountain, the horizon is broaden. Out of what
-  we have explored, there arises more questions. How does information
-  propagate in a stochastic system? Why do the starlings in a flock, ants in
-  a colony, and even trees in a forest behave as a whole like an individual
-  organism? There is much more stories to be talked, much more roads to be
-  explored, and much more beauties to be enjoyed. The new trip has been
-  ahead.
+  After climbing to the top of a mountain, the horizon is broaden. Out of
+  what we have explored, there arises more interesting questions. How does
+  information propagate in a stochastic system? Why do the starlings in a
+  flock, ants in a colony, and even trees in a forest behave as a whole like
+  an individual organism? There are much more stories to be told, much more
+  treasures to be sought, and much more beauties to be enjoyed. The new trip
+  has been ahead.
 </body>
 
 <\initial>

@@ -5204,8 +5204,8 @@ R_{\alpha
       </tr>
     </table>
     <p>
-      for \(0 < \Delta t \ll 1\). The gradient \(\nabla^{\alpha}\) is taken on
-      \(x\), and the random variable \(\Delta W^{\alpha}\) obeys a normal
+      for \(0 < \Delta t \ll 1\). The gradient \(\nabla\) is taken on \(x\),
+      and the random variable \(\Delta W^{\alpha}\) obeys a normal
       distribution with zero mean and variance \(\Delta t\). This is the
       direct result of section <a href="#section: Langevin Process with Constant Covariance Has a Path Integral on Alphabet">4.6</a>, in which we have shown that,
       when \(\Delta t\) is small enough, the transition density \(q_{\Delta t}
@@ -5214,16 +5214,17 @@ R_{\alpha
       covariance \(\Delta t \delta^{\alpha \beta}\). Herein, the \(f^{\alpha}
       (x_i)\) is replaced by \(- \nabla^{\alpha} S (x, \theta)\). This
       specific transition density satisfies detailed balance condition (see
-      section <a href="#section: Detailed Balance of Langevin Process Lacks Source-Free Degree of Freedom">3.8</a>). Then, theorem <a href="#theorem: relaxation">2.1</a> claims that
-      the iteration <a href="#equation:langevin iteration">4.24</a> will relax the samples towards the
-      stationary distribution, which has density function proportional to
-      \(\exp (- S (x, \theta))\). There is not need to wait until the samples
-      have been fully relaxed. In practice, we find that ten or several more
-      iterations has been sufficient for a good approximation. Finally, out of
-      these iterated samples, \(\mathbb{E}_{P (\theta)} [\cdots]\) is
-      evaluated. Repeating this process and iterating the \(\theta\) using
-      gradient descent, we arrive at the best-fit \(\theta_{\star}\) which
-      encodes the stochastic dynamics of flocks.
+      section <a href="#section: Detailed Balance of Langevin Process Lacks Source-Free Degree of Freedom">3.8</a>, especially the equation <a href="#equation:detailed balance condition for Langevin">3.13</a>).
+      Then, theorem <a href="#theorem: relaxation">2.1</a> claims that the iteration <a href="#equation:langevin iteration">4.24</a>
+      will relax the samples towards the stationary distribution, which has
+      density function proportional to \(\exp (- S (x, \theta))\). There is
+      not need to wait until the samples have been fully relaxed. In practice,
+      we find that ten or several more iterations has been sufficient for a
+      good approximation. Finally, out of these iterated samples,
+      \(\mathbb{E}_{P (\theta)} [\cdots]\) is evaluated. Repeating this
+      process and iterating the \(\theta\) using gradient descent, we arrive
+      at the best-fit \(\theta_{\star}\) which encodes the stochastic dynamics
+      of flocks.
     </p>
     <h1 id="auto-35">Epilogue<span style="margin-left: 1em"></span></h1>
     <p>
@@ -5248,13 +5249,13 @@ R_{\alpha
       perspective on data-fitting.
     </p>
     <p>
-      Like a trip to the top of a mountain, the horizon is broaden. Out of
-      what we have explored, there arises more questions. How does information
-      propagate in a stochastic system? Why do the starlings in a flock, ants
-      in a colony, and even trees in a forest behave as a whole like an
-      individual organism? There is much more stories to be talked, much more
-      roads to be explored, and much more beauties to be enjoyed. The new trip
-      has been ahead.
+      After climbing to the top of a mountain, the horizon is broaden. Out of
+      what we have explored, there arises more interesting questions. How does
+      information propagate in a stochastic system? Why do the starlings in a
+      flock, ants in a colony, and even trees in a forest behave as a whole
+      like an individual organism? There are much more stories to be told,
+      much more treasures to be sought, and much more beauties to be enjoyed.
+      The new trip has been ahead.
     </p>
   </body>
 </html>
