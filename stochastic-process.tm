@@ -7,7 +7,7 @@
   Information, Markovian Process, and Least-Action Principle>>
 
   <\table-of-contents|toc>
-    <vspace*|1fn><with|font-series|bold|math-font-series|bold|Preface>
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|Prologue>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-1><vspace|0.5fn>
 
@@ -119,28 +119,32 @@
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-28>
 
-    4.4<space|2spc>* Data Fitting Is Equivalent to Least-Action Principle of
-    Distribution <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    4.4<space|2spc>Markovian Process with Euclidean Alphabet Can Be
+    Formulated as Path Integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-29>
 
-    4.5<space|2spc>Markovian Process with Euclidean Alphabet Can Be
-    Formulated as Path Integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    4.5<space|2spc><with|mode|math|\<clubsuit\>> The Residue Is Far From
+    Trivial <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-30>
+
+    4.6<space|2spc>Langevin Process with Constant Covariance Has a Path
+    Integral on Alphabet <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-31>
 
-    4.6<space|2spc>* The Residue Is Far From Trivial
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    4.7<space|2spc><with|mode|math|\<clubsuit\>> Grassmann Variable, Berezin
+    Integral, and Ghosts <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-32>
 
-    4.7<space|2spc>Langevin Process with Constant Covariance Has a Path
-    Integral on Alphabet <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    4.8<space|2spc>Data Fitting Is Equivalent to Least-Action Principle of
+    Distribution <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-33>
 
-    4.8<space|2spc>* Grassmann Variable, Berezin Integral, and Ghosts
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|Epilogue>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-34>
+    <no-break><pageref|auto-35><vspace|0.5fn>
   </table-of-contents>
 
-  <chapter*|Preface>
+  <prologue>
 
   This is a little book about stochastic process. We start with the axiomatic
   system of information (chapter <reference|section: Relative Entropy>). Then
@@ -150,9 +154,9 @@
   to Markovian process, which results in many interesting results including
   Langevin process (chapter <reference|section: Kramers-Moyal Expansion and
   Langevin Process>). In the end, we generalize least-action principle to
-  distribution and discuss the propagation of information in Langevin process
+  distribution and comparing data-fitting with least-action principle
   (chapter <reference|section: Least-Action Principle>). Readers may omit the
-  sections in which the titles start with <math|\<ast\>>. They are
+  sections in which the titles start with <math|\<clubsuit\>>. They are
   interesting digressions.
 
   The mathematical techniques employed here will not go beyond the basic
@@ -171,8 +175,8 @@
   quickly skim through by reviewing section titles, bold and italic texts,
   and numbered equations.
 
-  At last, this book is written by <TeX>macs, on the
-  <hlink|GPLv3|https://www.gnu.org/licenses/gpl-3.0.en.html>
+  At last, this book is written by <TeX>macs, using the
+  <hlink|GFDL-1.3|https://www.gnu.org/licenses/fdl-1.3.en.html>
   license.<\footnote>
     Footnotes in the HTML export of <TeX>macs are problematic. The content of
     footnote is incorrectly placed in front of the footnote label in the main
@@ -2737,7 +2741,7 @@
 
   <\equation*>
     \<pi\><around*|(|x|)>r<around*|(|x,x+\<epsilon\>|)>=-\<pi\><around*|(|x|)>f<rsup|\<alpha\>><around*|(|x|)>
-    \<partial\><rsub|\<alpha\>>\<delta\><around*|(|\<epsilon\>|)>+<frac|1|2>\<pi\><around*|(|x|)>K<rsup|\<alpha\>\<beta\>><around*|(|x|)>
+    \<partial\><rsub|\<alpha\>>\<delta\><around*|(|\<epsilon\>|)>+<frac|1|2>\<pi\><around*|(|x|)>\<Sigma\><rsup|\<alpha\>\<beta\>><around*|(|x|)>
     \<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>\<delta\><around*|(|\<epsilon\>|)>,
   </equation*>
 
@@ -2746,7 +2750,7 @@
   <\align>
     <tformat|<table|<row|<cell|>|<cell|\<pi\><around*|(|x+\<epsilon\>|)>
     r<around*|(|x+\<epsilon\>,x|)>>>|<row|<cell|=>|<cell|\<pi\><around*|(|x+\<epsilon\>|)>
-    r<around*|(|x+\<epsilon\>,<around*|(|x+\<epsilon\>|)>-\<epsilon\>|)>>>|<row|<cell|=>|<cell|-\<pi\><around*|(|x+\<epsilon\>|)>f<rsup|\<alpha\>><around*|(|x+\<epsilon\>|)>\<partial\><rsub|\<alpha\>>\<delta\><around*|(|-\<epsilon\>|)>+<frac|1|2>\<pi\><around*|(|x+\<epsilon\>|)>K<rsup|\<alpha\>\<beta\>><around*|(|x+\<epsilon\>|)>\<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>\<delta\><around*|(|-\<epsilon\>|)>>>|<row|<cell|=>|<cell|\<pi\><around*|(|x+\<epsilon\>|)>f<rsup|\<alpha\>><around*|(|x+\<epsilon\>|)>\<partial\><rsub|\<alpha\>>\<delta\><around*|(|\<epsilon\>|)>+<frac|1|2>\<pi\><around*|(|x+\<epsilon\>|)>K<rsup|\<alpha\>\<beta\>><around*|(|x+\<epsilon\>|)>\<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>\<delta\><around*|(|\<epsilon\>|)>,>>>>
+    r<around*|(|x+\<epsilon\>,<around*|(|x+\<epsilon\>|)>-\<epsilon\>|)>>>|<row|<cell|=>|<cell|-\<pi\><around*|(|x+\<epsilon\>|)>f<rsup|\<alpha\>><around*|(|x+\<epsilon\>|)>\<partial\><rsub|\<alpha\>>\<delta\><around*|(|-\<epsilon\>|)>+<frac|1|2>\<pi\><around*|(|x+\<epsilon\>|)>\<Sigma\><rsup|\<alpha\>\<beta\>><around*|(|x+\<epsilon\>|)>\<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>\<delta\><around*|(|-\<epsilon\>|)>>>|<row|<cell|=>|<cell|\<pi\><around*|(|x+\<epsilon\>|)>f<rsup|\<alpha\>><around*|(|x+\<epsilon\>|)>\<partial\><rsub|\<alpha\>>\<delta\><around*|(|\<epsilon\>|)>+<frac|1|2>\<pi\><around*|(|x+\<epsilon\>|)>\<Sigma\><rsup|\<alpha\>\<beta\>><around*|(|x+\<epsilon\>|)>\<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>\<delta\><around*|(|\<epsilon\>|)>,>>>>
   </align>
 
   where in the last line, we have used <math|\<partial\><rsub|\<alpha\>>\<delta\><around*|(|-x|)>=-\<partial\><rsub|\<alpha\>>\<delta\><around*|(|x|)>>
@@ -2761,7 +2765,7 @@
   <\equation*>
     <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>\<pi\><around*|(|x|)>r<around*|(|x,x+\<epsilon\>|)>\<varphi\><around*|(|\<epsilon\>|)>=-<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
     \<pi\><around*|(|x|)>f<rsup|\<alpha\>><around*|(|x|)>\<partial\><rsub|\<alpha\>>\<delta\><around*|(|\<epsilon\>|)>\<varphi\><around*|(|\<epsilon\>|)>+<frac|1|2><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
-    \<pi\><around*|(|x|)>K<rsup|\<alpha\>\<beta\>><around*|(|x|)>\<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>\<delta\><around*|(|\<epsilon\>|)>\<varphi\><around*|(|\<epsilon\>|)>.
+    \<pi\><around*|(|x|)>\<Sigma\><rsup|\<alpha\>\<beta\>><around*|(|x|)>\<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>\<delta\><around*|(|\<epsilon\>|)>\<varphi\><around*|(|\<epsilon\>|)>.
   </equation*>
 
   Integration by parts gives (note that the <math|\<partial\>> is applied on
@@ -2770,7 +2774,7 @@
   <\equation*>
     <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
     \<pi\><around*|(|x|)>r<around*|(|x,x+\<epsilon\>|)>\<varphi\><around*|(|\<epsilon\>|)>=<with|color|dark
-    cyan|\<pi\><around*|(|x|)>f<rsup|\<alpha\>><around*|(|x|)>\<partial\><rsub|\<alpha\>>\<varphi\><around*|(|0|)>+<frac|1|2>\<pi\><around*|(|x|)>K<rsup|\<alpha\>\<beta\>><around*|(|x|)>\<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>\<varphi\><around*|(|0|)>>.
+    cyan|\<pi\><around*|(|x|)>f<rsup|\<alpha\>><around*|(|x|)>\<partial\><rsub|\<alpha\>>\<varphi\><around*|(|0|)>+<frac|1|2>\<pi\><around*|(|x|)>\<Sigma\><rsup|\<alpha\>\<beta\>><around*|(|x|)>\<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>\<varphi\><around*|(|0|)>>.
   </equation*>
 
   The right hand side is a little complicated,
@@ -2779,7 +2783,7 @@
     <tformat|<table|<row|<cell|>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
     \<pi\><around*|(|x+\<epsilon\>|)>r<around*|(|x+\<epsilon\>,x|)>\<varphi\><around*|(|\<epsilon\>|)>>>|<row|<cell|=>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
     \<pi\><around*|(|x+\<epsilon\>|)>f<rsup|\<alpha\>><around*|(|x+\<epsilon\>|)>\<partial\><rsub|\<alpha\>>\<delta\><around*|(|\<epsilon\>|)>\<varphi\><around*|(|\<epsilon\>|)>+<frac|1|2><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
-    \<pi\><around*|(|x+\<epsilon\>|)>K<rsup|\<alpha\>\<beta\>><around*|(|x+\<epsilon\>|)>\<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>\<delta\><around*|(|\<epsilon\>|)>\<varphi\><around*|(|\<epsilon\>|)>.>>>>
+    \<pi\><around*|(|x+\<epsilon\>|)>\<Sigma\><rsup|\<alpha\>\<beta\>><around*|(|x+\<epsilon\>|)>\<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>\<delta\><around*|(|\<epsilon\>|)>\<varphi\><around*|(|\<epsilon\>|)>.>>>>
   </align>
 
   Again, integration by parts results in (again, the <math|\<partial\>>
@@ -2788,12 +2792,12 @@
   <\align>
     <tformat|<table|<row|<cell|>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
     \<pi\><around*|(|x+\<epsilon\>|)>r<around*|(|x+\<epsilon\>,x|)>\<varphi\><around*|(|\<epsilon\>|)>>>|<row|<cell|=>|<cell|-<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>\<delta\><around*|(|\<epsilon\>|)><frac|\<partial\>|\<partial\>\<epsilon\><rsup|\<alpha\>>><around*|[|\<pi\><around*|(|x+\<epsilon\>|)>f<rsup|\<alpha\>><around*|(|x+\<epsilon\>|)>\<varphi\><around*|(|\<epsilon\>|)>|]>>>|<row|<cell|+>|<cell|<frac|1|2><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
-    \<delta\><around*|(|\<epsilon\>|)><frac|\<partial\><rsup|2>|\<partial\>\<epsilon\><rsup|\<alpha\>>\<partial\>\<epsilon\><rsup|\<beta\>>><around*|[|\<pi\><around*|(|x+\<epsilon\>|)>K<rsup|\<alpha\>\<beta\>><around*|(|x+\<epsilon\>|)>\<varphi\><around*|(|\<epsilon\>|)>|]>>>|<row|<cell|=>|<cell|-\<partial\><rsub|\<alpha\>><around*|[|\<pi\><around*|(|x|)>f<rsup|\<alpha\>><around*|(|x|)>|]>
+    \<delta\><around*|(|\<epsilon\>|)><frac|\<partial\><rsup|2>|\<partial\>\<epsilon\><rsup|\<alpha\>>\<partial\>\<epsilon\><rsup|\<beta\>>><around*|[|\<pi\><around*|(|x+\<epsilon\>|)>\<Sigma\><rsup|\<alpha\>\<beta\>><around*|(|x+\<epsilon\>|)>\<varphi\><around*|(|\<epsilon\>|)>|]>>>|<row|<cell|=>|<cell|-\<partial\><rsub|\<alpha\>><around*|[|\<pi\><around*|(|x|)>f<rsup|\<alpha\>><around*|(|x|)>|]>
     \<varphi\><around*|(|0|)>-<with|color|dark
-    cyan|\<pi\><around*|(|x|)>f<rsup|\<alpha\>><around*|(|x|)>\<partial\><rsub|\<alpha\>>\<varphi\><around*|(|0|)>>>>|<row|<cell|+>|<cell|<frac|1|2>\<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>><around*|[|\<pi\><around*|(|x|)>K<rsup|\<alpha\>\<beta\>><around*|(|x|)>|]>
-    \<varphi\><around*|(|0|)>+\<partial\><rsub|\<beta\>><around*|[|\<pi\><around*|(|x|)>K<rsup|\<alpha\>\<beta\>><around*|(|x|)>|]>
+    cyan|\<pi\><around*|(|x|)>f<rsup|\<alpha\>><around*|(|x|)>\<partial\><rsub|\<alpha\>>\<varphi\><around*|(|0|)>>>>|<row|<cell|+>|<cell|<frac|1|2>\<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>><around*|[|\<pi\><around*|(|x|)>\<Sigma\><rsup|\<alpha\>\<beta\>><around*|(|x|)>|]>
+    \<varphi\><around*|(|0|)>+\<partial\><rsub|\<beta\>><around*|[|\<pi\><around*|(|x|)>\<Sigma\><rsup|\<alpha\>\<beta\>><around*|(|x|)>|]>
     \<partial\><rsub|\<alpha\>>\<varphi\><around*|(|0|)>+<with|color|dark
-    cyan|<frac|1|2>\<pi\><around*|(|x|)>K<rsup|\<alpha\>\<beta\>><around*|(|x|)>\<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>\<varphi\><around*|(|0|)>>.>>>>
+    cyan|<frac|1|2>\<pi\><around*|(|x|)>\<Sigma\><rsup|\<alpha\>\<beta\>><around*|(|x|)>\<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>\<varphi\><around*|(|0|)>>.>>>>
   </align>
 
   By equaling <math|<big|int>\<mathd\>\<epsilon\>
@@ -2805,7 +2809,7 @@
 
   <\equation*>
     -\<partial\><rsub|\<alpha\>><around*|(|f<rsup|\<alpha\>><around*|(|x|)>
-    \<pi\><around*|(|x|)>|)>+<frac|1|2>\<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>><around*|(|K<rsup|\<alpha\>\<beta\>><around*|(|x|)>
+    \<pi\><around*|(|x|)>|)>+<frac|1|2>\<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>><around*|(|\<Sigma\><rsup|\<alpha\>\<beta\>><around*|(|x|)>
     \<pi\><around*|(|x|)>|)>=0,
   </equation*>
 
@@ -2813,7 +2817,7 @@
 
   <\equation*>
     -f<rsup|\<alpha\>><around*|(|x|)> \<pi\><around*|(|x|)>+
-    <frac|1|2>\<partial\><rsub|\<beta\>><around*|(|K<rsup|\<alpha\>\<beta\>><around*|(|x|)>
+    <frac|1|2>\<partial\><rsub|\<beta\>><around*|(|\<Sigma\><rsup|\<alpha\>\<beta\>><around*|(|x|)>
     \<pi\><around*|(|x|)>|)>=0.
   </equation*>
 
@@ -2823,7 +2827,7 @@
 
   <\equation>
     f<rsup|\<alpha\>><around*|(|x|)> \<pi\><around*|(|x|)>=<frac|1|2>
-    \<partial\><rsub|\<beta\>><around*|(|K<rsup|\<alpha\>\<beta\>><around*|(|x|)>
+    \<partial\><rsub|\<beta\>><around*|(|\<Sigma\><rsup|\<alpha\>\<beta\>><around*|(|x|)>
     \<pi\><around*|(|x|)>|)>.<label|equation:detailed balance condition for
     Langevin>
   </equation>
@@ -3127,167 +3131,6 @@
   redundancy. This is the direct implication that distribution involves more
   information than its most likely datum.
 
-  <section|* Data Fitting Is Equivalent to Least-Action Principle of
-  Distribution><label|section: Data Fitting Is Equivalent to Least-Action
-  Principle of Distribution>
-
-  Given a collection of real world data, we are to find a distribution that
-  fits the data. These data can be seen as samples from an unknown
-  distribution which characterizes the real world. We are to figure out a
-  method to fit the real world distribution by given some samples of it.
-
-  Let <math|P<around*|(|\<theta\>|)>> represent a distribution parametrized
-  by <math|\<theta\>\<in\>\<bbb-R\><rsup|m>>. Its alphabet <math|\<cal-X\>>
-  is either discrete or continuous. From its density function,
-  <math|p<around*|(|\<cdummy\>,\<theta\>|)>>, we get a parameterized action
-  <math|S<around*|(|\<cdummy\>,\<theta\>|)>> such that
-
-  <\equation>
-    p<around*|(|x,\<theta\>|)>=exp<around*|(|-S<around*|(|x,\<theta\>|)>|)>/Z<around*|(|\<theta\>|)>,<label|equation:generic
-    density>
-  </equation>
-
-  where <math|Z<around*|(|\<theta\>|)>=<big|int>\<mathd\>x
-  exp<around*|(|-S<around*|(|x,\<theta\>|)>|)>> for ensuring the
-  normalization <math|<big|int>\<mathd\>x p<around*|(|x,\<theta\>|)>=1>. This
-  is consistent with the action defined by equation
-  <reference|equation:action of distribution>, except that the action here is
-  parameterized, and that we omit the constant <math|\<beta\>> since it is
-  irrelevant throughout this section.
-
-  What we have is a collection of data, sampled from an unknown distribution
-  <math|Q>. And we are to adjust the parameters <math|\<theta\>> so that
-  <math|P<around*|(|\<theta\>|)>> approximates <math|Q>. To do so, we
-  minimize the relative entropy between <math|Q> and
-  <math|P<around*|(|\<theta\>|)>>, which is defined as
-  <math|H<around*|(|Q,P<around*|(|\<theta\>|)>|)>\<assign\><big|int>\<mathd\>x
-  q<around*|(|x|)> ln <around*|(|q<around*|(|x|)>/p<around*|(|x,\<theta\>|)>|)>>.
-  This expression is formal. Since we do not know the density function of
-  <math|Q>, all that we can do with <math|Q> is computing the expectation
-  <math|\<bbb-E\><rsub|Q><around*|[|f|]>=<around*|(|1/<around*|\||Q|\|>|)><big|sum><rsub|x\<in\>Q>f<around*|(|x|)>>
-  for any function <math|f>, where we use <math|Q> as a set of data. With
-  this realization, we have, after plugging equation
-  <reference|equation:generic density> into
-  <math|H<around*|(|Q,P<around*|(|\<theta\>|)>|)>>,
-
-  <\equation*>
-    H<around*|(|Q,P<around*|(|\<theta\>|)>|)>=<big|int><rsub|\<cal-X\>>\<mathd\>x
-    q<around*|(|x|)> ln q<around*|(|x|)>+<big|int><rsub|\<cal-X\>>\<mathd\>x
-    q<around*|(|x|)> S<around*|(|x,\<theta\>|)>+<big|int><rsub|\<cal-X\>>\<mathd\>x
-    q<around*|(|x|)> ln Z<around*|(|\<theta\>|)>.
-  </equation*>
-
-  By omitting the <math|\<theta\>>-independent terms, we get the loss
-  function
-
-  <\equation*>
-    L<around*|(|\<theta\>|)>\<assign\><big|int><rsub|\<cal-X\>>\<mathd\>x
-    q<around*|(|x|)> S<around*|(|x,\<theta\>|)>+ln Z<around*|(|\<theta\>|)>.
-  </equation*>
-
-  The parameters that minimize <math|L<around*|(|\<theta\>|)>> also minimize
-  <math|H<around*|(|Q,P<around*|(|\<theta\>|)>|)>>, and vice versa. We can
-  find the <math|\<theta\><rsub|\<star\>>\<assign\>argmin L> by iteratively
-  updating <math|\<theta\>> along the direction
-  <math|-\<partial\>L/\<partial\>\<theta\>>. To calculate
-  <math|-\<partial\>L/\<partial\>\<theta\>>, we start at
-
-  <\equation*>
-    -<frac|\<partial\>L|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|\<theta\>|)>=-<big|int><rsub|\<cal-X\>>\<mathd\>x
-    q<around*|(|x|)> <frac|\<partial\>S|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x,\<theta\>|)>-<frac|1|Z<around*|(|\<theta\>|)>>
-    <frac|\<partial\>Z|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|\<theta\>|)>.
-  </equation*>
-
-  The first term is recognized as <math|-\<bbb-E\><rsub|Q><around*|[|\<partial\>S/\<partial\>\<theta\><rsup|\<alpha\>>|]>>.
-  For the second term, since <math|Z<around*|(|\<theta\>|)>=<big|int><rsub|\<cal-X\>>\<mathd\>x
-  exp<around*|(|-S<around*|(|x,\<theta\>|)>|)>>, we have
-
-  <\equation*>
-    -<frac|1|Z<around*|(|\<theta\>|)>> <frac|\<partial\>Z|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|\<theta\>|)>=<big|int><rsub|\<cal-X\>>\<mathd\>x
-    <with|color|dark cyan|<frac|exp<around*|(|-S<around*|(|x,\<theta\>|)>|)>|Z<around*|(|\<theta\>|)>>>
-    <frac|\<partial\>S|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x,\<theta\>|)>=<big|int><rsub|\<cal-X\>>\<mathd\>x
-    p<around*|(|x,\<theta\>|)> <frac|\<partial\>S|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x,\<theta\>|)>,
-  </equation*>
-
-  where in the last equality, we used the definition of
-  <math|p<around*|(|x,\<theta\>|)>> (the green factor). This final expression
-  is just the <math|\<bbb-E\><rsub|P<around*|(|\<theta\>|)>><around*|[|\<partial\>S/\<partial\>\<theta\><rsup|\<alpha\>>|]>>.
-  Altogether, we arrive at
-
-  <\equation>
-    -<frac|\<partial\>L|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|\<theta\>|)>=\<bbb-E\><rsub|P<around*|(|\<theta\>|)>><around*|[|<frac|\<partial\>S|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|\<cdummy\>,\<theta\>|)>|]>-\<bbb-E\><rsub|Q><around*|[|<frac|\<partial\>S|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|\<cdummy\>,\<theta\>|)>|]>.<label|equation:data-fitting
-    iteration>
-  </equation>
-
-  At the minimum, we shall have <math|\<partial\>L/\<partial\>\<theta\>=0>.
-  Then, we find that <math|\<theta\><rsub|\<star\>>> obeys
-
-  <\equation>
-    \<bbb-E\><rsub|P<around*|(|\<theta\><rsub|\<star\>>|)>><around*|[|<frac|\<partial\>S|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|\<cdummy\>,\<theta\><rsub|\<star\>>|)>|]>=\<bbb-E\><rsub|Q><around*|[|<frac|\<partial\>S|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|\<cdummy\>,\<theta\><rsub|\<star\>>|)>|]>.<label|equation:data-fitting
-    result>
-  </equation>
-
-  \;
-
-  It can be read from equation <reference|equation:data-fitting iteration>
-  that minimizing <math|L> is to increase
-  <math|S<around*|(|\<cdummy\>,\<theta\>|)>> on the sampled points (the first
-  term) while decrease it on data points (the second term). As figure
-  <reference|figure: Least-Action> illustrates, this way of optimization will
-  site real world data onto local minima of
-  <math|S<around*|(|\<cdummy\>,\<theta\>|)>>, <em|in statistical sense>.
-
-  <big-figure|<with|gr-mode|<tuple|edit|spline>|gr-frame|<tuple|scale|1.00001cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|10|10|center>|gr-grid|<tuple|empty>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-line-width|0.5ln|gr-dash-style|11100|gr-color|blue|<graphics||<with|arrow-end|\|\<gtr\>|<line|<point|-6|-3>|<point|-6.0|3.0>>>|<with|arrow-end|\|\<gtr\>|<line|<point|-6|-3>|<point|6.0|-3.0>>>|<math-at|S<around*|(|x,\<theta\>|)>|<point|-6.40049278190267|3.30061515056306>>|<math-at|x|<point|6.20000992178327|-3.1>>|<with|line-width|5ln|arrow-end|\<gtr\>|opacity|50%|color|red|<line|<point|-1.3|3.2>|<point|-1.3|1.7>>>|<with|line-width|5ln|color|blue|opacity|50%|arrow-begin|\<less\>|<line|<point|0.8|-0.83096059724234>|<point|0.8|-2.33096059724234>>>|<with|dash-style|11100|line-width|0.5ln|color|red|<line|<point|-1.3|1.4>|<point|-1.3|-3.0>>>|<with|color|red|<point|-1.3|1.41877>>|<with|color|red|<math-at|x<rsub|1>|<point|-1.4|-3.3>>>|<with|color|blue|<math-at|x<rsub|2>|<point|0.7|-3.3>>>|<with|dash-style|11100|line-width|0.5ln|color|blue|<line|<point|0.8|0.5>|<point|0.8|-3.0>>>|<with|color|blue|<point|0.8|-0.6>>|<with|color|dark
-  cyan|dash-style|11100|<spline|<point|-5|1>|<point|-2.3|-0.7>|<point|0.8|0.5>|<point|3.04196914325401|2.48975575876838>|<point|4.2|2.2>>>|<with|color|dark
-  cyan|<spline|<point|-5.04362277379988|-0.0748763911166967>|<point|-2.85798620872125|2.07284242554528>|<point|0.666826517619433|-0.580225885932565>|<point|3.38308005225473|1.9970400013229>|<point|4.21690671870091|2.62872686984274>>>>>|<label|figure:
-  Least-Action> This figure illustrate how
-  <math|min<rsub|\<theta\>>L<around*|(|\<theta\>|)>> will site a real world
-  datum onto a local minimum of <math|S<around*|(|\<cdummy\>,\<theta\>|)>>.
-  The green curve represents the current not-yet-optimized
-  <math|S<around*|(|\<cdummy\>,\<theta\>|)>>. The <math|x<rsub|1>> (red
-  point) is a real world datum while <math|x<rsub|2>> (blue point), which is
-  currently a local minimum of <math|S<around*|(|\<cdummy\>,\<theta\>|)>>, is
-  not. Minimizing <math|L> by tuning <math|\<theta\>> pushes the
-  <math|\<bbb-E\><rsub|Q><around*|[|S<around*|(|\<cdummy\>,\<theta\>|)>|]>>
-  down to lower value, corresponding to the red downward double-arrow on
-  <math|x<rsub|1>>. Also, since <math|x<rsub|2>> is a local minimum, the data
-  points sampled from <math|p<around*|(|x,\<theta\>|)>\<propto\>exp<around*|(|-S<around*|(|x,\<theta\>|)>|)>>
-  will accumulate around <math|x<rsub|2>>. So, minimizing <math|L> also pulls
-  the <math|\<bbb-E\><rsub|P<around*|(|\<theta\>|)>><around*|[|S<around*|(|\<cdummy\>,\<theta\>|)>|]>>
-  up to greater value, corresponding to the blue upward double-arrow on
-  <math|x<rsub|2>>. Altogether, it makes <math|x<rsub|1>> a local minimum of
-  <math|S<around*|(|\<cdummy\>,\<theta\>|)>>, and
-  <math|S<around*|(|\<cdummy\>,\<theta\>|)>> is optimized to be the dashed
-  green curve.>
-
-  In this way, we find an analytical distribution
-  <math|P<around*|(|\<theta\>|)>> that approximates the empirical
-  distribution <math|Q>. The <math|S<around*|(|\<cdummy\>,\<theta\>|)>> that
-  defines <math|P<around*|(|\<theta\>|)>> describes the interaction between
-  the different components of an entity. This entity may be of physics, like
-  a collection of particles. But it can also be words, genes, flock of birds,
-  and so on.
-
-  As an example, if we want to get the action that characterizes the
-  stochastic dynamics of starling flocks, we take movies for many flocks.
-  Each movie is a series of frames that log the positions of each bird at
-  each time instant. These movies provide the real world data. The
-  parameterized action <math|S> can be expressed by a neural network. Then,
-  iterating by equation <reference|equation:data-fitting iteration> until
-  <math|<around*|\<\|\|\>|\<partial\>L/\<partial\>\<theta\>|\<\|\|\>>> has
-  been small enough gives an <math|S<around*|(|\<cdummy\>,\<theta\><rsub|\<star\>>|)>>
-  that mimics the stochastic dynamics of starling flocks. To compute the
-  expectation <math|\<bbb-E\><rsub|P<around*|(|\<theta\>|)>><around*|[|\<ldots\>|]>>
-  in equation <reference|equation:data-fitting iteration>, we can employ
-  Monte-Carlo simulation with the transition rate satisfying detailed balance
-  condition with <math|P<around*|(|\<theta\>|)>> as the stationary
-  distribution. For discrete random variables, Monte-Carlo simulation with
-  Metropolis-Hastings algorithm (section <reference|section: Example:
-  Metropolis-Hastings Algorithm>) is available; and for continuous random
-  variables, Langevin process (section <reference|section: Detailed Balance
-  of Langevin Process Lacks Source-Free Degree of Freedom>) will be more
-  efficient.
-
   <section|Markovian Process with Euclidean Alphabet Can Be Formulated as
   Path Integral><label|section: Markovian Process with Euclidean Alphabet Can
   Be Formulated as Path Integral>
@@ -3451,8 +3294,8 @@
   <math|<around*|(|x<rsub|0>,x<rsub|1>,\<ldots\>,x<rsub|N>|)>> with each
   <math|x<rsub|i>\<in\>\<bbb-R\><rsup|d>>).
 
-  <section|* The Residue Is Far From Trivial><label|section: * The Residue Is
-  Far From Trivial>
+  <section|<math|\<clubsuit\>> The Residue Is Far From
+  Trivial><label|section: * The Residue Is Far From Trivial>
 
   To explicitly evaluate the residue left in section <reference|section:
   Markovian Process with Euclidean Alphabet Can Be Formulated as Path
@@ -3701,7 +3544,8 @@
     exp<around*|(|\<mathi\> <around*|[|\<epsilon\><rsup|\<alpha\>>-K<rsub|1><rsup|\<alpha\>><around*|(|x|)>
     \<Delta\>t|]>k<rsub|\<alpha\>>-<frac|\<Delta\>t|2!>K<rsub|2><rsup|\<alpha\>\<beta\>><around*|(|x|)>
     k<rsub|\<alpha\>>k<rsub|\<beta\>>+<frac|\<mathi\>\<Delta\>t|3!>K<rsub|3><rsup|\<alpha\>\<beta\>\<gamma\>><around*|(|x|)>
-    k<rsub|\<alpha\>>k<rsub|\<beta\>> k<rsub|\<gamma\>>+\<cdots\>|)>.
+    k<rsub|\<alpha\>>k<rsub|\<beta\>> k<rsub|\<gamma\>>+\<cdots\>|)>.<label|equation:path
+    integral I>
   </equation>
 
   The series terminates at the cut-off <math|N<rsub|cut>> of
@@ -3796,8 +3640,8 @@
 
   Final remark on cut-off <math|N<rsub|cut>=2>. If choose
   <math|N<rsub|cut>\<gtr\>2>, it is hard to see how to integrate the improper
-  integral <reference|equation:path integral step 2>, and even to show why it
-  is finite. For example, if <math|N<rsub|cut>=4>, the
+  integral <reference|equation:path integral I>, and even to show why it is
+  finite. For example, if <math|N<rsub|cut>=4>, the
   <math|<around*|(|\<Delta\>t/4!|)>K<rsup|\<alpha\>\<beta\>\<gamma\>\<sigma\>><rsub|4><around*|(|x|)>
   k<rsub|\<alpha\>>k<rsub|\<beta\>>k<rsub|\<gamma\>>k<rsub|\<sigma\>>> term
   will dominate the integral when <math|k> is far from origin. But we cannot
@@ -3810,8 +3654,8 @@
   <math|<with|font|cal|O><around*|(|d<rsup|2>|)>> degrees of freedom, so this
   cannot be done except for specific situations).
 
-  <section|* Grassmann Variable, Berezin Integral, and Ghosts><label|section:
-  * Grassmann Variable, Berezin Integral, and Ghosts>
+  <section|<math|\<clubsuit\>> Grassmann Variable, Berezin Integral, and
+  Ghosts><label|section: * Grassmann Variable, Berezin Integral, and Ghosts>
 
   We have to briefly introduce Grassmann variable, on which Berezin integral
   is based. Grassmann variable is an extension of real (or complex)
@@ -4097,6 +3941,234 @@
   The <math|C\<assign\>-<around*|(|d/2|)><around*|(|ln 2\<mathpi\>+3ln
   \<Delta\>t|)>> is independent of <math|x>, <math|\<zeta\>>, or
   <math|\<eta\>>, thus is regarded as constant.
+
+  <section|Data Fitting Is Equivalent to Least-Action Principle of
+  Distribution><label|section: Data Fitting Is Equivalent to Least-Action
+  Principle of Distribution>
+
+  Given a collection of real world data, we are to find a distribution that
+  fits the data. These data can be seen as samples from an unknown
+  distribution which characterizes the real world. We are to figure out a
+  method to fit the real world distribution by given some samples of it.
+
+  Let <math|P<around*|(|\<theta\>|)>> represent a distribution parametrized
+  by <math|\<theta\>\<in\>\<bbb-R\><rsup|m>>. Its alphabet <math|\<cal-X\>>
+  can be a discrete set or a continuous space like <math|\<bbb-R\><rsup|d>>.
+  From its density function, <math|p<around*|(|\<cdummy\>,\<theta\>|)>>, we
+  get a parameterized action <math|S<around*|(|\<cdummy\>,\<theta\>|)>> such
+  that
+
+  <\equation>
+    p<around*|(|x,\<theta\>|)>=exp<around*|(|-S<around*|(|x,\<theta\>|)>|)>/Z<around*|(|\<theta\>|)>,<label|equation:generic
+    density>
+  </equation>
+
+  where <math|Z<around*|(|\<theta\>|)>\<assign\><big|int>\<mathd\>x
+  exp<around*|(|-S<around*|(|x,\<theta\>|)>|)>> for ensuring
+  <math|<big|int>\<mathd\>x p<around*|(|x,\<theta\>|)>=1>. This is consistent
+  with the action defined by equation <reference|equation:action of
+  distribution>, except that the action here is parameterized, and that we
+  add a normalization factor <math|Z<around*|(|\<theta\>|)>> for convenience
+  (even though it can be absorbed into <math|S<around*|(|x,\<theta\>|)>>).
+
+  What we have is a collection of data, sampled from an unknown distribution
+  <math|Q>. And we are to adjust the parameters <math|\<theta\>> so that
+  <math|P<around*|(|\<theta\>|)>> approximates <math|Q>. To do so, we
+  minimize the relative entropy between <math|Q> and
+  <math|P<around*|(|\<theta\>|)>>, which is defined as
+  <math|H<around*|(|Q,P<around*|(|\<theta\>|)>|)>\<assign\><big|int>\<mathd\>x
+  q<around*|(|x|)> ln <around*|(|q<around*|(|x|)>/p<around*|(|x,\<theta\>|)>|)>>.
+  This expression is formal. Since we do not know the density function of
+  <math|Q>, all that we can do with <math|Q> is computing the expectation
+  <math|\<bbb-E\><rsub|Q><around*|[|f|]>=<around*|(|1/<around*|\||Q|\|>|)><big|sum><rsub|x\<in\>Q>f<around*|(|x|)>>
+  for any function <math|f>, where we use <math|Q> as a set of data. With
+  this realization, we have, after plugging equation
+  <reference|equation:generic density> into
+  <math|H<around*|(|Q,P<around*|(|\<theta\>|)>|)>>,
+
+  <\equation*>
+    H<around*|(|Q,P<around*|(|\<theta\>|)>|)>=\<bbb-E\><rsub|Q><around*|[|ln
+    q|]>+\<bbb-E\><rsub|Q><around*|[|S<around*|(|\<cdummy\>,\<theta\>|)>|]>+ln
+    Z<around*|(|\<theta\>|)>.
+  </equation*>
+
+  By omitting the <math|\<theta\>>-independent terms, we get the loss
+  function
+
+  <\equation*>
+    L<around*|(|\<theta\>|)>\<assign\>\<bbb-E\><rsub|Q><around*|[|S<around*|(|\<cdummy\>,\<theta\>|)>|]>+ln
+    Z<around*|(|\<theta\>|)>.
+  </equation*>
+
+  The parameters that minimize <math|L<around*|(|\<theta\>|)>> also minimize
+  <math|H<around*|(|Q,P<around*|(|\<theta\>|)>|)>>, and vice versa. We can
+  find the <math|\<theta\><rsub|\<star\>>\<assign\>argmin L> by iteratively
+  updating <math|\<theta\>> along the direction
+  <math|-\<partial\>L/\<partial\>\<theta\>>. To calculate
+  <math|-\<partial\>L/\<partial\>\<theta\>>, we start at
+
+  <\equation*>
+    -<frac|\<partial\>L|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|\<theta\>|)>=-\<bbb-E\><rsub|Q><around*|[|<frac|\<partial\>S|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|\<cdummy\>,\<theta\>|)>|]>-<frac|1|Z<around*|(|\<theta\>|)>>
+    <frac|\<partial\>Z|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|\<theta\>|)>.
+  </equation*>
+
+  The first term is recognized as <math|-\<bbb-E\><rsub|Q><around*|[|\<partial\>S/\<partial\>\<theta\><rsup|\<alpha\>>|]>>.
+  For the second term, by inserting the definition of
+  <math|Z<around*|(|\<theta\>|)>>, we get
+
+  <\equation*>
+    -<frac|1|Z<around*|(|\<theta\>|)>> <frac|\<partial\>Z|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|\<theta\>|)>=<big|int><rsub|\<cal-X\>>\<mathd\>x
+    <with|color|dark cyan|<frac|exp<around*|(|-S<around*|(|x,\<theta\>|)>|)>|Z<around*|(|\<theta\>|)>>>
+    <frac|\<partial\>S|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x,\<theta\>|)>=<big|int><rsub|\<cal-X\>>\<mathd\>x
+    <with|color|dark cyan|p<around*|(|x,\<theta\>|)>>
+    <frac|\<partial\>S|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x,\<theta\>|)>,
+  </equation*>
+
+  where in the last equality, we used the definition of
+  <math|p<around*|(|x,\<theta\>|)>> (the green factor). This final expression
+  is just the <math|\<bbb-E\><rsub|P<around*|(|\<theta\>|)>><around*|[|\<partial\>S/\<partial\>\<theta\><rsup|\<alpha\>>|]>>.
+  Altogether, we arrive at
+
+  <\equation>
+    -<frac|\<partial\>L|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|\<theta\>|)>=\<bbb-E\><rsub|P<around*|(|\<theta\>|)>><around*|[|<frac|\<partial\>S|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|\<cdummy\>,\<theta\>|)>|]>-\<bbb-E\><rsub|Q><around*|[|<frac|\<partial\>S|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|\<cdummy\>,\<theta\>|)>|]>.<label|equation:data-fitting
+    iteration>
+  </equation>
+
+  At the minimum, we shall have <math|\<partial\>L/\<partial\>\<theta\>=0>.
+  Then, we find that <math|\<theta\><rsub|\<star\>>> obeys
+
+  <\equation>
+    \<bbb-E\><rsub|P<around*|(|\<theta\><rsub|\<star\>>|)>><around*|[|<frac|\<partial\>S|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|\<cdummy\>,\<theta\><rsub|\<star\>>|)>|]>=\<bbb-E\><rsub|Q><around*|[|<frac|\<partial\>S|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|\<cdummy\>,\<theta\><rsub|\<star\>>|)>|]>.<label|equation:data-fitting
+    result>
+  </equation>
+
+  It can be read from equation <reference|equation:data-fitting iteration>
+  that minimizing <math|L> is to increase
+  <math|S<around*|(|\<cdummy\>,\<theta\>|)>> on the sampled points (the first
+  term) while decrease it on data points (the second term). As figure
+  <reference|figure: Least-Action> illustrates, this way of optimization will
+  site real world data onto local minima of
+  <math|S<around*|(|\<cdummy\>,\<theta\>|)>>, <em|in statistical sense>.
+
+  The parameterized action <math|S> can be constructed out of universal
+  functions such as neural networks. Then, iterating by equation
+  <reference|equation:data-fitting iteration> until
+  <math|<around*|\<\|\|\>|\<partial\>L/\<partial\>\<theta\>|\<\|\|\>>> has
+  been small enough gives an <math|S<around*|(|\<cdummy\>,\<theta\><rsub|\<star\>>|)>>
+  that mimics the stochastic dynamics of starling flocks. To compute the
+  expectation <math|\<bbb-E\><rsub|P<around*|(|\<theta\>|)>><around*|[|\<ldots\>|]>>
+  in equation <reference|equation:data-fitting iteration>, we employ
+  Monte-Carlo simulation. The transition rate shall satisfy detailed balance
+  condition with <math|P<around*|(|\<theta\>|)>> as the stationary
+  distribution. For discrete random variables, Monte-Carlo simulation with
+  Metropolis-Hastings algorithm (section <reference|section: Example:
+  Metropolis-Hastings Algorithm>) is available; and for continuous random
+  variables, Langevin process (section <reference|section: Langevin Process
+  Is a Markovian Process with Ncut=2>, <reference|section: Detailed Balance
+  of Langevin Process Lacks Source-Free Degree of Freedom>, and
+  <reference|section: Langevin Process with Constant Covariance Has a Path
+  Integral on Alphabet>) will be more efficient.
+
+  <big-figure|<with|gr-mode|<tuple|edit|spline>|gr-frame|<tuple|scale|1.00001cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|10|10|center>|gr-grid|<tuple|empty>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-line-width|0.5ln|gr-dash-style|11100|gr-color|blue|<graphics||<with|arrow-end|\|\<gtr\>|<line|<point|-6|-3>|<point|-6.0|3.0>>>|<with|arrow-end|\|\<gtr\>|<line|<point|-6|-3>|<point|6.0|-3.0>>>|<math-at|S<around*|(|x,\<theta\>|)>|<point|-6.40049278190267|3.30061515056306>>|<math-at|x|<point|6.20000992178327|-3.1>>|<with|line-width|5ln|arrow-end|\<gtr\>|opacity|50%|color|red|<line|<point|-1.3|3.2>|<point|-1.3|1.7>>>|<with|line-width|5ln|color|blue|opacity|50%|arrow-begin|\<less\>|<line|<point|0.8|-0.83096059724234>|<point|0.8|-2.33096059724234>>>|<with|dash-style|11100|line-width|0.5ln|color|red|<line|<point|-1.3|1.4>|<point|-1.3|-3.0>>>|<with|color|red|<point|-1.3|1.41877>>|<with|color|red|<math-at|x<rsub|1>|<point|-1.4|-3.3>>>|<with|color|blue|<math-at|x<rsub|2>|<point|0.7|-3.3>>>|<with|dash-style|11100|line-width|0.5ln|color|blue|<line|<point|0.8|0.5>|<point|0.8|-3.0>>>|<with|color|blue|<point|0.8|-0.6>>|<with|color|dark
+  cyan|dash-style|11100|<spline|<point|-5|1>|<point|-2.3|-0.7>|<point|0.8|0.5>|<point|3.04196914325401|2.48975575876838>|<point|4.2|2.2>>>|<with|color|dark
+  cyan|<spline|<point|-5.04362277379988|-0.0748763911166967>|<point|-2.85798620872125|2.07284242554528>|<point|0.666826517619433|-0.580225885932565>|<point|3.38308005225473|1.9970400013229>|<point|4.21690671870091|2.62872686984274>>>>>|<label|figure:
+  Least-Action> This figure illustrate how
+  <math|min<rsub|\<theta\>>L<around*|(|\<theta\>|)>> will site a real world
+  datum onto a local minimum of <math|S<around*|(|\<cdummy\>,\<theta\>|)>>.
+  The green curve represents the current not-yet-optimized
+  <math|S<around*|(|\<cdummy\>,\<theta\>|)>>. The <math|x<rsub|1>> (red
+  point) is a real world datum while <math|x<rsub|2>> (blue point), which is
+  currently a local minimum of <math|S<around*|(|\<cdummy\>,\<theta\>|)>>, is
+  not. Minimizing <math|L> by tuning <math|\<theta\>> pushes the
+  <math|\<bbb-E\><rsub|Q><around*|[|S<around*|(|\<cdummy\>,\<theta\>|)>|]>>
+  down to lower value, corresponding to the red downward double-arrow on
+  <math|x<rsub|1>>. Also, since <math|x<rsub|2>> is a local minimum, the data
+  points sampled from <math|p<around*|(|x,\<theta\>|)>\<propto\>exp<around*|(|-S<around*|(|x,\<theta\>|)>|)>>
+  will accumulate around <math|x<rsub|2>>. So, minimizing <math|L> also pulls
+  the <math|\<bbb-E\><rsub|P<around*|(|\<theta\>|)>><around*|[|S<around*|(|\<cdummy\>,\<theta\>|)>|]>>
+  up to greater value, corresponding to the blue upward double-arrow on
+  <math|x<rsub|2>>. Altogether, it makes <math|x<rsub|1>> a local minimum of
+  <math|S<around*|(|\<cdummy\>,\<theta\>|)>>, and
+  <math|S<around*|(|\<cdummy\>,\<theta\>|)>> is optimized to be the dashed
+  green curve.>
+
+  As an example, if we want to get the action that characterizes the
+  stochastic dynamics of starling flocks, we take movies for many flocks.
+  Each movie is a series of frames that log the positions of each bird at
+  each time instant. These movies provide the real world data, namely the
+  distribution <math|Q>.
+
+  We could construct the parameterized action <math|S> by a neural network
+  that outputs a scalar float value. But we can go deeper, assuming that the
+  stochastic dynamics of flocks obeys a Langevin process with constant
+  covariance. Namely, we employ the action <reference|equation:langevin
+  action constant covariance>, and construct the <math|f> therein using
+  neural network, which outputs a float vector (array).
+
+  \ To evaluate the <math|\<bbb-E\><rsub|P<around*|(|\<theta\>|)>><around*|[|\<ldots\>|]>>
+  in equation <reference|equation:data-fitting iteration>, we first randomly
+  initialize a group of samples, each representing a movie of a flock. Then,
+  we use Langevin process to efficiently simulate master equation.
+  Explicitly, we iterate each sample by
+
+  <\equation>
+    x<rsup|\<alpha\>>\<leftarrow\>x<rsup|\<alpha\>>-\<nabla\><rsup|\<alpha\>>S<around*|(|x,\<theta\>|)>
+    \<Delta\>t+\<Delta\>W<rsup|\<alpha\>>.<label|equation:langevin iteration>
+  </equation>
+
+  for <math|0\<less\>\<mathLaplace\>t\<ll\>1>. The gradient
+  <math|\<nabla\><rsup|\<alpha\>>> is taken on <math|x>, and the random
+  variable <math|\<Delta\>W<rsup|\<alpha\>>> obeys a normal distribution with
+  zero mean and variance <math|\<Delta\>t>. This is the direct result of
+  section <reference|section: Langevin Process with Constant Covariance Has a
+  Path Integral on Alphabet>, in which we have shown that, when
+  <math|\<Delta\>t> is small enough, the transition density
+  <math|q<rsub|\<Delta\>t><around*|(|x<rsub|i>\<rightarrow\>x<rsub|i+1>|)>>
+  can be approximated by a normal distribution with mean
+  <math|x<rsub|i><rsup|\<alpha\>>+f<rsup|\<alpha\>><around*|(|x<rsub|i>|)>\<Delta\>t>
+  and covariance <math|\<Delta\>t \<delta\><rsup|\<alpha\>\<beta\>>>. Herein,
+  the <math|f<rsup|\<alpha\>><around*|(|x<rsub|i>|)>> is replaced by
+  <math|-\<nabla\><rsup|\<alpha\>>S<around*|(|x,\<theta\>|)>>. This specific
+  transition density satisfies detailed balance condition (see section
+  <reference|section: Detailed Balance of Langevin Process Lacks Source-Free
+  Degree of Freedom>). Then, theorem <reference|theorem: relaxation> claims
+  that the iteration <reference|equation:langevin iteration> will relax the
+  samples towards the stationary distribution, which has density function
+  proportional to <math|exp<around*|(|-S<around*|(|x,\<theta\>|)>|)>>. There
+  is not need to wait until the samples have been fully relaxed. In practice,
+  we find that ten or several more iterations has been sufficient for a good
+  approximation. Finally, out of these iterated samples,
+  <math|\<bbb-E\><rsub|P<around*|(|\<theta\>|)>><around*|[|\<cdots\>|]>> is
+  evaluated. Repeating this process and iterating the <math|\<theta\>> using
+  gradient descent, we arrive at the best-fit <math|\<theta\><rsub|\<star\>>>
+  which encodes the stochastic dynamics of flocks.
+
+  <epilogue>
+
+  Now, I (and you) have finished this journey in the wonderland of stochastic
+  process. Is it really finished? I do not think so. The termination of a
+  trip will be the origin of another, a more marvelous one.
+
+  Looking back to the road we have explored. We started at axiomatizing
+  information, trying to find a proper (for both discrete and continuous
+  random variables) yet simple definition of information. Then we found
+  relative entropy, proved its uniqueness under several plausible assumptions
+  (axioms). Later on, we proved the relaxation of master equation under
+  detailed balance condition. Owing to relative entropy, the proof is much
+  more simple and understandable than those in the traditional textbooks. For
+  this, we explored the continuous time Markovian process. Surprisingly, we
+  found many beautiful treasures in it. We found refined degree of freedom in
+  it, and even finer when smooth structure is appended. In the end, we
+  compared it with the least-action principle in physics. As a realistic
+  result, we found an interesting perspective on data-fitting.
+
+  Like a trip to the top of a mountain, the horizon is broaden. Out of what
+  we have explored, there arises more questions. How does information
+  propagate in a stochastic system? Why do the starlings in a flock, ants in
+  a colony, and even trees in a forest behave as a whole like an individual
+  organism? There is much more stories to be talked, much more roads to be
+  explored, and much more beauties to be enjoyed. Another trip has been
+  ahead.
 </body>
 
 <\initial>
@@ -4129,13 +4201,14 @@
     <associate|auto-26|<tuple|4.1|35>>
     <associate|auto-27|<tuple|4.2|35>>
     <associate|auto-28|<tuple|4.3|36>>
-    <associate|auto-29|<tuple|4.4|38>>
+    <associate|auto-29|<tuple|4.4|37>>
     <associate|auto-3|<tuple|1.1|9>>
-    <associate|auto-30|<tuple|4.1|39>>
-    <associate|auto-31|<tuple|4.5|39>>
-    <associate|auto-32|<tuple|4.6|41>>
-    <associate|auto-33|<tuple|4.7|43>>
-    <associate|auto-34|<tuple|4.8|44>>
+    <associate|auto-30|<tuple|4.5|39>>
+    <associate|auto-31|<tuple|4.6|41>>
+    <associate|auto-32|<tuple|4.7|42>>
+    <associate|auto-33|<tuple|4.8|45>>
+    <associate|auto-34|<tuple|4.1|46>>
+    <associate|auto-35|<tuple|4.24|47>>
     <associate|auto-4|<tuple|1.2|9>>
     <associate|auto-5|<tuple|1.3|10>>
     <associate|auto-6|<tuple|1.4|10>>
@@ -4149,27 +4222,28 @@
     <associate|equation:K condition|<tuple|3.5|27>>
     <associate|equation:K is uniformly bounded|<tuple|3.2|24>>
     <associate|equation:action of distribution|<tuple|4.5|37>>
-    <associate|equation:action of markovian process|<tuple|4.11|41>>
-    <associate|equation:berezin integral|<tuple|4.21|45>>
-    <associate|equation:berezin integral exp|<tuple|4.18|45>>
-    <associate|equation:berezin integral measurement|<tuple|4.20|45>>
-    <associate|equation:data-fitting iteration|<tuple|4.7|38>>
-    <associate|equation:data-fitting result|<tuple|4.8|38>>
+    <associate|equation:action of markovian process|<tuple|4.8|39>>
+    <associate|equation:berezin integral|<tuple|4.18|44>>
+    <associate|equation:berezin integral exp|<tuple|4.15|43>>
+    <associate|equation:berezin integral measurement|<tuple|4.17|43>>
+    <associate|equation:data-fitting iteration|<tuple|4.22|45>>
+    <associate|equation:data-fitting result|<tuple|4.23|45>>
     <associate|equation:detailed balance condition for
     Langevin|<tuple|3.13|34>>
     <associate|equation:discrete time master equation|<tuple|2.5|14>>
     <associate|equation:discrete time master equation v0|<tuple|2.2|14>>
     <associate|equation:equation:metropolis-hastings|<tuple|2.12|22>>
-    <associate|equation:general path integral|<tuple|4.9|40>>
-    <associate|equation:generic density|<tuple|4.6|38>>
-    <associate|equation:grassmann integral transform|<tuple|4.19|45>>
+    <associate|equation:general path integral|<tuple|4.6|38>>
+    <associate|equation:generic density|<tuple|4.21|45>>
+    <associate|equation:grassmann integral transform|<tuple|4.16|43>>
     <associate|equation:harmonic oscillator action|<tuple|4.1|35>>
     <associate|equation:heat equation|<tuple|3.8|31>>
     <associate|equation:km expansion|<tuple|3.6|28>>
     <associate|equation:km expansion v2|<tuple|3.7|29>>
-    <associate|equation:langevin action constant covariance|<tuple|4.17|44>>
-    <associate|equation:langevin action general|<tuple|4.23|46>>
-    <associate|equation:langevin process after cholesky|<tuple|4.22|46>>
+    <associate|equation:langevin action constant covariance|<tuple|4.14|42>>
+    <associate|equation:langevin action general|<tuple|4.20|44>>
+    <associate|equation:langevin iteration|<tuple|4.24|46>>
+    <associate|equation:langevin process after cholesky|<tuple|4.19|44>>
     <associate|equation:langevin transition rate|<tuple|3.10|32>>
     <associate|equation:least-action principle v0|<tuple|4.2|35>>
     <associate|equation:least-action principle v1|<tuple|4.3|36>>
@@ -4177,20 +4251,21 @@
     <associate|equation:master equation series|<tuple|4.4|37>>
     <associate|equation:master equation v0|<tuple|2.3|14>>
     <associate|equation:metropolis-hastings origin|<tuple|2.13|22>>
-    <associate|equation:path integral of markov process|<tuple|4.10|40>>
+    <associate|equation:path integral I|<tuple|4.12|41>>
+    <associate|equation:path integral of markov process|<tuple|4.7|38>>
     <associate|equation:relative entropy derivative|<tuple|2.11|18>>
-    <associate|equation:residue zeta|<tuple|4.13|42>>
+    <associate|equation:residue zeta|<tuple|4.10|40>>
     <associate|equation:smoothness|<tuple|3.3|24>>
     <associate|equation:stationary Fokker-Planck equation|<tuple|3.12|33>>
-    <associate|equation:to ghosts|<tuple|4.16|43>>
-    <associate|equation:transition density coef recur|<tuple|4.12|41>>
+    <associate|equation:to ghosts|<tuple|4.13|41>>
+    <associate|equation:transition density coef recur|<tuple|4.9|40>>
     <associate|equation:transition density normalization|<tuple|2.1|13>>
     <associate|equation:transition rate determines transition
     density|<tuple|2.6|16>>
     <associate|equation:transition rate determines transition density
     v2|<tuple|2.7|16>>
     <associate|equation:wiener process|<tuple|3.9|32>>
-    <associate|figure: Least-Action|<tuple|4.1|39>>
+    <associate|figure: Least-Action|<tuple|4.1|46>>
     <associate|footnote-1|<tuple|1|7>>
     <associate|footnote-1.1|<tuple|1.1|9>>
     <associate|footnote-1.2|<tuple|1.2|9>>
@@ -4206,8 +4281,8 @@
     <associate|footnote-3.4|<tuple|3.4|29>>
     <associate|footnote-3.5|<tuple|3.5|31>>
     <associate|footnote-4.1|<tuple|4.1|36>>
-    <associate|footnote-4.2|<tuple|4.2|42>>
-    <associate|footnote-4.3|<tuple|4.3|46>>
+    <associate|footnote-4.2|<tuple|4.2|40>>
+    <associate|footnote-4.3|<tuple|4.3|44>>
     <associate|footnr-1|<tuple|1|7>>
     <associate|footnr-1.1|<tuple|1.1|9>>
     <associate|footnr-1.2|<tuple|1.2|9>>
@@ -4223,11 +4298,11 @@
     <associate|footnr-3.4|<tuple|3.4|29>>
     <associate|footnr-3.5|<tuple|3.5|31>>
     <associate|footnr-4.1|<tuple|4.1|36>>
-    <associate|footnr-4.2|<tuple|4.2|42>>
-    <associate|footnr-4.3|<tuple|4.3|46>>
+    <associate|footnr-4.2|<tuple|4.2|40>>
+    <associate|footnr-4.3|<tuple|4.3|44>>
     <associate|section: * Grassmann Variable, Berezin Integral, and
-    Ghosts|<tuple|4.8|44>>
-    <associate|section: * The Residue Is Far From Trivial|<tuple|4.6|41>>
+    Ghosts|<tuple|4.7|42>>
+    <associate|section: * The Residue Is Far From Trivial|<tuple|4.5|39>>
     <associate|section: A Brief Review of Least-Action Principle in Classical
     Mechanics|<tuple|4.2|35>>
     <associate|section: A Brief Review of Probability|<tuple|1.2|9>>
@@ -4236,7 +4311,7 @@
     <associate|section: Cut-off in the Moments of Transition Rate Is
     Essential for Spatial Smoothness|<tuple|3.2|23>>
     <associate|section: Data Fitting Is Equivalent to Least-Action Principle
-    of Distribution|<tuple|4.4|38>>
+    of Distribution|<tuple|4.8|45>>
     <associate|section: Detailed Balance Condition and Connectivity
     Monotonically Reduce Relative Entropy|<tuple|2.5|18>>
     <associate|section: Detailed Balance Provides Stationary
@@ -4252,12 +4327,12 @@
     <associate|section: Langevin Process Is a Markovian Process with
     Ncut=2|<tuple|3.6|32>>
     <associate|section: Langevin Process with Constant Covariance Has a Path
-    Integral on Alphabet|<tuple|4.7|43>>
+    Integral on Alphabet|<tuple|4.6|41>>
     <associate|section: Least-Action Principle|<tuple|4|35>>
     <associate|section: Least-Action Principle of Distribution Has No
     Redundancy|<tuple|4.3|36>>
     <associate|section: Markovian Process with Euclidean Alphabet Can Be
-    Formulated as Path Integral|<tuple|4.5|39>>
+    Formulated as Path Integral|<tuple|4.4|37>>
     <associate|section: Master Equation Describes the Evolution of Markov
     Process|<tuple|2.2|13>>
     <associate|section: Master Equation and Detailed Balance|<tuple|2|13>>
@@ -4305,10 +4380,10 @@
       <with|mode|<quote|math>|x<rsub|1>> a local minimum of
       <with|mode|<quote|math>|S<around*|(|\<cdummy\>,\<theta\>|)>>, and
       <with|mode|<quote|math>|S<around*|(|\<cdummy\>,\<theta\>|)>> is
-      optimized to be the dashed green curve.>|<pageref|auto-30>>
+      optimized to be the dashed green curve.>|<pageref|auto-34>>
     </associate>
     <\associate|toc>
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Preface>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Prologue>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1><vspace|0.5fn>
 
@@ -4421,25 +4496,30 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-28>
 
-      4.4<space|2spc>* Data Fitting Is Equivalent to Least-Action Principle
-      of Distribution <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      4.4<space|2spc>Markovian Process with Euclidean Alphabet Can Be
+      Formulated as Path Integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-29>
 
-      4.5<space|2spc>Markovian Process with Euclidean Alphabet Can Be
-      Formulated as Path Integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      4.5<space|2spc><with|mode|<quote|math>|\<clubsuit\>> The Residue Is Far
+      From Trivial <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-30>
+
+      4.6<space|2spc>Langevin Process with Constant Covariance Has a Path
+      Integral on Alphabet <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-31>
 
-      4.6<space|2spc>* The Residue Is Far From Trivial
+      4.7<space|2spc><with|mode|<quote|math>|\<clubsuit\>> Grassmann
+      Variable, Berezin Integral, and Ghosts
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-32>
 
-      4.7<space|2spc>Langevin Process with Constant Covariance Has a Path
-      Integral on Alphabet <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      4.8<space|2spc>Data Fitting Is Equivalent to Least-Action Principle of
+      Distribution <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-33>
 
-      4.8<space|2spc>* Grassmann Variable, Berezin Integral, and Ghosts
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Epilogue>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-34>
+      <no-break><pageref|auto-35><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
