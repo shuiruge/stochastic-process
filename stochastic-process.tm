@@ -4167,7 +4167,7 @@
   propagate in a stochastic system? Why do the starlings in a flock, ants in
   a colony, and even trees in a forest behave as a whole like an individual
   organism? There is much more stories to be talked, much more roads to be
-  explored, and much more beauties to be enjoyed. Another trip has been
+  explored, and much more beauties to be enjoyed. The new trip has been
   ahead.
 </body>
 
