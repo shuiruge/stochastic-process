@@ -175,31 +175,39 @@
         Redundancy <span style="margin-left: 5mm"></span> <a href="#auto-28">36</a>
       </p>
       <p>
-        4.4<span style="margin-left: 1em"></span>Markovian Process with Euclidean Alphabet Can
-        Be Formulated as Path Integral <span style="margin-left: 5mm"></span> <a href="#auto-29">37</a>
+        4.4<span style="margin-left: 1em"></span>Data Fitting Is Equivalent to Least-Action
+        Principle of Distribution <span style="margin-left: 5mm"></span> <a href="#auto-29">37</a>
       </p>
       <p>
-        4.5<span style="margin-left: 1em"></span>\(\clubsuit\) The Residue Is Far From Trivial
-        <span style="margin-left: 5mm"></span> <a href="#auto-30">39</a>
-      </p>
-      <p>
-        4.6<span style="margin-left: 1em"></span>Langevin Process with Constant Covariance Has a
-        Path Integral on Alphabet <span style="margin-left: 5mm"></span> <a href="#auto-31">41</a>
-      </p>
-      <p>
-        4.7<span style="margin-left: 1em"></span>\(\clubsuit\) Grassmann Variable, Berezin
-        Integral, and Ghosts <span style="margin-left: 5mm"></span> <a href="#auto-32">42</a>
-      </p>
-      <p>
-        4.8<span style="margin-left: 1em"></span>Data Fitting Is Equivalent to Least-Action
-        Principle of Distribution <span style="margin-left: 5mm"></span> <a href="#auto-33">44</a>
-      </p>
-      <p>
-        4.9<span style="margin-left: 1em"></span>\(\clubsuit\) Example: Least-Action Principle
-        in Supervised Machine Learning <span style="margin-left: 5mm"></span> <a href="#auto-35">47</a>
+        4.5<span style="margin-left: 1em"></span>\(\clubsuit\) Example: Least-Action Principle
+        in Supervised Machine Learning <span style="margin-left: 5mm"></span> <a href="#auto-31">40</a>
       </p>
       <p style="margin-top: 1em; margin-bottom: 0.5em">
-        <b>Epilogue</b> <span style="margin-left: 5mm"></span> <a href="#auto-36">49</a>
+        <b>5<span style="margin-left: 1em"></span>Path Integral</b> <span style="margin-left: 5mm"></span> <a
+        href="#auto-32">41</a>
+      </p>
+      <p>
+        5.1<span style="margin-left: 1em"></span>Conventions in This Chapter <span style="margin-left: 5mm"></span>
+        <a href="#auto-33">41</a>
+      </p>
+      <p>
+        5.2<span style="margin-left: 1em"></span>Markovian Process with Euclidean Alphabet Can
+        Be Formulated as Path Integral <span style="margin-left: 5mm"></span> <a href="#auto-34">41</a>
+      </p>
+      <p>
+        5.2.1<span style="margin-left: 1em"></span>\(\clubsuit\) The Residue Is Far From Trivial
+        <span style="margin-left: 5mm"></span> <a href="#auto-35">43</a>
+      </p>
+      <p>
+        5.3<span style="margin-left: 1em"></span>Langevin Process with Constant Covariance Has a
+        Path Integral on Alphabet <span style="margin-left: 5mm"></span> <a href="#auto-36">45</a>
+      </p>
+      <p>
+        5.4<span style="margin-left: 1em"></span>\(\clubsuit\) Grassmann Variable, Berezin
+        Integral, and Ghosts <span style="margin-left: 5mm"></span> <a href="#auto-37">46</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Epilogue</b> <span style="margin-left: 5mm"></span> <a href="#auto-38">49</a>
       </p>
     </div>
     <h1 id="auto-1">Prologue<span style="margin-left: 1em"></span></h1>
@@ -3689,13 +3697,12 @@ w^{\alpha}) (x^{\beta} - w^{\beta})
     <h1 id="auto-25"><a id="section: Least-Action Principle"></a>Chapter 4<br />Least-Action Principle</h1>
     <p>
       We apply the discussions in chapter <a href="#section: Kramers-Moyal Expansion and Langevin Process">3</a> to least-action
-      principle. After deriving the action of Langevin process, we investigate
-      the criticality.
+      principle.
     </p>
     <h2 id="auto-26">4.1<span style="margin-left: 1em"></span>Conventions in This Chapter<span style="margin-left: 1em"></span></h2>
     <p>
       Follow the conventions in chapter <a href="#section: Kramers-Moyal Expansion and Langevin Process">3</a> (except for section <a
-      href="#section: Data Fitting Is Equivalent to Least-Action Principle of Distribution">4.8</a> where the alphabet \(\mathcal{X}\) can be discrete). In
+      href="#section: Data Fitting Is Equivalent to Least-Action Principle of Distribution">4.4</a> where the alphabet \(\mathcal{X}\) can be discrete). In
       addition, we use \(P (\theta)\) for a parameterized distribution, where
       \(\theta\) is the collection of parameters. Its density function is \(p
       (x, \theta)\), where random variable \(X\) takes the value \(x\).
@@ -3996,7 +4003,365 @@ x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
       is the direct implication that distribution involves more information
       than its most likely datum.
     </p>
-    <h2 id="auto-29"><a id="section: Markovian Process with Euclidean Alphabet Can Be Formulated as Path Integral"></a>4.4<span style="margin-left: 1em"></span>Markovian Process with Euclidean
+    <h2 id="auto-29"><a id="section: Data Fitting Is Equivalent to Least-Action Principle of Distribution"></a>4.4<span style="margin-left: 1em"></span>Data Fitting Is Equivalent to
+    Least-Action Principle of Distribution<span style="margin-left: 1em"></span></h2>
+    <p>
+      Given a collection of real world data, we are to find a distribution
+      that fits the data. These data can be seen as samples from an unknown
+      distribution which characterizes the real world. We are to figure out a
+      method to fit the real world distribution by given some samples of it.
+    </p>
+    <p>
+      Let \(P (\theta)\) represent a distribution parametrized by \(\theta \in
+      \mathbb{R}^m\). Its alphabet \(\mathcal{X}\) can be a discrete set or a
+      continuous space like \(\mathbb{R}^d\). From its density function, \(p
+      (\cdot, \theta)\), we get a parameterized action \(S (\cdot, \theta)\)
+      such that
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle p (x, \theta) = \exp (- S (x,
+        \theta)) / Z (\theta), \)</td>
+        <td align="right">(4.6)</td>
+      </tr>
+    </table>
+    <p>
+      where \(Z (\theta) := \int \mathrm{d} x \exp (- S (x, \theta))\) for
+      ensuring \(\int \mathrm{d} x p (x, \theta) = 1\). This is consistent
+      with the action defined by equation <a href="#equation:action of distribution">4.5</a>, except that the
+      action here is parameterized, and that we add a normalization factor \(Z
+      (\theta)\) for convenience (even though it can be absorbed into \(S (x,
+      \theta)\)).
+    </p>
+    <p>
+      What we have is a collection of data, sampled from an unknown
+      distribution \(Q\). And we are to adjust the parameters \(\theta\) so
+      that \(P (\theta)\) approximates \(Q\). To do so, we minimize the
+      relative entropy between \(Q\) and \(P (\theta)\), which is defined as
+      \(H (Q, P (\theta)) := \int \mathrm{d} x q (x) \ln (q (x) / p (x,
+      \theta))\). This expression is formal. Since we do not know the density
+      function of \(Q\), all that we can do with \(Q\) is computing the
+      expectation \(\mathbb{E}_Q [f] = (1 / | Q |) \sum_{x \in Q} f (x)\) for
+      any function \(f\), where we use \(Q\) as a set of data. With this
+      realization, we have, after plugging equation <a href="#equation:generic density">4.6</a> into \(H
+      (Q, P (\theta))\),
+    </p>
+    <center>
+      \(\displaystyle H (Q, P (\theta)) =\mathbb{E}_Q [\ln q] +\mathbb{E}_Q [S
+      (\cdot, \theta)] +
+\ln Z (\theta) .\)
+    </center>
+    <p>
+      By omitting the \(\theta\)-independent terms, we get the loss function
+    </p>
+    <center>
+      \(\displaystyle L (\theta) := \mathbb{E}_Q [S (\cdot, \theta)] + \ln Z
+      (\theta) .\)
+    </center>
+    <p>
+      The parameters that minimize \(L (\theta)\) also minimize \(H (Q, P
+      (\theta))\), and vice versa. We can find the \(\theta_{\star} :=
+      \operatorname{argmin}L\) by iteratively updating \(\theta\) along the
+      direction \(- \partial L / \partial \theta\). To calculate \(- \partial
+      L / \partial \theta\), we start at
+    </p>
+    <center>
+      \(\displaystyle - \frac{\partial L}{\partial \theta^{\alpha}} (\theta) =
+      -\mathbb{E}_Q \left[
+\frac{\partial S}{\partial \theta^{\alpha}} (\cdot,
+      \theta) \right] -
+\frac{1}{Z (\theta)}  \frac{\partial Z}{\partial
+      \theta^{\alpha}} (\theta) .\)
+    </center>
+    <p>
+      The first term is recognized as \(-\mathbb{E}_Q [\partial S / \partial
+      \theta^{\alpha}]\). For the second term, by inserting the definition of
+      \(Z (\theta)\), we get
+    </p>
+    <center>
+      \(\displaystyle - \frac{1}{Z (\theta)}  \frac{\partial Z}{\partial
+      \theta^{\alpha}} (\theta) =
+\int_{\mathcal{X}} \mathrm{d} x {\frac{\exp
+      (- S (x, \theta))}{Z (\theta)}} 
+\frac{\partial S}{\partial
+      \theta^{\alpha}} (x, \theta) = \int_{\mathcal{X}}
+\mathrm{d} x {p (x,
+      \theta)}  \frac{\partial S}{\partial \theta^{\alpha}} (x,
+\theta),\)
+    </center>
+    <p>
+      where in the last equality, we used the definition of \(p (x, \theta)\)
+      (the green factor). This final expression is just the \(\mathbb{E}_{P
+      (\theta)} [\partial S / \partial \theta^{\alpha}]\). Altogether, we
+      arrive at
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle - \frac{\partial L}{\partial
+        \theta^{\alpha}} (\theta) =\mathbb{E}_{P
+(\theta)} \left[
+        \frac{\partial S}{\partial \theta^{\alpha}} (\cdot, \theta)
+\right]
+        -\mathbb{E}_Q \left[ \frac{\partial S}{\partial
+        \theta^{\alpha}}
+(\cdot, \theta) \right] . \)</td>
+        <td align="right">(4.7)</td>
+      </tr>
+    </table>
+    <p>
+      At the minimum, we shall have \(\partial L / \partial \theta = 0\).
+      Then, we find that \(\theta_{\star}\) obeys
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle \mathbb{E}_{P (\theta_{\star})}
+        \left[ \frac{\partial S}{\partial
+\theta^{\alpha}} (\cdot,
+        \theta_{\star}) \right] =\mathbb{E}_Q \left[
+\frac{\partial
+        S}{\partial \theta^{\alpha}} (\cdot, \theta_{\star}) \right] . \)</td>
+        <td align="right">(4.8)</td>
+      </tr>
+    </table>
+    <p>
+      It can be read from equation <a href="#equation:data-fitting iteration">4.7</a> that minimizing \(L\) is
+      to increase \(S (\cdot, \theta)\) on the sampled points (the first term)
+      while decrease it on data points (the second term). As figure <a href="#figure: Least-Action">4.1</a>
+      illustrates, this way of optimization will site real world data onto
+      local minima of \(S (\cdot, \theta)\), <em>in statistical sense</em>.
+    </p>
+    <p>
+      The parameterized action \(S\) can be constructed out of universal
+      functions such as neural networks. Then, iterating by equation <a href="#equation:data-fitting iteration">4.7</a>
+      until \(\| \partial L / \partial \theta \|\) has been small enough gives
+      an \(S (\cdot, \theta_{\star})\) that mimics the stochastic dynamics of
+      starling flocks. To compute the expectation \(\mathbb{E}_{P (\theta)}
+      [\ldots]\) in equation <a href="#equation:data-fitting iteration">4.7</a>, we employ Monte-Carlo
+      simulation. The transition rate shall satisfy detailed balance condition
+      with \(P (\theta)\) as the stationary distribution. For discrete random
+      variables, Monte-Carlo simulation with Metropolis-Hastings algorithm
+      (section <a href="#section: Example: Metropolis-Hastings Algorithm">2.7</a>) is available; and for continuous random
+      variables, Langevin process (section <a href="#section: Langevin Process Is a Markovian Process with Ncut=2">3.6</a>, <a href="#section: Detailed Balance of Langevin Process Lacks Source-Free Degree of Freedom">3.8</a>,
+      and <a href="#section: Langevin Process with Constant Covariance Has a Path Integral on Alphabet">5.3</a>) will be more efficient. In addition, many
+      numerical computation modules have build-in samplers for many
+      distributions, such as categorical distribution and normal distribution;
+      when \(P (\theta)\) is happen to be one of them, computing
+      \(\mathbb{E}_{P (\theta)} [\ldots]\) will be straight-forward.
+    </p>
+    <div style="margin-top: 1em; margin-bottom: 1em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em"><img src="index-1.png" style="margin-left: -0.0134736842105263em; margin-bottom: 0em; margin-right: -0.0134736842105241em; margin-top: 0em; vertical-align: -14.3223684210526em; height: 28.6447368421053em"></img></td>
+        </tr><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em; height: 0.5em"></td>
+        </tr><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em; padding-left: 1.5em; padding-right: 1.5em"><div class="caption">
+            <font style="font-size: 84.1%"><p>
+              <b>Figure 4.1. </b><a id="auto-30"></a><a id="figure: Least-Action"></a> This figure illustrate
+              how \(\min_{\theta} L (\theta)\) will site a real world datum
+              onto a local minimum of \(S (\cdot, \theta)\). The green curve
+              represents the current not-yet-optimized \(S (\cdot, \theta)\).
+              The \(x_1\) (red point) is a real world datum while \(x_2\)
+              (blue point), which is currently a local minimum of \(S (\cdot,
+              \theta)\), is not. Minimizing \(L\) by tuning \(\theta\) pushes
+              the \(\mathbb{E}_Q [S (\cdot, \theta)]\) down to lower value,
+              corresponding to the red downward double-arrow on \(x_1\). Also,
+              since \(x_2\) is a local minimum, the data points sampled from
+              \(p (x, \theta) \propto \exp (- S (x, \theta))\) will accumulate
+              around \(x_2\). So, minimizing \(L\) also pulls the
+              \(\mathbb{E}_{P (\theta)} [S (\cdot, \theta)]\) up to greater
+              value, corresponding to the blue upward double-arrow on \(x_2\).
+              Altogether, it makes \(x_1\) a local minimum of \(S (\cdot,
+              \theta)\), and \(S (\cdot, \theta)\) is optimized to be the
+              dashed green curve.
+            </p></font>
+          </div></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <p>
+      As an example, if we want to get the action that characterizes the
+      stochastic dynamics of starling flocks, we take movies for many flocks.
+      Each movie is a series of frames that log the positions of each bird at
+      each time instant. These movies provide the real world data, namely the
+      distribution \(Q\).
+    </p>
+    <p>
+      We could construct the parameterized action \(S\) by a neural network
+      that outputs a scalar float value. But we can go deeper, assuming that
+      the stochastic dynamics of flocks obeys a Langevin process with constant
+      covariance. Namely, we employ the action <a href="#equation:langevin action constant covariance">5.9</a>, and construct
+      the \(f\) therein using neural network, which outputs a float vector
+      (array).
+    </p>
+    <p>
+      To evaluate the \(\mathbb{E}_{P (\theta)} [\ldots]\) in equation <a
+      href="#equation:data-fitting iteration">4.7</a>, we first randomly initialize a group of samples, each
+      representing a movie of a flock. Then, we use Langevin process to
+      efficiently simulate master equation. Explicitly, we iterate each sample
+      by
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle x^{\alpha} \leftarrow x^{\alpha} -
+        \nabla^{\alpha} S (x, \theta) \Delta t +
+\Delta W^{\alpha} . \)</td>
+        <td align="right">(4.9)</td>
+      </tr>
+    </table>
+    <p>
+      for \(0 < \Delta t \ll 1\). The gradient \(\nabla\) is taken on \(x\),
+      and the random variable \(\Delta W^{\alpha}\) obeys a normal
+      distribution with zero mean and variance \(\Delta t\) (to be proved in
+      section
+      <a href="#section: Langevin Process with Constant Covariance Has a Path Integral on Alphabet">5.3</a>
+      ).
+      <div class="footnote">
+        <font style="font-size: 77.1%"><div align="justify">
+          <div style="margin-left: 0px">
+            <div style="margin-right: 0px">
+              <class style="font-style: normal"><p>
+                4.2. In section <a href="#section: Langevin Process with Constant Covariance Has a Path Integral on Alphabet">5.3</a>, we will show that, when
+                \(\Delta t\) is small enough, the transition density
+                \(q_{\Delta t} (x_i \rightarrow x_{i + 1})\) can be
+                approximated by a normal distribution with mean \(x_i^{\alpha}
+                + f^{\alpha} (x_i) \Delta t\) and covariance \(\Delta t
+                \delta^{\alpha \beta}\). Herein, the \(f^{\alpha} (x_i)\) is
+                replaced by \(- \nabla^{\alpha} S (x, \theta)\). Readers may
+                accept this first. I give my apology for this strange
+                arrangement, but it is deliberate, so as to make the closely
+                related sections adjacent to each other.
+              </p></class>
+            </div>
+          </div>
+        </div></font>
+      </div>
+      <span style="margin-left: 0em"></span>
+      <a id="footnr-4.2"></a>
+      <sup><class style="font-style: normal"><a href="#footnote-4.2">4.2</a></class></sup>
+      This specific transition density satisfies detailed balance condition
+      (see section
+      <a href="#section: Detailed Balance of Langevin Process Lacks Source-Free Degree of Freedom">3.8</a>
+      , especially the equation
+      <a href="#equation:detailed balance condition for Langevin">3.15</a>
+      ). Then, theorem
+      <a href="#theorem: relaxation">2.1</a>
+      claims that the iteration
+      <a href="#equation:langevin iteration">4.9</a>
+      will relax the samples towards the stationary distribution, which has
+      density function proportional to \(\exp (- S (x, \theta))\). There is
+      not need to wait until the samples have been fully relaxed. In practice,
+      we find that ten or several more iterations has been sufficient for a
+      good approximation. Finally, out of these iterated samples,
+      \(\mathbb{E}_{P (\theta)} [\cdots]\) is evaluated. Repeating this
+      process and iterating the \(\theta\) using gradient descent, we arrive
+      at the best-fit \(\theta_{\star}\) which encodes the stochastic dynamics
+      of flocks.
+    </p>
+    <h2 id="auto-31">4.5<span style="margin-left: 1em"></span>\(\clubsuit\) Example: Least-Action
+    Principle in Supervised Machine Learning<span style="margin-left: 1em"></span></h2>
+    <p>
+      In this section, we apply the result in section <a href="#section: Data Fitting Is Equivalent to Least-Action Principle of Distribution">4.4</a> to
+      supervised machine learning, including both regression and
+      classification tasks. We suppose that readers who read this section have
+      the basic familiarity to machine learning.
+    </p>
+    <p>
+      As usual, dataset is characterized by empirical distribution \(Q\). In
+      supervised machine learning, each datum is a pair consisting of an input
+      and an output. By marginalizing the output, we get the input
+      distribution \(Q_X\). Then, dividing \(Q\) by \(Q_X\) gives the
+      conditional distribution \(Q_{Y|X}\), which samples the output by giving
+      an input.
+    </p>
+    <p>
+      The task of supervised machine learning is searching for an analytical
+      distribution that approximates the \(Q_{Y|X}\). To do so, we use a
+      parameterized distribution \(P (x, \theta)\), where \(\theta\) denotes
+      the parameter, and find the best-fit parameter \(\theta_{\star}\) by
+      minimizing the relative entropy \(H (P (x, \theta), Q_{Y|X} (x))\),
+      where \(x\) is sampled from \(Q_X\). Then, we have the loss function
+    </p>
+    <center>
+      \(\displaystyle L (\theta) =\mathbb{E}_{x \sim Q_X} [H (P (x, \theta), Q
+      (x))] .\)
+    </center>
+    <p>
+      
+    </p>
+    <p>
+      For regression tasks, the alphabet is \(\mathbb{R}\), and \(P (x,
+      \theta)\) is a normal distribution with unit variance. Thus, the density
+      function \(p (y|x, \theta)\) is
+    </p>
+    <center>
+      \(\displaystyle p (y|x, \theta) = \frac{1}{\sqrt{2 \pi}} \exp \left( -
+      \frac{1}{2} (h (x,
+\theta) - y)^2 \right)\)
+    </center>
+    <p>
+      for some scale function \(h (x, \theta)\). We read out the action in
+      section <a href="#section: Data Fitting Is Equivalent to Least-Action Principle of Distribution">4.4</a> as
+    </p>
+    <center>
+      \(\displaystyle S (x, y, \theta) = \frac{1}{2} (h (x, \theta) - y)^2\)
+    </center>
+    <p>
+      and the normalization factor \(Z (x, \theta)\) is constant. So, omitting
+      the \(\theta\)-independent terms in \(L (\theta)\), we get
+    </p>
+    <center>
+      \(\displaystyle L (\theta) =\mathbb{E}_{x \sim Q_X} [\mathbb{E}_{y \sim
+      Q_{Y|X} (x)} [S (x, y,
+\theta)]] =\mathbb{E}_{(x, y) \sim Q} [S (x, y,
+      \theta)] .\)
+    </center>
+    <p>
+      
+    </p>
+    <p>
+      For classification tasks, the alphabet is \(\{ 1, \ldots, C \}\) for
+      some positive integer \(C\), and \(P (x, \theta)\) is a categorical
+      distribution. Thus, the density function \(p (y|x, \theta)\) is a
+      softmax function of \(h (x, \theta)\). That is,
+    </p>
+    <center>
+      \(\displaystyle p (\alpha |x, \theta) = \frac{\exp (h^{\alpha} (x,
+      \theta))}{\sum_{\beta =
+1}^C \exp (h^{\beta} (x, \theta))} .\)
+    </center>
+    <p>
+      We read out the action in section <a href="#section: Data Fitting Is Equivalent to Least-Action Principle of Distribution">4.4</a> as
+    </p>
+    <center>
+      \(\displaystyle S (x, \alpha, \theta) = - h^{\alpha} (x, \theta)\)
+    </center>
+    <p>
+      and the normalization factor \(Z (x, \theta) = \sum_{\beta} \exp
+      (h^{\beta} (x, \theta))\). The loss function is evaluated to be
+    </p>
+    <center>
+      \(\displaystyle L (\theta) = -\mathbb{E}_{(x, \alpha) \sim Q} \left[ \ln
+      \frac{\exp
+(h^{\alpha} (x, \theta))}{\sum_{\beta = 1}^C \exp (h^{\beta}
+      (x, \theta))}
+\right],\)
+    </center>
+    <p>
+      which is the usual cross-entropy loss in classification tasks. As
+      discussed in section <a href="#section: Data Fitting Is Equivalent to Least-Action Principle of Distribution">4.4</a>, for minimizing the loss function,
+      we have to evaluate the expectation \(\mathbb{E}_{P (x, \theta)}
+      [\partial S / \partial \theta]\) by sampling from \(P (x, \theta)\).
+      This corresponds to the contrastive learning technique used in training
+      models such as <tt class="verbatim">word2vec</tt> in which the number of classes
+      is extremely large.
+    </p>
+    <h1 id="auto-32">Chapter 5<br />Path Integral</h1>
+    <h2 id="auto-33">5.1<span style="margin-left: 1em"></span>Conventions in This Chapter<span style="margin-left: 1em"></span></h2>
+    <p>
+      Follow the conventions in chapter <a href="#section: Kramers-Moyal Expansion and Langevin Process">3</a>.
+    </p>
+    <h2 id="auto-34"><a id="section: Markovian Process with Euclidean Alphabet Can Be Formulated as Path Integral"></a>5.2<span style="margin-left: 1em"></span>Markovian Process with Euclidean
     Alphabet Can Be Formulated as Path Integral<span style="margin-left: 1em"></span></h2>
     <p>
       In section <a href="#section: Least-Action Principle of Distribution Has No Redundancy">4.3</a>, we have shown how to define an action using
@@ -4036,7 +4401,7 @@ x_N)),\)
         \cdots \int_{\mathbb{R}^d} \mathrm{d} x_{N
 - 1} \exp (- S (x_0,
         \ldots, x_N)) f (x_0, \ldots, x_N), \)</td>
-        <td align="right">(4.6)</td>
+        <td align="right">(5.1)</td>
       </tr>
     </table>
     <p>
@@ -4119,14 +4484,14 @@ x_N)),\)
     </center>
     <p>
       The residue of this approximation is found to be non-trivial. We tackle
-      this in section <a href="#section: * The Residue Is Far From Trivial">4.5</a>. As the result, we find
+      this in section <a href="#section: * The Residue Is Far From Trivial">5.2.1</a>. As the result, we find
     </p>
     <table width="100%">
       <tr>
         <td width="100%" align="center">\(\displaystyle p (x_N, N \Delta t) = \int D (x, k)
         p (x_0, 0) \exp (- S (x, k)) + \omicron (N
 \Delta t), \)</td>
-        <td align="right">(4.7)</td>
+        <td align="right">(5.2)</td>
       </tr>
     </table>
     <p>
@@ -4184,7 +4549,7 @@ k_{\alpha_n},\)
         K_n^{\alpha_1 \cdots
 \alpha_n} (x_i) (k_i)_{\alpha_1} \cdots
         (k_i)_{\alpha_n} \right\} . \)</td>
-        <td align="right">(4.8)</td>
+        <td align="right">(5.3)</td>
       </tr>
     </table>
     <p>
@@ -4195,14 +4560,14 @@ k_{\alpha_n},\)
       \mathbb{R}^d\) and \(k \in \mathbb{R}^d\)). But in a specific situation
       where \(N_{\operatorname{cut}} = 2\) and \(K_2 (x)\) is constant
       (matrix), the \(k\)-components can be analytically marginalized (section
-      <a href="#section: Langevin Process with Constant Covariance Has a Path Integral on Alphabet">4.6</a>). Then, the path integral is taken on the alphabet
+      <a href="#section: Langevin Process with Constant Covariance Has a Path Integral on Alphabet">5.3</a>). Then, the path integral is taken on the alphabet
       \(\mathbb{R}^d\) (namely, the path is a series \((x_0, x_1, \ldots,
       x_N)\) with each \(x_i \in \mathbb{R}^d\)).
     </p>
-    <h2 id="auto-30"><a id="section: * The Residue Is Far From Trivial"></a>4.5<span style="margin-left: 1em"></span>\(\clubsuit\) The Residue Is Far
-    From Trivial<span style="margin-left: 1em"></span></h2>
+    <h3 id="auto-35"><a id="section: * The Residue Is Far From Trivial"></a>5.2.1<span style="margin-left: 1em"></span>\(\clubsuit\) The Residue Is
+    Far From Trivial<span style="margin-left: 1em"></span></h3>
     <p>
-      To explicitly evaluate the residue left in section <a href="#section: Markovian Process with Euclidean Alphabet Can Be Formulated as Path Integral">4.4</a>, we
+      To explicitly evaluate the residue left in section <a href="#section: Markovian Process with Euclidean Alphabet Can Be Formulated as Path Integral">5.2</a>, we
       have to consider the full expansion of \(q_{\Delta t}\) (equation <a
       href="#equation:transition rate determines transition density">2.6</a>), rather than expanding to the first order of \(\Delta
       t\). We have evaluated the zeroth and the first order coefficients in
@@ -4309,7 +4674,7 @@ x^{\alpha_m}} (x, k)
         \frac{\partial^m \hat{r}}{\partial k_{\alpha_1} \cdots
 \partial
         k_{\alpha_m}} (x, k) . \)</td>
-        <td align="right">(4.9)</td>
+        <td align="right">(5.4)</td>
       </tr>
     </table>
     <p>
@@ -4326,7 +4691,7 @@ t),\)
     <p>
       where \(\hat{\zeta} (x, k, \Delta t)\) collects the terms in each
       \(\hat{g}_n (x, k)\) except for the \([\hat{r} (x, k)]^n\). Together
-      with equation <a href="#equation:transition density coef recur">4.9</a>, we get
+      with equation <a href="#equation:transition density coef recur">5.4</a>, we get
     </p>
     <table width="100%">
       <tr>
@@ -4340,7 +4705,7 @@ t),\)
         \hat{r}}{\partial k_{\alpha_1} \cdots \partial k_{\alpha_m}}
 (x, k) .
         \)</td>
-        <td align="right">(4.10)</td>
+        <td align="right">(5.5)</td>
       </tr>
     </table>
     <p>
@@ -4351,7 +4716,7 @@ t),\)
       \(\hat{\zeta} (x, k, \Delta t) = \omicron (\Delta t)\) and it is the
       residue we are seeking for. Temporally, we do not know whether the
       series in \(\hat{\zeta} (x, k, \Delta t)\) converges or not, but keeping
-      the series <a href="#equation:residue zeta">4.10</a> formal (we will examine this later).
+      the series <a href="#equation:residue zeta">5.5</a> formal (we will examine this later).
     </p>
     <p>
       For going back to \(q_{\Delta t} (x \rightarrow x + \epsilon)\), we
@@ -4362,7 +4727,7 @@ t),\)
           <div style="margin-left: 0px">
             <div style="margin-right: 0px">
               <class style="font-style: normal"><p>
-                4.2. This can be viewed as a generalization of Kramers-Moyal
+                5.1. This can be viewed as a generalization of Kramers-Moyal
                 expansion. In fact, we are to prove this expansion by
                 following the steps in section <a href="#section: Kramers&ndash;Moyal Expansion Formulates Transition Rate by Its Moments">3.3</a>, in which we
                 proved Kramers-Moyal expansion. Explicitly, consider a
@@ -4447,8 +4812,8 @@ t),\)
         </div></font>
       </div>
       <span style="margin-left: 0em"></span>
-      <a id="footnr-4.2"></a>
-      <sup><class style="font-style: normal"><a href="#footnote-4.2">4.2</a></class></sup>
+      <a id="footnr-5.1"></a>
+      <sup><class style="font-style: normal"><a href="#footnote-5.1">5.1</a></class></sup>
     </p>
     <table width="100%">
       <tr>
@@ -4458,7 +4823,7 @@ t),\)
         \partial^{\alpha_n} \hat{f}) (0)
 (\partial_{\alpha_1} \cdots
         \partial_{\alpha_n} \delta) (x) .\)</td>
-        <td align="right">(4.11)</td>
+        <td align="right">(5.6)</td>
       </tr>
     </table>
     <p>
@@ -4497,7 +4862,7 @@ t)
     </center>
     <p>
       So, we have to show that the coefficients are well-defined. Inserting
-      equation <a href="#equation:residue zeta">4.10</a>, we find the coefficient
+      equation <a href="#equation:residue zeta">5.5</a>, we find the coefficient
     </p>
     <center>
       \(\displaystyle \frac{\partial^l \hat{\zeta}}{\partial k_{\alpha_1}
@@ -4528,17 +4893,17 @@ x^{\alpha_m}} (x, 0) \frac{\partial^m
       application onto \(\varphi\) results in a well-defined residue,
       proportional to \(\Delta t^2\).
     </p>
-    <h2 id="auto-31"><a id="section: Langevin Process with Constant Covariance Has a Path Integral on Alphabet"></a>4.6<span style="margin-left: 1em"></span>Langevin Process with Constant
+    <h2 id="auto-36"><a id="section: Langevin Process with Constant Covariance Has a Path Integral on Alphabet"></a>5.3<span style="margin-left: 1em"></span>Langevin Process with Constant
     Covariance Has a Path Integral on Alphabet<span style="margin-left: 1em"></span></h2>
     <p>
-      The path integral <a href="#equation:path integral of markov process">4.7</a> integrates on paths over both \(x\)
+      The path integral <a href="#equation:path integral of markov process">5.2</a> integrates on paths over both \(x\)
       and \(k\). In this section, we are to see when we can marginalize
       (integrate out) the \(k\)-component, leaving only the \(x\), namely the
       path on the alphabet.
     </p>
     <p>
       Given \(i \in \{ 0, \ldots, N - 1 \}\), we are to integrate out the
-      \(k_i\) in equation <a href="#equation:path integral of markov process">4.7</a>, together with the action <a href="#equation:action of markovian process">4.8</a>.
+      \(k_i\) in equation <a href="#equation:path integral of markov process">5.2</a>, together with the action <a href="#equation:action of markovian process">5.3</a>.
       Now we can safely neglect the residue, and write the integral as
       (replacing \(x_i\) by \(x\), \(k_i\) by \(k\), and \(x_{i + 1} - x_i\)
       by \(\epsilon\) for simplicity)
@@ -4555,7 +4920,7 @@ x^{\alpha_m}} (x, 0) \frac{\partial^m
 \frac{\mathrm{i} \Delta t}{3!} K_3^{\alpha \beta \gamma} (x)
         k_{\alpha}
 k_{\beta} k_{\gamma} + \cdots \right) . \)</td>
-        <td align="right">(4.12)</td>
+        <td align="right">(5.7)</td>
       </tr>
     </table>
     <p>
@@ -4606,16 +4971,16 @@ b_{\beta} \right),\)
         f^{\alpha} (x) \right] \left[
 \frac{\epsilon^{\beta}}{\Delta t} -
         f^{\beta} (x) \right] \right) . \)</td>
-        <td align="right">(4.13)</td>
+        <td align="right">(5.8)</td>
       </tr>
     </table>
     <p>
       But there is an extra factor \(\sqrt{\det \Sigma (x)}\) out of
-      exponential. To match the path integral formulism <a href="#equation:general path integral">4.6</a>, in
+      exponential. To match the path integral formulism <a href="#equation:general path integral">5.1</a>, in
       which all integration variables are in the exponential, we have to
       convert the factor into exponential too. It is found that only when
       \(\Sigma\) is constant can we do so (we left the general situation to
-      section <a href="#section: * Grassmann Variable, Berezin Integral, and Ghosts">4.7</a>). As a real symmetric matrix, the constant
+      section <a href="#section: * Grassmann Variable, Berezin Integral, and Ghosts">5.4</a>). As a real symmetric matrix, the constant
       \(\Sigma\) can be diagonalized as \(\Sigma = E^T \Lambda E\), where
       \(E\) is orthogonal and the eigenvalues in \(\Lambda\) are all positive
       since \(\Sigma\) is positive definite. So, denote \(\sqrt{\Lambda}\) the
@@ -4633,7 +4998,7 @@ b_{\beta} \right),\)
     </center>
     <p>
       where \(C := - (d / 2) \ln (2 \pi \Delta t) - (1 / 2) \ln \det \Sigma\)
-      is a constant. Plugging \(I (x)\) back to equation <a href="#equation:path integral of markov process">4.7</a>, we
+      is a constant. Plugging \(I (x)\) back to equation <a href="#equation:path integral of markov process">5.2</a>, we
       find
     </p>
     <center>
@@ -4659,7 +5024,7 @@ b_{\beta} \right),\)
         1}^{\alpha} - x_i^{\alpha}}{\Delta t} - f^{\alpha}
 (x_i) \right)
         \right]^2 \right\} . \)</td>
-        <td align="right">(4.14)</td>
+        <td align="right">(5.9)</td>
       </tr>
     </table>
     <p>
@@ -4668,7 +5033,7 @@ b_{\beta} \right),\)
     <p>
       Final remark on cut-off \(N_{\operatorname{cut}} = 2\). If choose
       \(N_{\operatorname{cut}} > 2\), it is hard to see how to integrate the
-      improper integral <a href="#equation:path integral I">4.12</a>, and even to show why it is finite.
+      improper integral <a href="#equation:path integral I">5.7</a>, and even to show why it is finite.
       For example, if \(N_{\operatorname{cut}} = 4\), the \((\Delta t / 4!)
       K^{\alpha \beta \gamma \sigma}_4 (x) k_{\alpha} k_{\beta}
 k_{\gamma}
@@ -4681,7 +5046,7 @@ k_{\gamma}
       only \(\mathcal{O} (d^2)\) degrees of freedom, so this cannot be done
       except for specific situations).
     </p>
-    <h2 id="auto-32"><a id="section: * Grassmann Variable, Berezin Integral, and Ghosts"></a>4.7<span style="margin-left: 1em"></span>\(\clubsuit\) Grassmann
+    <h2 id="auto-37"><a id="section: * Grassmann Variable, Berezin Integral, and Ghosts"></a>5.4<span style="margin-left: 1em"></span>\(\clubsuit\) Grassmann
     Variable, Berezin Integral, and Ghosts<span style="margin-left: 1em"></span></h2>
     <p>
       We have to briefly introduce Grassmann variable, on which Berezin
@@ -4771,7 +5136,7 @@ k_{\gamma}
 \mathrm{d} \eta_1 \int \mathrm{d} \zeta_1 (\zeta_1 \eta_1 \cdots
         \zeta_n
 \eta_n) \right] = 1, \)</td>
-        <td align="right">(4.15)</td>
+        <td align="right">(5.10)</td>
       </tr>
     </table></font>
     <p>
@@ -4840,7 +5205,7 @@ k_{\gamma}
         \mathrm{d} \zeta'_1 = \det A \times \int
 \mathrm{d} \zeta_d \cdots
         \int \mathrm{d} \zeta_1 . \)</td>
-        <td align="right">(4.16)</td>
+        <td align="right">(5.11)</td>
       </tr>
     </table>
     <p>
@@ -4867,12 +5232,12 @@ k_{\gamma}
         \eta := \int \mathrm{d} \zeta_d \int
 \mathrm{d} \eta_d \cdots \int
         \mathrm{d} \zeta_1 \int \mathrm{d} \eta_1 . \)</td>
-        <td align="right">(4.17)</td>
+        <td align="right">(5.12)</td>
       </tr>
     </table>
     <p>
       Defining \(\zeta'_{\beta} := A_{\alpha \beta} \zeta^{\alpha}\) and using
-      equation <a href="#equation:grassmann integral transform">4.16</a>, it becomes
+      equation <a href="#equation:grassmann integral transform">5.11</a>, it becomes
     </p>
     <center>
       \(\displaystyle \int \mathrm{d} \zeta \mathrm{d} \eta \exp (A_{\alpha
@@ -4882,7 +5247,7 @@ k_{\gamma}
 (\zeta'_{\beta} \eta^{\beta}) .\)
     </center>
     <p>
-      The rightmost factor has been evaluated in equation <a href="#equation:berezin integral exp">4.15</a>,
+      The rightmost factor has been evaluated in equation <a href="#equation:berezin integral exp">5.10</a>,
       which results in \(1\), thus
     </p>
     <table width="100%">
@@ -4891,7 +5256,7 @@ k_{\gamma}
         \eta \exp (A_{\alpha \beta} \zeta^{\alpha}
 \eta^{\beta}) = \det A.
         \)</td>
-        <td align="right">(4.18)</td>
+        <td align="right">(5.13)</td>
       </tr>
     </table>
     <p>
@@ -4900,7 +5265,7 @@ k_{\gamma}
     </p>
     <p>
       After introducing Berezin integral, we go back to deal with equation <a
-      href="#equation:to ghosts">4.13</a> where \(\Sigma\) is not a constant. We first use Cholesky
+      href="#equation:to ghosts">5.8</a> where \(\Sigma\) is not a constant. We first use Cholesky
       factorization to remove the square root and the fraction. Then, using
       Berezin integral to convert the determinant into exponential.
     </p>
@@ -4940,7 +5305,7 @@ R_{\gamma \beta}\). So, we have (insert the omitted
         \left(
 \frac{\epsilon^{\beta}}{\Delta t} - f^{\beta} (x) \right)
         \right]^2 \right) . \)</td>
-        <td align="right">(4.19)</td>
+        <td align="right">(5.14)</td>
       </tr>
     </table>
     <p>
@@ -4949,7 +5314,7 @@ R_{\gamma \beta}\). So, we have (insert the omitted
     </p>
     <p>
       Then, using Berezin integral, we can convert the \(\det R (x)\) factor
-      in equation <a href="#equation:langevin process after cholesky">4.19</a> into exponential. Replacing \(A\) by \(R
+      in equation <a href="#equation:langevin process after cholesky">5.14</a> into exponential. Replacing \(A\) by \(R
       (x) \Delta t\), we find
     </p>
     <center>
@@ -4965,7 +5330,7 @@ R_{\gamma \beta}\). So, we have (insert the omitted
           <div style="margin-left: 0px">
             <div style="margin-right: 0px">
               <class style="font-style: normal"><p>
-                4.3. You may convert the determinant directly into exponential
+                5.2. You may convert the determinant directly into exponential
                 by using logarithm, namely \(\det R (x) = \exp \{ \ln [\det R
                 (x)] \}\). This fails in our situation because we expect the
                 term in the exponential to be proportional to \(\Delta t\).
@@ -4975,8 +5340,8 @@ R_{\gamma \beta}\). So, we have (insert the omitted
         </div></font>
       </div>
       <span style="margin-left: 0em"></span>
-      <a id="footnr-4.3"></a>
-      <sup><class style="font-style: normal"><a href="#footnote-4.3">4.3</a></class></sup>
+      <a id="footnr-5.2"></a>
+      <sup><class style="font-style: normal"><a href="#footnote-5.2">5.2</a></class></sup>
     </p>
     <center>
       \(\displaystyle q_{\Delta t} (x \rightarrow x + \epsilon) =
@@ -4995,7 +5360,7 @@ R_{\alpha \beta} (x)
       &ldquo;ghost variables&rdquo;.
     </p>
     <p>
-      Plugging back to master equation <a href="#equation:path integral of markov process">4.7</a>, we get
+      Plugging back to master equation <a href="#equation:path integral of markov process">5.2</a>, we get
     </p>
     <center>
       \(\displaystyle p (x_N, N \Delta t) = \int \mathrm{D} (x, \zeta, \eta) p
@@ -5026,341 +5391,14 @@ R_{\alpha \beta} (x)
         x_i^{\beta}}{\Delta t} - f^{\beta} (x_i) \right) \right]^2 +
 R_{\alpha
         \beta} (x_i) \zeta^{\alpha}_i \eta_i^{\beta} \right\} . \)</td>
-        <td align="right">(4.20)</td>
+        <td align="right">(5.15)</td>
       </tr>
     </table>
     <p>
       The \(C := - (d / 2) (\ln 2 \pi + 3 \ln \Delta t)\) is independent of
       \(x\), \(\zeta\), or \(\eta\), thus is regarded as constant.
     </p>
-    <h2 id="auto-33"><a id="section: Data Fitting Is Equivalent to Least-Action Principle of Distribution"></a>4.8<span style="margin-left: 1em"></span>Data Fitting Is Equivalent to
-    Least-Action Principle of Distribution<span style="margin-left: 1em"></span></h2>
-    <p>
-      Given a collection of real world data, we are to find a distribution
-      that fits the data. These data can be seen as samples from an unknown
-      distribution which characterizes the real world. We are to figure out a
-      method to fit the real world distribution by given some samples of it.
-    </p>
-    <p>
-      Let \(P (\theta)\) represent a distribution parametrized by \(\theta \in
-      \mathbb{R}^m\). Its alphabet \(\mathcal{X}\) can be a discrete set or a
-      continuous space like \(\mathbb{R}^d\). From its density function, \(p
-      (\cdot, \theta)\), we get a parameterized action \(S (\cdot, \theta)\)
-      such that
-    </p>
-    <table width="100%">
-      <tr>
-        <td width="100%" align="center">\(\displaystyle p (x, \theta) = \exp (- S (x,
-        \theta)) / Z (\theta), \)</td>
-        <td align="right">(4.21)</td>
-      </tr>
-    </table>
-    <p>
-      where \(Z (\theta) := \int \mathrm{d} x \exp (- S (x, \theta))\) for
-      ensuring \(\int \mathrm{d} x p (x, \theta) = 1\). This is consistent
-      with the action defined by equation <a href="#equation:action of distribution">4.5</a>, except that the
-      action here is parameterized, and that we add a normalization factor \(Z
-      (\theta)\) for convenience (even though it can be absorbed into \(S (x,
-      \theta)\)).
-    </p>
-    <p>
-      What we have is a collection of data, sampled from an unknown
-      distribution \(Q\). And we are to adjust the parameters \(\theta\) so
-      that \(P (\theta)\) approximates \(Q\). To do so, we minimize the
-      relative entropy between \(Q\) and \(P (\theta)\), which is defined as
-      \(H (Q, P (\theta)) := \int \mathrm{d} x q (x) \ln (q (x) / p (x,
-      \theta))\). This expression is formal. Since we do not know the density
-      function of \(Q\), all that we can do with \(Q\) is computing the
-      expectation \(\mathbb{E}_Q [f] = (1 / | Q |) \sum_{x \in Q} f (x)\) for
-      any function \(f\), where we use \(Q\) as a set of data. With this
-      realization, we have, after plugging equation <a href="#equation:generic density">4.21</a> into \(H
-      (Q, P (\theta))\),
-    </p>
-    <center>
-      \(\displaystyle H (Q, P (\theta)) =\mathbb{E}_Q [\ln q] +\mathbb{E}_Q [S
-      (\cdot, \theta)] +
-\ln Z (\theta) .\)
-    </center>
-    <p>
-      By omitting the \(\theta\)-independent terms, we get the loss function
-    </p>
-    <center>
-      \(\displaystyle L (\theta) := \mathbb{E}_Q [S (\cdot, \theta)] + \ln Z
-      (\theta) .\)
-    </center>
-    <p>
-      The parameters that minimize \(L (\theta)\) also minimize \(H (Q, P
-      (\theta))\), and vice versa. We can find the \(\theta_{\star} :=
-      \operatorname{argmin}L\) by iteratively updating \(\theta\) along the
-      direction \(- \partial L / \partial \theta\). To calculate \(- \partial
-      L / \partial \theta\), we start at
-    </p>
-    <center>
-      \(\displaystyle - \frac{\partial L}{\partial \theta^{\alpha}} (\theta) =
-      -\mathbb{E}_Q \left[
-\frac{\partial S}{\partial \theta^{\alpha}} (\cdot,
-      \theta) \right] -
-\frac{1}{Z (\theta)}  \frac{\partial Z}{\partial
-      \theta^{\alpha}} (\theta) .\)
-    </center>
-    <p>
-      The first term is recognized as \(-\mathbb{E}_Q [\partial S / \partial
-      \theta^{\alpha}]\). For the second term, by inserting the definition of
-      \(Z (\theta)\), we get
-    </p>
-    <center>
-      \(\displaystyle - \frac{1}{Z (\theta)}  \frac{\partial Z}{\partial
-      \theta^{\alpha}} (\theta) =
-\int_{\mathcal{X}} \mathrm{d} x {\frac{\exp
-      (- S (x, \theta))}{Z (\theta)}} 
-\frac{\partial S}{\partial
-      \theta^{\alpha}} (x, \theta) = \int_{\mathcal{X}}
-\mathrm{d} x {p (x,
-      \theta)}  \frac{\partial S}{\partial \theta^{\alpha}} (x,
-\theta),\)
-    </center>
-    <p>
-      where in the last equality, we used the definition of \(p (x, \theta)\)
-      (the green factor). This final expression is just the \(\mathbb{E}_{P
-      (\theta)} [\partial S / \partial \theta^{\alpha}]\). Altogether, we
-      arrive at
-    </p>
-    <table width="100%">
-      <tr>
-        <td width="100%" align="center">\(\displaystyle - \frac{\partial L}{\partial
-        \theta^{\alpha}} (\theta) =\mathbb{E}_{P
-(\theta)} \left[
-        \frac{\partial S}{\partial \theta^{\alpha}} (\cdot, \theta)
-\right]
-        -\mathbb{E}_Q \left[ \frac{\partial S}{\partial
-        \theta^{\alpha}}
-(\cdot, \theta) \right] . \)</td>
-        <td align="right">(4.22)</td>
-      </tr>
-    </table>
-    <p>
-      At the minimum, we shall have \(\partial L / \partial \theta = 0\).
-      Then, we find that \(\theta_{\star}\) obeys
-    </p>
-    <table width="100%">
-      <tr>
-        <td width="100%" align="center">\(\displaystyle \mathbb{E}_{P (\theta_{\star})}
-        \left[ \frac{\partial S}{\partial
-\theta^{\alpha}} (\cdot,
-        \theta_{\star}) \right] =\mathbb{E}_Q \left[
-\frac{\partial
-        S}{\partial \theta^{\alpha}} (\cdot, \theta_{\star}) \right] . \)</td>
-        <td align="right">(4.23)</td>
-      </tr>
-    </table>
-    <p>
-      It can be read from equation <a href="#equation:data-fitting iteration">4.22</a> that minimizing \(L\) is
-      to increase \(S (\cdot, \theta)\) on the sampled points (the first term)
-      while decrease it on data points (the second term). As figure <a href="#figure: Least-Action">4.1</a>
-      illustrates, this way of optimization will site real world data onto
-      local minima of \(S (\cdot, \theta)\), <em>in statistical sense</em>.
-    </p>
-    <p>
-      The parameterized action \(S\) can be constructed out of universal
-      functions such as neural networks. Then, iterating by equation <a href="#equation:data-fitting iteration">4.22</a>
-      until \(\| \partial L / \partial \theta \|\) has been small enough gives
-      an \(S (\cdot, \theta_{\star})\) that mimics the stochastic dynamics of
-      starling flocks. To compute the expectation \(\mathbb{E}_{P (\theta)}
-      [\ldots]\) in equation <a href="#equation:data-fitting iteration">4.22</a>, we employ Monte-Carlo
-      simulation. The transition rate shall satisfy detailed balance condition
-      with \(P (\theta)\) as the stationary distribution. For discrete random
-      variables, Monte-Carlo simulation with Metropolis-Hastings algorithm
-      (section <a href="#section: Example: Metropolis-Hastings Algorithm">2.7</a>) is available; and for continuous random
-      variables, Langevin process (section <a href="#section: Langevin Process Is a Markovian Process with Ncut=2">3.6</a>, <a href="#section: Detailed Balance of Langevin Process Lacks Source-Free Degree of Freedom">3.8</a>,
-      and <a href="#section: Langevin Process with Constant Covariance Has a Path Integral on Alphabet">4.6</a>) will be more efficient. In addition, many
-      numerical computation modules have build-in samplers for many
-      distributions, such as categorical distribution and normal distribution;
-      when \(P (\theta)\) is happen to be one of them, computing
-      \(\mathbb{E}_{P (\theta)} [\ldots]\) will be straight-forward.
-    </p>
-    <div style="margin-top: 1em; margin-bottom: 1em">
-      <table style="width: 100%">
-        <tbody><tr>
-          <td style="text-align: center; padding-left: 0em; padding-right: 0em"><img src="index-1.png" style="margin-left: -0.0134736842105263em; margin-bottom: 0em; margin-right: -0.0134736842105241em; margin-top: 0em; vertical-align: -14.3223684210526em; height: 28.6447368421053em"></img></td>
-        </tr><tr>
-          <td style="text-align: center; padding-left: 0em; padding-right: 0em; height: 0.5em"></td>
-        </tr><tr>
-          <td style="text-align: center; padding-left: 0em; padding-right: 0em; padding-left: 1.5em; padding-right: 1.5em"><div class="caption">
-            <font style="font-size: 84.1%"><p>
-              <b>Figure 4.1. </b><a id="auto-34"></a><a id="figure: Least-Action"></a> This figure illustrate
-              how \(\min_{\theta} L (\theta)\) will site a real world datum
-              onto a local minimum of \(S (\cdot, \theta)\). The green curve
-              represents the current not-yet-optimized \(S (\cdot, \theta)\).
-              The \(x_1\) (red point) is a real world datum while \(x_2\)
-              (blue point), which is currently a local minimum of \(S (\cdot,
-              \theta)\), is not. Minimizing \(L\) by tuning \(\theta\) pushes
-              the \(\mathbb{E}_Q [S (\cdot, \theta)]\) down to lower value,
-              corresponding to the red downward double-arrow on \(x_1\). Also,
-              since \(x_2\) is a local minimum, the data points sampled from
-              \(p (x, \theta) \propto \exp (- S (x, \theta))\) will accumulate
-              around \(x_2\). So, minimizing \(L\) also pulls the
-              \(\mathbb{E}_{P (\theta)} [S (\cdot, \theta)]\) up to greater
-              value, corresponding to the blue upward double-arrow on \(x_2\).
-              Altogether, it makes \(x_1\) a local minimum of \(S (\cdot,
-              \theta)\), and \(S (\cdot, \theta)\) is optimized to be the
-              dashed green curve.
-            </p></font>
-          </div></td>
-        </tr></tbody>
-      </table>
-    </div>
-    <p>
-      As an example, if we want to get the action that characterizes the
-      stochastic dynamics of starling flocks, we take movies for many flocks.
-      Each movie is a series of frames that log the positions of each bird at
-      each time instant. These movies provide the real world data, namely the
-      distribution \(Q\).
-    </p>
-    <p>
-      We could construct the parameterized action \(S\) by a neural network
-      that outputs a scalar float value. But we can go deeper, assuming that
-      the stochastic dynamics of flocks obeys a Langevin process with constant
-      covariance. Namely, we employ the action <a href="#equation:langevin action constant covariance">4.14</a>, and
-      construct the \(f\) therein using neural network, which outputs a float
-      vector (array).
-    </p>
-    <p>
-      To evaluate the \(\mathbb{E}_{P (\theta)} [\ldots]\) in equation <a
-      href="#equation:data-fitting iteration">4.22</a>, we first randomly initialize a group of samples, each
-      representing a movie of a flock. Then, we use Langevin process to
-      efficiently simulate master equation. Explicitly, we iterate each sample
-      by
-    </p>
-    <table width="100%">
-      <tr>
-        <td width="100%" align="center">\(\displaystyle x^{\alpha} \leftarrow x^{\alpha} -
-        \nabla^{\alpha} S (x, \theta) \Delta t +
-\Delta W^{\alpha} . \)</td>
-        <td align="right">(4.24)</td>
-      </tr>
-    </table>
-    <p>
-      for \(0 < \Delta t \ll 1\). The gradient \(\nabla\) is taken on \(x\),
-      and the random variable \(\Delta W^{\alpha}\) obeys a normal
-      distribution with zero mean and variance \(\Delta t\). This is the
-      direct result of section <a href="#section: Langevin Process with Constant Covariance Has a Path Integral on Alphabet">4.6</a>, in which we have shown that,
-      when \(\Delta t\) is small enough, the transition density \(q_{\Delta t}
-      (x_i \rightarrow x_{i + 1})\) can be approximated by a normal
-      distribution with mean \(x_i^{\alpha} + f^{\alpha} (x_i) \Delta t\) and
-      covariance \(\Delta t \delta^{\alpha \beta}\). Herein, the \(f^{\alpha}
-      (x_i)\) is replaced by \(- \nabla^{\alpha} S (x, \theta)\). This
-      specific transition density satisfies detailed balance condition (see
-      section <a href="#section: Detailed Balance of Langevin Process Lacks Source-Free Degree of Freedom">3.8</a>, especially the equation <a href="#equation:detailed balance condition for Langevin">3.15</a>).
-      Then, theorem <a href="#theorem: relaxation">2.1</a> claims that the iteration <a href="#equation:langevin iteration">4.24</a>
-      will relax the samples towards the stationary distribution, which has
-      density function proportional to \(\exp (- S (x, \theta))\). There is
-      not need to wait until the samples have been fully relaxed. In practice,
-      we find that ten or several more iterations has been sufficient for a
-      good approximation. Finally, out of these iterated samples,
-      \(\mathbb{E}_{P (\theta)} [\cdots]\) is evaluated. Repeating this
-      process and iterating the \(\theta\) using gradient descent, we arrive
-      at the best-fit \(\theta_{\star}\) which encodes the stochastic dynamics
-      of flocks.
-    </p>
-    <h2 id="auto-35">4.9<span style="margin-left: 1em"></span>\(\clubsuit\) Example: Least-Action
-    Principle in Supervised Machine Learning<span style="margin-left: 1em"></span></h2>
-    <p>
-      In this section, we apply the result in section <a href="#section: Data Fitting Is Equivalent to Least-Action Principle of Distribution">4.8</a> to
-      supervised machine learning, including both regression and
-      classification tasks. We suppose that readers who read this section have
-      the basic familiarity to machine learning.
-    </p>
-    <p>
-      As usual, dataset is characterized by empirical distribution \(Q\). In
-      supervised machine learning, each datum is a pair consisting of an input
-      and an output. By marginalizing the output, we get the input
-      distribution \(Q_X\). Then, dividing \(Q\) by \(Q_X\) gives the
-      conditional distribution \(Q_{Y|X}\), which samples the output by giving
-      an input.
-    </p>
-    <p>
-      The task of supervised machine learning is searching for an analytical
-      distribution that approximates the \(Q_{Y|X}\). To do so, we use a
-      parameterized distribution \(P (x, \theta)\), where \(\theta\) denotes
-      the parameter, and find the best-fit parameter \(\theta_{\star}\) by
-      minimizing the relative entropy \(H (P (x, \theta), Q_{Y|X} (x))\),
-      where \(x\) is sampled from \(Q_X\). Then, we have the loss function
-    </p>
-    <center>
-      \(\displaystyle L (\theta) =\mathbb{E}_{x \sim Q_X} [H (P (x, \theta), Q
-      (x))] .\)
-    </center>
-    <p>
-      
-    </p>
-    <p>
-      For regression tasks, the alphabet is \(\mathbb{R}\), and \(P (x,
-      \theta)\) is a normal distribution with unit variance. Thus, the density
-      function \(p (y|x, \theta)\) is
-    </p>
-    <center>
-      \(\displaystyle p (y|x, \theta) = \frac{1}{\sqrt{2 \pi}} \exp \left( -
-      \frac{1}{2} (h (x,
-\theta) - y)^2 \right)\)
-    </center>
-    <p>
-      for some scale function \(h (x, \theta)\). We read out the action in
-      section <a href="#section: Data Fitting Is Equivalent to Least-Action Principle of Distribution">4.8</a> as
-    </p>
-    <center>
-      \(\displaystyle S (x, y, \theta) = \frac{1}{2} (h (x, \theta) - y)^2\)
-    </center>
-    <p>
-      and the normalization factor \(Z (x, \theta)\) is constant. So, omitting
-      the \(\theta\)-independent terms in \(L (\theta)\), we get
-    </p>
-    <center>
-      \(\displaystyle L (\theta) =\mathbb{E}_{x \sim Q_X} [\mathbb{E}_{y \sim
-      Q_{Y|X} (x)} [S (x, y,
-\theta)]] =\mathbb{E}_{(x, y) \sim Q} [S (x, y,
-      \theta)] .\)
-    </center>
-    <p>
-      
-    </p>
-    <p>
-      For classification tasks, the alphabet is \(\{ 1, \ldots, C \}\) for
-      some positive integer \(C\), and \(P (x, \theta)\) is a categorical
-      distribution. Thus, the density function \(p (y|x, \theta)\) is a
-      softmax function of \(h (x, \theta)\). That is,
-    </p>
-    <center>
-      \(\displaystyle p (\alpha |x, \theta) = \frac{\exp (h^{\alpha} (x,
-      \theta))}{\sum_{\beta =
-1}^C \exp (h^{\beta} (x, \theta))} .\)
-    </center>
-    <p>
-      We read out the action in section <a href="#section: Data Fitting Is Equivalent to Least-Action Principle of Distribution">4.8</a> as
-    </p>
-    <center>
-      \(\displaystyle S (x, \alpha, \theta) = - h^{\alpha} (x, \theta)\)
-    </center>
-    <p>
-      and the normalization factor \(Z (x, \theta) = \sum_{\beta} \exp
-      (h^{\beta} (x, \theta))\). The loss function is evaluated to be
-    </p>
-    <center>
-      \(\displaystyle L (\theta) = -\mathbb{E}_{(x, \alpha) \sim Q} \left[ \ln
-      \frac{\exp
-(h^{\alpha} (x, \theta))}{\sum_{\beta = 1}^C \exp (h^{\beta}
-      (x, \theta))}
-\right],\)
-    </center>
-    <p>
-      which is the usual cross-entropy loss in classification tasks. As
-      discussed in section <a href="#section: Data Fitting Is Equivalent to Least-Action Principle of Distribution">4.8</a>, for minimizing the loss function,
-      we have to evaluate the expectation \(\mathbb{E}_{P (x, \theta)}
-      [\partial S / \partial \theta]\) by sampling from \(P (x, \theta)\).
-      This corresponds to the contrastive learning technique used in training
-      models such as <tt class="verbatim">word2vec</tt> in which the number of classes
-      is extremely large.
-    </p>
-    <h1 id="auto-36">Epilogue<span style="margin-left: 1em"></span></h1>
+    <h1 id="auto-38">Epilogue<span style="margin-left: 1em"></span></h1>
     <p>
       In the summer of 2024, I was wondering how a stochastic system relaxes
       to its equilibrium. I did not find a textbook that matched my
