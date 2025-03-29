@@ -144,7 +144,7 @@
       </p>
       <p>
         3.5<span style="margin-left: 1em"></span>Randomness Appears in the Second Moment of
-        Transition Rate <span style="margin-left: 5mm"></span> <a href="#auto-21">30</a>
+        Transition Rate <span style="margin-left: 5mm"></span> <a href="#auto-21">31</a>
       </p>
       <p>
         3.6<span style="margin-left: 1em"></span>Langevin Process Is a Markovian Process with
@@ -152,7 +152,7 @@
       </p>
       <p>
         3.7<span style="margin-left: 1em"></span>Stationary Solution of Langevin Process Has
-        Source-Free Degree of Freedom <span style="margin-left: 5mm"></span> <a href="#auto-23">32</a>
+        Source-Free Degree of Freedom <span style="margin-left: 5mm"></span> <a href="#auto-23">33</a>
       </p>
       <p>
         3.8<span style="margin-left: 1em"></span>Detailed Balance of Langevin Process Lacks
@@ -192,10 +192,14 @@
       </p>
       <p>
         4.8<span style="margin-left: 1em"></span>Data Fitting Is Equivalent to Least-Action
-        Principle of Distribution <span style="margin-left: 5mm"></span> <a href="#auto-33">45</a>
+        Principle of Distribution <span style="margin-left: 5mm"></span> <a href="#auto-33">44</a>
+      </p>
+      <p>
+        4.9<span style="margin-left: 1em"></span>\(\clubsuit\) Example: Least-Action Principle
+        in Supervised Machine Learning <span style="margin-left: 5mm"></span> <a href="#auto-35">47</a>
       </p>
       <p style="margin-top: 1em; margin-bottom: 0.5em">
-        <b>Epilogue</b> <span style="margin-left: 5mm"></span> <a href="#auto-35">47</a>
+        <b>Epilogue</b> <span style="margin-left: 5mm"></span> <a href="#auto-36">49</a>
       </p>
     </div>
     <h1 id="auto-1">Prologue<span style="margin-left: 1em"></span></h1>
@@ -2261,14 +2265,17 @@ K_1^{\alpha_1} (x + y) .\)
 K_1^{\alpha_1} (x)\). The rest terms are all
       vanishing because \(K_n = 0\) for any \(n > 2\). So, we find
     </p>
-    <center>
-      \(\displaystyle F_1^{\alpha_1} (x) = K_1^{\beta_1} (x)
-      \partial_{\beta_1} K_1^{\alpha_1} (x) +
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle F_1^{\alpha_1} (x) = K_1^{\beta_1}
+        (x) \partial_{\beta_1} K_1^{\alpha_1} (x) +
 \frac{1}{2} K_2^{\beta_1
-      \beta_2} (x) \partial_{\beta_1} \partial_{\beta_2}
+        \beta_2} (x) \partial_{\beta_1} \partial_{\beta_2}
 K_1^{\alpha_1} (x)
-      .\)
-    </center>
+        . \)</td>
+        <td align="right">(3.5)</td>
+      </tr>
+    </table>
     <p>
       Following the same process, we can obtain for \(F_2 (x)\),
       <div class="footnote">
@@ -2500,12 +2507,13 @@ K_2^{\alpha_3 \alpha_4} +\operatorname{perm}
 \alpha_4) .\)
     </center>
     <p>
-      
+      When \(n > 4\), \(F_n = 0\) because \(K_n = 0\) for \(n > 2\). So, the
+      \(F_n\) terminates at \(n = 4\).
     </p>
     <p>
-      At higher order expansion of \(q_{\Delta t}\) by \(r\) (equation <a
-      href="#equation:transition rate determines transition density">2.6</a>), the same goes. As an example, we examine the expansion
-      at \(\mathcal{O} (\Delta t^3)\), as
+      For higher order expansion of \(q_{\Delta t}\) by \(\Delta t\) (equation
+      <a href="#equation:transition rate determines transition density">2.6</a>), the same goes. As an example, we examine the
+      expansion at \(\mathcal{O} (\Delta t^3)\), as
     </p>
     <center>
       \(\displaystyle q_{\Delta t} (x \rightarrow x + \epsilon) = \cdots +
@@ -2577,10 +2585,10 @@ K_2^{\alpha_3 \alpha_4} +\operatorname{perm}
       (x) \int_{\mathbb{R}^d} \mathrm{d} y
   \int_{\mathbb{R}^d} \mathrm{d} y'
       r (x, y) r (y, x + y')\\
-  + & \partial_{\beta} K_1^{\alpha} (x)
+  + & \partial_{\beta_1} K_1^{\alpha} (x)
       \int_{\mathbb{R}^d} \mathrm{d} y
   \int_{\mathbb{R}^d} \mathrm{d} y' r
-      (x, y) r (y, x + y') {y'}^{\beta}\\
+      (x, y) r (y, x + y') {y'}^{\beta_1}\\
   + & \frac{1}{2!}
       \partial_{\beta_1} \partial_{\beta_2} K_1^{\alpha} (x)
  
@@ -2595,20 +2603,43 @@ K_2^{\alpha_3 \alpha_4} +\operatorname{perm}
       By  integrating over \(y\), we find the first line vanishes because
       \(\int \mathrm{d} x r (x, y) = 0\). We recognize that the second line is
       just the \(F^{\beta}_1 (x)\), and the third line is just the
-      \(F_2^{\beta_1 \beta_2} (x)\). Namely,
+      \(F_2^{\beta_1 \beta_2} (x)\). Since \(F_n = 0\) for any \(n > 4\), the
+      series terminates at \(F_4\). Thus, we arrive at
     </p>
-    <center>
-      \(\displaystyle G^{\alpha}_1 (x) = F_1^{\beta} (x) \partial_{\beta}
-      K_1^{\alpha} (x) +
-\frac{1}{2!} F_2^{\beta_1 \beta_2} (x)
-      \partial_{\beta_1} \partial_{\beta_2}
-K_1^{\alpha} (x) + \cdots\)
-    </center>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle \begin{array}{ll}
+  G^{\alpha}_1 (x)
+        = & F_1^{\beta_1} (x) \partial_{\beta_1} K_1^{\alpha} (x) +
+ 
+        \frac{1}{2!} F_2^{\beta_1 \beta_2} (x) \partial_{\beta_1}
+        \partial_{\beta_2}
+  K_1^{\alpha} (x) +\\
+  & \frac{1}{3!}
+        F_3^{\beta_1 \beta_2 \beta_3} (x) \partial_{\beta_1}
+ 
+        \partial_{\beta_2} \partial_{\beta_3} K_1^{\alpha} (x) + \frac{1}{4!}
+
+        F_4^{\beta_1 \beta_2 \beta_3 \beta_4} (x) \partial_{\beta_1}
+ 
+        \partial_{\beta_2} \partial_{\beta_3} \partial_{\beta_4} K_1^{\alpha}
+        (x) .
+\end{array} \)</td>
+        <td align="right">(3.6)</td>
+      </tr>
+    </table>
     <p>
-      So, the problem is deduced to that we have solved at lower order
-      expansion of \(q_{\Delta t}\). It means that we can calculate to
-      arbitrary order of expansion iteratively, and the process is the same at
-      each order.
+      Comparing with \(F_1\) (equation <a href="#equation:smoothness F1">3.5</a>), we find the first
+      line is the same as \(F_1\) except that the \(K_n\)s (rather than the
+      \(\partial K_n\)s) are replaced by \(F_n\). Since \(F_n\) terminates at
+      \(n = 4\) (while \(K_n\) terminates at \(n = 2\)), there are more terms
+      in \(G_1\) than in \(F_1\), namely the second line.
+    </p>
+    <p>
+      So, the problem for higher order expansion of \(q_{\Delta t}\) is
+      deduced to that we have solved at lower order. It means that we can
+      calculate to arbitrary order of expansion iteratively, and the process
+      is the same at each order.
     </p>
     <p>
       Observing these results, we find the following rules (with
@@ -2720,7 +2751,7 @@ N_{\operatorname{cut}})})\).
         \partial_{\alpha_1} \cdots \partial_{\alpha_m} K_n
 (x) | < + \infty .
         \)</td>
-        <td align="right">(3.5)</td>
+        <td align="right">(3.7)</td>
       </tr>
     </table>
     <p>
@@ -2854,7 +2885,7 @@ K_n^{\alpha_1 \cdots
         \alpha_n} (x) (\partial_{\alpha_1} \cdots
 \partial_{\alpha_n} \delta)
         (\epsilon) . \)</td>
-        <td align="right">(3.6)</td>
+        <td align="right">(3.8)</td>
       </tr>
     </table>
     <p>
@@ -2988,7 +3019,7 @@ x) f (x) =
       
     </p>
     <p>
-      If we plug expansion <a href="#equation:km expansion">3.6</a> into master equation, then we get
+      If we plug expansion <a href="#equation:km expansion">3.8</a> into master equation, then we get
     </p>
     <center>
       \(\displaystyle \begin{array}{rl}
@@ -3048,7 +3079,7 @@ x) f (x) =
         x^{\alpha_n}} \right)  [K_n^{\alpha_1 \cdots
 \alpha_n} (x) p (x, t)] .
         \)</td>
-        <td align="right">(3.7)</td>
+        <td align="right">(3.9)</td>
       </tr>
     </table>
     <p>
@@ -3058,7 +3089,7 @@ x) f (x) =
     <p>
       If \(p (\cdot, t) \in S (\mathbb{R}^d)\), then \(p (\cdot, t)\) as well
       as its partial derivatives rapidly tend to zero in the region far from
-      origin. Together with condition <a href="#equation:K condition">3.5</a> (\(K_n\) and its
+      origin. Together with condition <a href="#equation:K condition">3.7</a> (\(K_n\) and its
       partial derivatives are bounded), we can show that \((\partial p /
       \partial t) (\cdot, t) \in S (\mathbb{R}^d)\) too. It then implies that
       \(p (\cdot, t') \in S (\mathbb{R}^d)\) for any \(t' > t\). That is,
@@ -3073,7 +3104,7 @@ x) f (x) =
       moments of transition rate is essential for spatial smoothness. We are
       to show that cut-off at \(N_{\operatorname{cut}} = 1\) (namely \(K_n =
       0\) for any \(n > 1\)) only results in a deterministic evolution. With
-      \(N_{\operatorname{cut}} = 1\), equation <a href="#equation:km expansion v2">3.7</a> reduces to
+      \(N_{\operatorname{cut}} = 1\), equation <a href="#equation:km expansion v2">3.9</a> reduces to
       (re-denote \(K_1\) to \(f\) for simplicity)
     </p>
     <center>
@@ -3172,7 +3203,7 @@ f^{\alpha} (x (t)) + \frac{\partial
     </p>
     <p>
       We examine this by using an example. Let \(K_1\) is everywhere vanishing
-      and \(K_2\) is a constant identity matrix. Then, equation <a href="#equation:km expansion v2">3.7</a>
+      and \(K_2\) is a constant identity matrix. Then, equation <a href="#equation:km expansion v2">3.9</a>
       reduces to
     </p>
     <table width="100%">
@@ -3181,7 +3212,7 @@ f^{\alpha} (x (t)) + \frac{\partial
         = \frac{1}{2} \delta^{\alpha \beta}
 \partial_{\alpha} \partial_{\beta}
         p (x, t) . \)</td>
-        <td align="right">(3.8)</td>
+        <td align="right">(3.10)</td>
       </tr>
     </table>
     <p>
@@ -3246,7 +3277,7 @@ y^{\alpha})) p (y, t) .\)
     <p>
       we find the right hand side \(\int \mathrm{d} y \delta (x - y) p (y, t)
       = p (x, t)\) which is the left hand side. By plugging this inverse
-      transformation into heat equation <a href="#equation:heat equation">3.8</a>, we get
+      transformation into heat equation <a href="#equation:heat equation">3.10</a>, we get
     </p>
     <center>
       \(\displaystyle \int_{\mathbb{R}^d} \frac{\mathrm{d} k'}{(2 \pi)^d} \exp
@@ -3333,7 +3364,7 @@ w^{\alpha}) (x^{\beta} - w^{\beta})
         \prod_{\alpha = 1}^d \frac{1}{\sqrt{2 \pi t}} \exp
 \left( - \frac{1}{2
         t} (x^{\alpha} - w^{\alpha})^2 \right), \)</td>
-        <td align="right">(3.9)</td>
+        <td align="right">(3.11)</td>
       </tr>
     </table>
     <p>
@@ -3346,19 +3377,20 @@ w^{\alpha}) (x^{\beta} - w^{\beta})
       particles automatically shakes in water. It was first explained by
       Albert Einstein in 1905. He argued that the pollen particles are
       constantly stricken by water molecules, and found the transition density
-      to be equation <a href="#equation:wiener process">3.9</a>. Hence, the stochastic process described
-      by this transition density is named by <strong>Brownian motion</strong>.
-      Even though the techniques used for deriving this transition density had
-      been mature when Brown first observed this phenomenon, but almost one
-      hundred years after Brown's discover, in 1918, Norbert Wiener first
-      constructed a complete mathematical theory for this stochastic process.
-      So, it is also called <strong>Wiener process</strong>.
+      to be equation <a href="#equation:wiener process">3.11</a>. Hence, the stochastic process
+      described by this transition density is named by <strong>Brownian
+      motion</strong>. Even though the techniques used for deriving this
+      transition density had been mature when Brown first observed this
+      phenomenon, but almost one hundred years after Brown's discover, in
+      1918, Norbert Wiener first constructed a complete mathematical theory
+      for this stochastic process. So, it is also called <strong>Wiener
+      process</strong>.
     </p>
     <h2 id="auto-22"><a id="section: Langevin Process Is a Markovian Process with Ncut=2"></a>3.6<span style="margin-left: 1em"></span>Langevin Process Is a Markovian
     Process with \(N_{\operatorname{cut}} = 2\)<span style="margin-left: 1em"></span></h2>
     <p>
       The most generic form of transition rate with \(N_{\operatorname{cut}} =
-      2\) is (by Kramers&ndash;Moyal expansion <a href="#equation:km expansion">3.6</a> with
+      2\) is (by Kramers&ndash;Moyal expansion <a href="#equation:km expansion">3.8</a> with
       \(N_{\operatorname{cut}} = 2\), and re-denote \(K_1\) by \(f\) and
       \(K_2\) by \(\Sigma\))
     </p>
@@ -3370,7 +3402,7 @@ w^{\alpha}) (x^{\beta} - w^{\beta})
         \beta} (x) \partial_{\alpha} \partial_{\beta}
 \delta (\epsilon),
         \)</td>
-        <td align="right">(3.10)</td>
+        <td align="right">(3.12)</td>
       </tr>
     </table>
     <p>
@@ -3380,7 +3412,7 @@ w^{\alpha}) (x^{\beta} - w^{\beta})
       Langevin in 1908.
     </p>
     <p>
-      Plugging equation <a href="#equation:langevin transition rate">3.10</a> into master equation <a href="#equation:km expansion v2">3.7</a>,
+      Plugging equation <a href="#equation:langevin transition rate">3.12</a> into master equation <a href="#equation:km expansion v2">3.9</a>,
       we find
     </p>
     <table width="100%">
@@ -3391,7 +3423,7 @@ w^{\alpha}) (x^{\beta} - w^{\beta})
         \partial_{\alpha} \partial_{\beta} (\Sigma^{\alpha
 \beta} (x) p (x,
         t)) . \)</td>
-        <td align="right">(3.11)</td>
+        <td align="right">(3.13)</td>
       </tr>
     </table>
     <p>
@@ -3436,7 +3468,7 @@ w^{\alpha}) (x^{\beta} - w^{\beta})
       appends to the stationary condition.
     </p>
     <p>
-      The master equation of Langevin process (equation <a href="#equation:Fokker-Planck equation">3.11</a>) has
+      The master equation of Langevin process (equation <a href="#equation:Fokker-Planck equation">3.13</a>) has
       stationary solution \(\Pi\) which satisfies (since there is only one
       variable \(x\), we use \(\partial\) instead of \(\nabla\))
     </p>
@@ -3455,7 +3487,7 @@ w^{\alpha}) (x^{\beta} - w^{\beta})
         \partial_{\beta} (\Sigma^{\alpha \beta}
 (x) \pi (x)) + \nu^{\alpha}
         (x), \)</td>
-        <td align="right">(3.12)</td>
+        <td align="right">(3.14)</td>
       </tr>
     </table>
     <p>
@@ -3482,7 +3514,7 @@ w^{\alpha}) (x^{\beta} - w^{\beta})
       this is equivalent to ask: when will the transition rate of Langevin
       process satisfy detailed balance condition? Detailed balance condition
       reads \(r (x + \epsilon, x) \pi (x) = r (x, x + \epsilon) \pi (x +
-      \epsilon)\). Directly inserting equation <a href="#equation:langevin transition rate">3.10</a>, we get for
+      \epsilon)\). Directly inserting equation <a href="#equation:langevin transition rate">3.12</a>, we get for
       the left hand side,
     </p>
     <center>
@@ -3639,12 +3671,12 @@ w^{\alpha}) (x^{\beta} - w^{\beta})
         <td width="100%" align="center">\(\displaystyle f^{\alpha} (x) \pi (x) = \frac{1}{2}
         \partial_{\beta} (\Sigma^{\alpha \beta}
 (x) \pi (x)) . \)</td>
-        <td align="right">(3.13)</td>
+        <td align="right">(3.15)</td>
       </tr>
     </table>
     <p>
       Comparing with the stationary solution of Langevin process (equation <a
-      href="#equation:stationary Fokker-Planck equation">3.12</a>), the source-free vector field \(\nu\) is absent here.
+      href="#equation:stationary Fokker-Planck equation">3.14</a>), the source-free vector field \(\nu\) is absent here.
       Recall in section <a href="#section: Detailed Balance Provides Stationary Distribution">2.4</a> where detailed balance condition was
       first encountered, we said that detailed balance condition is stronger
       than just being stationary. Now, in Langevin process, this becomes
@@ -5140,7 +5172,11 @@ R_{\alpha
       variables, Monte-Carlo simulation with Metropolis-Hastings algorithm
       (section <a href="#section: Example: Metropolis-Hastings Algorithm">2.7</a>) is available; and for continuous random
       variables, Langevin process (section <a href="#section: Langevin Process Is a Markovian Process with Ncut=2">3.6</a>, <a href="#section: Detailed Balance of Langevin Process Lacks Source-Free Degree of Freedom">3.8</a>,
-      and <a href="#section: Langevin Process with Constant Covariance Has a Path Integral on Alphabet">4.6</a>) will be more efficient.
+      and <a href="#section: Langevin Process with Constant Covariance Has a Path Integral on Alphabet">4.6</a>) will be more efficient. In addition, many
+      numerical computation modules have build-in samplers for many
+      distributions, such as categorical distribution and normal distribution;
+      when \(P (\theta)\) is happen to be one of them, computing
+      \(\mathbb{E}_{P (\theta)} [\ldots]\) will be straight-forward.
     </p>
     <div style="margin-top: 1em; margin-bottom: 1em">
       <table style="width: 100%">
@@ -5214,7 +5250,7 @@ R_{\alpha
       covariance \(\Delta t \delta^{\alpha \beta}\). Herein, the \(f^{\alpha}
       (x_i)\) is replaced by \(- \nabla^{\alpha} S (x, \theta)\). This
       specific transition density satisfies detailed balance condition (see
-      section <a href="#section: Detailed Balance of Langevin Process Lacks Source-Free Degree of Freedom">3.8</a>, especially the equation <a href="#equation:detailed balance condition for Langevin">3.13</a>).
+      section <a href="#section: Detailed Balance of Langevin Process Lacks Source-Free Degree of Freedom">3.8</a>, especially the equation <a href="#equation:detailed balance condition for Langevin">3.15</a>).
       Then, theorem <a href="#theorem: relaxation">2.1</a> claims that the iteration <a href="#equation:langevin iteration">4.24</a>
       will relax the samples towards the stationary distribution, which has
       density function proportional to \(\exp (- S (x, \theta))\). There is
@@ -5226,27 +5262,123 @@ R_{\alpha
       at the best-fit \(\theta_{\star}\) which encodes the stochastic dynamics
       of flocks.
     </p>
-    <h1 id="auto-35">Epilogue<span style="margin-left: 1em"></span></h1>
+    <h2 id="auto-35">4.9<span style="margin-left: 1em"></span>\(\clubsuit\) Example: Least-Action
+    Principle in Supervised Machine Learning<span style="margin-left: 1em"></span></h2>
     <p>
-      Now, I (and you) have finished this journey in the wonderland of
-      stochastic process. Is it really finished? I do not think so. The
-      termination of a trip will be the origin of another, a more marvelous
-      one.
+      In this section, we apply the result in section <a href="#section: Data Fitting Is Equivalent to Least-Action Principle of Distribution">4.8</a> to
+      supervised machine learning, including both regression and
+      classification tasks. We suppose that readers who read this section have
+      the basic familiarity to machine learning.
     </p>
     <p>
-      Looking back to the road we have explored. We started at axiomatizing
-      information, trying to find a proper (for both discrete and continuous
-      random variables) yet simple definition of information. Then we found
-      relative entropy, proved its uniqueness under several plausible
-      assumptions (axioms). Later on, we proved the relaxation of master
-      equation under detailed balance condition. Owing to relative entropy,
-      the proof is much more simple and understandable than those in the
-      traditional textbooks. For this, we explored the continuous time
-      Markovian process. Surprisingly, we found many beautiful treasures in
-      it. We found refined degree of freedom in it, and even finer when smooth
-      structure is appended. In the end, we compared it with the least-action
-      principle in physics. As a realistic result, we found an interesting
-      perspective on data-fitting.
+      As usual, dataset is characterized by empirical distribution \(Q\). In
+      supervised machine learning, each datum is a pair consisting of an input
+      and an output. By marginalizing the output, we get the input
+      distribution \(Q_X\). Then, dividing \(Q\) by \(Q_X\) gives the
+      conditional distribution \(Q_{Y|X}\), which samples the output by giving
+      an input.
+    </p>
+    <p>
+      The task of supervised machine learning is searching for an analytical
+      distribution that approximates the \(Q_{Y|X}\). To do so, we use a
+      parameterized distribution \(P (x, \theta)\), where \(\theta\) denotes
+      the parameter, and find the best-fit parameter \(\theta_{\star}\) by
+      minimizing the relative entropy \(H (P (x, \theta), Q_{Y|X} (x))\),
+      where \(x\) is sampled from \(Q_X\). Then, we have the loss function
+    </p>
+    <center>
+      \(\displaystyle L (\theta) =\mathbb{E}_{x \sim Q_X} [H (P (x, \theta), Q
+      (x))] .\)
+    </center>
+    <p>
+      
+    </p>
+    <p>
+      For regression tasks, the alphabet is \(\mathbb{R}\), and \(P (x,
+      \theta)\) is a normal distribution with unit variance. Thus, the density
+      function \(p (y|x, \theta)\) is
+    </p>
+    <center>
+      \(\displaystyle p (y|x, \theta) = \frac{1}{\sqrt{2 \pi}} \exp \left( -
+      \frac{1}{2} (h (x,
+\theta) - y)^2 \right)\)
+    </center>
+    <p>
+      for some scale function \(h (x, \theta)\). We read out the action in
+      section <a href="#section: Data Fitting Is Equivalent to Least-Action Principle of Distribution">4.8</a> as
+    </p>
+    <center>
+      \(\displaystyle S (x, y, \theta) = \frac{1}{2} (h (x, \theta) - y)^2\)
+    </center>
+    <p>
+      and the normalization factor \(Z (x, \theta)\) is constant. So, omitting
+      the \(\theta\)-independent terms in \(L (\theta)\), we get
+    </p>
+    <center>
+      \(\displaystyle L (\theta) =\mathbb{E}_{x \sim Q_X} [\mathbb{E}_{y \sim
+      Q_{Y|X} (x)} [S (x, y,
+\theta)]] =\mathbb{E}_{(x, y) \sim Q} [S (x, y,
+      \theta)] .\)
+    </center>
+    <p>
+      
+    </p>
+    <p>
+      For classification tasks, the alphabet is \(\{ 1, \ldots, C \}\) for
+      some positive integer \(C\), and \(P (x, \theta)\) is a categorical
+      distribution. Thus, the density function \(p (y|x, \theta)\) is a
+      softmax function of \(h (x, \theta)\). That is,
+    </p>
+    <center>
+      \(\displaystyle p (\alpha |x, \theta) = \frac{\exp (h^{\alpha} (x,
+      \theta))}{\sum_{\beta =
+1}^C \exp (h^{\beta} (x, \theta))} .\)
+    </center>
+    <p>
+      We read out the action in section <a href="#section: Data Fitting Is Equivalent to Least-Action Principle of Distribution">4.8</a> as
+    </p>
+    <center>
+      \(\displaystyle S (x, \alpha, \theta) = - h^{\alpha} (x, \theta)\)
+    </center>
+    <p>
+      and the normalization factor \(Z (x, \theta) = \sum_{\beta} \exp
+      (h^{\beta} (x, \theta))\). The loss function is evaluated to be
+    </p>
+    <center>
+      \(\displaystyle L (\theta) = -\mathbb{E}_{(x, \alpha) \sim Q} \left[ \ln
+      \frac{\exp
+(h^{\alpha} (x, \theta))}{\sum_{\beta = 1}^C \exp (h^{\beta}
+      (x, \theta))}
+\right],\)
+    </center>
+    <p>
+      which is the usual cross-entropy loss in classification tasks. As
+      discussed in section <a href="#section: Data Fitting Is Equivalent to Least-Action Principle of Distribution">4.8</a>, for minimizing the loss function,
+      we have to evaluate the expectation \(\mathbb{E}_{P (x, \theta)}
+      [\partial S / \partial \theta]\) by sampling from \(P (x, \theta)\).
+      This corresponds to the contrastive learning technique used in training
+      models such as <tt class="verbatim">word2vec</tt> in which the number of classes
+      is extremely large.
+    </p>
+    <h1 id="auto-36">Epilogue<span style="margin-left: 1em"></span></h1>
+    <p>
+      In the summer of 2024, I was wondering how a stochastic system relaxes
+      to its equilibrium. I did not find a textbook that matched my
+      expectation. Traditional textbooks are either too complicated for me or
+      not rigorous. So, I decided to build up the theory by hands. I found it
+      much more fascinating to <em>do</em> mathematics than reading textbooks.
+      The proof of relaxation generalized that found by Ludwig Boltzmann in
+      1872. I read Boltzmann's proof in a textbook of statistical mechanism
+      fifteen years ago. Then, to make it self-consistent, I wrote an
+      introduction to relative entropy, which was the starting point of the
+      proof. Surprisingly, by appending locality into the axioms of
+      information, relative entropy would be the unique possibility. The next
+      surprise came from introducing smooth structure to stochastic system. I
+      found the cut-off by a series of complex calculation. Later on in the
+      winter, I found a way of expanding a function by a series of generalized
+      functions. It led to a direct proof of Kramers-Moyal expansion. It also
+      gave raise to a rigorous proof of path integral formulation for
+      stochastic system, resulting in a new perspective to data-fitting.
     </p>
     <p>
       After climbing to the top of a mountain, the horizon is broaden. Out of

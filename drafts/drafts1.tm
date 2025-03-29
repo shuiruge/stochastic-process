@@ -363,10 +363,6 @@
   where the <math|x>s are elements of <math|\<cal-X\>\\<around*|{|<text|<math|><verbatim|null>>|}>>.
   The challanges can be characterized by maximizing (or equivalently
   minimizing) an objective function <math|L> on <math|\<cal-X\><rsup|n>>.
-
-  \;
-
-  \;
 </body>
 
 <\initial>
@@ -379,6 +375,7 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
+    <associate|auto-10|<tuple|1.9|?>>
     <associate|auto-2|<tuple|1.1|1>>
     <associate|auto-3|<tuple|1.2|1>>
     <associate|auto-4|<tuple|1.3|2>>
@@ -386,10 +383,13 @@
     <associate|auto-6|<tuple|1.5|4>>
     <associate|auto-7|<tuple|1.6|4>>
     <associate|auto-8|<tuple|1.7|5>>
-    <associate|auto-9|<tuple|1.8|?>>
+    <associate|auto-9|<tuple|1.8|5>>
     <associate|equation:influence|<tuple|1.1|3>>
+    <associate|footnote-1|<tuple|1|?>>
     <associate|footnote-1.1|<tuple|1.1|5>>
+    <associate|footnote-1.2|<tuple|1.2|?>>
     <associate|footnr-1.1|<tuple|1.1|5>>
+    <associate|footnr-1.2|<tuple|1.2|?>>
   </collection>
 </references>
 
@@ -422,9 +422,12 @@
       1.6<space|2spc>Try to Solve RGE <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-7>
 
-      1.7<space|2spc>Gene, Language, and Others
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      1.7<space|2spc> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-8>
+
+      1.8<space|2spc>Evolution Satisfies Detailed Balance Condition?
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-9>
     </associate>
   </collection>
 </auxiliary>

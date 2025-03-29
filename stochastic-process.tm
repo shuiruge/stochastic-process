@@ -139,9 +139,14 @@
     Distribution <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-33>
 
+    4.9<space|2spc><with|mode|math|\<clubsuit\>> Example: Least-Action
+    Principle in Supervised Machine Learning
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-35>
+
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|Epilogue>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-35><vspace|0.5fn>
+    <no-break><pageref|auto-36><vspace|0.5fn>
   </table-of-contents>
 
   <prologue>
@@ -1856,12 +1861,13 @@
   The rest terms are all vanishing because <math|K<rsub|n>=0> for any
   <math|n\<gtr\>2>. So, we find
 
-  <\equation*>
+  <\equation>
     F<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x|)>=K<rsub|1><rsup|\<beta\><rsub|1>><around*|(|x|)>
     \<partial\><rsub|\<beta\><rsub|1>>K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x|)>+<frac|1|2>
     K<rsub|2><rsup|\<beta\><rsub|1>\<beta\><rsub|2>><around*|(|x|)>
-    \<partial\><rsub|\<beta\><rsub|1>>\<partial\><rsub|\<beta\><rsub|2>>K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x|)>.
-  </equation*>
+    \<partial\><rsub|\<beta\><rsub|1>>\<partial\><rsub|\<beta\><rsub|2>>K<rsub|1><rsup|\<alpha\><rsub|1>><around*|(|x|)>.<label|equation:smoothness
+    F1>
+  </equation>
 
   Following the same process, we can obtain for
   <math|F<rsub|2><around*|(|x|)>>,<\footnote>
@@ -1978,12 +1984,13 @@
     K<rsub|2><rsup|\<alpha\><rsub|3>\<alpha\><rsub|4>>+perm<around*|(|\<alpha\><rsub|1>,\<alpha\><rsub|2>,\<alpha\><rsub|3>,\<alpha\><rsub|4>|)>.
   </equation*>
 
-  \;
+  When <math|n\<gtr\>4>, <math|F<rsub|n>=0> because <math|K<rsub|n>=0> for
+  <math|n\<gtr\>2>. So, the <math|F<rsub|n>> terminates at <math|n=4>.
 
-  At higher order expansion of <math|q<rsub|\<Delta\>t>> by <math|r>
-  (equation <reference|equation:transition rate determines transition
-  density>), the same goes. As an example, we examine the expansion at
-  <math|<with|font|cal|O><around*|(|\<Delta\>t<rsup|3>|)>>, as
+  For higher order expansion of <math|q<rsub|\<Delta\>t>> by
+  <math|\<Delta\>t> (equation <reference|equation:transition rate determines
+  transition density>), the same goes. As an example, we examine the
+  expansion at <math|<with|font|cal|O><around*|(|\<Delta\>t<rsup|3>|)>>, as
 
   <\equation*>
     q<rsub|\<Delta\>t><around*|(|x\<rightarrow\>x+\<epsilon\>|)>=\<cdots\>+<frac|\<Delta\>t<rsup|3>|3!><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rprime|'>
@@ -2030,9 +2037,9 @@
 
   <\align>
     <tformat|<table|<row|<cell|G<rsub|1><rsup|\<alpha\>><around*|(|x|)>=>|<cell|K<rsub|1><rsup|\<alpha\>><around*|(|x|)><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rprime|'>
-    r<around*|(|x,y|)>r<around*|(|y,x+y<rprime|'>|)>>>|<row|<cell|+>|<cell|\<partial\><rsub|\<beta\>>K<rsub|1><rsup|\<alpha\>><around*|(|x|)><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rprime|'>
+    r<around*|(|x,y|)>r<around*|(|y,x+y<rprime|'>|)>>>|<row|<cell|+>|<cell|\<partial\><rsub|\<beta\><rsub|1>>K<rsub|1><rsup|\<alpha\>><around*|(|x|)><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rprime|'>
     r<around*|(|x,y|)>r<around*|(|y,x+y<rprime|'>|)>
-    y<rprime|'><rsup|\<beta\>>>>|<row|<cell|+>|<cell|<frac|1|2!>\<partial\><rsub|\<beta\><rsub|1>>\<partial\><rsub|\<beta\><rsub|2>>K<rsub|1><rsup|\<alpha\>><around*|(|x|)><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rprime|'>
+    y<rprime|'><rsup|\<beta\><rsub|1>>>>|<row|<cell|+>|<cell|<frac|1|2!>\<partial\><rsub|\<beta\><rsub|1>>\<partial\><rsub|\<beta\><rsub|2>>K<rsub|1><rsup|\<alpha\>><around*|(|x|)><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y<rprime|'>
     r<around*|(|x,y|)>r<around*|(|y,x+y<rprime|'>|)>
     y<rprime|'><rsup|\<beta\><rsub|1>>y<rprime|'><rsup|\<beta\><rsub|2>>>>|<row|<cell|+>|<cell|\<cdots\>.>>>>
   </align>
@@ -2041,15 +2048,26 @@
   <math|<big|int>\<mathd\>x r<around*|(|x,y|)>=0>. We recognize that the
   second line is just the <math|F<rsup|\<beta\>><rsub|1><around*|(|x|)>>, and
   the third line is just the <math|F<rsub|2><rsup|\<beta\><rsub|1>\<beta\><rsub|2>><around*|(|x|)>>.
-  Namely,
+  Since <math|F<rsub|n>=0> for any <math|n\<gtr\>4>, the series terminates at
+  <math|F<rsub|4>>. Thus, we arrive at
 
-  <\equation*>
-    G<rsup|\<alpha\>><rsub|1><around*|(|x|)>=F<rsub|1><rsup|\<beta\>><around*|(|x|)>\<partial\><rsub|\<beta\>>K<rsub|1><rsup|\<alpha\>><around*|(|x|)>+<frac|1|2!>F<rsub|2><rsup|\<beta\><rsub|1>\<beta\><rsub|2>><around*|(|x|)>\<partial\><rsub|\<beta\><rsub|1>>\<partial\><rsub|\<beta\><rsub|2>>K<rsub|1><rsup|\<alpha\>><around*|(|x|)>+\<cdots\>
-  </equation*>
+  <\equation>
+    <tabular|<tformat|<table|<row|<cell|G<rsup|\<alpha\>><rsub|1><around*|(|x|)>=>|<cell|F<rsub|1><rsup|\<beta\><rsub|1>><around*|(|x|)>\<partial\><rsub|\<beta\><rsub|1>>K<rsub|1><rsup|\<alpha\>><around*|(|x|)>+<frac|1|2!>F<rsub|2><rsup|\<beta\><rsub|1>\<beta\><rsub|2>><around*|(|x|)>\<partial\><rsub|\<beta\><rsub|1>>\<partial\><rsub|\<beta\><rsub|2>>K<rsub|1><rsup|\<alpha\>><around*|(|x|)>+>>|<row|<cell|>|<cell|<frac|1|3!>F<rsub|3><rsup|\<beta\><rsub|1>\<beta\><rsub|2>\<beta\><rsub|3>><around*|(|x|)>\<partial\><rsub|\<beta\><rsub|1>>\<partial\><rsub|\<beta\><rsub|2>>\<partial\><rsub|\<beta\><rsub|3>>K<rsub|1><rsup|\<alpha\>><around*|(|x|)>+<frac|1|4!>F<rsub|4><rsup|\<beta\><rsub|1>\<beta\><rsub|2>\<beta\><rsub|3>\<beta\><rsub|4>><around*|(|x|)>\<partial\><rsub|\<beta\><rsub|1>>\<partial\><rsub|\<beta\><rsub|2>>\<partial\><rsub|\<beta\><rsub|3>>\<partial\><rsub|\<beta\><rsub|4>>K<rsub|1><rsup|\<alpha\>><around*|(|x|)>.>>>>><label|equation:smoothness
+    G1>
+  </equation>
 
-  So, the problem is deduced to that we have solved at lower order expansion
-  of <math|q<rsub|\<Delta\>t>>. It means that we can calculate to arbitrary
-  order of expansion iteratively, and the process is the same at each order.
+  Comparing with <math|F<rsub|1>> (equation <reference|equation:smoothness
+  F1>), we find the first line is the same as <math|F<rsub|1>> except that
+  the <math|K<rsub|n>>s (rather than the <math|\<partial\>K<rsub|n>>s) are
+  replaced by <math|F<rsub|n>>. Since <math|F<rsub|n>> terminates at
+  <math|n=4> (while <math|K<rsub|n>> terminates at <math|n=2>), there are
+  more terms in <math|G<rsub|1>> than in <math|F<rsub|1>>, namely the second
+  line.
+
+  So, the problem for higher order expansion of <math|q<rsub|\<Delta\>t>> is
+  deduced to that we have solved at lower order. It means that we can
+  calculate to arbitrary order of expansion iteratively, and the process is
+  the same at each order.
 
   Observing these results, we find the following rules (with explanations).
 
@@ -4067,7 +4085,12 @@
   Is a Markovian Process with Ncut=2>, <reference|section: Detailed Balance
   of Langevin Process Lacks Source-Free Degree of Freedom>, and
   <reference|section: Langevin Process with Constant Covariance Has a Path
-  Integral on Alphabet>) will be more efficient.
+  Integral on Alphabet>) will be more efficient. In addition, many numerical
+  computation modules have build-in samplers for many distributions, such as
+  categorical distribution and normal distribution; when
+  <math|P<around*|(|\<theta\>|)>> is happen to be one of them, computing
+  <math|\<bbb-E\><rsub|P<around*|(|\<theta\>|)>><around*|[|\<ldots\>|]>> will
+  be straight-forward.
 
   <big-figure|<with|gr-mode|<tuple|edit|spline>|gr-frame|<tuple|scale|1.00001cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|10|10|center>|gr-grid|<tuple|empty>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-line-width|0.5ln|gr-dash-style|11100|gr-color|blue|<graphics||<with|arrow-end|\|\<gtr\>|<line|<point|-6|-3>|<point|-6.0|3.0>>>|<with|arrow-end|\|\<gtr\>|<line|<point|-6|-3>|<point|6.0|-3.0>>>|<math-at|S<around*|(|x,\<theta\>|)>|<point|-6.40049278190267|3.30061515056306>>|<math-at|x|<point|6.20000992178327|-3.1>>|<with|line-width|5ln|arrow-end|\<gtr\>|opacity|50%|color|red|<line|<point|-1.3|3.2>|<point|-1.3|1.7>>>|<with|line-width|5ln|color|blue|opacity|50%|arrow-begin|\<less\>|<line|<point|0.8|-0.83096059724234>|<point|0.8|-2.33096059724234>>>|<with|dash-style|11100|line-width|0.5ln|color|red|<line|<point|-1.3|1.4>|<point|-1.3|-3.0>>>|<with|color|red|<point|-1.3|1.41877>>|<with|color|red|<math-at|x<rsub|1>|<point|-1.4|-3.3>>>|<with|color|blue|<math-at|x<rsub|2>|<point|0.7|-3.3>>>|<with|dash-style|11100|line-width|0.5ln|color|blue|<line|<point|0.8|0.5>|<point|0.8|-3.0>>>|<with|color|blue|<point|0.8|-0.6>>|<with|color|dark
   cyan|dash-style|11100|<spline|<point|-5|1>|<point|-2.3|-0.7>|<point|0.8|0.5>|<point|3.04196914325401|2.48975575876838>|<point|4.2|2.2>>>|<with|color|dark
@@ -4145,24 +4168,117 @@
   gradient descent, we arrive at the best-fit <math|\<theta\><rsub|\<star\>>>
   which encodes the stochastic dynamics of flocks.
 
+  <section|<math|\<clubsuit\>> Example: Least-Action Principle in Supervised
+  Machine Learning>
+
+  In this section, we apply the result in section <reference|section: Data
+  Fitting Is Equivalent to Least-Action Principle of Distribution> to
+  supervised machine learning, including both regression and classification
+  tasks. We suppose that readers who read this section have the basic
+  familiarity to machine learning.
+
+  As usual, dataset is characterized by empirical distribution <math|Q>. In
+  supervised machine learning, each datum is a pair consisting of an input
+  and an output. By marginalizing the output, we get the input distribution
+  <math|Q<rsub|X>>. Then, dividing <math|Q> by <math|Q<rsub|X>> gives the
+  conditional distribution <math|Q<rsub|Y\|X>>, which samples the output by
+  giving an input.
+
+  The task of supervised machine learning is searching for an analytical
+  distribution that approximates the <math|Q<rsub|Y\|X>>. To do so, we use a
+  parameterized distribution <math|P<around*|(|x,\<theta\>|)>>, where
+  <math|\<theta\>> denotes the parameter, and find the best-fit parameter
+  <math|\<theta\><rsub|\<star\>>> by minimizing the relative entropy
+  <math|H<around*|(|P<around*|(|x,\<theta\>|)>,Q<rsub|Y\|X><around*|(|x|)>|)>>,
+  where <math|x> is sampled from <math|Q<rsub|X>>. Then, we have the loss
+  function
+
+  <\equation*>
+    L<around*|(|\<theta\>|)>=\<bbb-E\><rsub|x\<sim\>Q<rsub|X>><around*|[|H<around*|(|P<around*|(|x,\<theta\>|)>,Q<around*|(|x|)>|)>|]>.
+  </equation*>
+
+  \;
+
+  For regression tasks, the alphabet is <math|\<bbb-R\>>, and
+  <math|P<around*|(|x,\<theta\>|)>> is a normal distribution with unit
+  variance. Thus, the density function <math|p<around*|(|y\|x,\<theta\>|)>>
+  is
+
+  <\equation*>
+    p<around*|(|y\|x,\<theta\>|)>=<frac|1|<sqrt|2\<mathpi\>>>
+    exp<around*|(|-<frac|1|2><around*|(|h<around*|(|x,\<theta\>|)>-y|)><rsup|2>|)>
+  </equation*>
+
+  for some scale function <math|h<around*|(|x,\<theta\>|)>>. We read out the
+  action in section <reference|section: Data Fitting Is Equivalent to
+  Least-Action Principle of Distribution> as
+
+  <\equation*>
+    S<around*|(|x,y,\<theta\>|)>=<frac|1|2><around*|(|h<around*|(|x,\<theta\>|)>-y|)><rsup|2>
+  </equation*>
+
+  and the normalization factor <math|Z<around*|(|x,\<theta\>|)>> is constant.
+  So, omitting the <math|\<theta\>>-independent terms in
+  <math|L<around*|(|\<theta\>|)>>, we get
+
+  <\equation*>
+    L<around*|(|\<theta\>|)>=\<bbb-E\><rsub|x\<sim\>Q<rsub|X>><around*|[|\<bbb-E\><rsub|y\<sim\>Q<rsub|Y\|X><around*|(|x|)>><around*|[|S<around*|(|x,y,\<theta\>|)>|]>|]>=\<bbb-E\><rsub|<around*|(|x,y|)>\<sim\>Q><around*|[|S<around*|(|x,y,\<theta\>|)>|]>.
+  </equation*>
+
+  \;
+
+  For classification tasks, the alphabet is
+  <math|<around*|{|1,\<ldots\>,C|}>> for some positive integer <math|C>, and
+  <math|P<around*|(|x,\<theta\>|)>> is a categorical distribution. Thus, the
+  density function <math|p<around*|(|y\|x,\<theta\>|)>> is a softmax function
+  of <math|h<around*|(|x,\<theta\>|)>>. That is,
+
+  <\equation*>
+    p<around*|(|\<alpha\>\|x,\<theta\>|)>=<frac|exp<around*|(|h<rsup|\<alpha\>><around*|(|x,\<theta\>|)>|)>|<big|sum><rsub|\<beta\>=1><rsup|C>exp<around*|(|h<rsup|\<beta\>><around*|(|x,\<theta\>|)>|)>>.
+  </equation*>
+
+  We read out the action in section <reference|section: Data Fitting Is
+  Equivalent to Least-Action Principle of Distribution> as
+
+  <\equation*>
+    S<around*|(|x,\<alpha\>,\<theta\>|)>=-h<rsup|\<alpha\>><around*|(|x,\<theta\>|)>
+  </equation*>
+
+  and the normalization factor <math|Z<around*|(|x,\<theta\>|)>=<big|sum><rsub|\<beta\>>exp<around*|(|h<rsup|\<beta\>><around*|(|x,\<theta\>|)>|)>>.
+  The loss function is evaluated to be
+
+  <\equation*>
+    L<around*|(|\<theta\>|)>=-\<bbb-E\><rsub|<around*|(|x,\<alpha\>|)>\<sim\>Q><around*|[|ln
+    <frac|exp<around*|(|h<rsup|\<alpha\>><around*|(|x,\<theta\>|)>|)>|<big|sum><rsub|\<beta\>=1><rsup|C>exp<around*|(|h<rsup|\<beta\>><around*|(|x,\<theta\>|)>|)>>|]>,
+  </equation*>
+
+  which is the usual cross-entropy loss in classification tasks. As discussed
+  in section <reference|section: Data Fitting Is Equivalent to Least-Action
+  Principle of Distribution>, for minimizing the loss function, we have to
+  evaluate the expectation <math|\<bbb-E\><rsub|P<around*|(|x,\<theta\>|)>><around*|[|\<partial\>S/\<partial\>\<theta\>|]>>
+  by sampling from <math|P<around*|(|x,\<theta\>|)>>. This corresponds to the
+  contrastive learning technique used in training models such as
+  <verbatim|word2vec> in which the number of classes is extremely large.
+
   <epilogue>
 
-  Now, I (and you) have finished this journey in the wonderland of stochastic
-  process. Is it really finished? I do not think so. The termination of a
-  trip will be the origin of another, a more marvelous one.
-
-  Looking back to the road we have explored. We started at axiomatizing
-  information, trying to find a proper (for both discrete and continuous
-  random variables) yet simple definition of information. Then we found
-  relative entropy, proved its uniqueness under several plausible assumptions
-  (axioms). Later on, we proved the relaxation of master equation under
-  detailed balance condition. Owing to relative entropy, the proof is much
-  more simple and understandable than those in the traditional textbooks. For
-  this, we explored the continuous time Markovian process. Surprisingly, we
-  found many beautiful treasures in it. We found refined degree of freedom in
-  it, and even finer when smooth structure is appended. In the end, we
-  compared it with the least-action principle in physics. As a realistic
-  result, we found an interesting perspective on data-fitting.
+  In the summer of 2024, I was wondering how a stochastic system relaxes to
+  its equilibrium. I did not find a textbook that matched my expectation.
+  Traditional textbooks are either too complicated for me or not rigorous.
+  So, I decided to build up the theory by hands. I found it much more
+  fascinating to <em|do> mathematics than reading textbooks. The proof of
+  relaxation generalized that found by Ludwig Boltzmann in 1872. I read
+  Boltzmann's proof in a textbook of statistical mechanism fifteen years ago.
+  Then, to make it self-consistent, I wrote an introduction to relative
+  entropy, which was the starting point of the proof. Surprisingly, by
+  appending locality into the axioms of information, relative entropy would
+  be the unique possibility. The next surprise came from introducing smooth
+  structure to stochastic system. I found the cut-off by a series of complex
+  calculation. Later on in the winter, I found a way of expanding a function
+  by a series of generalized functions. It led to a direct proof of
+  Kramers-Moyal expansion. It also gave raise to a rigorous proof of path
+  integral formulation for stochastic system, resulting in a new perspective
+  to data-fitting.
 
   After climbing to the top of a mountain, the horizon is broaden. Out of
   what we have explored, there arises more interesting questions. How does
@@ -4195,9 +4311,9 @@
     <associate|auto-19|<tuple|3.3|28>>
     <associate|auto-2|<tuple|1|9>>
     <associate|auto-20|<tuple|3.4|30>>
-    <associate|auto-21|<tuple|3.5|30>>
+    <associate|auto-21|<tuple|3.5|31>>
     <associate|auto-22|<tuple|3.6|32>>
-    <associate|auto-23|<tuple|3.7|32>>
+    <associate|auto-23|<tuple|3.7|33>>
     <associate|auto-24|<tuple|3.8|33>>
     <associate|auto-25|<tuple|4|35>>
     <associate|auto-26|<tuple|4.1|35>>
@@ -4208,9 +4324,10 @@
     <associate|auto-30|<tuple|4.5|39>>
     <associate|auto-31|<tuple|4.6|41>>
     <associate|auto-32|<tuple|4.7|42>>
-    <associate|auto-33|<tuple|4.8|45>>
+    <associate|auto-33|<tuple|4.8|44>>
     <associate|auto-34|<tuple|4.1|46>>
-    <associate|auto-35|<tuple|4.24|47>>
+    <associate|auto-35|<tuple|4.9|47>>
+    <associate|auto-36|<tuple|4.9|49>>
     <associate|auto-4|<tuple|1.2|9>>
     <associate|auto-5|<tuple|1.3|10>>
     <associate|auto-6|<tuple|1.4|10>>
@@ -4220,18 +4337,18 @@
     <associate|equation:Detailed Balance|<tuple|2.8|17>>
     <associate|equation:Detailed Balance for transition
     density|<tuple|2.9|17>>
-    <associate|equation:Fokker-Planck equation|<tuple|3.11|32>>
-    <associate|equation:K condition|<tuple|3.5|27>>
+    <associate|equation:Fokker-Planck equation|<tuple|3.13|32>>
+    <associate|equation:K condition|<tuple|3.7|28>>
     <associate|equation:K is uniformly bounded|<tuple|3.2|24>>
     <associate|equation:action of distribution|<tuple|4.5|37>>
     <associate|equation:action of markovian process|<tuple|4.8|39>>
-    <associate|equation:berezin integral|<tuple|4.18|44>>
+    <associate|equation:berezin integral|<tuple|4.18|43>>
     <associate|equation:berezin integral exp|<tuple|4.15|43>>
     <associate|equation:berezin integral measurement|<tuple|4.17|43>>
     <associate|equation:data-fitting iteration|<tuple|4.22|45>>
     <associate|equation:data-fitting result|<tuple|4.23|45>>
     <associate|equation:detailed balance condition for
-    Langevin|<tuple|3.13|34>>
+    Langevin|<tuple|3.15|34>>
     <associate|equation:discrete time master equation|<tuple|2.5|14>>
     <associate|equation:discrete time master equation v0|<tuple|2.2|14>>
     <associate|equation:equation:metropolis-hastings|<tuple|2.12|22>>
@@ -4239,14 +4356,14 @@
     <associate|equation:generic density|<tuple|4.21|45>>
     <associate|equation:grassmann integral transform|<tuple|4.16|43>>
     <associate|equation:harmonic oscillator action|<tuple|4.1|35>>
-    <associate|equation:heat equation|<tuple|3.8|31>>
-    <associate|equation:km expansion|<tuple|3.6|28>>
-    <associate|equation:km expansion v2|<tuple|3.7|29>>
+    <associate|equation:heat equation|<tuple|3.10|31>>
+    <associate|equation:km expansion|<tuple|3.8|28>>
+    <associate|equation:km expansion v2|<tuple|3.9|29>>
     <associate|equation:langevin action constant covariance|<tuple|4.14|42>>
     <associate|equation:langevin action general|<tuple|4.20|44>>
     <associate|equation:langevin iteration|<tuple|4.24|46>>
     <associate|equation:langevin process after cholesky|<tuple|4.19|44>>
-    <associate|equation:langevin transition rate|<tuple|3.10|32>>
+    <associate|equation:langevin transition rate|<tuple|3.12|32>>
     <associate|equation:least-action principle v0|<tuple|4.2|35>>
     <associate|equation:least-action principle v1|<tuple|4.3|36>>
     <associate|equation:master equation|<tuple|2.4|14>>
@@ -4258,15 +4375,17 @@
     <associate|equation:relative entropy derivative|<tuple|2.11|18>>
     <associate|equation:residue zeta|<tuple|4.10|40>>
     <associate|equation:smoothness|<tuple|3.3|24>>
-    <associate|equation:stationary Fokker-Planck equation|<tuple|3.12|33>>
+    <associate|equation:smoothness F1|<tuple|3.5|25>>
+    <associate|equation:smoothness G1|<tuple|3.6|27>>
+    <associate|equation:stationary Fokker-Planck equation|<tuple|3.14|33>>
     <associate|equation:to ghosts|<tuple|4.13|41>>
-    <associate|equation:transition density coef recur|<tuple|4.9|40>>
+    <associate|equation:transition density coef recur|<tuple|4.9|39>>
     <associate|equation:transition density normalization|<tuple|2.1|13>>
     <associate|equation:transition rate determines transition
     density|<tuple|2.6|16>>
     <associate|equation:transition rate determines transition density
     v2|<tuple|2.7|16>>
-    <associate|equation:wiener process|<tuple|3.9|32>>
+    <associate|equation:wiener process|<tuple|3.11|32>>
     <associate|figure: Least-Action|<tuple|4.1|46>>
     <associate|footnote-1|<tuple|1|7>>
     <associate|footnote-1.1|<tuple|1.1|9>>
@@ -4313,7 +4432,7 @@
     <associate|section: Cut-off in the Moments of Transition Rate Is
     Essential for Spatial Smoothness|<tuple|3.2|23>>
     <associate|section: Data Fitting Is Equivalent to Least-Action Principle
-    of Distribution|<tuple|4.8|45>>
+    of Distribution|<tuple|4.8|44>>
     <associate|section: Detailed Balance Condition and Connectivity
     Monotonically Reduce Relative Entropy|<tuple|2.5|18>>
     <associate|section: Detailed Balance Provides Stationary
@@ -4341,7 +4460,7 @@
     <associate|section: Monte-Carlo Simulation and Guarantee of
     Relaxation|<tuple|2.6|19>>
     <associate|section: Randomness Appears in the Second Moment of Transition
-    Rate|<tuple|3.5|30>>
+    Rate|<tuple|3.5|31>>
     <associate|section: Randomness Is Absent in the First Moment of
     Transition Rate|<tuple|3.4|30>>
     <associate|section: Relative Entropy|<tuple|1|9>>
@@ -4519,9 +4638,14 @@
       Distribution <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-33>
 
+      4.9<space|2spc><with|mode|<quote|math>|\<clubsuit\>> Example:
+      Least-Action Principle in Supervised Machine Learning
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-35>
+
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Epilogue>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-35><vspace|0.5fn>
+      <no-break><pageref|auto-36><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
