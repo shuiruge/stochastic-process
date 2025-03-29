@@ -144,8 +144,8 @@
     Formulated as Path Integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-35>
 
-    <with|par-left|1tab|5.2.1<space|2spc><with|mode|math|\<clubsuit\>> The
-    Residue Is Far From Trivial <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <with|par-left|1tab|5.2.1<space|2spc><with|mode|math|\<clubsuit\>>
+    Estimation of the Residue <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-36>>
 
     5.3<space|2spc>Langevin Process with Constant Covariance Has a Path
@@ -193,12 +193,8 @@
   and numbered equations.
 
   At last, this book is written by <TeX>macs, using the
-  <hlink|GFDL-1.3|https://www.gnu.org/licenses/fdl-1.3.en.html>
-  license.<\footnote>
-    Footnotes in the HTML export of <TeX>macs are problematic. The content of
-    footnote is incorrectly placed in front of the footnote label in the main
-    text.
-  </footnote>
+  <hlink|GFDL-1.3|https://www.gnu.org/licenses/fdl-1.3.en.html> license. You
+  can contact me with e-mail: shuiruge@whu.edu.cn.
 
   <chapter|Relative Entropy><label|section: Relative Entropy>
 
@@ -3649,8 +3645,8 @@
   </equation*>
 
   The residue of this approximation is found to be non-trivial. We tackle
-  this in section <reference|section: * The Residue Is Far From Trivial>. As
-  the result, we find
+  this in section <reference|section: * Estimation of the Residue>. As the
+  result, we find
 
   <\equation>
     p<around*|(|x<rsub|N>,N \<Delta\>t|)>=<big|int>D<around*|(|x,k|)>
@@ -3708,8 +3704,8 @@
   <math|<around*|(|x<rsub|0>,x<rsub|1>,\<ldots\>,x<rsub|N>|)>> with each
   <math|x<rsub|i>\<in\>\<bbb-R\><rsup|d>>).
 
-  <subsection|<math|\<clubsuit\>> The Residue Is Far From
-  Trivial><label|section: * The Residue Is Far From Trivial>
+  <subsection|<math|\<clubsuit\>> Estimation of the Residue><label|section: *
+  Estimation of the Residue>
 
   To explicitly evaluate the residue left in section <reference|section:
   Markovian Process with Euclidean Alphabet Can Be Formulated as Path
@@ -4490,7 +4486,6 @@
     v2|<tuple|2.7|16>>
     <associate|equation:wiener process|<tuple|3.11|32>>
     <associate|figure: Least-Action|<tuple|4.1|41>>
-    <associate|footnote-1|<tuple|1|7>>
     <associate|footnote-1.1|<tuple|1.1|9>>
     <associate|footnote-1.2|<tuple|1.2|9>>
     <associate|footnote-1.3|<tuple|1.3|10>>
@@ -4507,7 +4502,6 @@
     <associate|footnote-4.1|<tuple|4.1|38>>
     <associate|footnote-5.1|<tuple|5.1|46>>
     <associate|footnote-5.2|<tuple|5.2|50>>
-    <associate|footnr-1|<tuple|1|7>>
     <associate|footnr-1.1|<tuple|1.1|9>>
     <associate|footnr-1.2|<tuple|1.2|9>>
     <associate|footnr-1.3|<tuple|1.3|10>>
@@ -4524,9 +4518,9 @@
     <associate|footnr-4.1|<tuple|4.1|38>>
     <associate|footnr-5.1|<tuple|5.1|46>>
     <associate|footnr-5.2|<tuple|5.2|50>>
+    <associate|section: * Estimation of the Residue|<tuple|5.2.1|45>>
     <associate|section: * Grassmann Variable, Berezin Integral, and
     Ghosts|<tuple|5.4|48>>
-    <associate|section: * The Residue Is Far From Trivial|<tuple|5.2.1|45>>
     <associate|section: A Brief Review of Least-Action Principle in Classical
     Mechanics|<tuple|4.2|37>>
     <associate|section: A Brief Review of Probability|<tuple|1.2|9>>
@@ -4748,7 +4742,7 @@
       <no-break><pageref|auto-35>
 
       <with|par-left|<quote|1tab>|5.2.1<space|2spc><with|mode|<quote|math>|\<clubsuit\>>
-      The Residue Is Far From Trivial <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      Estimation of the Residue <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-36>>
 
       5.3<space|2spc>Langevin Process with Constant Covariance Has a Path
