@@ -151,63 +151,67 @@
         \(N_{\operatorname{cut}} = 2\) <span style="margin-left: 5mm"></span> <a href="#auto-22">32</a>
       </p>
       <p>
-        3.7<span style="margin-left: 1em"></span>Stationary Solution of Langevin Process Has
-        Source-Free Degree of Freedom <span style="margin-left: 5mm"></span> <a href="#auto-23">33</a>
+        3.7<span style="margin-left: 1em"></span>Transition Density of Langevin Process Is
+        Nearly Gaussian <span style="margin-left: 5mm"></span> <a href="#auto-23">33</a>
       </p>
       <p>
-        3.8<span style="margin-left: 1em"></span>Detailed Balance of Langevin Process Lacks
+        3.8<span style="margin-left: 1em"></span>Stationary Solution of Langevin Process Has
         Source-Free Degree of Freedom <span style="margin-left: 5mm"></span> <a href="#auto-24">33</a>
+      </p>
+      <p>
+        3.9<span style="margin-left: 1em"></span>Detailed Balance of Langevin Process Lacks
+        Source-Free Degree of Freedom <span style="margin-left: 5mm"></span> <a href="#auto-25">34</a>
       </p>
       <p style="margin-top: 1em; margin-bottom: 0.5em">
         <b>4<span style="margin-left: 1em"></span>Least-Action Principle</b> <span style="margin-left: 5mm"></span>
-        <a href="#auto-25">35</a>
+        <a href="#auto-26">37</a>
       </p>
       <p>
         4.1<span style="margin-left: 1em"></span>Conventions in This Chapter <span style="margin-left: 5mm"></span>
-        <a href="#auto-26">35</a>
+        <a href="#auto-27">37</a>
       </p>
       <p>
         4.2<span style="margin-left: 1em"></span>A Brief Review of Least-Action Principle in
-        Classical Mechanics <span style="margin-left: 5mm"></span> <a href="#auto-27">35</a>
+        Classical Mechanics <span style="margin-left: 5mm"></span> <a href="#auto-28">37</a>
       </p>
       <p>
         4.3<span style="margin-left: 1em"></span>Least-Action Principle of Distribution Has No
-        Redundancy <span style="margin-left: 5mm"></span> <a href="#auto-28">36</a>
+        Redundancy <span style="margin-left: 5mm"></span> <a href="#auto-29">38</a>
       </p>
       <p>
         4.4<span style="margin-left: 1em"></span>Data Fitting Is Equivalent to Least-Action
-        Principle of Distribution <span style="margin-left: 5mm"></span> <a href="#auto-29">37</a>
+        Principle of Distribution <span style="margin-left: 5mm"></span> <a href="#auto-30">39</a>
       </p>
       <p>
         4.5<span style="margin-left: 1em"></span>\(\clubsuit\) Example: Least-Action Principle
-        in Supervised Machine Learning <span style="margin-left: 5mm"></span> <a href="#auto-31">40</a>
+        in Supervised Machine Learning <span style="margin-left: 5mm"></span> <a href="#auto-32">42</a>
       </p>
       <p style="margin-top: 1em; margin-bottom: 0.5em">
         <b>5<span style="margin-left: 1em"></span>Path Integral</b> <span style="margin-left: 5mm"></span> <a
-        href="#auto-32">41</a>
+        href="#auto-33">43</a>
       </p>
       <p>
         5.1<span style="margin-left: 1em"></span>Conventions in This Chapter <span style="margin-left: 5mm"></span>
-        <a href="#auto-33">41</a>
+        <a href="#auto-34">43</a>
       </p>
       <p>
         5.2<span style="margin-left: 1em"></span>Markovian Process with Euclidean Alphabet Can
-        Be Formulated as Path Integral <span style="margin-left: 5mm"></span> <a href="#auto-34">41</a>
+        Be Formulated as Path Integral <span style="margin-left: 5mm"></span> <a href="#auto-35">43</a>
       </p>
       <p>
         5.2.1<span style="margin-left: 1em"></span>\(\clubsuit\) The Residue Is Far From Trivial
-        <span style="margin-left: 5mm"></span> <a href="#auto-35">43</a>
+        <span style="margin-left: 5mm"></span> <a href="#auto-36">45</a>
       </p>
       <p>
         5.3<span style="margin-left: 1em"></span>Langevin Process with Constant Covariance Has a
-        Path Integral on Alphabet <span style="margin-left: 5mm"></span> <a href="#auto-36">45</a>
+        Path Integral on Alphabet <span style="margin-left: 5mm"></span> <a href="#auto-37">47</a>
       </p>
       <p>
         5.4<span style="margin-left: 1em"></span>\(\clubsuit\) Grassmann Variable, Berezin
-        Integral, and Ghosts <span style="margin-left: 5mm"></span> <a href="#auto-37">46</a>
+        Integral, and Ghosts <span style="margin-left: 5mm"></span> <a href="#auto-38">48</a>
       </p>
       <p style="margin-top: 1em; margin-bottom: 0.5em">
-        <b>Epilogue</b> <span style="margin-left: 5mm"></span> <a href="#auto-38">49</a>
+        <b>Epilogue</b> <span style="margin-left: 5mm"></span> <a href="#auto-39">51</a>
       </p>
     </div>
     <h1 id="auto-1">Prologue<span style="margin-left: 1em"></span></h1>
@@ -3020,7 +3024,7 @@ x) f (x) =
       <a id="footnr-3.4"></a>
       <sup><class style="font-style: normal"><a href="#footnote-3.4">3.4</a></class></sup>
       These conclusions are to be used in section
-      <a href="#section: Detailed Balance of Langevin Process Lacks Source-Free Degree of Freedom">3.8</a>
+      <a href="#section: Detailed Balance of Langevin Process Lacks Source-Free Degree of Freedom">3.9</a>
       .
     </p>
     <p>
@@ -3468,10 +3472,108 @@ w^{\alpha}) (x^{\beta} - w^{\beta})
     <p>
       So, \(\Sigma (x)\) is positive definite for any \(x \in \mathbb{R}^d\).
     </p>
-    <h2 id="auto-23">3.7<span style="margin-left: 1em"></span>Stationary Solution of Langevin Process Has
+    <h2 id="auto-23"><a id="section: Transition Density of Langevin Process Is Nearly Gaussian"></a>3.7<span style="margin-left: 1em"></span>Transition Density of Langevin
+    Process Is Nearly Gaussian<span style="margin-left: 1em"></span></h2>
+    <p>
+      The transition density of Langevin process is hard to obtain, except for
+      some very simple situations (such as that in section <a href="#section: Randomness Appears in the Second Moment of Transition Rate">3.5</a>).
+      Even though, it can be properly approximated by Gaussian density
+      function. Explicitly, let \(q_{\Delta t} (x \rightarrow y)\) denote the
+      transition density of a Langevin process. As in section <a href="#section: Langevin Process Is a Markovian Process with Ncut=2">3.6</a>,
+      we re-denote \(K_1\) by \(f\) and \(K_2\) by \(\Sigma\). Then, consider
+      the Gaussian conditional density function (which may not be a transition
+      density)
+    </p>
+    <center>
+      \(\displaystyle \tilde{q}_{\Delta t} (x \rightarrow x + \epsilon) :=
+      \frac{1}{\sqrt{(2 \pi
+\Delta t)^d \det \Sigma (x)}} \exp \left( -
+      \frac{1}{2 \Delta t} [\Sigma^{- 1}
+(x)]_{\alpha \beta} 
+      [\epsilon^{\alpha} - f^{\alpha} (x) \Delta t]
+[\epsilon^{\beta} -
+      f^{\beta} (x) \Delta t] \right) .\)
+    </center>
+    <p>
+      We are to show that, for any function \(\varphi\) in Schwartz space \(S
+      (\mathbb{R}^d)\),
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle \int_{\mathbb{R}^d} \mathrm{d}
+        \epsilon q_{\Delta t} (x \rightarrow x +
+\epsilon) \varphi (\epsilon)
+        = \int_{\mathbb{R}^d} \mathrm{d} \epsilon
+\tilde{q}_{\Delta t} (x
+        \rightarrow x + \epsilon) \varphi (\epsilon) +
+\omicron (\Delta t) .
+        \)</td>
+        <td align="right">(3.14)</td>
+      </tr>
+    </table>
+    <p>
+      That is, the transition density of Langevin process is approximated by a
+      Gaussian conditional density function, <em>in the sense of applying onto
+      Schwartz space</em>.
+    </p>
+    <p>
+      To prove equation <a href="#equation:langevin transition density approx">3.14</a>, we first notice that the left hand
+      side can be expanded by \(\Delta t\) as
+    </p>
+    <center>
+      \(\displaystyle \int_{\mathbb{R}^d} \mathrm{d} \epsilon q_{\Delta t} (x
+      \rightarrow x +
+\epsilon) \varphi (\epsilon) = \varphi (0) + \Delta t
+      \int_{\mathbb{R}^d}
+\mathrm{d} \epsilon r (x, x + \epsilon) \varphi
+      (\epsilon) + \omicron (\Delta
+t) .\)
+    </center>
+    <p>
+      So, all we need to do is proving that
+    </p>
+    <center>
+      \(\displaystyle \int_{\mathbb{R}^d} \mathrm{d} \epsilon
+      \tilde{q}_{\Delta t} (x \rightarrow x
++ \epsilon) \varphi (\epsilon) =
+      \varphi (0) + \Delta t \int_{\mathbb{R}^d}
+\mathrm{d} \epsilon r (x, x +
+      \epsilon) \varphi (\epsilon) + \omicron (\Delta
+t) .\)
+    </center>
+    <p>
+      To show this, we Taylor expand \(\varphi\) at origin. The right hand
+      side becomes
+    </p>
+    <center>
+      \(\displaystyle \varphi (0) + \Delta t \partial_{\alpha} \varphi (0)
+      f^{\alpha} (x) +
+\frac{1}{2} \Delta t \partial_{\alpha} \partial_{\beta}
+      \varphi (0)
+\Sigma^{\alpha \beta} (x) + \omicron (\Delta t),\)
+    </center>
+    <p>
+      where we have inserted the moments of transition rate with cut-off
+      \(N_{\operatorname{cut}} = 2\). Since \(\tilde{q}_{\Delta t} (x
+      \rightarrow y)\) is the density function of the normal distribution with
+      mean \(x + f (x) \Delta t\) and covariance \(\Sigma (x) \Delta t\), the
+      left hand side is evaluated to be
+    </p>
+    <center>
+      \(\displaystyle \varphi (0) + \partial_{\alpha} \varphi (0) f^{\alpha}
+      (x) \Delta t +
+\frac{1}{2} \partial_{\alpha} \partial_{\beta} \varphi
+      (0) \Sigma^{\alpha
+\beta} (x) \Delta t + \omicron (\Delta t),\)
+    </center>
+    <p>
+      which equals to the right hand side. Thus equation <a href="#equation:langevin transition density approx">3.14</a>
+      holds.
+    </p>
+    <h2 id="auto-24">3.8<span style="margin-left: 1em"></span>Stationary Solution of Langevin Process Has
     Source-Free Degree of Freedom<span style="margin-left: 1em"></span></h2>
     <p>
-      In this section and section <a href="#section: Detailed Balance of Langevin Process Lacks Source-Free Degree of Freedom">3.8</a>, we use Langevin process as
+      In this section and section <a href="#section: Detailed Balance of Langevin Process Lacks Source-Free Degree of Freedom">3.9</a>, we use Langevin process as
       an example to explicitly show what the detailed balance condition
       appends to the stationary condition.
     </p>
@@ -3495,7 +3597,7 @@ w^{\alpha}) (x^{\beta} - w^{\beta})
         \partial_{\beta} (\Sigma^{\alpha \beta}
 (x) \pi (x)) + \nu^{\alpha}
         (x), \)</td>
-        <td align="right">(3.14)</td>
+        <td align="right">(3.15)</td>
       </tr>
     </table>
     <p>
@@ -3513,7 +3615,7 @@ w^{\alpha}) (x^{\beta} - w^{\beta})
       vector field \(\nu\) is called <strong>free of source</strong> or
       <strong>source-free</strong>.
     </p>
-    <h2 id="auto-24"><a id="section: Detailed Balance of Langevin Process Lacks Source-Free Degree of Freedom"></a>3.8<span style="margin-left: 1em"></span>Detailed Balance of Langevin
+    <h2 id="auto-25"><a id="section: Detailed Balance of Langevin Process Lacks Source-Free Degree of Freedom"></a>3.9<span style="margin-left: 1em"></span>Detailed Balance of Langevin
     Process Lacks Source-Free Degree of Freedom<span style="margin-left: 1em"></span></h2>
     <p>
       After discussing stationary distribution of Fokker-Planck equation (as a
@@ -3530,42 +3632,52 @@ w^{\alpha}) (x^{\beta} - w^{\beta})
       \partial_{\alpha}
 \delta (\epsilon) + \frac{1}{2} \pi (x) \Sigma^{\alpha
       \beta} (x)
-\partial_{\alpha} \partial_{\beta} \delta (\epsilon),\)
+\partial_{\alpha} \partial_{\beta} \delta (\epsilon) .\)
     </center>
     <p>
-      and, for the right hand side,
+      For the right hand side, we first have
     </p>
     <center>
-      \(\displaystyle \begin{array}{rl}
-  & \pi (x + \epsilon) r (x +
-      \epsilon, x)\\
-  = & \pi (x + \epsilon) r (x + \epsilon, (x + \epsilon)
-      - \epsilon)\\
-  = & - \pi (x + \epsilon) f^{\alpha} (x + \epsilon)
-      \partial_{\alpha} \delta
-  (- \epsilon) + \frac{1}{2} \pi (x + \epsilon)
-      \Sigma^{\alpha \beta} (x +
-  \epsilon) \partial_{\alpha}
-      \partial_{\beta} \delta (- \epsilon)\\
-  = & \pi (x + \epsilon)
-      f^{\alpha} (x + \epsilon) \partial_{\alpha} \delta
-  (\epsilon) +
-      \frac{1}{2} \pi (x + \epsilon) \Sigma^{\alpha \beta} (x +
-  \epsilon)
-      \partial_{\alpha} \partial_{\beta} \delta (\epsilon),
-\end{array}\)
+      \(\displaystyle \pi (x + \epsilon) r (x + \epsilon, x) = \pi (x +
+      \epsilon) r (x + \epsilon,
+(x + \epsilon) - \epsilon) .\)
     </center>
     <p>
-      where in the last line, we have used \(\partial_{\alpha} \delta (- x) =
-      - \partial_{\alpha} \delta (x)\) and \(\partial_{\alpha}
-      \partial_{\beta} \delta (- x) = \partial_{\alpha}
-\partial_{\beta}
-      \delta (x)\) (derived in the end of section <a href="#section: Kramers&ndash;Moyal Expansion Formulates Transition Rate by Its Moments">3.3</a>).
+      Then, inserting equation <a href="#equation:langevin transition rate">3.12</a> gives
+    </p>
+    <center>
+      \(\displaystyle \pi (x) r (x, x + \epsilon) = - \pi (x + \epsilon)
+      f^{\alpha} (x + \epsilon)
+\partial_{\alpha} \delta (- \epsilon) +
+      \frac{1}{2} \pi (x + \epsilon)
+\Sigma^{\alpha \beta} (x + \epsilon)
+      \partial_{\alpha} \partial_{\beta} \delta
+(- \epsilon) .\)
+    </center>
+    <p>
+      Since \(\partial_{\alpha} \delta (- x) = - \partial_{\alpha} \delta
+      (x)\) and \(\partial_{\alpha} \partial_{\beta} \delta (- x) =
+      \partial_{\alpha}
+\partial_{\beta} \delta (x)\) (derived in the end of
+      section <a href="#section: Kramers&ndash;Moyal Expansion Formulates Transition Rate by Its Moments">3.3</a>), it turns to be
+    </p>
+    <center>
+      \(\displaystyle \pi (x) r (x, x + \epsilon) = \pi (x + \epsilon)
+      f^{\alpha} (x + \epsilon)
+\partial_{\alpha} \delta (\epsilon) +
+      \frac{1}{2} \pi (x + \epsilon)
+\Sigma^{\alpha \beta} (x + \epsilon)
+      \partial_{\alpha} \partial_{\beta} \delta
+(\epsilon) .\)
+    </center>
+    <p>
+      
     </p>
     <p>
       As generalized functions, we are to examine these two expressions by
-      using an arbitrary test function \(\varphi \in S (\mathbb{R}^d)\). Thus,
-      for the left hand side,
+      using an arbitrary test function \(\varphi\) in Schwartz space \(S
+      (\mathbb{R}^d)\). Applying \(\pi (x) r (x, x + \epsilon)\) to
+      \(\varphi\) gives
     </p>
     <center>
       \(\displaystyle \int_{\mathbb{R}^d} \mathrm{d} \epsilon \pi (x) r (x, x
@@ -3593,23 +3705,25 @@ w^{\alpha}) (x^{\beta} - w^{\beta})
 \partial_{\beta} \varphi (0)} .\)
     </center>
     <p>
-      The right hand side is a little complicated,
+      By applying \(\pi (x + \epsilon) r (x + \epsilon, x)\) to \(\varphi\),
+      we get
     </p>
     <center>
       \(\displaystyle \begin{array}{rl}
-  & \int_{\mathbb{R}^d} \mathrm{d}
-      \epsilon \pi (x + \epsilon) r (x +
-  \epsilon, x) \varphi (\epsilon)\\
- 
-      = & \int_{\mathbb{R}^d} \mathrm{d} \epsilon \pi (x + \epsilon)
-      f^{\alpha} (x
-  + \epsilon) \partial_{\alpha} \delta (\epsilon) \varphi
-      (\epsilon) +
-  \frac{1}{2} \int_{\mathbb{R}^d} \mathrm{d} \epsilon \pi
-      (x + \epsilon)
-  \Sigma^{\alpha \beta} (x + \epsilon) \partial_{\alpha}
-      \partial_{\beta}
-  \delta (\epsilon) \varphi (\epsilon) .
+  \int_{\mathbb{R}^d} \mathrm{d}
+      \epsilon \pi (x + \epsilon) r (x + \epsilon,
+  x) \varphi (\epsilon) = &
+      \int_{\mathbb{R}^d} \mathrm{d} \epsilon \pi (x +
+  \epsilon) f^{\alpha}
+      (x + \epsilon) \partial_{\alpha} \delta (\epsilon)
+  \varphi
+      (\epsilon)\\
+  + & \frac{1}{2} \int_{\mathbb{R}^d} \mathrm{d} \epsilon
+      \pi (x + \epsilon)
+  \Sigma^{\alpha \beta} (x + \epsilon)
+      \partial_{\alpha} \partial_{\beta}
+  \delta (\epsilon) \varphi
+      (\epsilon) .
 \end{array}\)
     </center>
     <p>
@@ -3626,26 +3740,26 @@ w^{\alpha}) (x^{\beta} - w^{\beta})
  
       \frac{\partial}{\partial \epsilon^{\alpha}} [\pi (x + \epsilon)
       f^{\alpha}
-  (x + \epsilon) \varphi (\epsilon)]\\
-  + & \frac{1}{2}
-      \int_{\mathbb{R}^d} \mathrm{d} \epsilon \delta (\epsilon)
- 
-      \frac{\partial^2}{\partial \epsilon^{\alpha} \partial \epsilon^{\beta}}
-      [\pi
-  (x + \epsilon) \Sigma^{\alpha \beta} (x + \epsilon) \varphi
-      (\epsilon)]\\
-  = & - \partial_{\alpha} [\pi (x) f^{\alpha} (x)] \varphi
-      (0) - {\pi (x)
-  f^{\alpha} (x) \partial_{\alpha} \varphi (0)}\\
-  + &
-      \frac{1}{2} \partial_{\alpha} \partial_{\beta} [\pi (x) \Sigma^{\alpha
- 
-      \beta} (x)] \varphi (0) + \partial_{\beta} [\pi (x) \Sigma^{\alpha
-      \beta}
-  (x)] \partial_{\alpha} \varphi (0) + {\frac{1}{2} \pi (x)
-      \Sigma^{\alpha
-  \beta} (x) \partial_{\alpha} \partial_{\beta} \varphi
-      (0)} .
+  (x + \epsilon) \varphi (\epsilon)] + \frac{1}{2}
+      \int_{\mathbb{R}^d}
+  \mathrm{d} \epsilon \delta (\epsilon)
+      \frac{\partial^2}{\partial
+  \epsilon^{\alpha} \partial
+      \epsilon^{\beta}} [\pi (x + \epsilon)
+  \Sigma^{\alpha \beta} (x +
+      \epsilon) \varphi (\epsilon)]\\
+  = & - \partial_{\alpha} [\pi (x)
+      f^{\alpha} (x)] \varphi (0) - {\pi (x)
+  f^{\alpha} (x)
+      \partial_{\alpha} \varphi (0)}\\
+  + & \frac{1}{2} \partial_{\alpha}
+      \partial_{\beta} [\pi (x) \Sigma^{\alpha
+  \beta} (x)] \varphi (0) +
+      \partial_{\beta} [\pi (x) \Sigma^{\alpha \beta}
+  (x)] \partial_{\alpha}
+      \varphi (0) + {\frac{1}{2} \pi (x) \Sigma^{\alpha
+  \beta} (x)
+      \partial_{\alpha} \partial_{\beta} \varphi (0)} .
 \end{array}\)
     </center>
     <p>
@@ -3679,12 +3793,12 @@ w^{\alpha}) (x^{\beta} - w^{\beta})
         <td width="100%" align="center">\(\displaystyle f^{\alpha} (x) \pi (x) = \frac{1}{2}
         \partial_{\beta} (\Sigma^{\alpha \beta}
 (x) \pi (x)) . \)</td>
-        <td align="right">(3.15)</td>
+        <td align="right">(3.16)</td>
       </tr>
     </table>
     <p>
       Comparing with the stationary solution of Langevin process (equation <a
-      href="#equation:stationary Fokker-Planck equation">3.14</a>), the source-free vector field \(\nu\) is absent here.
+      href="#equation:stationary Fokker-Planck equation">3.15</a>), the source-free vector field \(\nu\) is absent here.
       Recall in section <a href="#section: Detailed Balance Provides Stationary Distribution">2.4</a> where detailed balance condition was
       first encountered, we said that detailed balance condition is stronger
       than just being stationary. Now, in Langevin process, this becomes
@@ -3694,12 +3808,12 @@ w^{\alpha}) (x^{\beta} - w^{\beta})
       freedom is the cost of ensuring that any initial distribution will
       finally relax to the stationary.
     </p>
-    <h1 id="auto-25"><a id="section: Least-Action Principle"></a>Chapter 4<br />Least-Action Principle</h1>
+    <h1 id="auto-26"><a id="section: Least-Action Principle"></a>Chapter 4<br />Least-Action Principle</h1>
     <p>
       We apply the discussions in chapter <a href="#section: Kramers-Moyal Expansion and Langevin Process">3</a> to least-action
       principle.
     </p>
-    <h2 id="auto-26">4.1<span style="margin-left: 1em"></span>Conventions in This Chapter<span style="margin-left: 1em"></span></h2>
+    <h2 id="auto-27">4.1<span style="margin-left: 1em"></span>Conventions in This Chapter<span style="margin-left: 1em"></span></h2>
     <p>
       Follow the conventions in chapter <a href="#section: Kramers-Moyal Expansion and Langevin Process">3</a> (except for section <a
       href="#section: Data Fitting Is Equivalent to Least-Action Principle of Distribution">4.4</a> where the alphabet \(\mathcal{X}\) can be discrete). In
@@ -3707,7 +3821,7 @@ w^{\alpha}) (x^{\beta} - w^{\beta})
       \(\theta\) is the collection of parameters. Its density function is \(p
       (x, \theta)\), where random variable \(X\) takes the value \(x\).
     </p>
-    <h2 id="auto-27"><a id="section: A Brief Review of Least-Action Principle in Classical Mechanics"></a>4.2<span style="margin-left: 1em"></span>A Brief Review of Least-Action
+    <h2 id="auto-28"><a id="section: A Brief Review of Least-Action Principle in Classical Mechanics"></a>4.2<span style="margin-left: 1em"></span>A Brief Review of Least-Action
     Principle in Classical Mechanics<span style="margin-left: 1em"></span></h2>
     <p>
       In physics, least-action principle gives the dynamics of the state of an
@@ -3879,7 +3993,7 @@ x_1) = T^2  [x_{\star} ((i + 1) / T) - 2 x_{\star}
       action is completely determined by the real world distribution (the
       correspondence of real world datum), with nothing redundant.
     </p>
-    <h2 id="auto-28"><a id="section: Least-Action Principle of Distribution Has No Redundancy"></a>4.3<span style="margin-left: 1em"></span>Least-Action Principle of
+    <h2 id="auto-29"><a id="section: Least-Action Principle of Distribution Has No Redundancy"></a>4.3<span style="margin-left: 1em"></span>Least-Action Principle of
     Distribution Has No Redundancy<span style="margin-left: 1em"></span></h2>
     <p>
       Dynamics in classical mechanics are always deterministic. That is, once
@@ -4003,7 +4117,7 @@ x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
       is the direct implication that distribution involves more information
       than its most likely datum.
     </p>
-    <h2 id="auto-29"><a id="section: Data Fitting Is Equivalent to Least-Action Principle of Distribution"></a>4.4<span style="margin-left: 1em"></span>Data Fitting Is Equivalent to
+    <h2 id="auto-30"><a id="section: Data Fitting Is Equivalent to Least-Action Principle of Distribution"></a>4.4<span style="margin-left: 1em"></span>Data Fitting Is Equivalent to
     Least-Action Principle of Distribution<span style="margin-left: 1em"></span></h2>
     <p>
       Given a collection of real world data, we are to find a distribution
@@ -4141,7 +4255,7 @@ x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
       with \(P (\theta)\) as the stationary distribution. For discrete random
       variables, Monte-Carlo simulation with Metropolis-Hastings algorithm
       (section <a href="#section: Example: Metropolis-Hastings Algorithm">2.7</a>) is available; and for continuous random
-      variables, Langevin process (section <a href="#section: Langevin Process Is a Markovian Process with Ncut=2">3.6</a>, <a href="#section: Detailed Balance of Langevin Process Lacks Source-Free Degree of Freedom">3.8</a>,
+      variables, Langevin process (section <a href="#section: Langevin Process Is a Markovian Process with Ncut=2">3.6</a>, <a href="#section: Detailed Balance of Langevin Process Lacks Source-Free Degree of Freedom">3.9</a>,
       and <a href="#section: Langevin Process with Constant Covariance Has a Path Integral on Alphabet">5.3</a>) will be more efficient. In addition, many
       numerical computation modules have build-in samplers for many
       distributions, such as categorical distribution and normal distribution;
@@ -4157,7 +4271,7 @@ x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
         </tr><tr>
           <td style="text-align: center; padding-left: 0em; padding-right: 0em; padding-left: 1.5em; padding-right: 1.5em"><div class="caption">
             <font style="font-size: 84.1%"><p>
-              <b>Figure 4.1. </b><a id="auto-30"></a><a id="figure: Least-Action"></a> This figure illustrate
+              <b>Figure 4.1. </b><a id="auto-31"></a><a id="figure: Least-Action"></a> This figure illustrate
               how \(\min_{\theta} L (\theta)\) will site a real world datum
               onto a local minimum of \(S (\cdot, \theta)\). The green curve
               represents the current not-yet-optimized \(S (\cdot, \theta)\).
@@ -4198,8 +4312,8 @@ x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
       To evaluate the \(\mathbb{E}_{P (\theta)} [\ldots]\) in equation <a
       href="#equation:data-fitting iteration">4.7</a>, we first randomly initialize a group of samples, each
       representing a movie of a flock. Then, we use Langevin process to
-      efficiently simulate master equation. Explicitly, we iterate each sample
-      by
+      efficiently simulate master equation. By section <a href="#section: Transition Density of Langevin Process Is Nearly Gaussian">3.7</a>, we
+      iterate each sample by
     </p>
     <table width="100%">
       <tr>
@@ -4212,53 +4326,20 @@ x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
     <p>
       for \(0 < \Delta t \ll 1\). The gradient \(\nabla\) is taken on \(x\),
       and the random variable \(\Delta W^{\alpha}\) obeys a normal
-      distribution with zero mean and variance \(\Delta t\) (to be proved in
-      section
-      <a href="#section: Langevin Process with Constant Covariance Has a Path Integral on Alphabet">5.3</a>
-      ).
-      <div class="footnote">
-        <font style="font-size: 77.1%"><div align="justify">
-          <div style="margin-left: 0px">
-            <div style="margin-right: 0px">
-              <class style="font-style: normal"><p>
-                4.2. In section <a href="#section: Langevin Process with Constant Covariance Has a Path Integral on Alphabet">5.3</a>, we will show that, when
-                \(\Delta t\) is small enough, the transition density
-                \(q_{\Delta t} (x_i \rightarrow x_{i + 1})\) can be
-                approximated by a normal distribution with mean \(x_i^{\alpha}
-                + f^{\alpha} (x_i) \Delta t\) and covariance \(\Delta t
-                \delta^{\alpha \beta}\). Herein, the \(f^{\alpha} (x_i)\) is
-                replaced by \(- \nabla^{\alpha} S (x, \theta)\). Readers may
-                accept this first. I give my apology for this strange
-                arrangement, but it is deliberate, so as to make the closely
-                related sections adjacent to each other.
-              </p></class>
-            </div>
-          </div>
-        </div></font>
-      </div>
-      <span style="margin-left: 0em"></span>
-      <a id="footnr-4.2"></a>
-      <sup><class style="font-style: normal"><a href="#footnote-4.2">4.2</a></class></sup>
-      This specific transition density satisfies detailed balance condition
-      (see section
-      <a href="#section: Detailed Balance of Langevin Process Lacks Source-Free Degree of Freedom">3.8</a>
-      , especially the equation
-      <a href="#equation:detailed balance condition for Langevin">3.15</a>
-      ). Then, theorem
-      <a href="#theorem: relaxation">2.1</a>
-      claims that the iteration
-      <a href="#equation:langevin iteration">4.9</a>
-      will relax the samples towards the stationary distribution, which has
-      density function proportional to \(\exp (- S (x, \theta))\). There is
-      not need to wait until the samples have been fully relaxed. In practice,
-      we find that ten or several more iterations has been sufficient for a
-      good approximation. Finally, out of these iterated samples,
-      \(\mathbb{E}_{P (\theta)} [\cdots]\) is evaluated. Repeating this
-      process and iterating the \(\theta\) using gradient descent, we arrive
-      at the best-fit \(\theta_{\star}\) which encodes the stochastic dynamics
-      of flocks.
+      distribution with zero mean and variance \(\Delta t\). This specific
+      transition density satisfies detailed balance condition (see section <a
+      href="#section: Detailed Balance of Langevin Process Lacks Source-Free Degree of Freedom">3.9</a>, especially the equation <a href="#equation:detailed balance condition for Langevin">3.16</a>). Then, theorem
+      <a href="#theorem: relaxation">2.1</a> claims that the iteration <a href="#equation:langevin iteration">4.9</a> will relax
+      the samples towards the stationary distribution, which has density
+      function proportional to \(\exp (- S (x, \theta))\). There is not need
+      to wait until the samples have been fully relaxed. In practice, we find
+      that ten or several more iterations has been sufficient for a good
+      approximation. Finally, out of these iterated samples, \(\mathbb{E}_{P
+      (\theta)} [\cdots]\) is evaluated. Repeating this process and iterating
+      the \(\theta\) using gradient descent, we arrive at the best-fit
+      \(\theta_{\star}\) which encodes the stochastic dynamics of flocks.
     </p>
-    <h2 id="auto-31">4.5<span style="margin-left: 1em"></span>\(\clubsuit\) Example: Least-Action
+    <h2 id="auto-32">4.5<span style="margin-left: 1em"></span>\(\clubsuit\) Example: Least-Action
     Principle in Supervised Machine Learning<span style="margin-left: 1em"></span></h2>
     <p>
       In this section, we apply the result in section <a href="#section: Data Fitting Is Equivalent to Least-Action Principle of Distribution">4.4</a> to
@@ -4356,12 +4437,12 @@ x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
       models such as <tt class="verbatim">word2vec</tt> in which the number of classes
       is extremely large.
     </p>
-    <h1 id="auto-32">Chapter 5<br />Path Integral</h1>
-    <h2 id="auto-33">5.1<span style="margin-left: 1em"></span>Conventions in This Chapter<span style="margin-left: 1em"></span></h2>
+    <h1 id="auto-33">Chapter 5<br />Path Integral</h1>
+    <h2 id="auto-34">5.1<span style="margin-left: 1em"></span>Conventions in This Chapter<span style="margin-left: 1em"></span></h2>
     <p>
       Follow the conventions in chapter <a href="#section: Kramers-Moyal Expansion and Langevin Process">3</a>.
     </p>
-    <h2 id="auto-34"><a id="section: Markovian Process with Euclidean Alphabet Can Be Formulated as Path Integral"></a>5.2<span style="margin-left: 1em"></span>Markovian Process with Euclidean
+    <h2 id="auto-35"><a id="section: Markovian Process with Euclidean Alphabet Can Be Formulated as Path Integral"></a>5.2<span style="margin-left: 1em"></span>Markovian Process with Euclidean
     Alphabet Can Be Formulated as Path Integral<span style="margin-left: 1em"></span></h2>
     <p>
       In section <a href="#section: Least-Action Principle of Distribution Has No Redundancy">4.3</a>, we have shown how to define an action using
@@ -4564,7 +4645,7 @@ k_{\alpha_n},\)
       \(\mathbb{R}^d\) (namely, the path is a series \((x_0, x_1, \ldots,
       x_N)\) with each \(x_i \in \mathbb{R}^d\)).
     </p>
-    <h3 id="auto-35"><a id="section: * The Residue Is Far From Trivial"></a>5.2.1<span style="margin-left: 1em"></span>\(\clubsuit\) The Residue Is
+    <h3 id="auto-36"><a id="section: * The Residue Is Far From Trivial"></a>5.2.1<span style="margin-left: 1em"></span>\(\clubsuit\) The Residue Is
     Far From Trivial<span style="margin-left: 1em"></span></h3>
     <p>
       To explicitly evaluate the residue left in section <a href="#section: Markovian Process with Euclidean Alphabet Can Be Formulated as Path Integral">5.2</a>, we
@@ -4714,9 +4795,9 @@ t),\)
       \(\hat{g}_1 (x, k) = \hat{r} (x, k)\), it contributes nothing to
       \(\hat{\zeta} (x, k, \Delta t)\), and \(n\) starts at \(2\). Thus,
       \(\hat{\zeta} (x, k, \Delta t) = \omicron (\Delta t)\) and it is the
-      residue we are seeking for. Temporally, we do not know whether the
-      series in \(\hat{\zeta} (x, k, \Delta t)\) converges or not, but keeping
-      the series <a href="#equation:residue zeta">5.5</a> formal (we will examine this later).
+      residue we are seeking for. Temporally, we have no idea whether the
+      series in \(\hat{\zeta} (x, k, \Delta t)\) converge or not, but keep
+      them formal (we will examine this later).
     </p>
     <p>
       For going back to \(q_{\Delta t} (x \rightarrow x + \epsilon)\), we
@@ -4893,7 +4974,7 @@ x^{\alpha_m}} (x, 0) \frac{\partial^m
       application onto \(\varphi\) results in a well-defined residue,
       proportional to \(\Delta t^2\).
     </p>
-    <h2 id="auto-36"><a id="section: Langevin Process with Constant Covariance Has a Path Integral on Alphabet"></a>5.3<span style="margin-left: 1em"></span>Langevin Process with Constant
+    <h2 id="auto-37"><a id="section: Langevin Process with Constant Covariance Has a Path Integral on Alphabet"></a>5.3<span style="margin-left: 1em"></span>Langevin Process with Constant
     Covariance Has a Path Integral on Alphabet<span style="margin-left: 1em"></span></h2>
     <p>
       The path integral <a href="#equation:path integral of markov process">5.2</a> integrates on paths over both \(x\)
@@ -4975,6 +5056,9 @@ b_{\beta} \right),\)
       </tr>
     </table>
     <p>
+      Notice that this is consistent with the result in section <a href="#section: Transition Density of Langevin Process Is Nearly Gaussian">3.7</a>.
+    </p>
+    <p>
       But there is an extra factor \(\sqrt{\det \Sigma (x)}\) out of
       exponential. To match the path integral formulism <a href="#equation:general path integral">5.1</a>, in
       which all integration variables are in the exponential, we have to
@@ -5046,7 +5130,7 @@ k_{\gamma}
       only \(\mathcal{O} (d^2)\) degrees of freedom, so this cannot be done
       except for specific situations).
     </p>
-    <h2 id="auto-37"><a id="section: * Grassmann Variable, Berezin Integral, and Ghosts"></a>5.4<span style="margin-left: 1em"></span>\(\clubsuit\) Grassmann
+    <h2 id="auto-38"><a id="section: * Grassmann Variable, Berezin Integral, and Ghosts"></a>5.4<span style="margin-left: 1em"></span>\(\clubsuit\) Grassmann
     Variable, Berezin Integral, and Ghosts<span style="margin-left: 1em"></span></h2>
     <p>
       We have to briefly introduce Grassmann variable, on which Berezin
@@ -5398,7 +5482,7 @@ R_{\alpha
       The \(C := - (d / 2) (\ln 2 \pi + 3 \ln \Delta t)\) is independent of
       \(x\), \(\zeta\), or \(\eta\), thus is regarded as constant.
     </p>
-    <h1 id="auto-38">Epilogue<span style="margin-left: 1em"></span></h1>
+    <h1 id="auto-39">Epilogue<span style="margin-left: 1em"></span></h1>
     <p>
       In the summer of 2024, I was wondering how a stochastic system relaxes
       to its equilibrium. I did not find a textbook that matched my
