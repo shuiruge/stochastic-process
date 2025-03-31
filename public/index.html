@@ -156,7 +156,7 @@
       </p>
       <p>
         3.8<span style="margin-left: 1em"></span>Stationary Solution of Langevin Process Has
-        Source-Free Degree of Freedom <span style="margin-left: 5mm"></span> <a href="#auto-24">33</a>
+        Source-Free Degree of Freedom <span style="margin-left: 5mm"></span> <a href="#auto-24">34</a>
       </p>
       <p>
         3.9<span style="margin-left: 1em"></span>Detailed Balance of Langevin Process Lacks
@@ -3553,6 +3553,78 @@ t) .\)
       which equals to the right hand side. Thus equation <a href="#equation:langevin transition density approx">3.14</a>
       holds.
     </p>
+    <p>
+      Because of this Gaussian approximation, we can approximate Langevin
+      process using a stochastic difference equation
+    </p>
+    <center>
+      \(\displaystyle X^{\alpha} (t + \Delta t) \approx X^{\alpha} (t) +
+      f^{\alpha} (X) \Delta t +
+\eta^{\alpha} (X),\)
+    </center>
+    <p>
+      where \(\eta (X)\) obeys a normal distribution with zero mean and
+      covariance \(\Sigma (X) \Delta t\) (this is why \(\eta\) depends on
+      \(X\)). We can separate the dependence of \(X\) in \(\eta\) using
+      <strong>Cholesky factorization</strong>.
+    </p>
+    <p>
+      To introduce Cholesky factorization, we fix the argument \(x\) and omit
+      it for simplicity, so \(\Sigma (x)\) is written as \(\Sigma\). Since
+      \(\Sigma\) is symmetric and positive definite (proved in section <a
+      href="#section: Langevin Process Is a Markovian Process with Ncut=2">3.6</a>), we can diagonalize it using an orthogonal matrix \(E\)
+      as \(\Sigma = E^T \Lambda E\), where the diagonal \(\Lambda_{\alpha
+      \beta} = \delta_{\alpha \beta} \lambda_{\beta}\) with \(\lambda_{\beta}
+      > 0\). Define \(\sqrt{\Lambda}_{\alpha \beta} := \delta_{\alpha \beta} 
+      \sqrt{\lambda_{\beta}}\), thus \(\Lambda = \sqrt{\Lambda}^T 
+      \sqrt{\Lambda}\), and \(\Sigma = C^T C\) where \(C := \sqrt{\Lambda}
+      E\). We thus factorize \(\Sigma\) into the &ldquo;square&rdquo; of
+      \(C\). Notice that \(C\) is invertible, and \(C^{- 1} = E^T  \left(
+      \sqrt{\Lambda} \right)^{- 1}\). This was first discovered by French
+      military officer Andr&eacute;-Louis Cholesky, who was killed in battle a
+      few months before the end of World War I, dead at age 31. So, we have
+      (insert the omitted \(x\) again) \(\Sigma (x) = C^T (x) C (x)\) and the
+      stochastic difference equation comes to be
+    </p>
+    <center>
+      \(\displaystyle X^{\alpha} (t + \Delta t) \approx X^{\alpha} (t) +
+      f^{\alpha} (X (t)) \Delta t
++ C^{\alpha}_{\beta} (X (t)) \Delta
+      W^{\beta},\)
+    </center>
+    <p>
+      where \(\Delta W^{\alpha}\) obeys a standard normal distribution (we use
+      \(W\) to indicate Wiener process).
+    </p>
+    <p>
+      In the limit \(\Delta t \rightarrow 0\), the approximation becomes exact
+      (so \(\approx\) is replaced by \(=\)), and the equation turns from
+      difference to be differential, as
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle \mathrm{d} X^{\alpha} (t) =
+        f^{\alpha} (X (t)) \mathrm{d} t +
+C^{\alpha}_{\beta} (X (t))
+        \mathrm{d} W^{\beta} (t)  \)</td>
+        <td align="right">(3.15)</td>
+      </tr>
+    </table>
+    <p>
+      with
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle \mathbb{E} [\mathrm{d} W^{\alpha}
+        (t) \mathrm{d} W^{\beta} (t')] =
+\delta^{\alpha \beta} \delta (t - t')
+        . \)</td>
+        <td align="right">(3.16)</td>
+      </tr>
+    </table>
+    <p>
+      This is the format that Langevin process appears in many textbooks.
+    </p>
     <h2 id="auto-24">3.8<span style="margin-left: 1em"></span>Stationary Solution of Langevin Process Has
     Source-Free Degree of Freedom<span style="margin-left: 1em"></span></h2>
     <p>
@@ -3580,7 +3652,7 @@ t) .\)
         \partial_{\beta} (\Sigma^{\alpha \beta}
 (x) \pi (x)) + \nu^{\alpha}
         (x), \)</td>
-        <td align="right">(3.15)</td>
+        <td align="right">(3.17)</td>
       </tr>
     </table>
     <p>
@@ -3776,12 +3848,12 @@ t) .\)
         <td width="100%" align="center">\(\displaystyle f^{\alpha} (x) \pi (x) = \frac{1}{2}
         \partial_{\beta} (\Sigma^{\alpha \beta}
 (x) \pi (x)) . \)</td>
-        <td align="right">(3.16)</td>
+        <td align="right">(3.18)</td>
       </tr>
     </table>
     <p>
       Comparing with the stationary solution of Langevin process (equation <a
-      href="#equation:stationary Fokker-Planck equation">3.15</a>), the source-free vector field \(\nu\) is absent here.
+      href="#equation:stationary Fokker-Planck equation">3.17</a>), the source-free vector field \(\nu\) is absent here.
       Recall in section <a href="#section: Detailed Balance Provides Stationary Distribution">2.4</a> where detailed balance condition was
       first encountered, we said that detailed balance condition is stronger
       than just being stationary. Now, in Langevin process, this becomes
@@ -4311,7 +4383,7 @@ x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
       and the random variable \(\Delta W^{\alpha}\) obeys a normal
       distribution with zero mean and variance \(\Delta t\). This specific
       transition density satisfies detailed balance condition (see section <a
-      href="#section: Detailed Balance of Langevin Process Lacks Source-Free Degree of Freedom">3.9</a>, especially the equation <a href="#equation:detailed balance condition for Langevin">3.16</a>). Then, theorem
+      href="#section: Detailed Balance of Langevin Process Lacks Source-Free Degree of Freedom">3.9</a>, especially the equation <a href="#equation:detailed balance condition for Langevin">3.18</a>). Then, theorem
       <a href="#theorem: relaxation">2.1</a> claims that the iteration <a href="#equation:langevin iteration">4.9</a> will relax
       the samples towards the stationary distribution, which has density
       function proportional to \(\exp (- S (x, \theta))\). There is not need
@@ -5047,26 +5119,22 @@ b_{\beta} \right),\)
       which all integration variables are in the exponential, we have to
       convert the factor into exponential too. It is found that only when
       \(\Sigma\) is constant can we do so (we left the general situation to
-      section <a href="#section: * Grassmann Variable, Berezin Integral, and Ghosts">5.4</a>). As a real symmetric matrix, the constant
-      \(\Sigma\) can be diagonalized as \(\Sigma = E^T \Lambda E\), where
-      \(E\) is orthogonal and the eigenvalues in \(\Lambda\) are all positive
-      since \(\Sigma\) is positive definite. So, denote \(\sqrt{\Lambda}\) the
-      diagonal matrix with eigenvalues the square roots of those in
-      \(\Lambda\), thus \(\Lambda = \sqrt{\Lambda}^T \sqrt{\Lambda}\) and
-      \(\Sigma = \left( \sqrt{\Lambda} E \right)^T \left( \sqrt{\Lambda} E
-      \right)\). Coordinate transformation \(x \rightarrow x \sqrt{\Lambda}
-      E\) then eliminates the \(\Sigma\) matrix in the exponential, leaving
+      section <a href="#section: * Grassmann Variable, Berezin Integral, and Ghosts">5.4</a>). As a real symmetric matrix, we perform the
+      Cholesky factorization introduced in section <a href="#section: Transition Density of Langevin Process Is Nearly Gaussian">3.7</a> to
+      \(\Sigma\), so that \(\Sigma = C^T C\) for some \(d \times d\) matrix
+      \(C\). Coordinate transformation \(x \rightarrow x C\) (also taken on
+      \(\epsilon\) and \(f\)) then eliminates the \(\Sigma\) matrix in the
+      exponential, leaving
     </p>
     <center>
       \(\displaystyle I (x) = \exp \left( - \frac{\Delta t}{2} \sum_{\alpha =
       1}^d \left[
 \frac{\epsilon^{\alpha}}{\Delta t} - f^{\alpha} (x)
-      \right]^2 + C \right),\)
+      \right]^2 \right),\)
     </center>
     <p>
-      where \(C := - (d / 2) \ln (2 \pi \Delta t) - (1 / 2) \ln \det \Sigma\)
-      is a constant. Plugging \(I (x)\) back to equation <a href="#equation:path integral of markov process">5.2</a>, we
-      find
+      up to a constant term in the exponential. Plugging \(I (x)\) back to
+      equation <a href="#equation:path integral of markov process">5.2</a>, we find
     </p>
     <center>
       \(\displaystyle p (x_N, N \Delta t) = \int \mathrm{D} (x) p (x_0, 0)
@@ -5337,25 +5405,11 @@ k_{\gamma}
       Berezin integral to convert the determinant into exponential.
     </p>
     <p>
-      To introduce Cholesky factorization, we fix the argument \(x\) and omit
-      it for simplicity, so \(\Sigma (x)\) is written as \(\Sigma\). Since
-      \(\Sigma\) is symmetric and positive definite, we can diagonalize it
-      using an orthogonal matrix \(E\) as \(\Sigma = E^T \Lambda E\), where
-      the diagonal \(\Lambda_{\alpha \beta} = \delta_{\alpha \beta}
-      \lambda_{\beta}\) with \(\lambda_{\beta} > 0\). Define
-      \(\sqrt{\Lambda}_{\alpha \beta} := \delta_{\alpha \beta} 
-      \sqrt{\lambda_{\beta}}\), thus \(\Lambda = \sqrt{\Lambda}^T 
-      \sqrt{\Lambda}\), and \(\Sigma = C^T C\) where \(C := \sqrt{\Lambda}
-      E\). We thus factorize \(\Sigma\) into the &ldquo;square&rdquo; of
-      \(C\). This was first discovered by French military officer
-      Andr&eacute;-Louis Cholesky, who was killed in battle a few months
-      before the end of World War I, dead at age 31. Instead of the
-      matrix-valued field \(C\), we use its inverse (since both \(E\) and
-      \(\sqrt{\Lambda}\) are invertible) \(R := C^{- 1}\), thus \(\Sigma^{- 1}
-      = R^T R\), or \((\Sigma^{- 1})_{\alpha \beta} = \sum_{\gamma = 1}^d
-      R_{\gamma \alpha}
-R_{\gamma \beta}\). So, we have (insert the omitted
-      \(x\) again)
+      Introduced in section <a href="#section: Transition Density of Langevin Process Is Nearly Gaussian">3.7</a>, Cholesky factorization
+      decomposes \(\Sigma (x)\) into \(C^T (x) C (x)\). Instead of the
+      matrix-valued field \(C\), it is more convenient to use its inverse \(R
+      (x) := C^{- 1} (x)\), thus \(\Sigma^{- 1} (x) = R^T (x) R (x)\). So, we
+      have
     </p>
     <center>
       \(\displaystyle [\det \Sigma (x)]^{- 1 / 2} = \det R (x),\)

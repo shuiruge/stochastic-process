@@ -2781,6 +2781,67 @@
   which equals to the right hand side. Thus equation
   <reference|equation:langevin transition density approx> holds.
 
+  Because of this Gaussian approximation, we can approximate Langevin process
+  using a stochastic difference equation
+
+  <\equation*>
+    X<rsup|\<alpha\>><around*|(|t+\<Delta\>t|)>\<approx\>X<rsup|\<alpha\>><around*|(|t|)>+f<rsup|\<alpha\>><around*|(|X|)>
+    \<Delta\>t+\<eta\><rsup|\<alpha\>><around*|(|X|)>,
+  </equation*>
+
+  where <math|\<eta\><around*|(|X|)>> obeys a normal distribution with zero
+  mean and covariance <math|\<Sigma\><around*|(|X|)> \<Delta\>t> (this is why
+  <math|\<eta\>> depends on <math|X>). We can separate the dependence of
+  <math|X> in <math|\<eta\>> using <strong|Cholesky factorization>.
+
+  To introduce Cholesky factorization, we fix the argument <math|x> and omit
+  it for simplicity, so <math|\<Sigma\><around*|(|x|)>> is written as
+  <math|\<Sigma\>>. Since <math|\<Sigma\>> is symmetric and positive definite
+  (proved in section <reference|section: Langevin Process Is a Markovian
+  Process with Ncut=2>), we can diagonalize it using an orthogonal matrix
+  <math|E> as <math|\<Sigma\>=E<rsup|T> \<Lambda\> E>, where the diagonal
+  <math|\<Lambda\><rsub|\<alpha\>\<beta\>>=\<delta\><rsub|\<alpha\>\<beta\>>
+  \<lambda\><rsub|\<beta\>>> with <math|\<lambda\><rsub|\<beta\>>\<gtr\>0>.
+  Define <math|<sqrt|\<Lambda\>><rsub|\<alpha\>\<beta\>>\<assign\>\<delta\><rsub|\<alpha\>\<beta\>>
+  <sqrt|\<lambda\><rsub|\<beta\>>>>, thus
+  <math|\<Lambda\>=<sqrt|\<Lambda\>><rsup|T> <sqrt|\<Lambda\>>>, and
+  <math|\<Sigma\>=C<rsup|T> C> where <math|C\<assign\><sqrt|\<Lambda\>> E>.
+  We thus factorize <math|\<Sigma\>> into the \Psquare\Q of <math|C>. Notice
+  that <math|C> is invertible, and <math|C<rsup|-1>=E<rsup|T>
+  <around*|(|<sqrt|\<Lambda\>>|)><rsup|-1>>. This was first discovered by
+  French military officer André-Louis Cholesky, who was killed in battle a
+  few months before the end of World War I, dead at age 31. So, we have
+  (insert the omitted <math|x> again) <math|\<Sigma\><around*|(|x|)>=C<rsup|T><around*|(|x|)>
+  C<around*|(|x|)>> and the stochastic difference equation comes to be
+
+  <\equation*>
+    X<rsup|\<alpha\>><around*|(|t+\<Delta\>t|)>\<approx\>X<rsup|\<alpha\>><around*|(|t|)>+f<rsup|\<alpha\>><around*|(|X<around*|(|t|)>|)>
+    \<Delta\>t+C<rsup|\<alpha\>><rsub|\<beta\>><around*|(|X<around*|(|t|)>|)>\<Delta\>W<rsup|\<beta\>>,
+  </equation*>
+
+  where <math|\<Delta\>W<rsup|\<alpha\>>> obeys a standard normal
+  distribution (we use <math|W> to indicate Wiener process).
+
+  In the limit <math|\<Delta\>t\<rightarrow\>0>, the approximation becomes
+  exact (so <math|\<approx\>> is replaced by <math|=>), and the equation
+  turns from difference to be differential, as
+
+  <\equation>
+    \<mathd\>X<rsup|\<alpha\>><around*|(|t|)>=f<rsup|\<alpha\>><around*|(|X<around*|(|t|)>|)>
+    \<mathd\>t+C<rsup|\<alpha\>><rsub|\<beta\>><around*|(|X<around*|(|t|)>|)>\<mathd\>W<rsup|\<beta\>><around*|(|t|)>
+    <label|equation:langevin equation>
+  </equation>
+
+  with
+
+  <\equation>
+    \<bbb-E\><around*|[|\<mathd\>W<rsup|\<alpha\>><around*|(|t|)>
+    \<mathd\>W<rsup|\<beta\>><around*|(|t<rprime|'>|)>|]>=\<delta\><rsup|\<alpha\>\<beta\>>
+    \<delta\><around*|(|t-t<rprime|'>|)>.<label|equation:langevin equation 2>
+  </equation>
+
+  This is the format that Langevin process appears in many textbooks.
+
   <section|Stationary Solution of Langevin Process Has Source-Free Degree of
   Freedom>
 
@@ -4011,23 +4072,20 @@
   exponential too. It is found that only when <math|\<Sigma\>> is constant
   can we do so (we left the general situation to section <reference|section:
   * Grassmann Variable, Berezin Integral, and Ghosts>). As a real symmetric
-  matrix, the constant <math|\<Sigma\>> can be diagonalized as
-  <math|\<Sigma\>=E<rsup|T>\<Lambda\>E>, where <math|E> is orthogonal and the
-  eigenvalues in <math|\<Lambda\>> are all positive since <math|\<Sigma\>> is
-  positive definite. So, denote <math|<sqrt|\<Lambda\>>> the diagonal matrix
-  with eigenvalues the square roots of those in <math|\<Lambda\>>, thus
-  <math|\<Lambda\>=<sqrt|\<Lambda\>><rsup|T><sqrt|\<Lambda\>>> and
-  <math|\<Sigma\>=<around*|(|<sqrt|\<Lambda\>>E|)><rsup|T><around*|(|<sqrt|\<Lambda\>>E|)>>.
-  Coordinate transformation <math|x\<rightarrow\>x <sqrt|\<Lambda\>>E> then
-  eliminates the <math|\<Sigma\>> matrix in the exponential, leaving
+  matrix, we perform the Cholesky factorization introduced in section
+  <reference|section: Transition Density of Langevin Process Is Nearly
+  Gaussian> to <math|\<Sigma\>>, so that <math|\<Sigma\>=C<rsup|T> C> for
+  some <math|d\<times\>d> matrix <math|C>. Coordinate transformation
+  <math|x\<rightarrow\>x C> (also taken on <math|\<epsilon\>> and <math|f>)
+  then eliminates the <math|\<Sigma\>> matrix in the exponential, leaving
 
   <\equation*>
-    I<around*|(|x|)>=exp<around*|(|-<frac|\<Delta\>t|2><big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|<frac|\<epsilon\><rsup|\<alpha\>>|\<Delta\>t>-f<rsup|\<alpha\>><around*|(|x|)>|]><rsup|2>+C|)>,
+    I<around*|(|x|)>=exp<around*|(|-<frac|\<Delta\>t|2><big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|<frac|\<epsilon\><rsup|\<alpha\>>|\<Delta\>t>-f<rsup|\<alpha\>><around*|(|x|)>|]><rsup|2>|)>,
   </equation*>
 
-  where <math|C\<assign\>-<around*|(|d/2|)>ln<around*|(|2\<mathpi\>\<Delta\>t|)>-<around*|(|1/2|)>
-  ln det \<Sigma\>> is a constant. Plugging <math|I<around*|(|x|)>> back to
-  equation <reference|equation:path integral of markov process>, we find
+  up to a constant term in the exponential. Plugging <math|I<around*|(|x|)>>
+  back to equation <reference|equation:path integral of markov process>, we
+  find
 
   <\equation*>
     p<around*|(|x<rsub|N>,N \<Delta\>t|)>=<big|int>\<mathD\><around*|(|x|)>
@@ -4259,25 +4317,13 @@
   fraction. Then, using Berezin integral to convert the determinant into
   exponential.
 
-  To introduce Cholesky factorization, we fix the argument <math|x> and omit
-  it for simplicity, so <math|\<Sigma\><around*|(|x|)>> is written as
-  <math|\<Sigma\>>. Since <math|\<Sigma\>> is symmetric and positive
-  definite, we can diagonalize it using an orthogonal matrix <math|E> as
-  <math|\<Sigma\>=E<rsup|T> \<Lambda\> E>, where the diagonal
-  <math|\<Lambda\><rsub|\<alpha\>\<beta\>>=\<delta\><rsub|\<alpha\>\<beta\>>
-  \<lambda\><rsub|\<beta\>>> with <math|\<lambda\><rsub|\<beta\>>\<gtr\>0>.
-  Define <math|<sqrt|\<Lambda\>><rsub|\<alpha\>\<beta\>>\<assign\>\<delta\><rsub|\<alpha\>\<beta\>>
-  <sqrt|\<lambda\><rsub|\<beta\>>>>, thus
-  <math|\<Lambda\>=<sqrt|\<Lambda\>><rsup|T> <sqrt|\<Lambda\>>>, and
-  <math|\<Sigma\>=C<rsup|T> C> where <math|C\<assign\><sqrt|\<Lambda\>> E>.
-  We thus factorize <math|\<Sigma\>> into the \Psquare\Q of <math|C>. This
-  was first discovered by French military officer André-Louis Cholesky, who
-  was killed in battle a few months before the end of World War I, dead at
-  age 31. Instead of the matrix-valued field <math|C>, we use its inverse
-  (since both <math|E> and <math|<sqrt|\<Lambda\>>> are invertible)
-  <math|R\<assign\>C<rsup|-1>>, thus <math|\<Sigma\><rsup|-1>=R<rsup|T> R>,
-  or <math|<around*|(|\<Sigma\><rsup|-1>|)><rsub|\<alpha\>\<beta\>>=<big|sum><rsub|\<gamma\>=1><rsup|d>R<rsub|\<gamma\>\<alpha\>>R<rsub|\<gamma\>\<beta\>>>.
-  So, we have (insert the omitted <math|x> again)
+  Introduced in section <reference|section: Transition Density of Langevin
+  Process Is Nearly Gaussian>, Cholesky factorization decomposes
+  <math|\<Sigma\><around*|(|x|)>> into <math|C<rsup|T><around*|(|x|)>
+  C<around*|(|x|)>>. Instead of the matrix-valued field <math|C>, it is more
+  convenient to use its inverse <math|R<around*|(|x|)>\<assign\>C<rsup|-1><around*|(|x|)>>,
+  thus <math|\<Sigma\><rsup|-1><around*|(|x|)>=R<rsup|T><around*|(|x|)>
+  R<around*|(|x|)>>. So, we have
 
   <\equation*>
     <around*|[|det \<Sigma\><around*|(|x|)>|]><rsup|-1/2>=det
@@ -4409,7 +4455,7 @@
     <associate|auto-21|<tuple|3.5|31>>
     <associate|auto-22|<tuple|3.6|32>>
     <associate|auto-23|<tuple|3.7|33>>
-    <associate|auto-24|<tuple|3.8|33>>
+    <associate|auto-24|<tuple|3.8|34>>
     <associate|auto-25|<tuple|3.9|34>>
     <associate|auto-26|<tuple|4|37>>
     <associate|auto-27|<tuple|4.1|37>>
@@ -4446,7 +4492,7 @@
     <associate|equation:data-fitting iteration|<tuple|4.7|40>>
     <associate|equation:data-fitting result|<tuple|4.8|40>>
     <associate|equation:detailed balance condition for
-    Langevin|<tuple|3.16|34>>
+    Langevin|<tuple|3.18|35>>
     <associate|equation:discrete time master equation|<tuple|2.5|14>>
     <associate|equation:discrete time master equation v0|<tuple|2.2|14>>
     <associate|equation:equation:metropolis-hastings|<tuple|2.12|22>>
@@ -4459,8 +4505,10 @@
     <associate|equation:km expansion v2|<tuple|3.9|29>>
     <associate|equation:langevin action constant covariance|<tuple|5.9|47>>
     <associate|equation:langevin action general|<tuple|5.15|50>>
+    <associate|equation:langevin equation|<tuple|3.15|33>>
+    <associate|equation:langevin equation 2|<tuple|3.16|34>>
     <associate|equation:langevin iteration|<tuple|4.9|41>>
-    <associate|equation:langevin process after cholesky|<tuple|5.14|50>>
+    <associate|equation:langevin process after cholesky|<tuple|5.14|49>>
     <associate|equation:langevin transition density approx|<tuple|3.14|33>>
     <associate|equation:langevin transition rate|<tuple|3.12|32>>
     <associate|equation:least-action principle v0|<tuple|4.2|37>>
@@ -4476,7 +4524,7 @@
     <associate|equation:smoothness|<tuple|3.3|24>>
     <associate|equation:smoothness F1|<tuple|3.5|25>>
     <associate|equation:smoothness G1|<tuple|3.6|27>>
-    <associate|equation:stationary Fokker-Planck equation|<tuple|3.15|33>>
+    <associate|equation:stationary Fokker-Planck equation|<tuple|3.17|34>>
     <associate|equation:to ghosts|<tuple|5.8|47>>
     <associate|equation:transition density coef recur|<tuple|5.4|45>>
     <associate|equation:transition density normalization|<tuple|2.1|13>>
