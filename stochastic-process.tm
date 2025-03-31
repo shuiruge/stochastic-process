@@ -2827,16 +2827,14 @@
   turns from difference to be differential, as
 
   <\equation>
-    \<mathd\>X<rsup|\<alpha\>><around*|(|t|)>=f<rsup|\<alpha\>><around*|(|X<around*|(|t|)>|)>
-    \<mathd\>t+C<rsup|\<alpha\>><rsub|\<beta\>><around*|(|X<around*|(|t|)>|)>\<mathd\>W<rsup|\<beta\>><around*|(|t|)>
+    <frac|\<mathd\>X<rsup|\<alpha\>>|\<mathd\>t><around*|(|t|)>=f<rsup|\<alpha\>><around*|(|X<around*|(|t|)>|)>+C<rsup|\<alpha\>><rsub|\<beta\>><around*|(|X<around*|(|t|)>|)><frac|\<mathd\>W<rsup|\<beta\>>|\<mathd\>t><around*|(|t|)>
     <label|equation:langevin equation>
   </equation>
 
   with
 
   <\equation>
-    \<bbb-E\><around*|[|\<mathd\>W<rsup|\<alpha\>><around*|(|t|)>
-    \<mathd\>W<rsup|\<beta\>><around*|(|t<rprime|'>|)>|]>=\<delta\><rsup|\<alpha\>\<beta\>>
+    \<bbb-E\><around*|[|<frac|\<mathd\>W<rsup|\<alpha\>>|\<mathd\>t><around*|(|t|)><frac|\<mathd\>W<rsup|\<beta\>>|\<mathd\>t><around*|(|t<rprime|'>|)>|]>=\<delta\><rsup|\<alpha\>\<beta\>>
     \<delta\><around*|(|t-t<rprime|'>|)>.<label|equation:langevin equation 2>
   </equation>
 
