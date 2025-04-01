@@ -232,7 +232,7 @@
   <math|\<varepsilon\>> gives
 
   <\equation*>
-    H<around*|(|Q<around*|(|x|)>,Q<around*|(|x<rprime|'>|)>|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    H<around*|(|Q<around*|(|x|)>,Q<around*|(|x+\<varepsilon\>|)>|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
     q<around*|(|x\<rightarrow\>y|)><frac|\<partial\>S|\<partial\>x<rsup|\<alpha\>>><around*|(|x,y|)>\<varepsilon\><rsup|\<alpha\>>+<frac|1|2><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
     q<around*|(|x\<rightarrow\>y|)><frac|\<partial\><rsup|2>S|\<partial\>x<rsup|\<alpha\>>\<partial\>x<rsup|\<beta\>>><around*|(|x,y|)>\<varepsilon\><rsup|\<alpha\>>\<varepsilon\><rsup|\<beta\>>+\<omicron\><around*|(|\<varepsilon\><rsup|2>|)>.
   </equation*>
@@ -240,17 +240,22 @@
   Or simply,
 
   <\equation*>
-    H<around*|(|Q<around*|(|x|)>,Q<around*|(|x<rprime|'>|)>|)>=\<bbb-E\><rsub|y\<sim\>Q<around*|(|x|)>><around*|[|<frac|\<partial\>S|\<partial\>x<rsup|\<alpha\>>><around*|(|x,y|)>|]>\<varepsilon\><rsup|\<alpha\>>+<frac|1|2>\<bbb-E\><rsub|y\<sim\>Q<around*|(|x|)>><around*|[|<frac|\<partial\><rsup|2>S|\<partial\>x<rsup|\<alpha\>>\<partial\>x<rsup|\<beta\>>><around*|(|x,y|)>|]>\<varepsilon\><rsup|\<alpha\>>\<varepsilon\><rsup|\<beta\>>+\<omicron\><around*|(|\<varepsilon\><rsup|2>|)>.
+    H<around*|(|Q<around*|(|x|)>,Q<around*|(|x+\<varepsilon\>|)>|)>=\<bbb-E\><rsub|y\<sim\>Q<around*|(|x|)>><around*|[|<frac|\<partial\>S|\<partial\>x<rsup|\<alpha\>>><around*|(|x,y|)>|]>\<varepsilon\><rsup|\<alpha\>>+<frac|1|2>\<bbb-E\><rsub|y\<sim\>Q<around*|(|x|)>><around*|[|<frac|\<partial\><rsup|2>S|\<partial\>x<rsup|\<alpha\>>\<partial\>x<rsup|\<beta\>>><around*|(|x,y|)>|]>\<varepsilon\><rsup|\<alpha\>>\<varepsilon\><rsup|\<beta\>>+\<omicron\><around*|(|\<varepsilon\><rsup|2>|)>.
   </equation*>
 
-  \;
+  The first term in the right hand side vanishes, because
 
-  For the first term, as it was calculated in the previous section, it
-  vanishes in the case of Langevin process with constant covariance.
-  <with|color|red|Is this a universal property?>
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    q<around*|(|x\<rightarrow\>y|)><frac|\<partial\>S|\<partial\>x<rsup|\<alpha\>>><around*|(|x,y|)>=-<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    q<around*|(|x\<rightarrow\>y|)><frac|\<partial\>|\<partial\>x<rsup|\<alpha\>>>ln
+    q<around*|(|x\<rightarrow\>y|)>=-<frac|\<partial\>|\<partial\>x<rsup|\<alpha\>>><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    q<around*|(|x\<rightarrow\>y|)>
+  </equation*>
 
-  For the second term, if regarding <math|x> as parameter, then
-  <strong|Fisher matrix>, which is defined by
+  which vanishes because <math|<big|int>\<mathd\>y
+  q<around*|(|x\<rightarrow\>y|)>=1>. For the second term, if regarding
+  <math|x> as parameter, then <strong|Fisher matrix>, which is defined by
 
   <\equation*>
     \<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|x|)>\<assign\><frac|\<partial\><rsup|2>|\<partial\>x<rsup|\<alpha\>>\<partial\>x<rsup|\<beta\>>><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
@@ -258,6 +263,11 @@
   </equation*>
 
   is evaluated to be <math|\<bbb-E\><rsub|y\<sim\>Q<around*|(|x|)>><around*|[|<around*|(|\<partial\><rsup|2>S/\<partial\>x<rsup|\<alpha\>>\<partial\>x<rsup|\<beta\>>|)><around*|(|x,y|)>|]>>.
+  So, we find
+
+  <\equation>
+    H<around*|(|Q<around*|(|x|)>,Q<around*|(|x+\<varepsilon\>|)>|)>=<frac|1|2>\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|x|)>\<varepsilon\><rsup|\<alpha\>>\<varepsilon\><rsup|\<beta\>>+\<omicron\><around*|(|\<varepsilon\><rsup|2>|)>.
+  </equation>
 
   <section|What Characterizes the Influence between Components?>
 
@@ -425,16 +435,16 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|1.9|?>>
+    <associate|auto-10|<tuple|1.9|5>>
     <associate|auto-2|<tuple|1.1|1>>
     <associate|auto-3|<tuple|1.2|1>>
     <associate|auto-4|<tuple|1.3|2>>
     <associate|auto-5|<tuple|1.4|3>>
-    <associate|auto-6|<tuple|1.5|4>>
+    <associate|auto-6|<tuple|1.5|3>>
     <associate|auto-7|<tuple|1.6|4>>
-    <associate|auto-8|<tuple|1.7|5>>
+    <associate|auto-8|<tuple|1.7|4>>
     <associate|auto-9|<tuple|1.8|5>>
-    <associate|equation:influence|<tuple|1.1|3>>
+    <associate|equation:influence|<tuple|1.2|3>>
     <associate|footnote-1.1|<tuple|1.1|5>>
     <associate|footnr-1.1|<tuple|1.1|5>>
   </collection>
@@ -458,23 +468,27 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-4>
 
-      1.4<space|2spc>What Characterizes the Influence between Components?
+      1.4<space|2spc>Variation of Transition Density (Version 2)
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-5>
 
-      1.5<space|2spc>Power-Law Merges from Scale-Invariance
+      1.5<space|2spc>What Characterizes the Influence between Components?
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-6>
 
-      1.6<space|2spc>Try to Solve RGE <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      1.6<space|2spc>Power-Law Merges from Scale-Invariance
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-7>
 
-      1.7<space|2spc> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      1.7<space|2spc>Try to Solve RGE <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-8>
 
-      1.8<space|2spc>Evolution Satisfies Detailed Balance Condition?
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      1.8<space|2spc> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-9>
+
+      1.9<space|2spc>Evolution Satisfies Detailed Balance Condition?
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-10>
     </associate>
   </collection>
 </auxiliary>
