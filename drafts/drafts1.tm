@@ -170,24 +170,12 @@
 
   So, a shift from <math|x\<rightarrow\>x<rprime|'>> does shift the
   <math|Q<rsub|\<Delta\>t>>, but the difference is
-  <math|<with|font|cal|O><around*|(|\<varepsilon\><rsup|2>|)>>. This is true,
-  since
-
-  <\align>
-    <tformat|<table|<row|<cell|>|<cell|lim<rsub|x<rprime|'>\<rightarrow\>x><frac|\<partial\>|\<partial\>x<rprime|'><rsup|\<alpha\>>>H<around*|(|Q<rsub|\<Delta\>t><around*|(|x|)>,Q<rsub|\<Delta\>t><around*|(|x<rprime|'>|)>|)>>>|<row|<cell|=>|<cell|-lim<rsub|x<rprime|'>\<rightarrow\>x><big|int>\<mathd\>x
-    q<rsub|\<Delta\>t><around*|(|y\|x|)><frac|\<partial\>|\<partial\>x<rprime|'><rsup|\<alpha\>>>ln
-    q<rsub|\<Delta\>t><around*|(|y\|x<rprime|'>|)>>>|<row|<cell|=>|<cell|-lim<rsub|x<rprime|'>\<rightarrow\>x><big|int>\<mathd\>x
-    <frac|q<rsub|\<Delta\>t><around*|(|y\|x|)>|q<rsub|\<Delta\>t><around*|(|y\|x<rprime|'>|)>><frac|\<partial\>q<rsub|\<Delta\>t>|\<partial\>x<rprime|'><rsup|\<alpha\>>><around*|(|y\|x<rprime|'>|)>>>|<row|<cell|=>|<cell|-<big|int>\<mathd\>x
-    <frac|\<partial\>q<rsub|\<Delta\>t>|\<partial\>x<rsup|\<alpha\>>><around*|(|y\|x|)>,>>>>
-  </align>
-
-  which vanishes because it is a boundary term on <math|\<bbb-R\><rsup|d>>.
-  This is the same in deriving the Euler-Lagrange equation.
+  <math|<with|font|cal|O><around*|(|\<varepsilon\><rsup|2>|)>>.
 
   Thus, we have to work out the second order of <math|\<varepsilon\>>.
 
   <\equation*>
-    H<around*|(|Q<rsub|\<Delta\>t><around*|(|x|)>,Q<rsub|\<Delta\>t><around*|(|x<rprime|'>|)>|)>=\<varepsilon\>\<bbb-E\><around*|[|<frac|\<partial\>S|\<partial\>x<rsup|\<alpha\>>><around*|(|x,y|)>|]>+<frac|\<varepsilon\><rsup|2>|2>\<bbb-E\><around*|[|<frac|\<partial\><rsup|2>S|\<partial\><around*|(|x<rsup|\<alpha\>>|)><rsup|2>><around*|(|x,y|)>|]>+\<omicron\><around*|(|\<varepsilon\><rsup|2>|)>.
+    H<around*|(|Q<rsub|\<Delta\>t><around*|(|x|)>,Q<rsub|\<Delta\>t><around*|(|x<rprime|'>|)>|)>=\<varepsilon\>\<bbb-E\><rsub|Y><around*|[|<frac|\<partial\>S|\<partial\>x<rsup|\<alpha\>>><around*|(|x,y|)>|]>+<frac|\<varepsilon\><rsup|2>|2>\<bbb-E\><rsub|Y><around*|[|<frac|\<partial\><rsup|2>S|\<partial\><around*|(|x<rsup|\<alpha\>>|)><rsup|2>><around*|(|x,y|)>|]>+\<omicron\><around*|(|\<varepsilon\><rsup|2>|)>.
   </equation*>
 
   Using Langevin process as example again, we have
@@ -208,6 +196,68 @@
   in this expression. In fact, the relative entropy
   <math|H<around*|(|Q<rsub|\<Delta\>t><around*|(|x|)>,Q<rsub|\<Delta\>t><around*|(|x<rprime|'>|)>|)>>
   is not well-defined when <math|\<Delta\>t\<rightarrow\>0>.>
+
+  <\with|color|dark green>
+    It is found that, when <math|f=0> (so that we can take
+    <math|\<Delta\>t\<rightarrow\>+\<infty\>>),
+
+    <\equation*>
+      lim<rsub|\<Delta\>t\<rightarrow\>+\<infty\>>H<around*|(|Q<rsub|\<Delta\>t><around*|(|x|)>,Q<rsub|\<Delta\>t><around*|(|x<rprime|'>|)>|)>=0.
+    </equation*>
+
+    Namely, the effect decreases in long term.
+  </with>
+
+  <section|Variation of Transition Density (Version 2)>
+
+  Compute the difference between conditional distribution
+  <math|Q<around*|(|x|)>> and <math|Q<around*|(|x<rprime|'>|)>> using
+  relative entropy
+
+  <\equation*>
+    H<around*|(|Q<around*|(|x|)>,Q<around*|(|x<rprime|'>|)>|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    q<around*|(|x\<rightarrow\>y|)>ln<frac|q<around*|(|x\<rightarrow\>y|)>|q<around*|(|x\<rightarrow\>y|)>>.
+  </equation*>
+
+  Define <math|S> by <math|S<around*|(|x,y|)>\<assign\>-ln
+  q<around*|(|x\<rightarrow\>y|)>>, then it becomes
+
+  <\equation*>
+    H<around*|(|Q<around*|(|x|)>,Q<around*|(|x<rprime|'>|)>|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    q<around*|(|x\<rightarrow\>y|)> <around*|[|S<around*|(|x<rprime|'>,y|)>-S<around*|(|x,y|)>|]>.
+  </equation*>
+
+  Consider a variation <math|x<rprime|'>=x+\<varepsilon\>>, where
+  <math|\<varepsilon\>\<in\>\<bbb-R\><rsup|d>>. Thus, Taylor expand by
+  <math|\<varepsilon\>> gives
+
+  <\equation*>
+    H<around*|(|Q<around*|(|x|)>,Q<around*|(|x<rprime|'>|)>|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    q<around*|(|x\<rightarrow\>y|)><frac|\<partial\>S|\<partial\>x<rsup|\<alpha\>>><around*|(|x,y|)>\<varepsilon\><rsup|\<alpha\>>+<frac|1|2><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    q<around*|(|x\<rightarrow\>y|)><frac|\<partial\><rsup|2>S|\<partial\>x<rsup|\<alpha\>>\<partial\>x<rsup|\<beta\>>><around*|(|x,y|)>\<varepsilon\><rsup|\<alpha\>>\<varepsilon\><rsup|\<beta\>>+\<omicron\><around*|(|\<varepsilon\><rsup|2>|)>.
+  </equation*>
+
+  Or simply,
+
+  <\equation*>
+    H<around*|(|Q<around*|(|x|)>,Q<around*|(|x<rprime|'>|)>|)>=\<bbb-E\><rsub|y\<sim\>Q<around*|(|x|)>><around*|[|<frac|\<partial\>S|\<partial\>x<rsup|\<alpha\>>><around*|(|x,y|)>|]>\<varepsilon\><rsup|\<alpha\>>+<frac|1|2>\<bbb-E\><rsub|y\<sim\>Q<around*|(|x|)>><around*|[|<frac|\<partial\><rsup|2>S|\<partial\>x<rsup|\<alpha\>>\<partial\>x<rsup|\<beta\>>><around*|(|x,y|)>|]>\<varepsilon\><rsup|\<alpha\>>\<varepsilon\><rsup|\<beta\>>+\<omicron\><around*|(|\<varepsilon\><rsup|2>|)>.
+  </equation*>
+
+  \;
+
+  For the first term, as it was calculated in the previous section, it
+  vanishes in the case of Langevin process with constant covariance.
+  <with|color|red|Is this a universal property?>
+
+  For the second term, if regarding <math|x> as parameter, then
+  <strong|Fisher matrix>, which is defined by
+
+  <\equation*>
+    \<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|x|)>\<assign\><frac|\<partial\><rsup|2>|\<partial\>x<rsup|\<alpha\>>\<partial\>x<rsup|\<beta\>>><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    q<around*|(|x\<rightarrow\>y|)> ln<frac|1|q<around*|(|x\<rightarrow\>y|)>>.
+  </equation*>
+
+  is evaluated to be <math|\<bbb-E\><rsub|y\<sim\>Q<around*|(|x|)>><around*|[|<around*|(|\<partial\><rsup|2>S/\<partial\>x<rsup|\<alpha\>>\<partial\>x<rsup|\<beta\>>|)><around*|(|x,y|)>|]>>.
 
   <section|What Characterizes the Influence between Components?>
 
@@ -385,11 +435,8 @@
     <associate|auto-8|<tuple|1.7|5>>
     <associate|auto-9|<tuple|1.8|5>>
     <associate|equation:influence|<tuple|1.1|3>>
-    <associate|footnote-1|<tuple|1|?>>
     <associate|footnote-1.1|<tuple|1.1|5>>
-    <associate|footnote-1.2|<tuple|1.2|?>>
     <associate|footnr-1.1|<tuple|1.1|5>>
-    <associate|footnr-1.2|<tuple|1.2|?>>
   </collection>
 </references>
 
