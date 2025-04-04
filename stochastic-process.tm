@@ -156,9 +156,14 @@
     Integral, and Ghosts <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-38>
 
+    5.5<space|2spc><with|mode|math|\<spadesuit\>> Fisher Matrix Characterizes
+    Information Propagation in a Stochastic System
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-39>
+
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|Epilogue>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-39><vspace|0.5fn>
+    <no-break><pageref|auto-40><vspace|0.5fn>
   </table-of-contents>
 
   <prologue>
@@ -174,7 +179,8 @@
   distribution and comparing data-fitting with least-action principle
   (chapter <reference|section: Least-Action Principle>). Readers may omit the
   sections in which the titles start with <math|\<clubsuit\>>. They are
-  interesting digressions.
+  interesting digressions. Also the sections start with <math|\<spadesuit\>>
+  which contains the materials for future investigation.
 
   The mathematical techniques employed here will not go beyond the basic
   calculus (Taylor expansion, improper integral, and integration by parts)
@@ -3595,10 +3601,18 @@
 
   <chapter|Path Integral>
 
+  In this chapter, we write down the path integral formulation for generic
+  Markovian process. We find that the path integral is taken on an extended
+  space. We then consider the Langevin process as an instance, for which the
+  extended components may be analytically marginalized.
+
   <section|Conventions in This Chapter>
 
   Follow the conventions in chapter <reference|section: Kramers-Moyal
-  Expansion and Langevin Process>.
+  Expansion and Langevin Process>. Briefly, the alphabet is an Euclidean
+  space <math|\<bbb-R\><rsup|d>>. We use Einstein's convention to simplify
+  notations. And notation <math|p<around*|(|x\<rightarrow\>y|)>> is used for
+  denoting the conditional density function <math|p<around*|(|y\|x|)>>.
 
   <section|Markovian Process with Euclidean Alphabet Can Be Formulated as
   Path Integral><label|section: Markovian Process with Euclidean Alphabet Can
@@ -3627,9 +3641,12 @@
 
   Path integral formulation was found by Paul Dirac in 1933 who was trying to
   using Lagrangian in quantum mechanism. It was then developed by physicist
-  Richard Feynman and mathematician Mark Kac in 1947. Now, path integral is
-  applied not only to quantum field theory, but also many other areas such as
-  stochastic process. Path integral has the general formalism
+  Richard Feynman and mathematician Mark Kac in 1947.<\footnote>
+    <with|font-shape|italic|On Distributions of Certain Wiener Functionals>
+    by M. Kac, 1947. DOI: <hlink|10.2307/1990512|https://www.ams.org/journals/tran/1949-065-01/S0002-9947-1949-0027960-X/>.
+  </footnote> Now, path integral is applied not only to quantum field theory,
+  but also many other areas such as stochastic process. Path integral has the
+  general formalism
 
   <\equation>
     <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|0>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N-1>
@@ -3715,10 +3732,10 @@
 
   \ where the action is
 
-  <\equation*>
+  <\equation>
     S<around*|(|x,k|)>=-<big|sum><rsub|i=0><rsup|N-1><around*|{|\<mathi\><around*|(|k<rsub|i>|)><rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>><rsub|i+1>-x<rsub|i><rsup|\<alpha\>>|)>+
     <wide|r|^><around*|(|x<rsub|i>,k<rsub|i>|)>\<Delta\>t|}>.
-  </equation*>
+  </equation>
 
   If we Taylor expand <math|<wide|r|^><around*|(|x,k|)>> by <math|k> at the
   origin, then the coefficient is
@@ -3746,15 +3763,18 @@
   terminates at <math|N<rsub|cut>>. Then, the action becomes
 
   <\equation>
-    S<around*|(|x,k|)>=-<big|sum><rsub|i=0><rsup|N-1>\<Delta\>t<around*|{|\<mathi\><around*|(|k<rsub|i>|)><rsub|\<alpha\>><around*|(|<frac|x<rsup|\<alpha\>><rsub|i+1>-x<rsub|i><rsup|\<alpha\>>|\<Delta\>t>|)>+<big|sum><rsub|n=1><rsup|N<rsub|cut>><frac|<around*|(|-\<mathi\>|)><rsup|n>|n!>K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x<rsub|i>|)><around*|(|k<rsub|i>|)><rsub|\<alpha\><rsub|1>>\<cdots\><around*|(|k<rsub|i>|)><rsub|\<alpha\><rsub|n>>|}>.<label|equation:action
+    S<around*|(|x,k|)>=-<big|sum><rsub|i=0><rsup|N-1>\<Delta\>t<around*|{|\<mathi\><around*|(|<frac|x<rsup|\<alpha\>><rsub|i+1>-x<rsub|i><rsup|\<alpha\>>|\<Delta\>t>-K<rsub|1><rsup|\<alpha\>><around*|(|x<rsub|i>|)>|)><around*|(|k<rsub|i>|)><rsub|\<alpha\>>+<big|sum><rsub|n=2><rsup|N<rsub|cut>><frac|<around*|(|-\<mathi\>|)><rsup|n>|n!>K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x<rsub|i>|)><around*|(|k<rsub|i>|)><rsub|\<alpha\><rsub|1>>\<cdots\><around*|(|k<rsub|i>|)><rsub|\<alpha\><rsub|n>>|}>.<label|equation:action
     of markovian process>
   </equation>
 
   \;
 
   The path is a poly-line on <math|\<bbb-R\><rsup|2d>> (involving both
-  <math|x\<in\>\<bbb-R\><rsup|d>> and <math|k\<in\>\<bbb-R\><rsup|d>>). But
-  in a specific situation where <math|N<rsub|cut>=2> and
+  <math|x\<in\>\<bbb-R\><rsup|d>> and <math|k\<in\>\<bbb-R\><rsup|d>>).<\footnote>
+    Analogy to classical mechanics, the <math|k>-components can be seen as
+    momenta. Then, the <math|\<bbb-R\><rsup|2d>> is regarded as a \Pphase
+    space\Q.
+  </footnote> But in a specific situation where <math|N<rsub|cut>=2> and
   <math|K<rsub|2><around*|(|x|)>> is constant (matrix), the
   <math|k>-components can be analytically marginalized (section
   <reference|section: Langevin Process with Constant Covariance Has a Path
@@ -4399,6 +4419,113 @@
   \<Delta\>t|)>> is independent of <math|x>, <math|\<zeta\>>, or
   <math|\<eta\>>, thus is regarded as constant.
 
+  <section|<math|\<spadesuit\>> Fisher Matrix Characterizes Information
+  Propagation in a Stochastic System><label|section: Fisher Matrix
+  Characterizes Information Propagation in a Stochastic System>
+
+  Now in a try autumn day, you stand on the open ground, looking at a
+  starling flock flying under the blue sky. Suddenly, an eagle dives into the
+  flock. Some bird in the flock first notices the danger, trying to avoid by
+  turning direction. Other birds in the neighbor notice the behavior, may
+  follow it too, even though they have not seen the diving eagle yet. Then
+  from neighbors to neighbors, the danger signal may soon spread in the
+  flock. The fact will not be so because each bird has some degree of
+  randomness (or free will). Because the random movement itself is another
+  signal (or noise) to propagate in the flock, it pollutes the danger signal.
+  This randomness, however, is essential for a flock to survive. It assigns
+  flexibility to the flock so that eagles cannot predict the direction it
+  moves. In reality, the connection between the neighbors and the randomness
+  of each individual are properly balanced, so that the flock has sufficient
+  flexibility and a danger signal can propagate far enough within the flock.
+
+  This phenomenon appears everywhere in Nature: a group of individuals (such
+  as a starling flock or an ant colony) behaves like an \Pintelligent\Q
+  agent, because of the elaborate balance between determinacy and randomness.
+  It is a typical stochastic system that can be described using the
+  techniques developed so far.
+
+  To investigate how far information propagate in a stochastic system, we
+  consider the transition density <math|q<rsub|t><around*|(|x\<rightarrow\>y|)>>.
+  It describes the probability (or portion) that the system transits from
+  <math|x> to <math|y> after time <math|t>. An initial perturbation
+  <math|x\<rightarrow\>x+\<varepsilon\>> will affect the final distribution
+  at time <math|t>. Following section <reference|section: Least-Action
+  Principle of Distribution Has No Redundancy>, the (time-dependent) action
+  is defined to be <math|S<rsub|t><around*|(|x,y|)>\<assign\>-ln
+  q<rsub|t><around*|(|x\<rightarrow\>y|)>>. The difference in the
+  distribution after time <math|t> is given by the relative entropy
+
+  <\equation*>
+    H<around*|(|Q<rsub|t><around*|(|x|)>,Q<rsub|t><around*|(|x+\<varepsilon\>|)>|)>=<big|int>\<mathd\>y
+    q<rsub|t><around*|(|x\<rightarrow\>y|)>
+    ln<frac|q<rsub|t><around*|(|x\<rightarrow\>y|)>|q<rsub|t><around*|(|x+\<varepsilon\>\<rightarrow\>y|)>>=\<bbb-E\><rsub|y\<sim\>Q<rsub|t><around*|(|x|)>><around*|[|S<rsub|t><around*|(|x+\<varepsilon\>,y|)>-S<rsub|t><around*|(|x,y|)>|]>.
+  </equation*>
+
+  Taylor expansion by <math|\<varepsilon\>> at origin gives
+
+  <\equation*>
+    H<around*|(|Q<rsub|t><around*|(|x|)>,Q<rsub|t><around*|(|x+\<varepsilon\>|)>|)>=\<bbb-E\><rsub|y\<sim\>Q<rsub|t><around*|(|x|)>><around*|[|<frac|\<partial\>S<rsub|t>|\<partial\>x<rsup|\<alpha\>>><around*|(|x,y|)>|]>\<varepsilon\><rsup|\<alpha\>>+<frac|1|2>\<bbb-E\><rsub|y\<sim\>Q<rsub|t><around*|(|x|)>><around*|[|<frac|\<partial\><rsup|2>S<rsub|t>|\<partial\>x<rsup|\<alpha\>>\<partial\>x<rsup|\<beta\>>><around*|(|x,y|)>|]>\<varepsilon\><rsup|\<alpha\>>\<varepsilon\><rsup|\<beta\>>+\<omicron\><around*|(|\<varepsilon\><rsup|2>|)>.
+  </equation*>
+
+  The first term in the right hand side vanishes, because it is
+
+  <\equation*>
+    -<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    q<rsub|t><around*|(|x\<rightarrow\>y|)><frac|\<partial\>|\<partial\>x<rsup|\<alpha\>>>ln
+    q<rsub|t><around*|(|x\<rightarrow\>y|)>=-<frac|\<partial\>|\<partial\>x<rsup|\<alpha\>>><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    q<rsub|t><around*|(|x\<rightarrow\>y|)>=0,
+  </equation*>
+
+  where we used the normalization <math|<big|int>\<mathd\>y
+  q<rsub|t><around*|(|x\<rightarrow\>y|)>=1> for any <math|x>. For the second
+  term, define
+
+  <\equation*>
+    \<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|x,t|)>\<assign\>\<bbb-E\><rsub|y\<sim\>Q<rsub|t><around*|(|x|)>><around*|[|<frac|\<partial\><rsup|2>S<rsub|t>|\<partial\>x<rsup|\<alpha\>>\<partial\>x<rsup|\<beta\>>><around*|(|x,y|)>|]>,
+  </equation*>
+
+  then we find
+
+  <\equation*>
+    H<around*|(|Q<rsub|t><around*|(|x|)>,Q<rsub|t><around*|(|x+\<varepsilon\>|)>|)>=<frac|1|2>\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|x,t|)>\<varepsilon\><rsup|\<alpha\>>\<varepsilon\><rsup|\<beta\>>+\<omicron\><around*|(|\<varepsilon\><rsup|2>|)>.
+  </equation*>
+
+  The matrix-valued field <math|\<cal-F\>> is called <strong|Fisher
+  matrix>.<\footnote>
+    If we regard the space where the distribution
+    <math|Q<rsub|t><around*|(|x|)>> lives as a Riemannian space, then the
+    Fisher matrix <math|\<cal-F\>> serves as a (time-dependent) metric of the
+    Riemannian space. You may argue that relative entropy is not a distance,
+    because it is not symmetric. Indeed, generally
+    <math|H<around*|(|Q<rsub|t><around*|(|x|)>,Q<rsub|t><around*|(|x+\<varepsilon\>|)>|)>\<neq\>H<around*|(|Q<rsub|t><around*|(|x+\<varepsilon\>|)>,Q<rsub|t><around*|(|x|)>|)>>.
+    But, we can consider its symmetric form
+
+    <\equation*>
+      D<rsub|JS><around*|(|Q<rsub|t><around*|(|x|)>,Q<rsub|t><around*|(|x+\<varepsilon\>|)>|)>\<assign\><frac|1|2><around*|[|H<around*|(|Q<rsub|t><around*|(|x|)>,Q<rsub|t><around*|(|x+\<varepsilon\>|)>|)>+H<around*|(|Q<rsub|t><around*|(|x+\<varepsilon\>|)>,Q<rsub|t><around*|(|x|)>|)>|]>,
+    </equation*>
+
+    then <math|D<rsub|JS>>, named by <strong|Jensen-Shannon distance>, is
+    indeed a distance. It can be shown that, again,
+
+    <\equation*>
+      D<rsub|JS><around*|(|Q<rsub|t><around*|(|x|)>,Q<rsub|t><around*|(|x+\<varepsilon\>|)>|)>=<frac|1|2>\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|x,t|)>\<varepsilon\><rsup|\<alpha\>>\<varepsilon\><rsup|\<beta\>>+\<omicron\><around*|(|\<varepsilon\><rsup|2>|)>.
+    </equation*>
+  </footnote>
+
+  As an example, consider the Wiener process introduced in section
+  <reference|section: Randomness Appears in the Second Moment of Transition
+  Rate>. Its transition density is
+
+  <\equation*>
+    q<rsub|t><around*|(|x\<rightarrow\>y|)>=<big|prod><rsub|\<alpha\>=1><rsup|d><frac|1|<sqrt|2\<mathpi\>t>>exp<around*|(|-<frac|1|2t><around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><rsup|2>|)>.
+  </equation*>
+
+  So, it has action <math|S<rsub|t><around*|(|x,y|)>=<around*|(|1/2t|)><big|sum><rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><rsup|2>>,
+  thus its Fisher matrix is evaluated to be
+  <math|\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|x,t|)>=\<delta\><rsup|\<alpha\>\<beta\>>/t>.
+  It decays with <math|t> increasing, indicating that the initial information
+  diminishes during the propagation or evolution.
+
   <epilogue>
 
   In the summer of 2024, I was wondering how a stochastic system relaxes to
@@ -4450,10 +4577,10 @@
     <associate|auto-19|<tuple|3.3|28>>
     <associate|auto-2|<tuple|1|9>>
     <associate|auto-20|<tuple|3.4|30>>
-    <associate|auto-21|<tuple|3.5|31>>
+    <associate|auto-21|<tuple|3.5|30>>
     <associate|auto-22|<tuple|3.6|32>>
-    <associate|auto-23|<tuple|3.7|33>>
-    <associate|auto-24|<tuple|3.8|34>>
+    <associate|auto-23|<tuple|3.7|32>>
+    <associate|auto-24|<tuple|3.8|33>>
     <associate|auto-25|<tuple|3.9|34>>
     <associate|auto-26|<tuple|4|37>>
     <associate|auto-27|<tuple|4.1|37>>
@@ -4469,8 +4596,9 @@
     <associate|auto-36|<tuple|5.2.1|45>>
     <associate|auto-37|<tuple|5.3|47>>
     <associate|auto-38|<tuple|5.4|48>>
-    <associate|auto-39|<tuple|5.15|51>>
+    <associate|auto-39|<tuple|5.5|50>>
     <associate|auto-4|<tuple|1.2|9>>
+    <associate|auto-40|<tuple|5.5|53>>
     <associate|auto-5|<tuple|1.3|10>>
     <associate|auto-6|<tuple|1.4|10>>
     <associate|auto-7|<tuple|1.5|11>>
@@ -4483,10 +4611,10 @@
     <associate|equation:K condition|<tuple|3.7|28>>
     <associate|equation:K is uniformly bounded|<tuple|3.2|24>>
     <associate|equation:action of distribution|<tuple|4.5|39>>
-    <associate|equation:action of markovian process|<tuple|5.3|44>>
-    <associate|equation:berezin integral|<tuple|5.13|49>>
-    <associate|equation:berezin integral exp|<tuple|5.10|48>>
-    <associate|equation:berezin integral measurement|<tuple|5.12|49>>
+    <associate|equation:action of markovian process|<tuple|5.4|44>>
+    <associate|equation:berezin integral|<tuple|5.14|49>>
+    <associate|equation:berezin integral exp|<tuple|5.11|48>>
+    <associate|equation:berezin integral measurement|<tuple|5.13|49>>
     <associate|equation:data-fitting iteration|<tuple|4.7|40>>
     <associate|equation:data-fitting result|<tuple|4.8|40>>
     <associate|equation:detailed balance condition for
@@ -4496,18 +4624,18 @@
     <associate|equation:equation:metropolis-hastings|<tuple|2.12|22>>
     <associate|equation:general path integral|<tuple|5.1|43>>
     <associate|equation:generic density|<tuple|4.6|40>>
-    <associate|equation:grassmann integral transform|<tuple|5.11|49>>
+    <associate|equation:grassmann integral transform|<tuple|5.12|49>>
     <associate|equation:harmonic oscillator action|<tuple|4.1|37>>
-    <associate|equation:heat equation|<tuple|3.10|31>>
+    <associate|equation:heat equation|<tuple|3.10|30>>
     <associate|equation:km expansion|<tuple|3.8|28>>
     <associate|equation:km expansion v2|<tuple|3.9|29>>
-    <associate|equation:langevin action constant covariance|<tuple|5.9|47>>
-    <associate|equation:langevin action general|<tuple|5.15|50>>
+    <associate|equation:langevin action constant covariance|<tuple|5.10|48>>
+    <associate|equation:langevin action general|<tuple|5.16|50>>
     <associate|equation:langevin equation|<tuple|3.15|33>>
-    <associate|equation:langevin equation 2|<tuple|3.16|34>>
+    <associate|equation:langevin equation 2|<tuple|3.16|33>>
     <associate|equation:langevin iteration|<tuple|4.9|41>>
-    <associate|equation:langevin process after cholesky|<tuple|5.14|49>>
-    <associate|equation:langevin transition density approx|<tuple|3.14|33>>
+    <associate|equation:langevin process after cholesky|<tuple|5.15|50>>
+    <associate|equation:langevin transition density approx|<tuple|3.14|32>>
     <associate|equation:langevin transition rate|<tuple|3.12|32>>
     <associate|equation:least-action principle v0|<tuple|4.2|37>>
     <associate|equation:least-action principle v1|<tuple|4.3|38>>
@@ -4515,22 +4643,22 @@
     <associate|equation:master equation series|<tuple|4.4|39>>
     <associate|equation:master equation v0|<tuple|2.3|14>>
     <associate|equation:metropolis-hastings origin|<tuple|2.13|22>>
-    <associate|equation:path integral I|<tuple|5.7|47>>
+    <associate|equation:path integral I|<tuple|5.8|47>>
     <associate|equation:path integral of markov process|<tuple|5.2|44>>
     <associate|equation:relative entropy derivative|<tuple|2.11|18>>
-    <associate|equation:residue zeta|<tuple|5.5|45>>
+    <associate|equation:residue zeta|<tuple|5.6|45>>
     <associate|equation:smoothness|<tuple|3.3|24>>
     <associate|equation:smoothness F1|<tuple|3.5|25>>
     <associate|equation:smoothness G1|<tuple|3.6|27>>
     <associate|equation:stationary Fokker-Planck equation|<tuple|3.17|34>>
-    <associate|equation:to ghosts|<tuple|5.8|47>>
-    <associate|equation:transition density coef recur|<tuple|5.4|45>>
+    <associate|equation:to ghosts|<tuple|5.9|47>>
+    <associate|equation:transition density coef recur|<tuple|5.5|45>>
     <associate|equation:transition density normalization|<tuple|2.1|13>>
     <associate|equation:transition rate determines transition
     density|<tuple|2.6|16>>
     <associate|equation:transition rate determines transition density
     v2|<tuple|2.7|16>>
-    <associate|equation:wiener process|<tuple|3.11|32>>
+    <associate|equation:wiener process|<tuple|3.11|31>>
     <associate|figure: Least-Action|<tuple|4.1|41>>
     <associate|footnote-1.1|<tuple|1.1|9>>
     <associate|footnote-1.2|<tuple|1.2|9>>
@@ -4546,8 +4674,11 @@
     <associate|footnote-3.4|<tuple|3.4|29>>
     <associate|footnote-3.5|<tuple|3.5|31>>
     <associate|footnote-4.1|<tuple|4.1|38>>
-    <associate|footnote-5.1|<tuple|5.1|46>>
-    <associate|footnote-5.2|<tuple|5.2|50>>
+    <associate|footnote-5.1|<tuple|5.1|43>>
+    <associate|footnote-5.2|<tuple|5.2|45>>
+    <associate|footnote-5.3|<tuple|5.3|46>>
+    <associate|footnote-5.4|<tuple|5.4|50>>
+    <associate|footnote-5.5|<tuple|5.5|51>>
     <associate|footnr-1.1|<tuple|1.1|9>>
     <associate|footnr-1.2|<tuple|1.2|9>>
     <associate|footnr-1.3|<tuple|1.3|10>>
@@ -4562,8 +4693,11 @@
     <associate|footnr-3.4|<tuple|3.4|29>>
     <associate|footnr-3.5|<tuple|3.5|31>>
     <associate|footnr-4.1|<tuple|4.1|38>>
-    <associate|footnr-5.1|<tuple|5.1|46>>
-    <associate|footnr-5.2|<tuple|5.2|50>>
+    <associate|footnr-5.1|<tuple|5.1|43>>
+    <associate|footnr-5.2|<tuple|5.2|45>>
+    <associate|footnr-5.3|<tuple|5.3|46>>
+    <associate|footnr-5.4|<tuple|5.4|50>>
+    <associate|footnr-5.5|<tuple|5.5|51>>
     <associate|section: * Estimation of the Residue|<tuple|5.2.1|45>>
     <associate|section: * Grassmann Variable, Berezin Integral, and
     Ghosts|<tuple|5.4|48>>
@@ -4584,6 +4718,8 @@
     Source-Free Degree of Freedom|<tuple|3.9|34>>
     <associate|section: Example: Metropolis-Hastings
     Algorithm|<tuple|2.7|22>>
+    <associate|section: Fisher Matrix Characterizes Information Propagation
+    in a Stochastic System|<tuple|5.5|50>>
     <associate|section: Kramers\UMoyal Expansion Formulates Transition Rate
     by Its Moments|<tuple|3.3|28>>
     <associate|section: Kramers-Moyal Expansion and Langevin
@@ -4603,7 +4739,7 @@
     <associate|section: Monte-Carlo Simulation and Guarantee of
     Relaxation|<tuple|2.6|19>>
     <associate|section: Randomness Appears in the Second Moment of Transition
-    Rate|<tuple|3.5|31>>
+    Rate|<tuple|3.5|30>>
     <associate|section: Randomness Is Absent in the First Moment of
     Transition Rate|<tuple|3.4|30>>
     <associate|section: Relative Entropy|<tuple|1|9>>
@@ -4612,7 +4748,7 @@
     <associate|section: Shannon Entropy Is Plausible for Discrete Random
     Variable|<tuple|1.3|10>>
     <associate|section: Transition Density of Langevin Process Is Nearly
-    Gaussian|<tuple|3.7|33>>
+    Gaussian|<tuple|3.7|32>>
     <associate|section: Transition Rate Determines Transition
     Density|<tuple|2.3|15>>
     <associate|theorem: relaxation|<tuple|2.1|19>>
@@ -4800,9 +4936,14 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-38>
 
+      5.5<space|2spc><with|mode|<quote|math>|\<spadesuit\>> Fisher Matrix
+      Characterizes Information Propagation in a Stochastic System
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-39>
+
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Epilogue>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-39><vspace|0.5fn>
+      <no-break><pageref|auto-40><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
