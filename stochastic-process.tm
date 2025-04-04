@@ -156,7 +156,7 @@
     Integral, and Ghosts <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-38>
 
-    5.5<space|2spc><with|mode|math|\<spadesuit\>> Fisher Matrix Characterizes
+    5.5<space|2spc><with|mode|math|\<heartsuit\>> Fisher Matrix Characterizes
     Information Propagation in a Stochastic System
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-39>
@@ -179,7 +179,7 @@
   distribution and comparing data-fitting with least-action principle
   (chapter <reference|section: Least-Action Principle>). Readers may omit the
   sections in which the titles start with <math|\<clubsuit\>>. They are
-  interesting digressions. Also the sections start with <math|\<spadesuit\>>
+  interesting digressions. Also the sections start with <math|\<heartsuit\>>,
   which contains the materials for future investigation.
 
   The mathematical techniques employed here will not go beyond the basic
@@ -4419,7 +4419,7 @@
   \<Delta\>t|)>> is independent of <math|x>, <math|\<zeta\>>, or
   <math|\<eta\>>, thus is regarded as constant.
 
-  <section|<math|\<spadesuit\>> Fisher Matrix Characterizes Information
+  <section|<math|\<heartsuit\>> Fisher Matrix Characterizes Information
   Propagation in a Stochastic System><label|section: Fisher Matrix
   Characterizes Information Propagation in a Stochastic System>
 
@@ -4442,17 +4442,18 @@
   as a starling flock or an ant colony) behaves like an \Pintelligent\Q
   agent, because of the elaborate balance between determinacy and randomness.
   It is a typical stochastic system that can be described using the
-  techniques developed so far.
+  techniques we have developed so far.
 
-  To investigate how far information propagate in a stochastic system, we
+  To characterize the information propagation in a stochastic system, we
   consider the transition density <math|q<rsub|t><around*|(|x\<rightarrow\>y|)>>.
   It describes the probability (or portion) that the system transits from
   <math|x> to <math|y> after time <math|t>. An initial perturbation
-  <math|x\<rightarrow\>x+\<varepsilon\>> will affect the final distribution
-  at time <math|t>. Following section <reference|section: Least-Action
-  Principle of Distribution Has No Redundancy>, the (time-dependent) action
-  is defined to be <math|S<rsub|t><around*|(|x,y|)>\<assign\>-ln
-  q<rsub|t><around*|(|x\<rightarrow\>y|)>>. The difference in the
+  <math|x\<rightarrow\>x+\<varepsilon\>> will affect the distribution after
+  time <math|t>. Following section <reference|section: Least-Action Principle
+  of Distribution Has No Redundancy>, the action is defined to be
+  <math|S<rsub|t><around*|(|x,y|)>\<assign\>-ln
+  q<rsub|t><around*|(|x\<rightarrow\>y|)>>, which also depends on time
+  <math|t> and initial state <math|x>. Then, the difference in the
   distribution after time <math|t> is given by the relative entropy
 
   <\equation*>
@@ -4467,16 +4468,16 @@
     H<around*|(|Q<rsub|t><around*|(|x|)>,Q<rsub|t><around*|(|x+\<varepsilon\>|)>|)>=\<bbb-E\><rsub|y\<sim\>Q<rsub|t><around*|(|x|)>><around*|[|<frac|\<partial\>S<rsub|t>|\<partial\>x<rsup|\<alpha\>>><around*|(|x,y|)>|]>\<varepsilon\><rsup|\<alpha\>>+<frac|1|2>\<bbb-E\><rsub|y\<sim\>Q<rsub|t><around*|(|x|)>><around*|[|<frac|\<partial\><rsup|2>S<rsub|t>|\<partial\>x<rsup|\<alpha\>>\<partial\>x<rsup|\<beta\>>><around*|(|x,y|)>|]>\<varepsilon\><rsup|\<alpha\>>\<varepsilon\><rsup|\<beta\>>+\<omicron\><around*|(|\<varepsilon\><rsup|2>|)>.
   </equation*>
 
-  The first term in the right hand side vanishes, because it is
+  The first term in the right hand side vanishes, since
 
   <\equation*>
-    -<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
+    \<bbb-E\><rsub|y\<sim\>Q<rsub|t><around*|(|x|)>><around*|[|<frac|\<partial\>S<rsub|t>|\<partial\>x<rsup|\<alpha\>>><around*|(|x,y|)>|]>=-<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
     q<rsub|t><around*|(|x\<rightarrow\>y|)><frac|\<partial\>|\<partial\>x<rsup|\<alpha\>>>ln
     q<rsub|t><around*|(|x\<rightarrow\>y|)>=-<frac|\<partial\>|\<partial\>x<rsup|\<alpha\>>><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
-    q<rsub|t><around*|(|x\<rightarrow\>y|)>=0,
+    q<rsub|t><around*|(|x\<rightarrow\>y|)>,
   </equation*>
 
-  where we used the normalization <math|<big|int>\<mathd\>y
+  which vanishes because of normalization <math|<big|int>\<mathd\>y
   q<rsub|t><around*|(|x\<rightarrow\>y|)>=1> for any <math|x>. For the second
   term, define
 
@@ -4490,27 +4491,23 @@
     H<around*|(|Q<rsub|t><around*|(|x|)>,Q<rsub|t><around*|(|x+\<varepsilon\>|)>|)>=<frac|1|2>\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|x,t|)>\<varepsilon\><rsup|\<alpha\>>\<varepsilon\><rsup|\<beta\>>+\<omicron\><around*|(|\<varepsilon\><rsup|2>|)>.
   </equation*>
 
-  The matrix-valued field <math|\<cal-F\>> is called <strong|Fisher
-  matrix>.<\footnote>
+  The matrix-valued field <math|\<cal-F\>> is called <strong|Fisher matrix>,
+  named after the British polymath Ronald Fisher.<\footnote>
     If we regard the space where the distribution
-    <math|Q<rsub|t><around*|(|x|)>> lives as a Riemannian space, then the
-    Fisher matrix <math|\<cal-F\>> serves as a (time-dependent) metric of the
-    Riemannian space. You may argue that relative entropy is not a distance,
-    because it is not symmetric. Indeed, generally
-    <math|H<around*|(|Q<rsub|t><around*|(|x|)>,Q<rsub|t><around*|(|x+\<varepsilon\>|)>|)>\<neq\>H<around*|(|Q<rsub|t><around*|(|x+\<varepsilon\>|)>,Q<rsub|t><around*|(|x|)>|)>>.
+    <math|Q<rsub|t><around*|(|x|)>> lives as a Riemannian surface (that
+    changes with time), then the Fisher matrix <math|\<cal-F\>> serves as a
+    metric of the Riemannian surface.
+
+    You may argue that relative entropy is not a distance, because it is not
+    symmetric. Indeed, generally <math|H<around*|(|Q<rsub|t><around*|(|x|)>,Q<rsub|t><around*|(|x+\<varepsilon\>|)>|)>\<neq\>H<around*|(|Q<rsub|t><around*|(|x+\<varepsilon\>|)>,Q<rsub|t><around*|(|x|)>|)>>.
     But, we can consider its symmetric form
-
-    <\equation*>
-      D<rsub|JS><around*|(|Q<rsub|t><around*|(|x|)>,Q<rsub|t><around*|(|x+\<varepsilon\>|)>|)>\<assign\><frac|1|2><around*|[|H<around*|(|Q<rsub|t><around*|(|x|)>,Q<rsub|t><around*|(|x+\<varepsilon\>|)>|)>+H<around*|(|Q<rsub|t><around*|(|x+\<varepsilon\>|)>,Q<rsub|t><around*|(|x|)>|)>|]>,
-    </equation*>
-
+    <math|D<rsub|JS><around*|(|Q<rsub|t><around*|(|x|)>,Q<rsub|t><around*|(|x+\<varepsilon\>|)>|)>\<assign\><around*|[|H<around*|(|Q<rsub|t><around*|(|x|)>,Q<rsub|t><around*|(|x+\<varepsilon\>|)>|)>+H<around*|(|Q<rsub|t><around*|(|x+\<varepsilon\>|)>,Q<rsub|t><around*|(|x|)>|)>|]>/2>,
     then <math|D<rsub|JS>>, named by <strong|Jensen-Shannon distance>, is
-    indeed a distance. It can be shown that, again,
-
-    <\equation*>
-      D<rsub|JS><around*|(|Q<rsub|t><around*|(|x|)>,Q<rsub|t><around*|(|x+\<varepsilon\>|)>|)>=<frac|1|2>\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|x,t|)>\<varepsilon\><rsup|\<alpha\>>\<varepsilon\><rsup|\<beta\>>+\<omicron\><around*|(|\<varepsilon\><rsup|2>|)>.
-    </equation*>
-  </footnote>
+    indeed a distance. It can be shown that
+    <math|D<rsub|JS><around*|(|Q<rsub|t><around*|(|x|)>,Q<rsub|t><around*|(|x+\<varepsilon\>|)>|)>=<around*|(|1/2|)>\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|x,t|)>\<varepsilon\><rsup|\<alpha\>>\<varepsilon\><rsup|\<beta\>>+\<omicron\><around*|(|\<varepsilon\><rsup|2>|)>>
+    too.
+  </footnote> It characterizes the information propagation in a stochastic
+  system.
 
   As an example, consider the Wiener process introduced in section
   <reference|section: Randomness Appears in the Second Moment of Transition
@@ -4525,6 +4522,10 @@
   <math|\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|x,t|)>=\<delta\><rsup|\<alpha\>\<beta\>>/t>.
   It decays with <math|t> increasing, indicating that the initial information
   diminishes during the propagation or evolution.
+
+  But for an arbitrary Markovian process, the action
+  <math|S<rsub|t><around*|(|x,y|)>> is difficult to evaluate when <math|t> is
+  not small enough.
 
   <epilogue>
 
@@ -4936,7 +4937,7 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-38>
 
-      5.5<space|2spc><with|mode|<quote|math>|\<spadesuit\>> Fisher Matrix
+      5.5<space|2spc><with|mode|<quote|math>|\<heartsuit\>> Fisher Matrix
       Characterizes Information Propagation in a Stochastic System
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-39>
