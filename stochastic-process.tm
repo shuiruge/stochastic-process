@@ -157,7 +157,7 @@
     <no-break><pageref|auto-38>
 
     5.5<space|2spc><with|mode|math|\<heartsuit\>> Fisher Matrix Characterizes
-    Information Propagation in a Stochastic System
+    Information Propagation in Stochastic System
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-39>
 
@@ -4720,9 +4720,7 @@
     <associate|section: Example: Metropolis-Hastings
     Algorithm|<tuple|2.7|22>>
     <associate|section: Fisher Matrix Characterizes Information Propagation
-    in Stochastic System|<tuple|5.5|?>>
-    <associate|section: Fisher Matrix Characterizes Information Propagation
-    in a Stochastic System|<tuple|5.5|50>>
+    in Stochastic System|<tuple|5.5|50>>
     <associate|section: Kramers\UMoyal Expansion Formulates Transition Rate
     by Its Moments|<tuple|3.3|28>>
     <associate|section: Kramers-Moyal Expansion and Langevin
@@ -4940,7 +4938,7 @@
       <no-break><pageref|auto-38>
 
       5.5<space|2spc><with|mode|<quote|math>|\<heartsuit\>> Fisher Matrix
-      Characterizes Information Propagation in a Stochastic System
+      Characterizes Information Propagation in Stochastic System
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-39>
 
