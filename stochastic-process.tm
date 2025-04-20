@@ -4420,8 +4420,8 @@
   <math|\<eta\>>, thus is regarded as constant.
 
   <section|<math|\<heartsuit\>> Fisher Matrix Characterizes Information
-  Propagation in a Stochastic System><label|section: Fisher Matrix
-  Characterizes Information Propagation in a Stochastic System>
+  Propagation in Stochastic System><label|section: Fisher Matrix
+  Characterizes Information Propagation in Stochastic System>
 
   Now in a try autumn day, you stand on the open ground, looking at a
   starling flock flying under the blue sky. Suddenly, an eagle dives into the
@@ -4719,6 +4719,8 @@
     Source-Free Degree of Freedom|<tuple|3.9|34>>
     <associate|section: Example: Metropolis-Hastings
     Algorithm|<tuple|2.7|22>>
+    <associate|section: Fisher Matrix Characterizes Information Propagation
+    in Stochastic System|<tuple|5.5|?>>
     <associate|section: Fisher Matrix Characterizes Information Propagation
     in a Stochastic System|<tuple|5.5|50>>
     <associate|section: Kramers\UMoyal Expansion Formulates Transition Rate
