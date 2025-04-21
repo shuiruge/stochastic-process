@@ -591,7 +591,8 @@
 
   <\small>
     <\equation*>
-      <big|int>\<mathd\>x<rsub|2i+1> exp<around*|(|-<big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|<frac|<around*|(|x<rsub|2i>-x<rsub|2i+2>|)><rsup|2>|4\<Delta\>t>+<frac|1|\<Delta\>t><around*|(|x<rsup|\<alpha\>><rsub|2i+1>-<frac|x<rsub|2i+2>+x<rsub|2i>|2>|)><rsup|2>|]>-<around*|[|\<varphi\><around*|(|x<rsub|2i>,x<rsub|2i+1>|)>+\<varphi\><around*|(|x<rsub|2i+1>,x<rsub|2i+2>|)>|]>+\<omicron\><around*|(|\<Delta\>t|)>|)>.
+      I\<assign\><big|int>\<mathd\>x<rsub|2i+1>
+      exp<around*|(|-<big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|<frac|<around*|(|x<rsub|2i>-x<rsub|2i+2>|)><rsup|2>|4\<Delta\>t>+<frac|1|\<Delta\>t><around*|(|x<rsup|\<alpha\>><rsub|2i+1>-<frac|x<rsub|2i+2>+x<rsub|2i>|2>|)><rsup|2>|]>-<around*|[|\<varphi\><around*|(|x<rsub|2i>,x<rsub|2i+1>|)>+\<varphi\><around*|(|x<rsub|2i+1>,x<rsub|2i+2>|)>|]>+\<omicron\><around*|(|\<Delta\>t|)>|)>.
     </equation*>
   </small>
 
@@ -636,33 +637,104 @@
     b<rsub|\<alpha\>> b<rsub|\<beta\>>|)>.
   </equation*>
 
-  Replacing <math|x> by <math|z-<wide|y|\<bar\>>>,
-  <math|A<rsub|\<alpha\>\<beta\>>> by <math|<around*|(|\<delta\><rsub|\<alpha\>\<beta\>>/\<Delta\>t|)>+<wide|\<partial\>|\<bar\>><rsub|\<alpha\>><wide|\<partial\>|\<bar\>><rsub|\<beta\>>\<phi\><around*|(|y,y<rprime|'>,<wide|y|\<bar\>>|)>/2>,
-  and <math|b> by <math|<wide|\<partial\>|\<bar\>>\<phi\><around*|(|y,y<rprime|'>,<wide|y|\<bar\>>|)>>,
-  the integral comes to be TODO
+  We are to replace <math|x> by <math|z-<wide|y|\<bar\>>>,
+  <math|A<rsub|\<alpha\>\<beta\>>> by <math|<around*|(|2
+  \<delta\><rsub|\<alpha\>\<beta\>>/\<Delta\>t|)>+<wide|\<partial\>|\<bar\>><rsub|\<alpha\>><wide|\<partial\>|\<bar\>><rsub|\<beta\>>\<phi\><around*|(|y,y<rprime|'>,<wide|y|\<bar\>>|)>>,
+  and <math|b> by <math|-<wide|\<partial\>|\<bar\>>\<phi\><around*|(|y,y<rprime|'>,<wide|y|\<bar\>>|)>>.
 
-  We are to find the inverse of <math|<around*|(|\<delta\><rsub|\<alpha\>\<beta\>>/\<Delta\>t|)>+<wide|\<partial\>|\<bar\>><rsub|\<alpha\>><wide|\<partial\>|\<bar\>><rsub|\<beta\>>\<phi\><around*|(|y,y<rprime|'>,<wide|y|\<bar\>>|)>/2>.
+  To finish the integration, we have to find <math|A<rsup|-1>>, namely the
+  inverse of <math|<around*|(|2 \<delta\><rsub|\<alpha\>\<beta\>>/\<Delta\>t|)>+<wide|\<partial\>|\<bar\>><rsub|\<alpha\>><wide|\<partial\>|\<bar\>><rsub|\<beta\>>\<phi\><around*|(|y,y<rprime|'>,<wide|y|\<bar\>>|)>>.
+  Since the identity
 
   <\align>
-    <tformat|<table|<row|<cell|>|<cell|<around*|[|<frac|\<delta\><rsub|\<alpha\>\<beta\>>|\<Delta\>t>+<frac|1|2><wide|\<partial\>|\<bar\>><rsub|\<alpha\>><wide|\<partial\>|\<bar\>><rsub|\<beta\>>\<phi\><around*|(|y,y<rprime|'>,<wide|y|\<bar\>>|)>|]><around*|[|\<delta\><rsup|\<beta\>\<gamma\>>\<Delta\>t-<frac|1|2><wide|\<partial\>|\<bar\>><rsup|\<beta\>><wide|\<partial\>|\<bar\>><rsup|\<gamma\>>\<phi\><around*|(|y,y<rprime|'>,<wide|y|\<bar\>>|)>\<Delta\>t<rsup|2>|]>>>|<row|<cell|=>|<cell|\<delta\><rsup|\<gamma\>><rsub|\<alpha\>>-<frac|1|2><wide|\<partial\>|\<bar\>><rsub|\<alpha\>><wide|\<partial\>|\<bar\>><rsup|\<gamma\>>\<phi\><around*|(|y,y<rprime|'>,<wide|y|\<bar\>>|)>\<Delta\>t+<frac|1|2><wide|\<partial\>|\<bar\>><rsub|\<alpha\>><wide|\<partial\>|\<bar\>><rsup|\<gamma\>>\<phi\><around*|(|y,y<rprime|'>,<wide|y|\<bar\>>|)>\<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>.>>>>
+    <tformat|<table|<row|<cell|>|<cell|<around*|[|2<frac|\<delta\><rsub|\<alpha\>\<beta\>>|\<Delta\>t>+<wide|\<partial\>|\<bar\>><rsub|\<alpha\>><wide|\<partial\>|\<bar\>><rsub|\<beta\>>\<phi\><around*|(|y,y<rprime|'>,<wide|y|\<bar\>>|)>|]><around*|[|<frac|1|2>\<delta\><rsup|\<beta\>\<gamma\>>\<Delta\>t-<frac|1|4><wide|\<partial\>|\<bar\>><rsup|\<beta\>><wide|\<partial\>|\<bar\>><rsup|\<gamma\>>\<phi\><around*|(|y,y<rprime|'>,<wide|y|\<bar\>>|)>\<Delta\>t<rsup|2>+\<omicron\><around*|(|\<Delta\>t<rsup|2>|)>|]>>>|<row|<cell|=>|<cell|\<delta\><rsup|\<gamma\>><rsub|\<alpha\>>-<frac|1|2><wide|\<partial\>|\<bar\>><rsub|\<alpha\>><wide|\<partial\>|\<bar\>><rsup|\<gamma\>>\<phi\><around*|(|y,y<rprime|'>,<wide|y|\<bar\>>|)>\<Delta\>t+<frac|1|2><wide|\<partial\>|\<bar\>><rsub|\<alpha\>><wide|\<partial\>|\<bar\>><rsup|\<gamma\>>\<phi\><around*|(|y,y<rprime|'>,<wide|y|\<bar\>>|)>\<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>>>|<row|<cell|=>|<cell|\<delta\><rsup|\<gamma\>><rsub|\<alpha\>>+\<omicron\><around*|(|\<Delta\>t|)>,>>>>
   </align>
 
-  So, up to <math|\<omicron\><around*|(|\<Delta\>t|)>>, the inverse its
+  we get <math|<around*|(|A<rsup|-1>|)><rsup|\<beta\>\<gamma\>>>
+  as<\footnote>
+    Or simply <math|\<delta\><rsup|\<beta\>\<gamma\>>\<Delta\>t/2>? If so, we
+    would have
+
+    <\equation*>
+      <around*|[|2<frac|\<delta\><rsub|\<alpha\>\<beta\>>|\<Delta\>t>+<wide|\<partial\>|\<bar\>><rsub|\<alpha\>><wide|\<partial\>|\<bar\>><rsub|\<beta\>>\<phi\><around*|(|y,y<rprime|'>,<wide|y|\<bar\>>|)>|]><frac|1|2>\<delta\><rsup|\<beta\>\<gamma\>>\<Delta\>t=\<delta\><rsup|\<gamma\>><rsub|\<alpha\>>+<frac|1|2><wide|\<partial\>|\<bar\>><rsub|\<alpha\>><wide|\<partial\>|\<bar\>><rsup|\<gamma\>>\<phi\><around*|(|y,y<rprime|'>,<wide|y|\<bar\>>|)>\<Delta\>t,
+    </equation*>
+
+    which is not <math|\<delta\><rsup|\<gamma\>><rsub|\<alpha\>>+\<omicron\><around*|(|\<Delta\>t|)>>.
+    So the second term is essential, even though it is
+    <math|\<omicron\><around*|(|\<Delta\>t|)>> by itself.
+  </footnote>
 
   <\equation*>
-    \<delta\><rsup|\<beta\>\<gamma\>>\<Delta\>t-<frac|1|2><wide|\<partial\>|\<bar\>><rsup|\<beta\>><wide|\<partial\>|\<bar\>><rsup|\<gamma\>>\<phi\><around*|(|y,y<rprime|'>,<wide|y|\<bar\>>|)>\<Delta\>t<rsup|2>.
+    <frac|1|2>\<delta\><rsup|\<beta\>\<gamma\>>\<Delta\>t-<frac|1|4><wide|\<partial\>|\<bar\>><rsup|\<beta\>><wide|\<partial\>|\<bar\>><rsup|\<gamma\>>\<phi\><around*|(|y,y<rprime|'>,<wide|y|\<bar\>>|)>\<Delta\>t<rsup|2>+\<omicron\><around*|(|\<Delta\>t<rsup|2>|)>.
   </equation*>
 
-  Or simply <math|\<delta\><rsup|\<beta\>\<gamma\>>\<Delta\>t>? If so, we
-  would have
+  \;
+
+  In addition, we have to deal with the determinant <math|det A>. To do so,
+  we first write <math|A> in matrix format as
 
   <\equation*>
-    <around*|[|<frac|\<delta\><rsub|\<alpha\>\<beta\>>|\<Delta\>t>+<frac|1|2><wide|\<partial\>|\<bar\>><rsub|\<alpha\>><wide|\<partial\>|\<bar\>><rsub|\<beta\>>\<phi\><around*|(|y,y<rprime|'>,<wide|y|\<bar\>>|)>|]>\<delta\><rsup|\<beta\>\<gamma\>>\<Delta\>t=\<delta\><rsup|\<gamma\>><rsub|\<alpha\>>-<frac|1|2><wide|\<partial\>|\<bar\>><rsub|\<alpha\>><wide|\<partial\>|\<bar\>><rsup|\<gamma\>>\<phi\><around*|(|y,y<rprime|'>,<wide|y|\<bar\>>|)>\<Delta\>t,
+    A=<frac|2|\<Delta\>t>\<bbb-1\>+<wide|\<partial\>|\<bar\>><wide|\<partial\>|\<bar\>>\<phi\><around*|(|y,y<rprime|'>,<wide|y|\<bar\>>|)>=<frac|2|\<Delta\>t><around*|[|\<bbb-1\>+<frac|\<Delta\>t|2><wide|\<partial\>|\<bar\>><wide|\<partial\>|\<bar\>>\<phi\><around*|(|y,y<rprime|'>,<wide|y|\<bar\>>|)>|]>.
   </equation*>
 
-  which is not <math|\<delta\><rsup|\<gamma\>><rsub|\<alpha\>>+\<omicron\><around*|(|\<Delta\>t|)>>.
-  So the second term is essential, even though it is
-  <math|\<omicron\><around*|(|\<Delta\>t|)>> by itself.
+  Since for any constant <math|a> and <math|d>-dimensional matrix <math|B>,
+  we have <math|det<around*|(|a B|)>=a<rsup|d> det B>. Thus,
+
+  <\equation*>
+    det A=<around*|(|<frac|2|\<Delta\>t>|)><rsup|d>det<around*|[|\<bbb-1\>+<frac|\<Delta\>t|2><wide|\<partial\>|\<bar\>><wide|\<partial\>|\<bar\>>\<phi\><around*|(|y,y<rprime|'>,<wide|y|\<bar\>>|)>|]>=exp<around*|(|d
+    ln<frac|2|\<Delta\>t>|)> det<around*|[|\<bbb-1\>+<frac|\<Delta\>t|2><wide|\<partial\>|\<bar\>><wide|\<partial\>|\<bar\>>\<phi\><around*|(|y,y<rprime|'>,<wide|y|\<bar\>>|)>|]>.
+  </equation*>
+
+  For the determinant in the right hand side, we use the formula
+
+  <\equation*>
+    det A=exp<around*|(|tr ln A|)>,
+  </equation*>
+
+  where the logarithm of a matrix is defined by Taylor expansion. Namely, for
+  any matrix <math|B>,
+
+  <\equation*>
+    ln <around*|(|\<bbb-1\>+B|)>\<assign\><big|sum><rsub|n=1><rsup|+\<infty\>><frac|<around*|(|-1|)><rsup|n+1>|n>B<rsup|n>,
+  </equation*>
+
+  where <math|\<bbb-1\>> represents identity matrix. In our situation,
+  <math|B> is replaced by <math|<around*|(|\<Delta\>t/2|)><wide|\<partial\>|\<bar\>><wide|\<partial\>|\<bar\>>\<phi\><around*|(|y,y<rprime|'>,<wide|y|\<bar\>>|)>>,
+  thus
+
+  <\equation*>
+    det<around*|[|\<bbb-1\>+<frac|\<Delta\>t|2><wide|\<partial\>|\<bar\>><wide|\<partial\>|\<bar\>>\<phi\><around*|(|y,y<rprime|'>,<wide|y|\<bar\>>|)>|]>=exp<around*|(|tr
+    ln<around*|(|\<bbb-1\>+<frac|\<Delta\>t|2><wide|\<partial\>|\<bar\>><wide|\<partial\>|\<bar\>>\<phi\><around*|(|y,y<rprime|'>,<wide|y|\<bar\>>|)>|)>|)>=exp<around*|(|tr<around*|(|<frac|\<Delta\>t|2><wide|\<partial\>|\<bar\>><wide|\<partial\>|\<bar\>>\<phi\><around*|(|y,y<rprime|'>,<wide|y|\<bar\>>|)>+\<omicron\><around*|(|\<Delta\>t|)>|)>|)>.
+  </equation*>
+
+  The trace results in <math|<around*|(|\<Delta\>t/2|)><wide|\<Delta\>|\<bar\>>\<phi\><around*|(|y,y<rprime|'>,<wide|y|\<bar\>>|)>>
+  where the Laplacian is taken on <math|<wide|y|\<bar\>>>. Altogether, we
+  arrive at
+
+  <\equation*>
+    det A=<around*|(|<frac|2|\<Delta\>t>|)><rsup|d>det<around*|[|\<bbb-1\>+<frac|\<Delta\>t|2><wide|\<partial\>|\<bar\>><wide|\<partial\>|\<bar\>>\<phi\><around*|(|y,y<rprime|'>,<wide|y|\<bar\>>|)>|]>=exp<around*|(|d
+    ln<frac|2|\<Delta\>t>+<frac|\<Delta\>t|2><wide|\<Delta\>|\<bar\>>\<phi\><around*|(|y,y<rprime|'>,<wide|y|\<bar\>>|)>+\<omicron\><around*|(|\<Delta\>t|)>|)>.
+  </equation*>
+
+  \;
+
+  So, the Gaussian integral comes to be
+
+  <\equation*>
+    exp<around*|(|<frac|\<Delta\>t|4><around*|[|<around*|(|<wide|\<partial\>|\<bar\>>\<phi\><around*|(|y,y<rprime|'>,<wide|y|\<bar\>>|)>|)><rsup|2>-<wide|\<Delta\>|\<bar\>>\<phi\><around*|(|y,y<rprime|'>,<wide|y|\<bar\>>|)>|]>+<frac|d|2>
+    ln<frac|4\<mathpi\>|\<Delta\>t>+\<omicron\><around*|(|\<Delta\>t|)>|)>,
+  </equation*>
+
+  where we have denoted <math|b<rsup|2>\<assign\>\<delta\><rsup|\<alpha\>\<beta\>>
+  b<rsub|\<alpha\>> b<rsub|\<beta\>>> for any vector <math|b>. Finally, we
+  get the effective action
+
+  <\equation*>
+    S<rsub|eff><around*|(|y,y<rprime|'>|)>=<big|sum><rsub|\<alpha\>=1><rsup|d><frac|<around*|(|y<rsup|\<alpha\>>-y<rprime|'><rsup|\<alpha\>>|)><rsup|2>|4\<Delta\>t>+\<phi\><around*|(|y,y<rprime|'>,<wide|y|\<bar\>>|)>+<frac|\<Delta\>t|4><around*|[|<wide|\<Delta\>|\<bar\>>\<phi\><around*|(|y,y<rprime|'>,<wide|y|\<bar\>>|)>-<around*|(|<wide|\<partial\>|\<bar\>>\<phi\><around*|(|y,y<rprime|'>,<wide|y|\<bar\>>|)>|)><rsup|2>|]>+<frac|d|2>
+    ln<frac|\<Delta\>t|4\<mathpi\>>+\<omicron\><around*|(|\<Delta\>t|)>.
+  </equation*>
+
+  \;
 
   Together with the rescalings, these iterative equations are called
   <strong|renormalization group transformation>. It was first derived by
@@ -991,6 +1063,7 @@
     <associate|footnote-4|<tuple|4|6>>
     <associate|footnote-5|<tuple|5|7>>
     <associate|footnote-6|<tuple|6|8>>
+    <associate|footnote-7|<tuple|7|?>>
     <associate|footnr-0|<tuple|6|?>>
     <associate|footnr-1|<tuple|1|2>>
     <associate|footnr-2|<tuple|2|3>>
@@ -998,6 +1071,7 @@
     <associate|footnr-4|<tuple|4|6>>
     <associate|footnr-5|<tuple|5|7>>
     <associate|footnr-6|<tuple|6|8>>
+    <associate|footnr-7|<tuple|7|?>>
     <associate|section: Effective Action and Renormalization Group
     Transformation|<tuple|2|5>>
     <associate|section: Renormalization Group in Full
