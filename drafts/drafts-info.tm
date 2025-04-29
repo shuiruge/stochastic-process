@@ -3,6 +3,43 @@
 <style|book>
 
 <\body>
+  <\table-of-contents|toc>
+    1<space|2spc>Effective Action and Renormalization Group Transformation
+    (Version 1) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-1>
+
+    <with|par-left|1tab|1.1<space|2spc>A Preliminary Situation
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-2>>
+
+    <with|par-left|1tab|1.2<space|2spc>The Full Calculation
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-3>>
+
+    2<space|2spc>Effective Action and Renormalization Group Transformation
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-4>
+
+    <with|par-left|1tab|2.1<space|2spc>A Preliminary Situation
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-5>>
+
+    <with|par-left|1tab|2.2<space|2spc>The Full Calculation
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-6>>
+
+    3<space|2spc>Fisher Matrix under Renormalization Group Transformation
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-7>
+
+    4<space|2spc>Fisher Matrix in Full Calculation
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-8>
+
+    5<space|2spc>Dimension Analysis <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-9>
+  </table-of-contents>
+
   <section|Effective Action and Renormalization Group Transformation (Version
   1)><label|section: Effective Action and Renormalization Group
   Transformation>
@@ -399,8 +436,10 @@
 
   where <math|\<varphi\>:\<bbb-R\><rsup|d>\<times\>\<bbb-R\><rsup|d>\<rightarrow\>\<bbb-R\>>
   and the residue <math|\<omicron\><around*|(|\<Delta\>t|)>> is smooth on
-  <math|x>. Comparing with action <reference|equation:langevin action
-  constant covariance>, we find <math|\<varphi\><around*|(|x,y|)>=<around*|(|x-y|)>f<around*|(|x|)>+f<rsup|2><around*|(|x|)>/2>.
+  <math|x>. The <math|\<varphi\>> may also depend on <math|\<Delta\>t> in a
+  smooth way, like <math|\<varphi\><around*|(|x,y|)>=\<varphi\><rsub|0><around*|(|x,y|)>+\<varphi\><rsub|1><around*|(|x,y|)>\<Delta\>t+\<omicron\><around*|(|\<Delta\>t|)>>.
+  Comparing with action <reference|equation:langevin action constant
+  covariance>, we find <math|\<varphi\><around*|(|x,y|)>=<around*|(|x-y|)>f<around*|(|x|)>+f<rsup|2><around*|(|x|)>\<Delta\>t/2>.
   There are another two differences between them. Here, we do not fix
   boundary (namely, the fixed boundary <math|x<rsub|N>> in action
   <reference|equation:langevin action constant covariance>, resulted from
@@ -736,6 +775,10 @@
 
   \;
 
+  TODO
+
+  \;
+
   Together with the rescalings, these iterative equations are called
   <strong|renormalization group transformation>. It was first derived by
   Franz Wegner and Anthony Houghton in 1973.<\footnote>
@@ -1045,33 +1088,31 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|3|?>>
-    <associate|auto-2|<tuple|1.1|1>>
+    <associate|auto-2|<tuple|1.1|2>>
     <associate|auto-3|<tuple|1.2|3>>
     <associate|auto-4|<tuple|2|5>>
     <associate|auto-5|<tuple|2.1|5>>
     <associate|auto-6|<tuple|2.2|7>>
-    <associate|auto-7|<tuple|3|9>>
+    <associate|auto-7|<tuple|3|8>>
     <associate|auto-8|<tuple|4|10>>
     <associate|auto-9|<tuple|5|11>>
-    <associate|equation:fisher matrix rg|<tuple|6|10>>
+    <associate|equation:fisher matrix rg|<tuple|6|9>>
     <associate|equation:rg action|<tuple|3|5>>
     <associate|equation:rg integral|<tuple|4|5>>
     <associate|footnote-1|<tuple|1|2>>
     <associate|footnote-2|<tuple|2|3>>
     <associate|footnote-3|<tuple|3|4>>
     <associate|footnote-4|<tuple|4|6>>
-    <associate|footnote-5|<tuple|5|7>>
-    <associate|footnote-6|<tuple|6|8>>
-    <associate|footnote-7|<tuple|7|?>>
-    <associate|footnr-0|<tuple|6|?>>
+    <associate|footnote-5|<tuple|5|6>>
+    <associate|footnote-6|<tuple|6|7>>
+    <associate|footnote-7|<tuple|7|8>>
     <associate|footnr-1|<tuple|1|2>>
     <associate|footnr-2|<tuple|2|3>>
     <associate|footnr-3|<tuple|3|4>>
     <associate|footnr-4|<tuple|4|6>>
-    <associate|footnr-5|<tuple|5|7>>
-    <associate|footnr-6|<tuple|6|8>>
-    <associate|footnr-7|<tuple|7|?>>
+    <associate|footnr-5|<tuple|5|6>>
+    <associate|footnr-6|<tuple|6|7>>
+    <associate|footnr-7|<tuple|7|8>>
     <associate|section: Effective Action and Renormalization Group
     Transformation|<tuple|2|5>>
     <associate|section: Renormalization Group in Full
