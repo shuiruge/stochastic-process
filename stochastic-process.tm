@@ -15,155 +15,135 @@
     Entropy> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-2><vspace|0.5fn>
 
-    1.1<space|2spc>Conventions in This Chapter
+    1.1<space|2spc>A Brief Review of Probability
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-3>
 
-    1.2<space|2spc>A Brief Review of Probability
+    1.2<space|2spc>Shannon Entropy Is Plausible for Discrete Random Variable
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-4>
 
-    1.3<space|2spc>Shannon Entropy Is Plausible for Discrete Random Variable
+    1.3<space|2spc>Shannon Entropy Fails for Continuous Random Variable
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-5>
 
-    1.4<space|2spc>Shannon Entropy Fails for Continuous Random Variable
+    1.4<space|2spc>Relative Entropy Is the Unique Solution to the Axiom
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-6>
 
-    1.5<space|2spc>Relative Entropy Is the Unique Solution to the Axiom
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-7>
-
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|2<space|2spc>Master
     Equation and Detailed Balance> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-8><vspace|0.5fn>
+    <no-break><pageref|auto-7><vspace|0.5fn>
 
-    2.1<space|2spc>Conventions in This Chapter
+    2.1<space|2spc>Master Equation Describes the Evolution of Markov Process
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-8>
+
+    2.2<space|2spc>Transition Rate Determines Transition Density
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-9>
 
-    2.2<space|2spc>Master Equation Describes the Evolution of Markov Process
+    2.3<space|2spc>Detailed Balance Provides Stationary Distribution
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-10>
 
-    2.3<space|2spc>Transition Rate Determines Transition Density
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    2.4<space|2spc>Detailed Balance with Connectivity Monotonically Reduces
+    Relative Entropy <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-11>
 
-    2.4<space|2spc>Detailed Balance Provides Stationary Distribution
+    2.5<space|2spc>Monte-Carlo Simulation and Guarantee of Relaxation
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-12>
 
-    2.5<space|2spc>Detailed Balance with Connectivity Monotonically Reduces
-    Relative Entropy <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    2.6<space|2spc>Example: Metropolis-Hastings Algorithm
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-13>
-
-    2.6<space|2spc>Monte-Carlo Simulation and Guarantee of Relaxation
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-14>
-
-    2.7<space|2spc>Example: Metropolis-Hastings Algorithm
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-15>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|3<space|2spc>Kramers-Moyal
     Expansion and Langevin Process> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-16><vspace|0.5fn>
+    <no-break><pageref|auto-14><vspace|0.5fn>
 
-    3.1<space|2spc>Conventions in This Chapter
+    3.1<space|2spc>Cut-off in the Moments of Transition Rate Is Essential for
+    Spatial Smoothness <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-15>
+
+    3.2<space|2spc>Transition Rate Is Determined by Its Moments
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-16>
+
+    3.3<space|2spc>Randomness Is Absent in the First Moment of Transition
+    Rate <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-17>
 
-    3.2<space|2spc>Cut-off in the Moments of Transition Rate Is Essential for
-    Spatial Smoothness <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    3.4<space|2spc>Randomness Appears in the Second Moment of Transition Rate
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-18>
 
-    3.3<space|2spc>Transition Rate Is Determined by Its Moments
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    3.5<space|2spc>Langevin Process Is a Markovian Process with
+    <with|mode|math|N<rsub|cut>=2> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-19>
 
-    3.4<space|2spc>Randomness Is Absent in the First Moment of Transition
-    Rate <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    3.6<space|2spc>Transition Density of Langevin Process Is Nearly Gaussian
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-20>
 
-    3.5<space|2spc>Randomness Appears in the Second Moment of Transition Rate
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    3.7<space|2spc>Stationary Solution of Langevin Process Has Source-Free
+    Degree of Freedom <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-21>
 
-    3.6<space|2spc>Langevin Process Is a Markovian Process with
-    <with|mode|math|N<rsub|cut>=2> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    3.8<space|2spc>Detailed Balance of Langevin Process Lacks Source-Free
+    Degree of Freedom <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-22>
-
-    3.7<space|2spc>Transition Density of Langevin Process Is Nearly Gaussian
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-23>
-
-    3.8<space|2spc>Stationary Solution of Langevin Process Has Source-Free
-    Degree of Freedom <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-24>
-
-    3.9<space|2spc>Detailed Balance of Langevin Process Lacks Source-Free
-    Degree of Freedom <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-25>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|4<space|2spc>Least-Action
     Principle> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-26><vspace|0.5fn>
+    <no-break><pageref|auto-23><vspace|0.5fn>
 
-    4.1<space|2spc>Conventions in This Chapter
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-27>
-
-    4.2<space|2spc>A Brief Review of Least-Action Principle in Classical
+    4.1<space|2spc>A Brief Review of Least-Action Principle in Classical
     Mechanics <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-28>
+    <no-break><pageref|auto-24>
 
-    4.3<space|2spc>Least-Action Principle of Distribution Has No Redundancy
+    4.2<space|2spc>Least-Action Principle of Distribution Has No Redundancy
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-29>
+    <no-break><pageref|auto-25>
 
-    4.4<space|2spc>Data Fitting Is Equivalent to Least-Action Principle of
+    4.3<space|2spc>Data Fitting Is Equivalent to Least-Action Principle of
     Distribution <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-30>
+    <no-break><pageref|auto-26>
 
-    4.5<space|2spc><with|mode|math|\<clubsuit\>> Example: Least-Action
+    4.4<space|2spc><with|mode|math|\<clubsuit\>> Example: Least-Action
     Principle in Supervised Machine Learning
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-32>
+    <no-break><pageref|auto-28>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|5<space|2spc>Path
     Integral> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-33><vspace|0.5fn>
+    <no-break><pageref|auto-29><vspace|0.5fn>
 
-    5.1<space|2spc>Conventions in This Chapter
+    5.1<space|2spc>Markovian Process with Euclidean Alphabet Can Be
+    Formulated as Path Integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-30>
+
+    <with|par-left|1tab|5.1.1<space|2spc><with|mode|math|\<clubsuit\>>
+    Estimation of the Residue <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-31>>
+
+    5.2<space|2spc>Langevin Process with Constant Covariance Has a Path
+    Integral on Alphabet <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-32>
+
+    5.3<space|2spc><with|mode|math|\<clubsuit\>> Grassmann Variable, Berezin
+    Integral, and Ghosts <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-33>
+
+    5.4<space|2spc><with|mode|math|\<heartsuit\>> Fisher Matrix Characterizes
+    Information Propagation in Stochastic System
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-34>
 
-    5.2<space|2spc>Markovian Process with Euclidean Alphabet Can Be
-    Formulated as Path Integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-35>
-
-    <with|par-left|1tab|5.2.1<space|2spc><with|mode|math|\<clubsuit\>>
-    Estimation of the Residue <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-36>>
-
-    5.3<space|2spc>Langevin Process with Constant Covariance Has a Path
-    Integral on Alphabet <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-37>
-
-    5.4<space|2spc><with|mode|math|\<clubsuit\>> Grassmann Variable, Berezin
-    Integral, and Ghosts <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-38>
-
-    5.5<space|2spc><with|mode|math|\<heartsuit\>> Fisher Matrix Characterizes
-    Information Propagation in Stochastic System
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-39>
-
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|Epilogue>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-40><vspace|0.5fn>
+    <no-break><pageref|auto-35><vspace|0.5fn>
   </table-of-contents>
 
   <prologue>
@@ -177,10 +157,7 @@
   Langevin process (chapter <reference|section: Kramers-Moyal Expansion and
   Langevin Process>). In the end, we generalize least-action principle to
   distribution and comparing data-fitting with least-action principle
-  (chapter <reference|section: Least-Action Principle>). Readers may omit the
-  sections in which the titles start with <math|\<clubsuit\>>. They are
-  interesting digressions. Also the sections start with <math|\<heartsuit\>>,
-  which contains the materials for future investigation.
+  (chapter <reference|section: Least-Action Principle>).
 
   The mathematical techniques employed here will not go beyond the basic
   calculus (Taylor expansion, improper integral, and integration by parts)
@@ -192,15 +169,21 @@
   \Pobviously<text-dots>\Q and \Papparently<text-dots>\Q are avoided; and we
   try to display all the steps of calculation without omitting any of them.
 
+  Each chapter starts with a brief overview, together with the conventions
+  employed in the chapter. Readers may omit the sections in which the titles
+  start with <math|\<clubsuit\>>. They are interesting digressions. Also the
+  sections start with <math|\<heartsuit\>>, which contains the materials for
+  future investigation.
+
   For each section, the title is a sentence that briefly summarizes the whole
   section. We use bold font for <strong|definition> and italic font for
   <em|emphasis>. Only important equations are numbered. So, readers can
   quickly skim through by reviewing section titles, bold and italic texts,
   and numbered equations.
 
-  At last, this book is written by <TeX>macs, using the
+  At last, this book is written by <TeX>macs and based on the
   <hlink|GFDL-1.3|https://www.gnu.org/licenses/fdl-1.3.en.html> license. You
-  can contact me with e-mail: shuiruge@whu.edu.cn.
+  can contact me with e-mail: shuiruge@hotmail.com.
 
   <chapter|Relative Entropy><label|section: Relative Entropy>
 
@@ -208,9 +191,6 @@
   out how Shannon entropy fails for continuous random variable, we build a
   proper axiomatic system on which the expression of information is found to
   be unique.
-
-  <section|Conventions in This Chapter><label|section: Conventions in This
-  Chapter 1>
 
   <em|Those that are not deterministic are denoted by capital letters.> But,
   a capital letter may also denote something that is determined. For example,
@@ -402,7 +382,8 @@
   additivity of surprise: if <math|X> has two independent parts, the total
   surprise shall be the sum of each.
 
-  <section|Relative Entropy Is the Unique Solution to the Axiom>
+  <section|Relative Entropy Is the Unique Solution to the
+  Axiom><label|section: Relative Entropy Is the Unique Solution to the Axiom>
 
   We are to derive the explicit expression of <math|H> based on the three
   axioms. The result is found to be unique.
@@ -535,18 +516,15 @@
   result obtained in chapter <reference|section: Relative Entropy>, we
   declare how a Markovian process relaxes to its stationary equilibrium.
 
-  <section|Conventions in This Chapter><label|section: Conventions in This
-  Chapter 2>
-
-  Follow the conventions in chapter <reference|section: Relative Entropy>.
-  Let <math|X> a multi-dimensional random variables, being, discrete,
-  continuous, or partially discrete and partially continuous, with alphabet
-  <math|\<cal-X\>> and distribution <math|P>. Even though the discussion in
-  this chapter applies to both discrete and continuous random variables, we
-  use the notation of the continuous. The reason is that converting from
-  discrete to continuous may cause problems (section <reference|section:
-  Shannon Entropy Fails for Continuous Random Variable>), while the inverse
-  is safe and direct.
+  Throughout this chapter, we reuse the notations in chapter
+  <reference|section: Relative Entropy>. Let <math|X> a multi-dimensional
+  random variables, being, discrete, continuous, or partially discrete and
+  partially continuous, with alphabet <math|\<cal-X\>> and distribution
+  <math|P>. Even though the discussion in this chapter applies to both
+  discrete and continuous random variables, we use the notation of the
+  continuous. The reason is that converting from discrete to continuous may
+  cause problems (section <reference|section: Shannon Entropy Fails for
+  Continuous Random Variable>), while the inverse is safe and direct.
 
   When using conditional density function to describe the probability of
   transition, like <math|p<rsub|t\<rightarrow\>t<rprime|'>><around*|(|x<rprime|'>\|x|)>>
@@ -1628,11 +1606,9 @@
   Equation and Detailed Balance> hold in this section, but the inverse is not
   guaranteed.
 
-  <section|Conventions in This Chapter>
-
-  Follow the conventions in chapter <reference|section: Master Equation and
-  Detailed Balance>. In addition, thought this chapter, we set the alphabet
-  to be Euclidean to get sufficient connectivity. Namely,
+  Throughout this chapter, we reuse the notations in chapter
+  <reference|section: Master Equation and Detailed Balance>. In addition, we
+  set the alphabet to be Euclidean to get sufficient connectivity. Namely,
   <math|\<cal-X\>=\<bbb-R\><rsup|d>> for some integer <math|d\<geqslant\>1>.
 
   We employ the <strong|Einstein's convention>. That is, we omit the sum
@@ -3024,19 +3000,20 @@
 
   <chapter|Least-Action Principle><label|section: Least-Action Principle>
 
-  We apply the discussions in chapter <reference|section: Kramers-Moyal
-  Expansion and Langevin Process> to least-action principle.
+  In this chapter, we apply the discussions in chapter <reference|section:
+  Kramers-Moyal Expansion and Langevin Process> to least-action principle. We
+  generalize the least-action principle in classical mechanics to
+  distributions, and discuss the relationship between least-action principle
+  of distribution and data-fitting.
 
-  <section|Conventions in This Chapter>
-
-  Follow the conventions in chapter <reference|section: Kramers-Moyal
-  Expansion and Langevin Process> (except for section <reference|section:
-  Data Fitting Is Equivalent to Least-Action Principle of Distribution> where
-  the alphabet <math|\<cal-X\>> can be discrete). In addition, we use
-  <math|P<around*|(|\<theta\>|)>> for a parameterized distribution, where
-  <math|\<theta\>> is the collection of parameters. Its density function is
-  <math|p<around*|(|x,\<theta\>|)>>, where random variable <math|X> takes the
-  value <math|x>.
+  Throughout this chapter, we reuse the notations in chapter
+  <reference|section: Kramers-Moyal Expansion and Langevin Process> (except
+  for section <reference|section: Data Fitting Is Equivalent to Least-Action
+  Principle of Distribution> where the alphabet <math|\<cal-X\>> can be
+  discrete). In addition, we use <math|P<around*|(|\<theta\>|)>> for a
+  parameterized distribution, where <math|\<theta\>> is the collection of
+  parameters. Its density function is <math|p<around*|(|x,\<theta\>|)>>,
+  where random variable <math|X> takes the value <math|x>.
 
   <section|A Brief Review of Least-Action Principle in Classical
   Mechanics><label|section: A Brief Review of Least-Action Principle in
@@ -3606,13 +3583,12 @@
   space. We then consider the Langevin process as an instance, for which the
   extended components may be analytically marginalized.
 
-  <section|Conventions in This Chapter>
-
-  Follow the conventions in chapter <reference|section: Kramers-Moyal
-  Expansion and Langevin Process>. Briefly, the alphabet is an Euclidean
-  space <math|\<bbb-R\><rsup|d>>. We use Einstein's convention to simplify
-  notations. And notation <math|p<around*|(|x\<rightarrow\>y|)>> is used for
-  denoting the conditional density function <math|p<around*|(|y\|x|)>>.
+  Throughout this chapter, we reuse the notations in chapter
+  <reference|section: Kramers-Moyal Expansion and Langevin Process>. Briefly,
+  the alphabet is an Euclidean space <math|\<bbb-R\><rsup|d>>. We use
+  Einstein's convention to simplify notations. And notation
+  <math|p<around*|(|x\<rightarrow\>y|)>> is used for denoting the conditional
+  density function <math|p<around*|(|y\|x|)>>.
 
   <section|Markovian Process with Euclidean Alphabet Can Be Formulated as
   Path Integral><label|section: Markovian Process with Euclidean Alphabet Can
@@ -3953,11 +3929,12 @@
 
     Since <math|\<varphi\>> is arbitrary, we finall arrive at
 
-    <\equation*>
+    <\equation>
       f<around*|(|x|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|<around*|(|-\<mathi\>|)><rsup|n>|n!>
       <around*|(|\<partial\><rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsup|\<alpha\><rsub|n>><wide|f|^>|)><around*|(|0|)>
-      <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|x|)>.
-    </equation*>
+      <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|x|)>.<label|equation:expand
+      by delta>
+    </equation>
   </footnote>
 
   <\equation>
@@ -4534,18 +4511,51 @@
   Traditional textbooks are either too complicated for me or not rigorous.
   So, I decided to build up the theory by hands. I found it much more
   fascinating to <em|do> mathematics than reading textbooks. The proof of
-  relaxation generalized that found by Ludwig Boltzmann in 1872. I read
-  Boltzmann's proof in a textbook of statistical mechanism fifteen years ago.
-  Then, to make it self-consistent, I wrote an introduction to relative
-  entropy, which was the starting point of the proof. Surprisingly, by
-  appending locality into the axioms of information, relative entropy would
-  be the unique possibility. The next surprise came from introducing smooth
-  structure to stochastic system. I found the cut-off by a series of complex
-  calculation. Later on in the winter, I found a way of expanding a function
-  by a series of generalized functions. It led to a direct proof of
-  Kramers-Moyal expansion. It also gave raise to a rigorous proof of path
-  integral formulation for stochastic system, resulting in a new perspective
-  to data-fitting.
+  relaxation (section <reference|section: Detailed Balance Condition and
+  Connectivity Monotonically Reduce Relative Entropy>) was generalized from
+  that found by Ludwig Boltzmann in 1872. I read Boltzmann's proof in a
+  textbook of statistical mechanism fifteen years ago.<\footnote>
+    <hlink|<with|font-shape|italic|Intermediate level course on Statistical
+    Mechanics>|http://farside.ph.utexas.edu/teaching/sm1/sm1.html> by R.
+    Fitzpatrick, the <hlink|section about
+    <math|H>-theorem|https://farside.ph.utexas.edu/teaching/sm1/Thermalhtml/node27.html>.
+    I found this book in Gerard 't Hooft's website
+    <hlink|<with|font-shape|italic|How to become a GOOD Theoretical
+    Physicist>|https://goodtheorist.science/statmech.html>.
+  </footnote> Then, to make it self-consistent, I wrote an axiomatic
+  introduction to relative entropy, which was the starting point of the
+  proof. I got the idea from quantum field theory. While generalizing from
+  quantum mechanics with finite degrees of freedom to field where the degrees
+  of freedom become infinite, locality plays the key role. Surprisingly, by
+  appending locality into the axioms of information, relative entropy was
+  found to be the unique possibility (section <reference|section: Relative
+  Entropy Is the Unique Solution to the Axiom>). And there was no need to
+  introduce a conditional entropy as Shannon did (section <reference|section:
+  Shannon Entropy Is Plausible for Discrete Random Variable>), which is quite
+  artificial.
+
+  The theorem on equilibrium was applied to continuous-time Markovian
+  process. I found that continuous-time Markovian process was not a direct
+  generalization of its discrete-time version, as many textbooks did.
+  Instead, it was much simpler. The relationship between discrete-time and
+  continuous-time Markovian process is like that between finite group and Lie
+  group. Even though the Lie group has much more elements (in fact, it has
+  infinite elements) than finite group, it is completely determined by its
+  local structure, namely the Lie algebra, which has only finite degrees of
+  freedom. The same for continuous-time Markovian process (section
+  <reference|section: Transition Rate Determines Transition Density>).
+
+  \ The next surprise came from introducing smooth structure to stochastic
+  system. I found the cut-off by a series of complex calculation (section
+  <reference|section: Cut-off in the Moments of Transition Rate Is Essential
+  for Spatial Smoothness>). Later on in the winter, while I was traveling by
+  train, I found a way of expanding a function by a series of generalized
+  functions (equation <reference|equation:expand by delta>). It led to a
+  direct proof of Kramers-Moyal expansion. It also gave raise to a rigorous
+  proof of path integral formulation for stochastic system (section
+  <reference|section: Markovian Process with Euclidean Alphabet Can Be
+  Formulated as Path Integral>), resulting in a new perspective to
+  data-fitting.
 
   After climbing to the top of a mountain, the horizon is broaden. Out of
   what we have explored, there arises more interesting questions. How does
@@ -4566,45 +4576,40 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|?|7>>
-    <associate|auto-10|<tuple|2.2|13>>
-    <associate|auto-11|<tuple|2.3|15>>
-    <associate|auto-12|<tuple|2.4|17>>
-    <associate|auto-13|<tuple|2.5|18>>
-    <associate|auto-14|<tuple|2.6|19>>
-    <associate|auto-15|<tuple|2.7|22>>
-    <associate|auto-16|<tuple|3|23>>
-    <associate|auto-17|<tuple|3.1|23>>
-    <associate|auto-18|<tuple|3.2|23>>
-    <associate|auto-19|<tuple|3.3|28>>
+    <associate|auto-10|<tuple|2.3|17>>
+    <associate|auto-11|<tuple|2.4|18>>
+    <associate|auto-12|<tuple|2.5|19>>
+    <associate|auto-13|<tuple|2.6|22>>
+    <associate|auto-14|<tuple|3|23>>
+    <associate|auto-15|<tuple|3.1|23>>
+    <associate|auto-16|<tuple|3.2|28>>
+    <associate|auto-17|<tuple|3.3|30>>
+    <associate|auto-18|<tuple|3.4|31>>
+    <associate|auto-19|<tuple|3.5|32>>
     <associate|auto-2|<tuple|1|9>>
-    <associate|auto-20|<tuple|3.4|30>>
-    <associate|auto-21|<tuple|3.5|30>>
-    <associate|auto-22|<tuple|3.6|32>>
-    <associate|auto-23|<tuple|3.7|32>>
-    <associate|auto-24|<tuple|3.8|33>>
-    <associate|auto-25|<tuple|3.9|34>>
-    <associate|auto-26|<tuple|4|37>>
-    <associate|auto-27|<tuple|4.1|37>>
-    <associate|auto-28|<tuple|4.2|37>>
-    <associate|auto-29|<tuple|4.3|38>>
+    <associate|auto-20|<tuple|3.6|33>>
+    <associate|auto-21|<tuple|3.7|34>>
+    <associate|auto-22|<tuple|3.8|34>>
+    <associate|auto-23|<tuple|4|37>>
+    <associate|auto-24|<tuple|4.1|37>>
+    <associate|auto-25|<tuple|4.2|38>>
+    <associate|auto-26|<tuple|4.3|39>>
+    <associate|auto-27|<tuple|4.1|41>>
+    <associate|auto-28|<tuple|4.4|42>>
+    <associate|auto-29|<tuple|5|43>>
     <associate|auto-3|<tuple|1.1|9>>
-    <associate|auto-30|<tuple|4.4|39>>
-    <associate|auto-31|<tuple|4.1|41>>
-    <associate|auto-32|<tuple|4.5|42>>
-    <associate|auto-33|<tuple|5|43>>
-    <associate|auto-34|<tuple|5.1|43>>
-    <associate|auto-35|<tuple|5.2|43>>
-    <associate|auto-36|<tuple|5.2.1|45>>
-    <associate|auto-37|<tuple|5.3|47>>
-    <associate|auto-38|<tuple|5.4|48>>
-    <associate|auto-39|<tuple|5.5|50>>
-    <associate|auto-4|<tuple|1.2|9>>
-    <associate|auto-40|<tuple|5.5|53>>
+    <associate|auto-30|<tuple|5.1|43>>
+    <associate|auto-31|<tuple|5.1.1|45>>
+    <associate|auto-32|<tuple|5.2|47>>
+    <associate|auto-33|<tuple|5.3|48>>
+    <associate|auto-34|<tuple|5.4|50>>
+    <associate|auto-35|<tuple|5.5|53>>
+    <associate|auto-4|<tuple|1.2|10>>
     <associate|auto-5|<tuple|1.3|10>>
-    <associate|auto-6|<tuple|1.4|10>>
-    <associate|auto-7|<tuple|1.5|11>>
-    <associate|auto-8|<tuple|2|13>>
-    <associate|auto-9|<tuple|2.1|13>>
+    <associate|auto-6|<tuple|1.4|11>>
+    <associate|auto-7|<tuple|2|13>>
+    <associate|auto-8|<tuple|2.1|13>>
+    <associate|auto-9|<tuple|2.2|15>>
     <associate|equation:Detailed Balance|<tuple|2.8|17>>
     <associate|equation:Detailed Balance for transition
     density|<tuple|2.9|17>>
@@ -4613,9 +4618,9 @@
     <associate|equation:K is uniformly bounded|<tuple|3.2|24>>
     <associate|equation:action of distribution|<tuple|4.5|39>>
     <associate|equation:action of markovian process|<tuple|5.4|44>>
-    <associate|equation:berezin integral|<tuple|5.14|49>>
-    <associate|equation:berezin integral exp|<tuple|5.11|48>>
-    <associate|equation:berezin integral measurement|<tuple|5.13|49>>
+    <associate|equation:berezin integral|<tuple|5.15|49>>
+    <associate|equation:berezin integral exp|<tuple|5.12|48>>
+    <associate|equation:berezin integral measurement|<tuple|5.14|49>>
     <associate|equation:data-fitting iteration|<tuple|4.7|40>>
     <associate|equation:data-fitting result|<tuple|4.8|40>>
     <associate|equation:detailed balance condition for
@@ -4623,20 +4628,21 @@
     <associate|equation:discrete time master equation|<tuple|2.5|14>>
     <associate|equation:discrete time master equation v0|<tuple|2.2|14>>
     <associate|equation:equation:metropolis-hastings|<tuple|2.12|22>>
+    <associate|equation:expand by delta|<tuple|5.7|46>>
     <associate|equation:general path integral|<tuple|5.1|43>>
     <associate|equation:generic density|<tuple|4.6|40>>
-    <associate|equation:grassmann integral transform|<tuple|5.12|49>>
+    <associate|equation:grassmann integral transform|<tuple|5.13|49>>
     <associate|equation:harmonic oscillator action|<tuple|4.1|37>>
-    <associate|equation:heat equation|<tuple|3.10|30>>
+    <associate|equation:heat equation|<tuple|3.10|31>>
     <associate|equation:km expansion|<tuple|3.8|28>>
     <associate|equation:km expansion v2|<tuple|3.9|29>>
-    <associate|equation:langevin action constant covariance|<tuple|5.10|48>>
-    <associate|equation:langevin action general|<tuple|5.16|50>>
+    <associate|equation:langevin action constant covariance|<tuple|5.11|47>>
+    <associate|equation:langevin action general|<tuple|5.17|50>>
     <associate|equation:langevin equation|<tuple|3.15|33>>
-    <associate|equation:langevin equation 2|<tuple|3.16|33>>
+    <associate|equation:langevin equation 2|<tuple|3.16|34>>
     <associate|equation:langevin iteration|<tuple|4.9|41>>
-    <associate|equation:langevin process after cholesky|<tuple|5.15|50>>
-    <associate|equation:langevin transition density approx|<tuple|3.14|32>>
+    <associate|equation:langevin process after cholesky|<tuple|5.16|49>>
+    <associate|equation:langevin transition density approx|<tuple|3.14|33>>
     <associate|equation:langevin transition rate|<tuple|3.12|32>>
     <associate|equation:least-action principle v0|<tuple|4.2|37>>
     <associate|equation:least-action principle v1|<tuple|4.3|38>>
@@ -4644,7 +4650,7 @@
     <associate|equation:master equation series|<tuple|4.4|39>>
     <associate|equation:master equation v0|<tuple|2.3|14>>
     <associate|equation:metropolis-hastings origin|<tuple|2.13|22>>
-    <associate|equation:path integral I|<tuple|5.8|47>>
+    <associate|equation:path integral I|<tuple|5.9|47>>
     <associate|equation:path integral of markov process|<tuple|5.2|44>>
     <associate|equation:relative entropy derivative|<tuple|2.11|18>>
     <associate|equation:residue zeta|<tuple|5.6|45>>
@@ -4652,15 +4658,16 @@
     <associate|equation:smoothness F1|<tuple|3.5|25>>
     <associate|equation:smoothness G1|<tuple|3.6|27>>
     <associate|equation:stationary Fokker-Planck equation|<tuple|3.17|34>>
-    <associate|equation:to ghosts|<tuple|5.9|47>>
+    <associate|equation:to ghosts|<tuple|5.10|47>>
     <associate|equation:transition density coef recur|<tuple|5.5|45>>
     <associate|equation:transition density normalization|<tuple|2.1|13>>
     <associate|equation:transition rate determines transition
     density|<tuple|2.6|16>>
     <associate|equation:transition rate determines transition density
     v2|<tuple|2.7|16>>
-    <associate|equation:wiener process|<tuple|3.11|31>>
+    <associate|equation:wiener process|<tuple|3.11|32>>
     <associate|figure: Least-Action|<tuple|4.1|41>>
+    <associate|footnote-1|<tuple|1|53>>
     <associate|footnote-1.1|<tuple|1.1|9>>
     <associate|footnote-1.2|<tuple|1.2|9>>
     <associate|footnote-1.3|<tuple|1.3|10>>
@@ -4676,10 +4683,11 @@
     <associate|footnote-3.5|<tuple|3.5|31>>
     <associate|footnote-4.1|<tuple|4.1|38>>
     <associate|footnote-5.1|<tuple|5.1|43>>
-    <associate|footnote-5.2|<tuple|5.2|45>>
+    <associate|footnote-5.2|<tuple|5.2|44>>
     <associate|footnote-5.3|<tuple|5.3|46>>
     <associate|footnote-5.4|<tuple|5.4|50>>
     <associate|footnote-5.5|<tuple|5.5|51>>
+    <associate|footnr-1|<tuple|1|53>>
     <associate|footnr-1.1|<tuple|1.1|9>>
     <associate|footnr-1.2|<tuple|1.2|9>>
     <associate|footnr-1.3|<tuple|1.3|10>>
@@ -4695,63 +4703,63 @@
     <associate|footnr-3.5|<tuple|3.5|31>>
     <associate|footnr-4.1|<tuple|4.1|38>>
     <associate|footnr-5.1|<tuple|5.1|43>>
-    <associate|footnr-5.2|<tuple|5.2|45>>
-    <associate|footnr-5.3|<tuple|5.3|46>>
+    <associate|footnr-5.2|<tuple|5.2|44>>
+    <associate|footnr-5.3|<tuple|5.7|46>>
     <associate|footnr-5.4|<tuple|5.4|50>>
     <associate|footnr-5.5|<tuple|5.5|51>>
-    <associate|section: * Estimation of the Residue|<tuple|5.2.1|45>>
+    <associate|section: * Estimation of the Residue|<tuple|5.1.1|45>>
     <associate|section: * Grassmann Variable, Berezin Integral, and
-    Ghosts|<tuple|5.4|48>>
+    Ghosts|<tuple|5.3|48>>
     <associate|section: A Brief Review of Least-Action Principle in Classical
-    Mechanics|<tuple|4.2|37>>
-    <associate|section: A Brief Review of Probability|<tuple|1.2|9>>
-    <associate|section: Conventions in This Chapter 1|<tuple|1.1|9>>
-    <associate|section: Conventions in This Chapter 2|<tuple|2.1|13>>
+    Mechanics|<tuple|4.1|37>>
+    <associate|section: A Brief Review of Probability|<tuple|1.1|9>>
     <associate|section: Cut-off in the Moments of Transition Rate Is
-    Essential for Spatial Smoothness|<tuple|3.2|23>>
+    Essential for Spatial Smoothness|<tuple|3.1|23>>
     <associate|section: Data Fitting Is Equivalent to Least-Action Principle
-    of Distribution|<tuple|4.4|39>>
+    of Distribution|<tuple|4.3|39>>
     <associate|section: Detailed Balance Condition and Connectivity
-    Monotonically Reduce Relative Entropy|<tuple|2.5|18>>
+    Monotonically Reduce Relative Entropy|<tuple|2.4|18>>
     <associate|section: Detailed Balance Provides Stationary
-    Distribution|<tuple|2.4|17>>
+    Distribution|<tuple|2.3|17>>
     <associate|section: Detailed Balance of Langevin Process Lacks
-    Source-Free Degree of Freedom|<tuple|3.9|34>>
+    Source-Free Degree of Freedom|<tuple|3.8|34>>
     <associate|section: Example: Metropolis-Hastings
-    Algorithm|<tuple|2.7|22>>
+    Algorithm|<tuple|2.6|22>>
     <associate|section: Fisher Matrix Characterizes Information Propagation
-    in Stochastic System|<tuple|5.5|50>>
+    in Stochastic System|<tuple|5.4|50>>
     <associate|section: Kramers\UMoyal Expansion Formulates Transition Rate
-    by Its Moments|<tuple|3.3|28>>
+    by Its Moments|<tuple|3.2|28>>
     <associate|section: Kramers-Moyal Expansion and Langevin
     Process|<tuple|3|23>>
     <associate|section: Langevin Process Is a Markovian Process with
-    Ncut=2|<tuple|3.6|32>>
+    Ncut=2|<tuple|3.5|32>>
     <associate|section: Langevin Process with Constant Covariance Has a Path
-    Integral on Alphabet|<tuple|5.3|47>>
+    Integral on Alphabet|<tuple|5.2|47>>
     <associate|section: Least-Action Principle|<tuple|4|37>>
     <associate|section: Least-Action Principle of Distribution Has No
-    Redundancy|<tuple|4.3|38>>
+    Redundancy|<tuple|4.2|38>>
     <associate|section: Markovian Process with Euclidean Alphabet Can Be
-    Formulated as Path Integral|<tuple|5.2|43>>
+    Formulated as Path Integral|<tuple|5.1|43>>
     <associate|section: Master Equation Describes the Evolution of Markov
-    Process|<tuple|2.2|13>>
+    Process|<tuple|2.1|13>>
     <associate|section: Master Equation and Detailed Balance|<tuple|2|13>>
     <associate|section: Monte-Carlo Simulation and Guarantee of
-    Relaxation|<tuple|2.6|19>>
+    Relaxation|<tuple|2.5|19>>
     <associate|section: Randomness Appears in the Second Moment of Transition
-    Rate|<tuple|3.5|30>>
+    Rate|<tuple|3.4|31>>
     <associate|section: Randomness Is Absent in the First Moment of
-    Transition Rate|<tuple|3.4|30>>
+    Transition Rate|<tuple|3.3|30>>
     <associate|section: Relative Entropy|<tuple|1|9>>
+    <associate|section: Relative Entropy Is the Unique Solution to the
+    Axiom|<tuple|1.4|11>>
     <associate|section: Shannon Entropy Fails for Continuous Random
-    Variable|<tuple|1.4|10>>
-    <associate|section: Shannon Entropy Is Plausible for Discrete Random
     Variable|<tuple|1.3|10>>
+    <associate|section: Shannon Entropy Is Plausible for Discrete Random
+    Variable|<tuple|1.2|10>>
     <associate|section: Transition Density of Langevin Process Is Nearly
-    Gaussian|<tuple|3.7|32>>
+    Gaussian|<tuple|3.6|33>>
     <associate|section: Transition Rate Determines Transition
-    Density|<tuple|2.3|15>>
+    Density|<tuple|2.2|15>>
     <associate|theorem: relaxation|<tuple|2.1|19>>
   </collection>
 </references>
@@ -4783,7 +4791,7 @@
       <with|mode|<quote|math>|x<rsub|1>> a local minimum of
       <with|mode|<quote|math>|S<around*|(|\<cdummy\>,\<theta\>|)>>, and
       <with|mode|<quote|math>|S<around*|(|\<cdummy\>,\<theta\>|)>> is
-      optimized to be the dashed green curve.>|<pageref|auto-31>>
+      optimized to be the dashed green curve.>|<pageref|auto-27>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Prologue>
@@ -4794,157 +4802,137 @@
       Entropy> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-2><vspace|0.5fn>
 
-      1.1<space|2spc>Conventions in This Chapter
+      1.1<space|2spc>A Brief Review of Probability
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-3>
 
-      1.2<space|2spc>A Brief Review of Probability
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      1.2<space|2spc>Shannon Entropy Is Plausible for Discrete Random
+      Variable <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-4>
 
-      1.3<space|2spc>Shannon Entropy Is Plausible for Discrete Random
-      Variable <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      1.3<space|2spc>Shannon Entropy Fails for Continuous Random Variable
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-5>
 
-      1.4<space|2spc>Shannon Entropy Fails for Continuous Random Variable
+      1.4<space|2spc>Relative Entropy Is the Unique Solution to the Axiom
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-6>
 
-      1.5<space|2spc>Relative Entropy Is the Unique Solution to the Axiom
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-7>
-
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Master
       Equation and Detailed Balance> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-8><vspace|0.5fn>
+      <no-break><pageref|auto-7><vspace|0.5fn>
 
-      2.1<space|2spc>Conventions in This Chapter
+      2.1<space|2spc>Master Equation Describes the Evolution of Markov
+      Process <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-8>
+
+      2.2<space|2spc>Transition Rate Determines Transition Density
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-9>
 
-      2.2<space|2spc>Master Equation Describes the Evolution of Markov
-      Process <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      2.3<space|2spc>Detailed Balance Provides Stationary Distribution
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-10>
 
-      2.3<space|2spc>Transition Rate Determines Transition Density
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      2.4<space|2spc>Detailed Balance with Connectivity Monotonically Reduces
+      Relative Entropy <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-11>
 
-      2.4<space|2spc>Detailed Balance Provides Stationary Distribution
+      2.5<space|2spc>Monte-Carlo Simulation and Guarantee of Relaxation
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-12>
 
-      2.5<space|2spc>Detailed Balance with Connectivity Monotonically Reduces
-      Relative Entropy <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      2.6<space|2spc>Example: Metropolis-Hastings Algorithm
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-13>
-
-      2.6<space|2spc>Monte-Carlo Simulation and Guarantee of Relaxation
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-14>
-
-      2.7<space|2spc>Example: Metropolis-Hastings Algorithm
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-15>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Kramers-Moyal
       Expansion and Langevin Process> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-16><vspace|0.5fn>
+      <no-break><pageref|auto-14><vspace|0.5fn>
 
-      3.1<space|2spc>Conventions in This Chapter
+      3.1<space|2spc>Cut-off in the Moments of Transition Rate Is Essential
+      for Spatial Smoothness <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-15>
+
+      3.2<space|2spc>Transition Rate Is Determined by Its Moments
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-16>
+
+      3.3<space|2spc>Randomness Is Absent in the First Moment of Transition
+      Rate <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-17>
 
-      3.2<space|2spc>Cut-off in the Moments of Transition Rate Is Essential
-      for Spatial Smoothness <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      3.4<space|2spc>Randomness Appears in the Second Moment of Transition
+      Rate <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-18>
 
-      3.3<space|2spc>Transition Rate Is Determined by Its Moments
+      3.5<space|2spc>Langevin Process Is a Markovian Process with
+      <with|mode|<quote|math>|N<rsub|cut>=2>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-19>
 
-      3.4<space|2spc>Randomness Is Absent in the First Moment of Transition
-      Rate <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      3.6<space|2spc>Transition Density of Langevin Process Is Nearly
+      Gaussian <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-20>
 
-      3.5<space|2spc>Randomness Appears in the Second Moment of Transition
-      Rate <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      3.7<space|2spc>Stationary Solution of Langevin Process Has Source-Free
+      Degree of Freedom <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-21>
 
-      3.6<space|2spc>Langevin Process Is a Markovian Process with
-      <with|mode|<quote|math>|N<rsub|cut>=2>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      3.8<space|2spc>Detailed Balance of Langevin Process Lacks Source-Free
+      Degree of Freedom <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-22>
-
-      3.7<space|2spc>Transition Density of Langevin Process Is Nearly
-      Gaussian <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-23>
-
-      3.8<space|2spc>Stationary Solution of Langevin Process Has Source-Free
-      Degree of Freedom <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-24>
-
-      3.9<space|2spc>Detailed Balance of Langevin Process Lacks Source-Free
-      Degree of Freedom <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-25>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Least-Action
       Principle> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-26><vspace|0.5fn>
+      <no-break><pageref|auto-23><vspace|0.5fn>
 
-      4.1<space|2spc>Conventions in This Chapter
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-27>
-
-      4.2<space|2spc>A Brief Review of Least-Action Principle in Classical
+      4.1<space|2spc>A Brief Review of Least-Action Principle in Classical
       Mechanics <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-28>
+      <no-break><pageref|auto-24>
 
-      4.3<space|2spc>Least-Action Principle of Distribution Has No Redundancy
+      4.2<space|2spc>Least-Action Principle of Distribution Has No Redundancy
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-29>
+      <no-break><pageref|auto-25>
 
-      4.4<space|2spc>Data Fitting Is Equivalent to Least-Action Principle of
+      4.3<space|2spc>Data Fitting Is Equivalent to Least-Action Principle of
       Distribution <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-30>
+      <no-break><pageref|auto-26>
 
-      4.5<space|2spc><with|mode|<quote|math>|\<clubsuit\>> Example:
+      4.4<space|2spc><with|mode|<quote|math>|\<clubsuit\>> Example:
       Least-Action Principle in Supervised Machine Learning
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-32>
+      <no-break><pageref|auto-28>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|5<space|2spc>Path
       Integral> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-33><vspace|0.5fn>
+      <no-break><pageref|auto-29><vspace|0.5fn>
 
-      5.1<space|2spc>Conventions in This Chapter
+      5.1<space|2spc>Markovian Process with Euclidean Alphabet Can Be
+      Formulated as Path Integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-30>
+
+      <with|par-left|<quote|1tab>|5.1.1<space|2spc><with|mode|<quote|math>|\<clubsuit\>>
+      Estimation of the Residue <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-31>>
+
+      5.2<space|2spc>Langevin Process with Constant Covariance Has a Path
+      Integral on Alphabet <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-32>
+
+      5.3<space|2spc><with|mode|<quote|math>|\<clubsuit\>> Grassmann
+      Variable, Berezin Integral, and Ghosts
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-33>
+
+      5.4<space|2spc><with|mode|<quote|math>|\<heartsuit\>> Fisher Matrix
+      Characterizes Information Propagation in Stochastic System
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-34>
 
-      5.2<space|2spc>Markovian Process with Euclidean Alphabet Can Be
-      Formulated as Path Integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-35>
-
-      <with|par-left|<quote|1tab>|5.2.1<space|2spc><with|mode|<quote|math>|\<clubsuit\>>
-      Estimation of the Residue <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-36>>
-
-      5.3<space|2spc>Langevin Process with Constant Covariance Has a Path
-      Integral on Alphabet <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-37>
-
-      5.4<space|2spc><with|mode|<quote|math>|\<clubsuit\>> Grassmann
-      Variable, Berezin Integral, and Ghosts
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-38>
-
-      5.5<space|2spc><with|mode|<quote|math>|\<heartsuit\>> Fisher Matrix
-      Characterizes Information Propagation in Stochastic System
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-39>
-
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Epilogue>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-40><vspace|0.5fn>
+      <no-break><pageref|auto-35><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
