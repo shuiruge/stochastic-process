@@ -70,83 +70,87 @@
     Spatial Smoothness <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-15>
 
+    <with|par-left|1tab|3.1.1<space|2spc><with|mode|math|\<clubsuit\>>
+    Estimation of the Moments <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-16>>
+
     3.2<space|2spc>Transition Rate Is Determined by Its Moments
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-16>
+    <no-break><pageref|auto-17>
 
     3.3<space|2spc>Randomness Is Absent in the First Moment of Transition
     Rate <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-17>
+    <no-break><pageref|auto-18>
 
     3.4<space|2spc>Randomness Appears in the Second Moment of Transition Rate
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-18>
+    <no-break><pageref|auto-19>
 
     3.5<space|2spc>Langevin Process Is a Markovian Process with
     <with|mode|math|N<rsub|cut>=2> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-19>
+    <no-break><pageref|auto-20>
 
     3.6<space|2spc>Transition Density of Langevin Process Is Nearly Gaussian
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-20>
+    <no-break><pageref|auto-21>
 
     3.7<space|2spc>Stationary Solution of Langevin Process Has Source-Free
     Degree of Freedom <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-21>
+    <no-break><pageref|auto-22>
 
     3.8<space|2spc>Detailed Balance of Langevin Process Lacks Source-Free
     Degree of Freedom <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-22>
+    <no-break><pageref|auto-23>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|4<space|2spc>Least-Action
     Principle> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-23><vspace|0.5fn>
+    <no-break><pageref|auto-24><vspace|0.5fn>
 
     4.1<space|2spc>A Brief Review of Least-Action Principle in Classical
     Mechanics <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-24>
+    <no-break><pageref|auto-25>
 
     4.2<space|2spc>Least-Action Principle of Distribution Has No Redundancy
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-25>
+    <no-break><pageref|auto-26>
 
     4.3<space|2spc>Data Fitting Is Equivalent to Least-Action Principle of
     Distribution <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-26>
+    <no-break><pageref|auto-27>
 
     4.4<space|2spc><with|mode|math|\<clubsuit\>> Example: Least-Action
     Principle in Supervised Machine Learning
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-28>
+    <no-break><pageref|auto-29>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|5<space|2spc>Path
     Integral> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-29><vspace|0.5fn>
+    <no-break><pageref|auto-30><vspace|0.5fn>
 
     5.1<space|2spc>Markovian Process with Euclidean Alphabet Can Be
     Formulated as Path Integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-30>
+    <no-break><pageref|auto-31>
 
     <with|par-left|1tab|5.1.1<space|2spc><with|mode|math|\<clubsuit\>>
     Estimation of the Residue <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-31>>
+    <no-break><pageref|auto-32>>
 
     5.2<space|2spc>Langevin Process with Constant Covariance Has a Path
     Integral on Alphabet <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-32>
+    <no-break><pageref|auto-33>
 
     5.3<space|2spc><with|mode|math|\<clubsuit\>> Grassmann Variable, Berezin
     Integral, and Ghosts <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-33>
+    <no-break><pageref|auto-34>
 
     5.4<space|2spc><with|mode|math|\<heartsuit\>> Fisher Matrix Characterizes
     Information Propagation in Stochastic System
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-34>
+    <no-break><pageref|auto-35>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|Epilogue>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-35><vspace|0.5fn>
+    <no-break><pageref|auto-36><vspace|0.5fn>
   </table-of-contents>
 
   <prologue>
@@ -1744,6 +1748,8 @@
   uniformly bounded on <math|\<bbb-R\><rsup|d>>>. We devote the rest of this
   section to prove equation <reference|equation:smoothness>.
 
+  <subsection|<math|\<clubsuit\>> Estimation of the Moments>
+
   As an example for exploration, we first cut-off at <math|N<rsub|cut>=2>,
   namely <math|K<rsub|n>=0> for any <math|n\<gtr\>2>. We are to calculate
   <math|\<bbb-E\><around*|[|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|]>>
@@ -2142,14 +2148,11 @@
   <math|K<rsub|n>> are well-defined. That is, for any indices
   <math|<around*|(|\<alpha\><rsub|1>,\<ldots\>,\<alpha\><rsub|m>|)>>,
 
-  <\equation>
-    sup<rsub|x\<in\>\<bbb-R\><rsup|d>><around*|\||\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|m>>K<rsub|n><around*|(|x|)>|\|>\<less\>+\<infty\>.<label|equation:K
-    condition>
-  </equation>
+  <\equation*>
+    sup<rsub|x\<in\>\<bbb-R\><rsup|d>><around*|\||\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|m>>K<rsub|n><around*|(|x|)>|\|>\<less\>+\<infty\>.
+  </equation*>
 
-  Together with equation <reference|equation:K is uniformly bounded>, we
-  conclude that <em|the moments of transition rate and its derivatives are
-  uniformly bounded on <math|\<bbb-R\><rsup|d>>>.
+  Namely, equation <reference|equation:K condition>.
 
   <section|Transition Rate Is Determined by Its Moments><label|section:
   Kramers\UMoyal Expansion Formulates Transition Rate by Its Moments>
@@ -4589,28 +4592,29 @@
     <associate|auto-13|<tuple|2.6|22>>
     <associate|auto-14|<tuple|3|23>>
     <associate|auto-15|<tuple|3.1|23>>
-    <associate|auto-16|<tuple|3.2|28>>
-    <associate|auto-17|<tuple|3.3|30>>
-    <associate|auto-18|<tuple|3.4|31>>
-    <associate|auto-19|<tuple|3.5|32>>
+    <associate|auto-16|<tuple|3.1.1|24>>
+    <associate|auto-17|<tuple|3.2|28>>
+    <associate|auto-18|<tuple|3.3|30>>
+    <associate|auto-19|<tuple|3.4|31>>
     <associate|auto-2|<tuple|1|9>>
-    <associate|auto-20|<tuple|3.6|33>>
-    <associate|auto-21|<tuple|3.7|34>>
-    <associate|auto-22|<tuple|3.8|34>>
-    <associate|auto-23|<tuple|4|37>>
-    <associate|auto-24|<tuple|4.1|37>>
-    <associate|auto-25|<tuple|4.2|38>>
-    <associate|auto-26|<tuple|4.3|39>>
-    <associate|auto-27|<tuple|4.1|41>>
-    <associate|auto-28|<tuple|4.4|42>>
-    <associate|auto-29|<tuple|5|43>>
+    <associate|auto-20|<tuple|3.5|32>>
+    <associate|auto-21|<tuple|3.6|33>>
+    <associate|auto-22|<tuple|3.7|34>>
+    <associate|auto-23|<tuple|3.8|34>>
+    <associate|auto-24|<tuple|4|37>>
+    <associate|auto-25|<tuple|4.1|37>>
+    <associate|auto-26|<tuple|4.2|38>>
+    <associate|auto-27|<tuple|4.3|39>>
+    <associate|auto-28|<tuple|4.1|41>>
+    <associate|auto-29|<tuple|4.4|42>>
     <associate|auto-3|<tuple|1.1|9>>
-    <associate|auto-30|<tuple|5.1|43>>
-    <associate|auto-31|<tuple|5.1.1|45>>
-    <associate|auto-32|<tuple|5.2|47>>
-    <associate|auto-33|<tuple|5.3|48>>
-    <associate|auto-34|<tuple|5.4|50>>
-    <associate|auto-35|<tuple|5.5|53>>
+    <associate|auto-30|<tuple|5|43>>
+    <associate|auto-31|<tuple|5.1|43>>
+    <associate|auto-32|<tuple|5.1.1|45>>
+    <associate|auto-33|<tuple|5.2|47>>
+    <associate|auto-34|<tuple|5.3|48>>
+    <associate|auto-35|<tuple|5.4|50>>
+    <associate|auto-36|<tuple|5.5|53>>
     <associate|auto-4|<tuple|1.2|10>>
     <associate|auto-5|<tuple|1.3|10>>
     <associate|auto-6|<tuple|1.4|11>>
@@ -4620,8 +4624,8 @@
     <associate|equation:Detailed Balance|<tuple|2.8|17>>
     <associate|equation:Detailed Balance for transition
     density|<tuple|2.9|17>>
-    <associate|equation:Fokker-Planck equation|<tuple|3.13|32>>
-    <associate|equation:K condition|<tuple|3.7|28>>
+    <associate|equation:Fokker-Planck equation|<tuple|3.12|32>>
+    <associate|equation:K condition|<tuple|3.4|24>>
     <associate|equation:K is uniformly bounded|<tuple|3.2|24>>
     <associate|equation:action of distribution|<tuple|4.5|39>>
     <associate|equation:action of markovian process|<tuple|5.4|44>>
@@ -4631,7 +4635,7 @@
     <associate|equation:data-fitting iteration|<tuple|4.7|40>>
     <associate|equation:data-fitting result|<tuple|4.8|40>>
     <associate|equation:detailed balance condition for
-    Langevin|<tuple|3.18|35>>
+    Langevin|<tuple|3.17|35>>
     <associate|equation:discrete time master equation|<tuple|2.5|14>>
     <associate|equation:discrete time master equation v0|<tuple|2.2|14>>
     <associate|equation:equation:metropolis-hastings|<tuple|2.12|22>>
@@ -4640,17 +4644,17 @@
     <associate|equation:generic density|<tuple|4.6|40>>
     <associate|equation:grassmann integral transform|<tuple|5.13|49>>
     <associate|equation:harmonic oscillator action|<tuple|4.1|37>>
-    <associate|equation:heat equation|<tuple|3.10|31>>
-    <associate|equation:km expansion|<tuple|3.8|28>>
-    <associate|equation:km expansion v2|<tuple|3.9|29>>
+    <associate|equation:heat equation|<tuple|3.9|31>>
+    <associate|equation:km expansion|<tuple|3.7|28>>
+    <associate|equation:km expansion v2|<tuple|3.8|29>>
     <associate|equation:langevin action constant covariance|<tuple|5.11|47>>
     <associate|equation:langevin action general|<tuple|5.17|50>>
-    <associate|equation:langevin equation|<tuple|3.15|33>>
-    <associate|equation:langevin equation 2|<tuple|3.16|34>>
+    <associate|equation:langevin equation|<tuple|3.14|33>>
+    <associate|equation:langevin equation 2|<tuple|3.15|34>>
     <associate|equation:langevin iteration|<tuple|4.9|41>>
     <associate|equation:langevin process after cholesky|<tuple|5.16|49>>
-    <associate|equation:langevin transition density approx|<tuple|3.14|33>>
-    <associate|equation:langevin transition rate|<tuple|3.12|32>>
+    <associate|equation:langevin transition density approx|<tuple|3.13|33>>
+    <associate|equation:langevin transition rate|<tuple|3.11|32>>
     <associate|equation:least-action principle v0|<tuple|4.2|37>>
     <associate|equation:least-action principle v1|<tuple|4.3|38>>
     <associate|equation:master equation|<tuple|2.4|14>>
@@ -4664,7 +4668,7 @@
     <associate|equation:smoothness|<tuple|3.3|24>>
     <associate|equation:smoothness F1|<tuple|3.5|25>>
     <associate|equation:smoothness G1|<tuple|3.6|27>>
-    <associate|equation:stationary Fokker-Planck equation|<tuple|3.17|34>>
+    <associate|equation:stationary Fokker-Planck equation|<tuple|3.16|34>>
     <associate|equation:to ghosts|<tuple|5.10|47>>
     <associate|equation:transition density coef recur|<tuple|5.5|45>>
     <associate|equation:transition density normalization|<tuple|2.1|13>>
@@ -4672,7 +4676,7 @@
     density|<tuple|2.6|16>>
     <associate|equation:transition rate determines transition density
     v2|<tuple|2.7|16>>
-    <associate|equation:wiener process|<tuple|3.11|32>>
+    <associate|equation:wiener process|<tuple|3.10|32>>
     <associate|figure: Least-Action|<tuple|4.1|41>>
     <associate|footnote-1|<tuple|1|53>>
     <associate|footnote-1.1|<tuple|1.1|9>>
@@ -4681,9 +4685,9 @@
     <associate|footnote-1.4|<tuple|1.4|10>>
     <associate|footnote-2.1|<tuple|2.1|16>>
     <associate|footnote-2.2|<tuple|2.2|18>>
-    <associate|footnote-2.3|<tuple|2.3|20>>
-    <associate|footnote-2.4|<tuple|2.4|21>>
-    <associate|footnote-2.5|<tuple|2.5|?>>
+    <associate|footnote-2.3|<tuple|2.3|19>>
+    <associate|footnote-2.4|<tuple|2.4|20>>
+    <associate|footnote-2.5|<tuple|2.5|21>>
     <associate|footnote-3.1|<tuple|3.1|25>>
     <associate|footnote-3.2|<tuple|3.2|26>>
     <associate|footnote-3.3|<tuple|3.3|28>>
@@ -4702,9 +4706,9 @@
     <associate|footnr-1.4|<tuple|1.4|10>>
     <associate|footnr-2.1|<tuple|2.1|16>>
     <associate|footnr-2.2|<tuple|2.2|18>>
-    <associate|footnr-2.3|<tuple|2.3|20>>
-    <associate|footnr-2.4|<tuple|2.4|21>>
-    <associate|footnr-2.5|<tuple|2.5|?>>
+    <associate|footnr-2.3|<tuple|2.3|19>>
+    <associate|footnr-2.4|<tuple|2.4|20>>
+    <associate|footnr-2.5|<tuple|2.5|21>>
     <associate|footnr-3.1|<tuple|3.1|25>>
     <associate|footnr-3.2|<tuple|3.2|26>>
     <associate|footnr-3.3|<tuple|3.3|28>>
@@ -4769,7 +4773,6 @@
     Gaussian|<tuple|3.6|33>>
     <associate|section: Transition Rate Determines Transition
     Density|<tuple|2.2|15>>
-    <associate|theorem: relaxation|<tuple|2.1|19>>
   </collection>
 </references>
 
@@ -4800,7 +4803,7 @@
       <with|mode|<quote|math>|x<rsub|1>> a local minimum of
       <with|mode|<quote|math>|S<around*|(|\<cdummy\>,\<theta\>|)>>, and
       <with|mode|<quote|math>|S<around*|(|\<cdummy\>,\<theta\>|)>> is
-      optimized to be the dashed green curve.>|<pageref|auto-27>>
+      optimized to be the dashed green curve.>|<pageref|auto-28>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Prologue>
@@ -4863,85 +4866,89 @@
       for Spatial Smoothness <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-15>
 
+      <with|par-left|<quote|1tab>|3.1.1<space|2spc><with|mode|<quote|math>|\<clubsuit\>>
+      Estimation of the Moments <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-16>>
+
       3.2<space|2spc>Transition Rate Is Determined by Its Moments
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-16>
+      <no-break><pageref|auto-17>
 
       3.3<space|2spc>Randomness Is Absent in the First Moment of Transition
       Rate <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-17>
+      <no-break><pageref|auto-18>
 
       3.4<space|2spc>Randomness Appears in the Second Moment of Transition
       Rate <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-18>
+      <no-break><pageref|auto-19>
 
       3.5<space|2spc>Langevin Process Is a Markovian Process with
       <with|mode|<quote|math>|N<rsub|cut>=2>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-19>
+      <no-break><pageref|auto-20>
 
       3.6<space|2spc>Transition Density of Langevin Process Is Nearly
       Gaussian <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-20>
+      <no-break><pageref|auto-21>
 
       3.7<space|2spc>Stationary Solution of Langevin Process Has Source-Free
       Degree of Freedom <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-21>
+      <no-break><pageref|auto-22>
 
       3.8<space|2spc>Detailed Balance of Langevin Process Lacks Source-Free
       Degree of Freedom <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-22>
+      <no-break><pageref|auto-23>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Least-Action
       Principle> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-23><vspace|0.5fn>
+      <no-break><pageref|auto-24><vspace|0.5fn>
 
       4.1<space|2spc>A Brief Review of Least-Action Principle in Classical
       Mechanics <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-24>
+      <no-break><pageref|auto-25>
 
       4.2<space|2spc>Least-Action Principle of Distribution Has No Redundancy
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-25>
+      <no-break><pageref|auto-26>
 
       4.3<space|2spc>Data Fitting Is Equivalent to Least-Action Principle of
       Distribution <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-26>
+      <no-break><pageref|auto-27>
 
       4.4<space|2spc><with|mode|<quote|math>|\<clubsuit\>> Example:
       Least-Action Principle in Supervised Machine Learning
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-28>
+      <no-break><pageref|auto-29>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|5<space|2spc>Path
       Integral> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-29><vspace|0.5fn>
+      <no-break><pageref|auto-30><vspace|0.5fn>
 
       5.1<space|2spc>Markovian Process with Euclidean Alphabet Can Be
       Formulated as Path Integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-30>
+      <no-break><pageref|auto-31>
 
       <with|par-left|<quote|1tab>|5.1.1<space|2spc><with|mode|<quote|math>|\<clubsuit\>>
       Estimation of the Residue <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-31>>
+      <no-break><pageref|auto-32>>
 
       5.2<space|2spc>Langevin Process with Constant Covariance Has a Path
       Integral on Alphabet <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-32>
+      <no-break><pageref|auto-33>
 
       5.3<space|2spc><with|mode|<quote|math>|\<clubsuit\>> Grassmann
       Variable, Berezin Integral, and Ghosts
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-33>
+      <no-break><pageref|auto-34>
 
       5.4<space|2spc><with|mode|<quote|math>|\<heartsuit\>> Fisher Matrix
       Characterizes Information Propagation in Stochastic System
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-34>
+      <no-break><pageref|auto-35>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Epilogue>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-35><vspace|0.5fn>
+      <no-break><pageref|auto-36><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
