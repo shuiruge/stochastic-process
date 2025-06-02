@@ -1,15 +1,12 @@
 # shell.nix
 
 with import <nixpkgs> { };
-let
-  pythonPackages = python3Packages;
-in pkgs.mkShell rec {
-  name = "pythonEnv";
+pkgs.mkShell rec {
+  name = "Stochastic Process in a Nutshell";
   buildInputs = [
-    pythonPackages.python
-    pythonPackages.matplotlib
-    pythonPackages.numpy
-    pythonPackages.scipy
-    pythonPackages.ipykernel
+    texliveFull  # LaTeX.
+    texmacs
+    graphviz  # for TeXmacs.
+    pandoc
   ];
 }
