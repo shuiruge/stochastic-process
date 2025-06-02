@@ -3,8 +3,11 @@
 <style|book>
 
 <\body>
-  <doc-data|<doc-title|Stochastic Process>|<doc-subtitle|A Brief Note about
-  Information, Markovian Process, and Least-Action Principle>>
+  <doc-data|<doc-title|Stochastic Process in a Nutshell>|<\doc-subtitle>
+    A Brief Note about Information,
+
+    Markovian Process, and Least-Action Principle
+  </doc-subtitle>>
 
   <\table-of-contents|toc>
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|Prologue>
@@ -1217,28 +1220,30 @@
   <math|<around*|(|\<mathd\>/\<mathd\>t|)>
   H<around*|(|P<rsub|i><around*|(|t|)>,\<Pi\><rsub|i>|)>=0>.
 
-  So, for the whole random system or each of its subsystems, the following
-  theorem holds.
+  We summarize this section as follow. Let <math|\<Pi\>> a distribution with
+  alphabet <math|\<cal-X\>>. If there is a transition rate <math|r> such that
 
-  <\theorem>
-    <label|theorem: relaxation>Let <math|\<Pi\>> a distribution with alphabet
-    <math|\<cal-X\>>. If there is a transition rate r such that 1) every two
-    elements in <math|\<cal-X\>> are connected and that 2) the detailed
-    balance condition <reference|equation:Detailed Balance> holds for
-    <math|\<Pi\>> and <math|r>, then for any time-dependent distribution
-    <math|P<around*|(|t|)>> with the same alphabet (at one time) evolved by
-    the master equation <reference|equation:master equation>,
-    <math|P<around*|(|t|)>> will monotonically and constantly relax to
-    <math|\<Pi\>>.
-  </theorem>
+  <\enumerate-numeric>
+    <item>every two elements in <math|\<cal-X\>> are connected and that
 
-  Many textures use Fokker-Planck equation to prove the monotonic reduction
-  of relative entropy. After an integration by parts, they arrive at a
-  negative definite expression, which means the monotonic reduction. This
-  proof needs smooth structure on <math|X>, which is essential for
-  integration by parts. In this section, we provides a more generic
-  alternative to the proof, for which smooth structure on <math|X> is
-  unnecessary.
+    <item>the detailed balance condition <reference|equation:Detailed
+    Balance> holds for <math|\<Pi\>> and <math|r>,
+  </enumerate-numeric>
+
+  then for any time-dependent distribution <math|P<around*|(|t|)>> with the
+  same alphabet (at one time) evolved by the master equation
+  <reference|equation:master equation>, <math|P<around*|(|t|)>> will
+  monotonically and constantly relax to <math|\<Pi\>>.<\footnote>
+    Many textures use Fokker-Planck equation to prove the monotonic reduction
+    of relative entropy. After an integration by parts, they arrive at a
+    negative definite expression, which means the monotonic reduction. This
+    proof needs smooth structure on <math|X>, which is essential for
+    integration by parts. In this section, we provides a more generic
+    alternative to the proof, for which smooth structure on <math|X> is
+    unnecessary.
+  </footnote> This conclusion holds for either a random system (if it is
+  interconnected as a whole) or one of its subsystems (when this subsystem is
+  interconnected).
 
   <section|Monte-Carlo Simulation and Guarantee of Relaxation><label|section:
   Monte-Carlo Simulation and Guarantee of Relaxation>
@@ -2869,10 +2874,11 @@
 
   After discussing stationary distribution of Fokker-Planck equation (as a
   master equation), we continue investigate when will Langevin process relax
-  an initial distribution to the stationary. By theorem <reference|theorem:
-  relaxation>, this is equivalent to ask: when will the transition rate of
-  Langevin process satisfy detailed balance condition? Detailed balance
-  condition reads <math|r<around*|(|x+\<epsilon\>,x|)>
+  an initial distribution to the stationary. By the conclusion of section
+  <reference|section: Detailed Balance Condition and Connectivity
+  Monotonically Reduce Relative Entropy> this is equivalent to ask: when will
+  the transition rate of Langevin process satisfy detailed balance condition?
+  Detailed balance condition reads <math|r<around*|(|x+\<epsilon\>,x|)>
   \<pi\><around*|(|x|)>=r<around*|(|x,x+\<epsilon\>|)>
   \<pi\><around*|(|x+\<epsilon\>|)>>. Directly inserting equation
   <reference|equation:langevin transition rate>, we get for the left hand
@@ -3472,7 +3478,8 @@
   satisfies detailed balance condition (see section <reference|section:
   Detailed Balance of Langevin Process Lacks Source-Free Degree of Freedom>,
   especially the equation <reference|equation:detailed balance condition for
-  Langevin>). Then, theorem <reference|theorem: relaxation> claims that the
+  Langevin>). Then, section <reference|section: Detailed Balance Condition
+  and Connectivity Monotonically Reduce Relative Entropy> concludes that the
   iteration <reference|equation:langevin iteration> will relax the samples
   towards the stationary distribution, which has density function
   proportional to <math|exp<around*|(|-S<around*|(|x,\<theta\>|)>|)>>. There
@@ -4676,6 +4683,7 @@
     <associate|footnote-2.2|<tuple|2.2|18>>
     <associate|footnote-2.3|<tuple|2.3|20>>
     <associate|footnote-2.4|<tuple|2.4|21>>
+    <associate|footnote-2.5|<tuple|2.5|?>>
     <associate|footnote-3.1|<tuple|3.1|25>>
     <associate|footnote-3.2|<tuple|3.2|26>>
     <associate|footnote-3.3|<tuple|3.3|28>>
@@ -4696,6 +4704,7 @@
     <associate|footnr-2.2|<tuple|2.2|18>>
     <associate|footnr-2.3|<tuple|2.3|20>>
     <associate|footnr-2.4|<tuple|2.4|21>>
+    <associate|footnr-2.5|<tuple|2.5|?>>
     <associate|footnr-3.1|<tuple|3.1|25>>
     <associate|footnr-3.2|<tuple|3.2|26>>
     <associate|footnr-3.3|<tuple|3.3|28>>

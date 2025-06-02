@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:x="https://www.texmacs.org/2002/extensions" xmlns:m="http://www.w3.org/1998/Math/MathML">
   <head>
-    <title>Stochastic Process</title>
+    <title>Stochastic Process in a Nutshell</title>
     <meta charset="utf-8" content="TeXmacs 2.1.4" name="generator"></meta>
     <style type="text/css">
       body { text-align: justify } h5 { display: inline; padding-right: 1em }
@@ -42,12 +42,16 @@
       <tr>
         <td><font style="font-size: 141.4%"><table class="title-block" style="margin-top: 0.5em; margin-bottom: 0.5em">
           <tr>
-            <td><font style="font-size: 237.835%"><strong>Stochastic Process</strong></font></td>
+            <td><font style="font-size: 237.835%"><strong>Stochastic Process in a
+            Nutshell</strong></font></td>
           </tr>
         </table><table class="title-block" style="margin-top: 0.25em; margin-bottom: 0.5em">
           <tr>
-            <td><font style="font-size: 183.396%"><strong>A Brief Note about Information, Markovian
-            Process, and Least-Action Principle</strong></font></td>
+            <td><font style="font-size: 183.396%"><strong><p>
+              A Brief Note about Information,
+            </p><p>
+              Markovian Process, and Least-Action Principle
+            </p></strong></font></td>
           </tr>
         </table></font></td>
       </tr>
@@ -1462,27 +1466,51 @@ y) \left( \frac{p (x,
       \((\mathrm{d} / \mathrm{d} t) H (P_i (t), \Pi_i) = 0\).
     </p>
     <p>
-      So, for the whole random system or each of its subsystems, the following
-      theorem holds.
+      We summarize this section as follow. Let \(\Pi\) a distribution with
+      alphabet \(\mathcal{X}\). If there is a transition rate \(r\) such that
     </p>
-    <p style="margin-top: 1em; margin-bottom: 1em">
-      <strong>Theorem <class style="font-style: normal">2.1</class>. </strong><i><a id="theorem: relaxation"></a>Let
-      \(\Pi\) a distribution with alphabet \(\mathcal{X}\). If there is a
-      transition rate r such that 1) every two elements in \(\mathcal{X}\) are
-      connected and that 2) the detailed balance condition <a href="#equation:Detailed Balance">2.8</a>
-      holds for \(\Pi\) and \(r\), then for any time-dependent distribution
-      \(P (t)\) with the same alphabet (at one time) evolved by the master
-      equation <a href="#equation:master equation">2.4</a>, \(P (t)\) will monotonically and constantly
-      relax to \(\Pi\).</i>
-    </p>
+    <ol>
+      <li>
+        <p>
+          every two elements in \(\mathcal{X}\) are connected and that
+        </p>
+      </li>
+      <li>
+        <p>
+          the detailed balance condition <a href="#equation:Detailed Balance">2.8</a> holds for \(\Pi\)
+          and \(r\),
+        </p>
+      </li>
+    </ol>
     <p>
-      Many textures use Fokker-Planck equation to prove the monotonic
-      reduction of relative entropy. After an integration by parts, they
-      arrive at a negative definite expression, which means the monotonic
-      reduction. This proof needs smooth structure on \(X\), which is
-      essential for integration by parts. In this section, we provides a more
-      generic alternative to the proof, for which smooth structure on \(X\) is
-      unnecessary.
+      then for any time-dependent distribution \(P (t)\) with the same
+      alphabet (at one time) evolved by the master equation
+      <a href="#equation:master equation">2.4</a>
+      , \(P (t)\) will monotonically and constantly relax to \(\Pi\).
+      <div class="footnote">
+        <font style="font-size: 77.1%"><div align="justify">
+          <div style="margin-left: 0px">
+            <div style="margin-right: 0px">
+              <class style="font-style: normal"><p>
+                2.3. Many textures use Fokker-Planck equation to prove the
+                monotonic reduction of relative entropy. After an integration
+                by parts, they arrive at a negative definite expression, which
+                means the monotonic reduction. This proof needs smooth
+                structure on \(X\), which is essential for integration by
+                parts. In this section, we provides a more generic alternative
+                to the proof, for which smooth structure on \(X\) is
+                unnecessary.
+              </p></class>
+            </div>
+          </div>
+        </div></font>
+      </div>
+      <span style="margin-left: 0em"></span>
+      <a id="footnr-2.3"></a>
+      <sup><class style="font-style: normal"><a href="#footnote-2.3">2.3</a></class></sup>
+      This conclusion holds for either a random system (if it is
+      interconnected as a whole) or one of its subsystems (when this subsystem
+      is interconnected).
     </p>
     <h2 id="auto-12"><a id="section: Monte-Carlo Simulation and Guarantee of Relaxation"></a>2.5<span style="margin-left: 1em"></span>Monte-Carlo Simulation and
     Guarantee of Relaxation<span style="margin-left: 1em"></span></h2>
@@ -1524,7 +1552,7 @@ y) \left( \frac{p (x,
           <div style="margin-left: 0px">
             <div style="margin-right: 0px">
               <class style="font-style: normal"><p>
-                2.3. There are multiple motivations for Monte-Carlo
+                2.4. There are multiple motivations for Monte-Carlo
                 simulation. An important one comes from numerical integration.
                 The problem is calculating the integral \(\int_{\mathcal{X}}
                 \mathrm{d} x \pi (x) f (x)\) for a density function \(\pi\)
@@ -1552,8 +1580,8 @@ y) \left( \frac{p (x,
         </div></font>
       </div>
       <span style="margin-left: 0em"></span>
-      <a id="footnr-2.3"></a>
-      <sup><class style="font-style: normal"><a href="#footnote-2.3">2.3</a></class></sup>
+      <a id="footnr-2.4"></a>
+      <sup><class style="font-style: normal"><a href="#footnote-2.4">2.4</a></class></sup>
     </p>
     <p>
       Like the Euler method in solving dynamical system, however, a finite
@@ -1641,7 +1669,7 @@ t))}\) gives
           <div style="margin-left: 0px">
             <div style="margin-right: 0px">
               <class style="font-style: normal"><p>
-                2.4. The first line
+                2.5. The first line
               </p><center>
                 \(\displaystyle \Delta H_1 := \int_{\mathcal{X}} \mathrm{d} x
                 p (x, t + \Delta t) \ln \frac{p
@@ -1736,8 +1764,8 @@ t^2) .\)
         </div></font>
       </div>
       <span style="margin-left: 0em"></span>
-      <a id="footnr-2.4"></a>
-      <sup><class style="font-style: normal"><a href="#footnote-2.4">2.4</a></class></sup>
+      <a id="footnr-2.5"></a>
+      <sup><class style="font-style: normal"><a href="#footnote-2.5">2.5</a></class></sup>
     </p>
     <center>
       \(\displaystyle \Delta H_1 = \frac{\Delta t^2}{2} \int_{\mathcal{X}}
@@ -1839,7 +1867,7 @@ t) r (w, x) / p (x,
     <p>
       The right hand side is recognized as \(\pi (y) r (y, x)\), implying that
       detailed balance condition <a href="#equation:Detailed Balance">2.8</a> holds for the \(r\)
-      constructed by equation <a href="#equation:equation:metropolis-hastings">2.12</a>. Theorem <a href="#theorem: relaxation">2.1</a> then
+      constructed by equation <a href="#equation:equation:metropolis-hastings">2.12</a>. Theorem <a href="#theorem: relaxation">?</a> then
       states that, <em>evolved by the master equation <a href="#equation:master equation">2.4</a>, any
       initial distribution will finally relax to the stationary distribution
       \(\Pi\)</em>.
@@ -3662,12 +3690,12 @@ C^{\alpha}_{\beta} (X (t)) \frac{\mathrm{d} W^{\beta}}{\mathrm{d} t}
     <p>
       After discussing stationary distribution of Fokker-Planck equation (as a
       master equation), we continue investigate when will Langevin process
-      relax an initial distribution to the stationary. By theorem <a href="#theorem: relaxation">2.1</a>,
-      this is equivalent to ask: when will the transition rate of Langevin
-      process satisfy detailed balance condition? Detailed balance condition
-      reads \(r (x + \epsilon, x) \pi (x) = r (x, x + \epsilon) \pi (x +
-      \epsilon)\). Directly inserting equation <a href="#equation:langevin transition rate">3.12</a>, we get for
-      the left hand side,
+      relax an initial distribution to the stationary. By the conclusion of
+      section <a href="#section: Detailed Balance Condition and Connectivity Monotonically Reduce Relative Entropy">2.4</a> this is equivalent to ask: when will the
+      transition rate of Langevin process satisfy detailed balance condition?
+      Detailed balance condition reads \(r (x + \epsilon, x) \pi (x) = r (x, x
+      + \epsilon) \pi (x + \epsilon)\). Directly inserting equation <a href="#equation:langevin transition rate">3.12</a>,
+      we get for the left hand side,
     </p>
     <center>
       \(\displaystyle \pi (x) r (x, x + \epsilon) = - \pi (x) f^{\alpha} (x)
@@ -4372,9 +4400,9 @@ x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
       and the random variable \(\Delta W^{\alpha}\) obeys a normal
       distribution with zero mean and variance \(\Delta t\). This specific
       transition density satisfies detailed balance condition (see section <a
-      href="#section: Detailed Balance of Langevin Process Lacks Source-Free Degree of Freedom">3.8</a>, especially the equation <a href="#equation:detailed balance condition for Langevin">3.18</a>). Then, theorem
-      <a href="#theorem: relaxation">2.1</a> claims that the iteration <a href="#equation:langevin iteration">4.9</a> will relax
-      the samples towards the stationary distribution, which has density
+      href="#section: Detailed Balance of Langevin Process Lacks Source-Free Degree of Freedom">3.8</a>, especially the equation <a href="#equation:detailed balance condition for Langevin">3.18</a>). Then, section
+      <a href="#section: Detailed Balance Condition and Connectivity Monotonically Reduce Relative Entropy">2.4</a> concludes that the iteration <a href="#equation:langevin iteration">4.9</a> will
+      relax the samples towards the stationary distribution, which has density
       function proportional to \(\exp (- S (x, \theta))\). There is not need
       to wait until the samples have been fully relaxed. In practice, we find
       that ten or several more iterations has been sufficient for a good
