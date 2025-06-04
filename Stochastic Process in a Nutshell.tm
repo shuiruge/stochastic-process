@@ -3588,10 +3588,11 @@
 
   <chapter|Path Integral>
 
-  In this chapter, we write down the path integral formulation for generic
-  Markovian process. We find that the path integral is taken on an extended
-  space. We then consider the Langevin process as an instance, for which the
-  extended components may be analytically marginalized.
+  In this chapter, we are to calculate the action for a generic Markovian
+  process. To do so, we explore the path integral formulation of Markovian
+  process. We find that the path integral is taken on an extended space. We
+  then consider the Langevin process as an instance, for which the extended
+  components may be analytically marginalized.
 
   Throughout this chapter, we reuse the notations in chapter
   <reference|section: Kramers-Moyal Expansion and Langevin Process>. Briefly,
@@ -4094,17 +4095,17 @@
 
   <\equation*>
     p<around*|(|x<rsub|N>,N \<Delta\>t|)>=<big|int>\<mathD\><around*|(|x|)>
-    p<around*|(|x<rsub|0>,0|)> exp<around*|(|-S<around*|(|x|)>+N
-    C|)>+\<omicron\><around*|(|N \<Delta\>t|)>
+    p<around*|(|x<rsub|0>,0|)> exp<around*|(|-S<around*|(|x|)>|)>+\<omicron\><around*|(|N
+    \<Delta\>t|)>
   </equation*>
 
-  with
+  with the integral volume
 
   <\equation*>
     <big|int>D<around*|(|x|)>\<assign\><big|int>\<mathd\>x<rsub|0>\<cdots\><big|int>\<mathd\>x<rsub|N-1>
   </equation*>
 
-  and
+  and the action (up to a constant)
 
   <\equation>
     S<around*|(|x|)>=<big|sum><rsub|i=0><rsup|N-1>\<Delta\>t<around*|{|<frac|1|2>
