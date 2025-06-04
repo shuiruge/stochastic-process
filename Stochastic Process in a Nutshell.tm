@@ -3588,11 +3588,11 @@
 
   <chapter|Path Integral>
 
-  In this chapter, we are to calculate the action for a generic Markovian
-  process. To do so, we explore the path integral formulation of Markovian
-  process. We find that the path integral is taken on an extended space. We
-  then consider the Langevin process as an instance, for which the extended
-  components may be analytically marginalized.
+  In this chapter, we calculate the action of a generic Markovian process. To
+  do so, we first convert the master equation into a path integral. We then
+  find that the path integral is taken on an extended space. As an instance,
+  we consider the Langevin process, for which the extended components may be
+  analytically marginalized.
 
   Throughout this chapter, we reuse the notations in chapter
   <reference|section: Kramers-Moyal Expansion and Langevin Process>. Briefly,
