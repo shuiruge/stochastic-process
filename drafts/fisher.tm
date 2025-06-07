@@ -201,13 +201,7 @@
   So, we find
 
   <\equation*>
-    \<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|x<rsub|0>|)>=<frac|\<delta\><rsup|\<alpha\>\<beta\>>|\<Delta\>t>+\<partial\><rsub|\<beta\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>+\<partial\><rsub|\<alpha\>>f<rsup|\<beta\>><around*|(|x<rsub|0>|)>+\<Delta\>t<big|sum><rsub|\<gamma\>=1><rsup|d>\<partial\><rsub|\<alpha\>>f<rsup|\<gamma\>><around*|(|x<rsub|0>|)>\<partial\><rsub|\<beta\>>f<rsup|\<gamma\>><around*|(|x<rsub|0>|)>,
-  </equation*>
-
-  and hence
-
-  <\equation*>
-    H<around*|(|P<around*|(|x<rsub|0>|)>,P<around*|(|x<rsub|0>+\<delta\>x<rsub|0>|)>|)>=<around*|[|<frac|\<delta\><rsup|\<alpha\>\<beta\>>|\<Delta\>t>+\<partial\><rsub|\<beta\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>+\<partial\><rsub|\<alpha\>>f<rsup|\<beta\>><around*|(|x<rsub|0>|)>+\<Delta\>t<big|sum><rsub|\<gamma\>=1><rsup|d>\<partial\><rsub|\<alpha\>>f<rsup|\<gamma\>><around*|(|x<rsub|0>|)>\<partial\><rsub|\<beta\>>f<rsup|\<gamma\>><around*|(|x<rsub|0>|)>|]>\<delta\>x<rsub|0><rsup|\<alpha\>>\<delta\>x<rsub|0><rsup|\<beta\>>+\<omicron\><around*|(|\<delta\>x<rsub|0><rsup|2>|)>.
+    \<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|x<rsub|0>|)>=<frac|\<delta\><rsup|\<alpha\>\<beta\>>|\<Delta\>t>+\<partial\><rsub|\<beta\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>+\<partial\><rsub|\<alpha\>>f<rsup|\<beta\>><around*|(|x<rsub|0>|)>+\<Delta\>t<big|sum><rsub|\<gamma\>=1><rsup|d>\<partial\><rsub|\<alpha\>>f<rsup|\<gamma\>><around*|(|x<rsub|0>|)>\<partial\><rsub|\<beta\>>f<rsup|\<gamma\>><around*|(|x<rsub|0>|)>.
   </equation*>
 
   \;
@@ -223,7 +217,8 @@
   limit <math|\<Delta\>t\<rightarrow\>0> (with <math|t> fixed)
 
   <\equation>
-    <frac|1|N>H<around*|(|P<around*|(|x<rsub|0>|)>,P<around*|(|x<rsub|0>+\<delta\>x<rsub|0>|)>|)>\<rightarrow\><frac|\<delta\>x<rsub|0><rsup|2>|t>+\<omicron\><around*|(|\<delta\>x<rsub|0><rsup|2>|)>.
+    <frac|1|N>\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|x<rsub|0>|)>\<rightarrow\><frac|\<delta\><rsub|\<alpha\>\<beta\>>|t>.<label|equation:
+    fisher matrix of langevin process for initial condition>
   </equation>
 
   It is independent of <math|f>. At first sight, this is quite strange. But
@@ -364,21 +359,30 @@
 
   <\equation>
     \<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>|)>=\<bbb-E\><rsub|x\<sim\>P<around*|(|\<theta\>|)>><around*|[|<big|int><rsub|0><rsup|t>\<mathd\>s
-    <big|sum><rsub|\<gamma\>=1><rsup|d><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x<around*|(|s|)>,\<theta\>|)><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<around*|(|s|)>,\<theta\>|)>|]>.
+    <big|sum><rsub|\<gamma\>=1><rsup|d><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x<around*|(|s|)>,\<theta\>|)><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<around*|(|s|)>,\<theta\>|)>|]>.<label|equation:
+    fisher matrix of langevin process for dynamical parameter>
   </equation>
 
   To estimate this numerically, we sample an assemble of paths from the
   distribution <math|P<around*|(|\<theta\>|)>> using the simulation
   introduced in section <reference|section: A Brief Review of Langevin
   Process>, then compute the mean value of the integral for all the sampled
-  paths.
+  paths. The \Pphysical\Q explanation of equation <reference|equation: fisher
+  matrix of langevin process for dynamical parameter> is as follow. The
+  integrand <math|<big|sum><rsub|\<gamma\>><around*|(|\<partial\>f<rsup|\<gamma\>>/\<partial\>\<theta\><rsup|\<alpha\>>|)><around*|(|x,\<theta\>|)><around*|(|\<partial\>f<rsup|\<gamma\>>/\<partial\>\<theta\><rsup|\<beta\>>|)><around*|(|x,\<theta\>|)>>
+  characterizes the sensitivity to the <math|\<theta\>> at position <math|x>.
+  For each path, the integral gives the global sensitivity. The fisher matrix
+  <math|\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>|)>>, thus, is
+  the expectation of the global sensitivity on the distribution of paths
+  <math|P<around*|(|\<theta\>|)>>.
 
-  Notice that there is no need to take the average (that is, dividing
-  <math|H<around*|(|P<around*|(|\<theta\>|)>,P<around*|(|\<theta\>+\<delta\>\<theta\>|)>|)>>
-  by <math|N> as in section <reference|section: Sensitivity in Initial
-  Condition>. We find that, for Langevin process, <em|the effect of varying
-  dynamical parameter and that of varying initial condition are essentially
-  different>.
+  Comparing with equation <reference|equation: fisher matrix of langevin
+  process for initial condition> in section <reference|section: Sensitivity
+  in Initial Condition>, there is no need to take the average (that is,
+  dividing <math|\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>|)>> by
+  <math|N>) in the limit <math|\<Delta\>t\<rightarrow\>0>. We find that, for
+  Langevin process, <em|the effect of varying dynamical parameter and that of
+  varying initial condition are essentially different>.
 </body>
 
 <\initial>
@@ -392,11 +396,15 @@
   <\collection>
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-2|<tuple|1.1|1>>
-    <associate|auto-3|<tuple|1.2|3>>
-    <associate|auto-4|<tuple|1.3|?>>
+    <associate|auto-3|<tuple|1.2|1>>
+    <associate|auto-4|<tuple|1.3|3>>
     <associate|equation: density of path|<tuple|5|1>>
     <associate|equation: discrete Langevin process|<tuple|3|1>>
     <associate|equation: fisher matrix|<tuple|8|2>>
+    <associate|equation: fisher matrix of langevin process for dynamical
+    parameter|<tuple|10|4>>
+    <associate|equation: fisher matrix of langevin process for initial
+    condition|<tuple|9|3>>
     <associate|equation: integral volume of path|<tuple|7|1>>
     <associate|equation: langevin process a|<tuple|1|1>>
     <associate|equation: langevin process b|<tuple|2|1>>
@@ -409,17 +417,20 @@
 <\auxiliary>
   <\collection>
     <\associate|toc>
-      <with|par-left|<quote|1tab>|1<space|2spc>A Brief Review of Langevin
-      Process <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-1>>
+      1<space|2spc>Fisher Matrix <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-1>
 
-      <with|par-left|<quote|1tab>|2<space|2spc>Sensitivity in Initial
-      Condition <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.1<space|2spc>A Brief Review of Langevin
+      Process <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-2>>
 
-      <with|par-left|<quote|1tab>|3<space|2spc>Sensitivity in Dynamical
-      Parameter <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.2<space|2spc>Sensitivity in Initial
+      Condition <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-3>>
+
+      <with|par-left|<quote|1tab>|1.3<space|2spc>Sensitivity in Dynamical
+      Parameter <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-4>>
     </associate>
   </collection>
 </auxiliary>
