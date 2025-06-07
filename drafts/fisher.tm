@@ -48,7 +48,7 @@
 
   where <math|<with|font|cal|N><around*|(|\<mu\>,\<Sigma\>|)>> denotes the
   multi-dimensional normal distribution with expectation <math|\<mu\>> and
-  covariance <math|\<Sigma\>>. Herein, the <math|x<rsub|i>> is not captial
+  covariance <math|\<Sigma\>>. Herein, the <math|x<rsub|i>> is not capital
   because it is no more random, but given by a value. Written in density, it
   is
 
@@ -75,7 +75,7 @@
   in sequence. From this process, we obtain the distribution of the path
   <math|<around*|(|x<rsub|0>,X<rsub|1>,\<ldots\>,X<rsub|N>|)>>. (Notice that
   <math|x<rsub|0>> shall be given first, thus it is written in lower case.
-  Namly, it is not a random variable). This distribution is denoted by
+  Namely, it is not a random variable). This distribution is denoted by
   <math|P<around*|(|x<rsub|0>|)>>. It samples
   <math|<around*|(|X<rsub|1>,\<ldots\>,X<rsub|N>|)>> from the density
 
@@ -257,9 +257,9 @@
   deterministic. In this situation, path starting at <math|x<rsub|0>> and
   that starting at <math|x<rsub|0>+\<delta\>x<rsub|0>> separates greatly at
   <math|t>, and the later will be very sensitive to
-  <math|\<delta\>x<rsub|0>>. But, when the random term <math|\<Delta\>W>
-  appears, it plays the role of <math|\<delta\>x<rsub|0>>, namely the
-  perturbation. Then, the distribution of the path starting at
+  <math|\<delta\>x<rsub|0>>. But, when the randomness appears, <em|the
+  <math|\<Delta\>W<rsub|0>> has played the role of
+  <math|\<delta\>x<rsub|0>>>. Then, the distribution of the path starting at
   <math|x<rsub|0>> and that starting at <math|x<rsub|0>+\<delta\>x<rsub|0>>
   will be almost the same when <math|t> increases (the randomness
   accumulates).
@@ -276,7 +276,7 @@
   depends only on the beginning part of path. Now, let us examine another
   situation such that the difference of distributions depends on the whole
   path. For this, we consider the parameterized dynamics, and vary the
-  parameter (instead of initial position). Explicitly, we relpace
+  parameter (instead of initial position). Explicitly, we replace
   <math|f<around*|(|x|)>> by <math|f<around*|(|x,\<theta\>|)>> where
   <math|\<theta\>\<in\>\<bbb-R\><rsup|m>> is the parameter. Then, by fixing
   the initial position <math|x<rsub|0>>, <math|p<around*|(|x\|x<rsub|0>|)>>
