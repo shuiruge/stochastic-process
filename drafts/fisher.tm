@@ -3,6 +3,8 @@
 <style|book>
 
 <\body>
+  <section|Fisher Matrix>
+
   <subsection|A Brief Review of Langevin Process><label|section: A Brief
   Review of Langevin Process>
 
@@ -300,39 +302,21 @@
   once more,
 
   <\equation*>
-    <frac|\<partial\><rsup|2>ln p|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x\|\<theta\>|)>=-<big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<gamma\>=1><rsup|d><around*|[|<frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<rsub|i>,\<theta\>|)><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x<rsub|i>,\<theta\>|)>\<Delta\>t-<around*|(|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|i>,\<theta\>|)>
-    \<Delta\>t|)><frac|\<partial\><rsup|2>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<rsub|i>,\<theta\>|)><rsub|>|]>.
+    <frac|\<partial\><rsup|2>ln p|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x\|\<theta\>|)>=<big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<gamma\>=1><rsup|d><around*|[|<around*|(|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|i>,\<theta\>|)>
+    \<Delta\>t|)><frac|\<partial\><rsup|2>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<rsub|i>,\<theta\>|)>-<frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<rsub|i>,\<theta\>|)><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x<rsub|i>,\<theta\>|)>\<Delta\>t<rsub|>|]>.
   </equation*>
 
   Plugging into equation <reference|equation: fisher matrix>, we get
 
-  <\equation>
-    <tabular|<tformat|<cwith|2|2|1|1|cell-halign|r>|<cwith|1|1|1|1|cell-halign|r>|<table|<row|<cell|\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>|)>=>|<cell|\<bbb-E\><rsub|x\<sim\>P<around*|(|\<theta\>|)>><around*|[|<big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<gamma\>=1><rsup|d><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x<rsub|i>,\<theta\>|)><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<rsub|i>,\<theta\>|)>\<Delta\>t|]>>>|<row|<cell|->|<cell|\<bbb-E\><rsub|x\<sim\>p<around*|(|\<theta\>|)>><around*|[|<big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<gamma\>=1><rsup|d><around*|(|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|i>,\<theta\>|)>
-    \<Delta\>t|)><frac|\<partial\><rsup|2>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<rsub|i>,\<theta\>|)>|]>.>>>>>
-  </equation>
+  <\align>
+    <tformat|<table|<row|<cell|\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>|)>=>|<cell|-\<bbb-E\><rsub|x\<sim\>P<around*|(|\<theta\>|)>><around*|[|<big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<gamma\>=1><rsup|d><around*|(|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|i>,\<theta\>|)>
+    \<Delta\>t|)><frac|\<partial\><rsup|2>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<rsub|i>,\<theta\>|)>|]>>>|<row|<cell|>|<cell|+\<bbb-E\><rsub|x\<sim\>p<around*|(|\<theta\>|)>><around*|[|<big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<gamma\>=1><rsup|d><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x<rsub|i>,\<theta\>|)><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<rsub|i>,\<theta\>|)>\<Delta\>t|]>.>>>>
+  </align>
 
-  To estimate this numerically, we sample an assemble of paths from the
-  distribution <math|P<around*|(|\<theta\>|)>> using the simulation
-  introduced in section <reference|section: A Brief Review of Langevin
-  Process>, then compute the expectations in
-  <math|\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>|)>> as the mean
-  values on the samples.
+  \;
 
-  In the limit <math|\<Delta\>t\<rightarrow\>0> and
-  <math|N\<rightarrow\>\<infty\>> at the same time while keeping <math|t=N
-  \<Delta\>t> invariant, we can formally write the first expectation in
-  <math|\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>|)>> as an
-  expected integral
-
-  <\equation*>
-    \<bbb-E\><rsub|x\<sim\>P<around*|(|\<theta\>|)>><around*|[|<big|int><rsub|0><rsup|t>\<mathd\>s
-    <big|sum><rsub|\<gamma\>=1><rsup|d><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x<around*|(|s|)>,\<theta\>|)><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<around*|(|s|)>,\<theta\>|)>|]>
-  </equation*>
-
-  Along the \Pclassical\Q path <math|x> (namely, the path with the maximal
-  probability), it TODO.
-
-  For the second expectation, we first write it in its original form, as
+  The first expectation vanishes. To show this, we first write it in its
+  original form, as
 
   <\equation*>
     <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|1>q<rsub|\<Delta\>t><around*|(|x<rsub|N>\|x<rsub|N-1>|)>\<cdots\>q<rsub|\<Delta\>t><around*|(|x<rsub|1>\|x<rsub|0>|)><big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<gamma\>=1><rsup|d><around*|(|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|i>,\<theta\>|)>
@@ -365,27 +349,35 @@
     \<Delta\>t|)><frac|\<partial\><rsup|2>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<rsub|0>,\<theta\>|)>,
   </equation*>
 
-  which is, again, vanishing. So, the second expectation diminishes
-  completely. Finally, we arrive at
+  which is, again, vanishing. So, the first expectation is zero. In addition,
+  in the limit <math|\<Delta\>t\<rightarrow\>0> and
+  <math|N\<rightarrow\>\<infty\>> at the same time while keeping <math|t=N
+  \<Delta\>t> invariant, we can formally write the \Pintegrand\Q of the
+  second expectation in <math|\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>|)>>
+  as a Riemannian integral
 
   <\equation*>
+    <big|int><rsub|0><rsup|t>\<mathd\>s <big|sum><rsub|\<gamma\>=1><rsup|d><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x<around*|(|s|)>,\<theta\>|)><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<around*|(|s|)>,\<theta\>|)>.
+  </equation*>
+
+  Altogether, we find
+
+  <\equation>
     \<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>|)>=\<bbb-E\><rsub|x\<sim\>P<around*|(|\<theta\>|)>><around*|[|<big|int><rsub|0><rsup|t>\<mathd\>s
-    <big|sum><rsub|\<gamma\>=1><rsup|d><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x<around*|(|s|)>,\<theta\>|)><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<around*|(|s|)>,\<theta\>|)>|]>,
-  </equation*>
+    <big|sum><rsub|\<gamma\>=1><rsup|d><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x<around*|(|s|)>,\<theta\>|)><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<around*|(|s|)>,\<theta\>|)>|]>.
+  </equation>
 
-  and hence
-
-  <\equation*>
-    H<around*|(|P<around*|(|\<theta\>|)>,P<around*|(|\<theta\>+\<delta\>\<theta\>|)>|)>=\<bbb-E\><rsub|x\<sim\>P<around*|(|\<theta\>|)>><around*|[|<big|int><rsub|0><rsup|t>\<mathd\>s
-    <big|sum><rsub|\<gamma\>=1><rsup|d><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x<around*|(|s|)>,\<theta\>|)><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<around*|(|s|)>,\<theta\>|)>|]>
-    \<delta\>\<theta\><rsup|\<alpha\>>\<delta\>\<theta\><rsup|\<beta\>>+\<omicron\><around*|(|\<delta\>\<theta\><rsup|2>|)>.
-  </equation*>
+  To estimate this numerically, we sample an assemble of paths from the
+  distribution <math|P<around*|(|\<theta\>|)>> using the simulation
+  introduced in section <reference|section: A Brief Review of Langevin
+  Process>, then compute the mean value of the integral for all the sampled
+  paths.
 
   Notice that there is no need to take the average (that is, dividing
   <math|H<around*|(|P<around*|(|\<theta\>|)>,P<around*|(|\<theta\>+\<delta\>\<theta\>|)>|)>>
   by <math|N> as in section <reference|section: Sensitivity in Initial
   Condition>. We find that, for Langevin process, <em|the effect of varying
-  dynamical parameter and that of varying initial condition is essentially
+  dynamical parameter and that of varying initial condition are essentially
   different>.
 </body>
 
@@ -399,20 +391,18 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-2|<tuple|2|1>>
-    <associate|auto-3|<tuple|3|3>>
+    <associate|auto-2|<tuple|1.1|1>>
+    <associate|auto-3|<tuple|1.2|3>>
+    <associate|auto-4|<tuple|1.3|?>>
     <associate|equation: density of path|<tuple|5|1>>
     <associate|equation: discrete Langevin process|<tuple|3|1>>
     <associate|equation: fisher matrix|<tuple|8|2>>
-    <associate|equation: fisher matrix v2|<tuple|10|4>>
     <associate|equation: integral volume of path|<tuple|7|1>>
     <associate|equation: langevin process a|<tuple|1|1>>
     <associate|equation: langevin process b|<tuple|2|1>>
     <associate|equation: transition density of Langevin process|<tuple|4|1>>
-    <associate|footnote-1|<tuple|1|3>>
-    <associate|footnr-1|<tuple|1|3>>
-    <associate|section: A Brief Review of Langevin Process|<tuple|1|1>>
-    <associate|section: Sensitivity in Initial Condition|<tuple|2|?>>
+    <associate|section: A Brief Review of Langevin Process|<tuple|1.1|1>>
+    <associate|section: Sensitivity in Initial Condition|<tuple|1.2|1>>
   </collection>
 </references>
 
