@@ -4411,20 +4411,21 @@
   Propagation in Stochastic System><label|section: Fisher Matrix
   Characterizes Information Propagation in Stochastic System>
 
-  Now in a try autumn day, you stand on the open ground, looking at a
-  starling flock flying under the blue sky. Suddenly, an eagle dives into the
-  flock. Some bird in the flock first notices the danger, trying to avoid by
-  turning direction. Other birds in the neighbor notice the behavior, may
-  follow it too, even though they have not seen the diving eagle yet. Then
-  from neighbors to neighbors, the danger signal may soon spread in the
-  flock. The fact will not be so because each bird has some degree of
-  randomness (or free will). Because the random movement itself is another
-  signal (or noise) to propagate in the flock, it pollutes the danger signal.
-  This randomness, however, is essential for a flock to survive. It assigns
-  flexibility to the flock so that eagles cannot predict the direction it
-  moves. In reality, the connection between the neighbors and the randomness
-  of each individual are properly balanced, so that the flock has sufficient
-  flexibility and a danger signal can propagate far enough within the flock.
+  Now in a dry and cool autumn day, you stand on the open ground, raising
+  your head and looking at a starling flock flying under the blue sky.
+  Suddenly, an eagle dives into the flock. Some bird in the flock first
+  notices the danger, trying to avoid by turning direction. Other birds in
+  the neighbor notice the behavior, may follow it too, even though they have
+  not seen the diving eagle yet. Then from neighbors to neighbors, the danger
+  signal may soon spread in the flock. The fact will not be so because each
+  bird has some degree of randomness (or free will). Because the random
+  movement itself is another signal (or noise) to propagate in the flock, it
+  pollutes the danger signal. This randomness, however, is essential for a
+  flock to survive. It assigns flexibility to the flock so that eagles cannot
+  predict the direction it moves. In reality, the connection between the
+  neighbors and the randomness of each individual are properly balanced, so
+  that the flock has sufficient flexibility and a danger signal can propagate
+  far enough within the flock.
 
   This phenomenon appears everywhere in Nature: a group of individuals (such
   as a starling flock or an ant colony) behaves like an \Pintelligent\Q
@@ -4433,87 +4434,150 @@
   techniques we have developed so far.
 
   To characterize the information propagation in a stochastic system, we
-  consider the transition density <math|q<rsub|t><around*|(|x\<rightarrow\>y|)>>.
-  It describes the probability (or portion) that the system transits from
-  <math|x> to <math|y> after time <math|t>. An initial perturbation
-  <math|x\<rightarrow\>x+\<varepsilon\>> will affect the distribution after
-  time <math|t>. Following section <reference|section: Least-Action Principle
-  of Distribution Has No Redundancy>, the action is defined to be
-  <math|S<rsub|t><around*|(|x,y|)>\<assign\>-ln
-  q<rsub|t><around*|(|x\<rightarrow\>y|)>>, which also depends on time
-  <math|t> and initial state <math|x>. Then, the difference in the
-  distribution after time <math|t> is given by the relative entropy
+  consider the conditional density <math|q<around*|(|x<rsub|1>,\<ldots\>,x<rsub|N>\|x<rsub|0>|)>\<assign\>q<rsub|\<Delta\>t><around*|(|x<rsub|0>\<rightarrow\>x<rsub|1>|)>\<cdots\>
+  q<rsub|\<Delta\>t><around*|(|x<rsub|N-1>\<rightarrow\>x<rsub|N>|)>> of the
+  path <math|x\<assign\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|N>|)>>. A
+  perturbation in initial position <math|x<rsub|0>\<rightarrow\>x<rsub|0>+\<delta\>x<rsub|0>>
+  will affect the distribution of the path, so is a perturbation in wind
+  speed or direction. We collect such environmental dependencies as a
+  parameter <math|\<lambda\>\<in\>\<bbb-R\><rsup|l>>, and replace
+  <math|q<around*|(|x<rsub|1>,\<ldots\>,x<rsub|N>\|x<rsub|0>|)>> by
+  <math|q<around*|(|x,\<lambda\>|)>>, where <math|\<lambda\>> involves
+  <math|x<rsub|0>> and other environmental conditions. Following section
+  <reference|section: Least-Action Principle of Distribution Has No
+  Redundancy>, the action is <math|S<around*|(|x,\<lambda\>|)>\<assign\>-ln
+  q<around*|(|x,\<lambda\>|)>>, which also depends on <math|\<lambda\>>.
+  Then, the difference in the distribution caused by a perturbation
+  <math|\<lambda\>\<rightarrow\>\<lambda\>+\<delta\>\<lambda\>> is given by
+  the relative entropy
 
   <\equation*>
-    H<around*|(|Q<rsub|t><around*|(|x|)>,Q<rsub|t><around*|(|x+\<varepsilon\>|)>|)>=<big|int>\<mathd\>y
-    q<rsub|t><around*|(|x\<rightarrow\>y|)>
-    ln<frac|q<rsub|t><around*|(|x\<rightarrow\>y|)>|q<rsub|t><around*|(|x+\<varepsilon\>\<rightarrow\>y|)>>=\<bbb-E\><rsub|y\<sim\>Q<rsub|t><around*|(|x|)>><around*|[|S<rsub|t><around*|(|x+\<varepsilon\>,y|)>-S<rsub|t><around*|(|x,y|)>|]>.
+    H<around*|(|Q<around*|(|\<lambda\>|)>,Q<around*|(|\<lambda\>+\<delta\>\<lambda\>|)>|)>=<big|int>D<around*|(|x|)>
+    q<around*|(|x,\<lambda\>|)> ln<frac|q<around*|(|x,\<lambda\>|)>|q<around*|(|x,\<lambda\>+\<delta\>\<lambda\>|)>>=\<bbb-E\><rsub|x\<sim\>Q<around*|(|\<lambda\>|)>><around*|[|S<around*|(|x,\<lambda\>+\<delta\>\<lambda\>|)>-S<around*|(|x,\<lambda\>|)>|]>,
   </equation*>
 
-  Taylor expansion by <math|\<varepsilon\>> at origin gives
+  where the integral volume of path is defined as before,
+  <math|<big|int>D<around*|(|x|)>\<assign\><big|int>\<mathd\>x<rsub|1>\<cdots\><big|int>\<mathd\>x<rsub|N>>.
+  Taylor expansion by <math|\<delta\>\<lambda\>> at origin gives
 
   <\equation*>
-    H<around*|(|Q<rsub|t><around*|(|x|)>,Q<rsub|t><around*|(|x+\<varepsilon\>|)>|)>=\<bbb-E\><rsub|y\<sim\>Q<rsub|t><around*|(|x|)>><around*|[|<frac|\<partial\>S<rsub|t>|\<partial\>x<rsup|\<alpha\>>><around*|(|x,y|)>|]>\<varepsilon\><rsup|\<alpha\>>+<frac|1|2>\<bbb-E\><rsub|y\<sim\>Q<rsub|t><around*|(|x|)>><around*|[|<frac|\<partial\><rsup|2>S<rsub|t>|\<partial\>x<rsup|\<alpha\>>\<partial\>x<rsup|\<beta\>>><around*|(|x,y|)>|]>\<varepsilon\><rsup|\<alpha\>>\<varepsilon\><rsup|\<beta\>>+\<omicron\><around*|(|\<varepsilon\><rsup|2>|)>.
+    H<around*|(|Q<around*|(|\<lambda\>|)>,Q<around*|(|\<lambda\>+\<delta\>\<lambda\>|)>|)>=\<bbb-E\><rsub|x\<sim\>Q<around*|(|\<lambda\>|)>><around*|[|<frac|\<partial\>S|\<partial\>\<lambda\><rsup|\<alpha\>>><around*|(|x,\<lambda\>|)>|]>\<delta\>\<lambda\><rsup|\<alpha\>>+<frac|1|2>\<bbb-E\><rsub|x\<sim\>Q<around*|(|\<lambda\>|)>><around*|[|<frac|\<partial\><rsup|2>S|\<partial\>\<lambda\><rsup|\<alpha\>>\<partial\>\<lambda\><rsup|\<beta\>>><around*|(|x,\<lambda\>|)>|]>\<delta\>\<lambda\><rsup|\<alpha\>>\<delta\>\<lambda\><rsup|\<beta\>>+\<omicron\><around*|(|\<delta\>\<lambda\><rsup|2>|)>.
   </equation*>
 
-  The first term in the right hand side vanishes, since
+  The first term in the right hand side vanishes, because
 
   <\equation*>
-    \<bbb-E\><rsub|y\<sim\>Q<rsub|t><around*|(|x|)>><around*|[|<frac|\<partial\>S<rsub|t>|\<partial\>x<rsup|\<alpha\>>><around*|(|x,y|)>|]>=-<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
-    q<rsub|t><around*|(|x\<rightarrow\>y|)><frac|\<partial\>|\<partial\>x<rsup|\<alpha\>>>ln
-    q<rsub|t><around*|(|x\<rightarrow\>y|)>=-<frac|\<partial\>|\<partial\>x<rsup|\<alpha\>>><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
-    q<rsub|t><around*|(|x\<rightarrow\>y|)>,
+    \<bbb-E\><rsub|x\<sim\>Q<around*|(|\<lambda\>|)>><around*|[|<frac|\<partial\>S|\<partial\>\<lambda\><rsup|\<alpha\>>><around*|(|x,\<lambda\>|)>|]>=-<big|int>D<around*|(|x|)>
+    q<around*|(|x,\<lambda\>|)><frac|\<partial\>|\<partial\>\<lambda\><rsup|\<alpha\>>>ln
+    q<around*|(|x,\<lambda\>|)>=-<frac|\<partial\>|\<partial\>\<lambda\><rsup|\<alpha\>>><big|int>D<around*|(|x|)>
+    q<around*|(|x,\<lambda\>|)>,
   </equation*>
 
-  which vanishes because of normalization <math|<big|int>\<mathd\>y
-  q<rsub|t><around*|(|x\<rightarrow\>y|)>=1> for any <math|x>. For the second
+  which vanishes because of normalization <math|<big|int>D<around*|(|x|)>
+  q<around*|(|x,\<lambda\>|)>=1> for any <math|\<lambda\>>. For the second
   term, define
 
   <\equation*>
-    \<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|x,t|)>\<assign\>\<bbb-E\><rsub|y\<sim\>Q<rsub|t><around*|(|x|)>><around*|[|<frac|\<partial\><rsup|2>S<rsub|t>|\<partial\>x<rsup|\<alpha\>>\<partial\>x<rsup|\<beta\>>><around*|(|x,y|)>|]>,
+    \<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<lambda\>|)>\<assign\>\<bbb-E\><rsub|x\<sim\>Q<around*|(|\<lambda\>|)>><around*|[|<frac|\<partial\><rsup|2>S|\<partial\>\<lambda\><rsup|\<alpha\>>\<partial\>\<lambda\><rsup|\<beta\>>><around*|(|x,\<lambda\>|)>|]>,
   </equation*>
 
   then we find
 
   <\equation*>
-    H<around*|(|Q<rsub|t><around*|(|x|)>,Q<rsub|t><around*|(|x+\<varepsilon\>|)>|)>=<frac|1|2>\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|x,t|)>\<varepsilon\><rsup|\<alpha\>>\<varepsilon\><rsup|\<beta\>>+\<omicron\><around*|(|\<varepsilon\><rsup|2>|)>.
+    H<around*|(|Q<around*|(|\<lambda\>|)>,Q<around*|(|\<lambda\>+\<delta\>\<lambda\>|)>|)>=<frac|1|2>\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<lambda\>|)>\<delta\>\<lambda\><rsup|\<alpha\>>\<delta\>\<lambda\><rsup|\<beta\>>+\<omicron\><around*|(|\<delta\>\<lambda\><rsup|2>|)>.
   </equation*>
 
   The matrix-valued field <math|\<cal-F\>> is called <strong|Fisher matrix>,
   named after the British polymath Ronald Fisher.<\footnote>
-    If we regard the space where the distribution
-    <math|Q<rsub|t><around*|(|x|)>> lives as a Riemannian surface (that
-    changes with time), then the Fisher matrix <math|\<cal-F\>> serves as a
-    metric of the Riemannian surface.
-
     You may argue that relative entropy is not a distance, because it is not
-    symmetric. Indeed, generally <math|H<around*|(|Q<rsub|t><around*|(|x|)>,Q<rsub|t><around*|(|x+\<varepsilon\>|)>|)>\<neq\>H<around*|(|Q<rsub|t><around*|(|x+\<varepsilon\>|)>,Q<rsub|t><around*|(|x|)>|)>>.
+    symmetric. Indeed, generally <math|H<around*|(|Q<around*|(|\<lambda\>|)>,Q<around*|(|\<lambda\>+\<delta\>\<lambda\>|)>|)>\<neq\>H<around*|(|Q<around*|(|\<lambda\>+\<delta\>\<lambda\>|)>,Q<around*|(|\<lambda\>|)>|)>>.
     But, we can consider its symmetric form
-    <math|D<rsub|JS><around*|(|Q<rsub|t><around*|(|x|)>,Q<rsub|t><around*|(|x+\<varepsilon\>|)>|)>\<assign\><around*|[|H<around*|(|Q<rsub|t><around*|(|x|)>,Q<rsub|t><around*|(|x+\<varepsilon\>|)>|)>+H<around*|(|Q<rsub|t><around*|(|x+\<varepsilon\>|)>,Q<rsub|t><around*|(|x|)>|)>|]>/2>,
+    <math|D<rsub|JS><around*|(|Q<around*|(|\<lambda\>|)>,Q<around*|(|\<lambda\>+\<delta\>\<lambda\>|)>|)>\<assign\><around*|[|H<around*|(|Q<around*|(|\<lambda\>|)>,Q<around*|(|\<lambda\>+\<delta\>\<lambda\>|)>|)>+H<around*|(|Q<around*|(|\<lambda\>+\<delta\>\<lambda\>|)>,Q<around*|(|\<lambda\>|)>|)>|]>/2>,
     then <math|D<rsub|JS>>, named by <strong|Jensen-Shannon distance>, is
-    indeed a distance. It can be shown that
-    <math|D<rsub|JS><around*|(|Q<rsub|t><around*|(|x|)>,Q<rsub|t><around*|(|x+\<varepsilon\>|)>|)>=<around*|(|1/2|)>\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|x,t|)>\<varepsilon\><rsup|\<alpha\>>\<varepsilon\><rsup|\<beta\>>+\<omicron\><around*|(|\<varepsilon\><rsup|2>|)>>
-    too.
-  </footnote> It characterizes the information propagation in a stochastic
-  system.
+    indeed a distance. We have
 
-  As an example, consider the Wiener process introduced in section
-  <reference|section: Randomness Appears in the Second Moment of Transition
-  Rate>. Its transition density is
+    <\equation*>
+      H<around*|(|Q<around*|(|\<lambda\>+\<lambda\>|)>,Q<around*|(|\<lambda\>|)>|)>=<big|int>D<around*|(|x|)>
+      q<around*|(|x,\<lambda\>+\<delta\>\<lambda\>|)>
+      ln<frac|q<around*|(|x,\<lambda\>+\<delta\>\<lambda\>|)>|q<around*|(|x,\<lambda\>|)>>.
+    </equation*>
+
+    Again, Taylor expand by <math|\<delta\>\<lambda\>> at origin gives
+
+    <\equation*>
+      H<around*|(|Q<around*|(|\<lambda\>+\<lambda\>|)>,Q<around*|(|\<lambda\>|)>|)>=2<big|int>D<around*|(|x|)>
+      <frac|1|q<around*|(|x,\<lambda\>|)>><frac|\<partial\>q|\<partial\>\<lambda\><rsup|\<alpha\>>><around*|(|x,\<lambda\>|)><frac|\<partial\>q|\<partial\>\<lambda\><rsup|\<beta\>>><around*|(|x,\<lambda\>|)>\<delta\>\<lambda\><rsup|\<alpha\>>\<delta\>\<lambda\><rsup|\<beta\>>-<frac|1|2>\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<lambda\>|)>\<delta\>\<lambda\><rsup|\<alpha\>>\<delta\>\<lambda\><rsup|\<beta\>>.
+    </equation*>
+
+    Thus,
+
+    <\equation*>
+      D<rsub|JS><around*|(|Q<around*|(|\<lambda\>|)>,Q<around*|(|\<lambda\>+\<delta\>\<lambda\>|)>|)>=\<bbb-E\><rsub|x\<sim\>Q<around*|(|\<lambda\>|)>><around*|[|<frac|\<partial\>ln
+      q|\<partial\>\<lambda\><rsup|\<alpha\>>><around*|(|x,\<lambda\>|)><frac|\<partial\>ln
+      q|\<partial\>\<lambda\><rsup|\<beta\>>><around*|(|x,\<lambda\>|)>|]>\<delta\>\<lambda\><rsup|\<alpha\>>\<delta\>\<lambda\><rsup|\<beta\>>+\<omicron\><around*|(|\<delta\>\<lambda\><rsup|2>|)>.
+    </equation*>
+
+    Since <math|ln q<around*|(|x,\<lambda\>|)>=-S<around*|(|x,\<lambda\>|)>>,
+    we finally arrive at
+
+    <\equation*>
+      D<rsub|JS><around*|(|Q<around*|(|\<lambda\>|)>,Q<around*|(|\<lambda\>+\<delta\>\<lambda\>|)>|)>=\<bbb-E\><rsub|x\<sim\>Q<around*|(|\<lambda\>|)>><around*|[|<frac|\<partial\>S|\<partial\>\<lambda\><rsup|\<alpha\>>><around*|(|x,\<lambda\>|)><frac|\<partial\>S|\<partial\>\<lambda\><rsup|\<beta\>>><around*|(|x,\<lambda\>|)>|]>\<delta\>\<lambda\><rsup|\<alpha\>>\<delta\>\<lambda\><rsup|\<beta\>>+\<omicron\><around*|(|\<delta\>\<lambda\><rsup|2>|)>.
+    </equation*>
+
+    \;
+  </footnote> It characterizes the responses of a stochastic system to the
+  environmental changes. Information propagation is one of these responses
+  (to the change of initial position).
+
+  For example, consider the action of Langevin process with constant
+  covariance
 
   <\equation*>
-    q<rsub|t><around*|(|x\<rightarrow\>y|)>=<big|prod><rsub|\<alpha\>=1><rsup|d><frac|1|<sqrt|2\<mathpi\>t>>exp<around*|(|-<frac|1|2t><around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><rsup|2>|)>.
+    S<around*|(|x,x<rsub|0>|)>=<big|sum><rsub|i=0><rsup|N-1>\<Delta\>t<around*|{|<frac|1|2>
+    <big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|<around*|(|<frac|x<rsub|i+1><rsup|\<alpha\>>-x<rsub|i><rsup|\<alpha\>>|\<Delta\>t>-f<rsup|\<alpha\>><around*|(|x<rsub|i>|)>|)>|]><rsup|2>|}>,
   </equation*>
 
-  So, it has action <math|S<rsub|t><around*|(|x,y|)>=<around*|(|1/2t|)><big|sum><rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>>-y<rsup|\<alpha\>>|)><rsup|2>>,
-  thus its Fisher matrix is evaluated to be
-  <math|\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|x,t|)>=\<delta\><rsup|\<alpha\>\<beta\>>/t>.
-  It decays with <math|t> increasing, indicating that the initial information
-  diminishes during the propagation or evolution.
+  in which <math|\<lambda\>> is simply the initial position <math|x<rsub|0>>.
+  It has partial derivative on <math|x<rsub|0>>
 
-  But for an arbitrary Markovian process, the action
-  <math|S<rsub|t><around*|(|x,y|)>> is difficult to evaluate when <math|t> is
-  not small enough.
+  <\align>
+    <tformat|<table|<row|<cell|<frac|\<partial\>S|\<partial\>x<rsup|\<beta\>><rsub|0>><around*|(|x,x<rsub|0>|)>=>|<cell|\<Delta\>t
+    <big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|<frac|x<rsub|1><rsup|\<alpha\>>-x<rsub|0><rsup|\<alpha\>>|\<Delta\>t>-f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>|]><frac|\<partial\>|\<partial\>x<rsub|0><rsup|\<beta\>>><around*|[|<frac|x<rsub|1><rsup|\<alpha\>>-x<rsub|0><rsup|\<alpha\>>|\<Delta\>t>-f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>|]>>>|<row|<cell|=>|<cell|\<Delta\>t
+    <big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|<frac|x<rsub|1><rsup|\<alpha\>>-x<rsub|0><rsup|\<alpha\>>|\<Delta\>t>-f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>|]><around*|[|-<frac|\<delta\><rsup|\<alpha\>><rsub|\<beta\>>|\<Delta\>t>-\<partial\><rsub|\<beta\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>|]>>>|<row|<cell|=>|<cell|-<frac|x<rsub|1><rsup|\<beta\>>-x<rsub|0><rsup|\<beta\>>|\<Delta\>t>+f<rsup|\<beta\>><around*|(|x<rsub|0>|)>-<big|sum><rsub|\<alpha\>=1><rsup|d><around*|(|x<rsub|1><rsup|\<alpha\>>-x<rsub|0><rsup|\<alpha\>>|)>\<partial\><rsub|\<beta\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>+\<Delta\>t<big|sum><rsub|\<alpha\>=1><rsup|d>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>\<partial\><rsub|\<beta\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>,>>>>
+  </align>
+
+  then
+
+  <\align>
+    <tformat|<table|<row|<cell|<frac|\<partial\><rsup|2>S|\<partial\>x<rsup|\<beta\>><rsub|0>\<partial\>x<rsub|0><rsup|\<gamma\>>><around*|(|x,x<rsub|0>|)>=>|<cell|<frac|\<delta\><rsub|\<beta\>\<gamma\>>|\<Delta\>t>+\<partial\><rsub|\<gamma\>>f<rsup|\<beta\>><around*|(|x<rsub|0>|)>+\<partial\><rsub|\<beta\>>f<rsup|\<gamma\>><around*|(|x<rsub|0>|)>-<big|sum><rsub|\<alpha\>=1><rsup|d><around*|(|x<rsub|1><rsup|\<alpha\>>-x<rsub|0><rsup|\<alpha\>>|)>\<partial\><rsub|\<beta\>>\<partial\><rsub|\<gamma\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>>>|<row|<cell|+>|<cell|\<Delta\>t
+    <big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>\<partial\><rsub|\<beta\>>\<partial\><rsub|\<gamma\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>+\<partial\><rsub|\<beta\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>\<partial\><rsub|\<gamma\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>|]>.>>>>
+  </align>
+
+  Since <math|q<rsub|\<Delta\>t><around*|(|x<rsub|0>\<rightarrow\>x<rsub|1>|)>>
+  is Gaussian and centered at <math|x<rsub|0>+f<around*|(|x<rsub|0>|)>
+  \<Delta\>t>, we get the expectation
+
+  <\equation*>
+    \<bbb-E\><rsub|x\<sim\>Q<around*|(|x<rsub|0>|)>><around*|[|<around*|(|x<rsub|1><rsup|\<alpha\>>-x<rsub|0><rsup|\<alpha\>>|)>\<partial\><rsub|\<beta\>>\<partial\><rsub|\<gamma\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>|]>=\<partial\><rsub|\<beta\>>\<partial\><rsub|\<gamma\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>
+    \<Delta\>t.
+  </equation*>
+
+  Thus, we get the Fisher matrix
+
+  <\equation*>
+    \<cal-F\><rsub|\<beta\>\<gamma\>><around*|(|x<rsub|0>|)>=<frac|\<delta\><rsub|\<beta\>\<gamma\>>|\<Delta\>t>+\<partial\><rsub|\<gamma\>>f<rsup|\<beta\>><around*|(|x<rsub|0>|)>+\<partial\><rsub|\<beta\>>f<rsup|\<gamma\>><around*|(|x<rsub|0>|)>+\<Delta\>t
+    <big|sum><rsub|\<alpha\>=1><rsup|d>\<partial\><rsub|\<beta\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>\<partial\><rsub|\<gamma\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>.
+  </equation*>
+
+  \;
+
+  In addition, we have
+
+  <\align>
+    <tformat|<table|<row|<cell|>|<cell|<frac|\<partial\>S|\<partial\>x<rsup|\<beta\>><rsub|0>><around*|(|x,x<rsub|0>|)><frac|\<partial\>S|\<partial\>x<rsup|\<gamma\>><rsub|0>><around*|(|x,x<rsub|0>|)>>>|<row|<cell|=>|<cell|-<frac|x<rsub|1><rsup|\<beta\>>-x<rsub|0><rsup|\<beta\>>-f<rsup|\<beta\>><around*|(|x<rsub|0>|)>\<Delta\>t|\<Delta\>t>-<big|sum><rsub|\<alpha\>=1><rsup|d><around*|(|x<rsub|1><rsup|\<alpha\>>-x<rsub|0><rsup|\<alpha\>>|)>\<partial\><rsub|\<beta\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>+\<Delta\>t<big|sum><rsub|\<alpha\>=1><rsup|d>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>\<partial\><rsub|\<beta\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>>>|<row|<cell|=>|<cell|<frac|x<rsub|1><rsup|\<beta\>>-x<rsub|0><rsup|\<beta\>>-f<rsup|\<beta\>><around*|(|x<rsub|0>|)>\<Delta\>t|\<Delta\>t><frac|x<rsub|1><rsup|\<gamma\>>-x<rsub|0><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|0>|)>\<Delta\>t|\<Delta\>t>\<rightarrow\><frac|\<delta\><rsub|\<beta\>\<gamma\>>|\<Delta\>t>>>|<row|<cell|+>|<cell|<frac|x<rsub|1><rsup|\<beta\>>-x<rsub|0><rsup|\<beta\>>-f<rsup|\<beta\>><around*|(|x<rsub|0>|)>\<Delta\>t|\<Delta\>t><big|sum><rsub|\<alpha\>=1><rsup|d><around*|(|x<rsub|1><rsup|\<alpha\>>-x<rsub|0><rsup|\<alpha\>>|)>\<partial\><rsub|\<gamma\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>\<rightarrow\>\<partial\><rsub|\<gamma\>>f<rsup|\<beta\>><around*|(|x<rsub|0>|)>+<big|sum><rsub|\<alpha\>=1><rsup|d>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>\<partial\><rsub|\<gamma\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>\<Delta\>t+perm>>|<row|<cell|->|<cell|<frac|x<rsub|1><rsup|\<beta\>>-x<rsub|0><rsup|\<beta\>>-f<rsup|\<beta\>><around*|(|x<rsub|0>|)>\<Delta\>t|\<Delta\>t>\<Delta\>t<big|sum><rsub|\<alpha\>=1><rsup|d>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>\<partial\><rsub|\<gamma\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>\<rightarrow\>0+perm>>|<row|<cell|+>|<cell|<big|sum><rsub|\<alpha\>=1><rsup|d><big|sum><rsub|\<alpha\><rprime|'>=1><rsup|d><around*|(|x<rsub|1><rsup|\<alpha\>>-x<rsub|0><rsup|\<alpha\>>|)>\<partial\><rsub|\<beta\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)><around*|(|x<rsub|1><rsup|\<alpha\><rprime|'>>-x<rsub|0><rsup|\<alpha\><rprime|'>>|)>\<partial\><rsub|\<gamma\>>f<rsup|\<alpha\><rprime|'>><around*|(|x<rsub|0>|)>>>|<row|<cell|->|<cell|<big|sum><rsub|\<alpha\>=1><rsup|d><around*|(|x<rsub|1><rsup|\<alpha\>>-x<rsub|0><rsup|\<alpha\>>|)>\<partial\><rsub|\<beta\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>\<Delta\>t<big|sum><rsub|\<alpha\><rprime|'>=1><rsup|d>f<rsup|\<alpha\><rprime|'>><around*|(|x<rsub|0>|)>\<partial\><rsub|\<gamma\>>f<rsup|\<alpha\><rprime|'>><around*|(|x<rsub|0>|)>\<rightarrow\>-\<Delta\>t<rsup|2>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)><big|sum><rsub|\<alpha\><rprime|'>=1><rsup|d>f<rsup|\<alpha\><rprime|'>><around*|(|x<rsub|0>|)>\<partial\><rsub|\<gamma\>>f<rsup|\<alpha\><rprime|'>><around*|(|x<rsub|0>|)>+perm>>|<row|<cell|+>|<cell|\<Delta\>t<rsup|2><big|sum><rsub|\<alpha\>=1><rsup|d>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>\<partial\><rsub|\<beta\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)><big|sum><rsub|\<alpha\><rprime|'>=1><rsup|d>f<rsup|\<alpha\><rprime|'>><around*|(|x<rsub|0>|)>\<partial\><rsub|\<gamma\>>f<rsup|\<alpha\><rprime|'>><around*|(|x<rsub|0>|)>.>>|<row|<cell|>|<cell|>>>>
+  </align>
+
+  \;
 
   <epilogue>
 
