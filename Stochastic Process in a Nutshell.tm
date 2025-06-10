@@ -159,13 +159,9 @@
     Sensitivity on Distribution of Paths <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-38>
 
-    6.4<space|2spc>Example: Fisher Matrix of Langevin Process with Higgs
-    Potential <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-39>
-
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|Epilogue>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-40><vspace|0.5fn>
+    <no-break><pageref|auto-39><vspace|0.5fn>
   </table-of-contents>
 
   <prologue>
@@ -4409,7 +4405,7 @@
   <math|\<eta\>>, thus is regarded as constant. Now, the alphabet is extended
   from the Euclidean space <math|\<bbb-R\><rsup|d>> to the space that is a
   mixture of real and Grassmann variables. Physicists call this extended
-  space a <strong|superspace>.
+  space a <strong|super-space>.
 
   <chapter|Fisher Matrix and Critical Phenomenon>
 
@@ -4483,7 +4479,7 @@
   <section|A Brief Review of Langevin Process><label|section: A Brief Review
   of Langevin Process>
 
-  Before going on calculating the Fisher matrix of Langevin proces, we
+  Before going on calculating the Fisher matrix of Langevin process, we
   briefly review the Langevin process introduced in the previous chapters,
   mainly in section <reference|section: Transition Density of Langevin
   Process Is Nearly Gaussian> and section <reference|section: Langevin
@@ -4561,7 +4557,7 @@
     path>
   </equation>
 
-  A rigerous proof can be found in section <reference|section: Langevin
+  A rigorous proof can be found in section <reference|section: Langevin
   Process with Constant Covariance Has a Path Integral on Alphabet>.
 
   <section|Fisher Matrix of Langevin Process Is the Expected Sensitivity on
@@ -4690,8 +4686,6 @@
   thus, is the expected global sensitivity on the distribution of paths,
   <math|P<around*|(|x<rsub|0>,\<theta\>|)>>.
 
-  <section|Example: Fisher Matrix of Langevin Process with Higgs Potential>
-
   <epilogue>
 
   In the summer of 2024, I was wondering how a stochastic system relaxes to
@@ -4736,8 +4730,8 @@
   \ The next surprise came from introducing smooth structure to stochastic
   system. I found the cut-off by a series of complex calculation (section
   <reference|section: Cut-off in the Moments of Transition Rate Is Essential
-  for Spatial Smoothness>). Later on in the winter, while I was traveling by
-  train, I found a way of expanding a function by a series of generalized
+  for Spatial Smoothness>). Later on in the winter, while I was traveling to
+  Sanya, I found a way of expanding a function by a series of generalized
   functions (equation <reference|equation:expand by delta>). It led to a
   direct proof of Kramers-Moyal expansion. It also gave raise to a rigorous
   proof of path integral formulation for stochastic system (section
@@ -4797,9 +4791,8 @@
     <associate|auto-36|<tuple|6.1|51>>
     <associate|auto-37|<tuple|6.2|51>>
     <associate|auto-38|<tuple|6.3|52>>
-    <associate|auto-39|<tuple|6.4|53>>
+    <associate|auto-39|<tuple|6.7|55>>
     <associate|auto-4|<tuple|1.2|10>>
-    <associate|auto-40|<tuple|6.4|55>>
     <associate|auto-5|<tuple|1.3|10>>
     <associate|auto-6|<tuple|1.4|11>>
     <associate|auto-7|<tuple|2|13>>
@@ -5152,13 +5145,9 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-38>
 
-      6.4<space|2spc>Example: Fisher Matrix of Langevin Process with Higgs
-      Potential <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-39>
-
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Epilogue>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-40><vspace|0.5fn>
+      <no-break><pageref|auto-39><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
