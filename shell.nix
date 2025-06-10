@@ -1,5 +1,4 @@
 # shell.nix
-
 with import <nixpkgs> { };
 pkgs.mkShell rec {
   name = "Stochastic Process in a Nutshell";

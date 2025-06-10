@@ -88,18 +88,33 @@
   </equation>
 
   This is nothing but the formal description of the previous sampling
-  process.
+  process. By inserting equation <reference|equation: transition density of
+  Langevin process> into <reference|equation: density of path>, we find
 
-  <subsection|Sensitivity in Initial Condition><label|section: Sensitivity in
-  Initial Condition>
+  <\equation*>
+    p<around*|(|x<rsub|1>,\<ldots\>,x<rsub|N>\|x<rsub|0>|)>=<big|sum><rsub|i=0><rsup|N-1>q<rsub|\<Delta\>t><around*|(|x<rsub|i+1>\|x<rsub|i>|)>=-<big|sum><rsub|i=0><rsup|N-1><frac|<around*|(|x<rsub|i+1>-x<rsub|i>-f<around*|(|x<rsub|i>|)>
+    \<Delta\>t|)><rsup|2>|2\<Delta\>t>+const.
+  </equation*>
 
-  Now, we wonder how this distribution of \Ppath\Q varies with the initial
-  position <math|x<rsub|0>>. The quantity to characterize the difference
-  between two distributions is their relative entropy (that is,
-  KL-divergence). Explicitly, we have
+  <subsection|Fisher Matrix>
+
+  Generally, the distribution <math|P> depends on several parameters. As we
+  have seen, the initial position is one of them. The other possibility is
+  the parameter that determines the dynamics <math|f>. Explicitly, the
+  dynamics <math|f> may depend on a dynamical parameter, thus
+  <math|f<around*|(|x,\<lambda\>|)>> with
+  <math|\<lambda\>\<in\>\<bbb-R\><rsup|m>> the dynamical parameter.
+  Generally, we collects parameters together as
+  <math|\<theta\>\<assign\><around*|(|x<rsub|0>,\<lambda\>|)>>, and write the
+  distribution <math|P> as <math|P<around*|(|\<theta\>|)>>.
+
+  Now, we wonder how this distribution of \Ppath\Q varies with the parameter
+  <math|\<theta\>>. The quantity to characterize the difference between two
+  distributions is their relative entropy (that is, KL-divergence).
+  Explicitly, we have
 
   <\equation>
-    H<around*|(|P<around*|(|x<rsub|0>|)>,P<around*|(|x<rsub|0>+\<delta\>x<rsub|0>|)>|)>\<assign\><big|int>D<around*|(|x|)>p<around*|(|x\|x<rsub|0>|)>ln<frac|p<around*|(|x\|x<rsub|0>|)>|p<around*|(|x\|x<rsub|0>+\<delta\>x<rsub|0>|)>>,
+    H<around*|(|P<around*|(|\<theta\>|)>,P<around*|(|\<theta\>+\<delta\>\<theta\>|)>|)>\<assign\><big|int>D<around*|(|x|)>p<around*|(|x\|\<theta\>|)>ln<frac|p<around*|(|x\|\<theta\>|)>|p<around*|(|x\|\<theta\>+\<delta\>\<theta\>|)>>,
   </equation>
 
   where we have abbreviated <math|x\<assign\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|N>|)>>
@@ -113,50 +128,45 @@
   We Taylor expand the relative entropy and get
 
   <\align>
-    <tformat|<table|<row|<cell|>|<cell|H<around*|(|P<around*|(|x<rsub|0>|)>,P<around*|(|x<rsub|0>+\<delta\>x<rsub|0>|)>|)>>>|<row|<cell|=>|<cell|-<big|int>D<around*|(|x|)>p<around*|(|x\|x<rsub|0>|)><around*|[|ln
-    p<around*|(|x\|x<rsub|0>+\<delta\>x<rsub|0>|)>-p<around*|(|x\|x<rsub|0>|)>|]>>>|<row|<cell|=>|<cell|-\<delta\>x<rsub|0><rsup|\<alpha\>><big|int>D<around*|(|x|)><frac|\<partial\>p|\<partial\>x<rsup|\<alpha\>><rsub|0>><around*|(|x\|x<rsub|0>|)>-\<delta\>x<rsup|\<alpha\>><rsub|0>\<delta\>x<rsub|0><rsup|\<beta\>><big|int>D<around*|(|x|)>p<around*|(|x\|x<rsub|0>|)><frac|\<partial\>ln
-    p|\<partial\>x<rsub|0><rsup|\<alpha\>>\<partial\>x<rsub|0><rsup|\<beta\>>><around*|(|x\|x<rsub|0>|)>+\<omicron\><around*|(|\<delta\>x<rsub|0><rsup|2>|)>.>>>>
+    <tformat|<table|<row|<cell|>|<cell|H<around*|(|P<around*|(|\<theta\>|)>,P<around*|(|\<theta\>+\<delta\>\<theta\>|)>|)>>>|<row|<cell|=>|<cell|-<big|int>D<around*|(|x|)>p<around*|(|x\|\<theta\>|)><around*|[|ln
+    p<around*|(|x\|\<theta\>+\<delta\>\<theta\>|)>-p<around*|(|x\|\<theta\>|)>|]>>>|<row|<cell|=>|<cell|-\<delta\>\<theta\><rsup|\<alpha\>><big|int>D<around*|(|x|)><frac|\<partial\>p|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x\|\<theta\>|)>-\<delta\>\<theta\><rsup|\<alpha\>>\<delta\>\<theta\><rsup|\<beta\>><big|int>D<around*|(|x|)>p<around*|(|x\|\<theta\>|)><frac|\<partial\>ln
+    p|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x\|\<theta\>|)>+\<omicron\><around*|(|\<delta\>\<theta\><rsup|2>|)>.>>>>
   </align>
 
   Because <math|<big|int>D<around*|(|x|)>p<around*|(|x\|x<rsub|0>|)>=1> holds
   for all <math|x<rsub|0>>, we have
 
   <\equation*>
-    <big|int>D<around*|(|x|)><frac|\<partial\>p|\<partial\>x<rsup|\<alpha\>><rsub|0>><around*|(|x\|x<rsub|0>|)>=<frac|\<partial\>|\<partial\>x<rsup|\<alpha\>><rsub|0>><big|int>D<around*|(|x|)>p<around*|(|x\|x<rsub|0>|)>=0.
+    <big|int>D<around*|(|x|)><frac|\<partial\>p|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x\|\<theta\>|)><around*|(|x\|x<rsub|0>|)>=<frac|\<partial\>|\<partial\>\<theta\><rsup|\<alpha\>>><big|int>D<around*|(|x|)>p<around*|(|x\|\<theta\>|)>=0.
   </equation*>
 
   Then, by denoting
 
   <\equation>
-    \<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|x<rsub|0>|)>\<assign\>-<big|int>D<around*|(|x|)>p<around*|(|x\|x<rsub|0>|)><frac|\<partial\>ln
-    p|\<partial\>x<rsub|0><rsup|\<alpha\>>\<partial\>x<rsub|0><rsup|\<beta\>>><around*|(|x\|x<rsub|0>|)>,<label|equation:
+    \<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>|)>\<assign\>-<big|int>D<around*|(|x|)>p<around*|(|x\|\<theta\>|)><frac|\<partial\>ln
+    p|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x\|\<theta\>|)>,<label|equation:
     fisher matrix>
   </equation>
 
   we finally arrive at
 
   <\equation*>
-    H<around*|(|P<around*|(|x<rsub|0>|)>,P<around*|(|x<rsub|0>+\<delta\>x<rsub|0>|)>|)>=\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|x<rsub|0>|)>
-    \<delta\>x<rsup|\<alpha\>><rsub|0>\<delta\>x<rsub|0><rsup|\<beta\>>+\<omicron\><around*|(|\<delta\>x<rsub|0><rsup|2>|)>.
+    H<around*|(|P<around*|(|\<theta\>|)>,P<around*|(|\<theta\>+\<delta\>\<theta\>|)>|)>=\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>|)>
+    \<delta\>\<theta\><rsup|\<alpha\>>\<delta\>\<theta\><rsup|\<beta\>>+\<omicron\><around*|(|\<delta\>\<theta\><rsup|2>|)>.
   </equation*>
 
-  Notice that <math|\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|x<rsub|0>|)>>
+  Notice that <math|\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>|)>>
   also depends on parameter <math|\<Delta\>t>, which is written as implicit
   for simplicity. The matrix-valued function
   <math|\<cal-F\><around*|(|\<theta\>|)>> is usually called <strong|Fisher
   matrix>.
 
-  Before evaluating <math|\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|x<rsub|0>|)>>,
-  we first calculate <math|ln p<around*|(|x\|x<rsub|0>|)>>. By inserting
-  equation <reference|equation: transition density of Langevin process> into
-  <reference|equation: density of path>, we find
+  <subsection|Sensitivity in Initial Condition><label|section: Sensitivity in
+  Initial Condition>
 
-  <\equation*>
-    ln p<around*|(|x\|x<rsub|0>|)>=<big|sum><rsub|i=0><rsup|N-1>q<rsub|\<Delta\>t><around*|(|x<rsub|i+1>\|x<rsub|i>|)>=-<big|sum><rsub|i=0><rsup|N-1><frac|<around*|(|x<rsub|i+1>-x<rsub|i>-f<around*|(|x<rsub|i>|)>
-    \<Delta\>t|)><rsup|2>|2\<Delta\>t>+const.
-  </equation*>
-
-  Deriving on <math|x<rsub|0>> gives
+  We first investigate the sensitivity in initial condition. To do so, we fix
+  the dynamical parameter <math|\<lambda\>> and take <math|\<theta\>> as
+  <math|x<rsub|0>>. Deriving on <math|x<rsub|0>> gives
 
   <\equation*>
     <frac|\<partial\>ln p|\<partial\>x<rsub|0><rsup|\<alpha\>>><around*|(|x\|x<rsub|0>|)>=<frac|1|\<Delta\>t><around*|[|<around*|(|x<rsub|1><rsup|\<alpha\>>-x<rsub|0><rsup|\<alpha\>>-f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>\<Delta\>t|)>+<big|sum><rsub|\<gamma\>=1><rsup|d><around*|(|x<rsub|1><rsup|\<gamma\>>-x<rsub|0><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|0>|)>\<Delta\>t|)>\<partial\><rsub|\<alpha\>>f<rsup|\<gamma\>><around*|(|x<rsub|0>|)>\<Delta\>t|]>,
@@ -258,54 +268,30 @@
   The key in previous section is that <math|H<around*|(|P<around*|(|x<rsub|0>|)>,P<around*|(|x<rsub|0>+\<delta\>x<rsub|0>|)>|)>>
   depends only on the beginning part of path. Now, let us examine another
   situation such that the difference of distributions depends on the whole
-  path. For this, we consider the parameterized dynamics, and vary the
-  parameter (instead of initial position). Explicitly, we replace
-  <math|f<around*|(|x|)>> by <math|f<around*|(|x,\<theta\>|)>> where
-  <math|\<theta\>\<in\>\<bbb-R\><rsup|m>> is the parameter. Then, by fixing
-  the initial position <math|x<rsub|0>>, <math|p<around*|(|x\|x<rsub|0>|)>>
-  is replaced by <math|p<around*|(|x\|\<theta\>|)>>. We consider the
-  difference of distributions
+  path. Namely, the sensitivity in dynamical parameter. For this, we fix the
+  initial position <math|x<rsub|0>> and the parameter <math|\<theta\>> is
+  taken as <math|\<lambda\>>.
+
+  To calculate <math|\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<lambda\>|)>>,
+  taking derivative on <math|ln p<around*|(|x\|\<lambda\>|)>>, we get
 
   <\equation*>
-    H<around*|(|P<around*|(|\<theta\>|)>,P<around*|(|\<theta\>+\<delta\>\<theta\>|)>|)>=<big|int>D<around*|(|x|)>p<around*|(|x\|\<theta\>|)>ln<frac|p<around*|(|x\|\<theta\>|)>|p<around*|(|x\|\<theta\>+\<delta\>\<theta\>|)>>.
-  </equation*>
-
-  The Taylor expansion by <math|\<delta\>\<theta\>> at origin is the same as
-  before. By simply replacing <math|x<rsub|0>> by <math|\<theta\>> and
-  <math|\<delta\>x<rsub|0>> by <math|\<delta\>\<theta\>>, we directly obtain
-
-  <\equation*>
-    H<around*|(|P<around*|(|\<theta\>|)>,P<around*|(|\<theta\>+\<delta\>\<theta\>|)>|)>=\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>|)>
-    \<delta\>\<theta\><rsup|\<alpha\>>\<delta\>\<theta\><rsup|\<beta\>>+\<omicron\><around*|(|\<delta\>\<theta\><rsup|2>|)>,
-  </equation*>
-
-  together with the fisher matrix defined by
-
-  <\equation*>
-    \<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>|)>\<assign\>-<big|int>D<around*|(|x|)>p<around*|(|x\|\<theta\>|)><frac|\<partial\>ln
-    p|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x\|\<theta\>|)>.
-  </equation*>
-
-  To calculate <math|\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>|)>>,
-  taking derivative on <math|ln p<around*|(|x\|\<theta\>|)>>, we get
-
-  <\equation*>
-    <frac|\<partial\>ln p|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x\|\<theta\>|)>=<big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<gamma\>=1><rsup|d><around*|(|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|i>,\<theta\>|)>
-    \<Delta\>t|)><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x<rsub|i>,\<theta\>|)><rsub|>,
+    <frac|\<partial\>ln p|\<partial\>\<lambda\><rsup|\<alpha\>>><around*|(|x\|\<lambda\>|)>=<big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<gamma\>=1><rsup|d><around*|(|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|i>,\<lambda\>|)>
+    \<Delta\>t|)><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<lambda\><rsup|\<alpha\>>><around*|(|x<rsub|i>,\<lambda\>|)><rsub|>,
   </equation*>
 
   once more,
 
   <\equation*>
-    <frac|\<partial\><rsup|2>ln p|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x\|\<theta\>|)>=<big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<gamma\>=1><rsup|d><around*|[|<around*|(|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|i>,\<theta\>|)>
-    \<Delta\>t|)><frac|\<partial\><rsup|2>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<rsub|i>,\<theta\>|)>-<frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<rsub|i>,\<theta\>|)><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x<rsub|i>,\<theta\>|)>\<Delta\>t<rsub|>|]>.
+    <frac|\<partial\><rsup|2>ln p|\<partial\>\<lambda\><rsup|\<alpha\>>\<partial\>\<lambda\><rsup|\<beta\>>><around*|(|x\|\<lambda\>|)>=<big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<gamma\>=1><rsup|d><around*|[|<around*|(|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|i>,\<lambda\>|)>
+    \<Delta\>t|)><frac|\<partial\><rsup|2>f<rsup|\<gamma\>>|\<partial\>\<lambda\><rsup|\<alpha\>>\<partial\>\<lambda\><rsup|\<beta\>>><around*|(|x<rsub|i>,\<lambda\>|)>-<frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<lambda\><rsup|\<alpha\>>><around*|(|x<rsub|i>,\<lambda\>|)><rsub|><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<lambda\><rsup|\<beta\>>><around*|(|x<rsub|i>,\<lambda\>|)><rsub|>\<Delta\>t<rsub|>|]>.
   </equation*>
 
   Plugging into equation <reference|equation: fisher matrix>, we get
 
   <\align>
-    <tformat|<table|<row|<cell|\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>|)>=>|<cell|-\<bbb-E\><rsub|x\<sim\>P<around*|(|\<theta\>|)>><around*|[|<big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<gamma\>=1><rsup|d><around*|(|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|i>,\<theta\>|)>
-    \<Delta\>t|)><frac|\<partial\><rsup|2>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<rsub|i>,\<theta\>|)>|]>>>|<row|<cell|>|<cell|+\<bbb-E\><rsub|x\<sim\>p<around*|(|\<theta\>|)>><around*|[|<big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<gamma\>=1><rsup|d><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x<rsub|i>,\<theta\>|)><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<rsub|i>,\<theta\>|)>\<Delta\>t|]>.>>>>
+    <tformat|<table|<row|<cell|\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<lambda\>|)>=>|<cell|-\<bbb-E\><rsub|x\<sim\>P<around*|(|\<lambda\>|)>><around*|[|<big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<gamma\>=1><rsup|d><around*|(|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|i>,\<lambda\>|)>
+    \<Delta\>t|)><frac|\<partial\><rsup|2>f<rsup|\<gamma\>>|\<partial\>\<lambda\><rsup|\<alpha\>>\<partial\>\<lambda\><rsup|\<beta\>>><around*|(|x<rsub|i>,\<lambda\>|)>|]>>>|<row|<cell|>|<cell|+\<bbb-E\><rsub|x\<sim\>p<around*|(|\<theta\>|)>><around*|[|<big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<gamma\>=1><rsup|d><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<lambda\><rsup|\<alpha\>>><around*|(|x<rsub|i>,\<lambda\>|)><rsub|><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<lambda\><rsup|\<beta\>>><around*|(|x<rsub|i>,\<lambda\>|)>\<Delta\>t|]>.>>>>
   </align>
 
   \;
@@ -314,15 +300,15 @@
   original form, as
 
   <\equation*>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|1>q<rsub|\<Delta\>t><around*|(|x<rsub|N>\|x<rsub|N-1>|)>\<cdots\>q<rsub|\<Delta\>t><around*|(|x<rsub|1>\|x<rsub|0>|)><big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<gamma\>=1><rsup|d><around*|(|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|i>,\<theta\>|)>
-    \<Delta\>t|)><frac|\<partial\><rsup|2>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<rsub|i>,\<theta\>|)>.
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|1>q<rsub|\<Delta\>t><around*|(|x<rsub|N>\|x<rsub|N-1>|)>\<cdots\>q<rsub|\<Delta\>t><around*|(|x<rsub|1>\|x<rsub|0>|)><big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<gamma\>=1><rsup|d><around*|(|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|i>,\<lambda\>|)>
+    \<Delta\>t|)><frac|\<partial\><rsup|2>f<rsup|\<gamma\>>|\<partial\>\<lambda\><rsup|\<alpha\>>\<partial\>\<lambda\><rsup|\<beta\>>><around*|(|x<rsub|i>,\<lambda\>|)>.
   </equation*>
 
   While integrating over <math|x<rsub|N>>, the only term in the summation
   <math|\<Sigma\><rsub|i>> that depends on <math|x<rsub|N>> is
 
   <\align>
-    <tformat|<table|<row|<cell|>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N-1>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|1>q<rsub|\<Delta\>t><around*|(|x<rsub|N-1>\|x<rsub|N-2>|)>\<cdots\>q<rsub|\<Delta\>t><around*|(|x<rsub|1>\|x<rsub|0>|)><big|sum><rsub|\<gamma\>=1><rsup|d><frac|\<partial\><rsup|2>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<rsub|N-1>,\<theta\>|)>\<times\>>>|<row|<cell|\<times\>>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N>q<rsub|\<Delta\>t><around*|(|x<rsub|N>\|x<rsub|N-1>|)><around*|(|x<rsub|N><rsup|\<gamma\>>-x<rsub|N-1><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|N-1>,\<theta\>|)>
+    <tformat|<table|<row|<cell|>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N-1>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|1>q<rsub|\<Delta\>t><around*|(|x<rsub|N-1>\|x<rsub|N-2>|)>\<cdots\>q<rsub|\<Delta\>t><around*|(|x<rsub|1>\|x<rsub|0>|)><big|sum><rsub|\<gamma\>=1><rsup|d><frac|\<partial\><rsup|2>f<rsup|\<gamma\>>|\<partial\>\<lambda\><rsup|\<alpha\>>\<partial\>\<lambda\><rsup|\<beta\>>><around*|(|x<rsub|N-1>,\<lambda\>|)>\<times\>>>|<row|<cell|\<times\>>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N>q<rsub|\<Delta\>t><around*|(|x<rsub|N>\|x<rsub|N-1>|)><around*|(|x<rsub|N><rsup|\<gamma\>>-x<rsub|N-1><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|N-1>,\<lambda\>|)>
     \<Delta\>t|)>,>>>>
   </align>
 
@@ -333,48 +319,50 @@
   So, Integrating over <math|x<rsub|N>> results in
 
   <\equation*>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N-1>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|1>q<rsub|\<Delta\>t><around*|(|x<rsub|N-1>\|x<rsub|N-2>|)>\<cdots\>q<rsub|\<Delta\>t><around*|(|x<rsub|1>\|x<rsub|0>|)><big|sum><rsub|i=0><rsup|N-2><big|sum><rsub|\<gamma\>=1><rsup|d><around*|(|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|i>,\<theta\>|)>
-    \<Delta\>t|)><frac|\<partial\><rsup|2>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<rsub|i>,\<theta\>|)>.
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N-1>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|1>q<rsub|\<Delta\>t><around*|(|x<rsub|N-1>\|x<rsub|N-2>|)>\<cdots\>q<rsub|\<Delta\>t><around*|(|x<rsub|1>\|x<rsub|0>|)><big|sum><rsub|i=0><rsup|N-2><big|sum><rsub|\<gamma\>=1><rsup|d><around*|(|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|i>,\<lambda\>|)>
+    \<Delta\>t|)><frac|\<partial\><rsup|2>f<rsup|\<gamma\>>|\<partial\>\<lambda\><rsup|\<alpha\>>\<partial\>\<lambda\><rsup|\<beta\>>><around*|(|x<rsub|i>,\<lambda\>|)>.
   </equation*>
 
   Repeating this process, until
 
   <\equation*>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|1>q<rsub|\<Delta\>t><around*|(|x<rsub|1>\|x<rsub|0>|)><big|sum><rsub|\<gamma\>=1><rsup|d><around*|(|x<rsub|1><rsup|\<gamma\>>-x<rsub|0><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|0>,\<theta\>|)>
-    \<Delta\>t|)><frac|\<partial\><rsup|2>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<rsub|0>,\<theta\>|)>,
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|1>q<rsub|\<Delta\>t><around*|(|x<rsub|1>\|x<rsub|0>|)><big|sum><rsub|\<gamma\>=1><rsup|d><around*|(|x<rsub|1><rsup|\<gamma\>>-x<rsub|0><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|0>,\<lambda\>|)>
+    \<Delta\>t|)><frac|\<partial\><rsup|2>f<rsup|\<gamma\>>|\<partial\>\<lambda\><rsup|\<alpha\>>\<partial\>\<lambda\><rsup|\<beta\>>><around*|(|x<rsub|0>,\<lambda\>|)>,
   </equation*>
 
   which is, again, vanishing. So, the first expectation is zero. In addition,
   in the limit <math|\<Delta\>t\<rightarrow\>0> and
   <math|N\<rightarrow\>\<infty\>> at the same time while keeping <math|t=N
-  \<Delta\>t> invariant, we can formally write the \Pintegrand\Q of the
-  second expectation in <math|\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>|)>>
+  \<Delta\>t> invariant, we can formally write the factor in the second
+  expectation in <math|\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<lambda\>|)>>
   as a Riemannian integral
 
   <\equation*>
-    <big|int><rsub|0><rsup|t>\<mathd\>s <big|sum><rsub|\<gamma\>=1><rsup|d><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x<around*|(|s|)>,\<theta\>|)><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<around*|(|s|)>,\<theta\>|)>.
+    <big|int><rsub|0><rsup|t>\<mathd\>s <big|sum><rsub|\<gamma\>=1><rsup|d><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<lambda\><rsup|\<alpha\>>><around*|(|x<around*|(|s|)>,\<lambda\>|)><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<lambda\><rsup|\<beta\>>><around*|(|x<around*|(|s|)>,\<lambda\>|)>,
   </equation*>
 
+  where the series <math|<around*|(|x<rsub|0>,\<ldots\>,x<rsub|N>|)>> now
+  becomes a continuous path <math|x:<around*|[|0,t|]>\<rightarrow\>\<bbb-R\><rsup|d>>.
   Altogether, we find
 
   <\equation>
     \<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>|)>=\<bbb-E\><rsub|x\<sim\>P<around*|(|\<theta\>|)>><around*|[|<big|int><rsub|0><rsup|t>\<mathd\>s
-    <big|sum><rsub|\<gamma\>=1><rsup|d><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x<around*|(|s|)>,\<theta\>|)><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<around*|(|s|)>,\<theta\>|)>|]>.<label|equation:
+    <big|sum><rsub|\<gamma\>=1><rsup|d><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<lambda\><rsup|\<alpha\>>><around*|(|x<around*|(|s|)>,\<lambda\>|)><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<lambda\><rsup|\<beta\>>><around*|(|x<around*|(|s|)>,\<lambda\>|)>|]>.<label|equation:
     fisher matrix of langevin process for dynamical parameter>
   </equation>
 
   To estimate this numerically, we sample an assemble of paths from the
-  distribution <math|P<around*|(|\<theta\>|)>> using the simulation
-  introduced in section <reference|section: A Brief Review of Langevin
-  Process>, then compute the mean value of the integral for all the sampled
-  paths. The \Pphysical\Q explanation of equation <reference|equation: fisher
-  matrix of langevin process for dynamical parameter> is as follow. The
-  integrand <math|<big|sum><rsub|\<gamma\>><around*|(|\<partial\>f<rsup|\<gamma\>>/\<partial\>\<theta\><rsup|\<alpha\>>|)><around*|(|x,\<theta\>|)><around*|(|\<partial\>f<rsup|\<gamma\>>/\<partial\>\<theta\><rsup|\<beta\>>|)><around*|(|x,\<theta\>|)>>
-  characterizes the sensitivity to the <math|\<theta\>> at position <math|x>.
-  For each path, the integral gives the global sensitivity. The fisher matrix
-  <math|\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>|)>>, thus, is
-  the expectation of the global sensitivity on the distribution of paths
-  <math|P<around*|(|\<theta\>|)>>.
+  distribution <math|P<around*|(|\<theta\>|)>> using the simulation mentioned
+  in section <reference|section: A Brief Review of Langevin Process>, then
+  compute the mean value of the integral for all the sampled paths. The
+  \Pphysical\Q explanation of equation <reference|equation: fisher matrix of
+  langevin process for dynamical parameter> is as follow. The integrand
+  <math|<big|sum><rsub|\<gamma\>><around*|(|\<partial\>f<rsup|\<gamma\>>/\<partial\>\<lambda\><rsup|\<alpha\>>|)><around*|(|x,\<lambda\>|)><around*|(|\<partial\>f<rsup|\<gamma\>>/\<partial\>\<lambda\><rsup|\<beta\>>|)><around*|(|x,\<lambda\>|)>>
+  characterizes the sensitivity to the <math|\<lambda\>> at position
+  <math|x>. For each path, the integral gives the global sensitivity. The
+  fisher matrix <math|\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<lambda\>|)>>,
+  thus, is the expectation of the global sensitivity on the distribution of
+  paths <math|P<around*|(|x<rsub|0>,\<lambda\>|)>>.
 
   Comparing with equation <reference|equation: fisher matrix of langevin
   process for initial condition> in section <reference|section: Sensitivity
@@ -383,6 +371,10 @@
   <math|N>) in the limit <math|\<Delta\>t\<rightarrow\>0>. We find that, for
   Langevin process, <em|the effect of varying dynamical parameter and that of
   varying initial condition are essentially different>.
+
+  <subsection|Mexican Hat in Ultra High-Dimensional Space>
+
+  TODO
 </body>
 
 <\initial>
@@ -397,7 +389,9 @@
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-2|<tuple|1.1|1>>
     <associate|auto-3|<tuple|1.2|1>>
-    <associate|auto-4|<tuple|1.3|3>>
+    <associate|auto-4|<tuple|1.3|2>>
+    <associate|auto-5|<tuple|1.4|3>>
+    <associate|auto-6|<tuple|1.5|?>>
     <associate|equation: density of path|<tuple|5|1>>
     <associate|equation: discrete Langevin process|<tuple|3|1>>
     <associate|equation: fisher matrix|<tuple|8|2>>
@@ -405,12 +399,12 @@
     parameter|<tuple|10|4>>
     <associate|equation: fisher matrix of langevin process for initial
     condition|<tuple|9|3>>
-    <associate|equation: integral volume of path|<tuple|7|1>>
+    <associate|equation: integral volume of path|<tuple|7|2>>
     <associate|equation: langevin process a|<tuple|1|1>>
     <associate|equation: langevin process b|<tuple|2|1>>
     <associate|equation: transition density of Langevin process|<tuple|4|1>>
     <associate|section: A Brief Review of Langevin Process|<tuple|1.1|1>>
-    <associate|section: Sensitivity in Initial Condition|<tuple|1.2|1>>
+    <associate|section: Sensitivity in Initial Condition|<tuple|1.3|2>>
   </collection>
 </references>
 
@@ -424,13 +418,17 @@
       Process <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-2>>
 
-      <with|par-left|<quote|1tab>|1.2<space|2spc>Sensitivity in Initial
-      Condition <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.2<space|2spc>Fisher Matrix
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-3>>
 
-      <with|par-left|<quote|1tab>|1.3<space|2spc>Sensitivity in Dynamical
-      Parameter <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.3<space|2spc>Sensitivity in Initial
+      Condition <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-4>>
+
+      <with|par-left|<quote|1tab>|1.4<space|2spc>Sensitivity in Dynamical
+      Parameter <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-5>>
     </associate>
   </collection>
 </auxiliary>

@@ -28,16 +28,25 @@
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-6>>
 
-    3<space|2spc>Fisher Matrix under Renormalization Group Transformation
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    3<space|2spc>A Brief Revew of Renormalization Group Transformation in
+    Quantum Mechanism <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-7>
 
-    4<space|2spc>Fisher Matrix in Full Calculation
+    4<space|2spc>Fisher Matrix under Renormalization Group Transformation
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-8>
 
-    5<space|2spc>Dimension Analysis <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    5<space|2spc>Fisher Matrix in Full Calculation
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-9>
+
+    6<space|2spc>Dimension Analysis <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-10>
+
+    7<space|2spc><with|mode|math|\<heartsuit\>> Fisher Matrix Characterizes
+    Information Propagation in Stochastic System
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-11>
   </table-of-contents>
 
   <section|Effective Action and Renormalization Group Transformation (Version
@@ -1137,6 +1146,180 @@
   This explains the re-scaling rules. As <math|\<Delta\>t\<rightarrow\>\<Delta\>t/2>,
   we get <math|x\<rightarrow\>x/<sqrt|2>> and
   <math|\<xi\><rsup|a>\<rightarrow\>2\<xi\><rsup|\<alpha\>>>
+
+  \;
+
+  <section|<math|\<heartsuit\>> Fisher Matrix Characterizes Information
+  Propagation in Stochastic System><label|section: Fisher Matrix
+  Characterizes Information Propagation in Stochastic System>
+
+  Now in a dry and cool autumn day, you stand on the open ground, raising
+  your head and looking at a starling flock flying under the blue sky.
+  Suddenly, an eagle dives into the flock. Some bird in the flock first
+  notices the danger, trying to avoid by turning direction. Other birds in
+  the neighbor notice the behavior, may follow it too, even though they have
+  not seen the diving eagle yet. Then from neighbors to neighbors, the danger
+  signal may soon spread in the flock. The fact will not be so because each
+  bird has some degree of randomness (or free will). Because the random
+  movement itself is another signal (or noise) to propagate in the flock, it
+  pollutes the danger signal. This randomness, however, is essential for a
+  flock to survive. It assigns flexibility to the flock so that eagles cannot
+  predict the direction it moves. In reality, the connection between the
+  neighbors and the randomness of each individual are properly balanced, so
+  that the flock has sufficient flexibility and a danger signal can propagate
+  far enough within the flock.
+
+  This phenomenon appears everywhere in Nature: a group of individuals (such
+  as a starling flock or an ant colony) behaves like an \Pintelligent\Q
+  agent, because of the elaborate balance between determinacy and randomness.
+  It is a typical stochastic system that can be described using the
+  techniques we have developed so far.
+
+  To characterize the information propagation in a stochastic system, we
+  consider the conditional density <math|q<around*|(|x<rsub|1>,\<ldots\>,x<rsub|N>\|x<rsub|0>|)>\<assign\>q<rsub|\<Delta\>t><around*|(|x<rsub|0>\<rightarrow\>x<rsub|1>|)>\<cdots\>
+  q<rsub|\<Delta\>t><around*|(|x<rsub|N-1>\<rightarrow\>x<rsub|N>|)>> of the
+  path <math|x\<assign\><around*|(|x<rsub|1>,\<ldots\>,x<rsub|N>|)>>. A
+  perturbation in initial position <math|x<rsub|0>\<rightarrow\>x<rsub|0>+\<delta\>x<rsub|0>>
+  will affect the distribution of the path, so is a perturbation in wind
+  speed or direction. We collect such environmental dependencies as a
+  parameter <math|\<lambda\>\<in\>\<bbb-R\><rsup|l>>, and replace
+  <math|q<around*|(|x<rsub|1>,\<ldots\>,x<rsub|N>\|x<rsub|0>|)>> by
+  <math|q<around*|(|x,\<lambda\>|)>>, where <math|\<lambda\>> involves
+  <math|x<rsub|0>> and other environmental conditions. Following section
+  <reference|section: Least-Action Principle of Distribution Has No
+  Redundancy>, the action is <math|S<around*|(|x,\<lambda\>|)>\<assign\>-ln
+  q<around*|(|x,\<lambda\>|)>>, which also depends on <math|\<lambda\>>.
+  Then, the difference in the distribution caused by a perturbation
+  <math|\<lambda\>\<rightarrow\>\<lambda\>+\<delta\>\<lambda\>> is given by
+  the relative entropy
+
+  <\equation*>
+    H<around*|(|Q<around*|(|\<lambda\>|)>,Q<around*|(|\<lambda\>+\<delta\>\<lambda\>|)>|)>=<big|int>D<around*|(|x|)>
+    q<around*|(|x,\<lambda\>|)> ln<frac|q<around*|(|x,\<lambda\>|)>|q<around*|(|x,\<lambda\>+\<delta\>\<lambda\>|)>>=\<bbb-E\><rsub|x\<sim\>Q<around*|(|\<lambda\>|)>><around*|[|S<around*|(|x,\<lambda\>+\<delta\>\<lambda\>|)>-S<around*|(|x,\<lambda\>|)>|]>,
+  </equation*>
+
+  where the integral volume of path is defined as before,
+  <math|<big|int>D<around*|(|x|)>\<assign\><big|int>\<mathd\>x<rsub|1>\<cdots\><big|int>\<mathd\>x<rsub|N>>.
+  Taylor expansion by <math|\<delta\>\<lambda\>> at origin gives
+
+  <\equation*>
+    H<around*|(|Q<around*|(|\<lambda\>|)>,Q<around*|(|\<lambda\>+\<delta\>\<lambda\>|)>|)>=\<bbb-E\><rsub|x\<sim\>Q<around*|(|\<lambda\>|)>><around*|[|<frac|\<partial\>S|\<partial\>\<lambda\><rsup|\<alpha\>>><around*|(|x,\<lambda\>|)>|]>\<delta\>\<lambda\><rsup|\<alpha\>>+<frac|1|2>\<bbb-E\><rsub|x\<sim\>Q<around*|(|\<lambda\>|)>><around*|[|<frac|\<partial\><rsup|2>S|\<partial\>\<lambda\><rsup|\<alpha\>>\<partial\>\<lambda\><rsup|\<beta\>>><around*|(|x,\<lambda\>|)>|]>\<delta\>\<lambda\><rsup|\<alpha\>>\<delta\>\<lambda\><rsup|\<beta\>>+\<omicron\><around*|(|\<delta\>\<lambda\><rsup|2>|)>.
+  </equation*>
+
+  The first term in the right hand side vanishes, because
+
+  <\equation*>
+    \<bbb-E\><rsub|x\<sim\>Q<around*|(|\<lambda\>|)>><around*|[|<frac|\<partial\>S|\<partial\>\<lambda\><rsup|\<alpha\>>><around*|(|x,\<lambda\>|)>|]>=-<big|int>D<around*|(|x|)>
+    q<around*|(|x,\<lambda\>|)><frac|\<partial\>|\<partial\>\<lambda\><rsup|\<alpha\>>>ln
+    q<around*|(|x,\<lambda\>|)>=-<frac|\<partial\>|\<partial\>\<lambda\><rsup|\<alpha\>>><big|int>D<around*|(|x|)>
+    q<around*|(|x,\<lambda\>|)>,
+  </equation*>
+
+  which vanishes because of normalization <math|<big|int>D<around*|(|x|)>
+  q<around*|(|x,\<lambda\>|)>=1> for any <math|\<lambda\>>. For the second
+  term, define
+
+  <\equation*>
+    \<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<lambda\>|)>\<assign\>\<bbb-E\><rsub|x\<sim\>Q<around*|(|\<lambda\>|)>><around*|[|<frac|\<partial\><rsup|2>S|\<partial\>\<lambda\><rsup|\<alpha\>>\<partial\>\<lambda\><rsup|\<beta\>>><around*|(|x,\<lambda\>|)>|]>,
+  </equation*>
+
+  then we find
+
+  <\equation*>
+    H<around*|(|Q<around*|(|\<lambda\>|)>,Q<around*|(|\<lambda\>+\<delta\>\<lambda\>|)>|)>=<frac|1|2>\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<lambda\>|)>\<delta\>\<lambda\><rsup|\<alpha\>>\<delta\>\<lambda\><rsup|\<beta\>>+\<omicron\><around*|(|\<delta\>\<lambda\><rsup|2>|)>.
+  </equation*>
+
+  The matrix-valued field <math|\<cal-F\>> is called <strong|Fisher matrix>,
+  named after the British polymath Ronald Fisher.<\footnote>
+    You may argue that relative entropy is not a distance, because it is not
+    symmetric. Indeed, generally <math|H<around*|(|Q<around*|(|\<lambda\>|)>,Q<around*|(|\<lambda\>+\<delta\>\<lambda\>|)>|)>\<neq\>H<around*|(|Q<around*|(|\<lambda\>+\<delta\>\<lambda\>|)>,Q<around*|(|\<lambda\>|)>|)>>.
+    But, we can consider its symmetric form
+    <math|D<rsub|JS><around*|(|Q<around*|(|\<lambda\>|)>,Q<around*|(|\<lambda\>+\<delta\>\<lambda\>|)>|)>\<assign\><around*|[|H<around*|(|Q<around*|(|\<lambda\>|)>,Q<around*|(|\<lambda\>+\<delta\>\<lambda\>|)>|)>+H<around*|(|Q<around*|(|\<lambda\>+\<delta\>\<lambda\>|)>,Q<around*|(|\<lambda\>|)>|)>|]>/2>,
+    then <math|D<rsub|JS>>, named by <strong|Jensen-Shannon distance>, is
+    indeed a distance. We have
+
+    <\equation*>
+      H<around*|(|Q<around*|(|\<lambda\>+\<lambda\>|)>,Q<around*|(|\<lambda\>|)>|)>=<big|int>D<around*|(|x|)>
+      q<around*|(|x,\<lambda\>+\<delta\>\<lambda\>|)>
+      ln<frac|q<around*|(|x,\<lambda\>+\<delta\>\<lambda\>|)>|q<around*|(|x,\<lambda\>|)>>.
+    </equation*>
+
+    Again, Taylor expand by <math|\<delta\>\<lambda\>> at origin gives
+
+    <\equation*>
+      H<around*|(|Q<around*|(|\<lambda\>+\<lambda\>|)>,Q<around*|(|\<lambda\>|)>|)>=2<big|int>D<around*|(|x|)>
+      <frac|1|q<around*|(|x,\<lambda\>|)>><frac|\<partial\>q|\<partial\>\<lambda\><rsup|\<alpha\>>><around*|(|x,\<lambda\>|)><frac|\<partial\>q|\<partial\>\<lambda\><rsup|\<beta\>>><around*|(|x,\<lambda\>|)>\<delta\>\<lambda\><rsup|\<alpha\>>\<delta\>\<lambda\><rsup|\<beta\>>-<frac|1|2>\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<lambda\>|)>\<delta\>\<lambda\><rsup|\<alpha\>>\<delta\>\<lambda\><rsup|\<beta\>>.
+    </equation*>
+
+    Thus,
+
+    <\equation*>
+      D<rsub|JS><around*|(|Q<around*|(|\<lambda\>|)>,Q<around*|(|\<lambda\>+\<delta\>\<lambda\>|)>|)>=\<bbb-E\><rsub|x\<sim\>Q<around*|(|\<lambda\>|)>><around*|[|<frac|\<partial\>ln
+      q|\<partial\>\<lambda\><rsup|\<alpha\>>><around*|(|x,\<lambda\>|)><frac|\<partial\>ln
+      q|\<partial\>\<lambda\><rsup|\<beta\>>><around*|(|x,\<lambda\>|)>|]>\<delta\>\<lambda\><rsup|\<alpha\>>\<delta\>\<lambda\><rsup|\<beta\>>+\<omicron\><around*|(|\<delta\>\<lambda\><rsup|2>|)>.
+    </equation*>
+
+    Since <math|ln q<around*|(|x,\<lambda\>|)>=-S<around*|(|x,\<lambda\>|)>>,
+    we finally arrive at
+
+    <\equation*>
+      D<rsub|JS><around*|(|Q<around*|(|\<lambda\>|)>,Q<around*|(|\<lambda\>+\<delta\>\<lambda\>|)>|)>=\<bbb-E\><rsub|x\<sim\>Q<around*|(|\<lambda\>|)>><around*|[|<frac|\<partial\>S|\<partial\>\<lambda\><rsup|\<alpha\>>><around*|(|x,\<lambda\>|)><frac|\<partial\>S|\<partial\>\<lambda\><rsup|\<beta\>>><around*|(|x,\<lambda\>|)>|]>\<delta\>\<lambda\><rsup|\<alpha\>>\<delta\>\<lambda\><rsup|\<beta\>>+\<omicron\><around*|(|\<delta\>\<lambda\><rsup|2>|)>.
+    </equation*>
+
+    \;
+  </footnote> It characterizes the responses of a stochastic system to the
+  environmental changes. Information propagation is one of these responses
+  (to the change of initial position).
+
+  For example, consider the action of Langevin process with constant
+  covariance
+
+  <\equation*>
+    S<around*|(|x,x<rsub|0>|)>=<big|sum><rsub|i=0><rsup|N-1>\<Delta\>t<around*|{|<frac|1|2>
+    <big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|<around*|(|<frac|x<rsub|i+1><rsup|\<alpha\>>-x<rsub|i><rsup|\<alpha\>>|\<Delta\>t>-f<rsup|\<alpha\>><around*|(|x<rsub|i>|)>|)>|]><rsup|2>|}>,
+  </equation*>
+
+  in which <math|\<lambda\>> is simply the initial position <math|x<rsub|0>>.
+  It has partial derivative on <math|x<rsub|0>>
+
+  <\align>
+    <tformat|<table|<row|<cell|<frac|\<partial\>S|\<partial\>x<rsup|\<beta\>><rsub|0>><around*|(|x,x<rsub|0>|)>=>|<cell|\<Delta\>t
+    <big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|<frac|x<rsub|1><rsup|\<alpha\>>-x<rsub|0><rsup|\<alpha\>>|\<Delta\>t>-f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>|]><frac|\<partial\>|\<partial\>x<rsub|0><rsup|\<beta\>>><around*|[|<frac|x<rsub|1><rsup|\<alpha\>>-x<rsub|0><rsup|\<alpha\>>|\<Delta\>t>-f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>|]>>>|<row|<cell|=>|<cell|\<Delta\>t
+    <big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|<frac|x<rsub|1><rsup|\<alpha\>>-x<rsub|0><rsup|\<alpha\>>|\<Delta\>t>-f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>|]><around*|[|-<frac|\<delta\><rsup|\<alpha\>><rsub|\<beta\>>|\<Delta\>t>-\<partial\><rsub|\<beta\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>|]>>>|<row|<cell|=>|<cell|-<frac|x<rsub|1><rsup|\<beta\>>-x<rsub|0><rsup|\<beta\>>|\<Delta\>t>+f<rsup|\<beta\>><around*|(|x<rsub|0>|)>-<big|sum><rsub|\<alpha\>=1><rsup|d><around*|(|x<rsub|1><rsup|\<alpha\>>-x<rsub|0><rsup|\<alpha\>>|)>\<partial\><rsub|\<beta\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>+\<Delta\>t<big|sum><rsub|\<alpha\>=1><rsup|d>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>\<partial\><rsub|\<beta\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>,>>>>
+  </align>
+
+  then
+
+  <\align>
+    <tformat|<table|<row|<cell|<frac|\<partial\><rsup|2>S|\<partial\>x<rsup|\<beta\>><rsub|0>\<partial\>x<rsub|0><rsup|\<gamma\>>><around*|(|x,x<rsub|0>|)>=>|<cell|<frac|\<delta\><rsub|\<beta\>\<gamma\>>|\<Delta\>t>+\<partial\><rsub|\<gamma\>>f<rsup|\<beta\>><around*|(|x<rsub|0>|)>+\<partial\><rsub|\<beta\>>f<rsup|\<gamma\>><around*|(|x<rsub|0>|)>-<big|sum><rsub|\<alpha\>=1><rsup|d><around*|(|x<rsub|1><rsup|\<alpha\>>-x<rsub|0><rsup|\<alpha\>>|)>\<partial\><rsub|\<beta\>>\<partial\><rsub|\<gamma\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>>>|<row|<cell|+>|<cell|\<Delta\>t
+    <big|sum><rsub|\<alpha\>=1><rsup|d><around*|[|f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>\<partial\><rsub|\<beta\>>\<partial\><rsub|\<gamma\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>+\<partial\><rsub|\<beta\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>\<partial\><rsub|\<gamma\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>|]>.>>>>
+  </align>
+
+  Since <math|q<rsub|\<Delta\>t><around*|(|x<rsub|0>\<rightarrow\>x<rsub|1>|)>>
+  is Gaussian and centered at <math|x<rsub|0>+f<around*|(|x<rsub|0>|)>
+  \<Delta\>t>, we get the expectation
+
+  <\equation*>
+    \<bbb-E\><rsub|x\<sim\>Q<around*|(|x<rsub|0>|)>><around*|[|<around*|(|x<rsub|1><rsup|\<alpha\>>-x<rsub|0><rsup|\<alpha\>>|)>\<partial\><rsub|\<beta\>>\<partial\><rsub|\<gamma\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>|]>=\<partial\><rsub|\<beta\>>\<partial\><rsub|\<gamma\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>
+    \<Delta\>t.
+  </equation*>
+
+  Thus, we get the Fisher matrix
+
+  <\equation*>
+    \<cal-F\><rsub|\<beta\>\<gamma\>><around*|(|x<rsub|0>|)>=<frac|\<delta\><rsub|\<beta\>\<gamma\>>|\<Delta\>t>+\<partial\><rsub|\<gamma\>>f<rsup|\<beta\>><around*|(|x<rsub|0>|)>+\<partial\><rsub|\<beta\>>f<rsup|\<gamma\>><around*|(|x<rsub|0>|)>+\<Delta\>t
+    <big|sum><rsub|\<alpha\>=1><rsup|d>\<partial\><rsub|\<beta\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>\<partial\><rsub|\<gamma\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>.
+  </equation*>
+
+  \;
+
+  In addition, we have
+
+  <\align>
+    <tformat|<table|<row|<cell|>|<cell|<frac|\<partial\>S|\<partial\>x<rsup|\<beta\>><rsub|0>><around*|(|x,x<rsub|0>|)><frac|\<partial\>S|\<partial\>x<rsup|\<gamma\>><rsub|0>><around*|(|x,x<rsub|0>|)>>>|<row|<cell|=>|<cell|-<frac|x<rsub|1><rsup|\<beta\>>-x<rsub|0><rsup|\<beta\>>-f<rsup|\<beta\>><around*|(|x<rsub|0>|)>\<Delta\>t|\<Delta\>t>-<big|sum><rsub|\<alpha\>=1><rsup|d><around*|(|x<rsub|1><rsup|\<alpha\>>-x<rsub|0><rsup|\<alpha\>>|)>\<partial\><rsub|\<beta\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>+\<Delta\>t<big|sum><rsub|\<alpha\>=1><rsup|d>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>\<partial\><rsub|\<beta\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>>>|<row|<cell|=>|<cell|<frac|x<rsub|1><rsup|\<beta\>>-x<rsub|0><rsup|\<beta\>>-f<rsup|\<beta\>><around*|(|x<rsub|0>|)>\<Delta\>t|\<Delta\>t><frac|x<rsub|1><rsup|\<gamma\>>-x<rsub|0><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|0>|)>\<Delta\>t|\<Delta\>t>\<rightarrow\><frac|\<delta\><rsub|\<beta\>\<gamma\>>|\<Delta\>t>>>|<row|<cell|+>|<cell|<frac|x<rsub|1><rsup|\<beta\>>-x<rsub|0><rsup|\<beta\>>-f<rsup|\<beta\>><around*|(|x<rsub|0>|)>\<Delta\>t|\<Delta\>t><big|sum><rsub|\<alpha\>=1><rsup|d><around*|(|x<rsub|1><rsup|\<alpha\>>-x<rsub|0><rsup|\<alpha\>>|)>\<partial\><rsub|\<gamma\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>\<rightarrow\>\<partial\><rsub|\<gamma\>>f<rsup|\<beta\>><around*|(|x<rsub|0>|)>+<big|sum><rsub|\<alpha\>=1><rsup|d>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>\<partial\><rsub|\<gamma\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>\<Delta\>t+perm>>|<row|<cell|->|<cell|<frac|x<rsub|1><rsup|\<beta\>>-x<rsub|0><rsup|\<beta\>>-f<rsup|\<beta\>><around*|(|x<rsub|0>|)>\<Delta\>t|\<Delta\>t>\<Delta\>t<big|sum><rsub|\<alpha\>=1><rsup|d>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>\<partial\><rsub|\<gamma\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>\<rightarrow\>0+perm>>|<row|<cell|+>|<cell|<big|sum><rsub|\<alpha\>=1><rsup|d><big|sum><rsub|\<alpha\><rprime|'>=1><rsup|d><around*|(|x<rsub|1><rsup|\<alpha\>>-x<rsub|0><rsup|\<alpha\>>|)>\<partial\><rsub|\<beta\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)><around*|(|x<rsub|1><rsup|\<alpha\><rprime|'>>-x<rsub|0><rsup|\<alpha\><rprime|'>>|)>\<partial\><rsub|\<gamma\>>f<rsup|\<alpha\><rprime|'>><around*|(|x<rsub|0>|)>>>|<row|<cell|->|<cell|<big|sum><rsub|\<alpha\>=1><rsup|d><around*|(|x<rsub|1><rsup|\<alpha\>>-x<rsub|0><rsup|\<alpha\>>|)>\<partial\><rsub|\<beta\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>\<Delta\>t<big|sum><rsub|\<alpha\><rprime|'>=1><rsup|d>f<rsup|\<alpha\><rprime|'>><around*|(|x<rsub|0>|)>\<partial\><rsub|\<gamma\>>f<rsup|\<alpha\><rprime|'>><around*|(|x<rsub|0>|)>\<rightarrow\>-\<Delta\>t<rsup|2>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)><big|sum><rsub|\<alpha\><rprime|'>=1><rsup|d>f<rsup|\<alpha\><rprime|'>><around*|(|x<rsub|0>|)>\<partial\><rsub|\<gamma\>>f<rsup|\<alpha\><rprime|'>><around*|(|x<rsub|0>|)>+perm>>|<row|<cell|+>|<cell|\<Delta\>t<rsup|2><big|sum><rsub|\<alpha\>=1><rsup|d>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)>\<partial\><rsub|\<beta\>>f<rsup|\<alpha\>><around*|(|x<rsub|0>|)><big|sum><rsub|\<alpha\><rprime|'>=1><rsup|d>f<rsup|\<alpha\><rprime|'>><around*|(|x<rsub|0>|)>\<partial\><rsub|\<gamma\>>f<rsup|\<alpha\><rprime|'>><around*|(|x<rsub|0>|)>.>>|<row|<cell|>|<cell|>>>>
+  </align>
+
+  \;
 </body>
 
 <\initial>
@@ -1149,36 +1332,39 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|6|?>>
+    <associate|auto-10|<tuple|6|12>>
+    <associate|auto-11|<tuple|7|12>>
     <associate|auto-2|<tuple|1.1|2>>
     <associate|auto-3|<tuple|1.2|3>>
     <associate|auto-4|<tuple|2|5>>
     <associate|auto-5|<tuple|2.1|5>>
-    <associate|auto-6|<tuple|2.2|7>>
+    <associate|auto-6|<tuple|2.2|6>>
     <associate|auto-7|<tuple|3|8>>
-    <associate|auto-8|<tuple|4|10>>
-    <associate|auto-9|<tuple|5|11>>
-    <associate|equation:fisher matrix rg|<tuple|6|9>>
+    <associate|auto-8|<tuple|4|9>>
+    <associate|auto-9|<tuple|5|10>>
+    <associate|equation:fisher matrix rg|<tuple|6|10>>
     <associate|equation:rg action|<tuple|3|5>>
     <associate|equation:rg integral|<tuple|4|5>>
     <associate|footnote-1|<tuple|1|2>>
     <associate|footnote-2|<tuple|2|3>>
     <associate|footnote-3|<tuple|3|4>>
-    <associate|footnote-4|<tuple|4|6>>
+    <associate|footnote-4|<tuple|4|5>>
     <associate|footnote-5|<tuple|5|6>>
-    <associate|footnote-6|<tuple|6|7>>
-    <associate|footnote-7|<tuple|7|8>>
+    <associate|footnote-6|<tuple|6|8>>
+    <associate|footnote-7|<tuple|7|13>>
     <associate|footnr-1|<tuple|1|2>>
     <associate|footnr-2|<tuple|2|3>>
     <associate|footnr-3|<tuple|3|4>>
-    <associate|footnr-4|<tuple|4|6>>
+    <associate|footnr-4|<tuple|4|5>>
     <associate|footnr-5|<tuple|5|6>>
-    <associate|footnr-6|<tuple|6|7>>
-    <associate|footnr-7|<tuple|7|8>>
+    <associate|footnr-6|<tuple|6|8>>
+    <associate|footnr-7|<tuple|7|13>>
     <associate|section: Effective Action and Renormalization Group
     Transformation|<tuple|2|5>>
+    <associate|section: Fisher Matrix Characterizes Information Propagation
+    in Stochastic System|<tuple|7|12>>
     <associate|section: Renormalization Group in Full
-    Calculation|<tuple|2.2|7>>
+    Calculation|<tuple|2.2|6>>
     <associate|section: Renormalization Group in Preliminary
     Situation|<tuple|2.1|5>>
   </collection>
@@ -1211,16 +1397,25 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-6>>
 
-      3<space|2spc>Fisher Matrix under Renormalization Group Transformation
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      3<space|2spc>A Brief Revew of Renormalization Group Transformation in
+      Quantum Mechanism <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-7>
 
-      4<space|2spc>Fisher Matrix in Full Calculation
+      4<space|2spc>Fisher Matrix under Renormalization Group Transformation
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-8>
 
-      5<space|2spc>Dimension Analysis <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      5<space|2spc>Fisher Matrix in Full Calculation
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-9>
+
+      6<space|2spc>Dimension Analysis <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-10>
+
+      7<space|2spc><with|mode|<quote|math>|\<heartsuit\>> Fisher Matrix
+      Characterizes Information Propagation in Stochastic System
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-11>
     </associate>
   </collection>
 </auxiliary>
