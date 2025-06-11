@@ -4654,22 +4654,23 @@
   which is, again, vanishing because <math|<big|int>\<mathd\>x<rsub|1>q<rsub|\<Delta\>t><around*|(|x<rsub|0>\<rightarrow\>x<rsub|1>|)><around*|(|x<rsub|1><rsup|\<gamma\>>-x<rsub|0><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|0>,\<theta\>|)>
   \<Delta\>t|)>=0>. So, the first expectation is zero. In addition, in the
   limit <math|\<Delta\>t\<rightarrow\>0> and <math|N\<rightarrow\>\<infty\>>
-  at the same time while keeping <math|t=N \<Delta\>t> invariant, we can
+  at the same time while keeping <math|T=N \<Delta\>t> invariant, we can
   formally write the factor in the second expectation in
   <math|\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>|)>> as a
   Riemannian integral
 
   <\equation*>
-    <big|int><rsub|0><rsup|t>\<mathd\>s <big|sum><rsub|\<gamma\>=1><rsup|d><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x<around*|(|s|)>,\<theta\>|)><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<around*|(|s|)>,\<theta\>|)>,
+    <big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<gamma\>=1><rsup|d><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x<rsub|i>,\<theta\>|)><rsub|><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<rsub|i>,\<theta\>|)>\<Delta\>t\<rightarrow\><big|int><rsub|0><rsup|T>\<mathd\>t
+    <big|sum><rsub|\<gamma\>=1><rsup|d><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x<around*|(|t|)>,\<theta\>|)><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<around*|(|t|)>,\<theta\>|)>,
   </equation*>
 
   where the series <math|<around*|(|x<rsub|0>,\<ldots\>,x<rsub|N>|)>> now
-  becomes a continuous path <math|x:<around*|[|0,t|]>\<rightarrow\>\<bbb-R\><rsup|d>>.
+  becomes a continuous path <math|x:<around*|[|0,T|]>\<rightarrow\>\<bbb-R\><rsup|d>>.
   Altogether, we find
 
   <\equation>
-    \<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|x<rsub|0>,\<theta\>|)>=\<bbb-E\><rsub|x\<sim\>P<around*|(|x<rsub|0>,\<theta\>|)>><around*|[|<big|int><rsub|0><rsup|t>\<mathd\>s
-    <big|sum><rsub|\<gamma\>=1><rsup|d><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x<around*|(|s|)>,\<theta\>|)><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<around*|(|s|)>,\<theta\>|)>|]>.<label|equation:
+    \<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|x<rsub|0>,\<theta\>|)>=\<bbb-E\><rsub|x\<sim\>P<around*|(|x<rsub|0>,\<theta\>|)>><around*|[|<big|int><rsub|0><rsup|T>\<mathd\>t
+    <big|sum><rsub|\<gamma\>=1><rsup|d><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x<around*|(|t|)>,\<theta\>|)><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<around*|(|t|)>,\<theta\>|)>|]>.<label|equation:
     fisher matrix of langevin process for dynamical parameter>
   </equation>
 
