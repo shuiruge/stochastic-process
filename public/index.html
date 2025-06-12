@@ -199,7 +199,24 @@
         Integral, and Ghosts <span style="margin-left: 5mm"></span> <a href="#auto-34">48</a>
       </p>
       <p style="margin-top: 1em; margin-bottom: 0.5em">
-        <b>Epilogue</b> <span style="margin-left: 5mm"></span> <a href="#auto-35">51</a>
+        <b>6<span style="margin-left: 1em"></span>Fisher Matrix</b> <span style="margin-left: 5mm"></span> <a
+        href="#auto-35">51</a>
+      </p>
+      <p>
+        6.1<span style="margin-left: 1em"></span>Fisher Matrix Characterizes the Sensitivity of
+        a Stochastic System to Its Parameter <span style="margin-left: 5mm"></span> <a href="#auto-36">51</a>
+      </p>
+      <p>
+        6.2<span style="margin-left: 1em"></span>A Brief Review of Langevin Process <span style="margin-left: 5mm"></span>
+        <a href="#auto-37">51</a>
+      </p>
+      <p>
+        6.3<span style="margin-left: 1em"></span>Fisher Matrix of Langevin Process Is the
+        Expected Sensitivity on Distribution of Paths <span style="margin-left: 5mm"></span> <a
+        href="#auto-38">52</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Epilogue</b> <span style="margin-left: 5mm"></span> <a href="#auto-39">55</a>
       </p>
     </div>
     <h1 id="auto-1">Prologue<span style="margin-left: 1em"></span></h1>
@@ -4129,50 +4146,50 @@ x_N)) .\)
     </p>
     <p>
       If we treat \((x_0, \ldots, x_N)\) together as a single \(x\), then we
-      can generalize equation <a href="#equation:action of evolution">?</a> to any density function \(q (x)\)
-      with \(x \in \mathbb{R}^d\). We can always define the <strong>action of
-      distribution</strong> \(Q\) by
+      can generalize equation <a href="#equation:action of stochastic process">4.5</a> to any density function \(p
+      (x)\) with \(x \in \mathbb{R}^d\). We can always define the
+      <strong>action of distribution</strong> \(P\) by
     </p>
     <table width="100%">
       <tr>
-        <td width="100%" align="center">\(\displaystyle S (x) := - \ln q (x) . \)</td>
+        <td width="100%" align="center">\(\displaystyle S (x) := - \ln p (x) . \)</td>
         <td align="right">(4.6)</td>
       </tr>
     </table>
     <p>
-      Thus, \(q (x) = \exp (- S (x))\). This action has some properties that
+      Thus, \(p (x) = \exp (- S (x))\). This action has some properties that
       can be analog to the action in classical mechanics. Indeed, by plugging
       in the definition of \(S\), we find
     </p>
     <center>
-      \(\displaystyle \int_{\mathbb{R}^d} \mathrm{d} x q (x)  \frac{\partial
+      \(\displaystyle \int_{\mathbb{R}^d} \mathrm{d} x p (x)  \frac{\partial
       S}{\partial x^{\alpha}}
-(x) = - \int_{\mathbb{R}^d} \mathrm{d} x q (x) 
+(x) = - \int_{\mathbb{R}^d} \mathrm{d} x p (x) 
       \frac{\partial}{\partial
-x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
+x^{\alpha}} \ln p (x) = - \int_{\mathbb{R}^d}
       \mathrm{d} x
-\frac{\partial}{\partial x^{\alpha}} q (x) .\)
+\frac{\partial}{\partial x^{\alpha}} p (x) .\)
     </center>
     <p>
       The integrand of the right most expression is a divergence, so it
-      results in a boundary integral. But since \(q\), as a density function,
+      results in a boundary integral. But since \(p\), as a density function,
       is normalized, the boundary integral shall vanish as \(\| x \|
       \rightarrow + \infty\). So, we conclude that
     </p>
     <center>
-      \(\displaystyle \mathbb{E}_Q \left[ \frac{\partial S}{\partial
+      \(\displaystyle \mathbb{E}_P \left[ \frac{\partial S}{\partial
       x^{\alpha}} \right] = 0.\)
     </center>
     <p>
       This is analog to equation <a href="#equation:least-action principle v1">4.3</a>, where the minimum
-      \(x_{\star}\) is replaced by the expectation \(\mathbb{E}_Q\). Secondly,
-      the distribution \(Q\) (whose density function is the \(q\)) most likely
+      \(x_{\star}\) is replaced by the expectation \(\mathbb{E}_P\). Secondly,
+      the distribution \(P\) (whose density function is the \(p\)) most likely
       samples (recall section <a href="#section: A Brief Review of Probability">1.1</a> that distribution has a
-      sampler) the \(x\) that maximizes \(q\), thus minimizes \(S\). For these
-      reasons, we illustrate the \(S\) defined by \(q\) as the action of
-      \(Q\). Contrary to the action in classical mechanics, the \(S\) here is
-      completely determined by the real world distribution \(Q\) (because it
-      is defined by the density function \(q\)), without any redundancy. This
+      sampler) the \(x\) that maximizes \(p\), thus minimizes \(S\). For these
+      reasons, we illustrate the \(S\) defined by \(p\) as the action of
+      \(P\). Contrary to the action in classical mechanics, the \(S\) here is
+      completely determined by the real world distribution \(P\) (because it
+      is defined by the density function \(p\)), without any redundancy. This
       is the direct implication that distribution involves more information
       than its most likely datum.
     </p>
@@ -4419,12 +4436,12 @@ x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
       distribution that approximates the \(Q_{Y|X}\). To do so, we use a
       parameterized distribution \(P (x, \theta)\), where \(\theta\) denotes
       the parameter, and find the best-fit parameter \(\theta_{\star}\) by
-      minimizing the relative entropy \(H (P (x, \theta), Q_{Y|X} (x))\),
+      minimizing the relative entropy \(H (Q_{Y|X} (x), P (x, \theta))\),
       where \(x\) is sampled from \(Q_X\). Then, we have the loss function
     </p>
     <center>
-      \(\displaystyle L (\theta) =\mathbb{E}_{x \sim Q_X} [H (P (x, \theta), Q
-      (x))] .\)
+      \(\displaystyle L (\theta) =\mathbb{E}_{x \sim Q_X} [H (Q_{Y|X} (x), P
+      (x, \theta))] .\)
     </center>
     <p>
       
@@ -4440,7 +4457,7 @@ x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
 \theta) - y)^2 \right)\)
     </center>
     <p>
-      for some scale function \(h (x, \theta)\). We read out the action in
+      for some scalar function \(h (x, \theta)\). We read out the action in
       section <a href="#section: Data Fitting Is Equivalent to Least-Action Principle of Distribution">4.3</a> as
     </p>
     <center>
@@ -4496,7 +4513,7 @@ x^{\alpha}} \ln q (x) = - \int_{\mathbb{R}^d}
       models such as <tt class="verbatim">word2vec</tt> in which the number of classes
       is extremely large.
     </p>
-    <h1 id="auto-30">Chapter 5<br />Path Integral</h1>
+    <h1 id="auto-30"><a id="chapter: Path Integral"></a>Chapter 5<br />Path Integral</h1>
     <p>
       In this chapter, we calculate the action of a generic Markovian process.
       To do so, we first convert the master equation into a path integral. We
@@ -5240,11 +5257,12 @@ k_{\gamma}
     <h2 id="auto-34"><a id="section: * Grassmann Variable, Berezin Integral, and Ghosts"></a>5.3<span style="margin-left: 1em"></span>\(\clubsuit\) Grassmann
     Variable, Berezin Integral, and Ghosts<span style="margin-left: 1em"></span></h2>
     <p>
-      We have to briefly introduce Grassmann variable, on which Berezin
-      integral is based. Grassmann variable is an extension of real (or
-      complex) variable,by introducing in the anti-commutative variables.
-      Given a set of variables \(\{ \zeta_i |i = 1, \ldots, n \}\), we demand
-      that the anti-commutative relation between \(\zeta\)s
+      To complete the discussion of the path integral of Langevin process, we
+      have to briefly introduce Grassmann variable, on which Berezin integral
+      is based. Grassmann variable is an extension of real (or complex)
+      variable,by introducing in the anti-commutative variables. Given a set
+      of variables \(\{ \zeta_i |i = 1, \ldots, n \}\), we demand that the
+      anti-commutative relation between \(\zeta\)s
     </p>
     <center>
       \(\displaystyle \zeta_i \zeta_j = - \zeta_j \zeta_i .\)
@@ -5573,9 +5591,456 @@ R_{\alpha
     </table>
     <p>
       The \(C := - (d / 2) (\ln 2 \pi + 3 \ln \Delta t)\) is independent of
-      \(x\), \(\zeta\), or \(\eta\), thus is regarded as constant.
+      \(x\), \(\zeta\), or \(\eta\), thus is regarded as constant. Now, the
+      alphabet is extended from the Euclidean space \(\mathbb{R}^d\) to the
+      space that is a mixture of real and Grassmann variables. Physicists call
+      this extended space a <strong>super-space</strong>.
     </p>
-    <h1 id="auto-35">Epilogue<span style="margin-left: 1em"></span></h1>
+    <h1 id="auto-35">Chapter 6<br />Fisher Matrix</h1>
+    <p>
+      In this chapter, we investigate how a distribution changes with its
+      parameter. This leads to the Fisher matrix. Then, after a brief review
+      of Langevin process, we calculate the Fisher matrix for Langevin
+      process.
+    </p>
+    <p>
+      Throughout this chapter, we reuse the notations in chapter <a href="#section: Master Equation and Detailed Balance">2</a>.
+      Namely, we use \(q_{\Delta t} (x \rightarrow y)\) to denote the
+      transition density \(q_{\Delta t} (y|x)\).
+    </p>
+    <h2 id="auto-36"><a id="Fisher Matrix Characterizes the Sensitivity of a Stochastic System to Its Parameter"></a>6.1<span style="margin-left: 1em"></span>Fisher Matrix Characterizes the
+    Sensitivity of a Stochastic System to Its Parameter<span style="margin-left: 1em"></span></h2>
+    <p>
+      Let \(P\) a distribution with alphabet \(\mathcal{X}\). It may depend on
+      some parameter, such as a normal distribution depending on its mean and
+      variance. Generally, we denote the parameter by \(\theta \in
+      \mathbb{R}^m\), and write the parameterized distribution as \(P
+      (\theta)\). We wonder how this distribution varies with the parameter.
+      The quantity to characterize the difference between two distributions is
+      their relative entropy (section <a href="#section: Relative Entropy Is the Unique Solution to the Axiom">1.4</a>). So, we shall examine
+      the relative entropy
+    </p>
+    <center>
+      \(\displaystyle H (P (\theta), P (\theta + \delta \theta)) =
+      \int_{\mathcal{X}} \mathrm{d} x p
+(x| \theta) \ln \frac{p (x| \theta)}{p
+      (x| \theta + \delta \theta)} .\)
+    </center>
+    <p>
+      Taylor expanding the relative entropy by \(\delta \theta\), we get
+    </p>
+    <center>
+      \(\displaystyle \begin{array}{rl}
+  & H (P (\theta), P (\theta + \delta
+      \theta))\\
+  = & - \int_{\mathcal{X}} \mathrm{d} x p (x| \theta) [\ln p
+      (x| \theta +
+  \delta \theta) - p (x| \theta)]\\
+  = & - \delta
+      \theta^{\alpha} \int_{\mathcal{X}} \mathrm{d} x \frac{\partial
+ 
+      p}{\partial \theta^{\alpha}} (x| \theta) - \delta \theta^{\alpha}
+      \delta
+  \theta^{\beta} \int_{\mathcal{X}} \mathrm{d} x p (x| \theta)
+      \frac{\partial
+  \ln p}{\partial \theta^{\alpha} \partial
+      \theta^{\beta}} (x| \theta) +
+  \omicron (\delta \theta^2)
+      .
+\end{array}\)
+    </center>
+    <p>
+      Because \(\int_{\mathcal{X}} \mathrm{d} x p (x|x_0) = 1\) holds for all
+      \(x_0\), we have
+    </p>
+    <center>
+      \(\displaystyle \int_{\mathcal{X}} \mathrm{d} x \frac{\partial
+      p}{\partial \theta^{\alpha}}
+(x| \theta) (x|x_0) =
+      \frac{\partial}{\partial \theta^{\alpha}}
+\int_{\mathcal{X}} \mathrm{d}
+      x p (x| \theta) = 0.\)
+    </center>
+    <p>
+      Then, by denoting
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle \mathcal{F}_{\alpha \beta} (\theta)
+        := - \int_{\mathcal{X}} \mathrm{d} x p (x|
+\theta) \frac{\partial \ln
+        p}{\partial \theta^{\alpha} \partial
+\theta^{\beta}} (x| \theta) =
+        -\mathbb{E}_{x \sim P (\theta)} \left[
+\frac{\partial \ln p}{\partial
+        \theta^{\alpha} \partial \theta^{\beta}} (x|
+\theta) \right], \)</td>
+        <td align="right">(6.1)</td>
+      </tr>
+    </table>
+    <p>
+      we finally arrive at
+    </p>
+    <center>
+      \(\displaystyle H (P (\theta), P (\theta + \delta \theta))
+      =\mathcal{F}_{\alpha \beta}
+(\theta) \delta \theta^{\alpha} \delta
+      \theta^{\beta} + \omicron (\delta
+\theta^2) .\)
+    </center>
+    <p>
+      The matrix-valued field \(\mathcal{F}\) is called <strong>Fisher
+      matrix</strong>, named after the British polymath Ronald Fisher. It
+      characterizes the responses of a stochastic system to the change of its
+      parameter.
+    </p>
+    <h2 id="auto-37"><a id="section: A Brief Review of Langevin Process"></a>6.2<span style="margin-left: 1em"></span>A Brief Review of Langevin
+    Process<span style="margin-left: 1em"></span></h2>
+    <p>
+      Before going on calculating the Fisher matrix of Langevin process, we
+      briefly review the Langevin process introduced in the previous chapters,
+      mainly in section <a href="#section: Transition Density of Langevin Process Is Nearly Gaussian">3.6</a> and section <a href="#section: Langevin Process with Constant Covariance Has a Path Integral on Alphabet">5.2</a>. Herein,
+      we only consider the Langevin process with constant covariance.
+      Formally, it is defined by a stochastic differential equation in
+      \(\mathbb{R}^d\), as
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle \dot{X}^{\alpha} (t) = f^{\alpha} (X
+        (t), \theta) + \dot{W}^{\alpha} (t), \)</td>
+        <td align="right">(6.2)</td>
+      </tr>
+    </table>
+    <p>
+      with
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle \mathbb{E} [\dot{W}^{\alpha} (t)
+        \dot{W}^{\beta} (t')] = \delta^{\alpha \beta}
+\delta (t - t') .
+        \)</td>
+        <td align="right">(6.3)</td>
+      </tr>
+    </table>
+    <p>
+      We use capital notations for \(X\) and \(W\) because they are random
+      variables. The \(f\) characterizes the deterministic dynamics of \(X
+      (t)\) and the \(W\) provides randomness. We have explicitly shown the
+      dependence of \(f\) on the parameter \(\theta \in \mathbb{R}^m\).
+    </p>
+    <p>
+      An approximation is considering the finite time interval \(\Delta t\)
+      instead of the infinitesimal \(\mathrm{d} t\). In this situation, the
+      path \(X (t)\) becomes a series \((X_0, X_1, \ldots, X_N)\). And we have
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle X^{\alpha}_{i + 1} - X^{\alpha}_i =
+        f^{\alpha} (X_i, \theta) \Delta t + \Delta
+W_i^{\alpha}, \)</td>
+        <td align="right">(6.4)</td>
+      </tr>
+    </table>
+    <p>
+      with
+    </p>
+    <center>
+      \(\displaystyle \mathbb{E} [\Delta W^{\alpha}_i \Delta W^{\beta}_j] =
+      \Delta t \delta^{\alpha
+\beta} \delta_{i j} .\)
+    </center>
+    <p>
+      In other words, \(X_{i + 1}\) is sampled from the conditional
+      distribution (the random variable \(X_i\) now is given by a value
+      \(x_i\))
+    </p>
+    <center>
+      \(\displaystyle Q_{\Delta t} (x_i, \theta) = \mathcal{N} (x_i + f (x_i,
+      \theta) \Delta t,
+\mathbb{1} \Delta t),\)
+    </center>
+    <p>
+      where \(\mathcal{N} (\mu, \Sigma)\) denotes the multi-dimensional normal
+      distribution with expectation \(\mu\) and covariance \(\Sigma\), and
+      \(\mathbb{1}\) is identity matrix. Herein, \(x_i\) is in lower case
+      because it is no more random, but given by a value. Written in density
+      function, it is
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle q_{\Delta t} (x_{i + 1} |x_i,
+        \theta) = \frac{1}{\sqrt{(2 \pi \Delta t)^d}}
+\exp \left( -
+        \sum_{\alpha = 1}^d \frac{(x_{i + 1}^{\alpha} - x_i^{\alpha}
+        -
+f^{\alpha} (x_i, \theta) \Delta t)^2}{2 \Delta t} \right) . \)</td>
+        <td align="right">(6.5)</td>
+      </tr>
+    </table>
+    <p>
+      While simulating numerically, the Langevin process can be seen as a
+      series of sampling, starting at an initial position \(x_0\). Then
+      \(x_1\) is sampled from \(Q_{\Delta t} (x_0, \theta)\). Repeating the
+      same process, we sample \(x_2\), \(x_3\) in sequence, until \(x_N\).
+      This gives us a distribution of the path \((x_0, x_1, \ldots, x_N)\),
+      denoted by \(P (x_0, \theta)\). It has the density function
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle p (x_1, \ldots, x_N |x_0, \theta) =
+        \exp \left( - \sum_{i = 0}^{N - 1}
+\sum_{\alpha = 1}^d \frac{(x_{i +
+        1}^{\alpha} - x_i^{\alpha} - f^{\alpha}
+(x_i, \theta) \Delta t)^2}{2
+        \Delta t} +\operatorname{const} \right) . \)</td>
+        <td align="right">(6.6)</td>
+      </tr>
+    </table>
+    <p>
+      A rigorous proof can be found in section <a href="#section: Langevin Process with Constant Covariance Has a Path Integral on Alphabet">5.2</a>.
+    </p>
+    <h2 id="auto-38"><a id="section: Fisher Matrix of Langevin Process Is the Expected Sensitivity on Distribution of Paths"></a>6.3<span style="margin-left: 1em"></span>Fisher Matrix of Langevin
+    Process Is the Expected Sensitivity on Distribution of Paths<span style="margin-left: 1em"></span></h2>
+    <p>
+      In this section, we are to calculate the Fisher matrix for the Langevin
+      process reviewed in section <a href="#section: A Brief Review of Langevin Process">6.2</a>. Given an initial position
+      \(x_0 \in \mathbb{R}^d\), the alphabet \(\mathcal{X}\) in section <a
+      href="#Fisher Matrix Characterizes the Sensitivity of a Stochastic System to Its Parameter">6.1</a> is the collection of all paths starting at \(x_0\). A path
+      is a series \(x = (x_1, \ldots, x_N)\) with each \(x_i \in
+      \mathbb{R}^d\). And the parameterized distribution \(P (\theta)\) in
+      section <a href="#Fisher Matrix Characterizes the Sensitivity of a Stochastic System to Its Parameter">6.1</a> turns to be the distribution of path \(P (x_0,
+      \theta)\). From its density function <a href="#equation: density of path">6.6</a>, we have
+    </p>
+    <center>
+      \(\displaystyle \ln p (x|x_0, \theta) = - \sum_{i = 0}^{N - 1}
+      \sum_{\alpha = 1}^d \frac{(x_{i
++ 1}^{\alpha} - x_i^{\alpha} -
+      f^{\alpha} (x_i, \theta) \Delta t)^2}{2 \Delta
+t}
+      +\operatorname{const}.\)
+    </center>
+    <p>
+      
+    </p>
+    <p>
+      Given \(x_0\), to evaluate the Fisher matrix \(\mathcal{F} (x_0,
+      \theta)\) that characterizes the responses of \(P (x_0, \theta)\) to the
+      change of \(\theta\), we calculate
+    </p>
+    <center>
+      \(\displaystyle \frac{\partial \ln p}{\partial \theta^{\alpha}} (x|x_0,
+      \theta) = \sum_{i =
+0}^{N - 1} \sum_{\gamma = 1}^d (x_{i + 1}^{\gamma} -
+      x_i^{\gamma} - f^{\gamma}
+(x_i, \theta) \Delta t) \frac{\partial
+      f^{\gamma}}{\partial \theta^{\alpha}}
+(x_i, \theta) ,\)
+    </center>
+    <p>
+      once more,
+    </p>
+    <center>
+      \(\displaystyle \frac{\partial^2 \ln p}{\partial \theta^{\alpha}
+      \partial \theta^{\beta}}
+(x|x_0, \theta) = \sum_{i = 0}^{N - 1}
+      \sum_{\gamma = 1}^d \left[ (x_{i +
+1}^{\gamma} - x_i^{\gamma} -
+      f^{\gamma} (x_i, \theta) \Delta t)
+\frac{\partial^2 f^{\gamma}}{\partial
+      \theta^{\alpha} \partial \theta^{\beta}}
+(x_i, \theta) - \frac{\partial
+      f^{\gamma}}{\partial \theta^{\alpha}} (x_i,
+\theta)  \frac{\partial
+      f^{\gamma}}{\partial \theta^{\beta}} (x_i, \theta) 
+\Delta t  \right]
+      .\)
+    </center>
+    <p>
+      Plugging into equation <a href="#equation: fisher matrix">6.1</a>, we get
+    </p>
+    <center>
+      \(\displaystyle \begin{array}{rl}
+  \mathcal{F}_{\alpha \beta} (x_0,
+      \theta) = & -\mathbb{E}_{x \sim P (x_0,
+  \theta)} \left[ \sum_{i =
+      0}^{N - 1} \sum_{\gamma = 1}^d (x_{i + 1}^{\gamma}
+  - x_i^{\gamma} -
+      f^{\gamma} (x_i, \theta) \Delta t) \frac{\partial^2
+ 
+      f^{\gamma}}{\partial \theta^{\alpha} \partial \theta^{\beta}} (x_i,
+      \theta)
+  \right]\\
+  & +\mathbb{E}_{x \sim P (x_0, \theta)} \left[
+      \sum_{i = 0}^{N - 1}
+  \sum_{\gamma = 1}^d \frac{\partial
+      f^{\gamma}}{\partial \theta^{\alpha}}
+  (x_i, \theta)  \frac{\partial
+      f^{\gamma}}{\partial \theta^{\beta}} (x_i,
+  \theta) \Delta t \right]
+      .
+\end{array}\)
+    </center>
+    <p>
+      
+    </p>
+    <p>
+      The first expectation vanishes. To show this, we first write it in its
+      original form, as
+    </p>
+    <center>
+      \(\displaystyle \int_{\mathbb{R}^d} \mathrm{d} x_1 \cdots
+      \int_{\mathbb{R}^d} \mathrm{d} x_N
+q_{\Delta t} (x_0 \rightarrow x_1)
+      \cdots q_{\Delta t} (x_{N - 1} \rightarrow
+x_N) \sum_{i = 0}^{N - 1}
+      \sum_{\gamma = 1}^d (x_{i + 1}^{\gamma} -
+x_i^{\gamma} - f^{\gamma}
+      (x_i, \theta) \Delta t) \frac{\partial^2
+f^{\gamma}}{\partial
+      \theta^{\alpha} \partial \theta^{\beta}} (x_i, \theta) .\)
+    </center>
+    <p>
+      While integrating over \(x_N\), the only term in the summation
+      \(\Sigma_i\) that depends on \(x_N\) is
+    </p>
+    <center>
+      \(\displaystyle \begin{array}{rl}
+  & \int_{\mathbb{R}^d} \mathrm{d} x_1
+      \cdots \int_{\mathbb{R}^d} \mathrm{d}
+  x_{N - 1} q_{\Delta t} (x_0
+      \rightarrow x_1) \cdots q_{\Delta t} (x_{N - 2}
+  \rightarrow x_{N - 1})
+      \sum_{\gamma = 1}^d \frac{\partial^2
+  f^{\gamma}}{\partial
+      \theta^{\alpha} \partial \theta^{\beta}} (x_{N - 1},
+  \theta) \times\\
+
+      \times & \int_{\mathbb{R}^d} \mathrm{d} x_N q_{\Delta t} (x_{N - 1}
+ 
+      \rightarrow x_N) (x_N^{\gamma} - x_{N - 1}^{\gamma} - f^{\gamma} (x_{N -
+      1},
+  \theta) \Delta t),
+\end{array}\)
+    </center>
+    <p>
+      which vanishes since the second factor is zero. For other terms in the
+      summation \(\Sigma_i\), namely for \(i \in \{ 0, \ldots, N - 2 \}\),
+      integrating \(x_N\) results in a unit factor because \(\int \mathrm{d}
+      x_N q_{\Delta t} (x_{N - 1} \rightarrow x_N) = 1\). So, Integrating over
+      \(x_N\) results in
+    </p>
+    <font style="font-size: 84.1%"><center>
+      \(\displaystyle \int_{\mathbb{R}^d} \mathrm{d} x_1 \cdots
+      \int_{\mathbb{R}^d} \mathrm{d} x_{N
+- 1} q_{\Delta t} (x_0 \rightarrow
+      x_1) \cdots q_{\Delta t} (x_{N - 2}
+\rightarrow x_{N - 1}) \sum_{i =
+      0}^{N - 2} \sum_{\gamma = 1}^d (x_{i +
+1}^{\gamma} - x_i^{\gamma} -
+      f^{\gamma} (x_i, \theta) \Delta t)
+\frac{\partial^2 f^{\gamma}}{\partial
+      \theta^{\alpha} \partial \theta^{\beta}}
+(x_i, \theta) .\)
+    </center></font>
+    <p>
+      Repeating this process, until
+    </p>
+    <center>
+      \(\displaystyle \int_{\mathbb{R}^d} \mathrm{d} x_1 q_{\Delta t} (x_0
+      \rightarrow x_1)
+\sum_{\gamma = 1}^d (x_1^{\gamma} - x_0^{\gamma} -
+      f^{\gamma} (x_0, \theta)
+\Delta t) \frac{\partial^2 f^{\gamma}}{\partial
+      \theta^{\alpha} \partial
+\theta^{\beta}} (x_0, \theta),\)
+    </center>
+    <p>
+      which is, again, vanishing because \(\int \mathrm{d} x_1 q_{\Delta t}
+      (x_0 \rightarrow x_1) (x_1^{\gamma} -
+x_0^{\gamma} - f^{\gamma} (x_0,
+      \theta) \Delta t) = 0\). So, the first expectation is zero. In addition,
+      in the limit \(\Delta t \rightarrow 0\) and \(N \rightarrow \infty\) at
+      the same time while keeping \(T = N \Delta t\) invariant, we can
+      formally write the factor in the second expectation in
+      \(\mathcal{F}_{\alpha \beta} (\theta)\) as a Riemannian integral
+    </p>
+    <center>
+      \(\displaystyle \sum_{i = 0}^{N - 1} \sum_{\gamma = 1}^d \frac{\partial
+      f^{\gamma}}{\partial
+\theta^{\alpha}} (x_i, \theta)  \frac{\partial
+      f^{\gamma}}{\partial
+\theta^{\beta}} (x_i, \theta) \Delta t \rightarrow
+      \int_0^T \mathrm{d} t
+\sum_{\gamma = 1}^d \frac{\partial
+      f^{\gamma}}{\partial \theta^{\alpha}} (x
+(t), \theta) \frac{\partial
+      f^{\gamma}}{\partial \theta^{\beta}} (x (t),
+\theta),\)
+    </center>
+    <p>
+      where the series \((x_0, \ldots, x_N)\) now becomes a continuous path
+      \(x : [0, T] \rightarrow \mathbb{R}^d\). Altogether, we find
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle \mathcal{F}_{\alpha \beta} (x_0,
+        \theta) =\mathbb{E}_{x \sim P (x_0, \theta)}
+\left[ \int_0^T
+        \mathrm{d} t \sum_{\gamma = 1}^d \frac{\partial
+f^{\gamma}}{\partial
+        \theta^{\alpha}} (x (t), \theta) \frac{\partial
+f^{\gamma}}{\partial
+        \theta^{\beta}} (x (t), \theta) \right] . \)</td>
+        <td align="right">(6.7)</td>
+      </tr>
+    </table>
+    <p>
+      To estimate this numerically, we sample an assemble of paths from the
+      distribution \(P (x_0, \theta)\) using the simulation mentioned in
+      section <a href="#section: A Brief Review of Langevin Process">6.2</a>, then compute the mean value of the integral
+      for all the sampled paths. The &ldquo;physical&rdquo; explanation of
+      equation <a href="#equation: fisher matrix of langevin process for dynamical parameter">6.7</a> is as follow. The integrand \(\sum_{\gamma}
+      (\partial f^{\gamma} / \partial \theta^{\alpha}) (x, \theta)
+(\partial
+      f^{\gamma} / \partial \theta^{\beta}) (x, \theta)\) characterizes the
+      sensitivity to the \(\theta\) at position \(x\). For each path, the
+      integral gives the global sensitivity along the path. The fisher matrix
+      \(\mathcal{F}_{\alpha \beta} (x_0, \theta)\), thus, is the expected
+      global sensitivity on the distribution of paths, \(P (x_0, \theta)\).
+    </p>
+    <p>
+      If there is a prior distribution of \(X_0\), denoted by \(P_0\), then we
+      can get the distribution of the whole path including the initial
+      position \(X_0\). This distribution, denoted by \(\tilde{P} (\theta)\),
+      has the density function
+    </p>
+    <center>
+      \(\displaystyle \tilde{p} (x_0, \ldots, x_N | \theta) := p (x_1, \ldots,
+      x_N |x_0, \theta) p_0
+(x_0) .\)
+    </center>
+    <p>
+      Following the same steps we can obtain the Fisher matrix of \(\tilde{P}
+      (\theta)\), as
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle \tilde{\mathcal{F}}_{\alpha \beta}
+        (\theta) =\mathbb{E}_{x \sim \tilde{P}
+(\theta)} \left[ \int_0^T
+        \mathrm{d} t \sum_{\gamma = 1}^d \frac{\partial
+f^{\gamma}}{\partial
+        \theta^{\alpha}} (x (t), \theta) \frac{\partial
+f^{\gamma}}{\partial
+        \theta^{\beta}} (x (t), \theta) \right] . \)</td>
+        <td align="right">(6.8)</td>
+      </tr>
+    </table>
+    <p>
+      Now, \(\theta\) is the unique argument.
+    </p>
+    <h1 id="auto-39">Epilogue<span style="margin-left: 1em"></span></h1>
     <p>
       In the summer of 2024, I was wondering how a stochastic system relaxes
       to its equilibrium. I did not find a textbook that matched my
@@ -5634,8 +6099,8 @@ R_{\alpha
     <p>
       The next surprise came from introducing smooth structure to stochastic
       system. I found the cut-off by a series of complex calculation (section
-      <a href="#section: Cut-off in the Moments of Transition Rate Is Essential for Spatial Smoothness">3.1</a>). Later on in the winter, while I was traveling by
-      train, I found a way of expanding a function by a series of generalized
+      <a href="#section: Cut-off in the Moments of Transition Rate Is Essential for Spatial Smoothness">3.1</a>). Later on in the winter, while I was traveling to
+      Sanya, I found a way of expanding a function by a series of generalized
       functions (equation <a href="#equation:expand by delta">5.7</a>). It led to a direct proof of
       Kramers-Moyal expansion. It also gave raise to a rigorous proof of path
       integral formulation for stochastic system (section <a href="#section: Markovian Process with Euclidean Alphabet Can Be Formulated as Path Integral">5.1</a>),

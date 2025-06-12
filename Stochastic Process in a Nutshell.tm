@@ -144,7 +144,7 @@
     <no-break><pageref|auto-34>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|6<space|2spc>Fisher
-    Matrix and Critical Phenomenon> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    Matrix> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-35><vspace|0.5fn>
 
     6.1<space|2spc>Fisher Matrix Characterizes the Sensitivity of a
@@ -4407,16 +4407,16 @@
   mixture of real and Grassmann variables. Physicists call this extended
   space a <strong|super-space>.
 
-  <chapter|Fisher Matrix and Critical Phenomenon>
+  <chapter|Fisher Matrix>
 
   In this chapter, we investigate how a distribution changes with its
   parameter. This leads to the Fisher matrix. Then, after a brief review of
-  Langevin process, we calculate the Fisher matrix for Langevin process. We
-  examine the Fisher matrix on examples, from which we find that critical
-  phenomenon may arise when the dimension increases. In the end, TODO
+  Langevin process, we calculate the Fisher matrix for Langevin process.
 
   Throughout this chapter, we reuse the notations in chapter
-  <reference|chapter: Path Integral>. TODO
+  <reference|section: Master Equation and Detailed Balance>. Namely, we use
+  <math|q<rsub|\<Delta\>t><around*|(|x\<rightarrow\>y|)>> to denote the
+  transition density <math|q<rsub|\<Delta\>t><around*|(|y\|x|)>>.
 
   <section|Fisher Matrix Characterizes the Sensitivity of a Stochastic System
   to Its Parameter><label|Fisher Matrix Characterizes the Sensitivity of a
@@ -4687,6 +4687,27 @@
   thus, is the expected global sensitivity on the distribution of paths,
   <math|P<around*|(|x<rsub|0>,\<theta\>|)>>.
 
+  If there is a prior distribution of <math|X<rsub|0>>, denoted by
+  <math|P<rsub|0>>, then we can get the distribution of the whole path
+  including the initial position <math|X<rsub|0>>. This distribution, denoted
+  by <math|<wide|P|~><around*|(|\<theta\>|)>>, has the density function
+
+  <\equation*>
+    <wide|p|~><around*|(|x<rsub|0>,\<ldots\>,x<rsub|N>\|\<theta\>|)>\<assign\>p<around*|(|x<rsub|1>,\<ldots\>,x<rsub|N>\|x<rsub|0>,\<theta\>|)>
+    p<rsub|0><around*|(|x<rsub|0>|)>.
+  </equation*>
+
+  Following the same steps we can obtain the Fisher matrix of
+  <math|<wide|P|~><around*|(|\<theta\>|)>>, as
+
+  <\equation>
+    <wide|\<cal-F\>|~><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>|)>=\<bbb-E\><rsub|x\<sim\><wide|P|~><around*|(|\<theta\>|)>><around*|[|<big|int><rsub|0><rsup|T>\<mathd\>t
+    <big|sum><rsub|\<gamma\>=1><rsup|d><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x<around*|(|t|)>,\<theta\>|)><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<around*|(|t|)>,\<theta\>|)>|]>.<label|equation:
+    fisher matrix of langevin process for dynamical parameter with prior>
+  </equation>
+
+  Now, <math|\<theta\>> is the unique argument.
+
   <epilogue>
 
   In the summer of 2024, I was wondering how a stochastic system relaxes to
@@ -4792,7 +4813,7 @@
     <associate|auto-36|<tuple|6.1|51>>
     <associate|auto-37|<tuple|6.2|51>>
     <associate|auto-38|<tuple|6.3|52>>
-    <associate|auto-39|<tuple|6.7|55>>
+    <associate|auto-39|<tuple|6.8|55>>
     <associate|auto-4|<tuple|1.2|10>>
     <associate|auto-5|<tuple|1.3|10>>
     <associate|auto-6|<tuple|1.4|11>>
@@ -4805,6 +4826,8 @@
     <associate|equation: fisher matrix|<tuple|6.1|51>>
     <associate|equation: fisher matrix of langevin process for dynamical
     parameter|<tuple|6.7|53>>
+    <associate|equation: fisher matrix of langevin process for dynamical
+    parameter with prior|<tuple|6.8|54>>
     <associate|equation: langevin process a|<tuple|6.2|51>>
     <associate|equation: langevin process b|<tuple|6.3|52>>
     <associate|equation: transition density of Langevin
@@ -5130,7 +5153,7 @@
       <no-break><pageref|auto-34>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|6<space|2spc>Fisher
-      Matrix and Critical Phenomenon> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      Matrix> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-35><vspace|0.5fn>
 
       6.1<space|2spc>Fisher Matrix Characterizes the Sensitivity of a
