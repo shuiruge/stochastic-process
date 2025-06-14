@@ -35,7 +35,7 @@
     <no-break><pageref|auto-6>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|2<space|2spc>Master
-    Equation and Detailed Balance> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    Equation> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-7><vspace|0.5fn>
 
     2.1<space|2spc>Master Equation Describes the Evolution of Markov Process
@@ -63,7 +63,7 @@
     <no-break><pageref|auto-13>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|3<space|2spc>Kramers-Moyal
-    Expansion and Langevin Process> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    Expansion> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-14><vspace|0.5fn>
 
     3.1<space|2spc>Cut-off in the Moments of Transition Rate Is Essential for
@@ -151,12 +151,12 @@
     Stochastic System to Its Parameter <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-36>
 
-    6.2<space|2spc>A Brief Review of Langevin Process
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    6.2<space|2spc>Fisher Matrix of Langevin Process Is the Expectation of
+    Sensitivity along Path <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-37>
 
-    6.3<space|2spc>Fisher Matrix of Langevin Process Is the Expected
-    Sensitivity on Distribution of Paths <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    6.3<space|2spc>Fisher Matrix at Fixed Point
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-38>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|Epilogue>
@@ -170,12 +170,12 @@
   system of information (chapter <reference|section: Relative Entropy>). Then
   using information, we introduce the continuous time Markovian process, and
   show how it relax to equilibrium (chapter <reference|section: Master
-  Equation and Detailed Balance>). We then move on to add spatial smoothness
-  to Markovian process, which results in many interesting results including
-  Langevin process (chapter <reference|section: Kramers-Moyal Expansion and
-  Langevin Process>). In the end, we generalize least-action principle to
-  distribution and comparing data-fitting with least-action principle
-  (chapter <reference|section: Least-Action Principle>).
+  Equation>). We then move on to add spatial smoothness to Markovian process,
+  which results in many interesting results including Langevin process
+  (chapter <reference|section: Kramers-Moyal Expansion>). In the end, we
+  generalize least-action principle to distribution and comparing
+  data-fitting with least-action principle (chapter <reference|section:
+  Least-Action Principle>).
 
   The mathematical techniques employed here will not go beyond the basic
   calculus (Taylor expansion, improper integral, and integration by parts)
@@ -527,8 +527,7 @@
   <math|<big|int>\<mathd\>x p ln<around*|(|p/q|)>>). So, the two issues of
   Shannon entropy cease in relative entropy.
 
-  <chapter|Master Equation and Detailed Balance><label|section: Master
-  Equation and Detailed Balance>
+  <chapter|Master Equation><label|section: Master Equation>
 
   In this chapter, we discuss continuous time Markovian process. Using the
   result obtained in chapter <reference|section: Relative Entropy>, we
@@ -1614,21 +1613,19 @@
   in <math|g<rsub|\<Delta\>t>> shall be properly bounded to be small so as to
   ensure the relaxation <math|P<around*|(|t|)>\<rightarrow\>\<Pi\>>.
 
-  <chapter|Kramers-Moyal Expansion and Langevin Process><label|section:
-  Kramers-Moyal Expansion and Langevin Process>
+  <chapter|Kramers-Moyal Expansion><label|section: Kramers-Moyal Expansion>
 
-  We follow the discussion in chapter <reference|section: Master Equation and
-  Detailed Balance>, but focusing on the specific situation where there is
-  extra smooth structure on <math|X>. This smoothness reflects on the
-  connectivity of the alphabet <math|\<cal-X\>>, and on the smooth
-  \Pspatial\Q dependence of the density function and transition rate. This
-  indicates that the conclusions in chapter <reference|section: Master
-  Equation and Detailed Balance> hold in this section, but the inverse is not
-  guaranteed.
+  We follow the discussion in chapter <reference|section: Master Equation>,
+  but focusing on the specific situation where there is extra smooth
+  structure on <math|X>. This smoothness reflects on the connectivity of the
+  alphabet <math|\<cal-X\>>, and on the smooth \Pspatial\Q dependence of the
+  density function and transition rate. This indicates that the conclusions
+  in chapter <reference|section: Master Equation> hold in this section, but
+  the inverse is not guaranteed.
 
   Throughout this chapter, we reuse the notations in chapter
-  <reference|section: Master Equation and Detailed Balance>. In addition, we
-  set the alphabet to be Euclidean to get sufficient connectivity. Namely,
+  <reference|section: Master Equation>. In addition, we set the alphabet to
+  be Euclidean to get sufficient connectivity. Namely,
   <math|\<cal-X\>=\<bbb-R\><rsup|d>> for some integer <math|d\<geqslant\>1>.
 
   We employ the <strong|Einstein's convention>. That is, we omit the sum
@@ -3021,20 +3018,20 @@
   <chapter|Least-Action Principle><label|section: Least-Action Principle>
 
   In this chapter, we apply the discussions in chapter <reference|section:
-  Kramers-Moyal Expansion and Langevin Process> to least-action principle. We
-  generalize the least-action principle in classical mechanics to
-  distributions, and discuss the relationship between least-action principle
-  of distribution and data-fitting.
+  Kramers-Moyal Expansion> to least-action principle. We generalize the
+  least-action principle in classical mechanics to distributions, and discuss
+  the relationship between least-action principle of distribution and
+  data-fitting.
 
   Throughout this chapter, we reuse the notations in chapter
-  <reference|section: Kramers-Moyal Expansion and Langevin Process> (thus
-  also chapter <reference|section: Master Equation and Detailed Balance>),
-  except for section <reference|section: Data Fitting Is Equivalent to
-  Least-Action Principle of Distribution> where the alphabet <math|\<cal-X\>>
-  can be discrete. In addition, we use <math|P<around*|(|\<theta\>|)>> for a
-  parameterized distribution, where <math|\<theta\>> is the collection of
-  parameters. Its density function is <math|p<around*|(|x,\<theta\>|)>>,
-  where random variable <math|X> takes the value <math|x>.
+  <reference|section: Kramers-Moyal Expansion> (thus also chapter
+  <reference|section: Master Equation>), except for section
+  <reference|section: Data Fitting Is Equivalent to Least-Action Principle of
+  Distribution> where the alphabet <math|\<cal-X\>> can be discrete. In
+  addition, we use <math|P<around*|(|\<theta\>|)>> for a parameterized
+  distribution, where <math|\<theta\>> is the collection of parameters. Its
+  density function is <math|p<around*|(|x,\<theta\>|)>>, where random
+  variable <math|X> takes the value <math|x>.
 
   <section|A Brief Review of Least-Action Principle in Classical
   Mechanics><label|section: A Brief Review of Least-Action Principle in
@@ -3589,11 +3586,11 @@
   analytically marginalized.
 
   Throughout this chapter, we reuse the notations in chapter
-  <reference|section: Kramers-Moyal Expansion and Langevin Process>. Briefly,
-  the alphabet is an Euclidean space <math|\<bbb-R\><rsup|d>>. We use
-  Einstein's convention to simplify notations. And notation
-  <math|p<around*|(|x\<rightarrow\>y|)>> is used for denoting the conditional
-  density function <math|p<around*|(|y\|x|)>>.
+  <reference|section: Kramers-Moyal Expansion>. Briefly, the alphabet is an
+  Euclidean space <math|\<bbb-R\><rsup|d>>. We use Einstein's convention to
+  simplify notations. And notation <math|p<around*|(|x\<rightarrow\>y|)>> is
+  used for denoting the conditional density function
+  <math|p<around*|(|y\|x|)>>.
 
   <section|Markovian Process with Euclidean Alphabet Can Be Formulated as
   Path Integral><label|section: Markovian Process with Euclidean Alphabet Can
@@ -4090,7 +4087,7 @@
   find
 
   <\equation*>
-    p<around*|(|x<rsub|N>,N \<Delta\>t|)>=<big|int>\<mathD\><around*|(|x|)>
+    p<around*|(|x<rsub|N>,N \<Delta\>t|)>=<big|int>D<around*|(|x|)>
     p<around*|(|x<rsub|0>,0|)> exp<around*|(|-S<around*|(|x|)>|)>+\<omicron\><around*|(|N
     \<Delta\>t|)>
   </equation*>
@@ -4098,7 +4095,7 @@
   with the integral volume
 
   <\equation*>
-    <big|int>D<around*|(|x|)>\<assign\><big|int>\<mathd\>x<rsub|0>\<cdots\><big|int>\<mathd\>x<rsub|N-1>
+    <big|int>D<around*|(|x|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|0>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N-1>
   </equation*>
 
   and the action (up to a constant)
@@ -4409,18 +4406,42 @@
 
   <chapter|Fisher Matrix>
 
-  In this chapter, we investigate how a distribution changes with its
-  parameter. This leads to the Fisher matrix. Then, after a brief review of
-  Langevin process, we calculate the Fisher matrix for Langevin process.
+  While you are reading this book, the photons emitted from the screen or
+  reflected from the papers hit on your retinae. It motives your brain to
+  actively think about the words you are reading. Brain can be seen as a
+  stochastic system, where the alphabet includes the firing state of neurons,
+  as well as the strength of synapses that connect neurons. Because synapses
+  vary their strength with the firing of neurons (obeying the Hebbian rule:
+  \Pneurons that fire together wire together\Q), they are dynamical variables
+  too. The photons, and other environmental stimuli, change the dynamical
+  pattern of your brain. They serves as the parameters. To make this
+  concrete, consider a harmonic oscillator (see section <reference|section: A
+  Brief Review of Least-Action Principle in Classical Mechanics>). When the
+  parameter <math|\<omega\>> varies, so varies the dynamics of the harmonic
+  oscillator. But, this example is too trivial, since no matter how we change
+  the <math|\<omega\>>, the dynamical pattern is left invariant, kept as
+  periodic oscillation (even though it has a different period). In many other
+  cases, however, a small change of parameter may lead to a significant
+  variation of the dynamical pattern (for example, from stable or periodic
+  behavior to be unstable, even to chaos). This interesting phenomenon
+  appears in many areas in nature and society. It rules your cerebral
+  reactions to your environments and your own motor behaviors. It allows
+  species to evolve. It helps starling flocks to survive under the attack of
+  predators. It also leads to the crash of stocks. In this chapter, we try to
+  model this phenomenon using the tools we have developed so far. We
+  investigate how a distribution changes with its parameter. This leads to
+  the Fisher matrix. Then, after a brief review of Langevin process, we
+  calculate the Fisher matrix for Langevin process.
 
   Throughout this chapter, we reuse the notations in chapter
-  <reference|section: Master Equation and Detailed Balance>. Namely, we use
-  <math|q<rsub|\<Delta\>t><around*|(|x\<rightarrow\>y|)>> to denote the
-  transition density <math|q<rsub|\<Delta\>t><around*|(|y\|x|)>>.
+  <reference|section: Master Equation>. And the alphabet is restricted to be
+  <math|\<bbb-R\><rsup|d>> except for section <reference|section: Fisher
+  Matrix Characterizes the Sensitivity of a Stochastic System to Its
+  Parameter>.
 
   <section|Fisher Matrix Characterizes the Sensitivity of a Stochastic System
-  to Its Parameter><label|Fisher Matrix Characterizes the Sensitivity of a
-  Stochastic System to Its Parameter>
+  to Its Parameter><label|section: Fisher Matrix Characterizes the
+  Sensitivity of a Stochastic System to Its Parameter>
 
   Let <math|P> a distribution with alphabet <math|\<cal-X\>>. It may depend
   on some parameter, such as a normal distribution depending on its mean and
@@ -4442,7 +4463,7 @@
   <\align>
     <tformat|<table|<row|<cell|>|<cell|H<around*|(|P<around*|(|\<theta\>|)>,P<around*|(|\<theta\>+\<delta\>\<theta\>|)>|)>>>|<row|<cell|=>|<cell|-<big|int><rsub|\<cal-X\>>\<mathd\>x
     p<around*|(|x\|\<theta\>|)><around*|[|ln
-    p<around*|(|x\|\<theta\>+\<delta\>\<theta\>|)>-p<around*|(|x\|\<theta\>|)>|]>>>|<row|<cell|=>|<cell|-\<delta\>\<theta\><rsup|\<alpha\>><big|int><rsub|\<cal-X\>>\<mathd\>x<frac|\<partial\>p|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x\|\<theta\>|)>-\<delta\>\<theta\><rsup|\<alpha\>>\<delta\>\<theta\><rsup|\<beta\>><big|int><rsub|\<cal-X\>>\<mathd\>x
+    p<around*|(|x\|\<theta\>+\<delta\>\<theta\>|)>-p<around*|(|x\|\<theta\>|)>|]>>>|<row|<cell|=>|<cell|-\<delta\>\<theta\><rsup|\<alpha\>><big|int><rsub|\<cal-X\>>\<mathd\>x<frac|\<partial\>p|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x\|\<theta\>|)>-<frac|1|2>\<delta\>\<theta\><rsup|\<alpha\>>\<delta\>\<theta\><rsup|\<beta\>><big|int><rsub|\<cal-X\>>\<mathd\>x
     p<around*|(|x\|\<theta\>|)><frac|\<partial\>ln
     p|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x\|\<theta\>|)>+\<omicron\><around*|(|\<delta\>\<theta\><rsup|2>|)>.>>>>
   </align>
@@ -4465,10 +4486,71 @@
     fisher matrix>
   </equation>
 
-  we finally arrive at
+  we finally arrive at<\footnote>
+    You may ask: why not using <math|H<around*|(|P<around*|(|\<theta\>+\<delta\>\<theta\>|)>,P<around*|(|\<theta\>|)>|)>>?
+    In fact, using either <math|H<around*|(|P<around*|(|\<theta\>|)>,P<around*|(|\<theta\>+\<delta\>\<theta\>|)>|)>>
+    or <math|H<around*|(|P<around*|(|\<theta\>+\<delta\>\<theta\>|)>,P<around*|(|\<theta\>|)>|)>>
+    to characterize the difference between <math|P<around*|(|\<theta\>|)>>
+    and <math|P<around*|(|\<theta\>+\<delta\>\<theta\>|)>> gives the same
+    result. Indeed, we have
+
+    <\align>
+      <tformat|<table|<row|<cell|H<around*|(|P<around*|(|\<theta\>+\<delta\>\<theta\>|)>,P<around*|(|\<theta\>|)>|)>=>|<cell|<big|int><rsub|\<cal-X\>>\<mathd\>x
+      p<around*|(|x\|\<theta\>+\<delta\>\<theta\>|)><around*|[|ln
+      p<around*|(|x\|\<theta\>+\<delta\>\<theta\>|)>-p<around*|(|x\|\<theta\>|)>|]>>>|<row|<cell|=>|<cell|<big|int><rsub|\<cal-X\>>\<mathd\>x<frac|\<partial\>p|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x\|\<theta\>|)>\<delta\>\<theta\><rsup|\<alpha\>>+<frac|1|2><big|int><rsub|\<cal-X\>>\<mathd\>x
+      p<around*|(|x\|\<theta\>|)><frac|\<partial\><rsup|2>ln
+      p|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x\|\<theta\>|)>\<delta\>\<theta\><rsup|\<alpha\>>\<delta\>\<theta\><rsup|\<beta\>>>>|<row|<cell|+>|<cell|<big|int><rsub|\<cal-X\>>\<mathd\>x<frac|\<partial\>p|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x\|\<theta\>|)><frac|\<partial\>ln
+      p|\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x\|\<theta\>|)>\<delta\>\<theta\><rsup|\<alpha\>>\<delta\>\<theta\><rsup|\<beta\>>+\<omicron\><around*|(|\<delta\>\<theta\><rsup|2>|)>.>>>>
+    </align>
+
+    The first integral vanishes as before, by noticing the identity
+
+    <\equation*>
+      <big|int><rsub|\<cal-X\>>\<mathd\>x
+      p<around*|(|x\|\<theta\>|)><frac|\<partial\>ln
+      p|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x\|\<theta\>|)>=<big|int><rsub|\<cal-X\>>\<mathd\>x
+      <frac|\<partial\>p|\<partial\>\<theta\><rsup|a>><around*|(|x\|\<theta\>|)>=<frac|\<partial\>|\<partial\>\<theta\><rsup|\<alpha\>>><big|int><rsub|\<cal-X\>>\<mathd\>x
+      p<around*|(|x\|\<theta\>|)>=0.
+    </equation*>
+
+    Also from this identity, we have
+
+    <\align>
+      <tformat|<table|<row|<cell|0=>|<cell|<frac|\<partial\>|\<partial\>\<theta\><rsup|\<beta\>>><big|int><rsub|\<cal-X\>>\<mathd\>x
+      p<around*|(|x\|\<theta\>|)><frac|\<partial\>ln
+      p|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x\|\<theta\>|)>>>|<row|<cell|=>|<cell|<big|int><rsub|\<cal-X\>>\<mathd\>x
+      p<around*|(|x\|\<theta\>|)><frac|\<partial\>ln
+      p|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x\|\<theta\>|)><frac|\<partial\>ln
+      p|\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x\|\<theta\>|)>+<big|int><rsub|\<cal-X\>>\<mathd\>x
+      p<around*|(|x\|\<theta\>|)><frac|\<partial\><rsup|2>ln
+      p|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x\|\<theta\>|)>.>>>>
+    </align>
+
+    So, we find
+
+    <\equation*>
+      <big|int><rsub|\<cal-X\>>\<mathd\>x
+      p<around*|(|x\|\<theta\>|)><frac|\<partial\>ln
+      p|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x\|\<theta\>|)><frac|\<partial\>ln
+      p|\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x\|\<theta\>|)>=-<big|int><rsub|\<cal-X\>>\<mathd\>x
+      p<around*|(|x\|\<theta\>|)><frac|\<partial\><rsup|2>ln
+      p|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x\|\<theta\>|)>.
+    </equation*>
+
+    Plugging back to <math|H<around*|(|P<around*|(|\<theta\>+\<delta\>\<theta\>|)>,P<around*|(|\<theta\>|)>|)>>
+    (the third integral of the Taylor expansion), we arrive at
+
+    <\equation*>
+      H<around*|(|P<around*|(|\<theta\>+\<delta\>\<theta\>|)>,P<around*|(|\<theta\>|)>|)>=-<frac|1|2><big|int><rsub|\<cal-X\>>\<mathd\>x
+      p<around*|(|x\|\<theta\>|)><frac|\<partial\><rsup|2>ln
+      p|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x\|\<theta\>|)>\<delta\>\<theta\><rsup|\<alpha\>>\<delta\>\<theta\><rsup|\<beta\>>+\<omicron\><around*|(|\<delta\>\<theta\><rsup|2>|)>=<frac|1|2>\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>|)>\<delta\>\<theta\><rsup|\<alpha\>>\<delta\>\<theta\><rsup|\<beta\>>+\<omicron\><around*|(|\<delta\>\<theta\><rsup|2>|)>,
+    </equation*>
+
+    which is exactly the <math|H<around*|(|P<around*|(|\<theta\>|)>,P<around*|(|\<theta\>+\<delta\>\<theta\>|)>|)>>.
+  </footnote>
 
   <\equation*>
-    H<around*|(|P<around*|(|\<theta\>|)>,P<around*|(|\<theta\>+\<delta\>\<theta\>|)>|)>=\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>|)>
+    H<around*|(|P<around*|(|\<theta\>|)>,P<around*|(|\<theta\>+\<delta\>\<theta\>|)>|)>=<frac|1|2>\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>|)>
     \<delta\>\<theta\><rsup|\<alpha\>>\<delta\>\<theta\><rsup|\<beta\>>+\<omicron\><around*|(|\<delta\>\<theta\><rsup|2>|)>.
   </equation*>
 
@@ -4476,237 +4558,150 @@
   named after the British polymath Ronald Fisher. It characterizes the
   responses of a stochastic system to the change of its parameter.
 
-  <section|A Brief Review of Langevin Process><label|section: A Brief Review
-  of Langevin Process>
-
-  Before going on calculating the Fisher matrix of Langevin process, we
-  briefly review the Langevin process introduced in the previous chapters,
-  mainly in section <reference|section: Transition Density of Langevin
-  Process Is Nearly Gaussian> and section <reference|section: Langevin
-  Process with Constant Covariance Has a Path Integral on Alphabet>. Herein,
-  we only consider the Langevin process with constant covariance. Formally,
-  it is defined by a stochastic differential equation in
-  <math|\<bbb-R\><rsup|d>>, as
-
-  <\equation>
-    <wide|X|\<dot\>><rsup|\<alpha\>><around*|(|t|)>=f<rsup|\<alpha\>><around*|(|X<around*|(|t|)>,\<theta\>|)>+<wide|W|\<dot\>><rsup|\<alpha\>><around*|(|t|)>,<label|equation:
-    langevin process a>
-  </equation>
-
-  with
-
-  <\equation>
-    \<bbb-E\><around*|[|<wide|W|\<dot\>><rsup|\<alpha\>><around*|(|t|)><wide|W|\<dot\>><rsup|\<beta\>><around*|(|t<rprime|'>|)>|]>=\<delta\><rsup|\<alpha\>\<beta\>>
-    \<delta\><around*|(|t-t<rprime|'>|)>.<label|equation: langevin process b>
-  </equation>
-
-  We use capital notations for <math|X> and <math|W> because they are random
-  variables. The <math|f> characterizes the deterministic dynamics of
-  <math|X<around*|(|t|)>> and the <math|W> provides randomness. We have
-  explicitly shown the dependence of <math|f> on the parameter
-  <math|\<theta\>\<in\>\<bbb-R\><rsup|m>>.
-
-  An approximation is considering the finite time interval <math|\<Delta\>t>
-  instead of the infinitesimal <math|\<mathd\>t>. In this situation, the path
-  <math|X<around*|(|t|)>> becomes a series
-  <math|<around*|(|X<rsub|0>,X<rsub|1>,\<ldots\>,X<rsub|N>|)>>. And we have
-
-  <\equation>
-    X<rsup|\<alpha\>><rsub|i+1>-X<rsup|\<alpha\>><rsub|i>=f<rsup|\<alpha\>><around*|(|X<rsub|i>,\<theta\>|)>\<Delta\>t+\<Delta\>W<rsub|i><rsup|\<alpha\>>,<label|equation:
-    discrete Langevin process>
-  </equation>
-
-  with
-
-  <\equation*>
-    \<bbb-E\><around*|[|\<Delta\>W<rsup|\<alpha\>><rsub|i>\<Delta\>W<rsup|\<beta\>><rsub|j>|]>=\<Delta\>t
-    \<delta\><rsup|\<alpha\>\<beta\>>\<delta\><rsub|i j>.
-  </equation*>
-
-  In other words, <math|X<rsub|i+1>> is sampled from the conditional
-  distribution (the random variable <math|X<rsub|i>> now is given by a value
-  <math|x<rsub|i>>)
-
-  <\equation*>
-    Q<rsub|\<Delta\>t><around*|(|x<rsub|i>,\<theta\>|)>=<with|font|cal|N><around*|(|x<rsub|i>+f<around*|(|x<rsub|i>,\<theta\>|)>\<Delta\>t,\<bbb-1\>\<Delta\>t|)>,
-  </equation*>
-
-  where <math|<with|font|cal|N><around*|(|\<mu\>,\<Sigma\>|)>> denotes the
-  multi-dimensional normal distribution with expectation <math|\<mu\>> and
-  covariance <math|\<Sigma\>>, and <math|\<bbb-1\>> is identity matrix.
-  Herein, <math|x<rsub|i>> is in lower case because it is no more random, but
-  given by a value. Written in density function, it is
-
-  <\equation>
-    q<rsub|\<Delta\>t><around*|(|x<rsub|i+1>\|x<rsub|i>,\<theta\>|)>=<frac|1|<sqrt|<around*|(|2\<mathpi\>\<Delta\>t|)><rsup|d>>>exp<around*|(|-<big|sum><rsub|\<alpha\>=1><rsup|d><frac|<around*|(|x<rsub|i+1><rsup|\<alpha\>>-x<rsub|i><rsup|\<alpha\>>-f<rsup|\<alpha\>><around*|(|x<rsub|i>,\<theta\>|)>
-    \<Delta\>t|)><rsup|2>|2\<Delta\>t>|)>.<label|equation: transition density
-    of Langevin process>
-  </equation>
-
-  While simulating numerically, the Langevin process can be seen as a series
-  of sampling, starting at an initial position <math|x<rsub|0>>. Then
-  <math|x<rsub|1>> is sampled from <math|Q<rsub|\<Delta\>t><around*|(|x<rsub|0>,\<theta\>|)>>.
-  Repeating the same process, we sample <math|x<rsub|2>>, <math|x<rsub|3>> in
-  sequence, until <math|x<rsub|N>>. This gives us a distribution of the path
-  <math|<around*|(|x<rsub|0>,x<rsub|1>,\<ldots\>,x<rsub|N>|)>>, denoted by
-  <math|P<around*|(|x<rsub|0>,\<theta\>|)>>. It has the density function
-
-  <\equation>
-    p<around*|(|x<rsub|1>,\<ldots\>,x<rsub|N>\|x<rsub|0>,\<theta\>|)>=exp<around*|(|-<big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<alpha\>=1><rsup|d><frac|<around*|(|x<rsub|i+1><rsup|\<alpha\>>-x<rsub|i><rsup|\<alpha\>>-f<rsup|\<alpha\>><around*|(|x<rsub|i>,\<theta\>|)>
-    \<Delta\>t|)><rsup|2>|2\<Delta\>t>+const|)>.<label|equation: density of
-    path>
-  </equation>
-
-  A rigorous proof can be found in section <reference|section: Langevin
-  Process with Constant Covariance Has a Path Integral on Alphabet>.
-
-  <section|Fisher Matrix of Langevin Process Is the Expected Sensitivity on
-  Distribution of Paths><label|section: Fisher Matrix of Langevin Process Is
-  the Expected Sensitivity on Distribution of Paths>
+  <section|Fisher Matrix of Langevin Process Is the Expectation of
+  Sensitivity along Path><label|section: Fisher Matrix of Langevin Process Is
+  the Expection of Sensitivity along Path>
 
   In this section, we are to calculate the Fisher matrix for the Langevin
-  process reviewed in section <reference|section: A Brief Review of Langevin
-  Process>. Given an initial position <math|x<rsub|0>\<in\>\<bbb-R\><rsup|d>>,
-  the alphabet <math|\<cal-X\>> in section <reference|Fisher Matrix
-  Characterizes the Sensitivity of a Stochastic System to Its Parameter> is
-  the collection of all paths starting at <math|x<rsub|0>>. A path is a
-  series <math|x=<around*|(|x<rsub|1>,\<ldots\>,x<rsub|N>|)>> with each
-  <math|x<rsub|i>\<in\>\<bbb-R\><rsup|d>>. And the parameterized distribution
-  <math|P<around*|(|\<theta\>|)>> in section <reference|Fisher Matrix
-  Characterizes the Sensitivity of a Stochastic System to Its Parameter>
-  turns to be the distribution of path <math|P<around*|(|x<rsub|0>,\<theta\>|)>>.
-  From its density function <reference|equation: density of path>, we have
+  process with constant covariant. In the end of section <reference|section:
+  Langevin Process with Constant Covariance Has a Path Integral on Alphabet>,
+  we get the master equation of the Langevin process with constant covariant,
+  as
 
   <\equation*>
-    ln p<around*|(|x\|x<rsub|0>,\<theta\>|)>=-<big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<alpha\>=1><rsup|d><frac|<around*|(|x<rsub|i+1><rsup|\<alpha\>>-x<rsub|i><rsup|\<alpha\>>-f<rsup|\<alpha\>><around*|(|x<rsub|i>,\<theta\>|)>
-    \<Delta\>t|)><rsup|2>|2\<Delta\>t>+const.
+    p<around*|(|x<rsub|N>,N \<Delta\>t|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|0>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N-1>
+    p<rsub|0><around*|(|x<rsub|0>|)> exp<around*|(|-S<around*|(|x,\<theta\>|)>|)>+\<omicron\><around*|(|N
+    \<Delta\>t|)>,
   </equation*>
 
-  \;
-
-  Given <math|x<rsub|0>>, to evaluate the Fisher matrix
-  <math|\<cal-F\><around*|(|x<rsub|0>,\<theta\>|)>> that characterizes the
-  responses of <math|P<around*|(|x<rsub|0>,\<theta\>|)>> to the change of
-  <math|\<theta\>>, we calculate
+  where
 
   <\equation*>
-    <frac|\<partial\>ln p|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x\|x<rsub|0>,\<theta\>|)>=<big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<gamma\>=1><rsup|d><around*|(|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|i>,\<theta\>|)>
-    \<Delta\>t|)><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x<rsub|i>,\<theta\>|)><rsub|>,
+    S<around*|(|x,\<theta\>|)>=<big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<alpha\>=1><rsup|d><frac|<around*|(|x<rsub|i+1><rsup|\<alpha\>>-x<rsub|i><rsup|\<alpha\>>-f<rsup|\<alpha\>><around*|(|x<rsub|i>,\<theta\>|)>|)><rsup|2>|2\<Delta\>t>+C,
+  </equation*>
+
+  where <math|C> is an arbitrary constant. Comparing with equation
+  <reference|equation:langevin action constant covariance>, we have inserted
+  a parameter <math|\<theta\>> into the dynamics <math|f>. From this master
+  equation, we may recognize the density function of the whole path
+  <math|X\<assign\><around*|(|X<rsub|0>,\<ldots\>,X<rsub|N>|)>> as (see the
+  context of equation <reference|equation:master equation series>)
+
+  <\equation*>
+    p<around*|(|x\|\<theta\>|)>=p<around*|(|x<rsub|0>,x<rsub|1>,\<ldots\>,x<rsub|N>\|\<theta\>|)>=p<rsub|0><around*|(|x<rsub|0>|)>
+    exp<around*|(|-S<around*|(|x,\<theta\>|)>|)>.
+  </equation*>
+
+  Before going on, we have to check that the normalization condition of
+  <math|p<around*|(|x\|\<theta\>|)>>, namely
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|0>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N>
+    p<rsub|0><around*|(|x<rsub|0>|)> exp<around*|(|-S<around*|(|x,\<theta\>|)>|)>=1
+  </equation*>
+
+  To show this, we first integrate over <math|x<rsub|N>>. The factor that
+  depends on <math|x<rsub|N>> is
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N>
+    exp<around*|(|-<big|sum><rsub|\<alpha\>=1><rsup|d><frac|<around*|(|x<rsub|N><rsup|\<alpha\>>-x<rsub|N-1><rsup|\<alpha\>>-f<rsup|\<alpha\>><around*|(|x<rsub|N-1>,\<theta\>|)>|)><rsup|2>|2\<Delta\>t>|)>.
+  </equation*>
+
+  Using the formula of Gaussian integral, it turns to be
+  <math|<around*|(|\<pi\>/<around*|(|2\<Delta\>t|)>|)><rsup|1/2>>. We can
+  then absorb it into the constant <math|C>, resulting in a unit. Repeat this
+  process for <math|x<rsub|N-1>,\<ldots\>,x<rsub|1>> sequentially, we arrive
+  at <math|<big|int>\<mathd\>x<rsub|0> p<rsub|0><around*|(|x<rsub|0>|)>>
+  which again is a unit because of the normalization condition for the prior
+  density <math|p<rsub|0>>. So, normalization condition of
+  <math|p<around*|(|x\|\<theta\>|)>> is satisfied.
+
+  To evaluate the Fisher matrix <math|\<cal-F\><around*|(|\<theta\>|)>> that
+  characterizes the responses of <math|P<around*|(|\<theta\>|)>> to the
+  change of <math|\<theta\>>, we calculate
+
+  <\equation*>
+    <frac|\<partial\>ln p|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x\|\<theta\>|)>=<big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<gamma\>=1><rsup|d><around*|(|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|i>,\<theta\>|)>
+    \<Delta\>t|)><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x<rsub|i>,\<theta\>|)><rsub|>+ln
+    p<rsub|0><around*|(|x<rsub|0>|)>.
   </equation*>
 
   once more,
 
   <\equation*>
-    <frac|\<partial\><rsup|2>ln p|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x\|x<rsub|0>,\<theta\>|)>=<big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<gamma\>=1><rsup|d><around*|[|<around*|(|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|i>,\<theta\>|)>
+    <frac|\<partial\><rsup|2>ln p|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x\|\<theta\>|)>=<big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<gamma\>=1><rsup|d><around*|[|<around*|(|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|i>,\<theta\>|)>
     \<Delta\>t|)><frac|\<partial\><rsup|2>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<rsub|i>,\<theta\>|)>-<frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x<rsub|i>,\<theta\>|)><rsub|><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<rsub|i>,\<theta\>|)><rsub|>\<Delta\>t<rsub|>|]>.
   </equation*>
 
   Plugging into equation <reference|equation: fisher matrix>, we get
 
   <\align>
-    <tformat|<table|<row|<cell|\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|x<rsub|0>,\<theta\>|)>=>|<cell|-\<bbb-E\><rsub|x\<sim\>P<around*|(|x<rsub|0>,\<theta\>|)>><around*|[|<big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<gamma\>=1><rsup|d><around*|(|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|i>,\<theta\>|)>
-    \<Delta\>t|)><frac|\<partial\><rsup|2>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<rsub|i>,\<theta\>|)>|]>>>|<row|<cell|>|<cell|+\<bbb-E\><rsub|x\<sim\>P<around*|(|x<rsub|0>,\<theta\>|)>><around*|[|<big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<gamma\>=1><rsup|d><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x<rsub|i>,\<theta\>|)><rsub|><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<rsub|i>,\<theta\>|)>\<Delta\>t|]>.>>>>
+    <tformat|<table|<row|<cell|\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>|)>=>|<cell|-\<bbb-E\><rsub|x\<sim\>P<around*|(|\<theta\>|)>><around*|[|<big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<gamma\>=1><rsup|d><around*|(|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|i>,\<theta\>|)>
+    \<Delta\>t|)><frac|\<partial\><rsup|2>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<rsub|i>,\<theta\>|)>|]>>>|<row|<cell|>|<cell|+\<bbb-E\><rsub|x\<sim\>P<around*|(|\<theta\>|)>><around*|[|<big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<gamma\>=1><rsup|d><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x<rsub|i>,\<theta\>|)><rsub|><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<rsub|i>,\<theta\>|)>\<Delta\>t|]>.>>>>
   </align>
 
-  \;
-
-  The first expectation vanishes. To show this, we first write it in its
-  original form, as
+  The first expectation vanishes. To show this, we write it in its original
+  form,
 
   <\equation*>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|1>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N>
-    q<rsub|\<Delta\>t><around*|(|x<rsub|0>\<rightarrow\>x<rsub|1>|)>\<cdots\>q<rsub|\<Delta\>t><around*|(|x<rsub|N-1>\<rightarrow\>x<rsub|N>|)><big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<gamma\>=1><rsup|d><around*|(|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|i>,\<theta\>|)>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|0>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N>
+    p<rsub|0><around*|(|x<rsub|0>|)>exp<around*|(|-S<around*|(|x\<comma\>\<theta\>|)>|)><big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<gamma\>=1><rsup|d><around*|(|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|i>,\<theta\>|)>
     \<Delta\>t|)><frac|\<partial\><rsup|2>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<rsub|i>,\<theta\>|)>.
   </equation*>
 
-  While integrating over <math|x<rsub|N>>, the only term in the summation
-  <math|\<Sigma\><rsub|i>> that depends on <math|x<rsub|N>> is
+  We first integrate over <math|x<rsub|N>>. The unique term in the summation
+  <math|\<Sigma\><rsub|i>> that depends on <math|x<rsub|N>> is when
+  <math|i=N-1>. It gives the integral
 
   <\align>
-    <tformat|<table|<row|<cell|>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|1>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N-1>
-    q<rsub|\<Delta\>t><around*|(|x<rsub|0>\<rightarrow\>x<rsub|1>|)>\<cdots\>q<rsub|\<Delta\>t><around*|(|x<rsub|N-2>\<rightarrow\>x<rsub|N-1>|)><big|sum><rsub|\<gamma\>=1><rsup|d><frac|\<partial\><rsup|2>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<rsub|N-1>,\<theta\>|)>\<times\>>>|<row|<cell|\<times\>>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N>
-    q<rsub|\<Delta\>t><around*|(|x<rsub|N-1>\<rightarrow\>x<rsub|N>|)><around*|(|x<rsub|N><rsup|\<gamma\>>-x<rsub|N-1><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|N-1>,\<theta\>|)>
+    <tformat|<table|<row|<cell|>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|0>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N-1>
+    p<rsub|0><around*|(|x<rsub|0>|)>exp<around*|(|-<big|sum><rsub|i=0><rsup|N-2><big|sum><rsub|\<alpha\>=1><rsup|d><frac|<around*|(|x<rsub|i+1><rsup|\<alpha\>>-x<rsub|i><rsup|\<alpha\>>-f<rsup|\<alpha\>><around*|(|x<rsub|i>,\<theta\>|)>|)><rsup|2>|2\<Delta\>t>|)><frac|\<partial\><rsup|2>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<rsub|N-1>,\<theta\>|)>>>|<row|<cell|\<times\>>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N>
+    exp<around*|(|-<big|sum><rsub|\<alpha\>=1><rsup|d><frac|<around*|(|x<rsub|N><rsup|\<alpha\>>-x<rsub|N-1><rsup|\<alpha\>>-f<rsup|\<alpha\>><around*|(|x<rsub|N-1>,\<theta\>|)>|)><rsup|2>|2\<Delta\>t>|)><around*|(|x<rsub|N><rsup|\<gamma\>>-x<rsub|N-1><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|N-1>,\<theta\>|)>
     \<Delta\>t|)>,>>>>
   </align>
 
   which vanishes since the second factor is zero. For other terms in the
   summation <math|\<Sigma\><rsub|i>>, namely for
   <math|i\<in\><around*|{|0,\<ldots\>,N-2|}>>, integrating <math|x<rsub|N>>
-  results in a unit factor because <math|<big|int>\<mathd\>x<rsub|N>
-  q<rsub|\<Delta\>t><around*|(|x<rsub|N-1>\<rightarrow\>x<rsub|N>|)>=1>. So,
-  Integrating over <math|x<rsub|N>> results in
-
-  <\small>
-    <\equation*>
-      <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|1>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N-1>
-      q<rsub|\<Delta\>t><around*|(|x<rsub|0>\<rightarrow\>x<rsub|1>|)>\<cdots\>q<rsub|\<Delta\>t><around*|(|x<rsub|N-2>\<rightarrow\>x<rsub|N-1>|)><big|sum><rsub|i=0><rsup|N-2><big|sum><rsub|\<gamma\>=1><rsup|d><around*|(|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|i>,\<theta\>|)>
-      \<Delta\>t|)><frac|\<partial\><rsup|2>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<rsub|i>,\<theta\>|)>.
-    </equation*>
-  </small>
-
-  Repeating this process, until
+  results in a constant factor, which can be absorbed into the the constant
+  term <math|C> in <math|S<around*|(|x,\<theta\>|)>>. So, Integrating over
+  <math|x<rsub|N>> results in the same formula as the original one except
+  that both the integral and the summation terminate at <math|x<rsub|N-1>>
+  (instead of at <math|x<rsub|N>>). So, repeating this process, integrating
+  over <math|x<rsub|N-1>,\<ldots\>,x<rsub|1>> sequentially, we obtain a zero.
+  Hence,
 
   <\equation*>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|1>q<rsub|\<Delta\>t><around*|(|x<rsub|0>\<rightarrow\>x<rsub|1>|)><big|sum><rsub|\<gamma\>=1><rsup|d><around*|(|x<rsub|1><rsup|\<gamma\>>-x<rsub|0><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|0>,\<theta\>|)>
-    \<Delta\>t|)><frac|\<partial\><rsup|2>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<rsub|0>,\<theta\>|)>,
+    \<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>|)>=\<bbb-E\><rsub|x\<sim\>P<around*|(|\<theta\>|)>><around*|[|<big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<gamma\>=1><rsup|d><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x<rsub|i>,\<theta\>|)><rsub|><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<rsub|i>,\<theta\>|)>\<Delta\>t|]>.
   </equation*>
 
-  which is, again, vanishing because <math|<big|int>\<mathd\>x<rsub|1>q<rsub|\<Delta\>t><around*|(|x<rsub|0>\<rightarrow\>x<rsub|1>|)><around*|(|x<rsub|1><rsup|\<gamma\>>-x<rsub|0><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|0>,\<theta\>|)>
-  \<Delta\>t|)>=0>. So, the first expectation is zero. In addition, in the
-  limit <math|\<Delta\>t\<rightarrow\>0> and <math|N\<rightarrow\>\<infty\>>
-  at the same time while keeping <math|T=N \<Delta\>t> invariant, we can
-  formally write the factor in the second expectation in
-  <math|\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>|)>> as a
+  In the limit <math|\<Delta\>t\<rightarrow\>0> and
+  <math|N\<rightarrow\>\<infty\>> at the same time while keeping
+  <math|T\<assign\>N \<Delta\>t> invariant, we can formally write it as a
   Riemannian integral
 
-  <\equation*>
-    <big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<gamma\>=1><rsup|d><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x<rsub|i>,\<theta\>|)><rsub|><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<rsub|i>,\<theta\>|)>\<Delta\>t\<rightarrow\><big|int><rsub|0><rsup|T>\<mathd\>t
-    <big|sum><rsub|\<gamma\>=1><rsup|d><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x<around*|(|t|)>,\<theta\>|)><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<around*|(|t|)>,\<theta\>|)>,
-  </equation*>
-
-  where the series <math|<around*|(|x<rsub|0>,\<ldots\>,x<rsub|N>|)>> now
-  becomes a continuous path <math|x:<around*|[|0,T|]>\<rightarrow\>\<bbb-R\><rsup|d>>.
-  Altogether, we find
-
   <\equation>
-    \<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|x<rsub|0>,\<theta\>|)>=\<bbb-E\><rsub|x\<sim\>P<around*|(|x<rsub|0>,\<theta\>|)>><around*|[|<big|int><rsub|0><rsup|T>\<mathd\>t
-    <big|sum><rsub|\<gamma\>=1><rsup|d><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x<around*|(|t|)>,\<theta\>|)><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<around*|(|t|)>,\<theta\>|)>|]>.<label|equation:
+    \<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>|)>=\<bbb-E\><rsub|x\<sim\>P<around*|(|\<theta\>|)>><around*|[|<big|int><rsub|0><rsup|T>\<mathd\>t
+    <big|sum><rsub|\<gamma\>=1><rsup|d><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x<around*|(|t|)>,\<theta\>|)><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<around*|(|t|)>,\<theta\>|)>|]>,<label|equation:
     fisher matrix of langevin process for dynamical parameter>
   </equation>
 
+  where the series <math|<around*|(|x<rsub|0>,\<ldots\>,x<rsub|N>|)>> now
+  becomes a continuous path <math|x:<around*|[|0,T|]>\<rightarrow\>\<bbb-R\><rsup|d>>.
+
   To estimate this numerically, we sample an assemble of paths from the
-  distribution <math|P<around*|(|x<rsub|0>,\<theta\>|)>> using the simulation
-  mentioned in section <reference|section: A Brief Review of Langevin
-  Process>, then compute the mean value of the integral for all the sampled
+  distribution <math|P<around*|(|\<theta\>|)>> (see section
+  <reference|section: Transition Density of Langevin Process Is Nearly
+  Gaussian>), then compute the mean value of the integral for all the sampled
   paths. The \Pphysical\Q explanation of equation <reference|equation: fisher
   matrix of langevin process for dynamical parameter> is as follow. The
   integrand <math|<big|sum><rsub|\<gamma\>><around*|(|\<partial\>f<rsup|\<gamma\>>/\<partial\>\<theta\><rsup|\<alpha\>>|)><around*|(|x,\<theta\>|)><around*|(|\<partial\>f<rsup|\<gamma\>>/\<partial\>\<theta\><rsup|\<beta\>>|)><around*|(|x,\<theta\>|)>>
   characterizes the sensitivity to the <math|\<theta\>> at position <math|x>.
   For each path, the integral gives the global sensitivity along the path.
-  The fisher matrix <math|\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|x<rsub|0>,\<theta\>|)>>,
+  The fisher matrix <math|\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>|)>>,
   thus, is the expected global sensitivity on the distribution of paths,
-  <math|P<around*|(|x<rsub|0>,\<theta\>|)>>.
-
-  If there is a prior distribution of <math|X<rsub|0>>, denoted by
-  <math|P<rsub|0>>, then we can get the distribution of the whole path
-  including the initial position <math|X<rsub|0>>. This distribution, denoted
-  by <math|<wide|P|~><around*|(|\<theta\>|)>>, has the density function
-
-  <\equation*>
-    <wide|p|~><around*|(|x<rsub|0>,\<ldots\>,x<rsub|N>\|\<theta\>|)>\<assign\>p<around*|(|x<rsub|1>,\<ldots\>,x<rsub|N>\|x<rsub|0>,\<theta\>|)>
-    p<rsub|0><around*|(|x<rsub|0>|)>.
-  </equation*>
-
-  Following the same steps we can obtain the Fisher matrix of
-  <math|<wide|P|~><around*|(|\<theta\>|)>>, as
-
-  <\equation>
-    <wide|\<cal-F\>|~><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>|)>=\<bbb-E\><rsub|x\<sim\><wide|P|~><around*|(|\<theta\>|)>><around*|[|<big|int><rsub|0><rsup|T>\<mathd\>t
-    <big|sum><rsub|\<gamma\>=1><rsup|d><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x<around*|(|t|)>,\<theta\>|)><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<around*|(|t|)>,\<theta\>|)>|]>.<label|equation:
-    fisher matrix of langevin process for dynamical parameter with prior>
-  </equation>
-
-  Now, <math|\<theta\>> is the unique argument.
+  <math|P<around*|(|\<theta\>|)>>.
 
   <epilogue>
 
@@ -4779,8 +4774,6 @@
 
 <\references>
   <\collection>
-    <associate|Fisher Matrix Characterizes the Sensitivity of a Stochastic
-    System to Its Parameter|<tuple|6.1|51>>
     <associate|auto-1|<tuple|?|7>>
     <associate|auto-10|<tuple|2.3|17>>
     <associate|auto-11|<tuple|2.4|18>>
@@ -4811,9 +4804,9 @@
     <associate|auto-34|<tuple|5.3|48>>
     <associate|auto-35|<tuple|6|51>>
     <associate|auto-36|<tuple|6.1|51>>
-    <associate|auto-37|<tuple|6.2|51>>
-    <associate|auto-38|<tuple|6.3|52>>
-    <associate|auto-39|<tuple|6.8|55>>
+    <associate|auto-37|<tuple|6.2|52>>
+    <associate|auto-38|<tuple|6.2|54>>
+    <associate|auto-39|<tuple|6.3|55>>
     <associate|auto-4|<tuple|1.2|10>>
     <associate|auto-5|<tuple|1.3|10>>
     <associate|auto-6|<tuple|1.4|11>>
@@ -4821,17 +4814,9 @@
     <associate|auto-8|<tuple|2.1|13>>
     <associate|auto-9|<tuple|2.2|15>>
     <associate|chapter: Path Integral|<tuple|5|43>>
-    <associate|equation: density of path|<tuple|6.6|52>>
-    <associate|equation: discrete Langevin process|<tuple|6.4|52>>
-    <associate|equation: fisher matrix|<tuple|6.1|51>>
+    <associate|equation: fisher matrix|<tuple|6.1|52>>
     <associate|equation: fisher matrix of langevin process for dynamical
-    parameter|<tuple|6.7|53>>
-    <associate|equation: fisher matrix of langevin process for dynamical
-    parameter with prior|<tuple|6.8|54>>
-    <associate|equation: langevin process a|<tuple|6.2|51>>
-    <associate|equation: langevin process b|<tuple|6.3|52>>
-    <associate|equation: transition density of Langevin
-    process|<tuple|6.5|52>>
+    parameter|<tuple|6.2|53>>
     <associate|equation:Detailed Balance|<tuple|2.8|17>>
     <associate|equation:Detailed Balance for transition
     density|<tuple|2.9|17>>
@@ -4910,6 +4895,7 @@
     <associate|footnote-5.2|<tuple|5.2|44>>
     <associate|footnote-5.3|<tuple|5.3|46>>
     <associate|footnote-5.4|<tuple|5.4|50>>
+    <associate|footnote-6.1|<tuple|6.1|52>>
     <associate|footnr-1|<tuple|1|55>>
     <associate|footnr-1.1|<tuple|1.1|9>>
     <associate|footnr-1.2|<tuple|1.2|9>>
@@ -4930,10 +4916,10 @@
     <associate|footnr-5.2|<tuple|5.2|44>>
     <associate|footnr-5.3|<tuple|5.7|46>>
     <associate|footnr-5.4|<tuple|5.4|50>>
+    <associate|footnr-6.1|<tuple|6.1|52>>
     <associate|section: * Estimation of the Residue|<tuple|5.1.1|45>>
     <associate|section: * Grassmann Variable, Berezin Integral, and
     Ghosts|<tuple|5.3|48>>
-    <associate|section: A Brief Review of Langevin Process|<tuple|6.2|51>>
     <associate|section: A Brief Review of Least-Action Principle in Classical
     Mechanics|<tuple|4.1|37>>
     <associate|section: A Brief Review of Probability|<tuple|1.1|9>>
@@ -4949,12 +4935,13 @@
     Source-Free Degree of Freedom|<tuple|3.8|34>>
     <associate|section: Example: Metropolis-Hastings
     Algorithm|<tuple|2.6|22>>
-    <associate|section: Fisher Matrix of Langevin Process Is the Expected
-    Sensitivity on Distribution of Paths|<tuple|6.3|52>>
+    <associate|section: Fisher Matrix Characterizes the Sensitivity of a
+    Stochastic System to Its Parameter|<tuple|6.1|51>>
+    <associate|section: Fisher Matrix of Langevin Process Is the Expection of
+    Sensitivity along Path|<tuple|6.2|52>>
     <associate|section: Kramers\UMoyal Expansion Formulates Transition Rate
     by Its Moments|<tuple|3.2|28>>
-    <associate|section: Kramers-Moyal Expansion and Langevin
-    Process|<tuple|3|23>>
+    <associate|section: Kramers-Moyal Expansion|<tuple|3|23>>
     <associate|section: Langevin Process Is a Markovian Process with
     Ncut=2|<tuple|3.5|32>>
     <associate|section: Langevin Process with Constant Covariance Has a Path
@@ -4964,9 +4951,9 @@
     Redundancy|<tuple|4.2|38>>
     <associate|section: Markovian Process with Euclidean Alphabet Can Be
     Formulated as Path Integral|<tuple|5.1|43>>
+    <associate|section: Master Equation|<tuple|2|13>>
     <associate|section: Master Equation Describes the Evolution of Markov
     Process|<tuple|2.1|13>>
-    <associate|section: Master Equation and Detailed Balance|<tuple|2|13>>
     <associate|section: Monte-Carlo Simulation and Guarantee of
     Relaxation|<tuple|2.5|19>>
     <associate|section: Randomness Appears in the Second Moment of Transition
@@ -5042,7 +5029,7 @@
       <no-break><pageref|auto-6>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Master
-      Equation and Detailed Balance> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      Equation> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-7><vspace|0.5fn>
 
       2.1<space|2spc>Master Equation Describes the Evolution of Markov
@@ -5070,7 +5057,7 @@
       <no-break><pageref|auto-13>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Kramers-Moyal
-      Expansion and Langevin Process> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      Expansion> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-14><vspace|0.5fn>
 
       3.1<space|2spc>Cut-off in the Moments of Transition Rate Is Essential
@@ -5160,12 +5147,11 @@
       Stochastic System to Its Parameter <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-36>
 
-      6.2<space|2spc>A Brief Review of Langevin Process
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      6.2<space|2spc>Fisher Matrix of Langevin Process Is the Expectation of
+      Sensitivity along Path <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-37>
 
-      6.3<space|2spc>Fisher Matrix of Langevin Process Is the Expected
-      Sensitivity on Distribution of Paths
+      6.3<space|2spc>Fisher Matrix at Fixed Point
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-38>
 
