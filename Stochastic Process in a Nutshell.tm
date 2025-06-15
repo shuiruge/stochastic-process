@@ -4568,29 +4568,31 @@
   we get the master equation of the Langevin process with constant covariant,
   as
 
-  <\equation*>
-    p<around*|(|x<rsub|N>,N \<Delta\>t|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|0>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N-1>
+  <\equation>
+    p<rsub|N><around*|(|x<rsub|N>|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|0>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N-1>
     p<rsub|0><around*|(|x<rsub|0>|)> exp<around*|(|-S<around*|(|x,\<theta\>|)>|)>+\<omicron\><around*|(|N
-    \<Delta\>t|)>,
-  </equation*>
+    \<Delta\>t|)>,<label|equation: master equation of Langevin process tmp>
+  </equation>
 
   where
 
-  <\equation*>
-    S<around*|(|x,\<theta\>|)>=<big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<alpha\>=1><rsup|d><frac|<around*|(|x<rsub|i+1><rsup|\<alpha\>>-x<rsub|i><rsup|\<alpha\>>-f<rsup|\<alpha\>><around*|(|x<rsub|i>,\<theta\>|)>|)><rsup|2>|2\<Delta\>t>+C,
-  </equation*>
+  <\equation>
+    S<around*|(|x,\<theta\>|)>=<big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<alpha\>=1><rsup|d><frac|<around*|(|x<rsub|i+1><rsup|\<alpha\>>-x<rsub|i><rsup|\<alpha\>>-f<rsup|\<alpha\>><around*|(|x<rsub|i>,\<theta\>|)>|)><rsup|2>|2\<Delta\>t>+const,
+  </equation>
 
-  where <math|C> is an arbitrary constant. Comparing with equation
-  <reference|equation:langevin action constant covariance>, we have inserted
-  a parameter <math|\<theta\>> into the dynamics <math|f>. From this master
-  equation, we may recognize the density function of the whole path
-  <math|X\<assign\><around*|(|X<rsub|0>,\<ldots\>,X<rsub|N>|)>> as (see the
-  context of equation <reference|equation:master equation series>)
+  where <math|const> represents for an arbitrary constant. Comparing with
+  equation <reference|equation:langevin action constant covariance>, we have
+  inserted a parameter <math|\<theta\>> into <math|f>. The right hand side
+  can be viewed as a marginalization of <math|<around*|(|x<rsub|0>,\<ldots\>,x<rsub|N-1>|)>>
+  on the density function
 
-  <\equation*>
+  <\equation>
     p<around*|(|x\|\<theta\>|)>=p<around*|(|x<rsub|0>,x<rsub|1>,\<ldots\>,x<rsub|N>\|\<theta\>|)>=p<rsub|0><around*|(|x<rsub|0>|)>
     exp<around*|(|-S<around*|(|x,\<theta\>|)>|)>.
-  </equation*>
+  </equation>
+
+  Hence, <math|P<around*|(|\<theta\>|)>> is the distribution of the whole
+  path <math|X\<assign\><around*|(|X<rsub|0>,\<ldots\>,X<rsub|N>|)>>.
 
   Before going on, we have to check that the normalization condition of
   <math|p<around*|(|x\|\<theta\>|)>>, namely
@@ -4605,17 +4607,17 @@
 
   <\equation*>
     <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N>
-    exp<around*|(|-<big|sum><rsub|\<alpha\>=1><rsup|d><frac|<around*|(|x<rsub|N><rsup|\<alpha\>>-x<rsub|N-1><rsup|\<alpha\>>-f<rsup|\<alpha\>><around*|(|x<rsub|N-1>,\<theta\>|)>|)><rsup|2>|2\<Delta\>t>|)>.
+    exp<around*|(|-<big|sum><rsub|\<alpha\>=1><rsup|d><frac|<around*|(|x<rsub|N><rsup|\<alpha\>>-x<rsub|N-1><rsup|\<alpha\>>-f<rsup|\<alpha\>><around*|(|x<rsub|N-1>,\<theta\>|)>|)><rsup|2>|2\<Delta\>t>+const|)>.
   </equation*>
 
   Using the formula of Gaussian integral, it turns to be
   <math|<around*|(|\<pi\>/<around*|(|2\<Delta\>t|)>|)><rsup|1/2>>. We can
-  then absorb it into the constant <math|C>, resulting in a unit. Repeat this
+  then absorb it into the <math|const> term, resulting in a unit. Repeat this
   process for <math|x<rsub|N-1>,\<ldots\>,x<rsub|1>> sequentially, we arrive
   at <math|<big|int>\<mathd\>x<rsub|0> p<rsub|0><around*|(|x<rsub|0>|)>>
   which again is a unit because of the normalization condition for the prior
-  density <math|p<rsub|0>>. So, normalization condition of
-  <math|p<around*|(|x\|\<theta\>|)>> is satisfied.
+  density <math|p<rsub|0>>. The normalization condition of
+  <math|p<around*|(|x\|\<theta\>|)>> is thus satisfied.
 
   To evaluate the Fisher matrix <math|\<cal-F\><around*|(|\<theta\>|)>> that
   characterizes the responses of <math|P<around*|(|\<theta\>|)>> to the
@@ -4641,12 +4643,12 @@
     \<Delta\>t|)><frac|\<partial\><rsup|2>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<rsub|i>,\<theta\>|)>|]>>>|<row|<cell|>|<cell|+\<bbb-E\><rsub|x\<sim\>P<around*|(|\<theta\>|)>><around*|[|<big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<gamma\>=1><rsup|d><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x<rsub|i>,\<theta\>|)><rsub|><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<rsub|i>,\<theta\>|)>\<Delta\>t|]>.>>>>
   </align>
 
-  The first expectation vanishes. To show this, we write it in its original
-  form,
+  The first expectation vanishes. To show this, we re-write it in its
+  original form,
 
   <\equation*>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|0>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N>
-    p<rsub|0><around*|(|x<rsub|0>|)>exp<around*|(|-S<around*|(|x\<comma\>\<theta\>|)>|)><big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<gamma\>=1><rsup|d><around*|(|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|i>,\<theta\>|)>
+    E<rsub|1>\<assign\><big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<gamma\>=1><rsup|d><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|0>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N>
+    p<rsub|0><around*|(|x<rsub|0>|)>exp<around*|(|-S<around*|(|x\<comma\>\<theta\>|)>|)><around*|(|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|i>,\<theta\>|)>
     \<Delta\>t|)><frac|\<partial\><rsup|2>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<rsub|i>,\<theta\>|)>.
   </equation*>
 
@@ -4654,32 +4656,45 @@
   <math|\<Sigma\><rsub|i>> that depends on <math|x<rsub|N>> is when
   <math|i=N-1>. It gives the integral
 
-  <\align>
-    <tformat|<table|<row|<cell|>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|0>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N-1>
-    p<rsub|0><around*|(|x<rsub|0>|)>exp<around*|(|-<big|sum><rsub|i=0><rsup|N-2><big|sum><rsub|\<alpha\>=1><rsup|d><frac|<around*|(|x<rsub|i+1><rsup|\<alpha\>>-x<rsub|i><rsup|\<alpha\>>-f<rsup|\<alpha\>><around*|(|x<rsub|i>,\<theta\>|)>|)><rsup|2>|2\<Delta\>t>|)><frac|\<partial\><rsup|2>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<rsub|N-1>,\<theta\>|)>>>|<row|<cell|\<times\>>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N>
-    exp<around*|(|-<big|sum><rsub|\<alpha\>=1><rsup|d><frac|<around*|(|x<rsub|N><rsup|\<alpha\>>-x<rsub|N-1><rsup|\<alpha\>>-f<rsup|\<alpha\>><around*|(|x<rsub|N-1>,\<theta\>|)>|)><rsup|2>|2\<Delta\>t>|)><around*|(|x<rsub|N><rsup|\<gamma\>>-x<rsub|N-1><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|N-1>,\<theta\>|)>
-    \<Delta\>t|)>,>>>>
-  </align>
+  <\small>
+    <\align>
+      <tformat|<table|<row|<cell|E<rsub|1>\<supset\><big|sum><rsub|\<gamma\>=1><rsup|d>>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|0>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N-1>
+      p<rsub|0><around*|(|x<rsub|0>|)>exp<around*|(|-<big|sum><rsub|i=0><rsup|N-2><big|sum><rsub|\<sigma\>=1><rsup|d><frac|<around*|(|x<rsub|i+1><rsup|\<sigma\>>-x<rsub|i><rsup|\<sigma\>>-f<rsup|\<sigma\>><around*|(|x<rsub|i>,\<theta\>|)>|)><rsup|2>|2\<Delta\>t>+const|)><frac|\<partial\><rsup|2>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<rsub|N-1>,\<theta\>|)>>>|<row|<cell|\<times\>>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N>
+      exp<around*|(|-<big|sum><rsub|\<sigma\>=1><rsup|d><frac|<around*|(|x<rsub|N><rsup|\<sigma\>>-x<rsub|N-1><rsup|\<sigma\>>-f<rsup|\<sigma\>><around*|(|x<rsub|N-1>,\<theta\>|)>|)><rsup|2>|2\<Delta\>t>+const|)><around*|(|x<rsub|N><rsup|\<gamma\>>-x<rsub|N-1><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|N-1>,\<theta\>|)>
+      \<Delta\>t|)>,>>>>
+    </align>
+  </small>
 
   which vanishes since the second factor is zero. For other terms in the
   summation <math|\<Sigma\><rsub|i>>, namely for
   <math|i\<in\><around*|{|0,\<ldots\>,N-2|}>>, integrating <math|x<rsub|N>>
-  results in a constant factor, which can be absorbed into the the constant
-  term <math|C> in <math|S<around*|(|x,\<theta\>|)>>. So, Integrating over
-  <math|x<rsub|N>> results in the same formula as the original one except
-  that both the integral and the summation terminate at <math|x<rsub|N-1>>
-  (instead of at <math|x<rsub|N>>). So, repeating this process, integrating
-  over <math|x<rsub|N-1>,\<ldots\>,x<rsub|1>> sequentially, we obtain a zero.
-  Hence,
+  results in a constant factor, which can be absorbed into the the
+  <math|const> term in <math|S<around*|(|x,\<theta\>|)>>. It results in the
+  same expression as the original except for those highlighted by red color:
+
+  <\equation*>
+    E<rsub|1>=<big|sum><rsub|i=0><rsup|<with|color|red|N-2>><big|sum><rsub|\<gamma\>=1><rsup|d><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|0>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|<with|color|red|N-1>>
+    p<rsub|0><around*|(|x<rsub|0>|)>exp<around*|(|-S<around*|(|x\<comma\>\<theta\>|)>|)><around*|(|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|i>,\<theta\>|)>
+    \<Delta\>t|)><frac|\<partial\><rsup|2>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<rsub|i>,\<theta\>|)>.
+  </equation*>
+
+  Repeating this process, iteratively integrating over <math|x<rsub|N-1>>,
+  <math|x<rsub|N-2>>, until <math|x<rsub|1>>, we will get <math|E<rsub|1>=0>.
+  So, we find
 
   <\equation*>
     \<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>|)>=\<bbb-E\><rsub|x\<sim\>P<around*|(|\<theta\>|)>><around*|[|<big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<gamma\>=1><rsup|d><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x<rsub|i>,\<theta\>|)><rsub|><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<rsub|i>,\<theta\>|)>\<Delta\>t|]>.
   </equation*>
 
-  In the limit <math|\<Delta\>t\<rightarrow\>0> and
-  <math|N\<rightarrow\>\<infty\>> at the same time while keeping
-  <math|T\<assign\>N \<Delta\>t> invariant, we can formally write it as a
-  Riemannian integral
+  \;
+
+  In the limit <math|\<Delta\>t\<rightarrow\>0>, we have to take
+  <math|N\<rightarrow\>\<infty\>> at the same time, while keeping
+  <math|T\<assign\>N \<Delta\>t> invariant. This makes the
+  <math|\<omicron\><around*|(|N T|)>> in equation <reference|equation: master
+  equation of Langevin process tmp> to be <math|\<omicron\><around*|(|1|)>>,
+  thus negligible. In this limit, the Fisher matrix becomes an expectation of
+  a Riemannian integral, as
 
   <\equation>
     \<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>|)>=\<bbb-E\><rsub|x\<sim\>P<around*|(|\<theta\>|)>><around*|[|<big|int><rsub|0><rsup|T>\<mathd\>t
@@ -4689,7 +4704,6 @@
 
   where the series <math|<around*|(|x<rsub|0>,\<ldots\>,x<rsub|N>|)>> now
   becomes a continuous path <math|x:<around*|[|0,T|]>\<rightarrow\>\<bbb-R\><rsup|d>>.
-
   To estimate this numerically, we sample an assemble of paths from the
   distribution <math|P<around*|(|\<theta\>|)>> (see section
   <reference|section: Transition Density of Langevin Process Is Nearly
@@ -4805,8 +4819,7 @@
     <associate|auto-35|<tuple|6|51>>
     <associate|auto-36|<tuple|6.1|51>>
     <associate|auto-37|<tuple|6.2|52>>
-    <associate|auto-38|<tuple|6.2|54>>
-    <associate|auto-39|<tuple|6.3|55>>
+    <associate|auto-38|<tuple|6.5|55>>
     <associate|auto-4|<tuple|1.2|10>>
     <associate|auto-5|<tuple|1.3|10>>
     <associate|auto-6|<tuple|1.4|11>>
@@ -4816,7 +4829,9 @@
     <associate|chapter: Path Integral|<tuple|5|43>>
     <associate|equation: fisher matrix|<tuple|6.1|52>>
     <associate|equation: fisher matrix of langevin process for dynamical
-    parameter|<tuple|6.2|53>>
+    parameter|<tuple|6.5|53>>
+    <associate|equation: master equation of Langevin process
+    tmp|<tuple|6.2|?>>
     <associate|equation:Detailed Balance|<tuple|2.8|17>>
     <associate|equation:Detailed Balance for transition
     density|<tuple|2.9|17>>
@@ -5151,13 +5166,9 @@
       Sensitivity along Path <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-37>
 
-      6.3<space|2spc>Fisher Matrix at Fixed Point
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-38>
-
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Epilogue>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-39><vspace|0.5fn>
+      <no-break><pageref|auto-38><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>

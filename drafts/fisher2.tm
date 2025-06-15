@@ -3,7 +3,7 @@
 <style|generic>
 
 <\body>
-  <section|Fisher Matrix at Fixed Point>
+  <section|Fisher Matrix at Stable Equilibra>
 
   An equilibrium of an autonomous dynamical system
   <math|<wide|x|\<dot\>><around*|(|t|)>=f<around*|(|x<around*|(|t|)>|)>> is
@@ -71,6 +71,124 @@
   attractor, the Fisher matrix is quite small. The variation of parameter
   will not significantly affects the distribution of dynamical behavior (or
   path).
+
+  <section|Fisher Matrix on Stable Limit Circles>
+
+  <math|<wide|r|\<dot\>>=\<mu\> r<around*|(|R<rsup|2>-r<rsup|2>|)>> and
+  <math|<wide|\<theta\>|\<dot\>>=\<omega\>>. We have
+  <math|r=<sqrt|x<rsup|2>+y<rsup|2>>>, <math|sin\<theta\>=y/r>, and
+  <math|cos\<theta\>=x/r>. Taking derivate on <math|sin\<theta\>>, we have
+
+  <\equation*>
+    <frac|\<mathd\>|\<mathd\>t><around*|(|sin\<theta\>|)>=cos\<theta\>
+    <wide|\<theta\>|\<dot\>>=<frac|x|r>\<times\>\<omega\>.
+  </equation*>
+
+  On the other hand, since <math|sin\<theta\>=y/r>, we find
+
+  <\equation*>
+    <frac|\<mathd\>|\<mathd\>t><around*|(|<frac|y|r>|)>=<frac|<wide|y|\<dot\>>|r>-<frac|y
+    <wide|r|\<dot\>>|r<rsup|2>>=<frac|<wide|y|\<dot\>>|r>-<frac|y|r<rsup|2>>\<mu\>
+    r<around*|(|R<rsup|2>-r<rsup|2>|)>=<frac|<wide|y|\<dot\>>-\<mu\>
+    y<around*|(|R<rsup|2>-r<rsup|2>|)>|r>,
+  </equation*>
+
+  where we have inserted the equation of <math|<wide|r|\<dot\>>>. Putting
+  them together gives
+
+  <\equation*>
+    <wide|y|\<dot\>>=\<omega\>x+\<mu\> y<around*|(|R<rsup|2>-x<rsup|2>-y<rsup|2>|)>.
+  </equation*>
+
+  The symmetry between <math|x> and <math|y> hints for
+
+  <\equation*>
+    <wide|x|\<dot\>>=-\<omega\>y+\<mu\> x<around*|(|R<rsup|2>-x<rsup|2>-y<rsup|2>|)>.
+  </equation*>
+
+  To check this, we have to take derivative on <math|r>, which gives
+
+  <\equation*>
+    <wide|r|\<dot\>>=<frac|\<mathd\>|\<mathd\>t><sqrt|x<rsup|2>+y<rsup|2>>=<frac|1|2><frac|2x<wide|x|\<dot\>>+2y<wide|y|\<dot\>>|<sqrt|x<rsup|2>+y<rsup|2>>>=<frac|x
+    <wide|x|\<dot\>>+y <wide|y|\<dot\>>|r>=\<mu\>
+    r<around*|(|R<rsup|2>-r<rsup|2>|)>,
+  </equation*>
+
+  implying
+
+  <\equation*>
+    x <wide|x|\<dot\>>+y <wide|y|\<dot\>>=\<mu\>
+    <around*|(|x<rsup|2>+y<rsup|2>|)><around*|(|R<rsup|2>-x<rsup|2>-y<rsup|2>|)>.
+  </equation*>
+
+  Plugging in the expression of <math|<wide|x|\<dot\>>> and
+  <math|<wide|y|\<dot\>>>, we find
+
+  <\align>
+    <tformat|<table|<row|<cell|x <wide|x|\<dot\>>+y
+    <wide|y|\<dot\>>=>|<cell|-\<omega\>x y+\<mu\>
+    x<rsup|2><around*|(|R<rsup|2>-x<rsup|2>-y<rsup|2>|)>+\<omega\>x y+\<mu\>
+    y<rsup|2><around*|(|R<rsup|2>-x<rsup|2>-y<rsup|2>|)>>>|<row|<cell|=>|<cell|\<mu\>
+    x<rsup|2><around*|(|R<rsup|2>-x<rsup|2>-y<rsup|2>|)>+\<mu\>
+    y<rsup|2><around*|(|R<rsup|2>-x<rsup|2>-y<rsup|2>|)>>>|<row|<cell|=>|<cell|\<mu\>
+    <around*|(|x<rsup|2>+y<rsup|2>|)><around*|(|R<rsup|2>-x<rsup|2>-y<rsup|2>|)>,>>>>
+  </align>
+
+  which is exact the formula we are to check. We summarize the dynamical
+  system as
+
+  <\equation*>
+    <tabular|<tformat|<cwith|1|1|1|1|cell-halign|r>|<cwith|2|2|1|1|cell-halign|r>|<table|<row|<cell|f<rsup|1><around*|(|x,y;\<omega\>,\<mu\>,R|)>=>|<cell|-\<omega\>y+\<mu\>
+    x<around*|(|R<rsup|2>-x<rsup|2>-y<rsup|2>|)>;>>|<row|<cell|f<rsup|2><around*|(|x,y;\<omega\>,\<mu\>,R|)>=>|<cell|\<omega\>x+\<mu\>
+    y<around*|(|R<rsup|2>-x<rsup|2>-y<rsup|2>|)>.>>>>>
+  </equation*>
+
+  So, the Fisher matrix is evaluated to be<\footnote>
+    To evaluate the Fisher matrix, we calculate the line integral on the
+    circle <math|C:x<rsup|2>+y<rsup|2>=R<rsup|2>>:
+
+    <\equation*>
+      <big|int><rsub|C>\<mathd\>s<around*|(|<frac|\<partial\>f<rsup|1>|\<partial\>\<omega\>><frac|\<partial\>f<rsup|1>|\<partial\>\<omega\>>+<frac|\<partial\>f<rsup|2>|\<partial\>\<omega\>><frac|\<partial\>f<rsup|2>|\<partial\>\<omega\>>|)>=<big|int><rsub|C>\<mathd\>s<around*|(|y<rsup|2>+x<rsup|2>|)>=2\<mathpi\>R<rsup|3>;
+    </equation*>
+
+    <\equation*>
+      <big|int><rsub|C>\<mathd\>s<around*|(|<frac|\<partial\>f<rsup|1>|\<partial\>\<omega\>><frac|\<partial\>f<rsup|1>|\<partial\>\<mu\>>+<frac|\<partial\>f<rsup|2>|\<partial\>\<omega\>><frac|\<partial\>f<rsup|2>|\<partial\>\<mu\>>|)>=<big|int><rsub|C>\<mathd\>s<around*|(|-x
+      y<around*|(|R<rsup|2>-x<rsup|2>-y<rsup|2>|)>+x
+      y<around*|(|R<rsup|2>-x<rsup|2>-y<rsup|2>|)>|)>=0;
+    </equation*>
+
+    <\equation*>
+      <big|int><rsub|C>\<mathd\>s<around*|(|<frac|\<partial\>f<rsup|1>|\<partial\>\<omega\>><frac|\<partial\>f<rsup|1>|\<partial\>R>+<frac|\<partial\>f<rsup|2>|\<partial\>\<omega\>><frac|\<partial\>f<rsup|2>|\<partial\>R>|)>=2<big|int><rsub|C>\<mathd\>s<around*|(|-\<mu\>R
+      x y+\<mu\>R x y|)>=0;
+    </equation*>
+
+    <\equation*>
+      <big|int><rsub|C>\<mathd\>s<around*|(|<frac|\<partial\>f<rsup|1>|\<partial\>\<mu\>><frac|\<partial\>f<rsup|1>|\<partial\>\<mu\>>+<frac|\<partial\>f<rsup|2>|\<partial\>\<mu\>><frac|\<partial\>f<rsup|2>|\<partial\>\<mu\>>|)>=<big|int><rsub|C>\<mathd\>s<around*|(|x<rsup|2>+y<rsup|2>|)><around*|(|R<rsup|2>-x<rsup|2>-y<rsup|2>|)><rsup|2>=0;
+    </equation*>
+
+    <\equation*>
+      <big|int><rsub|C>\<mathd\>s<around*|(|<frac|\<partial\>f<rsup|1>|\<partial\>\<mu\>><frac|\<partial\>f<rsup|1>|\<partial\>R>+<frac|\<partial\>f<rsup|2>|\<partial\>\<mu\>><frac|\<partial\>f<rsup|2>|\<partial\>R>|)>=2\<mu\>R<big|int><rsub|C>\<mathd\>s<around*|(|x<rsup|2>+y<rsup|2>|)><around*|(|R<rsup|2>-x<rsup|2>-y<rsup|2>|)>=0;
+    </equation*>
+
+    <\equation*>
+      <big|int><rsub|C>\<mathd\>s<around*|(|<frac|\<partial\>f<rsup|1>|\<partial\>R><frac|\<partial\>f<rsup|1>|\<partial\>R>+<frac|\<partial\>f<rsup|2>|\<partial\>R><frac|\<partial\>f<rsup|2>|\<partial\>R>|)>=<around*|(|2\<mu\>R|)><rsup|2><big|int><rsub|C>\<mathd\>s<around*|(|x<rsup|2>+y<rsup|2>|)>=8\<mathpi\>\<mu\><rsup|2>R<rsup|3>.
+    </equation*>
+  </footnote>
+
+  <\equation*>
+    2\<mathpi\>R<rsup|3> <matrix|<tformat|<table|<row|<cell|1>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|4\<mu\><rsup|2>>>>>>.
+  </equation*>
+
+  In fact, both the variations of <math|\<omega\>> and on <math|R> change the
+  speed of spiralling, which then leads to non-vanishing elements of Fisher
+  matrix.
+
+  We may suspect that, when there is attractive behavior, no matter whether
+  it is zero-dimensional (an equilibrium), one-dimensional (such as limit
+  cycle), two dimensional (a limit embrane), or higher dimensional, the
+  Fisher matrix is degenerate, which means <math|det
+  \<cal-F\><around*|(|\<theta\>|)>\<rightarrow\>0> as the randomness
+  diminishing.
 </body>
 
 <\initial>
@@ -82,7 +200,10 @@
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|1|1|../../../.TeXmacs/texts/scratch/no_name_5.tm>>
+    <associate|auto-1|<tuple|1|1>>
+    <associate|auto-2|<tuple|2|?>>
+    <associate|footnote-1|<tuple|1|?>>
+    <associate|footnr-1|<tuple|1|?>>
   </collection>
 </references>
 

@@ -212,10 +212,10 @@
       </p>
       <p>
         6.3<span style="margin-left: 1em"></span>Fisher Matrix at Fixed Point <span style="margin-left: 5mm"></span>
-        <a href="#auto-38">54</a>
+        <a href="#auto-38">55</a>
       </p>
       <p style="margin-top: 1em; margin-bottom: 0.5em">
-        <b>Epilogue</b> <span style="margin-left: 5mm"></span> <a href="#auto-39">55</a>
+        <b>Epilogue</b> <span style="margin-left: 5mm"></span> <a href="#auto-39">?</a>
       </p>
     </div>
     <h1 id="auto-1">Prologue<span style="margin-left: 1em"></span></h1>
@@ -5835,34 +5835,47 @@ p}{\partial
       we get the master equation of the Langevin process with constant
       covariant, as
     </p>
-    <center>
-      \(\displaystyle p (x_N, N \Delta t) = \int_{\mathbb{R}^d} \mathrm{d} x_0
-      \cdots
-\int_{\mathbb{R}^d} \mathrm{d} x_{N - 1} p_0 (x_0) \exp (- S (x,
-      \theta)) +
-\omicron (N \Delta t),\)
-    </center>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle p_N (x_N) = \int_{\mathbb{R}^d}
+        \mathrm{d} x_0 \cdots \int_{\mathbb{R}^d}
+\mathrm{d} x_{N - 1} p_0
+        (x_0) \exp (- S (x, \theta)) + \omicron (N \Delta t),
+\)</td>
+        <td align="right">(6.2)</td>
+      </tr>
+    </table>
     <p>
       where
     </p>
-    <center>
-      \(\displaystyle S (x, \theta) = \sum_{i = 0}^{N - 1} \sum_{\alpha = 1}^d
-      \frac{(x_{i +
-1}^{\alpha} - x_i^{\alpha} - f^{\alpha} (x_i,
-      \theta))^2}{2 \Delta t} + C,\)
-    </center>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle S (x, \theta) = \sum_{i = 0}^{N - 1}
+        \sum_{\alpha = 1}^d \frac{(x_{i +
+1}^{\alpha} - x_i^{\alpha} -
+        f^{\alpha} (x_i, \theta))^2}{2 \Delta t}
++\operatorname{const},\)</td>
+        <td align="right">(6.3)</td>
+      </tr>
+    </table>
     <p>
-      where \(C\) is an arbitrary constant. Comparing with equation <a href="#equation:langevin action constant covariance">5.11</a>,
-      we have inserted a parameter \(\theta\) into the dynamics \(f\). From
-      this master equation, we may recognize the density function of the whole
-      path \(X := (X_0, \ldots, X_N)\) as (see the context of equation <a
-      href="#equation:master equation series">4.4</a>)
+      where \(\operatorname{const}\) represents for an arbitrary constant.
+      Comparing with equation <a href="#equation:langevin action constant covariance">5.11</a>, we have inserted a parameter
+      \(\theta\) into \(f\). The right hand side can be viewed as a
+      marginalization of \((x_0, \ldots, x_{N - 1})\) on the density function
     </p>
-    <center>
-      \(\displaystyle p (x| \theta) = p (x_0, x_1, \ldots, x_N | \theta) = p_0
-      (x_0) \exp (- S (x,
-\theta)) .\)
-    </center>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle p (x| \theta) = p (x_0, x_1, \ldots,
+        x_N | \theta) = p_0 (x_0) \exp (- S (x,
+\theta)) .\)</td>
+        <td align="right">(6.4)</td>
+      </tr>
+    </table>
+    <p>
+      Hence, \(P (\theta)\) is the distribution of the whole path \(X := (X_0,
+      \ldots, X_N)\).
+    </p>
     <p>
       Before going on, we have to check that the normalization condition of
       \(p (x| \theta)\), namely
@@ -5882,15 +5895,17 @@ p_0 (x_0) \exp (- S (x, \theta)) =
       \sum_{\alpha = 1}^d
 \frac{(x_N^{\alpha} - x_{N - 1}^{\alpha} -
       f^{\alpha} (x_{N - 1},
-\theta))^2}{2 \Delta t} \right) .\)
+\theta))^2}{2 \Delta t} +\operatorname{const}
+      \right) .\)
     </center>
     <p>
       Using the formula of Gaussian integral, it turns to be \((\pi / (2
-      \Delta t))^{1 / 2}\). We can then absorb it into the constant \(C\),
-      resulting in a unit. Repeat this process for \(x_{N - 1}, \ldots, x_1\)
-      sequentially, we arrive at \(\int \mathrm{d} x_0 p_0 (x_0)\) which again
-      is a unit because of the normalization condition for the prior density
-      \(p_0\). So, normalization condition of \(p (x| \theta)\) is satisfied.
+      \Delta t))^{1 / 2}\). We can then absorb it into the
+      \(\operatorname{const}\) term, resulting in a unit. Repeat this process
+      for \(x_{N - 1}, \ldots, x_1\) sequentially, we arrive at \(\int
+      \mathrm{d} x_0 p_0 (x_0)\) which again is a unit because of the
+      normalization condition for the prior density \(p_0\). The normalization
+      condition of \(p (x| \theta)\) is thus satisfied.
     </p>
     <p>
       To evaluate the Fisher matrix \(\mathcal{F} (\theta)\) that
@@ -5950,19 +5965,19 @@ f^{\gamma}}{\partial \theta^{\alpha}
 \end{array}\)
     </center>
     <p>
-      The first expectation vanishes. To show this, we write it in its
+      The first expectation vanishes. To show this, we re-write it in its
       original form,
     </p>
     <center>
-      \(\displaystyle \int_{\mathbb{R}^d} \mathrm{d} x_0 \cdots
-      \int_{\mathbb{R}^d} \mathrm{d} x_N
-p_0 (x_0) \exp (- S (x {,} \theta))
-      \sum_{i = 0}^{N - 1} \sum_{\gamma = 1}^d
-(x_{i + 1}^{\gamma} -
-      x_i^{\gamma} - f^{\gamma} (x_i, \theta) \Delta t)
-\frac{\partial^2
-      f^{\gamma}}{\partial \theta^{\alpha} \partial \theta^{\beta}}
-(x_i,
+      \(\displaystyle E_1 := \sum_{i = 0}^{N - 1} \sum_{\gamma = 1}^d
+      \int_{\mathbb{R}^d} \mathrm{d}
+x_0 \cdots \int_{\mathbb{R}^d} \mathrm{d}
+      x_N p_0 (x_0) \exp (- S (x {,}
+\theta)) (x_{i + 1}^{\gamma} -
+      x_i^{\gamma} - f^{\gamma} (x_i, \theta) \Delta
+t) \frac{\partial^2
+      f^{\gamma}}{\partial \theta^{\alpha} \partial
+\theta^{\beta}} (x_i,
       \theta) .\)
     </center>
     <p>
@@ -5970,37 +5985,54 @@ p_0 (x_0) \exp (- S (x {,} \theta))
       \(\Sigma_i\) that depends on \(x_N\) is when \(i = N - 1\). It gives the
       integral
     </p>
-    <center>
+    <font style="font-size: 84.1%"><center>
       \(\displaystyle \begin{array}{rl}
-  & \int_{\mathbb{R}^d} \mathrm{d} x_0
-      \cdots \int_{\mathbb{R}^d} \mathrm{d}
-  x_{N - 1} p_0 (x_0) \exp \left(
-      - \sum_{i = 0}^{N - 2} \sum_{\alpha = 1}^d
-  \frac{(x_{i + 1}^{\alpha} -
-      x_i^{\alpha} - f^{\alpha} (x_i, \theta))^2}{2
-  \Delta t} \right)
-      \frac{\partial^2 f^{\gamma}}{\partial \theta^{\alpha}
-  \partial
+  E_1 \supset \sum_{\gamma = 1}^d &
+      \int_{\mathbb{R}^d} \mathrm{d} x_0 \cdots
+  \int_{\mathbb{R}^d}
+      \mathrm{d} x_{N - 1} p_0 (x_0) \exp \left( - \sum_{i =
+  0}^{N - 2}
+      \sum_{\sigma = 1}^d \frac{(x_{i + 1}^{\sigma} - x_i^{\sigma} -
+ 
+      f^{\sigma} (x_i, \theta))^2}{2 \Delta t} +\operatorname{const} \right)
+ 
+      \frac{\partial^2 f^{\gamma}}{\partial \theta^{\alpha} \partial
+ 
       \theta^{\beta}} (x_{N - 1}, \theta)\\
   \times & \int_{\mathbb{R}^d}
-      \mathrm{d} x_N \exp \left( - \sum_{\alpha =
-  1}^d \frac{(x_N^{\alpha} -
-      x_{N - 1}^{\alpha} - f^{\alpha} (x_{N - 1},
+      \mathrm{d} x_N \exp \left( - \sum_{\sigma =
+  1}^d \frac{(x_N^{\sigma} -
+      x_{N - 1}^{\sigma} - f^{\sigma} (x_{N - 1},
   \theta))^2}{2 \Delta t}
-      \right) (x_N^{\gamma} - x_{N - 1}^{\gamma} -
-  f^{\gamma} (x_{N - 1},
-      \theta) \Delta t),
+      +\operatorname{const} \right) (x_N^{\gamma} - x_{N -
+  1}^{\gamma} -
+      f^{\gamma} (x_{N - 1}, \theta) \Delta t),
 \end{array}\)
-    </center>
+    </center></font>
     <p>
       which vanishes since the second factor is zero. For other terms in the
       summation \(\Sigma_i\), namely for \(i \in \{ 0, \ldots, N - 2 \}\),
       integrating \(x_N\) results in a constant factor, which can be absorbed
-      into the the constant term \(C\) in \(S (x, \theta)\). So, Integrating
-      over \(x_N\) results in the same formula as the original one except that
-      both the integral and the summation terminate at \(x_{N - 1}\) (instead
-      of at \(x_N\)). So, repeating this process, integrating over \(x_{N -
-      1}, \ldots, x_1\) sequentially, we obtain a zero. Hence,
+      into the the \(\operatorname{const}\) term in \(S (x, \theta)\). It
+      results in the same expression as the original except for those
+      highlighted by red color:
+    </p>
+    <center>
+      \(\displaystyle E_1 = \sum_{i = 0}^{{\color{red}{N - 2}}} \sum_{\gamma =
+      1}^d
+\int_{\mathbb{R}^d} \mathrm{d} x_0 \cdots \int_{\mathbb{R}^d}
+      \mathrm{d}
+x_{{\color{red}{N - 1}}} p_0 (x_0) \exp (- S (x {,} \theta))
+      (x_{i +
+1}^{\gamma} - x_i^{\gamma} - f^{\gamma} (x_i, \theta) \Delta
+      t)
+\frac{\partial^2 f^{\gamma}}{\partial \theta^{\alpha} \partial
+      \theta^{\beta}}
+(x_i, \theta) .\)
+    </center>
+    <p>
+      Repeating this process, iteratively integrating over \(x_{N - 1}\),
+      \(x_{N - 2}\), until \(x_1\), we will get \(E_1 = 0\). So, we find
     </p>
     <center>
       \(\displaystyle \mathcal{F}_{\alpha \beta} (\theta) =\mathbb{E}_{x \sim
@@ -6013,9 +6045,14 @@ p_0 (x_0) \exp (- S (x {,} \theta))
       t \right] .\)
     </center>
     <p>
-      In the limit \(\Delta t \rightarrow 0\) and \(N \rightarrow \infty\) at
-      the same time while keeping \(T := N \Delta t\) invariant, we can
-      formally write it as a Riemannian integral
+      
+    </p>
+    <p>
+      In the limit \(\Delta t \rightarrow 0\), we have to take \(N \rightarrow
+      \infty\) at the same time, while keeping \(T := N \Delta t\) invariant.
+      This makes the \(\omicron (N T)\) in equation <a href="#equation: master equation of Langevin process tmp">6.2</a> to be
+      \(\omicron (1)\), thus negligible. In this limit, the Fisher matrix
+      becomes an expectation of a Riemannian integral, as
     </p>
     <table width="100%">
       <tr>
@@ -6027,24 +6064,21 @@ p_0 (x_0) \exp (- S (x {,} \theta))
 \theta^{\alpha}} (x (t), \theta) \frac{\partial
         f^{\gamma}}{\partial
 \theta^{\beta}} (x (t), \theta) \right], \)</td>
-        <td align="right">(6.2)</td>
+        <td align="right">(6.5)</td>
       </tr>
     </table>
     <p>
       where the series \((x_0, \ldots, x_N)\) now becomes a continuous path
-      \(x : [0, T] \rightarrow \mathbb{R}^d\).
-    </p>
-    <p>
-      To estimate this numerically, we sample an assemble of paths from the
-      distribution \(P (\theta)\) (see section <a href="#section: Transition Density of Langevin Process Is Nearly Gaussian">3.6</a>), then compute
-      the mean value of the integral for all the sampled paths. The
-      &ldquo;physical&rdquo; explanation of equation <a href="#equation: fisher matrix of langevin process for dynamical parameter">6.2</a> is as
-      follow. The integrand \(\sum_{\gamma} (\partial f^{\gamma} / \partial
-      \theta^{\alpha}) (x, \theta)
-(\partial f^{\gamma} / \partial
-      \theta^{\beta}) (x, \theta)\) characterizes the sensitivity to the
-      \(\theta\) at position \(x\). For each path, the integral gives the
-      global sensitivity along the path. The fisher matrix
+      \(x : [0, T] \rightarrow \mathbb{R}^d\). To estimate this numerically,
+      we sample an assemble of paths from the distribution \(P (\theta)\) (see
+      section <a href="#section: Transition Density of Langevin Process Is Nearly Gaussian">3.6</a>), then compute the mean value of the integral
+      for all the sampled paths. The &ldquo;physical&rdquo; explanation of
+      equation <a href="#equation: fisher matrix of langevin process for dynamical parameter">6.5</a> is as follow. The integrand \(\sum_{\gamma}
+      (\partial f^{\gamma} / \partial \theta^{\alpha}) (x, \theta)
+(\partial
+      f^{\gamma} / \partial \theta^{\beta}) (x, \theta)\) characterizes the
+      sensitivity to the \(\theta\) at position \(x\). For each path, the
+      integral gives the global sensitivity along the path. The fisher matrix
       \(\mathcal{F}_{\alpha \beta} (\theta)\), thus, is the expected global
       sensitivity on the distribution of paths, \(P (\theta)\).
     </p>
