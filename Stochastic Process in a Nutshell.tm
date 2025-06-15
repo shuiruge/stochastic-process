@@ -155,13 +155,9 @@
     Sensitivity along Path <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-37>
 
-    6.3<space|2spc>Fisher Matrix at Fixed Point
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-38>
-
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|Epilogue>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-39><vspace|0.5fn>
+    <no-break><pageref|auto-38><vspace|0.5fn>
   </table-of-contents>
 
   <prologue>
@@ -4692,25 +4688,26 @@
   <math|N\<rightarrow\>\<infty\>> at the same time, while keeping
   <math|T\<assign\>N \<Delta\>t> invariant. This makes the
   <math|\<omicron\><around*|(|N T|)>> in equation <reference|equation: master
-  equation of Langevin process tmp> to be <math|\<omicron\><around*|(|1|)>>,
-  thus negligible. In this limit, the Fisher matrix becomes an expectation of
-  a Riemannian integral, as
+  equation of Langevin process tmp> an <math|\<omicron\><around*|(|1|)>>,
+  thus negligible. In this limit, the series
+  <math|<around*|(|x<rsub|0>,\<ldots\>,x<rsub|N>|)>> turns to be a continuous
+  path <math|x:<around*|[|0,T|]>\<rightarrow\>\<bbb-R\><rsup|d>>, and the
+  Fisher matrix becomes an expectation of a Riemannian integral, as
 
   <\equation>
-    \<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>|)>=\<bbb-E\><rsub|x\<sim\>P<around*|(|\<theta\>|)>><around*|[|<big|int><rsub|0><rsup|T>\<mathd\>t
+    \<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>,T|)>=\<bbb-E\><rsub|x\<sim\>P<around*|(|\<theta\>|)>><around*|[|<big|int><rsub|0><rsup|T>\<mathd\>t
     <big|sum><rsub|\<gamma\>=1><rsup|d><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x<around*|(|t|)>,\<theta\>|)><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x<around*|(|t|)>,\<theta\>|)>|]>,<label|equation:
     fisher matrix of langevin process for dynamical parameter>
   </equation>
 
-  where the series <math|<around*|(|x<rsub|0>,\<ldots\>,x<rsub|N>|)>> now
-  becomes a continuous path <math|x:<around*|[|0,T|]>\<rightarrow\>\<bbb-R\><rsup|d>>.
-  To estimate this numerically, we sample an assemble of paths from the
-  distribution <math|P<around*|(|\<theta\>|)>> (see section
-  <reference|section: Transition Density of Langevin Process Is Nearly
-  Gaussian>), then compute the mean value of the integral for all the sampled
-  paths. The \Pphysical\Q explanation of equation <reference|equation: fisher
-  matrix of langevin process for dynamical parameter> is as follow. The
-  integrand <math|<big|sum><rsub|\<gamma\>><around*|(|\<partial\>f<rsup|\<gamma\>>/\<partial\>\<theta\><rsup|\<alpha\>>|)><around*|(|x,\<theta\>|)><around*|(|\<partial\>f<rsup|\<gamma\>>/\<partial\>\<theta\><rsup|\<beta\>>|)><around*|(|x,\<theta\>|)>>
+  where we have explicitly displayed the dependence on <math|T>. To estimate
+  this numerically, we sample an assemble of paths from the distribution
+  <math|P<around*|(|\<theta\>|)>> (see section <reference|section: Transition
+  Density of Langevin Process Is Nearly Gaussian>), then compute the mean
+  value of the integral for all the sampled paths. The \Pphysical\Q
+  explanation of equation <reference|equation: fisher matrix of langevin
+  process for dynamical parameter> is as follow. The integrand
+  <math|<big|sum><rsub|\<gamma\>><around*|(|\<partial\>f<rsup|\<gamma\>>/\<partial\>\<theta\><rsup|\<alpha\>>|)><around*|(|x,\<theta\>|)><around*|(|\<partial\>f<rsup|\<gamma\>>/\<partial\>\<theta\><rsup|\<beta\>>|)><around*|(|x,\<theta\>|)>>
   characterizes the sensitivity to the <math|\<theta\>> at position <math|x>.
   For each path, the integral gives the global sensitivity along the path.
   The fisher matrix <math|\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>|)>>,
@@ -4829,9 +4826,9 @@
     <associate|chapter: Path Integral|<tuple|5|43>>
     <associate|equation: fisher matrix|<tuple|6.1|52>>
     <associate|equation: fisher matrix of langevin process for dynamical
-    parameter|<tuple|6.5|53>>
+    parameter|<tuple|6.5|54>>
     <associate|equation: master equation of Langevin process
-    tmp|<tuple|6.2|?>>
+    tmp|<tuple|6.2|52>>
     <associate|equation:Detailed Balance|<tuple|2.8|17>>
     <associate|equation:Detailed Balance for transition
     density|<tuple|2.9|17>>

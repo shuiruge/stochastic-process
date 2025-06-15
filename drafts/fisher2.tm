@@ -3,7 +3,14 @@
 <style|generic>
 
 <\body>
-  <section|Fisher Matrix at Stable Equilibra>
+  Evaluation of Fisher matrix in general case is hard if not impossible. But,
+  for a wide range of situations where the dynamical system
+  <math|<wide|x|\<dot\>>=f<around*|(|x,\<theta\>|)>> has limiting behaviors,
+  we can quanlitively analyze the averaged Fisher matrix
+  <math|\<cal-F\><around*|(|\<theta\>,T|)>/T> as the time period <math|T>
+  tends to infinity, knowing whether it will tend to zero or not.
+
+  <section|Fisher Matrix at Stable Equilibria>
 
   An equilibrium of an autonomous dynamical system
   <math|<wide|x|\<dot\>><around*|(|t|)>=f<around*|(|x<around*|(|t|)>|)>> is
@@ -201,9 +208,9 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-2|<tuple|2|?>>
-    <associate|footnote-1|<tuple|1|?>>
-    <associate|footnr-1|<tuple|1|?>>
+    <associate|auto-2|<tuple|2|1>>
+    <associate|footnote-1|<tuple|1|2>>
+    <associate|footnr-1|<tuple|1|2>>
   </collection>
 </references>
 
@@ -211,8 +218,12 @@
   <\collection>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Fisher
-      Matrix at Fixed Point> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      Matrix at Stable Equilibra> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Fisher
+      Matrix on Stable Limit Circles> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-2><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>

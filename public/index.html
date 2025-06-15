@@ -210,12 +210,8 @@
         6.2<span style="margin-left: 1em"></span>Fisher Matrix of Langevin Process Is the
         Expectation of Sensitivity along Path <span style="margin-left: 5mm"></span> <a href="#auto-37">52</a>
       </p>
-      <p>
-        6.3<span style="margin-left: 1em"></span>Fisher Matrix at Fixed Point <span style="margin-left: 5mm"></span>
-        <a href="#auto-38">55</a>
-      </p>
       <p style="margin-top: 1em; margin-bottom: 0.5em">
-        <b>Epilogue</b> <span style="margin-left: 5mm"></span> <a href="#auto-39">?</a>
+        <b>Epilogue</b> <span style="margin-left: 5mm"></span> <a href="#auto-38">55</a>
       </p>
     </div>
     <h1 id="auto-1">Prologue<span style="margin-left: 1em"></span></h1>
@@ -6050,14 +6046,16 @@ x_{{\color{red}{N - 1}}} p_0 (x_0) \exp (- S (x {,} \theta))
     <p>
       In the limit \(\Delta t \rightarrow 0\), we have to take \(N \rightarrow
       \infty\) at the same time, while keeping \(T := N \Delta t\) invariant.
-      This makes the \(\omicron (N T)\) in equation <a href="#equation: master equation of Langevin process tmp">6.2</a> to be
-      \(\omicron (1)\), thus negligible. In this limit, the Fisher matrix
-      becomes an expectation of a Riemannian integral, as
+      This makes the \(\omicron (N T)\) in equation <a href="#equation: master equation of Langevin process tmp">6.2</a> an
+      \(\omicron (1)\), thus negligible. In this limit, the series \((x_0,
+      \ldots, x_N)\) turns to be a continuous path \(x : [0, T] \rightarrow
+      \mathbb{R}^d\), and the Fisher matrix becomes an expectation of a
+      Riemannian integral, as
     </p>
     <table width="100%">
       <tr>
-        <td width="100%" align="center">\(\displaystyle \mathcal{F}_{\alpha \beta} (\theta)
-        =\mathbb{E}_{x \sim P (\theta)} \left[
+        <td width="100%" align="center">\(\displaystyle \mathcal{F}_{\alpha \beta} (\theta,
+        T) =\mathbb{E}_{x \sim P (\theta)} \left[
 \int_0^T \mathrm{d} t
         \sum_{\gamma = 1}^d \frac{\partial
         f^{\gamma}}{\partial
@@ -6068,17 +6066,17 @@ x_{{\color{red}{N - 1}}} p_0 (x_0) \exp (- S (x {,} \theta))
       </tr>
     </table>
     <p>
-      where the series \((x_0, \ldots, x_N)\) now becomes a continuous path
-      \(x : [0, T] \rightarrow \mathbb{R}^d\). To estimate this numerically,
-      we sample an assemble of paths from the distribution \(P (\theta)\) (see
-      section <a href="#section: Transition Density of Langevin Process Is Nearly Gaussian">3.6</a>), then compute the mean value of the integral
-      for all the sampled paths. The &ldquo;physical&rdquo; explanation of
-      equation <a href="#equation: fisher matrix of langevin process for dynamical parameter">6.5</a> is as follow. The integrand \(\sum_{\gamma}
-      (\partial f^{\gamma} / \partial \theta^{\alpha}) (x, \theta)
-(\partial
-      f^{\gamma} / \partial \theta^{\beta}) (x, \theta)\) characterizes the
-      sensitivity to the \(\theta\) at position \(x\). For each path, the
-      integral gives the global sensitivity along the path. The fisher matrix
+      where we have explicitly displayed the dependence on \(T\). To estimate
+      this numerically, we sample an assemble of paths from the distribution
+      \(P (\theta)\) (see section <a href="#section: Transition Density of Langevin Process Is Nearly Gaussian">3.6</a>), then compute the mean
+      value of the integral for all the sampled paths. The
+      &ldquo;physical&rdquo; explanation of equation <a href="#equation: fisher matrix of langevin process for dynamical parameter">6.5</a> is as
+      follow. The integrand \(\sum_{\gamma} (\partial f^{\gamma} / \partial
+      \theta^{\alpha}) (x, \theta)
+(\partial f^{\gamma} / \partial
+      \theta^{\beta}) (x, \theta)\) characterizes the sensitivity to the
+      \(\theta\) at position \(x\). For each path, the integral gives the
+      global sensitivity along the path. The fisher matrix
       \(\mathcal{F}_{\alpha \beta} (\theta)\), thus, is the expected global
       sensitivity on the distribution of paths, \(P (\theta)\).
     </p>
