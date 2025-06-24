@@ -2678,11 +2678,11 @@
   <strong|Kolmogorov forward equation>, independently discovered in 1931.
 
   As a matrix-valued field, <math|\<Sigma\>> is symmetric and everywhere
-  positive definite. Symmetry means <math|\<Sigma\><rsup|\<alpha\>\<beta\>><around*|(|x|)>=\<Sigma\><rsup|\<beta\>\<alpha\>><around*|(|x|)>>.
+  non-negative definite. Symmetry means <math|\<Sigma\><rsup|\<alpha\>\<beta\>><around*|(|x|)>=\<Sigma\><rsup|\<beta\>\<alpha\>><around*|(|x|)>>.
   This is a direct result of its definition
   <math|<big|int>\<mathd\>\<epsilon\> r<around*|(|x,x+\<epsilon\>|)>
   \<epsilon\><rsup|\<alpha\>>\<epsilon\><rsup|\<beta\>>>. To see why it is
-  positive definite, we consider the expectation
+  non-negative definite, we consider the expectation
 
   <\equation*>
     <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
@@ -2697,10 +2697,10 @@
   <\equation*>
     <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
     q<rsub|\<Delta\>t><around*|(|x\<rightarrow\>x+\<epsilon\>|)>
-    <around*|(|\<epsilon\><rsup|\<alpha\>>|)><rsup|2>\<gtr\>0.
+    <around*|(|\<epsilon\><rsup|\<alpha\>>|)><rsup|2>\<geqslant\>0.
   </equation*>
 
-  So, <math|\<Sigma\><around*|(|x|)>> is positive definite for any
+  So, <math|\<Sigma\><around*|(|x|)>> is non-negative definite for any
   <math|x\<in\>\<bbb-R\><rsup|d>>.
 
   <section|Transition Density of Langevin Process Is Nearly
@@ -2790,23 +2790,22 @@
 
   To introduce Cholesky factorization, we fix the argument <math|x> and omit
   it for simplicity, so <math|\<Sigma\><around*|(|x|)>> is written as
-  <math|\<Sigma\>>. Since <math|\<Sigma\>> is symmetric and positive definite
-  (proved in section <reference|section: Langevin Process Is a Markovian
-  Process with Ncut=2>), we can diagonalize it using an orthogonal matrix
-  <math|E> as <math|\<Sigma\>=E<rsup|T> \<Lambda\> E>, where the diagonal
-  <math|\<Lambda\><rsub|\<alpha\>\<beta\>>=\<delta\><rsub|\<alpha\>\<beta\>>
-  \<lambda\><rsub|\<beta\>>> with <math|\<lambda\><rsub|\<beta\>>\<gtr\>0>.
+  <math|\<Sigma\>>. Since <math|\<Sigma\>> is symmetric and non-negative
+  definite (proved in section <reference|section: Langevin Process Is a
+  Markovian Process with Ncut=2>), we can diagonalize it using an orthogonal
+  matrix <math|E> as <math|\<Sigma\>=E<rsup|T> \<Lambda\> E>, where the
+  diagonal <math|\<Lambda\><rsub|\<alpha\>\<beta\>>=\<delta\><rsub|\<alpha\>\<beta\>>
+  \<lambda\><rsub|\<beta\>>> with <math|\<lambda\><rsub|\<beta\>>\<geqslant\>0>.
   Define <math|<sqrt|\<Lambda\>><rsub|\<alpha\>\<beta\>>\<assign\>\<delta\><rsub|\<alpha\>\<beta\>>
   <sqrt|\<lambda\><rsub|\<beta\>>>>, thus
   <math|\<Lambda\>=<sqrt|\<Lambda\>><rsup|T> <sqrt|\<Lambda\>>>, and
   <math|\<Sigma\>=C<rsup|T> C> where <math|C\<assign\><sqrt|\<Lambda\>> E>.
-  We thus factorize <math|\<Sigma\>> into the \Psquare\Q of <math|C>. Notice
-  that <math|C> is invertible, and <math|C<rsup|-1>=E<rsup|T>
-  <around*|(|<sqrt|\<Lambda\>>|)><rsup|-1>>. This was first discovered by
-  French military officer André-Louis Cholesky, who was killed in battle a
-  few months before the end of World War I, dead at age 31. So, we have
-  (insert the omitted <math|x> again) <math|\<Sigma\><around*|(|x|)>=C<rsup|T><around*|(|x|)>
-  C<around*|(|x|)>> and the stochastic difference equation comes to be
+  We thus factorize <math|\<Sigma\>> into the \Psquare\Q of <math|C>. This
+  was first discovered by French military officer André-Louis Cholesky, who
+  was killed in battle a few months before the end of World War I, dead at
+  age 31. So, we have (insert the omitted <math|x> again)
+  <math|\<Sigma\><around*|(|x|)>=C<rsup|T><around*|(|x|)> C<around*|(|x|)>>
+  and the stochastic difference equation comes to be
 
   <\equation*>
     X<rsup|\<alpha\>><around*|(|t+\<Delta\>t|)>\<approx\>X<rsup|\<alpha\>><around*|(|t|)>+f<rsup|\<alpha\>><around*|(|X<around*|(|t|)>|)>
@@ -4031,19 +4030,21 @@
     k<rsub|\<alpha\>>k<rsub|\<beta\>>|)>.
   </equation*>
 
-  As proved in the same section, <math|\<Sigma\>> is everywhere positive
-  definite. Then by the formula of Gaussian integral, which holds for any
-  positive definite matrix <math|A>,
+  As proved in the same section, <math|\<Sigma\>> is everywhere non-negative
+  definite. For simplicity, we further assume that <math|\<Sigma\>> is
+  everywhere postive definite. That is, none of the eigenvalues of
+  <math|\<Sigma\><around*|(|x|)>> is vanishing. Then, we can employ Gaussian
+  integral, which holds for any positive definite matrix <math|A>,
 
   <\equation*>
     <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x exp<around*|(|-<frac|1|2>
     A<rsub|\<alpha\>\<beta\>> x<rsup|\<alpha\>>
     x<rsup|\<beta\>>+b<rsub|\<alpha\>> x<rsup|\<alpha\>>|)>=<sqrt|<frac|<around*|(|2\<mathpi\>|)><rsup|d>|det
     A>> exp<around*|(|<frac|1|2> <around*|(|A<rsup|-1>|)><rsup|\<alpha\>\<beta\>>
-    b<rsub|\<alpha\>> b<rsub|\<beta\>>|)>,
+    b<rsub|\<alpha\>> b<rsub|\<beta\>>|)>.
   </equation*>
 
-  we find (replacing <math|A<rsub|\<alpha\>\<beta\>>> by
+  We find (replacing <math|A<rsub|\<alpha\>\<beta\>>> by
   <math|\<Sigma\><rsup|\<alpha\>\<beta\>><around*|(|x|)> \<Delta\>t> and
   <math|b<rsub|\<alpha\>>> by <math|\<mathi\>
   <around*|[|\<epsilon\><rsup|\<alpha\>>-f<rsup|\<alpha\>><around*|(|x|)>
@@ -4559,10 +4560,19 @@
   the Expection of Sensitivity along Path>
 
   In this section, we are to calculate the Fisher matrix for the Langevin
-  process with constant covariant. In the end of section <reference|section:
-  Langevin Process with Constant Covariance Has a Path Integral on Alphabet>,
-  we get the master equation of the Langevin process with constant covariant,
-  as
+  process with constant covariant. We have introduced Langevin process in
+  section <reference|section: Langevin Process Is a Markovian Process with
+  Ncut=2>. Then in section <reference|section: Transition Density of Langevin
+  Process Is Nearly Gaussian>, we derived the (approximated) transition
+  density of Langevin process, leading to a numerical method that simulates a
+  Langevin process. Later in section <reference|section: Langevin Process
+  with Constant Covariance Has a Path Integral on Alphabet>, we calculated
+  the path integral formulation of the Langevin process with constant
+  covariance.
+
+  By the end of section <reference|section: Langevin Process with Constant
+  Covariance Has a Path Integral on Alphabet>, we got the master equation of
+  the Langevin process with constant covariance, as
 
   <\equation>
     p<rsub|N><around*|(|x<rsub|N>|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|0>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N-1>
@@ -4570,17 +4580,18 @@
     \<Delta\>t|)>,<label|equation: master equation of Langevin process tmp>
   </equation>
 
-  where
+  where the action
 
   <\equation>
     S<around*|(|x,\<theta\>|)>=<big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<alpha\>=1><rsup|d><frac|<around*|(|x<rsub|i+1><rsup|\<alpha\>>-x<rsub|i><rsup|\<alpha\>>-f<rsup|\<alpha\>><around*|(|x<rsub|i>,\<theta\>|)>|)><rsup|2>|2\<Delta\>t>+const,
   </equation>
 
-  where <math|const> represents for an arbitrary constant. Comparing with
-  equation <reference|equation:langevin action constant covariance>, we have
-  inserted a parameter <math|\<theta\>> into <math|f>. The right hand side
-  can be viewed as a marginalization of <math|<around*|(|x<rsub|0>,\<ldots\>,x<rsub|N-1>|)>>
-  on the density function
+  where <math|const> is a constant for ensuring the normalization condition
+  of <math|p<rsub|N>>. Comparing with equation <reference|equation:langevin
+  action constant covariance>, we have inserted a parameter <math|\<theta\>>
+  into <math|f>. The right hand side can be viewed as a marginalization of
+  <math|<around*|(|x<rsub|0>,\<ldots\>,x<rsub|N-1>|)>> on the density
+  function
 
   <\equation>
     p<around*|(|x\|\<theta\>|)>=p<around*|(|x<rsub|0>,x<rsub|1>,\<ldots\>,x<rsub|N>\|\<theta\>|)>=p<rsub|0><around*|(|x<rsub|0>|)>
@@ -4591,11 +4602,12 @@
   path <math|X\<assign\><around*|(|X<rsub|0>,\<ldots\>,X<rsub|N>|)>>.
 
   Before going on, we have to check that the normalization condition of
-  <math|p<around*|(|x\|\<theta\>|)>>, namely
+  <math|p<around*|(|x\|\<theta\>|)>>. Namely, for all <math|\<theta\>>, we
+  shall have
 
   <\equation*>
     <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|0>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N>
-    p<rsub|0><around*|(|x<rsub|0>|)> exp<around*|(|-S<around*|(|x,\<theta\>|)>|)>=1
+    p<rsub|0><around*|(|x<rsub|0>|)> exp<around*|(|-S<around*|(|x,\<theta\>|)>|)>=1.
   </equation*>
 
   To show this, we first integrate over <math|x<rsub|N>>. The factor that

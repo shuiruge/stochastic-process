@@ -3447,11 +3447,11 @@ w^{\alpha}) (x^{\beta} - w^{\beta})
     </p>
     <p>
       As a matrix-valued field, \(\Sigma\) is symmetric and everywhere
-      positive definite. Symmetry means \(\Sigma^{\alpha \beta} (x) =
+      non-negative definite. Symmetry means \(\Sigma^{\alpha \beta} (x) =
       \Sigma^{\beta \alpha} (x)\). This is a direct result of its definition
       \(\int \mathrm{d} \epsilon r (x, x + \epsilon)
       \epsilon^{\alpha}
-\epsilon^{\beta}\). To see why it is positive
+\epsilon^{\beta}\). To see why it is non-negative
       definite, we consider the expectation
     </p>
     <center>
@@ -3468,10 +3468,11 @@ w^{\alpha}) (x^{\beta} - w^{\beta})
     <center>
       \(\displaystyle \int_{\mathbb{R}^d} \mathrm{d} \epsilon q_{\Delta t} (x
       \rightarrow x +
-\epsilon)  (\epsilon^{\alpha})^2 > 0.\)
+\epsilon)  (\epsilon^{\alpha})^2 \geqslant 0.\)
     </center>
     <p>
-      So, \(\Sigma (x)\) is positive definite for any \(x \in \mathbb{R}^d\).
+      So, \(\Sigma (x)\) is non-negative definite for any \(x \in
+      \mathbb{R}^d\).
     </p>
     <h2 id="auto-21"><a id="section: Transition Density of Langevin Process Is Nearly Gaussian"></a>3.6<span style="margin-left: 1em"></span>Transition Density of Langevin
     Process Is Nearly Gaussian<span style="margin-left: 1em"></span></h2>
@@ -3589,20 +3590,19 @@ t) .\)
     <p>
       To introduce Cholesky factorization, we fix the argument \(x\) and omit
       it for simplicity, so \(\Sigma (x)\) is written as \(\Sigma\). Since
-      \(\Sigma\) is symmetric and positive definite (proved in section <a
+      \(\Sigma\) is symmetric and non-negative definite (proved in section <a
       href="#section: Langevin Process Is a Markovian Process with Ncut=2">3.5</a>), we can diagonalize it using an orthogonal matrix \(E\)
       as \(\Sigma = E^T \Lambda E\), where the diagonal \(\Lambda_{\alpha
       \beta} = \delta_{\alpha \beta} \lambda_{\beta}\) with \(\lambda_{\beta}
-      > 0\). Define \(\sqrt{\Lambda}_{\alpha \beta} := \delta_{\alpha \beta} 
-      \sqrt{\lambda_{\beta}}\), thus \(\Lambda = \sqrt{\Lambda}^T 
+      \geqslant 0\). Define \(\sqrt{\Lambda}_{\alpha \beta} := \delta_{\alpha
+      \beta}  \sqrt{\lambda_{\beta}}\), thus \(\Lambda = \sqrt{\Lambda}^T 
       \sqrt{\Lambda}\), and \(\Sigma = C^T C\) where \(C := \sqrt{\Lambda}
       E\). We thus factorize \(\Sigma\) into the &ldquo;square&rdquo; of
-      \(C\). Notice that \(C\) is invertible, and \(C^{- 1} = E^T  \left(
-      \sqrt{\Lambda} \right)^{- 1}\). This was first discovered by French
-      military officer Andr&eacute;-Louis Cholesky, who was killed in battle a
-      few months before the end of World War I, dead at age 31. So, we have
-      (insert the omitted \(x\) again) \(\Sigma (x) = C^T (x) C (x)\) and the
-      stochastic difference equation comes to be
+      \(C\). This was first discovered by French military officer
+      Andr&eacute;-Louis Cholesky, who was killed in battle a few months
+      before the end of World War I, dead at age 31. So, we have (insert the
+      omitted \(x\) again) \(\Sigma (x) = C^T (x) C (x)\) and the stochastic
+      difference equation comes to be
     </p>
     <center>
       \(\displaystyle X^{\alpha} (t + \Delta t) \approx X^{\alpha} (t) +
@@ -5145,9 +5145,11 @@ k_{\beta} k_{\gamma} + \cdots \right) . \)</td>
       k_{\alpha} k_{\beta} \right) .\)
     </center>
     <p>
-      As proved in the same section, \(\Sigma\) is everywhere positive
-      definite. Then by the formula of Gaussian integral, which holds for any
-      positive definite matrix \(A\),
+      As proved in the same section, \(\Sigma\) is everywhere non-negative
+      definite. For simplicity, we further assume that \(\Sigma\) is
+      everywhere postive definite. That is, none of the eigenvalues of
+      \(\Sigma (x)\) is vanishing. Then, we can employ Gaussian integral,
+      which holds for any positive definite matrix \(A\),
     </p>
     <center>
       \(\displaystyle \int_{\mathbb{R}^d} \mathrm{d} x \exp \left( -
@@ -5156,10 +5158,10 @@ x^{\alpha} x^{\beta} + b_{\alpha}
       x^{\alpha} \right) = \sqrt{\frac{(2
 \pi)^d}{\det A}} \exp \left(
       \frac{1}{2}  (A^{- 1})^{\alpha \beta} b_{\alpha}
-b_{\beta} \right),\)
+b_{\beta} \right) .\)
     </center>
     <p>
-      we find (replacing \(A_{\alpha \beta}\) by \(\Sigma^{\alpha \beta} (x)
+      We find (replacing \(A_{\alpha \beta}\) by \(\Sigma^{\alpha \beta} (x)
       \Delta t\) and \(b_{\alpha}\) by \(\mathrm{i} [\epsilon^{\alpha} -
       f^{\alpha} (x) \Delta t]\))
     </p>
@@ -5827,9 +5829,16 @@ p}{\partial
     Process Is the Expectation of Sensitivity along Path<span style="margin-left: 1em"></span></h2>
     <p>
       In this section, we are to calculate the Fisher matrix for the Langevin
-      process with constant covariant. In the end of section <a href="#section: Langevin Process with Constant Covariance Has a Path Integral on Alphabet">5.2</a>,
-      we get the master equation of the Langevin process with constant
-      covariant, as
+      process with constant covariant. We have introduced Langevin process in
+      section <a href="#section: Langevin Process Is a Markovian Process with Ncut=2">3.5</a>. Then in section <a href="#section: Transition Density of Langevin Process Is Nearly Gaussian">3.6</a>, we derived
+      the (approximated) transition density of Langevin process, leading to a
+      numerical method that simulates a Langevin process. Later in section <a
+      href="#section: Langevin Process with Constant Covariance Has a Path Integral on Alphabet">5.2</a>, we calculated the path integral formulation of the
+      Langevin process with constant covariance.
+    </p>
+    <p>
+      By the end of section <a href="#section: Langevin Process with Constant Covariance Has a Path Integral on Alphabet">5.2</a>, we got the master equation of
+      the Langevin process with constant covariance, as
     </p>
     <table width="100%">
       <tr>
@@ -5842,7 +5851,7 @@ p}{\partial
       </tr>
     </table>
     <p>
-      where
+      where the action
     </p>
     <table width="100%">
       <tr>
@@ -5855,10 +5864,11 @@ p}{\partial
       </tr>
     </table>
     <p>
-      where \(\operatorname{const}\) represents for an arbitrary constant.
-      Comparing with equation <a href="#equation:langevin action constant covariance">5.11</a>, we have inserted a parameter
-      \(\theta\) into \(f\). The right hand side can be viewed as a
-      marginalization of \((x_0, \ldots, x_{N - 1})\) on the density function
+      where \(\operatorname{const}\) is a constant for ensuring the
+      normalization condition of \(p_N\). Comparing with equation <a href="#equation:langevin action constant covariance">5.11</a>,
+      we have inserted a parameter \(\theta\) into \(f\). The right hand side
+      can be viewed as a marginalization of \((x_0, \ldots, x_{N - 1})\) on
+      the density function
     </p>
     <table width="100%">
       <tr>
@@ -5874,13 +5884,13 @@ p}{\partial
     </p>
     <p>
       Before going on, we have to check that the normalization condition of
-      \(p (x| \theta)\), namely
+      \(p (x| \theta)\). Namely, for all \(\theta\), we shall have
     </p>
     <center>
       \(\displaystyle \int_{\mathbb{R}^d} \mathrm{d} x_0 \cdots
       \int_{\mathbb{R}^d} \mathrm{d} x_N
 p_0 (x_0) \exp (- S (x, \theta)) =
-      1\)
+      1.\)
     </center>
     <p>
       To show this, we first integrate over \(x_N\). The factor that depends
