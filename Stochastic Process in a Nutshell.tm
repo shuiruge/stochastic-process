@@ -3680,40 +3680,8 @@
     \<Delta\>t|)>.
   </equation*>
 
-  Plugging this back into equation <reference|equation:master equation
-  series>, we get a path integral formulation
-
-  <\equation*>
-    p<around*|(|x<rsub|N>,N \<Delta\>t|)>\<approx\><big|int>D<around*|(|x,k|)>
-    p<around*|(|x<rsub|0>,0|)> exp<around*|(|<big|sum><rsub|i=0><rsup|N-1><around*|{|\<mathi\><around*|(|k<rsub|i>|)><rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>><rsub|i+1>-x<rsub|i><rsup|\<alpha\>>|)>+
-    <wide|r|^><around*|(|x<rsub|i>,k<rsub|i>|)>\<Delta\>t|}>|)>
-  </equation*>
-
-  with abbreviation
-
-  <\equation*>
-    <big|int>D<around*|(|x,k|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|0><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rsub|0>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N-1><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>k<rsub|N-1>.
-  </equation*>
-
-  The residue of this approximation is found to be non-trivial. We tackle
-  this in section <reference|section: * Estimation of the Residue>. As the
-  result, we find
-
-  <\equation>
-    p<around*|(|x<rsub|N>,N \<Delta\>t|)>=<big|int>D<around*|(|x,k|)>
-    p<around*|(|x<rsub|0>,0|)> exp<around*|(|-S<around*|(|x,k|)>|)>+\<omicron\><around*|(|N
-    \<Delta\>t|)>,<label|equation:path integral of markov process>
-  </equation>
-
-  \ where the action is
-
-  <\equation>
-    S<around*|(|x,k|)>=-<big|sum><rsub|i=0><rsup|N-1><around*|{|\<mathi\><around*|(|k<rsub|i>|)><rsub|\<alpha\>><around*|(|x<rsup|\<alpha\>><rsub|i+1>-x<rsub|i><rsup|\<alpha\>>|)>+
-    <wide|r|^><around*|(|x<rsub|i>,k<rsub|i>|)>\<Delta\>t|}>.
-  </equation>
-
-  If we Taylor expand <math|<wide|r|^><around*|(|x,k|)>> by <math|k> at the
-  origin, then the coefficient is
+  Further, if we Taylor expand <math|<wide|r|^><around*|(|x,k|)>> by <math|k>
+  at the origin, then the coefficient is
 
   <\equation*>
     lim<rsub|k\<rightarrow\>0><frac|\<partial\>|\<partial\>k<rsub|\<alpha\><rsub|1>>>\<cdots\><frac|\<partial\>|\<partial\>k<rsub|\<alpha\><rsub|n>>><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
@@ -3735,28 +3703,71 @@
   <math|<big|int>\<mathd\>\<epsilon\> r<around*|(|x,x+\<epsilon\>|)>=0>. As
   discussed in section <reference|section: Cut-off in the Moments of
   Transition Rate Is Essential for Spatial Smoothness>, the summation
-  terminates at <math|N<rsub|cut>>. Then, the action becomes
+  terminates at <math|N<rsub|cut>>. Plugging this back gives
+
+  <\equation*>
+    q<rsub|\<Delta\>t><around*|(|x\<rightarrow\>x+\<epsilon\>|)>\<approx\><big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\>|)><rsup|d>>
+    exp<around*|(|\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>+\<Delta\>t<big|sum><rsub|n=1><rsup|N<rsub|cut>><frac|<around*|(|-\<mathi\>|)><rsup|n>|n!>K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>k<rsub|\<alpha\><rsub|1>>\<cdots\>k<rsub|\<alpha\><rsub|n>>|)>.
+  </equation*>
+
+  Or putting <math|\<mathi\>k> together as <math|k>,
 
   <\equation>
-    S<around*|(|x,k|)>=-<big|sum><rsub|i=0><rsup|N-1>\<Delta\>t<around*|{|\<mathi\><around*|(|<frac|x<rsup|\<alpha\>><rsub|i+1>-x<rsub|i><rsup|\<alpha\>>|\<Delta\>t>-K<rsub|1><rsup|\<alpha\>><around*|(|x<rsub|i>|)>|)><around*|(|k<rsub|i>|)><rsub|\<alpha\>>+<big|sum><rsub|n=2><rsup|N<rsub|cut>><frac|<around*|(|-\<mathi\>|)><rsup|n>|n!>K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x<rsub|i>|)><around*|(|k<rsub|i>|)><rsub|\<alpha\><rsub|1>>\<cdots\><around*|(|k<rsub|i>|)><rsub|\<alpha\><rsub|n>>|}>.<label|equation:action
+    q<rsub|\<Delta\>t><around*|(|x\<rightarrow\>x+\<epsilon\>|)>\<approx\><big|int><rsub|<with|color|red|\<bbb-I\>><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\><with|color|red|\<mathi\>>|)><rsup|d>>
+    exp<around*|(|k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>+\<Delta\>t<big|sum><rsub|n=1><rsup|N<rsub|cut>><frac|<around*|(|-1|)><rsup|n>|n!>K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>k<rsub|\<alpha\><rsub|1>>\<cdots\>k<rsub|\<alpha\><rsub|n>>|)>,<label|equation:transition
+    density of markov process for path integral>
+  </equation>
+
+  where <math|\<bbb-I\>\<assign\><around*|{|\<mathi\>x\|x\<in\>\<bbb-R\>|}>>
+  is the imaginary axis of complex plane <math|\<bbb-C\>>.
+
+  Inserting equation <reference|equation:transition density of markov process
+  for path integral> into equation <reference|equation:master equation
+  series>, we get a path integral formulation
+
+  <\equation*>
+    p<around*|(|x<rsub|N>,N \<Delta\>t|)>\<approx\><big|int>D<around*|(|x,k|)>
+    p<around*|(|x<rsub|0>,0|)> exp<around*|(|-S<around*|(|x,k|)>|)>,
+  </equation*>
+
+  where the integral
+
+  <\equation>
+    <big|int>D<around*|(|x,k|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|0><big|int><rsub|\<bbb-I\><rsup|d>><frac|\<mathd\>k<rsup|0>|<around*|(|2\<mathpi\>\<mathi\>|)><rsup|d>>
+    \<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N-1><big|int><rsub|\<bbb-I\><rsup|d>><frac|\<mathd\>k<rsup|N-1>|<around*|(|2\<mathpi\>\<mathi\>|)><rsup|d>>
+  </equation>
+
+  and the action
+
+  <\equation>
+    S<around*|(|x,k|)>\<assign\>-<big|sum><rsub|i=0><rsup|N-1>\<Delta\>t<around*|{|<around*|(|<frac|x<rsup|\<alpha\>><rsub|i+1>-x<rsub|i><rsup|\<alpha\>>|\<Delta\>t>-K<rsub|1><rsup|\<alpha\>><around*|(|x<rsub|i>|)>|)>k<rsup|i><rsub|\<alpha\>>+<big|sum><rsub|n=2><rsup|N<rsub|cut>><frac|<around*|(|-1|)><rsup|n>|n!>K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x<rsub|i>|)>k<rsup|i><rsub|\<alpha\><rsub|1>>\<cdots\>k<rsup|i><rsub|\<alpha\><rsub|n>>|}>.<label|equation:action
     of markovian process>
   </equation>
 
-  \;
+  The residue of this approximation is found to be non-trivial. As the
+  result, we find
 
-  The path is a poly-line on <math|\<bbb-R\><rsup|2d>> (involving both
-  <math|x\<in\>\<bbb-R\><rsup|d>> and <math|k\<in\>\<bbb-R\><rsup|d>>).<\footnote>
-    Analogy to classical mechanics, the <math|k>-components can be seen as
-    momenta. Then, the <math|\<bbb-R\><rsup|2d>> is regarded as a \Pphase
-    space\Q.
-  </footnote> But in a specific situation where <math|N<rsub|cut>=2> and
+  <\equation>
+    p<around*|(|x<rsub|N>,N \<Delta\>t|)>=<big|int>D<around*|(|x,k|)>
+    p<around*|(|x<rsub|0>,0|)> exp<around*|(|-S<around*|(|x,k|)>|)>+\<omicron\><around*|(|N
+    \<Delta\>t|)>.<label|equation:path integral of markov process>
+  </equation>
+
+  We will tackle this in section <reference|section: * Estimation of the
+  Residue>.
+
+  The <math|S> is a real function since each <math|K<rsub|n>> is real, but
+  the argument <math|k> lives on <math|\<bbb-I\>>. The path is, thus, a
+  poly-line on <math|\<bbb-R\><rsup|d>\<times\>\<bbb-I\><rsup|d>>, with
+  <math|x\<in\>\<bbb-R\><rsup|d>> and <math|k\<in\>\<bbb-I\><rsup|d>>. In a
+  specific situation where <math|N<rsub|cut>=2> and
   <math|K<rsub|2><around*|(|x|)>> is constant (matrix), the
-  <math|k>-components can be analytically marginalized (section
-  <reference|section: Langevin Process with Constant Covariance Has a Path
-  Integral on Alphabet>). Then, the path integral is taken on the alphabet
-  <math|\<bbb-R\><rsup|d>> (namely, the path is a series
-  <math|<around*|(|x<rsub|0>,x<rsub|1>,\<ldots\>,x<rsub|N>|)>> with each
-  <math|x<rsub|i>\<in\>\<bbb-R\><rsup|d>>).
+  <math|k>-components can be analytically marginalized. Then, the path
+  integral is taken on the alphabet <math|\<bbb-R\><rsup|d>> (namely, the
+  path is a series <math|<around*|(|x<rsub|0>,x<rsub|1>,\<ldots\>,x<rsub|N>|)>>
+  with each <math|x<rsub|i>\<in\>\<bbb-R\><rsup|d>>). We are to discuss this
+  in section <reference|section: Langevin Process with Constant Covariance
+  Has a Path Integral on Alphabet>.
 
   <subsection|<math|\<clubsuit\>> Estimation of the Residue><label|section: *
   Estimation of the Residue>
@@ -4591,7 +4602,38 @@
   action constant covariance>, we have inserted a parameter <math|\<theta\>>
   into <math|f>. The right hand side can be viewed as a marginalization of
   <math|<around*|(|x<rsub|0>,\<ldots\>,x<rsub|N-1>|)>> on the density
-  function
+  function<\footnote>
+    We shall check normalization condition of
+    <math|p<around*|(|x\|\<theta\>|)>>. But this has been guaranteed by
+    <math|K<rsub|0><around*|(|x|)>=0>. Namely, the vanishing of the zeroth
+    order momentum of transition density, which is equivalent to its
+    normalization condition. The action of Langevin process employed in this
+    section is a special case of the generic action derived in section
+    <reference|section: Markovian Process with Euclidean Alphabet Can Be
+    Formulated as Path Integral>, where we have used <math|K<rsub|0>=0>,
+    regardless whether <math|K<rsub|n>> (with <math|n\<gtr\>0>) may depend on
+    a parameter or not.
+
+    Even though, we are to check the normalization condition of
+    <math|p<around*|(|x\|\<theta\>|)>> explicitly. To show this, we first
+    integrate over <math|x<rsub|N>>. The factor that depends on
+    <math|x<rsub|N>> is
+
+    <\equation*>
+      <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N>
+      exp<around*|(|-<big|sum><rsub|\<alpha\>=1><rsup|d><frac|<around*|(|x<rsub|N><rsup|\<alpha\>>-x<rsub|N-1><rsup|\<alpha\>>-f<rsup|\<alpha\>><around*|(|x<rsub|N-1>,\<theta\>|)>|)><rsup|2>|2\<Delta\>t>+const|)>.
+    </equation*>
+
+    Using the formula of Gaussian integral, it turns to be
+    <math|<around*|(|\<pi\>/<around*|(|2\<Delta\>t|)>|)><rsup|1/2>>. We can
+    then absorb it into the <math|const> term, resulting in a unit. Repeat
+    this process for <math|x<rsub|N-1>,\<ldots\>,x<rsub|1>> sequentially, we
+    arrive at <math|<big|int>\<mathd\>x<rsub|0>
+    p<rsub|0><around*|(|x<rsub|0>|)>> which again is a unit because of the
+    normalization condition for the prior density <math|p<rsub|0>>. The
+    normalization condition of <math|p<around*|(|x\|\<theta\>|)>> is thus
+    satisfied.
+  </footnote>
 
   <\equation>
     p<around*|(|x\|\<theta\>|)>=p<around*|(|x<rsub|0>,x<rsub|1>,\<ldots\>,x<rsub|N>\|\<theta\>|)>=p<rsub|0><around*|(|x<rsub|0>|)>
@@ -4600,32 +4642,6 @@
 
   Hence, <math|P<around*|(|\<theta\>|)>> is the distribution of the whole
   path <math|X\<assign\><around*|(|X<rsub|0>,\<ldots\>,X<rsub|N>|)>>.
-
-  Before going on, we have to check that the normalization condition of
-  <math|p<around*|(|x\|\<theta\>|)>>. Namely, for all <math|\<theta\>>, we
-  shall have
-
-  <\equation*>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|0>\<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N>
-    p<rsub|0><around*|(|x<rsub|0>|)> exp<around*|(|-S<around*|(|x,\<theta\>|)>|)>=1.
-  </equation*>
-
-  To show this, we first integrate over <math|x<rsub|N>>. The factor that
-  depends on <math|x<rsub|N>> is
-
-  <\equation*>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N>
-    exp<around*|(|-<big|sum><rsub|\<alpha\>=1><rsup|d><frac|<around*|(|x<rsub|N><rsup|\<alpha\>>-x<rsub|N-1><rsup|\<alpha\>>-f<rsup|\<alpha\>><around*|(|x<rsub|N-1>,\<theta\>|)>|)><rsup|2>|2\<Delta\>t>+const|)>.
-  </equation*>
-
-  Using the formula of Gaussian integral, it turns to be
-  <math|<around*|(|\<pi\>/<around*|(|2\<Delta\>t|)>|)><rsup|1/2>>. We can
-  then absorb it into the <math|const> term, resulting in a unit. Repeat this
-  process for <math|x<rsub|N-1>,\<ldots\>,x<rsub|1>> sequentially, we arrive
-  at <math|<big|int>\<mathd\>x<rsub|0> p<rsub|0><around*|(|x<rsub|0>|)>>
-  which again is a unit because of the normalization condition for the prior
-  density <math|p<rsub|0>>. The normalization condition of
-  <math|p<around*|(|x\|\<theta\>|)>> is thus satisfied.
 
   To evaluate the Fisher matrix <math|\<cal-F\><around*|(|\<theta\>|)>> that
   characterizes the responses of <math|P<around*|(|\<theta\>|)>> to the
@@ -4850,9 +4866,9 @@
     <associate|equation:action of distribution|<tuple|4.6|39>>
     <associate|equation:action of markovian process|<tuple|5.4|44>>
     <associate|equation:action of stochastic process|<tuple|4.5|39>>
-    <associate|equation:berezin integral|<tuple|5.15|49>>
-    <associate|equation:berezin integral exp|<tuple|5.12|48>>
-    <associate|equation:berezin integral measurement|<tuple|5.14|49>>
+    <associate|equation:berezin integral|<tuple|5.16|49>>
+    <associate|equation:berezin integral exp|<tuple|5.13|48>>
+    <associate|equation:berezin integral measurement|<tuple|5.15|49>>
     <associate|equation:data-fitting iteration|<tuple|4.8|40>>
     <associate|equation:data-fitting result|<tuple|4.9|40>>
     <associate|equation:detailed balance condition for
@@ -4860,20 +4876,20 @@
     <associate|equation:discrete time master equation|<tuple|2.5|14>>
     <associate|equation:discrete time master equation v0|<tuple|2.2|14>>
     <associate|equation:equation:metropolis-hastings|<tuple|2.12|22>>
-    <associate|equation:expand by delta|<tuple|5.7|46>>
+    <associate|equation:expand by delta|<tuple|5.8|46>>
     <associate|equation:general path integral|<tuple|5.1|43>>
     <associate|equation:generic density|<tuple|4.7|40>>
-    <associate|equation:grassmann integral transform|<tuple|5.13|49>>
+    <associate|equation:grassmann integral transform|<tuple|5.14|49>>
     <associate|equation:harmonic oscillator action|<tuple|4.1|37>>
     <associate|equation:heat equation|<tuple|3.9|31>>
     <associate|equation:km expansion|<tuple|3.7|28>>
     <associate|equation:km expansion v2|<tuple|3.8|29>>
-    <associate|equation:langevin action constant covariance|<tuple|5.11|47>>
-    <associate|equation:langevin action general|<tuple|5.17|50>>
+    <associate|equation:langevin action constant covariance|<tuple|5.12|47>>
+    <associate|equation:langevin action general|<tuple|5.18|50>>
     <associate|equation:langevin equation|<tuple|3.14|33>>
     <associate|equation:langevin equation 2|<tuple|3.15|34>>
     <associate|equation:langevin iteration|<tuple|4.10|41>>
-    <associate|equation:langevin process after cholesky|<tuple|5.16|49>>
+    <associate|equation:langevin process after cholesky|<tuple|5.17|49>>
     <associate|equation:langevin transition density approx|<tuple|3.13|33>>
     <associate|equation:langevin transition rate|<tuple|3.11|32>>
     <associate|equation:least-action principle v0|<tuple|4.2|37>>
@@ -4882,17 +4898,19 @@
     <associate|equation:master equation series|<tuple|4.4|39>>
     <associate|equation:master equation v0|<tuple|2.3|14>>
     <associate|equation:metropolis-hastings origin|<tuple|2.13|22>>
-    <associate|equation:path integral I|<tuple|5.9|47>>
-    <associate|equation:path integral of markov process|<tuple|5.2|44>>
+    <associate|equation:path integral I|<tuple|5.10|47>>
+    <associate|equation:path integral of markov process|<tuple|5.5|44>>
     <associate|equation:relative entropy derivative|<tuple|2.11|18>>
-    <associate|equation:residue zeta|<tuple|5.6|45>>
+    <associate|equation:residue zeta|<tuple|5.7|45>>
     <associate|equation:smoothness|<tuple|3.3|24>>
     <associate|equation:smoothness F1|<tuple|3.5|25>>
     <associate|equation:smoothness G1|<tuple|3.6|27>>
     <associate|equation:stationary Fokker-Planck equation|<tuple|3.16|34>>
-    <associate|equation:to ghosts|<tuple|5.10|47>>
-    <associate|equation:transition density coef recur|<tuple|5.5|45>>
+    <associate|equation:to ghosts|<tuple|5.11|47>>
+    <associate|equation:transition density coef recur|<tuple|5.6|45>>
     <associate|equation:transition density normalization|<tuple|2.1|13>>
+    <associate|equation:transition density of markov process for path
+    integral|<tuple|5.2|44>>
     <associate|equation:transition rate determines transition
     density|<tuple|2.6|16>>
     <associate|equation:transition rate determines transition density
@@ -4916,10 +4934,10 @@
     <associate|footnote-3.5|<tuple|3.5|31>>
     <associate|footnote-4.1|<tuple|4.1|38>>
     <associate|footnote-5.1|<tuple|5.1|43>>
-    <associate|footnote-5.2|<tuple|5.2|44>>
-    <associate|footnote-5.3|<tuple|5.3|46>>
-    <associate|footnote-5.4|<tuple|5.4|50>>
+    <associate|footnote-5.2|<tuple|5.2|46>>
+    <associate|footnote-5.3|<tuple|5.3|50>>
     <associate|footnote-6.1|<tuple|6.1|52>>
+    <associate|footnote-6.2|<tuple|6.2|53>>
     <associate|footnr-1|<tuple|1|55>>
     <associate|footnr-1.1|<tuple|1.1|9>>
     <associate|footnr-1.2|<tuple|1.2|9>>
@@ -4937,10 +4955,10 @@
     <associate|footnr-3.5|<tuple|3.5|31>>
     <associate|footnr-4.1|<tuple|4.1|38>>
     <associate|footnr-5.1|<tuple|5.1|43>>
-    <associate|footnr-5.2|<tuple|5.2|44>>
-    <associate|footnr-5.3|<tuple|5.7|46>>
-    <associate|footnr-5.4|<tuple|5.4|50>>
+    <associate|footnr-5.2|<tuple|5.8|46>>
+    <associate|footnr-5.3|<tuple|5.3|50>>
     <associate|footnr-6.1|<tuple|6.1|52>>
+    <associate|footnr-6.2|<tuple|6.2|53>>
     <associate|section: * Estimation of the Residue|<tuple|5.1.1|45>>
     <associate|section: * Grassmann Variable, Berezin Integral, and
     Ghosts|<tuple|5.3|48>>

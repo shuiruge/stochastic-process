@@ -334,14 +334,14 @@
 
   <\equation*>
     p<around*|(|x<rsub|N>,N \<Delta\>t|)>=<big|int>D<around*|(|x,k|)>
-    exp<around*|(|-E<around*|(|x,k|)>+\<omicron\><around*|(|N
-    \<Delta\>t|)>|)> p<around*|(|x<rsub|0>,0|)>,
+    exp<around*|(|-S<around*|(|x,k|)>|)> p<around*|(|x<rsub|0>,0|)>+\<omicron\><around*|(|N
+    \<Delta\>t|)>,
   </equation*>
 
   where
 
   <\equation*>
-    E<around*|(|x,k|)>=<big|sum><rsub|i=0><rsup|N-1>\<Delta\>t<around*|{|\<mathi\>k<rsup|i><rsub|\<alpha\>><around*|[|<frac|x<rsub|i+1><rsup|\<alpha\>>-x<rsup|\<alpha\>><rsub|i>|\<Delta\>t>-K<rsub|1><rsup|\<alpha\>><around*|(|x<rsub|i>|)>|]>+<frac|1|2!>K<rsub|2><rsup|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>
+    S<around*|(|x,k|)>=<big|sum><rsub|i=0><rsup|N-1>\<Delta\>t<around*|{|\<mathi\>k<rsup|i><rsub|\<alpha\>><around*|[|<frac|x<rsub|i+1><rsup|\<alpha\>>-x<rsup|\<alpha\>><rsub|i>|\<Delta\>t>-K<rsub|1><rsup|\<alpha\>><around*|(|x<rsub|i>|)>|]>+<frac|1|2!>K<rsub|2><rsup|\<alpha\>\<beta\>><around*|(|x<rsub|i>|)>
     k<rsup|i><rsub|\<alpha\>>k<rsup|i><rsub|\<beta\>>+<frac|\<mathi\>|3!>K<rsub|3><rsup|\<alpha\>\<beta\>\<gamma\>><around*|(|x<rsub|i>|)>
     k<rsup|i><rsub|\<alpha\>>k<rsup|i><rsub|\<beta\>>
     k<rsup|i><rsub|\<gamma\>>+\<cdots\>|}>.
@@ -351,7 +351,7 @@
   mechanics. Legendre transform is given by
 
   <\equation*>
-    <frac|\<partial\>E|\<partial\>k><around*|(|x,k|)>=0,
+    <frac|\<partial\>S|\<partial\>k><around*|(|x,k|)>=0,
   </equation*>
 
   from which <math|k> is solved.
@@ -361,33 +361,33 @@
 
   <\equation*>
     \<Psi\><around*|(|x<rsub|N>,N \<Delta\>t|)>=<big|int>D<around*|(|x,k|)>
-    exp<around*|(|-E<rsub|CM><around*|(|x,k|)>/\<hbar\>|)>
+    exp<around*|(|-S<rsub|CM><around*|(|x,k|)>/\<hbar\>|)>
     \<Psi\><around*|(|x<rsub|0>,0|)>,
   </equation*>
 
   where
 
   <\equation*>
-    E<rsub|CM><around*|(|x,k|)>=<big|int><rsub|0><rsup|t>\<mathd\>t<around*|[|\<mathi\>k<wide|x|\<dot\>>-\<mathi\>H<around*|(|x,k|)>|]>
+    S<rsub|CM><around*|(|x,k|)>=<big|int><rsub|0><rsup|t>\<mathd\>t<around*|[|\<mathi\>k<wide|x|\<dot\>>-\<mathi\>H<around*|(|x,k|)>|]>
   </equation*>
 
-  denotes the classical <math|E> and <math|H> is the Hamiltonian (the
+  denotes the classical <math|S> and <math|H> is the Hamiltonian (the
   <math|\<mathi\>> in front of <math|H> is the characteristics of quantum
   system).
 
   We are to show that, as <math|\<hbar\>\<rightarrow\>0>, we naturally get
   the Legendre transformation <math|\<delta\>E<rsub|CM>/\<delta\>k=0>,
-  together with the dynamics <math|\<delta\>E<rsub|CM>/\<delta\>x=0>, as the
+  together with the dynamics <math|\<delta\>S<rsub|CM>/\<delta\>x=0>, as the
   classical limit. Indeed, we have
 
   <\equation*>
-    <frac|\<delta\>E<rsub|CM>|\<delta\>k<around*|(|t|)>>=\<mathi\>
+    <frac|\<delta\>S<rsub|CM>|\<delta\>k<around*|(|t|)>>=\<mathi\>
     <around*|[|<wide|x|\<dot\>>-<frac|\<partial\>H|\<partial\>k><around*|(|x,k|)>|]>.
   </equation*>
 
   Canonically, we have <math|H<around*|(|x,k|)>=k<rsup|2>/<around*|(|2m|)>+V<around*|(|x|)>>,
   thus <math|k=m <wide|x|\<dot\>>>. In addition,
-  <math|\<delta\>E<rsub|CM>/\<delta\>x=0> gives (discrete version)
+  <math|\<delta\>S<rsub|CM>/\<delta\>x=0> gives (discrete version)
 
   <\equation*>
     <frac|k<rsub|i>-k<rsub|i-1>|\<Delta\>t>=-<frac|\<partial\>H|\<partial\>x<rsub|i>><around*|(|x,k|)>=-<frac|\<partial\>V|\<partial\>x><around*|(|x<rsub|i>|)>
@@ -401,7 +401,7 @@
 
   \;
 
-  <with|color|red|So, can we illustrate the <math|E> (or <math|x> and
+  <with|color|red|So, can we illustrate the <math|S> (or <math|x> and
   <math|k>) as a whole, instead of integrating over <math|k>?>
 
   <section|Operator Equation>

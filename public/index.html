@@ -4373,7 +4373,7 @@ x^{\alpha}} \ln p (x) = - \int_{\mathbb{R}^d}
       We could construct the parameterized action \(S\) by a neural network
       that outputs a scalar float value. But we can go deeper, assuming that
       the stochastic dynamics of flocks obeys a Langevin process with constant
-      covariance. Namely, we employ the action <a href="#equation:langevin action constant covariance">5.11</a>, and
+      covariance. Namely, we employ the action <a href="#equation:langevin action constant covariance">5.12</a>, and
       construct the \(f\) therein using neural network, which outputs a float
       vector (array).
     </p>
@@ -4637,54 +4637,8 @@ x_N)),\)
 \epsilon^{\alpha} + \hat{r} (x, k) \Delta t) .\)
     </center>
     <p>
-      Plugging this back into equation <a href="#equation:master equation series">4.4</a>, we get a path
-      integral formulation
-    </p>
-    <center>
-      \(\displaystyle p (x_N, N \Delta t) \approx \int D (x, k) p (x_0, 0)
-      \exp \left( \sum_{i =
-0}^{N - 1} \{ \mathrm{i} (k_i)_{\alpha}
-      (x^{\alpha}_{i + 1} - x_i^{\alpha}) +
-\hat{r} (x_i, k_i) \Delta t \}
-      \right)\)
-    </center>
-    <p>
-      with abbreviation
-    </p>
-    <center>
-      \(\displaystyle \int D (x, k) := \int_{\mathbb{R}^d} \mathrm{d} x_0
-      \int_{\mathbb{R}^d}
-\mathrm{d} k_0 \cdots \int_{\mathbb{R}^d} \mathrm{d}
-      x_{N - 1}
-\int_{\mathbb{R}^d} \mathrm{d} k_{N - 1} .\)
-    </center>
-    <p>
-      The residue of this approximation is found to be non-trivial. We tackle
-      this in section <a href="#section: * Estimation of the Residue">5.1.1</a>. As the result, we find
-    </p>
-    <table width="100%">
-      <tr>
-        <td width="100%" align="center">\(\displaystyle p (x_N, N \Delta t) = \int D (x, k)
-        p (x_0, 0) \exp (- S (x, k)) + \omicron (N
-\Delta t), \)</td>
-        <td align="right">(5.2)</td>
-      </tr>
-    </table>
-    <p>
-      where the action is
-    </p>
-    <table width="100%">
-      <tr>
-        <td width="100%" align="center">\(\displaystyle S (x, k) = - \sum_{i = 0}^{N - 1} \{
-        \mathrm{i} (k_i)_{\alpha} (x^{\alpha}_{i
-+ 1} - x_i^{\alpha}) +
-        \hat{r} (x_i, k_i) \Delta t \} .\)</td>
-        <td align="right">(5.3)</td>
-      </tr>
-    </table>
-    <p>
-      If we Taylor expand \(\hat{r} (x, k)\) by \(k\) at the origin, then the
-      coefficient is
+      Further, if we Taylor expand \(\hat{r} (x, k)\) by \(k\) at the origin,
+      then the coefficient is
     </p>
     <center>
       \(\displaystyle \lim_{k \rightarrow 0} \frac{\partial}{\partial
@@ -4714,53 +4668,108 @@ k_{\alpha_n},\)
       where the zeroth order term vanishes (thus the summation begins at \(n =
       1\)) because of the property of transition rate \(\int \mathrm{d}
       \epsilon r (x, x + \epsilon) = 0\). As discussed in section <a href="#section: Cut-off in the Moments of Transition Rate Is Essential for Spatial Smoothness">3.1</a>,
-      the summation terminates at \(N_{\operatorname{cut}}\). Then, the action
-      becomes
+      the summation terminates at \(N_{\operatorname{cut}}\). Plugging this
+      back gives
+    </p>
+    <center>
+      \(\displaystyle q_{\Delta t} (x \rightarrow x + \epsilon) \approx
+      \int_{\mathbb{R}^d}
+\frac{\mathrm{d} k}{(2 \pi)^d} \exp \left(
+      \mathrm{i} k_{\alpha}
+\epsilon^{\alpha} + \Delta t \sum_{n =
+      1}^{N_{\operatorname{cut}}} \frac{(-
+\mathrm{i})^n}{n!} K_n^{\alpha_1
+      \cdots \alpha_n} (x) k_{\alpha_1} \cdots
+k_{\alpha_n} \right) .\)
+    </center>
+    <p>
+      Or putting \(\mathrm{i} k\) together as \(k\),
     </p>
     <table width="100%">
       <tr>
-        <td width="100%" align="center">\(\displaystyle S (x, k) = - \sum_{i = 0}^{N - 1}
-        \Delta t \left\{ \mathrm{i} \left(
-\frac{x^{\alpha}_{i + 1} -
-        x_i^{\alpha}}{\Delta t} - K_1^{\alpha} (x_i)
-\right) (k_i)_{\alpha} +
-        \sum_{n = 2}^{N_{\operatorname{cut}}} \frac{(-
-\mathrm{i})^n}{n!}
-        K_n^{\alpha_1 \cdots \alpha_n} (x_i) (k_i)_{\alpha_1}
-\cdots
-        (k_i)_{\alpha_n} \right\} . \)</td>
+        <td width="100%" align="center">\(\displaystyle q_{\Delta t} (x \rightarrow x +
+        \epsilon) \approx
+\int_{{\color{red}{\mathbb{I}}}^d} \frac{\mathrm{d}
+        k}{(2 \pi
+{\color{red}{\mathrm{i}}})^d} \exp \left( k_{\alpha}
+        \epsilon^{\alpha} +
+\Delta t \sum_{n = 1}^{N_{\operatorname{cut}}}
+        \frac{(- 1)^n}{n!}
+K_n^{\alpha_1 \cdots \alpha_n} (x) k_{\alpha_1}
+        \cdots k_{\alpha_n} \right), \)</td>
+        <td align="right">(5.2)</td>
+      </tr>
+    </table>
+    <p>
+      where \(\mathbb{I} := \{ \mathrm{i} x|x \in \mathbb{R} \}\) is the
+      imaginary axis of complex plane \(\mathbb{C}\).
+    </p>
+    <p>
+      Inserting equation <a href="#equation:transition density of markov process for path integral">5.2</a> into equation <a href="#equation:master equation series">4.4</a>, we
+      get a path integral formulation
+    </p>
+    <center>
+      \(\displaystyle p (x_N, N \Delta t) \approx \int D (x, k) p (x_0, 0)
+      \exp (- S (x, k)),\)
+    </center>
+    <p>
+      where the integral
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle \int D (x, k) := \int_{\mathbb{R}^d}
+        \mathrm{d} x_0 \int_{\mathbb{I}^d}
+\frac{\mathrm{d} k^0}{(2 \pi
+        \mathrm{i})^d} \cdots \int_{\mathbb{R}^d}
+\mathrm{d} x_{N - 1}
+        \int_{\mathbb{I}^d} \frac{\mathrm{d} k^{N - 1}}{(2
+        \pi
+\mathrm{i})^d}\)</td>
+        <td align="right">(5.3)</td>
+      </tr>
+    </table>
+    <p>
+      and the action
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle S (x, k) := - \sum_{i = 0}^{N - 1}
+        \Delta t \left\{ \left( \frac{x^{\alpha}_{i
++ 1} -
+        x_i^{\alpha}}{\Delta t} - K_1^{\alpha} (x_i) \right) k^i_{\alpha}
+        +
+\sum_{n = 2}^{N_{\operatorname{cut}}} \frac{(- 1)^n}{n!}
+        K_n^{\alpha_1 \cdots
+\alpha_n} (x_i) k^i_{\alpha_1} \cdots
+        k^i_{\alpha_n} \right\} . \)</td>
         <td align="right">(5.4)</td>
       </tr>
     </table>
     <p>
-      
+      The residue of this approximation is found to be non-trivial. As the
+      result, we find
+    </p>
+    <table width="100%">
+      <tr>
+        <td width="100%" align="center">\(\displaystyle p (x_N, N \Delta t) = \int D (x, k)
+        p (x_0, 0) \exp (- S (x, k)) + \omicron (N
+\Delta t) . \)</td>
+        <td align="right">(5.5)</td>
+      </tr>
+    </table>
+    <p>
+      We will tackle this in section <a href="#section: * Estimation of the Residue">5.1.1</a>.
     </p>
     <p>
-      The path is a poly-line on \(\mathbb{R}^{2 d}\) (involving both \(x \in
-      \mathbb{R}^d\) and \(k \in \mathbb{R}^d\)).
-      <div class="footnote">
-        <font style="font-size: 77.1%"><div align="justify">
-          <div style="margin-left: 0px">
-            <div style="margin-right: 0px">
-              <class style="font-style: normal"><p>
-                5.2. Analogy to classical mechanics, the \(k\)-components can
-                be seen as momenta. Then, the \(\mathbb{R}^{2 d}\) is regarded
-                as a &ldquo;phase space&rdquo;.
-              </p></class>
-            </div>
-          </div>
-        </div></font>
-      </div>
-      <span style="margin-left: 0em"></span>
-      <a id="footnr-5.2"></a>
-      <sup><class style="font-style: normal"><a href="#footnote-5.2">5.2</a></class></sup>
-      But in a specific situation where \(N_{\operatorname{cut}} = 2\) and
-      \(K_2 (x)\) is constant (matrix), the \(k\)-components can be
-      analytically marginalized (section
-      <a href="#section: Langevin Process with Constant Covariance Has a Path Integral on Alphabet">5.2</a>
-      ). Then, the path integral is taken on the alphabet \(\mathbb{R}^d\)
-      (namely, the path is a series \((x_0, x_1, \ldots, x_N)\) with each
-      \(x_i \in \mathbb{R}^d\)).
+      The \(S\) is a real function since each \(K_n\) is real, but the
+      argument \(k\) lives on \(\mathbb{I}\). The path is, thus, a poly-line
+      on \(\mathbb{R}^d \times \mathbb{I}^d\), with \(x \in \mathbb{R}^d\) and
+      \(k \in \mathbb{I}^d\). In a specific situation where
+      \(N_{\operatorname{cut}} = 2\) and \(K_2 (x)\) is constant (matrix), the
+      \(k\)-components can be analytically marginalized. Then, the path
+      integral is taken on the alphabet \(\mathbb{R}^d\) (namely, the path is
+      a series \((x_0, x_1, \ldots, x_N)\) with each \(x_i \in
+      \mathbb{R}^d\)). We are to discuss this in section <a href="#section: Langevin Process with Constant Covariance Has a Path Integral on Alphabet">5.2</a>.
     </p>
     <h3 id="auto-32"><a id="section: * Estimation of the Residue"></a>5.1.1<span style="margin-left: 1em"></span>\(\clubsuit\) Estimation of
     the Residue<span style="margin-left: 1em"></span></h3>
@@ -4872,7 +4881,7 @@ x^{\alpha_m}} (x, k)
         \frac{\partial^m \hat{r}}{\partial k_{\alpha_1} \cdots
 \partial
         k_{\alpha_m}} (x, k) . \)</td>
-        <td align="right">(5.5)</td>
+        <td align="right">(5.6)</td>
       </tr>
     </table>
     <p>
@@ -4889,7 +4898,7 @@ t),\)
     <p>
       where \(\hat{\zeta} (x, k, \Delta t)\) collects the terms in each
       \(\hat{g}_n (x, k)\) except for the \([\hat{r} (x, k)]^n\). Together
-      with equation <a href="#equation:transition density coef recur">5.5</a>, we get
+      with equation <a href="#equation:transition density coef recur">5.6</a>, we get
     </p>
     <table width="100%">
       <tr>
@@ -4903,7 +4912,7 @@ t),\)
         \hat{r}}{\partial k_{\alpha_1} \cdots \partial k_{\alpha_m}}
 (x, k) .
         \)</td>
-        <td align="right">(5.6)</td>
+        <td align="right">(5.7)</td>
       </tr>
     </table>
     <p>
@@ -4925,7 +4934,7 @@ t),\)
           <div style="margin-left: 0px">
             <div style="margin-right: 0px">
               <class style="font-style: normal"><p>
-                5.3. This can be viewed as a generalization of Kramers-Moyal
+                5.2. This can be viewed as a generalization of Kramers-Moyal
                 expansion. In fact, we are to prove this expansion by
                 following the steps in section <a href="#section: Kramers&ndash;Moyal Expansion Formulates Transition Rate by Its Moments">3.2</a>, in which we
                 proved Kramers-Moyal expansion. Explicitly, consider a
@@ -5006,7 +5015,7 @@ t),\)
                   
 (\partial_{\alpha_1} \cdots \partial_{\alpha_n} \delta) (x)
                   . \)</td>
-                  <td align="right">(5.7)</td>
+                  <td align="right">(5.8)</td>
                 </tr>
               </table></class>
             </div>
@@ -5014,8 +5023,8 @@ t),\)
         </div></font>
       </div>
       <span style="margin-left: 0em"></span>
-      <a id="footnr-5.3"></a>
-      <sup><class style="font-style: normal"><a href="#footnote-5.3">5.3</a></class></sup>
+      <a id="footnr-5.2"></a>
+      <sup><class style="font-style: normal"><a href="#footnote-5.2">5.2</a></class></sup>
     </p>
     <table width="100%">
       <tr>
@@ -5025,7 +5034,7 @@ t),\)
         \partial^{\alpha_n} \hat{f}) (0)
 (\partial_{\alpha_1} \cdots
         \partial_{\alpha_n} \delta) (x) .\)</td>
-        <td align="right">(5.8)</td>
+        <td align="right">(5.9)</td>
       </tr>
     </table>
     <p>
@@ -5064,7 +5073,7 @@ t)
     </center>
     <p>
       So, we have to show that the coefficients are well-defined. Inserting
-      equation <a href="#equation:residue zeta">5.6</a>, we find the coefficient
+      equation <a href="#equation:residue zeta">5.7</a>, we find the coefficient
     </p>
     <center>
       \(\displaystyle \frac{\partial^l \hat{\zeta}}{\partial k_{\alpha_1}
@@ -5098,14 +5107,14 @@ x^{\alpha_m}} (x, 0) \frac{\partial^m
     <h2 id="auto-33"><a id="section: Langevin Process with Constant Covariance Has a Path Integral on Alphabet"></a>5.2<span style="margin-left: 1em"></span>Langevin Process with Constant
     Covariance Has a Path Integral on Alphabet<span style="margin-left: 1em"></span></h2>
     <p>
-      The path integral <a href="#equation:path integral of markov process">5.2</a> integrates on paths over both \(x\)
+      The path integral <a href="#equation:path integral of markov process">5.5</a> integrates on paths over both \(x\)
       and \(k\). In this section, we are to see when we can marginalize
       (integrate out) the \(k\)-component, leaving only the \(x\), namely the
       path on the alphabet.
     </p>
     <p>
       Given \(i \in \{ 0, \ldots, N - 1 \}\), we are to integrate out the
-      \(k_i\) in equation <a href="#equation:path integral of markov process">5.2</a>, together with the action <a href="#equation:action of markovian process">5.4</a>.
+      \(k_i\) in equation <a href="#equation:path integral of markov process">5.5</a>, together with the action <a href="#equation:action of markovian process">5.4</a>.
       Now we can safely neglect the residue, and write the integral as
       (replacing \(x_i\) by \(x\), \(k_i\) by \(k\), and \(x_{i + 1} - x_i\)
       by \(\epsilon\) for simplicity)
@@ -5122,7 +5131,7 @@ x^{\alpha_m}} (x, 0) \frac{\partial^m
 \frac{\mathrm{i} \Delta t}{3!} K_3^{\alpha \beta \gamma} (x)
         k_{\alpha}
 k_{\beta} k_{\gamma} + \cdots \right) . \)</td>
-        <td align="right">(5.9)</td>
+        <td align="right">(5.10)</td>
       </tr>
     </table>
     <p>
@@ -5175,7 +5184,7 @@ b_{\beta} \right) .\)
         f^{\alpha} (x) \right] \left[
 \frac{\epsilon^{\beta}}{\Delta t} -
         f^{\beta} (x) \right] \right) . \)</td>
-        <td align="right">(5.10)</td>
+        <td align="right">(5.11)</td>
       </tr>
     </table>
     <p>
@@ -5202,7 +5211,7 @@ b_{\beta} \right) .\)
     </center>
     <p>
       up to a constant term in the exponential. Plugging \(I (x)\) back to
-      equation <a href="#equation:path integral of markov process">5.2</a>, we find
+      equation <a href="#equation:path integral of markov process">5.5</a>, we find
     </p>
     <center>
       \(\displaystyle p (x_N, N \Delta t) = \int D (x) p (x_0, 0) \exp (- S
@@ -5228,7 +5237,7 @@ b_{\beta} \right) .\)
         1}^{\alpha} - x_i^{\alpha}}{\Delta t} - f^{\alpha}
 (x_i) \right)
         \right]^2 \right\} . \)</td>
-        <td align="right">(5.11)</td>
+        <td align="right">(5.12)</td>
       </tr>
     </table>
     <p>
@@ -5237,7 +5246,7 @@ b_{\beta} \right) .\)
     <p>
       Final remark on cut-off \(N_{\operatorname{cut}} = 2\). If choose
       \(N_{\operatorname{cut}} > 2\), it is hard to see how to integrate the
-      improper integral <a href="#equation:path integral I">5.9</a>, and even to show why it is finite.
+      improper integral <a href="#equation:path integral I">5.10</a>, and even to show why it is finite.
       For example, if \(N_{\operatorname{cut}} = 4\), the \((\Delta t / 4!)
       K^{\alpha \beta \gamma \sigma}_4 (x) k_{\alpha} k_{\beta}
 k_{\gamma}
@@ -5341,7 +5350,7 @@ k_{\gamma}
 \mathrm{d} \eta_1 \int \mathrm{d} \zeta_1 (\zeta_1 \eta_1 \cdots
         \zeta_n
 \eta_n) \right] = 1, \)</td>
-        <td align="right">(5.12)</td>
+        <td align="right">(5.13)</td>
       </tr>
     </table></font>
     <p>
@@ -5410,7 +5419,7 @@ k_{\gamma}
         \mathrm{d} \zeta'_1 = \det A \times \int
 \mathrm{d} \zeta_d \cdots
         \int \mathrm{d} \zeta_1 . \)</td>
-        <td align="right">(5.13)</td>
+        <td align="right">(5.14)</td>
       </tr>
     </table>
     <p>
@@ -5437,12 +5446,12 @@ k_{\gamma}
         \eta := \int \mathrm{d} \zeta_d \int
 \mathrm{d} \eta_d \cdots \int
         \mathrm{d} \zeta_1 \int \mathrm{d} \eta_1 . \)</td>
-        <td align="right">(5.14)</td>
+        <td align="right">(5.15)</td>
       </tr>
     </table>
     <p>
       Defining \(\zeta'_{\beta} := A_{\alpha \beta} \zeta^{\alpha}\) and using
-      equation <a href="#equation:grassmann integral transform">5.13</a>, it becomes
+      equation <a href="#equation:grassmann integral transform">5.14</a>, it becomes
     </p>
     <center>
       \(\displaystyle \int \mathrm{d} \zeta \mathrm{d} \eta \exp (A_{\alpha
@@ -5452,7 +5461,7 @@ k_{\gamma}
 (\zeta'_{\beta} \eta^{\beta}) .\)
     </center>
     <p>
-      The rightmost factor has been evaluated in equation <a href="#equation:berezin integral exp">5.12</a>,
+      The rightmost factor has been evaluated in equation <a href="#equation:berezin integral exp">5.13</a>,
       which results in \(1\), thus
     </p>
     <table width="100%">
@@ -5461,7 +5470,7 @@ k_{\gamma}
         \eta \exp (A_{\alpha \beta} \zeta^{\alpha}
 \eta^{\beta}) = \det A.
         \)</td>
-        <td align="right">(5.15)</td>
+        <td align="right">(5.16)</td>
       </tr>
     </table>
     <p>
@@ -5470,7 +5479,7 @@ k_{\gamma}
     </p>
     <p>
       After introducing Berezin integral, we go back to deal with equation <a
-      href="#equation:to ghosts">5.10</a> where \(\Sigma\) is not a constant. We first use Cholesky
+      href="#equation:to ghosts">5.11</a> where \(\Sigma\) is not a constant. We first use Cholesky
       factorization to remove the square root and the fraction. Then, using
       Berezin integral to convert the determinant into exponential.
     </p>
@@ -5496,7 +5505,7 @@ k_{\gamma}
         \left(
 \frac{\epsilon^{\beta}}{\Delta t} - f^{\beta} (x) \right)
         \right]^2 \right) . \)</td>
-        <td align="right">(5.16)</td>
+        <td align="right">(5.17)</td>
       </tr>
     </table>
     <p>
@@ -5505,7 +5514,7 @@ k_{\gamma}
     </p>
     <p>
       Then, using Berezin integral, we can convert the \(\det R (x)\) factor
-      in equation <a href="#equation:langevin process after cholesky">5.16</a> into exponential. Replacing \(A\) by \(R
+      in equation <a href="#equation:langevin process after cholesky">5.17</a> into exponential. Replacing \(A\) by \(R
       (x) \Delta t\), we find
     </p>
     <center>
@@ -5521,7 +5530,7 @@ k_{\gamma}
           <div style="margin-left: 0px">
             <div style="margin-right: 0px">
               <class style="font-style: normal"><p>
-                5.4. You may convert the determinant directly into exponential
+                5.3. You may convert the determinant directly into exponential
                 by using logarithm, namely \(\det R (x) = \exp \{ \ln [\det R
                 (x)] \}\). This fails in our situation because we expect the
                 term in the exponential to be proportional to \(\Delta t\).
@@ -5531,8 +5540,8 @@ k_{\gamma}
         </div></font>
       </div>
       <span style="margin-left: 0em"></span>
-      <a id="footnr-5.4"></a>
-      <sup><class style="font-style: normal"><a href="#footnote-5.4">5.4</a></class></sup>
+      <a id="footnr-5.3"></a>
+      <sup><class style="font-style: normal"><a href="#footnote-5.3">5.3</a></class></sup>
     </p>
     <center>
       \(\displaystyle q_{\Delta t} (x \rightarrow x + \epsilon) =
@@ -5551,7 +5560,7 @@ R_{\alpha \beta} (x)
       &ldquo;ghost variables&rdquo;.
     </p>
     <p>
-      Plugging back to master equation <a href="#equation:path integral of markov process">5.2</a>, we get
+      Plugging back to master equation <a href="#equation:path integral of markov process">5.5</a>, we get
     </p>
     <center>
       \(\displaystyle p (x_N, N \Delta t) = \int \mathrm{D} (x, \zeta, \eta) p
@@ -5582,7 +5591,7 @@ R_{\alpha \beta} (x)
         x_i^{\beta}}{\Delta t} - f^{\beta} (x_i) \right) \right]^2 +
 R_{\alpha
         \beta} (x_i) \zeta^{\alpha}_i \eta_i^{\beta} \right\} . \)</td>
-        <td align="right">(5.17)</td>
+        <td align="right">(5.18)</td>
       </tr>
     </table>
     <p>
@@ -5865,10 +5874,53 @@ p}{\partial
     </table>
     <p>
       where \(\operatorname{const}\) is a constant for ensuring the
-      normalization condition of \(p_N\). Comparing with equation <a href="#equation:langevin action constant covariance">5.11</a>,
-      we have inserted a parameter \(\theta\) into \(f\). The right hand side
-      can be viewed as a marginalization of \((x_0, \ldots, x_{N - 1})\) on
-      the density function
+      normalization condition of \(p_N\). Comparing with equation
+      <a href="#equation:langevin action constant covariance">5.12</a>
+      , we have inserted a parameter \(\theta\) into \(f\). The right hand
+      side can be viewed as a marginalization of \((x_0, \ldots, x_{N - 1})\)
+      on the density function
+      <div class="footnote">
+        <font style="font-size: 77.1%"><div align="justify">
+          <div style="margin-left: 0px">
+            <div style="margin-right: 0px">
+              <class style="font-style: normal"><p>
+                6.2. We shall check normalization condition of \(p (x|
+                \theta)\). But this has been guaranteed by \(K_0 (x) = 0\).
+                Namely, the vanishing of the zeroth order momentum of
+                transition density, which is equivalent to its normalization
+                condition. The action of Langevin process employed in this
+                section is a special case of the generic action derived in
+                section <a href="#section: Markovian Process with Euclidean Alphabet Can Be Formulated as Path Integral">5.1</a>, where we have used \(K_0 = 0\),
+                regardless whether \(K_n\) (with \(n > 0\)) may depend on a
+                parameter or not.
+              </p><p>
+                Even though, we are to check the normalization condition of
+                \(p (x| \theta)\) explicitly. To show this, we first integrate
+                over \(x_N\). The factor that depends on \(x_N\) is
+              </p><center>
+                \(\displaystyle \int_{\mathbb{R}^d} \mathrm{d} x_N \exp \left(
+                - \sum_{\alpha = 1}^d
+\frac{(x_N^{\alpha} - x_{N - 1}^{\alpha}
+                - f^{\alpha} (x_{N - 1},
+\theta))^2}{2 \Delta t}
+                +\operatorname{const} \right) .\)
+              </center><p>
+                Using the formula of Gaussian integral, it turns to be \((\pi
+                / (2 \Delta t))^{1 / 2}\). We can then absorb it into the
+                \(\operatorname{const}\) term, resulting in a unit. Repeat
+                this process for \(x_{N - 1}, \ldots, x_1\) sequentially, we
+                arrive at \(\int \mathrm{d} x_0 p_0 (x_0)\) which again is a
+                unit because of the normalization condition for the prior
+                density \(p_0\). The normalization condition of \(p (x|
+                \theta)\) is thus satisfied.
+              </p></class>
+            </div>
+          </div>
+        </div></font>
+      </div>
+      <span style="margin-left: 0em"></span>
+      <a id="footnr-6.2"></a>
+      <sup><class style="font-style: normal"><a href="#footnote-6.2">6.2</a></class></sup>
     </p>
     <table width="100%">
       <tr>
@@ -5881,37 +5933,6 @@ p}{\partial
     <p>
       Hence, \(P (\theta)\) is the distribution of the whole path \(X := (X_0,
       \ldots, X_N)\).
-    </p>
-    <p>
-      Before going on, we have to check that the normalization condition of
-      \(p (x| \theta)\). Namely, for all \(\theta\), we shall have
-    </p>
-    <center>
-      \(\displaystyle \int_{\mathbb{R}^d} \mathrm{d} x_0 \cdots
-      \int_{\mathbb{R}^d} \mathrm{d} x_N
-p_0 (x_0) \exp (- S (x, \theta)) =
-      1.\)
-    </center>
-    <p>
-      To show this, we first integrate over \(x_N\). The factor that depends
-      on \(x_N\) is
-    </p>
-    <center>
-      \(\displaystyle \int_{\mathbb{R}^d} \mathrm{d} x_N \exp \left( -
-      \sum_{\alpha = 1}^d
-\frac{(x_N^{\alpha} - x_{N - 1}^{\alpha} -
-      f^{\alpha} (x_{N - 1},
-\theta))^2}{2 \Delta t} +\operatorname{const}
-      \right) .\)
-    </center>
-    <p>
-      Using the formula of Gaussian integral, it turns to be \((\pi / (2
-      \Delta t))^{1 / 2}\). We can then absorb it into the
-      \(\operatorname{const}\) term, resulting in a unit. Repeat this process
-      for \(x_{N - 1}, \ldots, x_1\) sequentially, we arrive at \(\int
-      \mathrm{d} x_0 p_0 (x_0)\) which again is a unit because of the
-      normalization condition for the prior density \(p_0\). The normalization
-      condition of \(p (x| \theta)\) is thus satisfied.
     </p>
     <p>
       To evaluate the Fisher matrix \(\mathcal{F} (\theta)\) that
@@ -6151,7 +6172,7 @@ x_{{\color{red}{N - 1}}} p_0 (x_0) \exp (- S (x {,} \theta))
       system. I found the cut-off by a series of complex calculation (section
       <a href="#section: Cut-off in the Moments of Transition Rate Is Essential for Spatial Smoothness">3.1</a>). Later on in the winter, while I was traveling to
       Sanya, I found a way of expanding a function by a series of generalized
-      functions (equation <a href="#equation:expand by delta">5.7</a>). It led to a direct proof of
+      functions (equation <a href="#equation:expand by delta">5.8</a>). It led to a direct proof of
       Kramers-Moyal expansion. It also gave raise to a rigorous proof of path
       integral formulation for stochastic system (section <a href="#section: Markovian Process with Euclidean Alphabet Can Be Formulated as Path Integral">5.1</a>),
       resulting in a new perspective to data-fitting.
