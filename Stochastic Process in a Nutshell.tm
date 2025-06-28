@@ -3,9 +3,9 @@
 <style|book>
 
 <\body>
-  <doc-data|<doc-title|On Stochastic Process>|<\doc-subtitle>
-    Notes about Information, Markovian Process, Least-Action Principle, and
-    Criticality
+  <doc-data|<doc-title|Stochastic Process in a Nutshell>|<\doc-subtitle>
+    A Brief Note about Information, Markovian Process, Least-Action
+    Principle, and Criticality
   </doc-subtitle>>
 
   <\table-of-contents|toc>
@@ -33,8 +33,8 @@
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-6>
 
-    <vspace*|1fn><with|font-series|bold|math-font-series|bold|2<space|2spc>Master
-    Equation> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|2<space|2spc>Evolution
+    of Markovian Process> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-7><vspace|0.5fn>
 
     2.1<space|2spc>Master Equation Describes the Evolution of Markov Process
@@ -61,8 +61,8 @@
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-13>
 
-    <vspace*|1fn><with|font-series|bold|math-font-series|bold|3<space|2spc>Kramers-Moyal
-    Expansion> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|3<space|2spc>Markovian
+    Process on Euclidean Space> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-14><vspace|0.5fn>
 
     3.1<space|2spc>Cut-off in the Moments of Transition Rate Is Essential for
@@ -113,8 +113,9 @@
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-26>
 
-    4.3<space|2spc>Data Fitting Is Equivalent to Least-Action Principle of
-    Distribution <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    4.3<space|2spc><with|mode|math|\<clubsuit\>> Data Fitting Is Equivalent
+    to Least-Action Principle of Distribution
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-27>
 
     4.4<space|2spc><with|mode|math|\<clubsuit\>> Example: Least-Action
@@ -122,41 +123,45 @@
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-29>
 
-    <vspace*|1fn><with|font-series|bold|math-font-series|bold|5<space|2spc>Path
-    Integral> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-30><vspace|0.5fn>
+    4.5<space|2spc>Markovian Process on Euclidean Space Can Be Formulated by
+    Path Integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-30>
 
-    5.1<space|2spc>Markovian Process with Euclidean Alphabet Can Be
-    Formulated as Path Integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-31>
-
-    <with|par-left|1tab|5.1.1<space|2spc><with|mode|math|\<clubsuit\>>
+    <with|par-left|1tab|4.5.1<space|2spc><with|mode|math|\<clubsuit\>>
     Estimation of the Residue <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-32>>
+    <no-break><pageref|auto-31>>
 
-    5.2<space|2spc>Langevin Process with Constant Covariance Has a Path
+    4.6<space|2spc>Langevin Process with Constant Covariance Has a Path
     Integral on Alphabet <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-32>
+
+    4.7<space|2spc><with|mode|math|\<clubsuit\>> Grassmann Variable, Berezin
+    Integral, and Ghosts <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-33>
 
-    5.3<space|2spc><with|mode|math|\<clubsuit\>> Grassmann Variable, Berezin
-    Integral, and Ghosts <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-34>
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|5<space|2spc>Fisher
+    Matrix and Criticality> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-34><vspace|0.5fn>
 
-    <vspace*|1fn><with|font-series|bold|math-font-series|bold|6<space|2spc>Fisher
-    Matrix> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-35><vspace|0.5fn>
-
-    6.1<space|2spc>Fisher Matrix Characterizes the Sensitivity of a
+    5.1<space|2spc>Fisher Matrix Characterizes the Sensitivity of a
     Stochastic System to Its Parameter <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-35>
+
+    5.2<space|2spc>Fisher Matrix of Langevin Process Is the Expectation of
+    Sensitivity along Path <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-36>
 
-    6.2<space|2spc>Fisher Matrix of Langevin Process Is the Expectation of
-    Sensitivity along Path <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    5.3<space|2spc>Example: Fisher Matrix of Chain Dynamics
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-37>
+
+    5.4<space|2spc>Example: Fisher Matrix of Lorenz System
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-38>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|Epilogue>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-38><vspace|0.5fn>
+    <no-break><pageref|auto-39><vspace|0.5fn>
   </table-of-contents>
 
   <prologue>
@@ -200,10 +205,10 @@
 
   <chapter|Relative Entropy><label|section: Relative Entropy>
 
-  In this chapter, we discuss the axiomatization of information. By figuring
-  out how Shannon entropy fails for continuous random variable, we build a
-  proper axiomatic system on which the expression of information is found to
-  be unique.
+  In this chapter, we discuss the axiomatization of information. It turns out
+  to be very useful throughout this little book. By figuring out how Shannon
+  entropy fails for continuous random variable, we build a proper axiomatic
+  system on which the expression of information is found to be unique.
 
   <em|Those that are not deterministic are denoted by capital letters.> But,
   a capital letter may also denote something that is determined. For example,
@@ -522,21 +527,27 @@
   <math|<big|int>\<mathd\>x p ln<around*|(|p/q|)>>). So, the two issues of
   Shannon entropy cease in relative entropy.
 
-  <chapter|Master Equation><label|section: Master Equation>
+  <chapter|Evolution of Markovian Process><label|section: Master Equation>
 
-  In this chapter, we discuss continuous time Markovian process. Using the
-  result obtained in chapter <reference|section: Relative Entropy>, we
-  declare how a Markovian process relaxes to its stationary equilibrium.
+  In this chapter, we discuss continuous time Markovian process. We start at
+  the master equation which characterizes the evolution of Markovian process.
+  Dislike the discrete time correspondence, continuous time Markovian process
+  has much less degree of freedom, completely determined by its transition
+  rate. Finally, using the result obtained in chapter <reference|section:
+  Relative Entropy>, we declare how a Markovian process relaxes to its
+  stationary equilibrium.
 
   Throughout this chapter, we reuse the notations in chapter
   <reference|section: Relative Entropy>. Let <math|X> a multi-dimensional
   random variables, being, discrete, continuous, or partially discrete and
   partially continuous, with alphabet <math|\<cal-X\>> and distribution
-  <math|P>. Even though the discussion in this chapter applies to both
-  discrete and continuous random variables, we use the notation of the
-  continuous. The reason is that converting from discrete to continuous may
-  cause problems (section <reference|section: Shannon Entropy Fails for
-  Continuous Random Variable>), while the inverse is safe and direct.
+  <math|P>. Correspondingly, the density function is written as
+  <math|p<around*|(|x|)>> for <math|x\<in\>\<cal-X\>>. Even though the
+  discussion in this chapter applies to both discrete and continuous random
+  variables, we use the notation of the continuous. The reason is that
+  converting from discrete to continuous may cause problems (section
+  <reference|section: Shannon Entropy Fails for Continuous Random Variable>),
+  while the inverse is safe and direct.
 
   When using conditional density function to describe the probability of
   transition, like <math|p<rsub|t\<rightarrow\>t<rprime|'>><around*|(|x<rprime|'>\|x|)>>
@@ -1608,7 +1619,8 @@
   in <math|g<rsub|\<Delta\>t>> shall be properly bounded to be small so as to
   ensure the relaxation <math|P<around*|(|t|)>\<rightarrow\>\<Pi\>>.
 
-  <chapter|Kramers-Moyal Expansion><label|section: Kramers-Moyal Expansion>
+  <chapter|Markovian Process on Euclidean Space><label|section: Kramers-Moyal
+  Expansion>
 
   We follow the discussion in chapter <reference|section: Master Equation>,
   but focusing on the specific situation where there is extra smooth
@@ -3279,9 +3291,9 @@
   redundancy. This is the direct implication that distribution involves more
   information than its most likely datum.
 
-  <section|Data Fitting Is Equivalent to Least-Action Principle of
-  Distribution><label|section: Data Fitting Is Equivalent to Least-Action
-  Principle of Distribution>
+  <section|<math|\<clubsuit\>> Data Fitting Is Equivalent to Least-Action
+  Principle of Distribution><label|section: Data Fitting Is Equivalent to
+  Least-Action Principle of Distribution>
 
   Given a collection of real world data, we are to find a distribution that
   fits the data. These data can be seen as samples from an unknown
@@ -3571,24 +3583,9 @@
   contrastive learning technique used in training models such as
   <verbatim|word2vec> in which the number of classes is extremely large.
 
-  <chapter|Path Integral><label|chapter: Path Integral>
-
-  In this chapter, we calculate the action of a generic Markovian process. To
-  do so, we first convert the master equation into a path integral. We then
-  find that the path integral is taken on an extended space. As an instance,
-  we consider the Langevin process, for which the extended components may be
-  analytically marginalized.
-
-  Throughout this chapter, we reuse the notations in chapter
-  <reference|section: Kramers-Moyal Expansion>. Briefly, the alphabet is an
-  Euclidean space <math|\<bbb-R\><rsup|d>>. We use Einstein's convention to
-  simplify notations. And notation <math|p<around*|(|x\<rightarrow\>y|)>> is
-  used for denoting the conditional density function
-  <math|p<around*|(|y\|x|)>>.
-
-  <section|Markovian Process with Euclidean Alphabet Can Be Formulated as
-  Path Integral><label|section: Markovian Process with Euclidean Alphabet Can
-  Be Formulated as Path Integral>
+  <section|Markovian Process on Euclidean Space Can Be Formulated by Path
+  Integral><label|section: Markovian Process with Euclidean Alphabet Can Be
+  Formulated as Path Integral>
 
   In section <reference|section: Least-Action Principle of Distribution Has
   No Redundancy>, we have shown how to define an action using distribution.
@@ -4411,7 +4408,7 @@
   mixture of real and Grassmann variables. Physicists call this extended
   space a <strong|super-space>.
 
-  <chapter|Fisher Matrix>
+  <chapter|Fisher Matrix and Criticality>
 
   While you are reading this book, the photons emitted from the screen or
   reflected from the papers hit on your retinae. It motives your brain to
@@ -4580,7 +4577,7 @@
   the path integral formulation of the Langevin process with constant
   covariance.
 
-  By the end of section <reference|section: Langevin Process with Constant
+  At the end of section <reference|section: Langevin Process with Constant
   Covariance Has a Path Integral on Alphabet>, we got the master equation of
   the Langevin process with constant covariance, as
 
@@ -4741,19 +4738,18 @@
   thus, is the expected global sensitivity on the distribution of paths,
   <math|P<around*|(|\<theta\>|)>>.
 
-  <section|TODO>
+  <section|Example: Fisher Matrix of Chain Dynamics>
 
   For example, we consider a dynamics with single parameter
 
   <\equation*>
     f<rsup|\<alpha\>><around*|(|x,\<theta\>|)>=\<theta\><around*|(|x<rsup|\<alpha\>+1>-x<rsup|\<alpha\>>|)>-\<theta\>
-    <around*|(|x<rsup|\<alpha\>>-x<rsup|\<alpha\>-1>|)>+<text|higher-order>,
+    <around*|(|x<rsup|\<alpha\>>-x<rsup|\<alpha\>-1>|)>+h<around*|(|<around*|(|x<rsup|\<alpha\>+1>-x<rsup|\<alpha\>>|)>-<around*|(|x<rsup|\<alpha\>>-x<rsup|\<alpha\>-1>|)>|)>,
   </equation*>
 
   for <math|\<alpha\>\<in\><around*|{|2,\<ldots\>,d-1|}>>. The higher order
-  term is a function of <math|y\<assign\><around*|(|x<rsup|\<alpha\>+1>-x<rsup|\<alpha\>>|)>-<around*|(|x<rsup|\<alpha\>>-x<rsup|\<alpha\>-1>|)>>,
-  which is smooth and estimated as <math|\<omicron\><around*|(|y|)>> when
-  <math|y\<rightarrow\>0>. Boundaries are fixed at linear order, namely
+  term <math|h> is estimated as <math|\<omicron\><around*|(|<around*|(|x<rsup|\<alpha\>+1>-x<rsup|\<alpha\>>|)>-<around*|(|x<rsup|\<alpha\>>-x<rsup|\<alpha\>-1>|)>|)>>.
+  Boundaries are fixed at linear order, namely
 
   <\equation*>
     f<rsup|1><around*|(|x,\<theta\>|)>=f<rsup|d><around*|(|x,\<theta\>|)>=0+<text|higher-order>.
@@ -4773,6 +4769,8 @@
   <\equation*>
     <frac|\<partial\>f<rsup|\<alpha\>>|\<partial\>\<theta\>><around*|(|x,\<theta\>|)>=<around*|(|x<rsup|\<alpha\>+1>-x<rsup|\<alpha\>>|)>-<around*|(|x<rsup|\<alpha\>>-x<rsup|\<alpha\>-1>|)>.
   </equation*>
+
+  <section|Example: Fisher Matrix of Lorenz System>
 
   <epilogue>
 
@@ -4855,11 +4853,11 @@
     <associate|auto-16|<tuple|3.1.1|24>>
     <associate|auto-17|<tuple|3.2|28>>
     <associate|auto-18|<tuple|3.3|30>>
-    <associate|auto-19|<tuple|3.4|31>>
+    <associate|auto-19|<tuple|3.4|30>>
     <associate|auto-2|<tuple|1|9>>
     <associate|auto-20|<tuple|3.5|32>>
-    <associate|auto-21|<tuple|3.6|33>>
-    <associate|auto-22|<tuple|3.7|34>>
+    <associate|auto-21|<tuple|3.6|32>>
+    <associate|auto-22|<tuple|3.7|33>>
     <associate|auto-23|<tuple|3.8|34>>
     <associate|auto-24|<tuple|4|37>>
     <associate|auto-25|<tuple|4.1|37>>
@@ -4868,28 +4866,27 @@
     <associate|auto-28|<tuple|4.1|41>>
     <associate|auto-29|<tuple|4.4|42>>
     <associate|auto-3|<tuple|1.1|9>>
-    <associate|auto-30|<tuple|5|43>>
-    <associate|auto-31|<tuple|5.1|43>>
-    <associate|auto-32|<tuple|5.1.1|45>>
-    <associate|auto-33|<tuple|5.2|47>>
-    <associate|auto-34|<tuple|5.3|48>>
-    <associate|auto-35|<tuple|6|51>>
-    <associate|auto-36|<tuple|6.1|51>>
-    <associate|auto-37|<tuple|6.2|52>>
-    <associate|auto-38|<tuple|6.3|55>>
-    <associate|auto-39|<tuple|6.3|?>>
+    <associate|auto-30|<tuple|4.5|42>>
+    <associate|auto-31|<tuple|4.5.1|44>>
+    <associate|auto-32|<tuple|4.6|46>>
+    <associate|auto-33|<tuple|4.7|47>>
+    <associate|auto-34|<tuple|5|51>>
+    <associate|auto-35|<tuple|5.1|51>>
+    <associate|auto-36|<tuple|5.2|52>>
+    <associate|auto-37|<tuple|5.3|54>>
+    <associate|auto-38|<tuple|5.4|54>>
+    <associate|auto-39|<tuple|5.4|55>>
     <associate|auto-4|<tuple|1.2|10>>
     <associate|auto-5|<tuple|1.3|10>>
     <associate|auto-6|<tuple|1.4|11>>
     <associate|auto-7|<tuple|2|13>>
     <associate|auto-8|<tuple|2.1|13>>
     <associate|auto-9|<tuple|2.2|15>>
-    <associate|chapter: Path Integral|<tuple|5|43>>
-    <associate|equation: fisher matrix|<tuple|6.1|52>>
+    <associate|equation: fisher matrix|<tuple|5.1|52>>
     <associate|equation: fisher matrix of langevin process for dynamical
-    parameter|<tuple|6.5|54>>
+    parameter|<tuple|5.5|54>>
     <associate|equation: master equation of Langevin process
-    tmp|<tuple|6.2|52>>
+    tmp|<tuple|5.2|52>>
     <associate|equation:Detailed Balance|<tuple|2.8|17>>
     <associate|equation:Detailed Balance for transition
     density|<tuple|2.9|17>>
@@ -4897,11 +4894,11 @@
     <associate|equation:K condition|<tuple|3.4|24>>
     <associate|equation:K is uniformly bounded|<tuple|3.2|24>>
     <associate|equation:action of distribution|<tuple|4.6|39>>
-    <associate|equation:action of markovian process|<tuple|5.4|44>>
+    <associate|equation:action of markovian process|<tuple|4.14|44>>
     <associate|equation:action of stochastic process|<tuple|4.5|39>>
-    <associate|equation:berezin integral|<tuple|5.16|49>>
-    <associate|equation:berezin integral exp|<tuple|5.13|48>>
-    <associate|equation:berezin integral measurement|<tuple|5.15|49>>
+    <associate|equation:berezin integral|<tuple|4.26|49>>
+    <associate|equation:berezin integral exp|<tuple|4.23|48>>
+    <associate|equation:berezin integral measurement|<tuple|4.25|48>>
     <associate|equation:data-fitting iteration|<tuple|4.8|40>>
     <associate|equation:data-fitting result|<tuple|4.9|40>>
     <associate|equation:detailed balance condition for
@@ -4909,21 +4906,21 @@
     <associate|equation:discrete time master equation|<tuple|2.5|14>>
     <associate|equation:discrete time master equation v0|<tuple|2.2|14>>
     <associate|equation:equation:metropolis-hastings|<tuple|2.12|22>>
-    <associate|equation:expand by delta|<tuple|5.8|46>>
-    <associate|equation:general path integral|<tuple|5.1|43>>
+    <associate|equation:expand by delta|<tuple|4.18|45>>
+    <associate|equation:general path integral|<tuple|4.11|43>>
     <associate|equation:generic density|<tuple|4.7|40>>
-    <associate|equation:grassmann integral transform|<tuple|5.14|49>>
+    <associate|equation:grassmann integral transform|<tuple|4.24|48>>
     <associate|equation:harmonic oscillator action|<tuple|4.1|37>>
-    <associate|equation:heat equation|<tuple|3.9|31>>
+    <associate|equation:heat equation|<tuple|3.9|30>>
     <associate|equation:km expansion|<tuple|3.7|28>>
     <associate|equation:km expansion v2|<tuple|3.8|29>>
-    <associate|equation:langevin action constant covariance|<tuple|5.12|47>>
-    <associate|equation:langevin action general|<tuple|5.18|50>>
+    <associate|equation:langevin action constant covariance|<tuple|4.22|47>>
+    <associate|equation:langevin action general|<tuple|4.28|49>>
     <associate|equation:langevin equation|<tuple|3.14|33>>
-    <associate|equation:langevin equation 2|<tuple|3.15|34>>
+    <associate|equation:langevin equation 2|<tuple|3.15|33>>
     <associate|equation:langevin iteration|<tuple|4.10|41>>
-    <associate|equation:langevin process after cholesky|<tuple|5.17|49>>
-    <associate|equation:langevin transition density approx|<tuple|3.13|33>>
+    <associate|equation:langevin process after cholesky|<tuple|4.27|49>>
+    <associate|equation:langevin transition density approx|<tuple|3.13|32>>
     <associate|equation:langevin transition rate|<tuple|3.11|32>>
     <associate|equation:least-action principle v0|<tuple|4.2|37>>
     <associate|equation:least-action principle v1|<tuple|4.3|38>>
@@ -4931,24 +4928,24 @@
     <associate|equation:master equation series|<tuple|4.4|39>>
     <associate|equation:master equation v0|<tuple|2.3|14>>
     <associate|equation:metropolis-hastings origin|<tuple|2.13|22>>
-    <associate|equation:path integral I|<tuple|5.10|47>>
-    <associate|equation:path integral of markov process|<tuple|5.5|44>>
+    <associate|equation:path integral I|<tuple|4.20|46>>
+    <associate|equation:path integral of markov process|<tuple|4.15|44>>
     <associate|equation:relative entropy derivative|<tuple|2.11|18>>
-    <associate|equation:residue zeta|<tuple|5.7|45>>
+    <associate|equation:residue zeta|<tuple|4.17|45>>
     <associate|equation:smoothness|<tuple|3.3|24>>
     <associate|equation:smoothness F1|<tuple|3.5|25>>
     <associate|equation:smoothness G1|<tuple|3.6|27>>
     <associate|equation:stationary Fokker-Planck equation|<tuple|3.16|34>>
-    <associate|equation:to ghosts|<tuple|5.11|47>>
-    <associate|equation:transition density coef recur|<tuple|5.6|45>>
+    <associate|equation:to ghosts|<tuple|4.21|46>>
+    <associate|equation:transition density coef recur|<tuple|4.16|45>>
     <associate|equation:transition density normalization|<tuple|2.1|13>>
     <associate|equation:transition density of markov process for path
-    integral|<tuple|5.2|44>>
+    integral|<tuple|4.12|43>>
     <associate|equation:transition rate determines transition
     density|<tuple|2.6|16>>
     <associate|equation:transition rate determines transition density
     v2|<tuple|2.7|16>>
-    <associate|equation:wiener process|<tuple|3.10|32>>
+    <associate|equation:wiener process|<tuple|3.10|31>>
     <associate|figure: Least-Action|<tuple|4.1|41>>
     <associate|footnote-1|<tuple|1|55>>
     <associate|footnote-1.1|<tuple|1.1|9>>
@@ -4966,11 +4963,11 @@
     <associate|footnote-3.4|<tuple|3.4|29>>
     <associate|footnote-3.5|<tuple|3.5|31>>
     <associate|footnote-4.1|<tuple|4.1|38>>
-    <associate|footnote-5.1|<tuple|5.1|43>>
-    <associate|footnote-5.2|<tuple|5.2|46>>
-    <associate|footnote-5.3|<tuple|5.3|50>>
-    <associate|footnote-6.1|<tuple|6.1|52>>
-    <associate|footnote-6.2|<tuple|6.2|53>>
+    <associate|footnote-4.2|<tuple|4.2|43>>
+    <associate|footnote-4.3|<tuple|4.3|45>>
+    <associate|footnote-4.4|<tuple|4.4|49>>
+    <associate|footnote-5.1|<tuple|5.1|52>>
+    <associate|footnote-5.2|<tuple|5.2|53>>
     <associate|footnr-1|<tuple|1|55>>
     <associate|footnr-1.1|<tuple|1.1|9>>
     <associate|footnr-1.2|<tuple|1.2|9>>
@@ -4987,14 +4984,14 @@
     <associate|footnr-3.4|<tuple|3.4|29>>
     <associate|footnr-3.5|<tuple|3.5|31>>
     <associate|footnr-4.1|<tuple|4.1|38>>
-    <associate|footnr-5.1|<tuple|5.1|43>>
-    <associate|footnr-5.2|<tuple|5.8|46>>
-    <associate|footnr-5.3|<tuple|5.3|50>>
-    <associate|footnr-6.1|<tuple|6.1|52>>
-    <associate|footnr-6.2|<tuple|6.2|53>>
-    <associate|section: * Estimation of the Residue|<tuple|5.1.1|45>>
+    <associate|footnr-4.2|<tuple|4.2|43>>
+    <associate|footnr-4.3|<tuple|4.18|45>>
+    <associate|footnr-4.4|<tuple|4.4|49>>
+    <associate|footnr-5.1|<tuple|5.1|52>>
+    <associate|footnr-5.2|<tuple|5.2|53>>
+    <associate|section: * Estimation of the Residue|<tuple|4.5.1|44>>
     <associate|section: * Grassmann Variable, Berezin Integral, and
-    Ghosts|<tuple|5.3|48>>
+    Ghosts|<tuple|4.7|47>>
     <associate|section: A Brief Review of Least-Action Principle in Classical
     Mechanics|<tuple|4.1|37>>
     <associate|section: A Brief Review of Probability|<tuple|1.1|9>>
@@ -5011,28 +5008,28 @@
     <associate|section: Example: Metropolis-Hastings
     Algorithm|<tuple|2.6|22>>
     <associate|section: Fisher Matrix Characterizes the Sensitivity of a
-    Stochastic System to Its Parameter|<tuple|6.1|51>>
+    Stochastic System to Its Parameter|<tuple|5.1|51>>
     <associate|section: Fisher Matrix of Langevin Process Is the Expection of
-    Sensitivity along Path|<tuple|6.2|52>>
+    Sensitivity along Path|<tuple|5.2|52>>
     <associate|section: Kramers\UMoyal Expansion Formulates Transition Rate
     by Its Moments|<tuple|3.2|28>>
     <associate|section: Kramers-Moyal Expansion|<tuple|3|23>>
     <associate|section: Langevin Process Is a Markovian Process with
     Ncut=2|<tuple|3.5|32>>
     <associate|section: Langevin Process with Constant Covariance Has a Path
-    Integral on Alphabet|<tuple|5.2|47>>
+    Integral on Alphabet|<tuple|4.6|46>>
     <associate|section: Least-Action Principle|<tuple|4|37>>
     <associate|section: Least-Action Principle of Distribution Has No
     Redundancy|<tuple|4.2|38>>
     <associate|section: Markovian Process with Euclidean Alphabet Can Be
-    Formulated as Path Integral|<tuple|5.1|43>>
+    Formulated as Path Integral|<tuple|4.5|42>>
     <associate|section: Master Equation|<tuple|2|13>>
     <associate|section: Master Equation Describes the Evolution of Markov
     Process|<tuple|2.1|13>>
     <associate|section: Monte-Carlo Simulation and Guarantee of
     Relaxation|<tuple|2.5|19>>
     <associate|section: Randomness Appears in the Second Moment of Transition
-    Rate|<tuple|3.4|31>>
+    Rate|<tuple|3.4|30>>
     <associate|section: Randomness Is Absent in the First Moment of
     Transition Rate|<tuple|3.3|30>>
     <associate|section: Relative Entropy|<tuple|1|9>>
@@ -5043,7 +5040,7 @@
     <associate|section: Shannon Entropy Is Plausible for Discrete Random
     Variable|<tuple|1.2|10>>
     <associate|section: Transition Density of Langevin Process Is Nearly
-    Gaussian|<tuple|3.6|33>>
+    Gaussian|<tuple|3.6|32>>
     <associate|section: Transition Rate Determines Transition
     Density|<tuple|2.2|15>>
   </collection>
@@ -5103,8 +5100,8 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-6>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Master
-      Equation> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Evolution
+      of Markovian Process> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-7><vspace|0.5fn>
 
       2.1<space|2spc>Master Equation Describes the Evolution of Markov
@@ -5131,8 +5128,8 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-13>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Kramers-Moyal
-      Expansion> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Markovian
+      Process on Euclidean Space> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-14><vspace|0.5fn>
 
       3.1<space|2spc>Cut-off in the Moments of Transition Rate Is Essential
@@ -5184,8 +5181,9 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-26>
 
-      4.3<space|2spc>Data Fitting Is Equivalent to Least-Action Principle of
-      Distribution <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      4.3<space|2spc><with|mode|<quote|math>|\<clubsuit\>> Data Fitting Is
+      Equivalent to Least-Action Principle of Distribution
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-27>
 
       4.4<space|2spc><with|mode|<quote|math>|\<clubsuit\>> Example:
@@ -5193,42 +5191,46 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-29>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|5<space|2spc>Path
-      Integral> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-30><vspace|0.5fn>
+      4.5<space|2spc>Markovian Process on Euclidean Space Can Be Formulated
+      by Path Integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-30>
 
-      5.1<space|2spc>Markovian Process with Euclidean Alphabet Can Be
-      Formulated as Path Integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-31>
-
-      <with|par-left|<quote|1tab>|5.1.1<space|2spc><with|mode|<quote|math>|\<clubsuit\>>
+      <with|par-left|<quote|1tab>|4.5.1<space|2spc><with|mode|<quote|math>|\<clubsuit\>>
       Estimation of the Residue <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-32>>
+      <no-break><pageref|auto-31>>
 
-      5.2<space|2spc>Langevin Process with Constant Covariance Has a Path
+      4.6<space|2spc>Langevin Process with Constant Covariance Has a Path
       Integral on Alphabet <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-33>
+      <no-break><pageref|auto-32>
 
-      5.3<space|2spc><with|mode|<quote|math>|\<clubsuit\>> Grassmann
+      4.7<space|2spc><with|mode|<quote|math>|\<clubsuit\>> Grassmann
       Variable, Berezin Integral, and Ghosts
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-34>
+      <no-break><pageref|auto-33>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|6<space|2spc>Fisher
-      Matrix> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-35><vspace|0.5fn>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|5<space|2spc>Fisher
+      Matrix and Criticality> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-34><vspace|0.5fn>
 
-      6.1<space|2spc>Fisher Matrix Characterizes the Sensitivity of a
+      5.1<space|2spc>Fisher Matrix Characterizes the Sensitivity of a
       Stochastic System to Its Parameter <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-35>
+
+      5.2<space|2spc>Fisher Matrix of Langevin Process Is the Expectation of
+      Sensitivity along Path <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-36>
 
-      6.2<space|2spc>Fisher Matrix of Langevin Process Is the Expectation of
-      Sensitivity along Path <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      5.3<space|2spc>Example: Fisher Matrix of Chain Dynamics
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-37>
+
+      5.4<space|2spc>Example: Fisher Matrix of Lorenz System
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-38>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Epilogue>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-38><vspace|0.5fn>
+      <no-break><pageref|auto-39><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
