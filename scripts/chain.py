@@ -75,8 +75,14 @@ for param in tqdm(params):
     plot_x.append(param)
     plot_y.append(fisher_val)
 plt.loglog(plot_x, plot_y)
+
+fit_x = np.array(plot_x[18:])
+fit_y = 9500 * np.array(fit_x)**(-1.95)
+plt.loglog(fit_x, fit_y, '--', label='fitting')
+
 plt.xlabel(r'$\theta$')
 plt.ylabel(rf'$F(\theta, {T})$')
+plt.legend()
 plt.grid()
 plt.show()
 
