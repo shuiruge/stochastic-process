@@ -58,11 +58,11 @@ def fisher(x, param, step_size, steps):
         fisher_integral += fisher_integrand(x) * step_size
     return fisher_integral, x
 
-init_interval = 1.
-init_x = np.stack(
-    [np.arange(0., dim * init_interval, init_interval)
-        for _ in range(num_samples)],
-    axis=0)
+interval = 1.
+x = np.stack(
+    [np.linspace(0., (dim-1)*interval, dim)] * num_samples,
+    axis=0,
+)
 
 T = 1.
 step_size = 1e-3
@@ -71,19 +71,18 @@ plot_x, plot_y = [], []
 log10_params = np.linspace(-2.5, 2.5, 30)
 params = 10 ** log10_params
 for param in tqdm(params):
-    fisher_val, final_x = fisher(init_x, param, step_size, steps)
+    fisher_val, _ = fisher(x, param, step_size, steps)
     plot_x.append(param)
     plot_y.append(fisher_val)
-plt.loglog(plot_x, plot_y)
+plt.loglog(plot_x, plot_y, 'o-', color="blue", alpha=0.5)
 
 fit_x = np.array(plot_x[18:])
 fit_y = 9500 * np.array(fit_x)**(-1.95)
-plt.loglog(fit_x, fit_y, '--', label='fitting')
+plt.loglog(fit_x, fit_y, '--', label='fitting', color="orange")
 
 plt.xlabel(r'$\theta$')
 plt.ylabel(rf'$F(\theta, {T})$')
+plt.title('Fisher matrix of chain dynamics.')
 plt.legend()
 plt.grid()
-plt.show()
-
-#print(final_x - np.min(final_x, axis=1, keepdims=True))
+plt.savefig('fisher_chain.png')
