@@ -64,16 +64,17 @@ init_x = np.stack(
         for _ in range(num_samples)],
     axis=0)
 
-step_size = 1e-3
 T = 1.
+step_size = 1e-3
 steps = int(T / step_size)
-X, Y = [], []
-for log_param in tqdm(np.linspace(-2, 2, 30)):
-    param = 10**log_param
+plot_x, plot_y = [], []
+log10_params = np.linspace(-2.5, 2.5, 30)
+params = 10 ** log10_params
+for param in tqdm(params):
     fisher_val, final_x = fisher(init_x, param, step_size, steps)
-    X.append(param)
-    Y.append(fisher_val)
-plt.loglog(X, Y)
+    plot_x.append(param)
+    plot_y.append(fisher_val)
+plt.loglog(plot_x, plot_y)
 plt.xlabel(r'$\theta$')
 plt.ylabel(rf'$F(\theta, {T})$')
 plt.grid()
