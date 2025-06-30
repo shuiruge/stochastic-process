@@ -40,21 +40,19 @@ def fisher(x, param, step_size, steps):
     return fisher_integral, x
 
 x = np.zeros([num_samples, dim])
-
 T = 1
 step_size = 1e-3
 steps = int(T / step_size)
-
-plot_x, plot_y = [], []
-params = np.linspace(0, 30, 30)
+fisher_vals = []
+params = np.linspace(0, 30)
 for param in tqdm(params):
     fisher_val, _ = fisher(x, param, step_size, steps)
-    plot_x.append(param)
-    plot_y.append(fisher_val)
-plt.plot(plot_x, plot_y, 'o-', color="blue", alpha=0.5)
+    fisher_vals.append(fisher_val)
+plt.plot(params, fisher_vals, 'o-', color="blue", alpha=0.5)
 
 plt.xlabel(r'$r$')
 plt.ylabel(rf'$F(r, {T})$')
 plt.title('Fisher matrix of Lorenz system.')
 plt.grid()
+#plt.show()
 plt.savefig('fisher_lorenz.png')

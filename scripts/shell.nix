@@ -3,7 +3,7 @@ with import <nixpkgs> { };
 let
   pythonPackages = python312Packages;
 in pkgs.mkShell rec {
-  name = "soma-optimizer";
+  name = "scripts";
   buildInputs = [
     pythonPackages.python
     pythonPackages.jax

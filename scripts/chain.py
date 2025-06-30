@@ -34,9 +34,9 @@ def dynamics(x, param):
 
 def higher_order(x):
     # return x**2  # NaN
-    #return 0  # valid
+    return 0  # valid
     #return x**3  # valid
-    return 1e-1 * x**3  # valid
+    #return 1e-1 * x**3  # valid
 
 @jit
 def langevin_step(x, param, step_size):
@@ -63,26 +63,30 @@ x = np.stack(
     [np.linspace(0., (dim-1)*interval, dim)] * num_samples,
     axis=0,
 )
-
 T = 1.
 step_size = 1e-3
 steps = int(T / step_size)
-plot_x, plot_y = [], []
-log10_params = np.linspace(-2.5, 2.5, 30)
-params = 10 ** log10_params
+fisher_vals = []
+params = np.linspace(0, 30)
 for param in tqdm(params):
     fisher_val, _ = fisher(x, param, step_size, steps)
-    plot_x.append(param)
-    plot_y.append(fisher_val)
-plt.loglog(plot_x, plot_y, 'o-', color="blue", alpha=0.5)
+    fisher_vals.append(fisher_val)
 
-fit_x = np.array(plot_x[18:])
-fit_y = 9500 * np.array(fit_x)**(-1.95)
-plt.loglog(fit_x, fit_y, '--', label='fitting', color="orange")
-
+loglog_plot = True
+if loglog_plot:
+    plt.loglog(params, fisher_vals, 'o-', color="blue", alpha=0.5)
+    fit_x = params[5:]
+    fit_y = 3300 * np.array(fit_x)**(-5/3)
+    plt.loglog(fit_x, fit_y, '--', label='fitting', color="orange")
+    plt.legend()
+else:
+    plt.plot(params, fisher_vals, 'o-', color="blue", alpha=0.5)
 plt.xlabel(r'$\theta$')
 plt.ylabel(rf'$F(\theta, {T})$')
 plt.title('Fisher matrix of chain dynamics.')
-plt.legend()
 plt.grid()
-plt.savefig('fisher_chain.png')
+plt.show()
+# if loglog_plot:
+#     plt.savefig('fisher_chain_loglog.png')
+# else:
+#     plt.savefig('fisher_chain.png')
