@@ -139,8 +139,8 @@
     Integral, and Ghosts <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-33>
 
-    <vspace*|1fn><with|font-series|bold|math-font-series|bold|5<space|2spc>Fisher
-    Matrix and Criticality> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|5<space|2spc>Criticality>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-34><vspace|0.5fn>
 
     5.1<space|2spc>Fisher Matrix Characterizes the Sensitivity of a
@@ -4408,7 +4408,7 @@
   mixture of real and Grassmann variables. Physicists call this extended
   space a <strong|super-space>.
 
-  <chapter|Fisher Matrix and Criticality>
+  <chapter|Criticality>
 
   While you are reading this book, the photons emitted from the screen or
   reflected from the papers hit on your retinae. It motives your brain to
@@ -4770,6 +4770,30 @@
     <frac|\<partial\>f<rsup|\<alpha\>>|\<partial\>\<theta\>><around*|(|x,\<theta\>|)>=<around*|(|x<rsup|\<alpha\>+1>-x<rsup|\<alpha\>>|)>-<around*|(|x<rsup|\<alpha\>>-x<rsup|\<alpha\>-1>|)>.
   </equation*>
 
+  \;
+
+  \;
+
+  \;
+
+  <\equation*>
+    <wide|r|\<dot\>>=\<mu\>r<around*|(|1-r<rsup|2>|)>,<wide|\<theta\>|\<dot\>>=\<omega\>.
+  </equation*>
+
+  <\equation*>
+    <wide|x|\<dot\>>=<wide|r|\<dot\>> cos\<theta\>-r <wide|\<theta\>|\<dot\>>
+    sin\<theta\>=\<mu\>r<around*|(|1-x<rsup|2>-y<rsup|2>|)><frac|x|r>-\<mu\>
+    r \<omega\> <frac|y|r>=\<mu\><around*|(|1-x<rsup|2>-y<rsup|2>|)>x-\<mu\>
+    \ \<omega\> y=\<mu\>x-\<mu\>\<omega\>y-\<mu\>x<around*|(|x<rsup|2>+y<rsup|2>|)>
+  </equation*>
+
+  <\equation*>
+    <wide|y|\<dot\>>=<wide|r|\<dot\>> sin\<theta\>+r <wide|\<theta\>|\<dot\>>
+    cos\<theta\>=\<mu\>r<around*|(|1-x<rsup|2>-y<rsup|2>|)><frac|y|r>+\<mu\>
+    r \<omega\> <frac|x|r>=\<mu\><around*|(|1-x<rsup|2>-y<rsup|2>|)>y+\<mu\>
+    \<omega\> x=\<mu\>\<omega\>x+\<mu\>y-\<mu\>y<around*|(|x<rsup|2>+y<rsup|2>|)>
+  </equation*>
+
   <section|Example: Fisher Matrix of Lorenz System>
 
   <epilogue>
@@ -4875,8 +4899,9 @@
     <associate|auto-36|<tuple|5.2|52>>
     <associate|auto-37|<tuple|5.3|54>>
     <associate|auto-38|<tuple|5.4|54>>
-    <associate|auto-39|<tuple|5.4|55>>
+    <associate|auto-39|<tuple|5.4|54>>
     <associate|auto-4|<tuple|1.2|10>>
+    <associate|auto-40|<tuple|5.5|55>>
     <associate|auto-5|<tuple|1.3|10>>
     <associate|auto-6|<tuple|1.4|11>>
     <associate|auto-7|<tuple|2|13>>
@@ -5208,8 +5233,8 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-33>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|5<space|2spc>Fisher
-      Matrix and Criticality> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|5<space|2spc>Criticality>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-34><vspace|0.5fn>
 
       5.1<space|2spc>Fisher Matrix Characterizes the Sensitivity of a
@@ -5220,17 +5245,21 @@
       Sensitivity along Path <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-36>
 
-      5.3<space|2spc>Example: Fisher Matrix of Chain Dynamics
+      5.3<space|2spc>Fisher Matrix around a Stable Fixed Point Is Small
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-37>
 
-      5.4<space|2spc>Example: Fisher Matrix of Lorenz System
+      5.4<space|2spc>Example: Fisher Matrix of Chain Dynamics
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-38>
 
+      5.5<space|2spc>Example: Fisher Matrix of Lorenz System
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-39>
+
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Epilogue>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-39><vspace|0.5fn>
+      <no-break><pageref|auto-40><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
