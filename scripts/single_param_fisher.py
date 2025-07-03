@@ -1,40 +1,52 @@
-import jax.numpy as np
-from jax import random, jit, jacrev
-from functools import partial
-
 import jax
 jax.config.update("jax_debug_nans", True)
 jax.config.update("jax_enable_x64", True)  # reduce the issue of NaN
 
-class Fisher:
-
-    def __init__(self, dynamics, random_key=42):
-        self.dynamics = dynamics
-        self.random_key = random_key
-
-    @partial(jit, static_argnames='self')
-    def langevin_step(self, param, x, step_size):
-        dx = self.dynamics(param, x) * step_size
-        std_normal = random.truncated_normal(
-            random.key(self.random_key), -3, 3, x.shape)
-        dW = std_normal * np.sqrt(step_size)
-        return x + dx + dW
-
-    @partial(jit, static_argnames='self')
-    def integrand(self, param, x):
-        param_grad = jacrev(self.dynamics)(param, x)
-        return np.mean(np.sum(param_grad**2, axis=1))
-
-    def __call__(self, param, init_x, step_size, steps):
-        integral = 0.
-        x = init_x
-        for _ in range(steps):
-            x = self.langevin_step(param, x, step_size)
-            integral += self.integrand(param, x) * step_size
-        return integral, x
-
+import jax.numpy as np
 import matplotlib.pyplot as plt
 from tqdm import tqdm
+from fisher import Fisher
+
+def test_chain(T=1e+0, step_size=1e-3):
+    dim = 10
+    switch_left = np.zeros([dim, dim])
+    switch_left = switch_left.at[0, 0].set(1)
+    switch_left = switch_left.at[dim-1, dim-1].set(1)
+    for i in range(1, dim-1):
+        switch_left = switch_left.at[i+1, i].set(1)
+    switch_right = np.zeros([dim, dim])
+    switch_right = switch_right.at[0, 0].set(1)
+    switch_right = switch_right.at[dim-1, dim-1].set(1)
+    for i in range(1, dim-1):
+        switch_right = switch_right.at[i-1, i].set(1)
+
+    def dynamics(param, x):
+        dx_left = x @ switch_left - x
+        dx_right = x - x @ switch_right
+        return param * (dx_left - dx_right) + higher_order(dx_left - dx_right)
+
+    def higher_order(x):
+        # return x**2  # NaN
+        return 0  # valid
+        #return x**3  # valid
+        #return 1e-1 * x**3  # valid
+
+    fisher = Fisher(dynamics, temperature=1e-4)
+    init_x = np.zeros([32, dim])
+
+    fisher_vals = []
+    params = 10**np.linspace(-2, 2, 10)
+    for param in tqdm(params):
+        fisher_val, final_x = fisher(param, init_x, step_size, T)
+        fisher_vals.append(fisher_val)
+
+    #plt.plot(params, fisher_vals, 'o-', color="blue", alpha=0.5)
+    plt.loglog(params, fisher_vals, 'o-', color="blue", alpha=0.5)
+    plt.xlabel(r'$r$')
+    plt.ylabel(rf'$F(r, {T})$')
+    plt.title('Fisher matrix of Folk Bifurcation.')
+    plt.grid()
+    plt.show()
 
 def test_folk_bifurcation(T=1e+1, step_size=1e-2):
     def dynamics(r, x):
@@ -42,12 +54,11 @@ def test_folk_bifurcation(T=1e+1, step_size=1e-2):
 
     fisher = Fisher(dynamics)
     init_x = np.zeros([100, 1])
-    steps = int(T / step_size)
 
     fisher_vals = []
     params = np.linspace(-50, 50)
     for param in tqdm(params):
-        fisher_val, final_x = fisher(param, init_x, step_size, steps)
+        fisher_val, final_x = fisher(param, init_x, step_size, T)
         fisher_vals.append(fisher_val)
 
     plt.plot(params, fisher_vals, 'o-', color="blue", alpha=0.5)
@@ -57,7 +68,29 @@ def test_folk_bifurcation(T=1e+1, step_size=1e-2):
     plt.grid()
     plt.show()
 
-def test_limit_circle(param_type='mu', T=1e+0, step_size=1e-3):
+def test_folk_bifurcation_v2(T=1e+1, step_size=1e-2):
+    # Figure 3.4.7
+    def dynamics(r, x):
+        return r*x + x**3 - x**5
+
+    fisher = Fisher(dynamics, temperature=1e-4)
+    init_x = np.zeros([100, 1])
+
+    fisher_vals = []
+    params = np.linspace(0, 20, 20)
+    for param in tqdm(params):
+        fisher_val, final_x = fisher(param, init_x, step_size, T)
+        fisher_vals.append(fisher_val)
+
+    plt.plot(params, fisher_vals, 'o-', color="blue", alpha=0.5)
+    #plt.loglog(params, fisher_vals, 'o-', color="blue", alpha=0.5)
+    plt.xlabel(r'$r$')
+    plt.ylabel(rf'$F(r, {T})$')
+    plt.title('Fisher matrix of Folk Bifurcation.')
+    plt.grid()
+    plt.show()
+
+def test_limit_circle(param_type='mu', T=1e+1, step_size=1e-2):
     r"""
     In polar coordinates:
 
@@ -78,17 +111,16 @@ def test_limit_circle(param_type='mu', T=1e+0, step_size=1e-3):
     else:
         dynamics = lambda omega, x: _dynamics(1., omega, x)
 
-    fisher = Fisher(dynamics)
+    fisher = Fisher(dynamics, temperature=1e-4)
     init_x = np.zeros([100, 2])
-    steps = int(T / step_size)
 
     fisher_vals = []
     if param_type == 'mu':
-        params = np.linspace(0.02, 5)
+        params = np.linspace(0.05, 5)
     else:
         params = np.linspace(0, 10)
     for param in tqdm(params):
-        fisher_val, final_x = fisher(param, init_x, step_size, steps)
+        fisher_val, final_x = fisher(param, init_x, step_size, T)
         fisher_vals.append(fisher_val)
 
     plt.plot(params, fisher_vals, 'o-', color="blue", alpha=0.5)
@@ -102,7 +134,12 @@ def test_limit_circle(param_type='mu', T=1e+0, step_size=1e-3):
     plt.grid()
     plt.show()
 
-def test_lorenz(r_max=5e+0, T=1e+0, step_size=1e-3):
+class Lorenz:
+
+    def __init__(self, r_max=50, T=1, ):
+        pass
+
+def test_lorenz(r_max=50, T=1e+0, step_size=1e-3):
     def dynamics(r, x):
         sigma = 10
         b = 8/3
@@ -113,14 +150,13 @@ def test_lorenz(r_max=5e+0, T=1e+0, step_size=1e-3):
         ]
         return np.stack(f, axis=1)
 
-    fisher = Fisher(dynamics)
+    fisher = Fisher(dynamics, temperature=1e-4)
     init_x = np.zeros([100, 3])
-    steps = int(T / step_size)
 
     fisher_vals = []
     params = np.linspace(0, r_max)
     for param in tqdm(params):
-        fisher_val, final_x = fisher(param, init_x, step_size, steps)
+        fisher_val, final_x = fisher(param, init_x, step_size, T)
         fisher_vals.append(fisher_val)
 
     plt.plot(params, fisher_vals, 'o-', color="blue", alpha=0.5)
@@ -131,6 +167,7 @@ def test_lorenz(r_max=5e+0, T=1e+0, step_size=1e-3):
     plt.show()
 
 
+test_chain()
 #test_folk_bifurcation()
-test_limit_circle()
+#test_limit_circle()
 #test_lorenz()
