@@ -3,7 +3,7 @@ jax.config.update("jax_debug_nans", True)
 jax.config.update("jax_enable_x64", True)  # reduce the issue of NaN
 
 import jax.numpy as np
-from jax import random
+from jax import random, nn
 from jax.experimental import sparse
 import matplotlib.pyplot as plt
 from tqdm import tqdm
@@ -31,12 +31,14 @@ def std(x, axis=None):
     return np.sqrt(variance(x, axis=axis))
 
 dim = 20
+activation = nn.tanh
+#activation = nn.swish
 x = np.zeros([32, dim])
 dt, T = 1e-2, 1e+0
 nonzero_fisher_vals = []
-sparsities = 10**np.linspace(-5, 0, 30)
+sparsities = 10**np.linspace(-2, -0.01, 40)
 for sparsity in tqdm(sparsities):
-    dynamics, W = perceptron_dynamics(dim, sparsity, np.tanh, False)
+    dynamics, W = perceptron_dynamics(dim, sparsity, activation, False)
     #print(np.mean(std(dynamics(W, random.normal(random.key(42), [100, dim])), axis=1)))
     fisher = Fisher(dynamics, temperature=1e-0)
     fisher_val, final_x = fisher(W, x, dt, T)
