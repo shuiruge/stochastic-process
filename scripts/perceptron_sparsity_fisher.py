@@ -32,7 +32,7 @@ def std(x, axis=None):
 
 dim = 20
 activation = nn.tanh
-#activation = nn.swish
+#activation = nn.swish  # x * sigmoid(x)
 x = np.zeros([32, dim])
 dt, T = 1e-2, 1e+0
 nonzero_fisher_vals = []
