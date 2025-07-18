@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 from tqdm import tqdm
 from fisher import Fisher
 
-def test_chain(T=1e+0, step_size=1e-3):
+def test_chain(T=1e+0):
     dim = 10
     switch_left = np.zeros([dim, dim])
     switch_left = switch_left.at[0, 0].set(1)
@@ -34,10 +34,10 @@ def test_chain(T=1e+0, step_size=1e-3):
     fisher = Fisher(dynamics, temperature=1e-4)
     init_x = np.zeros([32, dim])
 
-    fisher_vals = []
+    params, fisher_vals = [], []
     params = 10**np.linspace(-2, 2, 10)
     for param in tqdm(params):
-        fisher_val, final_x = fisher(param, init_x, step_size, T)
+        fisher_val, final_x = fisher(param, init_x, T)
         fisher_vals.append(fisher_val)
 
     #plt.plot(params, fisher_vals, 'o-', color="blue", alpha=0.5)
@@ -48,7 +48,7 @@ def test_chain(T=1e+0, step_size=1e-3):
     plt.grid()
     plt.show()
 
-def test_folk_bifurcation(T=1e+1, step_size=1e-2):
+def test_folk_bifurcation(T=1e+1):
     def dynamics(r, x):
         return r * x - x**3
 
@@ -56,9 +56,9 @@ def test_folk_bifurcation(T=1e+1, step_size=1e-2):
     init_x = np.zeros([100, 1])
 
     fisher_vals = []
-    params = np.linspace(-50, 50)
+    params = np.linspace(-5, 5, 20)
     for param in tqdm(params):
-        fisher_val, final_x = fisher(param, init_x, step_size, T)
+        fisher_val, final_x = fisher(param, init_x, T)
         fisher_vals.append(fisher_val)
 
     plt.plot(params, fisher_vals, 'o-', color="blue", alpha=0.5)
@@ -68,7 +68,7 @@ def test_folk_bifurcation(T=1e+1, step_size=1e-2):
     plt.grid()
     plt.show()
 
-def test_folk_bifurcation_v2(T=1e+1, step_size=1e-2):
+def test_folk_bifurcation_v2(T=1e+1):
     # Figure 3.4.7
     def dynamics(r, x):
         return r*x + x**3 - x**5
@@ -79,7 +79,7 @@ def test_folk_bifurcation_v2(T=1e+1, step_size=1e-2):
     fisher_vals = []
     params = np.linspace(0, 20, 20)
     for param in tqdm(params):
-        fisher_val, final_x = fisher(param, init_x, step_size, T)
+        fisher_val, final_x = fisher(param, init_x, T)
         fisher_vals.append(fisher_val)
 
     plt.plot(params, fisher_vals, 'o-', color="blue", alpha=0.5)
@@ -90,7 +90,7 @@ def test_folk_bifurcation_v2(T=1e+1, step_size=1e-2):
     plt.grid()
     plt.show()
 
-def test_limit_circle(param_type='mu', T=1e+1, step_size=1e-2):
+def test_limit_circle(param_type='mu', T=1e+1):
     r"""
     In polar coordinates:
 
@@ -120,7 +120,7 @@ def test_limit_circle(param_type='mu', T=1e+1, step_size=1e-2):
     else:
         params = np.linspace(0, 10)
     for param in tqdm(params):
-        fisher_val, final_x = fisher(param, init_x, step_size, T)
+        fisher_val, final_x = fisher(param, init_x, T)
         fisher_vals.append(fisher_val)
 
     plt.plot(params, fisher_vals, 'o-', color="blue", alpha=0.5)
@@ -139,7 +139,7 @@ class Lorenz:
     def __init__(self, r_max=50, T=1, ):
         pass
 
-def test_lorenz(r_max=50, T=1e+0, step_size=1e-3):
+def test_lorenz(r_max=50, T=1e+0):
     def dynamics(r, x):
         sigma = 10
         b = 8/3
@@ -156,7 +156,7 @@ def test_lorenz(r_max=50, T=1e+0, step_size=1e-3):
     fisher_vals = []
     params = np.linspace(0, r_max)
     for param in tqdm(params):
-        fisher_val, final_x = fisher(param, init_x, step_size, T)
+        fisher_val, final_x = fisher(param, init_x, T)
         fisher_vals.append(fisher_val)
 
     plt.plot(params, fisher_vals, 'o-', color="blue", alpha=0.5)

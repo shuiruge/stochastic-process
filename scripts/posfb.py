@@ -13,16 +13,9 @@ from fisher import Fisher
 def dynamics(r, x):
     return -r * np.sum(np.exp(-np.square(x)/2), axis=1, keepdims=True) * x
 
-def integrand(r, x):
-    return np.mean(
-        np.square(np.sum(np.exp(-np.square(x)/2), axis=1))
-        * np.sum(np.square(x), axis=1)
-    )
+fisher = Fisher(dynamics, moderate_stepsize=1e-2, absolute_tolerance=1e-2)
 
-fisher = Fisher(dynamics, integrand=integrand, temperature=1e-0,
-                tolerance=1e-1)
-
-dim = 1000
+dim = 100
 x = random.uniform(random.key(42), [32, dim], minval=-2, maxval=2)
 T = 1e+0
 fisher_vals = []
