@@ -1,5 +1,5 @@
 import jax.numpy as np
-from jax import random, jit, jacrev, vjp
+from jax import random, jit, jacrev, jvp
 from functools import partial
 
 class Fisher:
@@ -16,14 +16,16 @@ class Fisher:
         self.moderate_stepsize = moderate_stepsize
         self.max_itersteps_per_T = max_itersteps_per_T
 
-    def dynamics_vjp(self, param, x):
-        y, vjp_fn = vjp(lambda x: self.dynamics(param, x), x)
-        dx, *_ = vjp_fn(y)
+    def dynamics_jvp(self, param, x):
+        # It is weired to compute y twice. But it seems that this does not
+        # slow down the computation. Maybe, JIT helps.
+        y = self.dynamics(param, x)
+        y, dx = jvp(lambda x: self.dynamics(param, x), (x,), (y,))
         return y, dx
 
     @partial(jit, static_argnames='self')
     def langevin_step(self, param, x, max_dt):
-        f, denom = self.dynamics_vjp(param, x)
+        f, denom = self.dynamics_jvp(param, x)
         dt = np.where(
             np.min(np.abs(denom)) < self.absolute_tolerance,
             self.moderate_stepsize,
