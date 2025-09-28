@@ -5,20 +5,27 @@
 <\body>
   <chapter|From Stochastic Process to Quantum Mechanics: A Sketch>
 
+  <section|How to Read this Note?>
+
+  Definitions are in bold font. Only important equations are numbered.
+  Questions are in red color. You can omit all the nonsense about stochastic
+  process, just focusing on quantum mechanics. Footnotes are also negligible
+  (except for those containing definitions).
+
   <section|Time Evolution and Hermitianity>
 
   We mimic the deriving of stochastic process. Unlike stochastic process,
   where the system is described by probability, a quantum system is
   represented by wave-function. Given a set <math|\<cal-X\>> that contains
   all possible configurations of the quantum system (for a single particle, a
-  configuration can be its position), a wave-function is a map
+  configuration can be its position), a <strong|wave-function> is a map
   <math|f:\<cal-X\>\<rightarrow\>\<bbb-C\>>. Especially when <math|\<cal-X\>>
   is a manifold, we suppose that <math|f> is smooth, that is
   <math|f\<in\>\<cal-C\><rsup|\<infty\>><around*|(|\<cal-X\>,\<bbb-C\>|)>>.
   In addition, when <math|\<cal-X\>> is Euclidean, namely
   <math|\<cal-X\>=\<bbb-R\><rsup|d>>, we further suppose that <math|f> is an
   element of Schwartz space <math|\<cal-S\><around*|(|\<bbb-R\><rsup|d>,\<bbb-C\>|)>>.<\footnote>
-    A Schwartz space <math|\<cal-S\><around*|(|\<bbb-R\><rsup|d>,\<bbb-C\>|)>>
+    A <strong|Schwartz space> <math|\<cal-S\><around*|(|\<bbb-R\><rsup|d>,\<bbb-C\>|)>>
     contains smooth function <math|f:\<bbb-R\><rsup|d>\<rightarrow\>\<bbb-C\>>
     that decays \Pexponentially fast\Q at infinity. Precisely, for any
     <math|m>-order polynomial <math|P<rsub|m>> and any <math|m>-order partial
@@ -114,14 +121,24 @@
   </equation*>
 
   Since <math|<big|int>\<mathd\>x f<rsup|\<ast\>><around*|(|x|)>f<around*|(|x|)>>
-  is real, we have (may also equal to <math|-1>)
+  is real, we have (<with|color|red|may also equal to <math|-1>>)
 
   <\equation>
     <big|int><rsub|\<cal-X\>>\<mathd\>x f<rsup|\<ast\>><around*|(|x|)>f<around*|(|x|)>=1.<label|eq:probtoself>
   </equation>
 
-  We are to show what this results in <math|r>. Equation
-  <reference|eq:probtoself> gives
+  Since this equation holds for all wave-functions, time evolution sustains
+  it too. Namely, for a time-dependent wave-function
+  <math|f<around*|(|x,t|)>>,
+
+  <\equation*>
+    <big|int><rsub|\<cal-X\>>\<mathd\>x f<rsup|\<ast\>><around*|(|x,t|)>f<around*|(|x,t|)>=<big|int><rsub|\<cal-X\>>\<mathd\>x
+    f<rsup|\<ast\>><around*|(|x,t<rprime|'>|)>f<around*|(|x,t<rprime|'>|)>=1
+  </equation*>
+
+  holds for any <math|t,t<rprime|'>\<in\>\<bbb-R\>>. We are to show what this
+  results in the transition rate <math|r> (which determines the time
+  evolution). Equation <reference|eq:probtoself> gives
 
   <\equation*>
     f<around*|(|y,t+\<Delta\>t|)>=f<around*|(|y,t|)>-\<mathi\>\<Delta\>t<big|int>\<mathd\>x
@@ -172,13 +189,12 @@
   <math|f<around*|(|\<cdummy\>,t|)>\<in\>\<cal-S\><around*|(|\<bbb-R\><rsup|d>,\<bbb-C\>|)>>.
 
   We are trying to derive a generic path integral formalism. Given a small
-  <math|\<Delta\>t\<gtr\>0>, equation <reference|equ:superposition> gives, up
-  to an <math|\<omicron\><around*|(|\<Delta\>t|)>>,
+  <math|\<Delta\>t\<gtr\>0>, equation <reference|equ:superposition> gives
 
   <\equation*>
-    f<around*|(|x<rprime|'>,t+\<Delta\>t|)>\<approx\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
+    f<around*|(|x<rprime|'>,t+\<Delta\>t|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
     f<around*|(|x,t|)><around*|[|\<delta\><around*|(|x<rprime|'>-x|)>-\<mathi\>
-    r<around*|(|x,x<rprime|'>|)>\<Delta\>t|]>.
+    r<around*|(|x,x<rprime|'>|)>\<Delta\>t|]>+\<omicron\><around*|(|\<Delta\>t|)>
   </equation*>
 
   We are to convert the <math|<around*|[|\<cdots\>|]>> part into exponential.
@@ -205,37 +221,42 @@
     r<around*|(|x,x+\<epsilon\>|)>.
   </equation>
 
-  Then, up to an <math|\<omicron\><around*|(|\<Delta\>t|)>>,
+  Then, the <math|<around*|[|\<cdots\>|]>> part is converted into exponential
+  by
 
   <\align>
     <tformat|<table|<row|<cell|<around*|[|\<cdots\>|]>=>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\>|)><rsup|d>>
-    exp<around*|(|\<mathi\>k<rsub|\<alpha\>><around*|(|x<rprime|'><rsup|\<alpha\>>-x<rsup|\<alpha\>>|)>|)><around*|[|1-\<mathi\><wide|r|^><around*|(|x,k|)>\<Delta\>t|]>>>|<row|<cell|\<approx\>>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\>|)><rsup|d>>
-    exp<around*|(|\<mathi\>k<rsub|\<alpha\>><around*|(|x<rprime|'><rsup|\<alpha\>>-x<rsup|\<alpha\>>|)>-\<mathi\><wide|r|^><around*|(|x,k|)>\<Delta\>t|)>.>>>>
+    exp<around*|(|\<mathi\>k<rsub|\<alpha\>><around*|(|x<rprime|'><rsup|\<alpha\>>-x<rsup|\<alpha\>>|)>|)><around*|[|1-\<mathi\><wide|r|^><around*|(|x,k|)>\<Delta\>t|]>>>|<row|<cell|=>|<cell|<big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\>|)><rsup|d>>
+    exp<around*|(|\<mathi\>k<rsub|\<alpha\>><around*|(|x<rprime|'><rsup|\<alpha\>>-x<rsup|\<alpha\>>|)>-\<mathi\><wide|r|^><around*|(|x,k|)>\<Delta\>t|)>+\<omicron\><around*|(|\<Delta\>t|)>>>>>
   </align>
 
   Plugging back to <math|f<around*|(|x<rprime|'>,t+\<Delta\>t|)> >results in
 
   <\equation*>
-    f<around*|(|x<rprime|'>,t+\<Delta\>t|)>\<approx\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\>|)><rsup|d>>
-    f<around*|(|x,t|)>exp<around*|(|\<mathi\>k<rsub|\<alpha\>><around*|(|x<rprime|'><rsup|\<alpha\>>-x<rsup|\<alpha\>>|)>-\<mathi\><wide|r|^><around*|(|x,k|)>\<Delta\>t|)>.
+    f<around*|(|x<rprime|'>,t+\<Delta\>t|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\>|)><rsup|d>>
+    f<around*|(|x,t|)>exp<around*|(|\<mathi\>k<rsub|\<alpha\>><around*|(|x<rprime|'><rsup|\<alpha\>>-x<rsup|\<alpha\>>|)>-\<mathi\><wide|r|^><around*|(|x,k|)>\<Delta\>t|)>+\<omicron\><around*|(|\<Delta\>t|)>
   </equation*>
 
-  Taking <math|x<rsub|0>\<assign\>x>, <math|x<rsub|1>\<assign\>x<rprime|'>>,
-  <math|k<rsup|0>\<assign\>k> (for \Pbalancing\Q indices, we put the
-  \Ptemporal\Q index of <math|k> as supscript, thus the
-  <math|\<alpha\>>-component of the <math|k> at the origin of \Ptime\Q is
-  written as <math|k<rsup|0><rsub|\<alpha\>>>),
+  Re-denoting <math|x<rsub|0>\<assign\>x>,
+  <math|x<rsub|1>\<assign\>x<rprime|'>>, <math|k<rsup|0>\<assign\>k> (for
+  \Pbalancing\Q indices, we put the \Ptemporal\Q index of <math|k> as
+  superscript, thus the <math|\<alpha\>>-component of the <math|k> at the
+  <math|0>-th \Ptime-slice\Q is written by <math|k<rsup|0><rsub|\<alpha\>>>),
 
   <\equation*>
-    f<around*|(|x<rsub|1>,t+\<Delta\>t|)>\<approx\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|0><big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k<rsup|0>|<around*|(|2\<mathpi\>|)><rsup|d>>
-    exp<around*|(|\<mathi\>k<rsup|0><rsub|\<alpha\>><around*|(|x<rsub|1><rsup|\<alpha\>>-x<rsub|0><rsup|\<alpha\>>|)>-\<mathi\><wide|r|^><around*|(|x<rsub|0>,k<rsup|0>|)>\<Delta\>t|)>f<around*|(|x<rsub|0>,t|)>.
+    f<around*|(|x<rsub|1>,t+\<Delta\>t|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|0><big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k<rsup|0>|<around*|(|2\<mathpi\>|)><rsup|d>>
+    exp<around*|(|\<mathi\>k<rsup|0><rsub|\<alpha\>><around*|(|x<rsub|1><rsup|\<alpha\>>-x<rsub|0><rsup|\<alpha\>>|)>-\<mathi\><wide|r|^><around*|(|x<rsub|0>,k<rsup|0>|)>\<Delta\>t|)>f<around*|(|x<rsub|0>,t|)>+\<omicron\><around*|(|\<Delta\>t|)>
   </equation*>
 
-  Repeat this process <math|N> times, we arrive at
+  Repeating this process <math|N> times, we arrive at<\footnote>
+    We have to show that the residue is an
+    <math|\<omicron\><around*|(|N\<Delta\>t|)>>, but this is far from
+    trivial.
+  </footnote>
 
   <\equation>
-    f<around*|(|x<rsub|N>,t+N \<Delta\>t|)>\<approx\><big|int>D<around*|(|x,k|)>
-    f<around*|(|x<rsub|0>,t|)> exp<around*|(|\<mathi\>S<around*|(|x,k|)>|)>,
+    f<around*|(|x<rsub|N>,t+N \<Delta\>t|)>=<big|int>D<around*|(|x,k|)>
+    f<around*|(|x<rsub|0>,t|)> exp<around*|(|\<mathi\>S<around*|(|x,k|)>|)>+\<omicron\><around*|(|N\<Delta\>t|)>,
   </equation>
 
   where the integral
@@ -250,9 +271,6 @@
   <\equation>
     S<around*|(|x,k|)>\<assign\><big|sum><rsub|i=0><rsup|N-1>\<Delta\>t<around*|[|<around*|(|<frac|x<rsup|\<alpha\>><rsub|i+1>-x<rsub|i><rsup|\<alpha\>>|\<Delta\>t>|)>k<rsup|i><rsub|\<alpha\>>-<wide|r|^><around*|(|x<rsub|i>,k<rsup|i>|)>|]>.
   </equation>
-
-  We have to show that the approximation is up to an
-  <math|\<omicron\><around*|(|N\<Delta\>t|)>>, but this is far from trivial.
 
   If we recognize <math|<around*|(|x<rsub|i+1>-x<rsub|i>|)>/\<Delta\>t> as
   the velocity <math|<wide|x|\<dot\>><rsub|i>>, then the
@@ -271,8 +289,9 @@
     <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|)>r<around*|(|x,x+\<epsilon\>|)>.
   </equation*>
 
-  Denote <math|K<rsub|n><around*|(|x|)>> as the <math|n>-th order moment of
-  the map <math|\<epsilon\>\<mapsto\>r<around*|(|x,x+\<epsilon\>|)>>:
+  Denote <math|K<rsub|n><around*|(|x|)>> as the <math|n>-th order
+  <strong|moment> of the map <math|\<epsilon\>\<mapsto\>r<around*|(|x,x+\<epsilon\>|)>>,
+  that is
 
   <\equation>
     K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
@@ -289,6 +308,9 @@
   by the moments <math|K<rsub|n>>s.
 
   <section|An Useful Expansion>
+
+  In this section, we claim an mathematical theorem that is critical for
+  continuing the journey.\ 
 
   Consider a function <math|\<varphi\>\<in\>\<cal-S\><around*|(|\<bbb-R\><rsup|d>,\<bbb-C\>|)>>.
   Taylor expanding <math|\<varphi\>> at origin gives
@@ -363,9 +385,10 @@
 
   <section|Expansion of Transition Rate>
 
-  Using the equation derived in the previous section, we can get an expansion
-  of <math|r<around*|(|x,y|)>>. From equation <reference|eq:expandbymoments>,
-  we read out <math|<around*|(|\<partial\><rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsup|\<alpha\><rsub|n>><wide|r|^>|)><around*|(|x,0|)>=<around*|(|-\<mathi\>|)><rsup|n>K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>>,
+  Now we apply the expansion derived in the previous section to transition
+  rate <math|r<around*|(|x,y|)>>. From equation
+  <reference|eq:expandbymoments>, we read out
+  <math|<around*|(|\<partial\><rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsup|\<alpha\><rsub|n>><wide|r|^>|)><around*|(|x,0|)>=<around*|(|-\<mathi\>|)><rsup|n>K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>>,
   where the partial derivatives are taken on the second variable. Then,
   equation <reference|eq:deltaexp> implies
 
@@ -476,17 +499,17 @@
   <math|K<rsub|n>=0> for any <math|n\<gtr\>2>) and <math|K<rsub|2>> is
   constant.
 
-  We have to seek for a condition that cut-off the sequence of moments, such
-  that <math|K<rsub|n>=0> for any <math|n\<gtr\>N<rsub|cut>>. As in the
-  stochastic process, a mild condition about the transited distance would be
-  helpful. And using Hermitianity as previous, we can obtain a recursive
-  equation that gives the relation between <math|K<rsub|n>>s and their
-  complex conjugations. For example, we will find <math|K<rsub|N<rsub|cut>>>
-  a real function. This will finally lead to a generic Hamiltonian of quantum
-  mechanics based on several explicit axioms and rigorous mathematical
-  statements.
+  <with|color|red|We have to seek for a condition that cut-off the sequence
+  of moments, such that <math|K<rsub|n>=0> for any
+  <math|n\<gtr\>N<rsub|cut>>.> As in the stochastic process, a mild condition
+  about the transited distance would be helpful. And using Hermitianity as
+  previous, we can obtain a recursive equation that gives the relation
+  between <math|K<rsub|n>>s and their complex conjugations. For example, we
+  will find <math|K<rsub|N<rsub|cut>>> a real function. This will finally
+  lead to a generic Hamiltonian of quantum mechanics based on several
+  explicit axioms and rigorous mathematical statements.
 
-  <section|Imposing A Cut-Off>
+  <section|TODO: Imposing A Cut-Off>
 
   Another axiom that analog to what we have imposed in stochastic process is
   as follow: if initially a quantum particle locates at <math|x>, then after
@@ -544,21 +567,28 @@
     <associate|eq:probtoself|<tuple|1.4|?>>
     <associate|eq:transexp|<tuple|1.13|?>>
     <associate|equ:superposition|<tuple|1.2|?>>
-    <associate|footnote-1|<tuple|1|?>>
     <associate|footnote-1.1|<tuple|1.1|?>>
+    <associate|footnote-1.10|<tuple|1.10|?>>
+    <associate|footnote-1.11|<tuple|1.11|?>>
     <associate|footnote-1.2|<tuple|1.2|?>>
     <associate|footnote-1.3|<tuple|1.3|?>>
     <associate|footnote-1.4|<tuple|1.4|?>>
     <associate|footnote-1.5|<tuple|1.5|?>>
     <associate|footnote-1.6|<tuple|1.6|?>>
     <associate|footnote-1.7|<tuple|1.7|?>>
+    <associate|footnote-1.8|<tuple|1.8|?>>
+    <associate|footnote-1.9|<tuple|1.9|?>>
     <associate|footnr-1.1|<tuple|1.1|?>>
+    <associate|footnr-1.10|<tuple|1.10|?>>
+    <associate|footnr-1.11|<tuple|1.11|?>>
     <associate|footnr-1.2|<tuple|1.1|?>>
     <associate|footnr-1.3|<tuple|1.3|?>>
     <associate|footnr-1.4|<tuple|1.4|?>>
     <associate|footnr-1.5|<tuple|1.5|?>>
     <associate|footnr-1.6|<tuple|1.6|?>>
     <associate|footnr-1.7|<tuple|1.7|?>>
+    <associate|footnr-1.8|<tuple|1.8|?>>
+    <associate|footnr-1.9|<tuple|1.9|?>>
   </collection>
 </references>
 
@@ -574,7 +604,8 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-2>
 
-      1.2.<space|2spc>In Euclidean Space <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      1.2.<space|2spc>In Euclidean Space: Path Integral
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-3>
 
       1.3.<space|2spc>An Useful Expansion
