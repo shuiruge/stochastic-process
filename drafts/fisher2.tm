@@ -196,6 +196,77 @@
   Fisher matrix is degenerate, which means <math|det
   \<cal-F\><around*|(|\<theta\>|)>\<rightarrow\>0> as the randomness
   diminishing.
+
+  <section|Fisher Matrix Caused by Temperature>
+
+  <\equation*>
+    p<around*|(|x\|\<beta\>|)>=<frac|exp<around*|(|-\<beta\>S<around*|(|x|)>|)>|Z<around*|(|\<beta\>|)>>,
+  </equation*>
+
+  where
+
+  <\equation*>
+    Z<around*|(|\<beta\>|)>\<assign\><big|int>\<mathd\>x
+    exp<around*|(|-\<beta\>S<around*|(|x|)>|)>.
+  </equation*>
+
+  Thus,
+
+  <\equation*>
+    -ln p<around*|(|x\|\<beta\>|)>=\<beta\>S<around*|(|x|)>+ln
+    Z<around*|(|\<beta\>|)>.
+  </equation*>
+
+  For Fisher matrix, we are to evaluate
+
+  <\equation*>
+    -<frac|\<partial\><rsup|2>|\<partial\>\<beta\><rsup|2>>ln
+    p<around*|(|x\|\<beta\>|)>=<frac|\<partial\><rsup|2>|\<partial\>\<beta\><rsup|2>>ln
+    Z<around*|(|\<beta\>|)>.
+  </equation*>
+
+  Plugging in the definition of <math|Z<around*|(|\<beta\>|)>>, we have
+
+  <\equation*>
+    <frac|\<partial\>|\<partial\>\<beta\>>ln
+    Z<around*|(|\<beta\>|)>=<frac|1|Z<around*|(|\<beta\>|)>><frac|\<partial\>Z|\<partial\>\<beta\>><around*|(|\<beta\>|)>=-<frac|1|Z<around*|(|\<beta\>|)>><big|int>\<mathd\>x
+    exp<around*|(|-\<beta\>S<around*|(|x|)>|)>
+    S<around*|(|x|)>=-\<bbb-E\><rsub|P<around*|(|\<beta\>|)>><around*|[|S|]>
+  </equation*>
+
+  then, taking derivative on the <math|1/Z<around*|(|\<beta\>|)>> factor, we
+  find
+
+  <\equation*>
+    <frac|\<partial\><rsup|2>|\<partial\>\<beta\><rsup|2>>ln
+    Z<around*|(|\<beta\>|)>\<supset\><frac|\<partial\>ln
+    Z|\<partial\>\<beta\>><around*|(|\<beta\>|)><frac|1|Z<around*|(|\<beta\>|)>><big|int>\<mathd\>x
+    exp<around*|(|-\<beta\>S<around*|(|x|)>|)>
+    S<around*|(|x|)>=<frac|\<partial\>ln Z|\<partial\>\<beta\>><around*|(|\<beta\>|)>\<bbb-E\><rsub|P<around*|(|\<beta\>|)>><around*|[|S|]>.
+  </equation*>
+
+  Plugging in the result of <math|\<partial\>ln Z/\<partial\>\<beta\>>
+  resulting in <math|-\<bbb-E\><rsub|P<around*|(|\<beta\>|)>><rsup|2><around*|[|S|]>>.
+  Taking derivative on the <math|\<beta\>> in
+  <math|exp<around*|(|-\<beta\>S<around*|(|x|)>|)>> gives
+
+  <\equation*>
+    <frac|\<partial\><rsup|2>|\<partial\>\<beta\><rsup|2>>ln
+    Z<around*|(|\<beta\>|)>\<supset\><frac|1|Z<around*|(|\<beta\>|)>><big|int>\<mathd\>x
+    exp<around*|(|-\<beta\>S<around*|(|x|)>|)>
+    S<rsup|2><around*|(|x|)>=\<bbb-E\><rsub|P<around*|(|\<beta\>|)>><around*|[|S<rsup|2>|]>.
+  </equation*>
+
+  Thus, we get
+
+  <\equation*>
+    <frac|\<partial\><rsup|2>|\<partial\>\<beta\><rsup|2>>ln
+    Z<around*|(|\<beta\>|)>=\<bbb-E\><rsub|P<around*|(|\<beta\>|)>><around*|[|S<rsup|2>|]>-\<bbb-E\><rsub|P<around*|(|\<beta\>|)>><rsup|2><around*|[|S|]>.
+  </equation*>
+
+  \;
+
+  \;
 </body>
 
 <\initial>
@@ -209,6 +280,7 @@
   <\collection>
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-2|<tuple|2|1>>
+    <associate|auto-3|<tuple|3|?>>
     <associate|footnote-1|<tuple|1|2>>
     <associate|footnr-1|<tuple|1|2>>
   </collection>
@@ -218,7 +290,7 @@
   <\collection>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Fisher
-      Matrix at Stable Equilibra> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      Matrix at Stable Equilibria> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1><vspace|0.5fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Fisher
