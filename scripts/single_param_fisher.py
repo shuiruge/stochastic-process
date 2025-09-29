@@ -95,11 +95,20 @@ def test_limit_circle(param_type='mu', T=1e+1):
     In polar coordinates:
 
     $$ \dot{r} = \mu r (1 - r^2), \dot{\theta} = \omega. $$
+
+    And in Cartesian coordinates, it turns to be:
+
+    $$ \dot{x} = -\omega y + \mu x (1 - x^2 - y^2), $$
+
+    and
+
+    $$ \dot{y} = \omega x + \mu y (1 - x^2 - y^2), $$
     """
     if param_type not in ('mu', 'omega'):
         raise ValueError()
 
     def _dynamics(mu, omega, x):
+        # TODO: fix this.
         f = [
             mu * (x[:,0] - omega*x[:,1] - x[:,0] * (x[:,0]**2 + x[:,1]**2)),
             mu * (omega*x[:,0] + x[:,1] - x[:,1] * (x[:,0]**2 + x[:,1]**2)),

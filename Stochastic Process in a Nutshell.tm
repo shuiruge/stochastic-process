@@ -406,7 +406,7 @@
   We are to derive the explicit expression of <math|H> based on the three
   axioms. The result is found to be unique.
 
-  Based on the first axiom, there is a function
+  Based on the first two axioms, there is a function
   <math|h:<around*|(|0,+\<infty\>|)>\<times\><around*|(|0,+\<infty\>|)>\<rightarrow\><around*|[|0,+\<infty\>|)>>
   such that <math|H> can be expressed as
 
@@ -468,9 +468,8 @@
   ln<around*|(|x|)>+C>, where <math|C> is a constant. Combined with
   <math|h<around*|(|x,y|)>=h<around*|(|x/y,1|)>>, we finally arrive at
   <math|h<around*|(|x,y|)>=\<partial\><rsub|1>h<around*|(|1,1|)>
-  ln<around*|(|x/y|)>+C>. To determine the
-  <math|\<partial\><rsub|1>h<around*|(|1,1|)>> and <math|C>, we use the
-  second axiom <math|\<partial\><rsub|1>h<around*|(|1,1|)>
+  ln<around*|(|x/y|)>+C>. To determine <math|\<partial\><rsub|1>h<around*|(|1,1|)>>
+  and <math|C>, we use the second axiom <math|\<partial\><rsub|1>h<around*|(|1,1|)>
   <big|int>\<mathd\>x p<around*|(|x|)> ln<around*|(|p<around*|(|x|)>/q<around*|(|x|)>|)>+C\<gtr\>0>
   when <math|p\<neq\>q> and <math|\<partial\><rsub|1>h<around*|(|1,1|)>
   <big|int>\<mathd\>x p<around*|(|x|)> ln<around*|(|p<around*|(|x|)>/p<around*|(|x|)>|)>+C=0>.
@@ -1698,7 +1697,7 @@
 
     <item>as <math|\<Delta\>t> tends to zero,
     <math|M<rsub|n+m><around*|(|x,\<Delta\>t|)>> converges (to zero) faster
-    than <math|M<rsub|n+m><around*|(|x,\<Delta\>t|)>>.
+    than <math|M<rsub|n><around*|(|x,\<Delta\>t|)>>.
   </enumerate>
 
   For the second condition, we shall expect that
@@ -3706,11 +3705,11 @@
     exp<around*|(|\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>+\<Delta\>t<big|sum><rsub|n=1><rsup|N<rsub|cut>><frac|<around*|(|-\<mathi\>|)><rsup|n>|n!>K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>k<rsub|\<alpha\><rsub|1>>\<cdots\>k<rsub|\<alpha\><rsub|n>>|)>.
   </equation*>
 
-  Or putting <math|\<mathi\>k> together as <math|k>,
+  Or putting <math|-\<mathi\>k> together as <math|k>,
 
   <\equation>
     q<rsub|\<Delta\>t><around*|(|x\<rightarrow\>x+\<epsilon\>|)>\<approx\><big|int><rsub|<with|color|red|\<bbb-I\>><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\><with|color|red|\<mathi\>>|)><rsup|d>>
-    exp<around*|(|k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>+\<Delta\>t<big|sum><rsub|n=1><rsup|N<rsub|cut>><frac|<around*|(|-1|)><rsup|n>|n!>K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>k<rsub|\<alpha\><rsub|1>>\<cdots\>k<rsub|\<alpha\><rsub|n>>|)>,<label|equation:transition
+    exp<around*|(|-k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>+\<Delta\>t<big|sum><rsub|n=1><rsup|N<rsub|cut>><frac|1|n!>K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>k<rsub|\<alpha\><rsub|1>>\<cdots\>k<rsub|\<alpha\><rsub|n>>|)>,<label|equation:transition
     density of markov process for path integral>
   </equation>
 
@@ -3733,10 +3732,17 @@
     \<cdots\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<rsub|N-1><big|int><rsub|\<bbb-I\><rsup|d>><frac|\<mathd\>k<rsup|N-1>|<around*|(|2\<mathpi\>\<mathi\>|)><rsup|d>>
   </equation>
 
-  and the action
+  and the action<\footnote>
+    Comparing with classical mechanics, we find the term
+    <math|<big|sum><rsub|n><around*|(|1/n!|)>K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x<rsub|i>|)>k<rsup|i><rsub|\<alpha\><rsub|1>>\<cdots\>k<rsup|i><rsub|\<alpha\><rsub|n>>>
+    serves as the Taylor expansion of a Hamiltonian
+    <math|H<around*|(|x,k|)>>. But the \Pmomentum\Q <math|k> is purely
+    imaginary, and there is not momentum-independent term in the
+    \PHamiltonian\Q, as <math|H<around*|(|x,0|)>=0>.
+  </footnote>
 
   <\equation>
-    S<around*|(|x,k|)>\<assign\>-<big|sum><rsub|i=0><rsup|N-1>\<Delta\>t<around*|{|<around*|(|<frac|x<rsup|\<alpha\>><rsub|i+1>-x<rsub|i><rsup|\<alpha\>>|\<Delta\>t>-K<rsub|1><rsup|\<alpha\>><around*|(|x<rsub|i>|)>|)>k<rsup|i><rsub|\<alpha\>>+<big|sum><rsub|n=2><rsup|N<rsub|cut>><frac|<around*|(|-1|)><rsup|n>|n!>K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x<rsub|i>|)>k<rsup|i><rsub|\<alpha\><rsub|1>>\<cdots\>k<rsup|i><rsub|\<alpha\><rsub|n>>|}>.<label|equation:action
+    S<around*|(|x,k|)>\<assign\><big|sum><rsub|i=0><rsup|N-1>\<Delta\>t<around*|{|<around*|(|<frac|x<rsup|\<alpha\>><rsub|i+1>-x<rsub|i><rsup|\<alpha\>>|\<Delta\>t>|)>k<rsup|i><rsub|\<alpha\>>-<big|sum><rsub|n=1><rsup|N<rsub|cut>><frac|1|n!>K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x<rsub|i>|)>k<rsup|i><rsub|\<alpha\><rsub|1>>\<cdots\>k<rsup|i><rsub|\<alpha\><rsub|n>>|}>.<label|equation:action
     of markovian process>
   </equation>
 
@@ -4007,14 +4013,14 @@
   markov process>, together with the action <reference|equation:action of
   markovian process>. Now we can safely neglect the residue, and write the
   integral as (replacing <math|x<rsub|i>> by <math|x>, <math|k<rsub|i>> by
-  <math|k>, and <math|x<rsub|i+1>-x<rsub|i>> by <math|\<epsilon\>> for
-  simplicity)
+  <math|-\<mathi\>k>, and <math|x<rsub|i+1>-x<rsub|i>> by <math|\<epsilon\>>
+  for simplicity)
 
   <\equation>
     I<around*|(|x|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|d>><frac|\<mathd\>k|<around*|(|2\<mathpi\>|)><rsup|d>>
     exp<around*|(|\<mathi\> <around*|[|\<epsilon\><rsup|\<alpha\>>-K<rsub|1><rsup|\<alpha\>><around*|(|x|)>
     \<Delta\>t|]>k<rsub|\<alpha\>>-<frac|\<Delta\>t|2!>K<rsub|2><rsup|\<alpha\>\<beta\>><around*|(|x|)>
-    k<rsub|\<alpha\>>k<rsub|\<beta\>>+<frac|\<mathi\>\<Delta\>t|3!>K<rsub|3><rsup|\<alpha\>\<beta\>\<gamma\>><around*|(|x|)>
+    k<rsub|\<alpha\>>k<rsub|\<beta\>>-<frac|\<mathi\>\<Delta\>t|3!>K<rsub|3><rsup|\<alpha\>\<beta\>\<gamma\>><around*|(|x|)>
     k<rsub|\<alpha\>>k<rsub|\<beta\>> k<rsub|\<gamma\>>+\<cdots\>|)>.<label|equation:path
     integral I>
   </equation>
@@ -4039,7 +4045,7 @@
 
   As proved in the same section, <math|\<Sigma\>> is everywhere non-negative
   definite. For simplicity, we further assume that <math|\<Sigma\>> is
-  everywhere postive definite. That is, none of the eigenvalues of
+  everywhere positive definite. That is, none of the eigenvalues of
   <math|\<Sigma\><around*|(|x|)>> is vanishing. Then, we can employ Gaussian
   integral, which holds for any positive definite matrix <math|A>,
 
@@ -4468,15 +4474,15 @@
     <tformat|<table|<row|<cell|>|<cell|H<around*|(|P<around*|(|\<theta\>|)>,P<around*|(|\<theta\>+\<delta\>\<theta\>|)>|)>>>|<row|<cell|=>|<cell|-<big|int><rsub|\<cal-X\>>\<mathd\>x
     p<around*|(|x\|\<theta\>|)><around*|[|ln
     p<around*|(|x\|\<theta\>+\<delta\>\<theta\>|)>-p<around*|(|x\|\<theta\>|)>|]>>>|<row|<cell|=>|<cell|-\<delta\>\<theta\><rsup|\<alpha\>><big|int><rsub|\<cal-X\>>\<mathd\>x<frac|\<partial\>p|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x\|\<theta\>|)>-<frac|1|2>\<delta\>\<theta\><rsup|\<alpha\>>\<delta\>\<theta\><rsup|\<beta\>><big|int><rsub|\<cal-X\>>\<mathd\>x
-    p<around*|(|x\|\<theta\>|)><frac|\<partial\>ln
-    p|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x\|\<theta\>|)>+\<omicron\><around*|(|\<delta\>\<theta\><rsup|2>|)>.>>>>
+    p<around*|(|x\|\<theta\>|)><frac|\<partial\><rsup|2>ln
+    p|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x\|\<theta\>|)>+\<omicron\><around*|(|<around*|\<\|\|\>|\<delta\>\<theta\>|\<\|\|\>><rsup|2>|)>.>>>>
   </align>
 
   Because <math|<big|int><rsub|\<cal-X\>>\<mathd\>x
-  p<around*|(|x\|x<rsub|0>|)>=1> holds for all <math|x<rsub|0>>, we have
+  p<around*|(|x\|\<theta\>|)>=1> holds for all <math|\<theta\>>, we have
 
   <\equation*>
-    <big|int><rsub|\<cal-X\>>\<mathd\>x<frac|\<partial\>p|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x\|\<theta\>|)><around*|(|x\|x<rsub|0>|)>=<frac|\<partial\>|\<partial\>\<theta\><rsup|\<alpha\>>><big|int><rsub|\<cal-X\>>\<mathd\>x
+    <big|int><rsub|\<cal-X\>>\<mathd\>x<frac|\<partial\>p|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x\|\<theta\>|)>=<frac|\<partial\>|\<partial\>\<theta\><rsup|\<alpha\>>><big|int><rsub|\<cal-X\>>\<mathd\>x
     p<around*|(|x\|\<theta\>|)>=0.
   </equation*>
 
@@ -4484,8 +4490,8 @@
 
   <\equation>
     \<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>|)>\<assign\>-<big|int><rsub|\<cal-X\>>\<mathd\>x
-    p<around*|(|x\|\<theta\>|)><frac|\<partial\>ln
-    p|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x\|\<theta\>|)>=-\<bbb-E\><rsub|x\<sim\>P<around*|(|\<theta\>|)>><around*|[|<frac|\<partial\>ln
+    p<around*|(|x\|\<theta\>|)><frac|\<partial\><rsup|2>ln
+    p|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x\|\<theta\>|)>=-\<bbb-E\><rsub|x\<sim\>P<around*|(|\<theta\>|)>><around*|[|<frac|\<partial\><rsup|2>ln
     p|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x\|\<theta\>|)>|]>,<label|equation:
     fisher matrix>
   </equation>
@@ -4504,7 +4510,7 @@
       p<around*|(|x\|\<theta\>+\<delta\>\<theta\>|)>-p<around*|(|x\|\<theta\>|)>|]>>>|<row|<cell|=>|<cell|<big|int><rsub|\<cal-X\>>\<mathd\>x<frac|\<partial\>p|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x\|\<theta\>|)>\<delta\>\<theta\><rsup|\<alpha\>>+<frac|1|2><big|int><rsub|\<cal-X\>>\<mathd\>x
       p<around*|(|x\|\<theta\>|)><frac|\<partial\><rsup|2>ln
       p|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x\|\<theta\>|)>\<delta\>\<theta\><rsup|\<alpha\>>\<delta\>\<theta\><rsup|\<beta\>>>>|<row|<cell|+>|<cell|<big|int><rsub|\<cal-X\>>\<mathd\>x<frac|\<partial\>p|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x\|\<theta\>|)><frac|\<partial\>ln
-      p|\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x\|\<theta\>|)>\<delta\>\<theta\><rsup|\<alpha\>>\<delta\>\<theta\><rsup|\<beta\>>+\<omicron\><around*|(|\<delta\>\<theta\><rsup|2>|)>.>>>>
+      p|\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x\|\<theta\>|)>\<delta\>\<theta\><rsup|\<alpha\>>\<delta\>\<theta\><rsup|\<beta\>>+\<omicron\><around*|(|<around*|\<\|\|\>|\<delta\>\<theta\><rsup|2>|\<\|\|\>>|)>.>>>>
     </align>
 
     The first integral vanishes as before, by noticing the identity
@@ -4547,7 +4553,7 @@
     <\equation*>
       H<around*|(|P<around*|(|\<theta\>+\<delta\>\<theta\>|)>,P<around*|(|\<theta\>|)>|)>=-<frac|1|2><big|int><rsub|\<cal-X\>>\<mathd\>x
       p<around*|(|x\|\<theta\>|)><frac|\<partial\><rsup|2>ln
-      p|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x\|\<theta\>|)>\<delta\>\<theta\><rsup|\<alpha\>>\<delta\>\<theta\><rsup|\<beta\>>+\<omicron\><around*|(|\<delta\>\<theta\><rsup|2>|)>=<frac|1|2>\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>|)>\<delta\>\<theta\><rsup|\<alpha\>>\<delta\>\<theta\><rsup|\<beta\>>+\<omicron\><around*|(|\<delta\>\<theta\><rsup|2>|)>,
+      p|\<partial\>\<theta\><rsup|\<alpha\>>\<partial\>\<theta\><rsup|\<beta\>>><around*|(|x\|\<theta\>|)>\<delta\>\<theta\><rsup|\<alpha\>>\<delta\>\<theta\><rsup|\<beta\>>+\<omicron\><around*|(|\<delta\>\<theta\><rsup|2>|)>=<frac|1|2>\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>|)>\<delta\>\<theta\><rsup|\<alpha\>>\<delta\>\<theta\><rsup|\<beta\>>+\<omicron\><around*|(|<around*|\<\|\|\>|\<delta\>\<theta\><rsup|2>|\<\|\|\>>|)>,
     </equation*>
 
     which is exactly the <math|H<around*|(|P<around*|(|\<theta\>|)>,P<around*|(|\<theta\>+\<delta\>\<theta\>|)>|)>>.
@@ -4555,7 +4561,7 @@
 
   <\equation*>
     H<around*|(|P<around*|(|\<theta\>|)>,P<around*|(|\<theta\>+\<delta\>\<theta\>|)>|)>=<frac|1|2>\<cal-F\><rsub|\<alpha\>\<beta\>><around*|(|\<theta\>|)>
-    \<delta\>\<theta\><rsup|\<alpha\>>\<delta\>\<theta\><rsup|\<beta\>>+\<omicron\><around*|(|\<delta\>\<theta\><rsup|2>|)>.
+    \<delta\>\<theta\><rsup|\<alpha\>>\<delta\>\<theta\><rsup|\<beta\>>+\<omicron\><around*|(|<around*|\<\|\|\>|\<delta\>\<theta\>|\<\|\|\>><rsup|2>|)>.
   </equation*>
 
   The matrix-valued field <math|\<cal-F\>> is called <strong|Fisher matrix>,
@@ -4621,14 +4627,14 @@
     </equation*>
 
     Using the formula of Gaussian integral, it turns to be
-    <math|<around*|(|\<pi\>/<around*|(|2\<Delta\>t|)>|)><rsup|1/2>>. We can
-    then absorb it into the <math|const> term, resulting in a unit. Repeat
-    this process for <math|x<rsub|N-1>,\<ldots\>,x<rsub|1>> sequentially, we
-    arrive at <math|<big|int>\<mathd\>x<rsub|0>
-    p<rsub|0><around*|(|x<rsub|0>|)>> which again is a unit because of the
-    normalization condition for the prior density <math|p<rsub|0>>. The
-    normalization condition of <math|p<around*|(|x\|\<theta\>|)>> is thus
-    satisfied.
+    <math|<around*|(|\<pi\>/<around*|(|2\<Delta\>t|)>|)><rsup|1/2>>. It is
+    independent of <math|\<theta\>>, thus can be absorbed into the
+    <math|const> term, resulting in a unit. Repeat this process for
+    <math|x<rsub|N-1>,\<ldots\>,x<rsub|1>> sequentially, we arrive at
+    <math|<big|int>\<mathd\>x<rsub|0> p<rsub|0><around*|(|x<rsub|0>|)>> which
+    again is a unit because of the normalization condition for the prior
+    density <math|p<rsub|0>>. The normalization condition of
+    <math|p<around*|(|x\|\<theta\>|)>> is thus satisfied.
   </footnote>
 
   <\equation>
@@ -4645,8 +4651,7 @@
 
   <\equation*>
     <frac|\<partial\>ln p|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x\|\<theta\>|)>=<big|sum><rsub|i=0><rsup|N-1><big|sum><rsub|\<gamma\>=1><rsup|d><around*|(|x<rsub|i+1><rsup|\<gamma\>>-x<rsub|i><rsup|\<gamma\>>-f<rsup|\<gamma\>><around*|(|x<rsub|i>,\<theta\>|)>
-    \<Delta\>t|)><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x<rsub|i>,\<theta\>|)><rsub|>+ln
-    p<rsub|0><around*|(|x<rsub|0>|)>.
+    \<Delta\>t|)><frac|\<partial\>f<rsup|\<gamma\>>|\<partial\>\<theta\><rsup|\<alpha\>>><around*|(|x<rsub|i>,\<theta\>|)><rsub|>.
   </equation*>
 
   once more,
@@ -4899,9 +4904,8 @@
     <associate|auto-36|<tuple|5.2|52>>
     <associate|auto-37|<tuple|5.3|54>>
     <associate|auto-38|<tuple|5.4|54>>
-    <associate|auto-39|<tuple|5.4|54>>
+    <associate|auto-39|<tuple|5.4|55>>
     <associate|auto-4|<tuple|1.2|10>>
-    <associate|auto-40|<tuple|5.5|55>>
     <associate|auto-5|<tuple|1.3|10>>
     <associate|auto-6|<tuple|1.4|11>>
     <associate|auto-7|<tuple|2|13>>
@@ -4989,8 +4993,9 @@
     <associate|footnote-3.5|<tuple|3.5|31>>
     <associate|footnote-4.1|<tuple|4.1|38>>
     <associate|footnote-4.2|<tuple|4.2|43>>
-    <associate|footnote-4.3|<tuple|4.3|45>>
-    <associate|footnote-4.4|<tuple|4.4|49>>
+    <associate|footnote-4.3|<tuple|4.3|44>>
+    <associate|footnote-4.4|<tuple|4.4|45>>
+    <associate|footnote-4.5|<tuple|4.5|49>>
     <associate|footnote-5.1|<tuple|5.1|52>>
     <associate|footnote-5.2|<tuple|5.2|53>>
     <associate|footnr-1|<tuple|1|55>>
@@ -5010,8 +5015,9 @@
     <associate|footnr-3.5|<tuple|3.5|31>>
     <associate|footnr-4.1|<tuple|4.1|38>>
     <associate|footnr-4.2|<tuple|4.2|43>>
-    <associate|footnr-4.3|<tuple|4.18|45>>
-    <associate|footnr-4.4|<tuple|4.4|49>>
+    <associate|footnr-4.3|<tuple|4.3|44>>
+    <associate|footnr-4.4|<tuple|4.18|45>>
+    <associate|footnr-4.5|<tuple|4.5|49>>
     <associate|footnr-5.1|<tuple|5.1|52>>
     <associate|footnr-5.2|<tuple|5.2|53>>
     <associate|section: * Estimation of the Residue|<tuple|4.5.1|44>>
@@ -5245,21 +5251,17 @@
       Sensitivity along Path <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-36>
 
-      5.3<space|2spc>Fisher Matrix around a Stable Fixed Point Is Small
+      5.3<space|2spc>Example: Fisher Matrix of Chain Dynamics
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-37>
 
-      5.4<space|2spc>Example: Fisher Matrix of Chain Dynamics
+      5.4<space|2spc>Example: Fisher Matrix of Lorenz System
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-38>
 
-      5.5<space|2spc>Example: Fisher Matrix of Lorenz System
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-39>
-
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Epilogue>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-40><vspace|0.5fn>
+      <no-break><pageref|auto-39><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
