@@ -218,7 +218,7 @@
   <\equation>
     <wide|r|^><around*|(|x,k|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
     exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>
-    r<around*|(|x,x+\<epsilon\>|)>.
+    r<around*|(|x,x+\<epsilon\>|)>.<label|eq:hamiltonian>
   </equation>
 
   Then, the <math|<around*|[|\<cdots\>|]>> part is converted into exponential
@@ -279,69 +279,36 @@
   proportional to momentum <math|p> and <math|<wide|r|^><around*|(|x,k|)>>
   plays the role of Hamiltonian <math|H<around*|(|x,p|)>>.
 
-  Now we focus on the \PHamiltonian\Q <math|<wide|r|^><around*|(|x,k|)>>. If
-  we Taylor expand <math|<wide|r|^><around*|(|x,k|)>> by <math|k> at origin,
-  then the coefficient is
-
-  <\equation*>
-    lim<rsub|k\<rightarrow\>0><frac|\<partial\>|\<partial\>k<rsub|\<alpha\><rsub|1>>>\<cdots\><frac|\<partial\>|\<partial\>k<rsub|\<alpha\><rsub|n>>><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
-    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>r<around*|(|x,x+\<epsilon\>|)>=<around*|(|-\<mathi\>|)><rsup|n><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
-    <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|)>r<around*|(|x,x+\<epsilon\>|)>.
-  </equation*>
-
-  Denote <math|K<rsub|n><around*|(|x|)>> as the <math|n>-th order
-  <strong|moment> of the map <math|\<epsilon\>\<mapsto\>r<around*|(|x,x+\<epsilon\>|)>>,
-  that is
-
-  <\equation>
-    K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
-    <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|)>r<around*|(|x,x+\<epsilon\>|)>.
-  </equation>
-
-  Then, <math|<wide|r|^><around*|(|x,k|)>> can be Taylor expanded as
-
-  <\equation>
-    <wide|r|^><around*|(|x,k|)>=<big|sum><rsub|n=0><rsup|\<infty\>><frac|<around*|(|-\<mathi\>|)><rsup|n>|n!>K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)><around*|(|k<rsub|\<alpha\><rsub|1>>\<cdots\>k<rsub|\<alpha\><rsub|n>>|)>.<label|eq:expandbymoments>
-  </equation>
-
-  So, the details of <math|S<around*|(|x,k|)>> can be completely determined
-  by the moments <math|K<rsub|n>>s.
-
   <section|An Useful Expansion>
 
   In this section, we claim an mathematical theorem that is critical for
-  continuing the journey.\ 
+  continuing the journey. It extends a function, which at least has Fourier
+  transformation, to a generalized function. With this extension, the
+  function can be expanded by a series of generalized functions.
 
-  Consider a function <math|\<varphi\>\<in\>\<cal-S\><around*|(|\<bbb-R\><rsup|d>,\<bbb-C\>|)>>.
-  Taylor expanding <math|\<varphi\>> at origin gives
+  Define the <math|n>-th order <strong|moment> (with <math|n\<geqslant\>0>)
+  of a function as <math|M<rsub|n>:<around*|(|\<bbb-R\><rsup|d>\<rightarrow\>\<bbb-C\>|)>\<rightarrow\>\<bbb-C\>>,
+  by
 
-  <\equation*>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x f<around*|(|x|)>
-    \<varphi\><around*|(|x|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|1|n!>
+  <\equation>
+    M<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|f|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
+    f<around*|(|x|)> <around*|(|x<rsup|\<alpha\><rsub|1>>\<cdots\>x<rsup|\<alpha\><rsub|n>>|)>.<label|eq:moment>
+  </equation>
+
+  Let <math|f:\<bbb-R\><rsup|d>\<rightarrow\>\<bbb-C\>> such that its moment
+  <math|M<rsub|n><around*|(|f|)>> is finite for any <math|n>. Then, for an
+  arbitrary function <math|\<varphi\>\<in\>\<cal-S\><around*|(|\<bbb-R\><rsup|d>,\<bbb-C\>|)>>,
+  Taylor expanding at origin gives
+
+  <\align>
+    <tformat|<table|<row|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
+    f<around*|(|x|)> \<varphi\><around*|(|x|)>=>|<cell|<big|sum><rsub|n=0><rsup|+\<infty\>><frac|1|n!>
     <around*|[|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x f<around*|(|x|)>
     <around*|(|x<rsup|\<alpha\><rsub|1>>\<cdots\>x<rsup|\<alpha\><rsub|n>>|)>|]>
-    <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>.
-  </equation*>
-
-  We relate the integral in the <math|<around*|[|\<cdots\>|]>> to the Fourier
-  transformation <math|<wide|f|^>> by
-
-  <\equation*>
-    <around*|(|\<partial\><rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsup|\<alpha\><rsub|n>><wide|f|^>|)><around*|(|0|)>=lim<rsub|k\<rightarrow\>0><frac|\<partial\>|\<partial\>k<rsub|\<alpha\><rsub|1>>>\<cdots\><frac|\<partial\>|\<partial\>k<rsub|\<alpha\><rsub|n>>><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
-    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>
-    f<around*|(|x|)>=<around*|(|-\<mathi\>|)><rsup|n>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x f<around*|(|x|)>
-    <around*|(|x<rsup|\<alpha\><rsub|1>>\<cdots\>x<rsup|\<alpha\><rsub|n>>|)>.
-  </equation*>
-
-  Thus,
-
-  <\equation*>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x f<around*|(|x|)>
-    \<varphi\><around*|(|x|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|\<mathi\><rsup|n>|n!>
-    <around*|(|\<partial\><rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsup|\<alpha\><rsub|n>><wide|f|^>|)><around*|(|0|)>
-    <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>.
-  </equation*>
+    <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>>>|<row|<cell|=>|<cell|<big|sum><rsub|n=0><rsup|+\<infty\>><frac|1|n!>
+    M<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|f|)>
+    <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>.>>>>
+  </align>
 
   On the other hand, because of the identity
 
@@ -355,8 +322,7 @@
   <\equation*>
     <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>=<around*|(|-1|)><rsup|n>
     <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
-    <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|x|)>
-    \<varphi\><around*|(|x|)>,
+    <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|x|)>\<varphi\><around*|(|x|)>,
   </equation*>
 
   where we have omitted the boundary terms since
@@ -364,49 +330,77 @@
   Then, plugging this back, we find
 
   <\equation*>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x f<around*|(|x|)>
-    \<varphi\><around*|(|x|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|<around*|(|-\<mathi\>|)><rsup|n>|n!>
-    <around*|(|\<partial\><rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsup|\<alpha\><rsub|n>><wide|f|^>|)><around*|(|0|)>
     <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
-    <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|x|)>
-    \<varphi\><around*|(|x|)>.
+    f<around*|(|x|)>\<varphi\><around*|(|x|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<around*|[|<big|sum><rsub|n=0><rsup|+\<infty\>><frac|<around*|(|-1|)><rsup|n>|n!>
+    M<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|f|)><around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|x|)>|]>\<varphi\><around*|(|x|)>.
   </equation*>
 
   Since <math|\<varphi\>> is arbitrary, we finall arrive at
 
   <\equation>
-    f<around*|(|x|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|<around*|(|-\<mathi\>|)><rsup|n>|n!>
-    <around*|(|\<partial\><rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsup|\<alpha\><rsub|n>><wide|f|^>|)><around*|(|0|)>
+    f<around*|(|x|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|<around*|(|-1|)><rsup|n>|n!>
+    M<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|f|)>
     <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|x|)>.<label|eq:deltaexp>
   </equation>
 
   This expansion is valid only when it is applied on
-  <math|\<cal-S\><around*|(|\<bbb-R\><rsup|d>,\<bbb-C\>|)>>.
+  <math|\<cal-S\><around*|(|\<bbb-R\><rsup|d>,\<bbb-C\>|)>>. The left hand
+  side is not a function anymore, but shall be treated as a generalized
+  function (as the same in the right hand side).
 
   <section|Expansion of Transition Rate>
 
   Now we apply the expansion derived in the previous section to transition
-  rate <math|r<around*|(|x,y|)>>. From equation
-  <reference|eq:expandbymoments>, we read out
-  <math|<around*|(|\<partial\><rsup|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsup|\<alpha\><rsub|n>><wide|r|^>|)><around*|(|x,0|)>=<around*|(|-\<mathi\>|)><rsup|n>K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>>,
-  where the partial derivatives are taken on the second variable. Then,
-  equation <reference|eq:deltaexp> implies
+  rate <math|r<around*|(|x,y|)>>. Denote <math|R<rsub|n><around*|(|x|)>> as
+  the <math|n>-th order moment of the map
+  <math|\<epsilon\>\<mapsto\>r<around*|(|x,x+\<epsilon\>|)>>, that is (moment
+  is defined by equation <reference|eq:moment>)
 
   <\equation>
-    r<around*|(|x,y|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|<around*|(|-1|)><rsup|n>|n!>
-    K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>
-    <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|y-x|)>.<label|eq:transexp>
+    R<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>\<assign\><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
+    <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|)>r<around*|(|x,x+\<epsilon\>|)>.
   </equation>
 
-  It claims (again) that transition rate <math|r>, thus the evolution of
+  Using equation <reference|eq:deltaexp>, we directly get
+
+  <\equation>
+    r<around*|(|x,x+\<epsilon\>|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|<around*|(|-1|)><rsup|n>|n!>
+    R<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>
+    <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|\<epsilon\>|)>.<label|eq:transexp>
+  </equation>
+
+  It claims that transition rate <math|r>, thus the evolution of
   wave-function (equation <reference|equ:superposition>), is completely
-  determined by the moments <math|K<rsub|n>>s.
+  determined by the moments <math|R<rsub|n>>s.
+
+  Interestingly, the Taylor expansion of the \PHamiltonian\Q
+  <math|<wide|r|^><around*|(|x,k|)>> also relates to the moments
+  <math|R<rsub|n>>s (the <math|<wide|r|^><around*|(|x,k|)>> is defined by
+  equation <reference|eq:hamiltonian>). Indeed, if we Taylor expand
+  <math|<wide|r|^><around*|(|x,k|)>> by <math|k> at origin, then the
+  coefficient is
+
+  <\equation*>
+    lim<rsub|k\<rightarrow\>0><frac|\<partial\>|\<partial\>k<rsub|\<alpha\><rsub|1>>>\<cdots\><frac|\<partial\>|\<partial\>k<rsub|\<alpha\><rsub|n>>><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
+    exp<around*|(|-\<mathi\>k<rsub|\<alpha\>>\<epsilon\><rsup|\<alpha\>>|)>r<around*|(|x,x+\<epsilon\>|)>=<around*|(|-\<mathi\>|)><rsup|n><around*|[|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>\<epsilon\>
+    <around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|)>r<around*|(|x,x+\<epsilon\>|)>|]>.
+  </equation*>
+
+  The <math|<around*|[|\<cdots\>|]>> is recognized as <math|R<rsub|n>>. So,
+  <math|<wide|r|^><around*|(|x,k|)>> can be Taylor expanded as
+
+  <\equation>
+    <wide|r|^><around*|(|x,k|)>=<big|sum><rsub|n=0><rsup|\<infty\>><frac|<around*|(|-\<mathi\>|)><rsup|n>|n!>R<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)><around*|(|k<rsub|\<alpha\><rsub|1>>\<cdots\>k<rsub|\<alpha\><rsub|n>>|)>.<label|eq:expandbymoments>
+  </equation>
+
+  Again, the details of <math|S<around*|(|x,k|)>> can be completely
+  determined by the moments <math|R<rsub|n>>s.
 
   Comparing with the traditional Hamiltonian
   <math|<wide|r|^><around*|(|x,k|)>=k<rsup|2>/<around*|(|2m|)>+V<around*|(|x|)>>,
-  we have all <math|K<rsub|n><around*|(|x|)>=0> except for
-  <math|K<rsub|0><around*|(|x|)>=V<around*|(|x|)>> and
-  <math|K<rsub|2><around*|(|x|)>=-1/m>. Equation <reference|eq:transexp>
+  we have all <math|R<rsub|n><around*|(|x|)>=0> except for
+  <math|R<rsub|0><around*|(|x|)>=V<around*|(|x|)>> and
+  <math|R<rsub|2><around*|(|x|)>=-1/m>. Equation <reference|eq:transexp>
   implies
 
   <\equation*>
@@ -425,7 +419,7 @@
 
   <section|Hermitianity on Moments>
 
-  Now we study the <math|K<rsub|n>>s. We first investigate what Hermitianity
+  Now we study the <math|R<rsub|n>>s. We first investigate what Hermitianity
   implies for our generic quantum mechanics. Hermitianity implies
 
   <\equation*>
@@ -440,72 +434,72 @@
   </footnote> Then, the left hand side is expanded as
 
   <\equation*>
-    r<rsup|\<ast\>><around*|(|x,x+\<epsilon\>|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|<around*|(|-1|)><rsup|n>|n!><around*|(|K<rsub|n><rsup|\<ast\>>|)><rsup|\<alpha\>><around*|(|x|)><around*|(|\<partial\><rsup|n><rsub|\<alpha\>>\<delta\>|)><around*|(|\<epsilon\>|)>,
+    r<rsup|\<ast\>><around*|(|x,x+\<epsilon\>|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|<around*|(|-1|)><rsup|n>|n!><around*|(|R<rsub|n><rsup|\<ast\>>|)><rsup|\<alpha\>><around*|(|x|)><around*|(|\<partial\><rsup|n><rsub|\<alpha\>>\<delta\>|)><around*|(|\<epsilon\>|)>,
   </equation*>
 
   and the right hand side
 
   <\equation*>
-    r<around*|(|x+\<epsilon\>,x|)>=r<around*|(|x+\<epsilon\>,<around*|(|x+\<epsilon\>|)>-\<epsilon\>|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|1|n!>K<rsub|n><rsup|\<alpha\>><around*|(|x+\<epsilon\>|)><around*|(|\<partial\><rsup|n><rsub|\<alpha\>>\<delta\>|)><around*|(|\<epsilon\>|)>,
+    r<around*|(|x+\<epsilon\>,x|)>=r<around*|(|x+\<epsilon\>,<around*|(|x+\<epsilon\>|)>-\<epsilon\>|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|1|n!>R<rsub|n><rsup|\<alpha\>><around*|(|x+\<epsilon\>|)><around*|(|\<partial\><rsup|n><rsub|\<alpha\>>\<delta\>|)><around*|(|\<epsilon\>|)>,
   </equation*>
 
   where we have used the relation <math|<around*|(|-1|)><rsup|n><around*|(|\<partial\><rsup|n><rsub|\<alpha\>>\<delta\>|)><around*|(|-\<epsilon\>|)>=<around*|(|\<partial\><rsup|n><rsub|\<alpha\>>\<delta\>|)><around*|(|\<epsilon\>|)>>.
   Put these together (left hand side minus the right hand side),
 
   <\equation*>
-    <big|sum><rsub|n=0><rsup|+\<infty\>><frac|1|n!><around*|[|<around*|(|-1|)><rsup|n><around*|(|K<rsub|n><rsup|\<ast\>>|)><rsup|\<alpha\>><around*|(|x|)>-K<rsub|n><rsup|\<alpha\>><around*|(|x+\<epsilon\>|)>|]><around*|(|\<partial\><rsup|n><rsub|\<alpha\>>\<delta\>|)><around*|(|\<epsilon\>|)>=0.
+    <big|sum><rsub|n=0><rsup|+\<infty\>><frac|1|n!><around*|[|<around*|(|-1|)><rsup|n><around*|(|R<rsub|n><rsup|\<ast\>>|)><rsup|\<alpha\>><around*|(|x|)>-R<rsub|n><rsup|\<alpha\>><around*|(|x+\<epsilon\>|)>|]><around*|(|\<partial\><rsup|n><rsub|\<alpha\>>\<delta\>|)><around*|(|\<epsilon\>|)>=0.
   </equation*>
 
   Applying on an arbitrary function <math|\<varphi\>\<in\>\<cal-S\><around*|(|\<bbb-R\><rsup|d>,\<bbb-C\>|)>>
   (integrating over <math|\<epsilon\>>), we get (after integration by parts)
 
   <\equation*>
-    <big|sum><rsub|n=0><rsup|+\<infty\>><frac|1|n!><around*|[|<around*|(|K<rsub|n><rsup|\<ast\>>|)><rsup|\<alpha\>><around*|(|x|)>\<partial\><rsup|n><rsub|\<alpha\>>\<varphi\><around*|(|0|)>+<around*|(|-1|)><rsup|n+1>\<partial\><rsup|n><rsub|\<alpha\>><around*|[|K<rsub|n><rsup|\<alpha\>><around*|(|x|)>\<varphi\><around*|(|0|)>|]>|]>=0,
+    <big|sum><rsub|n=0><rsup|+\<infty\>><frac|1|n!><around*|[|<around*|(|R<rsub|n><rsup|\<ast\>>|)><rsup|\<alpha\>><around*|(|x|)>\<partial\><rsup|n><rsub|\<alpha\>>\<varphi\><around*|(|0|)>+<around*|(|-1|)><rsup|n+1>\<partial\><rsup|n><rsub|\<alpha\>><around*|[|R<rsub|n><rsup|\<alpha\>><around*|(|x|)>\<varphi\><around*|(|0|)>|]>|]>=0,
   </equation*>
 
   or using the original notations,
 
   <\equation*>
-    <big|sum><rsub|n=0><rsup|+\<infty\>><frac|1|n!><around*|[|<around*|(|K<rsub|n><rsup|\<ast\>>|)><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)><around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>+<around*|(|-1|)><rsup|n+1><around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>|)><around*|[|K<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>\<varphi\><around*|(|0|)>|]>|]>=0.
+    <big|sum><rsub|n=0><rsup|+\<infty\>><frac|1|n!><around*|[|<around*|(|R<rsub|n><rsup|\<ast\>>|)><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)><around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<varphi\>|)><around*|(|0|)>+<around*|(|-1|)><rsup|n+1><around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>|)><around*|[|R<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>\<varphi\><around*|(|0|)>|]>|]>=0.
   </equation*>
 
   This is what the Hermitianity of transition rate <math|r> induces on the
-  relation between moments <math|K<rsub|n>>s and their complex conjugations
-  <math|K<rsub|n><rsup|\<ast\>>>s.
+  relation between moments <math|R<rsub|n>>s and their complex conjugations
+  <math|R<rsub|n><rsup|\<ast\>>>s.
 
   Expanding this summation term by term, the left hand side becomes
 
   <\align>
-    <tformat|<table|<row|<cell|<around*|\<llbracket\>|n=0|\<rrbracket\>>=>|<cell|<around*|(|K<rsub|0><rsup|\<ast\>>|)><around*|(|x|)>\<varphi\><around*|(|0|)>-K<rsub|0><rsup|\<alpha\>><around*|(|x|)>\<varphi\><around*|(|0|)>>>|<row|<cell|<around*|\<llbracket\>|n=1|\<rrbracket\>>+>|<cell|<around*|(|K<rsub|1><rsup|\<ast\>>|)><rsup|\<alpha\>><around*|(|x|)>\<partial\><rsub|\<alpha\>>\<varphi\><around*|(|0|)>+\<partial\><rsub|\<alpha\>>K<rsub|1><rsup|\<alpha\>><around*|(|x|)>\<varphi\><around*|(|x|)>+K<rsub|1><rsup|\<alpha\>><around*|(|x|)>\<partial\><rsub|\<alpha\>>\<varphi\><around*|(|0|)>>>|<row|<cell|<around*|\<llbracket\>|n=2|\<rrbracket\>>+>|<cell|<frac|1|2><around*|(|K<rsub|2><rsup|\<ast\>>|)><rsup|\<alpha\>\<beta\>><around*|(|x|)>\<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>\<varphi\><around*|(|0|)>-<frac|1|2>\<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>K<rsub|2><rsup|\<alpha\>\<beta\>><around*|(|x|)>\<varphi\><around*|(|0|)>-\<partial\><rsub|\<alpha\>>K<rsub|2><rsup|\<alpha\>\<beta\>><around*|(|x|)>\<partial\><rsub|\<beta\>>\<varphi\><around*|(|0|)>-<frac|1|2>K<rsub|2><rsup|\<alpha\>\<beta\>><around*|(|x|)>\<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>\<varphi\><around*|(|0|)>>>|<row|<cell|<around*|\<llbracket\>|n\<gtr\>2|\<rrbracket\>>+>|<cell|\<cdots\>>>>>
+    <tformat|<table|<row|<cell|<around*|\<llbracket\>|n=0|\<rrbracket\>>=>|<cell|<around*|(|R<rsub|0><rsup|\<ast\>>|)><around*|(|x|)>\<varphi\><around*|(|0|)>-R<rsub|0><rsup|\<alpha\>><around*|(|x|)>\<varphi\><around*|(|0|)>>>|<row|<cell|<around*|\<llbracket\>|n=1|\<rrbracket\>>+>|<cell|<around*|(|R<rsub|1><rsup|\<ast\>>|)><rsup|\<alpha\>><around*|(|x|)>\<partial\><rsub|\<alpha\>>\<varphi\><around*|(|0|)>+\<partial\><rsub|\<alpha\>>R<rsub|1><rsup|\<alpha\>><around*|(|x|)>\<varphi\><around*|(|x|)>+R<rsub|1><rsup|\<alpha\>><around*|(|x|)>\<partial\><rsub|\<alpha\>>\<varphi\><around*|(|0|)>>>|<row|<cell|<around*|\<llbracket\>|n=2|\<rrbracket\>>+>|<cell|<frac|1|2><around*|(|R<rsub|2><rsup|\<ast\>>|)><rsup|\<alpha\>\<beta\>><around*|(|x|)>\<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>\<varphi\><around*|(|0|)>-<frac|1|2>\<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>R<rsub|2><rsup|\<alpha\>\<beta\>><around*|(|x|)>\<varphi\><around*|(|0|)>-\<partial\><rsub|\<alpha\>>R<rsub|2><rsup|\<alpha\>\<beta\>><around*|(|x|)>\<partial\><rsub|\<beta\>>\<varphi\><around*|(|0|)>-<frac|1|2>R<rsub|2><rsup|\<alpha\>\<beta\>><around*|(|x|)>\<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>\<varphi\><around*|(|0|)>>>|<row|<cell|<around*|\<llbracket\>|n\<gtr\>2|\<rrbracket\>>+>|<cell|\<cdots\>>>>>
   </align>
 
   Let us examine this temporal result. For simplicity, we set
-  <math|K<rsub|n>=0> for any <math|n\<gtr\>2>. If <math|K<rsub|2>> is
-  constant, then it implies <math|K<rsub|2>\<in\>\<bbb-R\>> (hint: collecting
+  <math|R<rsub|n>=0> for any <math|n\<gtr\>2>. If <math|R<rsub|2>> is
+  constant, then it implies <math|R<rsub|2>\<in\>\<bbb-R\>> (hint: collecting
   the term proportional to <math|\<partial\><rsub|\<alpha\>>\<partial\><rsub|\<beta\>>\<varphi\><around*|(|0|)>>).
-  It in turn leads to <math|K<rsub|1><rsup|\<ast\>><around*|(|x|)>=-K<rsub|1><around*|(|x|)>>,
-  namely <math|K<rsub|1><around*|(|x|)>> is purely imaginary (this is a
-  surprise). And then, <math|K<rsub|0><around*|(|x|)>=K<rsub|0><rsup|\<ast\>><around*|(|x|)>+\<partial\><rsub|\<alpha\>>K<rsub|1><rsup|\<alpha\>><around*|(|x|)>>.
-  If further take <math|K<rsub|1>> as constant, then we get
-  <math|K<rsub|0>:\<bbb-R\><rsup|d>\<rightarrow\>\<bbb-R\>>. This is the
+  It in turn leads to <math|R<rsub|1><rsup|\<ast\>><around*|(|x|)>=-R<rsub|1><around*|(|x|)>>,
+  namely <math|R<rsub|1><around*|(|x|)>> is purely imaginary (this is a
+  surprise). And then, <math|R<rsub|0><around*|(|x|)>=R<rsub|0><rsup|\<ast\>><around*|(|x|)>+\<partial\><rsub|\<alpha\>>R<rsub|1><rsup|\<alpha\>><around*|(|x|)>>.
+  If further take <math|R<rsub|1>> as constant, then we get
+  <math|R<rsub|0>:\<bbb-R\><rsup|d>\<rightarrow\>\<bbb-R\>>. This is the
   situation in the traditional Hamiltonian with dissipation.<\footnote>
-    If <math|K<rsub|1>\<neq\>0>, such that
+    If <math|R<rsub|1>\<neq\>0>, such that
     <math|<wide|r|^><around*|(|x,k|)>=k<rsup|2>/<around*|(|2m|)>+\<mu\>k+V<around*|(|x|)>>
     for some constant <math|\<mu\>>, then the time-reversal symmetry breaks.
     Indeed, <math|\<mu\>k> serves as a friction term. But we usually treat
     systems with dissipation as incomplete.
   </footnote> This is the quantum mechanical analogy of Langevin process,
-  where <math|K<rsub|n>> is cut-off at <math|n=2> (such that
-  <math|K<rsub|n>=0> for any <math|n\<gtr\>2>) and <math|K<rsub|2>> is
+  where <math|R<rsub|n>> is cut-off at <math|n=2> (such that
+  <math|R<rsub|n>=0> for any <math|n\<gtr\>2>) and <math|R<rsub|2>> is
   constant.
 
   <with|color|red|We have to seek for a condition that cut-off the sequence
-  of moments, such that <math|K<rsub|n>=0> for any
+  of moments, such that <math|R<rsub|n>=0> for any
   <math|n\<gtr\>N<rsub|cut>>.> As in the stochastic process, a mild condition
   about the transited distance would be helpful. And using Hermitianity as
   previous, we can obtain a recursive equation that gives the relation
-  between <math|K<rsub|n>>s and their complex conjugations. For example, we
-  will find <math|K<rsub|N<rsub|cut>>> a real function. This will finally
+  between <math|R<rsub|n>>s and their complex conjugations. For example, we
+  will find <math|R<rsub|N<rsub|cut>>> a real function. This will finally
   lead to a generic Hamiltonian of quantum mechanics based on several
   explicit axioms and rigorous mathematical statements.
 
@@ -539,7 +533,7 @@
 
   Well, this is quite different from stochastic process wherein the observed
   value is <math|\<Delta\>t<big|int>\<mathd\>\<epsilon\><around*|(|\<epsilon\><rsup|\<alpha\><rsub|1>>\<cdots\>\<epsilon\><rsup|\<alpha\><rsub|n>>|)>r<around*|(|x,x+\<epsilon\>|)>>,
-  which is the moment <math|K<rsub|n>>. The analogy fails.
+  which is the moment <math|R<rsub|n>>. The analogy fails.
 </body>
 
 <\initial>
@@ -561,34 +555,28 @@
     <associate|auto-8|<tuple|1.7|?>>
     <associate|axiom:prob|<tuple|1.2|?>>
     <associate|axiom:sup|<tuple|1.1|?>>
-    <associate|eq:deltaexp|<tuple|1.12|?>>
-    <associate|eq:expandbymoments|<tuple|1.11|?>>
+    <associate|eq:deltaexp|<tuple|1.11|?>>
+    <associate|eq:expandbymoments|<tuple|1.14|?>>
+    <associate|eq:hamiltonian|<tuple|1.6|?>>
     <associate|eq:hermit|<tuple|1.5|?>>
+    <associate|eq:moment|<tuple|1.10|?>>
     <associate|eq:probtoself|<tuple|1.4|?>>
     <associate|eq:transexp|<tuple|1.13|?>>
     <associate|equ:superposition|<tuple|1.2|?>>
     <associate|footnote-1.1|<tuple|1.1|?>>
-    <associate|footnote-1.10|<tuple|1.10|?>>
-    <associate|footnote-1.11|<tuple|1.11|?>>
     <associate|footnote-1.2|<tuple|1.2|?>>
     <associate|footnote-1.3|<tuple|1.3|?>>
     <associate|footnote-1.4|<tuple|1.4|?>>
     <associate|footnote-1.5|<tuple|1.5|?>>
     <associate|footnote-1.6|<tuple|1.6|?>>
     <associate|footnote-1.7|<tuple|1.7|?>>
-    <associate|footnote-1.8|<tuple|1.8|?>>
-    <associate|footnote-1.9|<tuple|1.9|?>>
     <associate|footnr-1.1|<tuple|1.1|?>>
-    <associate|footnr-1.10|<tuple|1.10|?>>
-    <associate|footnr-1.11|<tuple|1.11|?>>
     <associate|footnr-1.2|<tuple|1.1|?>>
     <associate|footnr-1.3|<tuple|1.3|?>>
     <associate|footnr-1.4|<tuple|1.4|?>>
     <associate|footnr-1.5|<tuple|1.5|?>>
     <associate|footnr-1.6|<tuple|1.6|?>>
     <associate|footnr-1.7|<tuple|1.7|?>>
-    <associate|footnr-1.8|<tuple|1.8|?>>
-    <associate|footnr-1.9|<tuple|1.9|?>>
   </collection>
 </references>
 
@@ -600,28 +588,33 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <pageref|auto-1><vspace|0.5fn>
 
-      1.1.<space|2spc>Time Evolution and Hermitianity
+      1.1.<space|2spc>How to Read this Note?
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-2>
 
-      1.2.<space|2spc>In Euclidean Space: Path Integral
+      1.2.<space|2spc>Time Evolution and Hermitianity
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-3>
 
-      1.3.<space|2spc>An Useful Expansion
+      1.3.<space|2spc>In Euclidean Space: Path Integral
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-4>
 
-      1.4.<space|2spc>Expansion of Transition Rate
+      1.4.<space|2spc>An Useful Expansion
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-5>
 
-      1.5.<space|2spc>Hermitianity on Moments
+      1.5.<space|2spc>Expansion of Transition Rate
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-6>
 
-      1.6.<space|2spc>Imposing A Cut-Off <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      1.6.<space|2spc>Hermitianity on Moments
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-7>
+
+      1.7.<space|2spc>TODO: Imposing A Cut-Off
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-8>
     </associate>
   </collection>
 </auxiliary>
