@@ -274,12 +274,12 @@
   <section|An Useful Expansion>
 
   In this section, we claim an mathematical theorem that is critical for
-  continuing the journey. It extends a function, which at least has Fourier
-  transformation, to a generalized function. With this extension, the
-  function can be expanded by a series of generalized functions.
+  continuing the journey. It extends a function in Schwartz space (ensuring
+  Fourier transformation), to a generalized function. With this extension,
+  the function can be expanded by a series of generalized functions.
 
   Define the <math|n>-th order <strong|moment> (with <math|n\<geqslant\>0>)
-  of a function as <math|M<rsub|n>:<around*|(|\<bbb-R\><rsup|d>\<rightarrow\>\<bbb-C\>|)>\<rightarrow\>\<bbb-C\>>,
+  of a function <math|M<rsub|n>:\<cal-S\><around*|(|\<bbb-R\><rsup|d>,\<bbb-C\>|)>\<rightarrow\>\<bbb-C\>>
   by
 
   <\equation>
@@ -287,23 +287,12 @@
     f<around*|(|x|)> <around*|(|x<rsup|\<alpha\><rsub|1>>\<cdots\>x<rsup|\<alpha\><rsub|n>>|)>.<label|eq:moment>
   </equation>
 
-  Let <math|f:\<bbb-R\><rsup|d>\<rightarrow\>C> such that the moment
-  <math|M<rsub|n><around*|(|f|)>> is finite for any <math|n>.<\footnote>
-    <with|color|red|What is the property of <math|f> that makes
-    <math|M<rsub|n><around*|(|f|)>>s all finite?> If
-    <math|f\<in\>\<cal-S\><around*|(|\<bbb-R\><rsup|d>,\<bbb-C\>|)>>, then,
-    for any <math|n>, we have <math|<around*|\||f|\|>> converges much faster
-    than <math|1/<around*|\<\|\|\>|x|\<\|\|\>><rsup|n+2>>, thus
-    <math|M<rsub|n><around*|(|f|)>> converges as
-    <math|1/<around*|\<\|\|\>|x|\<\|\|\>>> as
-    <math|<around*|\<\|\|\>|x|\<\|\|\>>\<rightarrow\>\<infty\>>, leading to a
-    finite result. So, <math|f\<in\>\<cal-S\><around*|(|\<bbb-R\><rsup|d>,\<bbb-C\>|)>>
-    is a sufficient condition for <math|M<rsub|n><around*|(|f|)>> to be
-    finite for all <math|n\<in\>\<bbb-N\>>. <with|color|red|But is this also
-    a essential condition?>
-  </footnote> Then, for an arbitrary function
-  <math|\<varphi\>:\<bbb-R\><rsup|d>\<rightarrow\>\<bbb-C\>> that is analytic
-  and vanishing at boundary, Taylor expanding at origin gives
+  Since <math|f\<in\>\<cal-S\><around*|(|\<bbb-R\><rsup|d>,\<bbb-C\>|)>>, the
+  moment <math|M<rsub|n><around*|(|f|)>> is finite for any <math|n>. Denote
+  <math|\<cal-S\><rsub|A>> the subspace of Schwartz space in which every
+  function is analytic, termed as <strong|analytic Schwartz space>. Then, for
+  an arbitrary function <math|\<varphi\>\<in\>\<cal-S\><rsub|A><around*|(|\<bbb-R\><rsup|d>,\<bbb-C\>|)>>,
+  Taylor expanding at origin gives
 
   <\align>
     <tformat|<table|<row|<cell|<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
@@ -375,85 +364,7 @@
   </equation*>
 
   This relates the moments and the Fourier transformation of a function in
-  Schwartz space.
-
-  <subsection|With a Cut-off>
-
-  In the previous discussion, the demand that <math|\<varphi\>> is analytic
-  is too strick. It greatly limits the application of this expansion. If only
-  finite number of moments are non-zero, namely there exists an
-  <math|N\<gtr\>0> such that, for any <math|n\<geqslant\>N>,
-  <math|M<rsub|n><around*|(|f|)>=0>, then we can expect
-  <math|\<varphi\>\<in\>\<cal-C\><rsup|N><around*|(|\<bbb-R\><rsup|d>,\<bbb-C\>|)>>
-  (also vanishing at boundary) which is much weaker than being analytic. For
-  simplicity, consider the case where dimension <math|d=1>. By Taylor's
-  theorem, we have
-
-  <\equation*>
-    \<varphi\><around*|(|x|)>=<big|sum><rsub|n=0><rsup|N-1><frac|1|n!>\<varphi\><rsup|<around*|(|n|)>><around*|(|0|)>x<rsup|n>+<frac|1|<around*|(|N-1|)>!><big|int><rsub|0><rsup|x>\<mathd\>t
-    \<varphi\><rsup|<around*|(|N|)>><around*|(|t|)><around*|(|x-t|)><rsup|N-1>.
-  </equation*>
-
-  To derive this formula, we first employ the fundamental theorem of calculus
-  to <math|\<varphi\>>
-
-  <\equation*>
-    \<varphi\><around*|(|x|)>-\<varphi\><around*|(|0|)>=<big|int><rsub|0><rsup|x>\<mathd\>t
-    \<varphi\><rsup|<around*|(|1|)>><around*|(|t|)>.
-  </equation*>
-
-  Integration by parts on the right hand side gives
-
-  <\equation*>
-    <big|int><rsub|0><rsup|x>\<mathd\>t<frac|\<mathd\>\<varphi\>|\<mathd\>t><around*|(|t|)>=x\<varphi\><rsup|<around*|(|1|)>><around*|(|x|)>-<big|int><rsub|0><rsup|x>\<mathd\>t\<varphi\><rsup|<around*|(|2|)>><around*|(|t|)>t.
-  </equation*>
-
-  Use the fundamental theorem of calculus again,
-
-  <\equation*>
-    \<varphi\><rsup|<around*|(|1|)>><around*|(|x|)>-\<varphi\><rsup|<around*|(|1|)>><around*|(|0|)>=<big|int><rsub|0><rsup|x>\<mathd\>t\<varphi\><rsup|<around*|(|2|)>><around*|(|t|)>.
-  </equation*>
-
-  Plugging back to the first term in the right hand side gives
-
-  <\equation*>
-    <big|int><rsub|0><rsup|x>\<mathd\>t<frac|\<mathd\>\<varphi\>|\<mathd\>t><around*|(|t|)>=\<varphi\><rsup|<around*|(|1|)>><around*|(|0|)>x+<big|int><rsub|0><rsup|x>\<mathd\>t\<varphi\><rsup|<around*|(|2|)>><around*|(|t|)><around*|(|x-t|)>,
-  </equation*>
-
-  hence,
-
-  <\equation*>
-    \<varphi\><around*|(|x|)>=\<varphi\><around*|(|0|)>+\<varphi\><rsup|<around*|(|1|)>><around*|(|0|)>x+<big|int><rsub|0><rsup|x>\<mathd\>t\<varphi\><rsup|<around*|(|2|)>><around*|(|t|)><around*|(|x-t|)>.
-  </equation*>
-
-  By mathematical induction, we can obtain the result.
-
-  Using Taylor's theorem (in its integration version), we have
-
-  <\equation*>
-    <big|int><rsub|\<bbb-R\>>\<mathd\>x f<around*|(|x|)>
-    \<varphi\><around*|(|x|)>=<big|sum><rsub|n=0><rsup|N-1><frac|1|n!>
-    M<rsub|n><around*|(|f|)> \<varphi\><rsup|<around*|(|n|)>><around*|(|0|)>+<frac|1|<around*|(|N-1|)>!><big|int><rsub|\<bbb-R\>>\<mathd\>x<big|int><rsub|0><rsup|x>\<mathd\>t
-    f<around*|(|x|)><around*|(|x-t|)><rsup|N-1>\<varphi\><rsup|<around*|(|N|)>><around*|(|t|)>.
-  </equation*>
-
-  The integral on the last term is quite complicated, and nowhere will
-  <math|M<rsub|n><around*|(|f|)>> emerge. TODO
-
-  where we have used <math|M<rsub|n><around*|(|f|)>=0> for any
-  <math|n\<geqslant\>N>. By repeating the previous steps, we arrive at
-
-  <\equation>
-    f<around*|(|x|)>=<big|sum><rsub|n=0><rsup|N-1><frac|<around*|(|-1|)><rsup|n>|n!>
-    M<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|f|)>
-    <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|x|)>.
-  </equation>
-
-  Almost the same expression (except for the upper bound of summation), but
-  the set it can be applied onto is much larger:
-  <math|<around*|{|\<varphi\>:\<varphi\>\<in\>\<cal-C\><rsup|N><around*|(|\<bbb-R\><rsup|d>,\<bbb-C\>|)>,lim<rsub|<around*|\<\|\|\>|x|\<\|\|\>>\<rightarrow\>\<infty\>>\<varphi\><around*|(|x|)>=0|}>>.
-  This is what happens in quantum mechanics (as well as in stochastic
-  process).
+  analytic Schwartz space.
 
   <section|Expansion of Transition Rate>
 
@@ -500,25 +411,7 @@
   </equation>
 
   This is a quantum analogy to the Kramers-Moyal expansion in stochastic
-  process.<\footnote>
-    In stochastic process, we use Kramers-Moyal expansion to prove that, if
-    <math|f<around*|(|\<cdummy\>,t|)>\<in\>\<cal-S\><around*|(|\<bbb-R\><rsup|d>,\<bbb-C\>|)>>,
-    then <math|f<around*|(|\<cdummy\>,t+\<Delta\>t|)>\<in\>\<cal-S\><around*|(|\<bbb-R\><rsup|d>,\<bbb-C\>|)>>
-    for any <math|\<Delta\>t>, as long as
-
-    <\equation*>
-      sup<rsub|x\<in\>\<bbb-R\><rsup|d>><around*|\||\<partial\><rsup|m>R<rsub|n><around*|(|x|)>|\|>\<less\>\<infty\>
-    </equation*>
-
-    for any <math|m,n\<in\>\<bbb-N\>>. In fact, we first get
-    <math|<around*|(|\<partial\>f/\<partial\>t|)>\<in\>\<cal-S\><around*|(|\<bbb-R\><rsup|d>,\<bbb-C\>|)>>,
-    which in turn implies <math|f<around*|(|\<cdummy\>,t+\<Delta\>t|)>\<in\>\<cal-S\><around*|(|\<bbb-R\><rsup|d>,\<bbb-C\>|)>>.
-    But all these are valid only when the series has a cut-off. Otherwise, we
-    have to deal with the convergence of the infinite series, which may not
-    be easy.
-  </footnote>
-
-  \;
+  process.
 
   Interestingly, the Taylor expansion of the \PHamiltonian\Q
   <math|<wide|r|^><around*|(|x,k|)>> also relates to the moments
@@ -564,7 +457,30 @@
 
   which is exactly the Schr<wide|o|\<ddot\>>dinger equation.
 
-  <section|Imposing A Cut-Off>
+  <section|On Analyticity>
+
+  We have set wave-functions in the analytic Schwartz space in which every
+  function is analytic. At the first sight, analyticity seems too strict. But
+  practically, when we solve Schr<wide|o|\<ddot\>>dinger equation on some
+  explicit instances such as harmonic oscillator or hydrogen atom, we does
+  restrict ourselves to analytic functions.
+
+  For example, when solving the stationary Schr<wide|o|\<ddot\>>dinger
+  equation of one-dimensional harmonic oscillator, we suppose that
+  wave-function has the form
+
+  <\equation*>
+    f<around*|(|x|)>=exp<around*|(|-x<rsup|2>|)>
+    <around*|[|<big|sum><rsub|n=0><rsup|\<infty\>>a<rsub|n>x<rsup|n>|]>,
+  </equation*>
+
+  where <math|a<rsub|n>>s are to be determined. The factor
+  <math|exp<around*|(|-x<rsup|2>|)>> is employed for an exponentially fast
+  decay as <math|<around*|\||x|\|>\<rightarrow\>\<infty\>>. And the factor
+  <math|<around*|[|\<cdots\>|]>> is a Taylor series. Namely, <math|f> is in
+  the analytic Schwartz space <math|\<cal-S\><rsub|A><around*|(|\<bbb-R\>,\<bbb-C\>|)>>.
+
+  <section|Locality Imposes a Cut-Off on Moments>
 
   We assume that the action of transition rate <math|r>, namely equation
   <reference|equ:superposition>, is local. To make this clear, we consider an
@@ -606,11 +522,7 @@
   cannot \Pperceive\Q the <math|f<around*|(|x,t|)>> outside the neighborhood
   <math|<around*|{|x:<around*|\||x|\|>\<leqslant\>n\<Delta\>x|}>>. Since
   <math|\<Delta\>x> can be arbitrarily small (but not vanishing), the
-  equation is local. So, locality precisely means that, given any
-  <math|\<varepsilon\>\<gtr\>0>, if we vary the value of <math|f> outside the
-  <math|\<varepsilon\>>-neighborhood <math|U<rsub|\<varepsilon\>><around*|(|x|)>>,
-  then <math|<around*|(|\<partial\>f/\<partial\>t|)><around*|(|x,t|)>> will
-  be invariant.
+  equation is local.
 
   In the previous discussion, we have shown that, with a cut-off
   <math|N<rsub|cut>> on <math|R<rsub|n>>s such that <math|R<rsub|n>=0> for
@@ -622,107 +534,57 @@
   vanishing), the time evolution is non-local. This then imposes a cut-off on
   moments.
 
-  <with|color|red|How can we modify the value of a smooth function <math|f>
-  at <math|x> without effecting its value at origin?> For any
-  <math|x\<in\>\<bbb-R\>> and any <math|n\<in\>\<bbb-N\>>, there is some
-  <math|\<xi\>\<in\><around*|(|0,x|)>> such that
+  Before proving, we first declare a property of analytic function. Consider
+  the Taylor expansion of <math|f\<in\>\<cal-S\><rsub|A><around*|(|\<bbb-R\>,\<bbb-C\>|)>>
+  at origin
 
   <\equation*>
-    f<around*|(|x|)>=<big|sum><rsub|n=0><rsup|m-1><frac|1|n!><frac|\<partial\><rsup|n>f|\<partial\>x<rsup|n>><around*|(|0|)>x<rsup|n>+<frac|1|m!><frac|\<partial\><rsup|m>f|\<partial\>x<rsup|m>><around*|(|\<xi\>|)>x<rsup|m>.
+    f<around*|(|x|)>=a<rsub|0>+a<rsub|1>x+a<rsub|2>x<rsup|2>+\<cdots\>.
   </equation*>
 
-  For example, consider <math|x=1>, thus
+  The information of <math|f> is completely encoded in the infinite sequence
+  of <math|a<rsub|n>>s. This is the result of a theorem which claims that two
+  analytic functions are equal if they agree in any interval (hence we can
+  obtain the Taylor series of the function within the interval). What if we
+  only know a portion of the infinite sequence of <math|a<rsub|n>>s? For
+  example, if we only know the <math|a<rsub|0>>, then only the value of
+  <math|f<around*|(|x|)>> at <math|x=0> is determined. Further, if we also
+  know the <math|a<rsub|1>>, then we can give a good approximation to
+  <math|f<around*|(|x|)>> in a very tiny neighborhood of <math|x=0>, since
+  <math|f<around*|(|x|)>=a<rsub|0>+a<rsub|1>x+\<omicron\><around*|(|x<rsup|2>|)>>.
+  Then, if we additionally know the <math|a<rsub|2>>, then the approximation
+  becomes as good as before in a larger neighborhood of <math|x=0>, since
+  <math|f<around*|(|x|)>=a<rsub|0>+a<rsub|1>x+a<rsub|2>x<rsup|2>+\<omicron\><around*|(|x<rsup|3>|)>>
+  and for keeping the scale of residue, the size of neighborhood can increase
+  a little. This analysis indicates that the more <math|a<rsub|n>>s we know,
+  in a larger neighborhood of <math|x=0> can we properly approximate
+  <math|f<around*|(|x|)>>. Our vision becomes border and border if we know
+  more and more <math|a<rsub|n>>s. Untill knowing the whole sequence of
+  <math|a<rsub|n>>s, we realize the complete picture of
+  <math|f<around*|(|x|)>> (based on the previous theorem about analytic
+  function).
+
+  It also indicates that, for a sufficient large <math|N>, we can keep
+  <math|f<around*|(|x|)>> (approximately) invariant when we tune the
+  <math|a<rsub|n>>s with <math|n\<gtr\>N> while keep the other
+  <math|a<rsub|n>>s invariant. So, based on the equation
 
   <\equation*>
-    f<around*|(|1|)>=<big|sum><rsub|n=0><rsup|m-1><frac|1|n!><frac|\<partial\><rsup|n>f|\<partial\>x<rsup|n>><around*|(|0|)>+<frac|1|m!><frac|\<partial\><rsup|m>f|\<partial\>x<rsup|m>><around*|(|\<xi\>|)>.
+    \<mathi\><frac|\<partial\>f|\<partial\>t><around*|(|0,t|)>=<big|sum><rsub|n=0><rsup|\<infty\>><frac|1|n!>R<rsub|n><around*|(|0|)>a<rsub|n>,
   </equation*>
 
-  How to change the value <math|f<around*|(|1|)>> without effecting the value
-  of <math|f> on <math|U<rsub|\<varepsilon\>><around*|(|0|)>>?
-
-  \;
-
-  \;
-
-  \;
-
-  \;
-
-  So, we may guess that the key that implies the non-locality in the previous
-  example is the infinite series. If we cut-off the series at finite order,
-  the non-locality may disappear. For example, cut-off at <math|n=2> gives
-
-  <\equation*>
-    \<mathi\><frac|\<partial\>f|\<partial\>t><around*|(|0,t|)>=<big|sum><rsub|n=0><rsup|2><frac|<around*|(|-c|)><rsup|n>|n!>
-    <frac|\<partial\><rsup|n>f|\<partial\>x<rsup|n>><around*|(|0,t|)>=f<around*|(|0,t|)>-c
-    <frac|\<partial\>f|\<partial\>x><around*|(|0,t|)>+<frac|c<rsup|2>|2><frac|\<partial\><rsup|2>f|\<partial\>x<rsup|2>><around*|(|0,t|)>.
-  </equation*>
-
-  \;
-
-  To make this clear, consider an example, where <math|f> is set to be
-  Gaussian (we temporally omit the time-dependence since it is irrelative at
-  here)
-
-  <\equation*>
-    f<rsub|\<mu\>><around*|(|x|)>=<around*|(|2\<mathpi\>|)><rsup|-1/4>exp<around*|(|-<frac|<around*|(|x-\<mu\>|)><rsup|2>|4>|)>,
-  </equation*>
-
-  where <math|\<mu\>\<in\>\<bbb-R\>> and, for simplicity, we have set the
-  dimension <math|d=1>. Apparently <math|f<rsub|\<mu\>>\<in\>\<cal-S\><around*|(|\<bbb-R\>,\<bbb-C\>|)>>
-  and <math|<big|int>\<mathd\>x<around*|\||f<rsub|\<mu\>><around*|(|x|)>|\|><rsup|2>=1>.
-  It represents a symmetric \Pmountain\Q centered at <math|\<mu\>> with unit
-  \Pwidth\Q. Locality means
-
-  <\equation*>
-    lim<rsub|\<mu\>\<rightarrow\>\<infty\>><big|int><rsub|\<bbb-R\>>\<mathd\>x
-    r<around*|(|0,x|)>f<rsub|\<mu\>><around*|(|x|)>=0.
-  </equation*>
-
-  In the language of modern analysis, for any <math|\<varepsilon\>\<gtr\>0>,
-  there exists an <math|M\<gtr\>0> such that <math|<big|int>\<mathd\>x
-  r<around*|(|0,x|)>f<rsub|\<mu\>><around*|(|x|)>\<less\>\<varepsilon\>>
-  holds for any <math|\<mu\>\<gtr\>M>.
-
-  From equation <reference|eq:kmanalogy>, we have
-
-  <\align>
-    <tformat|<table|<row|<cell|<around*|(|2\<mathpi\>|)><rsup|1/4><big|int><rsub|\<bbb-R\>>\<mathd\>x
-    r<around*|(|0,x|)>f<rsub|\<mu\>><around*|(|x|)>=>|<cell|<around*|(|2\<mathpi\>|)><rsup|1/4>lim<rsub|x\<rightarrow\>0><big|sum><rsub|n=0><rsup|+\<infty\>><frac|<around*|(|-1|)><rsup|n>|n!>
-    <frac|\<partial\><rsup|n>|\<partial\>x<rsup|n>><around*|[|R<rsub|n><around*|(|x|)>f<rsub|\<mu\>><around*|(|x|)>|]>>>|<row|<cell|=>|<cell|<big|sum><rsub|n=0><rsup|+\<infty\>><frac|<around*|(|-1|)><rsup|n>|n!>
-    <around*|{|lim<rsub|x\<rightarrow\>0><frac|\<partial\><rsup|n>|\<partial\>x<rsup|n>><around*|[|R<rsub|n><around*|(|x|)>exp<around*|(|-<frac|<around*|(|x-\<mu\>|)><rsup|2>|4>|)>|]>|}>.>>>>
-  </align>
-
-  We expect the right hand side bounded by <math|\<varepsilon\>> as long as
-  <math|\<mu\>> is large enough. To make it easy, set
-  <math|R<rsub|n><around*|(|x|)>\<equiv\>1>. Then, the right hand side
-  happens to be a Taylor series with <math|x=-1>.
-
-  <\equation*>
-    <big|sum><rsub|n=0><rsup|\<infty\>><frac|1|n!>
-    <around*|{|lim<rsub|x\<rightarrow\>0><frac|\<partial\><rsup|n>|\<partial\>x<rsup|n>><around*|[|exp<around*|(|-<frac|<around*|(|x-\<mu\>|)><rsup|2>|4>|)>|]>|}><around*|(|-1|)><rsup|n>=exp<around*|(|-<frac|<around*|(|1+\<mu\>|)><rsup|2>|4>|)>.
-  </equation*>
-
-  Truly, as <math|\<mu\>\<rightarrow\>\<infty\>>, it tends to zero.
-  Interestingly, if <math|R<rsub|n><around*|(|x|)>\<equiv\>1> (or principally
-  any constant number), then
-
-  <\equation*>
-    \<mathi\><frac|\<partial\>f|\<partial\>t><around*|(|0,t|)><big|int><rsub|\<bbb-R\>>\<mathd\>x
-    r<around*|(|0,x|)>f<around*|(|x,t|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|<around*|(|-1|)><rsup|n>|n!>
-    <frac|\<partial\><rsup|n>f|\<partial\>x<rsup|n>><around*|(|0,t|)>=f<around*|(|-1,t|)>.
-  </equation*>
-
-  <\equation*>
-    \;
-  </equation*>
-
-  \;
-
-  \;
-
-  Thanks to Cauchy, who made infinity finite by a theorem now named \PCauchy
-  theorem\Q.
+  if there is not a cut-off to the infinite sequence of
+  <math|R<rsub|n><around*|(|0|)>>s, we can modify the
+  <math|<around*|(|\<partial\>f/\<partial\>t|)><around*|(|0,t|)>> by tuning
+  an <math|a<rsub|n>> where <math|n> can be arbitrarily large. This, however,
+  will leave the <math|f<around*|(|x|)>> around <math|x=0> invariant. It
+  means that the value of <math|f> with <math|x> far away from origin can
+  affect the evolution of <math|f> at origin. That is, the evolution is
+  non-local. Hence, there must be a cut-off on the sequence of
+  <math|R<rsub|n><around*|(|0|)>>s. This discussion also holds for any value
+  of <math|x> other than <math|x=0>. We conclude that the evolution is locall
+  if and only if there is an <math|N<rsub|cut>\<gtr\>0> such that
+  <math|R<rsub|n>=0> for any <math|n\<gtr\>N<rsub|cut>>.
 
   <section|Hermitianity on Moments>
 
@@ -800,27 +662,23 @@
   <math|R<rsub|n>=0> for any <math|n\<gtr\>2>) and <math|R<rsub|2>> is
   constant.
 
-  <with|color|red|We have to seek for a condition that cut-off the sequence
-  of moments, such that <math|R<rsub|n>=0> for any
-  <math|n\<gtr\>N<rsub|cut>>.> As in the stochastic process, a mild condition
-  about the transited distance would be helpful. And using Hermitianity as
-  previous, we can obtain a recursive equation that gives the relation
-  between <math|R<rsub|n>>s and their complex conjugations. For example, we
-  will find <math|R<rsub|N<rsub|cut>>> a real function. This will finally
-  lead to a generic Hamiltonian of quantum mechanics based on several
-  explicit axioms and rigorous mathematical statements.
+  Because the sequence of <math|R<rsub|n>>s is cut-off by <math|N<rsub|cut>>,
+  we find <math|R<rsub|N<rsub|cut>><around*|(|x|)>=<around*|(|R<rsub|N<rsub|cut>><rsup|\<ast\>>|)><around*|(|x|)>>,
+  thus <math|R<rsub|N<rsub|cut>>> is a real function. Then, by induction, we
+  can obtain a recursive equation that gives the relation between
+  <math|R<rsub|n>>s and their complex conjugations.
 
-  <section|TODO: Imposing A Cut-Off>
+  <section|Higher Order Momentum?>
 
-  How to impose a cut-off to the sequence of moments? In classical mechanics,
-  higher (than two) order momentum appearing in Hamiltonian implies
-  instability. It was first found by Russian mathematician Mikhail
-  Ostrogradsky, a disciple of Euler. He noticed that Hamiltonian with higher
-  order momentum is not lower-bounded, leading to a dynamical instability.
-  But in quantum mechanics, this instability may disappear. For example,
-  consider the Hamiltonian <math|<wide|r|^><around*|(|x,k|)>=V<around*|(|x|)>+a
-  k<rsup|2>+b k<rsup|4>>, it corresponding to a Schr<wide|o|\<ddot\>>dinger
-  equation with higher order spatial derivatives like
+  In classical mechanics, higher (than two) order momentum appearing in
+  Hamiltonian implies instability. It was first found by Russian
+  mathematician Mikhail Ostrogradsky, a disciple of Euler. He noticed that
+  Hamiltonian with higher order momentum is not lower-bounded, leading to a
+  dynamical instability. But in quantum mechanics, this instability may
+  disappear. For example, consider the Hamiltonian
+  <math|<wide|r|^><around*|(|x,k|)>=V<around*|(|x|)>+a k<rsup|2>+b
+  k<rsup|4>>, it corresponding to a Schr<wide|o|\<ddot\>>dinger equation with
+  higher order spatial derivatives like
 
   <\equation*>
     \<mathi\><frac|\<partial\>f|\<partial\>t><around*|(|x,t|)>=b\<nabla\><rsup|4>f<around*|(|x,t|)>+a\<nabla\><rsup|2>f<around*|(|x,t|)>+V<around*|(|x|)>f<around*|(|x,t|)>.
@@ -834,41 +692,6 @@
   higher order spatial derivatives. In some papers, stable solution was found
   for some proper (yet non-trivial) values of <math|<around*|(|a,b|)>> (TODO:
   add resource).
-
-  A hint: existence of higher order spatial derivatives indicates
-  non-locality. It means the evolution of a wave-function at position
-  <math|x> is effected by the position <math|y> far from <math|x>. This may
-  be reflected in the discrete picture (in which <math|\<partial\><rsub|x>>
-  is replaced by <math|<around*|(|x<rsub|i+1>-x<rsub|i>|)>/\<Delta\>x>). This
-  is true since the generic transition rate we use has not claimed locality.
-  What does locality mean mathematically (or quantitatively)? From equation
-  <reference|equ:superposition>, locality indicates that, for any
-  <math|x\<in\>\<bbb-R\><rsup|d>>, there is some neighborhood
-  <math|U<rsub|\<epsilon\>><around*|(|x|)>> such that
-  <math|r<around*|(|x,y|)>=0> if <math|<around*|\<\|\|\>|y-x|\<\|\|\>>\<gtr\>\<epsilon\>>.
-  In addition, <math|0\<less\>\<epsilon\>\<ll\>1>. This sharply forbids the
-  contribution outside the neighborhood. It further implies that the moments
-  <math|R<rsub|n><around*|(|x|)>> decreases fast as <math|n> increases,
-  because <math|\<epsilon\><rsup|m>\<ll\>\<epsilon\><rsup|m+n>>. But this
-  does not ensure a sharp cut-off to the sequence of <math|R<rsub|n>> such
-  that <math|R<rsub|n>=0> for any <math|n\<gtr\>N<rsub|cut>> (for some
-  <math|N<rsub|cut>\<gtr\>0>).
-
-  Locality indicates
-
-  <\equation*>
-    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>y
-    r<around*|(|x,y|)>f<around*|(|y|)>\<rightarrow\>0
-  </equation*>
-
-  as the \Pdensity\Q of <math|f<around*|(|y|)>> is far from <math|x>.
-  Consider the Gaussian function
-
-  <\equation*>
-    f<around*|(|x;\<mu\>,\<omega\>|)>\<assign\>exp<around*|(|-<frac|<around*|(|x-\<mu\>|)><rsup|2>|2>+\<mathi\>\<omega\>x|)>.
-  </equation*>
-
-  The density centers around <math|\<mu\>>. TODO
 </body>
 
 <\initial>
@@ -881,26 +704,27 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|1.8|?>>
+    <associate|auto-10|<tuple|1.9|?>>
     <associate|auto-2|<tuple|1.1|?>>
     <associate|auto-3|<tuple|1.2|?>>
     <associate|auto-4|<tuple|1.3|?>>
     <associate|auto-5|<tuple|1.4|?>>
-    <associate|auto-6|<tuple|1.4.1|?>>
-    <associate|auto-7|<tuple|1.5|?>>
-    <associate|auto-8|<tuple|1.6|?>>
-    <associate|auto-9|<tuple|1.7|?>>
+    <associate|auto-6|<tuple|1.5|?>>
+    <associate|auto-7|<tuple|1.6|?>>
+    <associate|auto-8|<tuple|1.7|?>>
+    <associate|auto-9|<tuple|1.8|?>>
     <associate|axiom:prob|<tuple|1.2|?>>
     <associate|axiom:sup|<tuple|1.1|?>>
     <associate|eq:deltaexp|<tuple|1.10|?>>
-    <associate|eq:expandbymoments|<tuple|1.15|?>>
+    <associate|eq:expandbymoments|<tuple|1.14|?>>
     <associate|eq:hamiltonian|<tuple|1.5|?>>
     <associate|eq:hermit|<tuple|1.4|?>>
-    <associate|eq:kmanalogy|<tuple|1.14|?>>
+    <associate|eq:kmanalogy|<tuple|1.13|?>>
     <associate|eq:moment|<tuple|1.9|?>>
     <associate|eq:probtoself|<tuple|1.3|?>>
-    <associate|eq:transexp|<tuple|1.13|?>>
+    <associate|eq:transexp|<tuple|1.12|?>>
     <associate|equ:superposition|<tuple|1.1|?>>
+    <associate|footnote-1|<tuple|1|?>>
     <associate|footnote-1.1|<tuple|1.1|?>>
     <associate|footnote-1.2|<tuple|1.2|?>>
     <associate|footnote-1.3|<tuple|1.3|?>>
@@ -910,6 +734,12 @@
     <associate|footnote-1.7|<tuple|1.7|?>>
     <associate|footnote-1.8|<tuple|1.8|?>>
     <associate|footnote-1.9|<tuple|1.9|?>>
+    <associate|footnote-2|<tuple|2|?>>
+    <associate|footnote-3|<tuple|3|?>>
+    <associate|footnote-4|<tuple|4|?>>
+    <associate|footnote-5|<tuple|5|?>>
+    <associate|footnote-6|<tuple|6|?>>
+    <associate|footnote-7|<tuple|7|?>>
     <associate|footnr-1.1|<tuple|1.1|?>>
     <associate|footnr-1.2|<tuple|1.2|?>>
     <associate|footnr-1.3|<tuple|1.3|?>>
