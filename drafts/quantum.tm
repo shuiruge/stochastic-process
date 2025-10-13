@@ -175,9 +175,8 @@
     A function <math|f:\<bbb-R\><rsup|d>\<times\>\<bbb-R\><rsup|d>\<rightarrow\>\<bbb-C\>>
     is <strong|Hermitian> if <math|f<rsup|\<ast\>><around*|(|x,y|)>=f<around*|(|y,x|)>>
     for each <math|x,y\<in\>\<bbb-R\><rsup|d>>. In the traditional approach
-    of quantum mechanics, <math|r<around*|(|x,y|)>=\<langle\>y\|<wide|H|^>\|x\<rangle\>>,
-    where <math|<wide|H|^>> is the Hamiltonian operator. The Hermitianity is
-    manifest.
+    of quantum mechanics, we have <math|r<around*|(|x,y|)>=\<langle\>y\|<wide|H|^>\|x\<rangle\>>,
+    where <math|<wide|H|^>> is the Hamiltonian operator.
   </footnote>
 
   <section|In Euclidean Space: Path Integral>
@@ -529,13 +528,14 @@
   So, we can simply omit the region <math|\<partial\>\<bbb-R\><rsup|d><around*|(|X|)>>
   and consider the <math|f> on the closed region
   <math|U<rsub|X><around*|(|0|)>\<assign\><around*|{|x\<in\>\<bbb-R\><rsup|d>:<around*|\<\|\|\>|x|\<\|\|\>>\<leqslant\>X|}>>.
-  Then, within this closed (thus compact) region of <math|\<bbb-R\><rsup|d>>,
-  Weierstrass approximation theorem claims that <math|f> can be approximate
-  by a polynomial at any precision. But a polynomial cannot be negligible on
-  the \Pboundary\Q <math|\<partial\>\<bbb-R\><rsup|d><around*|(|X|)>>,
-  instead increasing as <math|<around*|\<\|\|\>|x|\<\|\|\>><rsup|n>> where
-  <math|n> is the order of the polynomial. Inspired by the solution of
-  harmonic oscillator, we weight it by <math|exp<around*|(|-<around*|\<\|\|\>|x|\<\|\|\>><rsup|2>|)>>.
+  Within this compact region, <hlink|Weierstrass approximation
+  theorem|https://en.wikipedia.org/wiki/Stone%E2%80%93Weierstrass_theorem#Weierstrass_approximation_theorem>
+  claims that <math|f> can be approximate by a polynomial at any precision.
+  But a polynomial cannot be negligible on the \Pboundary\Q
+  <math|\<partial\>\<bbb-R\><rsup|d><around*|(|X|)>>. Instead, it will
+  increase as <math|<around*|\<\|\|\>|x|\<\|\|\>><rsup|n>> where <math|n> is
+  the order of the polynomial. Inspired by the solution of harmonic
+  oscillator, we weight it by <math|exp<around*|(|-<around*|\<\|\|\>|x|\<\|\|\>><rsup|2>|)>>.
   Namely, we use <math|p<around*|(|x|)> exp<around*|(|-<around*|\<\|\|\>|x|\<\|\|\>><rsup|2>|)>>
   to approximate <math|f> on <math|\<bbb-R\><rsup|d>>, which means the
   polynomial <math|p<around*|(|x|)>> approximates
@@ -545,7 +545,7 @@
   that has a continuous inverse (namely, <math|1/w<around*|(|x|)>> is
   continuous on <math|x>) can serve as the weight function, and
   <math|exp<around*|(|-<around*|\<\|\|\>|x|\<\|\|\>><rsup|2>|)>> is just an
-  instance. We thus conclude, <with|color|dark green|<em|for any function in
+  instance. We thus conclude, <with|color|dark green|<em|for any function
   <math|f\<in\>L<rsup|2><around*|(|\<bbb-R\><rsup|d>|)>> and any
   <math|\<varepsilon\>\<gtr\>0>, there are a polynomial <math|p> and an
   analytic Schwartz function <math|w> such that>>
@@ -599,8 +599,8 @@
     \<mathi\><frac|\<partial\>f|\<partial\>t><around*|(|x,t|)>=\<cal-L\><around*|(|f<around*|(|x,t|)>,<frac|\<partial\>f|\<partial\>x><around*|(|x,t|)>,<frac|\<partial\><rsup|2>f|\<partial\>x<rsup|2>><around*|(|x,t|)>,\<ldots\>,<frac|\<partial\><rsup|n>f|\<partial\>x<rsup|n>><around*|(|x,t|)>|)>,
   </equation*>
 
-  where <math|\<cal-L\>> is an analytic (or algebraic) function. This is easy
-  to understand because to compute <math|<around*|(|\<partial\><rsup|n>f/\<partial\>x<rsup|n>|)><around*|(|0,t|)>>
+  where <math|\<cal-L\>> is an analytic function. This is easy to understand
+  because to compute <math|<around*|(|\<partial\><rsup|n>f/\<partial\>x<rsup|n>|)><around*|(|0,t|)>>
   using numerical method with difference <math|\<Delta\>x>, only
   <math|f<around*|(|x,t|)>> with <math|x\<in\><around*|{|0,\<Delta\>x,\<ldots\>,n\<Delta\>x|}>>
   are employed. So, <math|<around*|(|\<partial\>f/\<partial\>t|)><around*|(|0,t|)>>
@@ -668,8 +668,8 @@
   non-local. Hence, there must be a cut-off on the sequence of
   <math|R<rsub|n><around*|(|0|)>>s. This discussion also holds for any value
   of <math|x> other than <math|x=0>. We conclude that <with|color|dark
-  green|<em|time evolution is local if and only if there is an
-  <math|N<rsub|cut>\<gtr\>0> such that <math|R<rsub|n>=0> for any
+  green|<em|time evolution is local if and only if there is a positive
+  integer <math|N<rsub|cut>> such that <math|R<rsub|n>=0> for any
   <math|n\<gtr\>N<rsub|cut>>>>.
 
   <section|Hermitianity on Moments>
@@ -790,41 +790,41 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|1.9|?>>
-    <associate|auto-11|<tuple|1.10|?>>
-    <associate|auto-2|<tuple|1.1|?>>
-    <associate|auto-3|<tuple|1.2|?>>
-    <associate|auto-4|<tuple|1.3|?>>
-    <associate|auto-5|<tuple|1.4|?>>
-    <associate|auto-6|<tuple|1.5|?>>
-    <associate|auto-7|<tuple|1.6|?>>
-    <associate|auto-8|<tuple|1.7|?>>
-    <associate|auto-9|<tuple|1.8|?>>
-    <associate|axiom:prob|<tuple|1.2|?>>
-    <associate|axiom:sup|<tuple|1.1|?>>
-    <associate|eq:deltaexp|<tuple|1.10|?>>
-    <associate|eq:expandbymoments|<tuple|1.15|?>>
-    <associate|eq:hamiltonian|<tuple|1.5|?>>
-    <associate|eq:hermit|<tuple|1.4|?>>
-    <associate|eq:kmanalogy|<tuple|1.14|?>>
-    <associate|eq:moment|<tuple|1.9|?>>
-    <associate|eq:probtoself|<tuple|1.3|?>>
-    <associate|eq:transexp|<tuple|1.13|?>>
-    <associate|equ:superposition|<tuple|1.1|?>>
-    <associate|footnote-1.1|<tuple|1.1|?>>
-    <associate|footnote-1.2|<tuple|1.2|?>>
-    <associate|footnote-1.3|<tuple|1.3|?>>
-    <associate|footnote-1.4|<tuple|1.4|?>>
-    <associate|footnote-1.5|<tuple|1.5|?>>
-    <associate|footnote-1.6|<tuple|1.6|?>>
-    <associate|footnote-1.7|<tuple|1.7|?>>
-    <associate|footnr-1.1|<tuple|1.1|?>>
-    <associate|footnr-1.2|<tuple|1.2|?>>
-    <associate|footnr-1.3|<tuple|1.3|?>>
-    <associate|footnr-1.4|<tuple|1.4|?>>
-    <associate|footnr-1.5|<tuple|1.5|?>>
-    <associate|footnr-1.6|<tuple|1.6|?>>
-    <associate|footnr-1.7|<tuple|1.7|?>>
+    <associate|auto-10|<tuple|1.9|7>>
+    <associate|auto-11|<tuple|1.10|8>>
+    <associate|auto-2|<tuple|1.1|1>>
+    <associate|auto-3|<tuple|1.2|1>>
+    <associate|auto-4|<tuple|1.3|2>>
+    <associate|auto-5|<tuple|1.4|2>>
+    <associate|auto-6|<tuple|1.5|3>>
+    <associate|auto-7|<tuple|1.6|4>>
+    <associate|auto-8|<tuple|1.7|5>>
+    <associate|auto-9|<tuple|1.8|6>>
+    <associate|axiom:prob|<tuple|1.2|2>>
+    <associate|axiom:sup|<tuple|1.1|1>>
+    <associate|eq:deltaexp|<tuple|1.10|4>>
+    <associate|eq:expandbymoments|<tuple|1.15|5>>
+    <associate|eq:hamiltonian|<tuple|1.5|3>>
+    <associate|eq:hermit|<tuple|1.4|2>>
+    <associate|eq:kmanalogy|<tuple|1.14|5>>
+    <associate|eq:moment|<tuple|1.9|3>>
+    <associate|eq:probtoself|<tuple|1.3|2>>
+    <associate|eq:transexp|<tuple|1.13|5>>
+    <associate|equ:superposition|<tuple|1.1|1>>
+    <associate|footnote-1.1|<tuple|1.1|1>>
+    <associate|footnote-1.2|<tuple|1.2|1>>
+    <associate|footnote-1.3|<tuple|1.3|2>>
+    <associate|footnote-1.4|<tuple|1.4|2>>
+    <associate|footnote-1.5|<tuple|1.5|3>>
+    <associate|footnote-1.6|<tuple|1.6|7>>
+    <associate|footnote-1.7|<tuple|1.7|8>>
+    <associate|footnr-1.1|<tuple|1.1|1>>
+    <associate|footnr-1.2|<tuple|1.2|1>>
+    <associate|footnr-1.3|<tuple|1.3|2>>
+    <associate|footnr-1.4|<tuple|1.4|2>>
+    <associate|footnr-1.5|<tuple|1.5|3>>
+    <associate|footnr-1.6|<tuple|1.6|7>>
+    <associate|footnr-1.7|<tuple|1.7|8>>
   </collection>
 </references>
 
