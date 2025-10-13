@@ -7,12 +7,27 @@
 
   <section|How to Read this Note?>
 
-  Definitions are in bold font. Only important equations are numbered.
-  Questions are in red color. You can omit all the nonsense about stochastic
-  process, just focusing on quantum mechanics. Footnotes are also negligible
-  (except for those containing definitions).
+  Tips for reading this note:
 
-  <section|Time Evolution and Hermitianity>
+  <\itemize>
+    <item><strong|Definitions> are in bold font.
+
+    <item><em|Important> statements are in italic font.
+
+    <item>Only important equations are numbered.
+
+    <item><with|color|red|Questions> are in red color.
+
+    <item><with|color|dark green|Conclusions> are in green color.
+
+    <item>You can omit all the nonsense about stochastic process, just
+    focusing on quantum mechanics.
+
+    <item>Footnotes are also negligible (except for those containing
+    <strong|definition>s).
+  </itemize>
+
+  <section|Superposition Principle and Time Evolution>
 
   We mimic the deriving of stochastic process. Unlike stochastic process,
   where the system is described by probability, a quantum system is
@@ -31,16 +46,8 @@
     <math|m>-order polynomial <math|P<rsub|m>> and any <math|m>-order partial
     derivative <math|D<rsup|n>>, with integers <math|m,n\<geqslant\>0>, we
     have <math|<around*|\||P<rsub|m><around*|(|x|)>D<rsup|n>f<around*|(|x|)>|\|>\<rightarrow\>0>
-    as <math|<around*|\<\|\|\>|x|\<\|\|\>>\<rightarrow\>\<infty\>>.
-
-    But on one hand, Schwartz space is quite strict, since we will neglect
-    the boundary terms after integration by parts. On the other hand,
-    Schwartz space is too weak, since we will employ Taylor series which
-    converges to the original function only when it is analytic, not just
-    smooth. Recall that a smooth function may not be analytic (even though
-    analytic function is always smooth). This problematic weakness can be
-    solved by imposing a cut-off to the moments <math|<big|int>\<mathd\>x
-    r<around*|(|x,y|)><around*|(|y-x|)><rsup|n>>, as we will see.
+    as <math|<around*|\<\|\|\>|x|\<\|\|\>>\<rightarrow\>\<infty\>>. Functions
+    in Schwartz space are usually termed by <strong|Schwartz function>s.
   </footnote>
 
   First consider the analogy of master equation in stochastic process. The
@@ -84,6 +91,8 @@
   Markovian process. The only difference is the imaginary number in the
   front.
 
+  <section|Probability Interpretation Implies Hermitianity>
+
   Then, the probability interpretation add restriction to the transition rate
   <math|r>. In stochastic process, the restriction is about the normalization
   of transition density. But in quantum mechanics, it is the unitary.
@@ -112,7 +121,7 @@
   </equation*>
 
   Since <math|<big|int>\<mathd\>x f<rsup|\<ast\>><around*|(|x|)>f<around*|(|x|)>>
-  is real, we have (<with|color|red|may also equal to <math|-1>>)
+  is real, we have (<with|color|red|<em|may also equal to <math|-1>>>)
 
   <\equation>
     <big|int><rsub|\<cal-X\>>\<mathd\>x f<rsup|\<ast\>><around*|(|x|)>f<around*|(|x|)>=1.<label|eq:probtoself>
@@ -163,9 +172,11 @@
   </equation>
 
   Namely, <with|color|dark green|<em|<math|r> is Hermitian>>.<\footnote>
-    In the traditional approach of quantum mechanics,
-    <math|r<around*|(|x,y|)>=\<langle\>y\|<wide|H|^>\|x\<rangle\>>, where
-    <math|<wide|H|^>> is the Hamiltonian operator. The Hermitianity is
+    A function <math|f:\<bbb-R\><rsup|d>\<times\>\<bbb-R\><rsup|d>\<rightarrow\>\<bbb-C\>>
+    is <strong|Hermitian> if <math|f<rsup|\<ast\>><around*|(|x,y|)>=f<around*|(|y,x|)>>
+    for each <math|x,y\<in\>\<bbb-R\><rsup|d>>. In the traditional approach
+    of quantum mechanics, <math|r<around*|(|x,y|)>=\<langle\>y\|<wide|H|^>\|x\<rangle\>>,
+    where <math|<wide|H|^>> is the Hamiltonian operator. The Hermitianity is
     manifest.
   </footnote>
 
@@ -490,21 +501,70 @@
 
   In the traditional textures of quantum mechanics, wave-functions are
   regarded as elements in <math|L<rsup|2><around*|(|\<bbb-R\><rsup|d>|)>>,
-  such that <math|<big|int>\<mathd\>x<around*|\||f<around*|(|x|)>|\|><rsup|2>=1>.
-  In addition, some order of smoothness are appended so as to make the
-  Schr<wide|o|\<ddot\>>dinger equation (involving a Laplacian) well-defined.
-  Apparently, we have <math|\<cal-S\><rsub|A><around*|(|\<bbb-R\><rsup|d>|)>\<subset\>L<rsup|2><around*|(|\<bbb-R\><rsup|d>|)>>.
+  such that <math|<big|int>\<mathd\>x<around*|\||f<around*|(|x|)>|\|><rsup|2>=1>
+  (remark that <math|<around*|\||\<cdots\>|\|>> denotes the norm of complex
+  number). In addition, some order of smoothness are appended so as to make
+  the Schr<wide|o|\<ddot\>>dinger equation (involving a Laplacian)
+  well-defined. Apparently, we have <math|\<cal-S\><rsub|A><around*|(|\<bbb-R\><rsup|d>|)>\<subset\>L<rsup|2><around*|(|\<bbb-R\><rsup|d>|)>>.
   But, while solving a Schr<wide|o|\<ddot\>>dinger equation, we only consider
   the functions in <math|\<cal-S\><rsub|A><around*|(|\<bbb-R\><rsup|d>|)>>.
   So, as I think, the space <math|\<cal-S\><rsub|A><around*|(|\<bbb-R\><rsup|d>|)>>
   has been sufficient.
 
+  Mathematically, if <math|\<cal-S\><rsub|A><around*|(|\<bbb-R\><rsup|d>|)>>
+  is dense in <math|L<rsup|2><around*|(|\<bbb-R\><rsup|d>|)>>, then
+  analyticity is fine. It means, we can approximate any function in
+  <math|L<rsup|2><around*|(|\<bbb-R\><rsup|d>|)>> by using a series of
+  analytic Schwartz functions. This condition is much easier to be held yet
+  quite powerful. The key point is that a function has negligible measure on
+  the \Pboundary\Q of <math|\<bbb-R\><rsup|d>>. Precisely, for any
+  <math|\<varepsilon\>\<gtr\>0>, there is an <math|X\<gtr\>0> such that
+
+  <\equation*>
+    <big|int><rsub|\<partial\>\<bbb-R\><rsup|d><around*|(|X|)>>\<mathd\>x
+    <around*|\||f<around*|(|x|)>|\|><rsup|2>\<less\>\<varepsilon\>
+  </equation*>
+
+  where the set <math|\<partial\>\<bbb-R\><rsup|d><around*|(|X|)>\<assign\><around*|{|x\<in\>\<bbb-R\><rsup|d>:<around*|\<\|\|\>|x|\<\|\|\>>\<gtr\>X|}>>.
+  So, we can simply omit the region <math|\<partial\>\<bbb-R\><rsup|d><around*|(|X|)>>
+  and consider the <math|f> on the closed region
+  <math|U<rsub|X><around*|(|0|)>\<assign\><around*|{|x\<in\>\<bbb-R\><rsup|d>:<around*|\<\|\|\>|x|\<\|\|\>>\<leqslant\>X|}>>.
+  Then, within this closed (thus compact) region of <math|\<bbb-R\><rsup|d>>,
+  Weierstrass approximation theorem claims that <math|f> can be approximate
+  by a polynomial at any precision. But a polynomial cannot be negligible on
+  the \Pboundary\Q <math|\<partial\>\<bbb-R\><rsup|d><around*|(|X|)>>,
+  instead increasing as <math|<around*|\<\|\|\>|x|\<\|\|\>><rsup|n>> where
+  <math|n> is the order of the polynomial. Inspired by the solution of
+  harmonic oscillator, we weight it by <math|exp<around*|(|-<around*|\<\|\|\>|x|\<\|\|\>><rsup|2>|)>>.
+  Namely, we use <math|p<around*|(|x|)> exp<around*|(|-<around*|\<\|\|\>|x|\<\|\|\>><rsup|2>|)>>
+  to approximate <math|f> on <math|\<bbb-R\><rsup|d>>, which means the
+  polynomial <math|p<around*|(|x|)>> approximates
+  <math|f<around*|(|x|)>exp<around*|(|<around*|\<\|\|\>|x|\<\|\|\>><rsup|2>|)>>
+  in the compact region <math|U<rsub|X><around*|(|0|)>>. In fact, any
+  function <math|w\<in\>\<cal-S\><rsub|A><around*|(|\<bbb-R\><rsup|d>|)>>
+  that has a continuous inverse (namely, <math|1/w<around*|(|x|)>> is
+  continuous on <math|x>) can serve as the weight function, and
+  <math|exp<around*|(|-<around*|\<\|\|\>|x|\<\|\|\>><rsup|2>|)>> is just an
+  instance. We thus conclude, <with|color|dark green|<em|for any function in
+  <math|f\<in\>L<rsup|2><around*|(|\<bbb-R\><rsup|d>|)>> and any
+  <math|\<varepsilon\>\<gtr\>0>, there are a polynomial <math|p> and an
+  analytic Schwartz function <math|w> such that>>
+
+  <\equation>
+    <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
+    <around*|\||f<around*|(|x|)>-p<around*|(|x|)>w<around*|(|x|)>|\|>\<less\>\<varepsilon\>.
+  </equation>
+
+  <with|color|dark green|<em|The <math|p<around*|(|x|)>w<around*|(|x|)>> is
+  an analytic Schwartz function.>>
+
   <section|Locality Imports a Cut-Off on Moments>
 
-  We then introduce the third axiom about locality.
+  We then introduce the third axiom about locality, and discuss what it will
+  induce.
 
   <\axiom>
-    The interaction shall be local.
+    [Locality] Interaction shall be local.
   </axiom>
 
   This implies that the time evolution (equation
@@ -731,6 +791,7 @@
   <\collection>
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-10|<tuple|1.9|?>>
+    <associate|auto-11|<tuple|1.10|?>>
     <associate|auto-2|<tuple|1.1|?>>
     <associate|auto-3|<tuple|1.2|?>>
     <associate|auto-4|<tuple|1.3|?>>
@@ -779,36 +840,40 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-2>
 
-      1.2.<space|2spc>Time Evolution and Hermitianity
+      1.2.<space|2spc>Superposition Principle and Time Evolution
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-3>
 
-      1.3.<space|2spc>In Euclidean Space: Path Integral
+      1.3.<space|2spc>Probability Interpretation Implies Hermitianity
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-4>
 
-      1.4.<space|2spc>An Useful Expansion
+      1.4.<space|2spc>In Euclidean Space: Path Integral
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-5>
 
-      1.5.<space|2spc>Expansion of Transition Rate
+      1.5.<space|2spc>An Useful Expansion
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-6>
 
-      1.6.<space|2spc>On Analyticity <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      1.6.<space|2spc>Expansion of Transition Rate
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-7>
 
-      1.7.<space|2spc>Locality Imposes a Cut-Off on Moments
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      1.7.<space|2spc>On Analyticity <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-8>
 
-      1.8.<space|2spc>Hermitianity on Moments
+      1.8.<space|2spc>Locality Imports a Cut-Off on Moments
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-9>
 
-      1.9.<space|2spc>Higher Order Momentum?
+      1.9.<space|2spc>Hermitianity on Moments
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-10>
+
+      1.10.<space|2spc>Higher Order Momentum?
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-11>
     </associate>
   </collection>
 </auxiliary>
