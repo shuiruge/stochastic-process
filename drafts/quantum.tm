@@ -21,11 +21,11 @@
   configuration can be its position), a <strong|wave-function> is a map
   <math|f:\<cal-X\>\<rightarrow\>\<bbb-C\>>. Especially when <math|\<cal-X\>>
   is a manifold, we suppose that <math|f> is smooth, that is
-  <math|f\<in\>\<cal-C\><rsup|\<infty\>><around*|(|\<cal-X\>,\<bbb-C\>|)>>.
-  In addition, when <math|\<cal-X\>> is Euclidean, namely
-  <math|\<cal-X\>=\<bbb-R\><rsup|d>>, we further suppose that <math|f> is an
-  element of Schwartz space <math|\<cal-S\><around*|(|\<bbb-R\><rsup|d>,\<bbb-C\>|)>>.<\footnote>
-    A <strong|Schwartz space> <math|\<cal-S\><around*|(|\<bbb-R\><rsup|d>,\<bbb-C\>|)>>
+  <math|f\<in\>C<rsup|\<infty\>><around*|(|\<cal-X\>|)>>. In addition, when
+  <math|\<cal-X\>> is Euclidean, namely <math|\<cal-X\>=\<bbb-R\><rsup|d>>,
+  we further suppose that <math|f> is an element of Schwartz space
+  <math|\<cal-S\><around*|(|\<bbb-R\><rsup|d>|)>>.<\footnote>
+    A <strong|Schwartz space> <math|\<cal-S\><around*|(|\<bbb-R\><rsup|d>|)>>
     contains smooth function <math|f:\<bbb-R\><rsup|d>\<rightarrow\>\<bbb-C\>>
     that decays \Pexponentially fast\Q at infinity. Precisely, for any
     <math|m>-order polynomial <math|P<rsub|m>> and any <math|m>-order partial
@@ -66,7 +66,7 @@
     and future of a wave-function if we know it (or its norm, namely the
     distribution of particles) at any time <math|t>. In short, the
     evolutionary equation of wave-function is first order on time.
-  </footnote> Mathematically, linearity imposes a kernel
+  </footnote> Mathematically, linearity imports a kernel
   <math|r:\<cal-X\>\<times\>\<cal-X\>\<rightarrow\>\<bbb-C\>> such that (if
   <math|\<cal-X\>> is discrete, then the integral is defined to be
   <math|<big|int><rsub|\<cal-X\>>\<mathd\>x\<rightarrow\><big|sum><rsub|x\<in\>\<cal-X\>>>)
@@ -155,14 +155,14 @@
     <around*|[|r<rsup|\<ast\>><around*|(|x,y|)>-r<around*|(|y,x|)>|]>=0
   </equation*>
 
-  holds for any <math|f> in <math|\<cal-S\><around*|(|\<bbb-R\><rsup|d>,\<bbb-C\>|)>>,
+  holds for any <math|f> in <math|\<cal-S\><around*|(|\<bbb-R\><rsup|d>|)>>,
   thus
 
   <\equation>
     r<rsup|\<ast\>><around*|(|x,y|)>=r<around*|(|y,x|)>.<label|eq:hermit>
   </equation>
 
-  Namely, <math|r> is <strong|Hermitian>.<\footnote>
+  Namely, <with|color|dark green|<em|<math|r> is Hermitian>>.<\footnote>
     In the traditional approach of quantum mechanics,
     <math|r<around*|(|x,y|)>=\<langle\>y\|<wide|H|^>\|x\<rangle\>>, where
     <math|<wide|H|^>> is the Hamiltonian operator. The Hermitianity is
@@ -178,7 +178,7 @@
     any manifold on which the Green's function of Laplacian equation can be
     solved.
   </footnote> Thus, given <math|t>, we have wave-function
-  <math|f<around*|(|\<cdummy\>,t|)>\<in\>\<cal-S\><around*|(|\<bbb-R\><rsup|d>,\<bbb-C\>|)>>.
+  <math|f<around*|(|\<cdummy\>,t|)>\<in\>\<cal-S\><around*|(|\<bbb-R\><rsup|d>|)>>.
 
   We are trying to derive a generic path integral formalism. Given a small
   <math|\<Delta\>t\<gtr\>0>, equation <reference|equ:superposition> gives
@@ -267,9 +267,10 @@
   If we recognize <math|<around*|(|x<rsub|i+1>-x<rsub|i>|)>/\<Delta\>t> as
   the velocity <math|<wide|x|\<dot\>><rsub|i>>, then the
   <math|S<around*|(|x,k|)>> can be seen as the Legendre transformation
-  <math|<wide|x|\<dot\>> p-H<around*|(|x,p|)>>, in which <math|k> is
-  proportional to momentum <math|p> and <math|<wide|r|^><around*|(|x,k|)>>
-  plays the role of Hamiltonian <math|H<around*|(|x,p|)>>.
+  <math|<wide|x|\<dot\>> p-H<around*|(|x,p|)>>, in which <with|color|dark
+  green|<em|<math|k> is proportional to momentum <math|p> and
+  <math|<wide|r|^><around*|(|x,k|)>> plays the role of Hamiltonian
+  <math|H<around*|(|x,p|)>>>>.
 
   <section|An Useful Expansion>
 
@@ -279,7 +280,7 @@
   the function can be expanded by a series of generalized functions.
 
   Define the <math|n>-th order <strong|moment> (with <math|n\<geqslant\>0>)
-  of a function <math|M<rsub|n>:\<cal-S\><around*|(|\<bbb-R\><rsup|d>,\<bbb-C\>|)>\<rightarrow\>\<bbb-C\>>
+  of a function <math|M<rsub|n>:\<cal-S\><around*|(|\<bbb-R\><rsup|d>|)>\<rightarrow\>\<bbb-C\>>
   by
 
   <\equation>
@@ -287,11 +288,11 @@
     f<around*|(|x|)> <around*|(|x<rsup|\<alpha\><rsub|1>>\<cdots\>x<rsup|\<alpha\><rsub|n>>|)>.<label|eq:moment>
   </equation>
 
-  Since <math|f\<in\>\<cal-S\><around*|(|\<bbb-R\><rsup|d>,\<bbb-C\>|)>>, the
-  moment <math|M<rsub|n><around*|(|f|)>> is finite for any <math|n>. Denote
+  Since <math|f\<in\>\<cal-S\><around*|(|\<bbb-R\><rsup|d>|)>>, the moment
+  <math|M<rsub|n><around*|(|f|)>> is finite for any <math|n>. Denote
   <math|\<cal-S\><rsub|A>> the subspace of Schwartz space in which every
   function is analytic, termed as <strong|analytic Schwartz space>. Then, for
-  an arbitrary function <math|\<varphi\>\<in\>\<cal-S\><rsub|A><around*|(|\<bbb-R\><rsup|d>,\<bbb-C\>|)>>,
+  an arbitrary function <math|\<varphi\>\<in\>\<cal-S\><rsub|A><around*|(|\<bbb-R\><rsup|d>|)>>,
   Taylor expanding at origin gives
 
   <\align>
@@ -359,12 +360,15 @@
   Namely, the Taylor expansion coefficient of <math|<wide|f|^>> is
   <math|<around*|(|-\<mathi\>|)><rsup|n>M<rsub|n><around*|(|f|)>>, and
 
-  <\equation*>
+  <\equation>
     <wide|f|^><around*|(|k|)>=<big|sum><rsub|n=0><rsup|\<infty\>><frac|<around*|(|-\<mathi\>|)><rsup|n>|n!>M<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|f|)><around*|(|k<rsub|\<alpha\><rsub|1>>\<cdots\>k<rsub|\<alpha\><rsub|n>>|)>.
-  </equation*>
+  </equation>
 
   This relates the moments and the Fourier transformation of a function in
-  analytic Schwartz space.
+  analytic Schwartz space. <with|color|dark green|<em|We can construct the
+  <math|f> out of a sequence of moments.>> For ensuring convergence, we
+  further demand that <math|<wide|f|^>> is analytic, namely
+  <math|<wide|f|^>\<in\>\<cal-S\><rsub|A><around*|(|\<bbb-R\><rsup|d>|)>>.
 
   <section|Expansion of Transition Rate>
 
@@ -387,7 +391,7 @@
     <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|\<epsilon\>|)>.<label|eq:transexp>
   </equation>
 
-  It claims that transition rate <math|r>, thus the evolution of
+  It claims that transition rate <math|r>, thus the time evolution of
   wave-function (equation <reference|equ:superposition>), is completely
   determined by the moments <math|R<rsub|n>>s.
 
@@ -462,8 +466,9 @@
   We have set wave-functions in the analytic Schwartz space in which every
   function is analytic. At the first sight, analyticity seems too strict. But
   practically, when we solve Schr<wide|o|\<ddot\>>dinger equation on some
-  explicit instances such as harmonic oscillator or hydrogen atom, we does
-  restrict ourselves to analytic functions.
+  explicit instances such as harmonic oscillator or hydrogen atom (in both
+  angular and radical equations), we does restrict ourselves to analytic
+  functions.
 
   For example, when solving the stationary Schr<wide|o|\<ddot\>>dinger
   equation of one-dimensional harmonic oscillator, we suppose that
@@ -476,14 +481,34 @@
 
   where <math|a<rsub|n>>s are to be determined. The factor
   <math|exp<around*|(|-x<rsup|2>|)>> is employed for an exponentially fast
-  decay as <math|<around*|\||x|\|>\<rightarrow\>\<infty\>>. And the factor
+  decay as <math|<around*|\||x|\|>\<rightarrow\>\<infty\>> (thus faster than
+  the inverse of any polynomial). And the factor
   <math|<around*|[|\<cdots\>|]>> is a Taylor series. Namely, <math|f> is in
-  the analytic Schwartz space <math|\<cal-S\><rsub|A><around*|(|\<bbb-R\>,\<bbb-C\>|)>>.
+  the analytic Schwartz space <math|\<cal-S\><rsub|A><around*|(|\<bbb-R\>|)>>.
+  The energy quantization emerges for ensuring the convergence of the series
+  <math|<big|sum><rsub|n>a<rsub|n>x<rsup|n>>.
 
-  <section|Locality Imposes a Cut-Off on Moments>
+  In the traditional textures of quantum mechanics, wave-functions are
+  regarded as elements in <math|L<rsup|2><around*|(|\<bbb-R\><rsup|d>|)>>,
+  such that <math|<big|int>\<mathd\>x<around*|\||f<around*|(|x|)>|\|><rsup|2>=1>.
+  In addition, some order of smoothness are appended so as to make the
+  Schr<wide|o|\<ddot\>>dinger equation (involving a Laplacian) well-defined.
+  Apparently, we have <math|\<cal-S\><rsub|A><around*|(|\<bbb-R\><rsup|d>|)>\<subset\>L<rsup|2><around*|(|\<bbb-R\><rsup|d>|)>>.
+  But, while solving a Schr<wide|o|\<ddot\>>dinger equation, we only consider
+  the functions in <math|\<cal-S\><rsub|A><around*|(|\<bbb-R\><rsup|d>|)>>.
+  So, as I think, the space <math|\<cal-S\><rsub|A><around*|(|\<bbb-R\><rsup|d>|)>>
+  has been sufficient.
 
-  We assume that the action of transition rate <math|r>, namely equation
-  <reference|equ:superposition>, is local. To make this clear, we consider an
+  <section|Locality Imports a Cut-Off on Moments>
+
+  We then introduce the third axiom about locality.
+
+  <\axiom>
+    The interaction shall be local.
+  </axiom>
+
+  This implies that the time evolution (equation
+  <reference|equ:superposition>) is local. To make this clear, we consider an
   example, in which <math|R<rsub|n><around*|(|x|)>=c<rsup|n>> for some
   constant <math|c>, and set the dimension <math|d=1>. Then, the time
   evolution (equation <reference|eq:kmanalogy>) at <math|x=0> becomes
@@ -503,8 +528,8 @@
     \<mathi\><frac|\<partial\>f|\<partial\>t><around*|(|0,t|)>=f<around*|(|-c,t|)>.
   </equation*>
 
-  If we change the value of <math|f> at <math|x=-c>, then the evolution at
-  <math|x=0> changes accordingly. It means non-locality.
+  If we change the value of <math|f> at <math|x=-c>, then the time evolution
+  at <math|x=0> changes accordingly. It means non-locality.
 
   In physics, a local equation generally refers to an operation on <math|f>
   which contains <math|f> itself and <em|finite> number of partial
@@ -531,7 +556,7 @@
   the time evolution is not local. Now, we are to prove that, generally,
   without a cut-off, any sequence of <math|R<rsub|n>>s (such that for any
   <math|N\<gtr\>0>, there are infinite many <math|R<rsub|n>>s that are not
-  vanishing), the time evolution is non-local. This then imposes a cut-off on
+  vanishing), the time evolution is non-local. This then imports a cut-off on
   moments.
 
   Before proving, we first declare a property of analytic function. Consider
@@ -559,7 +584,7 @@
   a little. This analysis indicates that the more <math|a<rsub|n>>s we know,
   in a larger neighborhood of <math|x=0> can we properly approximate
   <math|f<around*|(|x|)>>. Our vision becomes border and border if we know
-  more and more <math|a<rsub|n>>s. Untill knowing the whole sequence of
+  more and more <math|a<rsub|n>>s. Until knowing the whole sequence of
   <math|a<rsub|n>>s, we realize the complete picture of
   <math|f<around*|(|x|)>> (based on the previous theorem about analytic
   function).
@@ -579,12 +604,13 @@
   an <math|a<rsub|n>> where <math|n> can be arbitrarily large. This, however,
   will leave the <math|f<around*|(|x|)>> around <math|x=0> invariant. It
   means that the value of <math|f> with <math|x> far away from origin can
-  affect the evolution of <math|f> at origin. That is, the evolution is
+  affect the time evolution of <math|f> at origin. That is, time evolution is
   non-local. Hence, there must be a cut-off on the sequence of
   <math|R<rsub|n><around*|(|0|)>>s. This discussion also holds for any value
-  of <math|x> other than <math|x=0>. We conclude that the evolution is locall
-  if and only if there is an <math|N<rsub|cut>\<gtr\>0> such that
-  <math|R<rsub|n>=0> for any <math|n\<gtr\>N<rsub|cut>>.
+  of <math|x> other than <math|x=0>. We conclude that <with|color|dark
+  green|<em|time evolution is local if and only if there is an
+  <math|N<rsub|cut>\<gtr\>0> such that <math|R<rsub|n>=0> for any
+  <math|n\<gtr\>N<rsub|cut>>>>.
 
   <section|Hermitianity on Moments>
 
@@ -716,15 +742,14 @@
     <associate|axiom:prob|<tuple|1.2|?>>
     <associate|axiom:sup|<tuple|1.1|?>>
     <associate|eq:deltaexp|<tuple|1.10|?>>
-    <associate|eq:expandbymoments|<tuple|1.14|?>>
+    <associate|eq:expandbymoments|<tuple|1.15|?>>
     <associate|eq:hamiltonian|<tuple|1.5|?>>
     <associate|eq:hermit|<tuple|1.4|?>>
-    <associate|eq:kmanalogy|<tuple|1.13|?>>
+    <associate|eq:kmanalogy|<tuple|1.14|?>>
     <associate|eq:moment|<tuple|1.9|?>>
     <associate|eq:probtoself|<tuple|1.3|?>>
-    <associate|eq:transexp|<tuple|1.12|?>>
+    <associate|eq:transexp|<tuple|1.13|?>>
     <associate|equ:superposition|<tuple|1.1|?>>
-    <associate|footnote-1|<tuple|1|?>>
     <associate|footnote-1.1|<tuple|1.1|?>>
     <associate|footnote-1.2|<tuple|1.2|?>>
     <associate|footnote-1.3|<tuple|1.3|?>>
@@ -732,14 +757,6 @@
     <associate|footnote-1.5|<tuple|1.5|?>>
     <associate|footnote-1.6|<tuple|1.6|?>>
     <associate|footnote-1.7|<tuple|1.7|?>>
-    <associate|footnote-1.8|<tuple|1.8|?>>
-    <associate|footnote-1.9|<tuple|1.9|?>>
-    <associate|footnote-2|<tuple|2|?>>
-    <associate|footnote-3|<tuple|3|?>>
-    <associate|footnote-4|<tuple|4|?>>
-    <associate|footnote-5|<tuple|5|?>>
-    <associate|footnote-6|<tuple|6|?>>
-    <associate|footnote-7|<tuple|7|?>>
     <associate|footnr-1.1|<tuple|1.1|?>>
     <associate|footnr-1.2|<tuple|1.2|?>>
     <associate|footnr-1.3|<tuple|1.3|?>>
@@ -747,8 +764,6 @@
     <associate|footnr-1.5|<tuple|1.5|?>>
     <associate|footnr-1.6|<tuple|1.6|?>>
     <associate|footnr-1.7|<tuple|1.7|?>>
-    <associate|footnr-1.8|<tuple|1.8|?>>
-    <associate|footnr-1.9|<tuple|1.9|?>>
   </collection>
 </references>
 
@@ -776,22 +791,22 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-5>
 
-      <with|par-left|<quote|1tab>|1.4.1.<space|2spc>With a Cut-off
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-6>>
-
       1.5.<space|2spc>Expansion of Transition Rate
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-6>
+
+      1.6.<space|2spc>On Analyticity <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-7>
 
-      1.6.<space|2spc>Imposing A Cut-Off <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      1.7.<space|2spc>Locality Imposes a Cut-Off on Moments
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-8>
 
-      1.7.<space|2spc>Hermitianity on Moments
+      1.8.<space|2spc>Hermitianity on Moments
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-9>
 
-      1.8.<space|2spc>TODO: Imposing A Cut-Off
+      1.9.<space|2spc>Higher Order Momentum?
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-10>
     </associate>
