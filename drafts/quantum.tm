@@ -761,7 +761,7 @@
     v<around*|(|t|)>\<assign\>lim<rsub|\<Delta\>t\<rightarrow\>0><frac|x<around*|(|t+\<Delta\>t|)>-x<around*|(|t|)>|\<Delta\>t>.
   </equation*>
 
-  Both position and velocity are obserbables. Further, we can compute the
+  Both position and velocity are observables. Further, we can compute the
   variance of an observable <math|O> as an expectation
   <math|Var<rsub|f><around*|[|O<around*|(|t|)>|]>\<assign\>\<bbb-E\><rsub|f><around*|[|<around*|(|O-\<bbb-E\><rsub|f><around*|[|O<around*|(|t|)>|]>|)><rsup|2>|]>>.
   Then, uncertainty principle claims:
@@ -817,25 +817,26 @@
 
   <\equation*>
     f<around*|(|x,\<Delta\>t|)>=f<around*|(|x,0|)>-\<mathi\>\<Delta\>t<big|sum><rsub|n=0><rsup|N><frac|<around*|(|-1|)><rsup|n>|n!>
-    \<partial\><rsup|n><around*|[|R<rsub|n><around*|(|x|)>f<around*|(|x,0|)>|]>+\<cdots\>.
+    \<partial\><rsup|n><around*|[|R<rsub|n><around*|(|x|)>f<around*|(|x,0|)>|]>-<frac|\<mathi\>|2>\<Delta\>t<rsup|2><big|sum><rsub|n=0><rsup|N><big|sum><rsub|n<rprime|'>=0><rsup|N>\<cdots\>.
   </equation*>
 
   We have to evaluate up to <math|\<omicron\><around*|(|\<Delta\>t<rsup|2>|)>>,
-  so as to give the variance of velocity <math|\<sim\>x<rsup|2><around*|(|\<Delta\>t|)>/\<Delta\>t<rsup|2>>.
-  But this would be too complicated. For simplification, we consider a \Pfree
-  particle\Q where the condition that <math|R<rsub|n>>s are all vanishing
-  except for <math|R<rsub|N>>. This is the situation when <math|\<sigma\>>
-  tends to zero, because there are more <math|\<sigma\>> factors in the
-  denominator if there are more derivatives on <math|f>, and as
-  <math|\<sigma\>> tends to zero, the term proportional to
-  <math|R<rsub|N><around*|(|x|)>\<partial\><rsup|N><around*|[|f<around*|(|x,0|)>|]>>
-  dominates.<\footnote>
+  so as to give the variance of velocity which scales as
+  <math|x<rsup|2><around*|(|\<Delta\>t|)>/\<Delta\>t<rsup|2>>. But this would
+  be too complicated (the double summation). For simplification, we consider
+  a \Pfree particle\Q where all <math|R<rsub|n>>s but the <math|R<rsub|N>>
+  are vanishing. This is the situation when <math|\<sigma\>> tends to zero,
+  because there are more <math|\<sigma\>> factors in the denominator if there
+  are more derivatives on <math|f>, and as <math|\<sigma\>> tends to zero,
+  the term proportional to <math|R<rsub|N><around*|(|x|)>\<partial\><rsup|N><around*|[|f<around*|(|x,0|)>|]>>
+  surpasses all the other terms.<\footnote>
     In the traditional approach of quantum mechanics,
     <math|\<sigma\>\<rightarrow\>0> indicates that the momentum is large
     (since momentum is proportional to <math|\<partial\>/\<partial\>x>), so
     the term with the highest order of momentum will dominates the time
     evolution. When the momentum is large enough, the kinetic term dominates
-    Hamiltonian, the potential becomes omittable, making the particle free.
+    Hamiltonian, the potential becomes omittable, making the particle free
+    (namely, unconstrained by potential).
   </footnote> In this situation, equation <reference|equ:superposition>
   reduces to
 
@@ -861,13 +862,18 @@
 
   \;
 
-  Now we are to evaluate <math|Var<rsub|f><around*|[|v<around*|(|0|)>|]>>. As
-  we have evaluated, <math|\<bbb-E\><rsub|f><around*|[|x<around*|(|0|)>|]>=0>,
-  we then have
+  Now we are to evaluate <math|Var<rsub|f><around*|[|v<around*|(|0|)>|]>>.
+  First, we consider <math|\<bbb-E\><rsub|f><around*|[|v<around*|(|0|)>|]>=\<bbb-E\><rsub|f><around*|[|x<around*|(|\<Delta\>t|)>-x<around*|(|0|)>|]>/\<Delta\>t>.
+  The <math|f> used for the expectation is <math|f<around*|(|x,\<Delta\>t|)>>
+  instead of <math|f<around*|(|x,0|)>>. So, it cannot be expanded as
+  <math|<around*|(|\<bbb-E\><rsub|f><around*|[|x<around*|(|\<Delta\>t|)>|]>-\<bbb-E\><rsub|f><around*|[|x<around*|(|0|)>|]>|)>/\<Delta\>t>
+  except for treating <math|x<around*|(|0|)>> as a constant, the constant
+  <math|\<bbb-E\><rsub|f><around*|[|x<around*|(|0|)>|]>> which has been
+  evaluated as zero. Then, we have
 
   <\equation*>
-    \<bbb-E\><rsub|f><around*|[|v<around*|(|0|)>|]>=<frac|\<bbb-E\><rsub|f><around*|[|x<around*|(|\<Delta\>t|)>|]>-\<bbb-E\><rsub|f><around*|[|x<around*|(|0|)>|]>|\<Delta\>t>=<frac|\<bbb-E\><rsub|f><around*|[|x<around*|(|\<Delta\>t|)>|]>|\<Delta\>t>=<frac|1|\<Delta\>t><big|int><rsub|\<bbb-R\>>\<mathd\>x
-    f<rsup|\<ast\>><around*|(|x,\<Delta\>t|)>f<around*|(|x,\<Delta\>t|)>x
+    \<bbb-E\><rsub|f><around*|[|v<around*|(|0|)>|]>=<frac|\<bbb-E\><rsub|f><around*|[|x<around*|(|\<Delta\>t|)>|]>|\<Delta\>t>=<big|int><rsub|\<bbb-R\>>\<mathd\>x
+    f<rsup|\<ast\>><around*|(|x,\<Delta\>t|)>f<around*|(|x,\<Delta\>t|)><frac|x|\<Delta\>t>
   </equation*>
 
   Inserting <math|f<around*|(|x,\<Delta\>t|)>> up to
@@ -881,17 +887,8 @@
   </equation*>
 
   Now focus on <math|\<bbb-E\><rsub|f><around*|[|v<rsup|2><around*|(|0|)>|]>>.
-  Directly,
-
-  <\equation*>
-    \<bbb-E\><rsub|f><around*|[|v<rsup|2><around*|(|0|)>|]>=<frac|\<bbb-E\><rsub|f><around*|[|<around*|(|x<around*|(|\<Delta\>t|)>-x<around*|(|0|)>|)><rsup|2>|]>|\<Delta\>t<rsup|2>>=<frac|\<bbb-E\><rsub|f><around*|[|x<rsup|2><around*|(|\<Delta\>t|)>|]>|\<Delta\>t<rsup|2>>-2<frac|\<bbb-E\><rsub|f><around*|[|x<around*|(|\<Delta\>t|)>x<around*|(|0|)>|]>|\<Delta\>t<rsup|2>>+<frac|\<bbb-E\><rsub|f><around*|[|x<rsup|2><around*|(|0|)>|]>|\<Delta\>t<rsup|2>>.
-  </equation*>
-
-  Things become complicated: how is <math|\<bbb-E\><rsub|f><around*|[|x<around*|(|\<Delta\>t|)>x<around*|(|0|)>|]>>
-  defined? In fact, when we evaluate <math|\<bbb-E\><rsub|f><around*|[|v<rsup|2><around*|(|0|)>|]>>,
-  we shall treat everything at <math|t=0> as constant. Thus
-  <math|x<around*|(|0|)>> is treated as <math|\<bbb-E\><rsub|f><around*|[|x<around*|(|0|)>|]>>.
-  So, we have
+  Recalling that <math|x<around*|(|0|)>> is treated as the constant
+  <math|\<bbb-E\><rsub|f><around*|[|x<around*|(|0|)>|]>=0>,
 
   <\equation*>
     \<bbb-E\><rsub|f><around*|[|v<rsup|2><around*|(|0|)>|]>=<frac|\<bbb-E\><rsub|f><around*|[|<around*|(|x<around*|(|\<Delta\>t|)>-\<bbb-E\><rsub|f><around*|[|x<around*|(|0|)>|]>|)><rsup|2>|]>|\<Delta\>t<rsup|2>>=<frac|\<bbb-E\><rsub|f><around*|[|x<rsup|2><around*|(|\<Delta\>t|)>|]>|\<Delta\>t<rsup|2>>.
@@ -904,24 +901,24 @@
     f<rsup|\<ast\>><around*|(|x,\<Delta\>t|)>f<around*|(|x,\<Delta\>t|)><frac|x<rsup|2>|\<Delta\>t<rsup|2>>>>|<row|<cell|=>|<cell|<around*|(|<frac|R<rsub|N><around*|(|x|)>|N!>|)><rsup|2><around*|[|<big|int><rsub|\<bbb-R\>>\<mathd\>x\<partial\><rsup|N>f<around*|(|x,0|)>\<partial\><rsup|N>f<around*|(|x,0|)>x<rsup|2>-<big|int><rsub|\<bbb-R\>>\<mathd\>x\<partial\><rsup|2N>f<around*|(|x,0|)>f<around*|(|x,0|)>x<rsup|2>|]>+\<omicron\><around*|(|1|)>.>>>>
   </align>
 
-  Using maxima,we get the following table:
+  Using maxima,we get the table <reference|table:uncert>. We find that only
+  when <math|N=2>, and when <math|R<rsub|2>> is a constant, can
+  <math|\<Delta\>x\<Delta\>v> satisfy the uncertainty principle
+  <reference|axiom:uncert>. Any other situation depends on <math|\<sigma\>>,
+  which is either vanishing or diverging when <math|\<sigma\>> tends to zero.
+  We then conclude that <with|color|dark green|<em|uncertainty principle
+  forces that <math|N=2>, and together with Hermitianity, <math|R<rsub|2>> is
+  a real constant>>.
 
   <\big-table|<tabular|<tformat|<cwith|1|-1|1|1|cell-halign|c>|<cwith|1|-1|2|2|cell-halign|c>|<table|<row|<cell|<math|N>>|<cell|<math|\<Delta\>x\<Delta\>v>>>|<row|<cell|1>|<cell|<math|<frac|R<rsub|1><around*|(|x|)>\<sigma\>|<sqrt|2>>>>>|<row|<cell|2>|<cell|<math|<frac|R<rsub|2><around*|(|x|)>|2>>>>|<row|<cell|3>|<cell|<math|\<mathi\><sqrt|<frac|7|6>><frac|R<rsub|3><around*|(|x|)>|8\<sigma\>>>>>|<row|<cell|4>|<cell|<math|<sqrt|<frac|5|3>><frac|R<rsub|4><around*|(|x|)>|16\<sigma\><rsup|2>>>>>|<row|<cell|5>|<cell|<math|\<mathi\><sqrt|<frac|217|30>><frac|R<rsub|5><around*|(|x|)>|128\<sigma\><rsup|3>>>>>|<row|<cell|6>|<cell|<math|<sqrt|<frac|21|5>><frac|R<rsub|6><around*|(|x|)>|256\<sigma\><rsup|4>>>>>>>>>
-    These are computed by Maxima. Define <verbatim|f:
+    <label|table:uncert>These are computed by Maxima. Define <verbatim|f:
     (2*%pi*\<sigma\>^2)^(-1/4)*exp(-x^2/(4*\<sigma\>^2));>, <verbatim|N: 5;>
     (for instance), and <verbatim|g: diff(f, x, N)*diff(f, x, N)*x^2-diff(f,
     x, 2*N)*f*x^2;> which is the <math|<around*|[|\<cdots\>|]>> part in the
     expression of <math|\<langle\>v<rsup|2><around*|(|0|)>\<rangle\>>. Then
-    <math|\<Delta\>x\<Delta\>v\<assign\><sqrt|Var<rsub|f><around*|[|x<around*|(|0|)>|]>
-    Var<rsub|f><around*|[|v<around*|(|0|)>|]>>> is given by
+    <math|\<Delta\>x\<Delta\>v> is given by
     <verbatim|sqrt((R/N!)^2*integrate(g, x, -inf, inf)*\<sigma\>^2);>.
   </big-table>
-
-  From this table, we see that only when <math|N=2> can
-  <math|\<Delta\>x\<Delta\>v> be independent of <math|\<sigma\>>. In
-  addition, only when <math|N=1,2> will <math|\<Delta\>x\<Delta\>v> be finite
-  as <math|\<sigma\>> tends to zero. In addition, <math|R<rsub|2>> shall be
-  constant.
 </body>
 
 <\initial>
@@ -945,7 +942,6 @@
     <associate|auto-7|<tuple|1.6|4>>
     <associate|auto-8|<tuple|1.7|5>>
     <associate|auto-9|<tuple|1.8|6>>
-    <associate|axiom:prob|<tuple|1.2|2>>
     <associate|axiom:prob1|<tuple|1.2|?>>
     <associate|axiom:prob2|<tuple|1.4|?>>
     <associate|axiom:sup|<tuple|1.1|1>>
@@ -959,7 +955,6 @@
     <associate|eq:probtoself|<tuple|1.2|2>>
     <associate|eq:transexp|<tuple|1.12|5>>
     <associate|equ:superposition|<tuple|1.1|1>>
-    <associate|footnote-1|<tuple|1|?>>
     <associate|footnote-1.1|<tuple|1.1|1>>
     <associate|footnote-1.2|<tuple|1.2|1>>
     <associate|footnote-1.3|<tuple|1.3|2>>
@@ -968,7 +963,6 @@
     <associate|footnote-1.6|<tuple|1.6|7>>
     <associate|footnote-1.7|<tuple|1.7|8>>
     <associate|footnote-1.8|<tuple|1.8|?>>
-    <associate|footnote-1.9|<tuple|1.9|?>>
     <associate|footnr-1.1|<tuple|1.1|1>>
     <associate|footnr-1.2|<tuple|1.2|1>>
     <associate|footnr-1.3|<tuple|1.3|2>>
@@ -977,8 +971,8 @@
     <associate|footnr-1.6|<tuple|1.6|7>>
     <associate|footnr-1.7|<tuple|1.7|8>>
     <associate|footnr-1.8|<tuple|1.8|?>>
-    <associate|footnr-1.9|<tuple|1.9|?>>
     <associate|section:Hermitianity on Moments|<tuple|1.9|?>>
+    <associate|table:uncert|<tuple|1.1|?>>
   </collection>
 </references>
 
@@ -994,7 +988,8 @@
         diff(f, x, N)*diff(f, x, N)*x^2-diff(f, x, 2*N)*f*x^2;> which is the
         <with|mode|<quote|math>|<around*|[|\<cdots\>|]>> part in the
         expression of <with|mode|<quote|math>|\<langle\>v<rsup|2><around*|(|0|)>\<rangle\>>.
-        Then <with|mode|<quote|math>|\<Delta\>x \<Delta\>p> is given by
+        Then <with|mode|<quote|math>|\<Delta\>x\<Delta\>v\<assign\><sqrt|Var<rsub|f><around*|[|x<around*|(|0|)>|]>
+        Var<rsub|f><around*|[|v<around*|(|0|)>|]>>> is given by
         <with|font-family|<quote|tt>|language|<quote|verbatim>|sqrt((R/N!)^2*integrate(g,
         x, -inf, inf)*\<sigma\>^2);>.
       </surround>|<pageref|auto-12>>
