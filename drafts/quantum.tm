@@ -32,10 +32,9 @@
   We mimic the deriving of stochastic process. Unlike stochastic process,
   where the system is described by probability, a quantum system is
   represented by wave-function. Given a set <math|\<cal-X\>> that contains
-  all possible configurations of the quantum system (for a single particle, a
-  configuration can be its position), a <strong|wave-function> is a map
-  <math|f:\<cal-X\>\<rightarrow\>\<bbb-C\>>. Especially when <math|\<cal-X\>>
-  is a manifold, we suppose that <math|f> is smooth, that is
+  all possible states of the quantum system, a <strong|wave-function> is a
+  map <math|f:\<cal-X\>\<rightarrow\>\<bbb-C\>>. Especially when
+  <math|\<cal-X\>> is a manifold, we suppose that <math|f> is smooth, that is
   <math|f\<in\>C<rsup|\<infty\>><around*|(|\<cal-X\>|)>>. In addition, when
   <math|\<cal-X\>> is Euclidean, namely <math|\<cal-X\>=\<bbb-R\><rsup|d>>,
   we further suppose that <math|f> is an element of Schwartz space
@@ -93,35 +92,19 @@
 
   <section|Probability Interpretation Implies Hermitianity>
 
-  Then, the probability interpretation add restriction to the transition rate
-  <math|r>. In stochastic process, the restriction is about the normalization
-  of transition density. But in quantum mechanics, it is the unitary.
+  Then, the probability interpretation add restriction to the transition
+  rate. In stochastic process, the restriction is about the normalization of
+  transition density. But in quantum mechanics, it is about unitary.
 
   <\axiom>
-    [Probability Interpretation]<label|axiom:prob> Given an observable
-    <math|<wide|G|^>>. Observation of <math|<wide|G|^>> on the quantum system
-    with wave-function <math|f> leads to a collapse to an eigen-state of
-    <math|<wide|G|^>>, say <math|g>. Probability of such collapse is given by
-
-    <\equation>
-      Prob<around*|(|f\<rightarrow\>g|)>=<around*|\||<big|int><rsub|\<cal-X\>>\<mathd\>x
-      g<rsup|\<ast\>><around*|(|x|)>f<around*|(|x|)>|\|><rsup|2>.
-    </equation>
+    [Probability Interpretation (Part 1)]<label|axiom:prob1> Given a
+    wave-function <math|f> of quantum system, the probabilistic density that
+    the system at state <math|x> is given by
+    <math|<around*|\||f<around*|(|x|)>|\|><rsup|2>=f<rsup|\<ast\>><around*|(|x|)>f<around*|(|x|)>>.
   </axiom>
 
-  Specifically, if we have an observable <math|<wide|F|^>> which has an
-  eigen-state represented by wave-function <math|f>. If we observe
-  <math|<wide|F|^>> at quantum state <math|f>, then it <em|must> collapse to
-  <math|f> itself. Hence, axiom <reference|axiom:prob> indicates
-  <math|Prob<around*|(|f\<rightarrow\>f|)>=1>, or
-
-  <\equation*>
-    Prob<around*|(|f\<rightarrow\>f|)>=<around*|\||<big|int><rsub|\<cal-X\>>\<mathd\>x
-    f<rsup|\<ast\>><around*|(|x|)>f<around*|(|x|)>|\|><rsup|2>=1.
-  </equation*>
-
-  Since <math|<big|int>\<mathd\>x f<rsup|\<ast\>><around*|(|x|)>f<around*|(|x|)>>
-  is real, we have (<with|color|red|<em|may also equal to <math|-1>>>)
+  Since probabilistic density shall be normalized, axiom
+  <reference|axiom:prob1> implies that, for any wave-function <math|f>,
 
   <\equation>
     <big|int><rsub|\<cal-X\>>\<mathd\>x f<rsup|\<ast\>><around*|(|x|)>f<around*|(|x|)>=1.<label|eq:probtoself>
@@ -335,14 +318,14 @@
 
   <\equation*>
     <big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
-    f<around*|(|x|)>\<varphi\><around*|(|x|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<around*|[|<big|sum><rsub|n=0><rsup|+\<infty\>><frac|<around*|(|-1|)><rsup|n>|n!>
+    f<around*|(|x|)>\<varphi\><around*|(|x|)>=<big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x<around*|[|<big|sum><rsub|n=0><rsup|\<infty\>><frac|<around*|(|-1|)><rsup|n>|n!>
     M<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|f|)><around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|x|)>|]>\<varphi\><around*|(|x|)>.
   </equation*>
 
   Since <math|\<varphi\>> is arbitrary, we finall arrive at
 
   <\equation>
-    f<around*|(|x|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|<around*|(|-1|)><rsup|n>|n!>
+    f<around*|(|x|)>=<big|sum><rsub|n=0><rsup|\<infty\>><frac|<around*|(|-1|)><rsup|n>|n!>
     M<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|f|)>
     <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|x|)>.<label|eq:deltaexp>
   </equation>
@@ -396,7 +379,7 @@
   Using equation <reference|eq:deltaexp>, we directly get
 
   <\equation>
-    r<around*|(|x,x+\<epsilon\>|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|<around*|(|-1|)><rsup|n>|n!>
+    r<around*|(|x,x+\<epsilon\>|)>=<big|sum><rsub|n=0><rsup|\<infty\>><frac|<around*|(|-1|)><rsup|n>|n!>
     R<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>
     <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|\<epsilon\>|)>.<label|eq:transexp>
   </equation>
@@ -409,7 +392,7 @@
   <reference|equ:superposition> gives
 
   <\equation*>
-    \<mathi\><frac|\<partial\>f|\<partial\>t><around*|(|x,t|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|<around*|(|-1|)><rsup|n>|n!><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>w
+    \<mathi\><frac|\<partial\>f|\<partial\>t><around*|(|x,t|)>=<big|sum><rsub|n=0><rsup|\<infty\>><frac|<around*|(|-1|)><rsup|n>|n!><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>w
     f<around*|(|w,t|)>R<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|w|)>
     <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|x-w|)>.
   </equation*>
@@ -420,7 +403,7 @@
   in
 
   <\equation>
-    \<mathi\><frac|\<partial\>f|\<partial\>t><around*|(|x,t|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|<around*|(|-1|)><rsup|n>|n!>
+    \<mathi\><frac|\<partial\>f|\<partial\>t><around*|(|x,t|)>=<big|sum><rsub|n=0><rsup|\<infty\>><frac|<around*|(|-1|)><rsup|n>|n!>
     <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>|)><around*|[|R<rsub|n><rsup|\<alpha\><rsub|1>\<cdots\>\<alpha\><rsub|n>><around*|(|x|)>f<around*|(|x,t|)>|]>.<label|eq:kmanalogy>
   </equation>
 
@@ -574,7 +557,7 @@
   evolution (equation <reference|eq:kmanalogy>) at <math|x=0> becomes
 
   <\equation*>
-    \<mathi\><frac|\<partial\>f|\<partial\>t><around*|(|0,t|)>=<big|sum><rsub|n=0><rsup|+\<infty\>><frac|<around*|(|-c|)><rsup|n>|n!>
+    \<mathi\><frac|\<partial\>f|\<partial\>t><around*|(|0,t|)>=<big|sum><rsub|n=0><rsup|\<infty\>><frac|<around*|(|-c|)><rsup|n>|n!>
     <frac|\<partial\><rsup|n>f|\<partial\>x<rsup|n>><around*|(|0,t|)>.
   </equation*>
 
@@ -672,7 +655,7 @@
   integer <math|N<rsub|cut>> such that <math|R<rsub|n>=0> for any
   <math|n\<gtr\>N<rsub|cut>>>>.
 
-  <section|Hermitianity on Moments>
+  <section|Hermitianity on Moments><label|section:Hermitianity on Moments>
 
   Now we study the <math|R<rsub|n>>s. We first investigate what Hermitianity
   implies for our generic quantum mechanics. Hermitianity implies
@@ -754,30 +737,191 @@
   can obtain a recursive equation that gives the relation between
   <math|R<rsub|n>>s and their complex conjugations.
 
-  <section|Higher Order Momentum?>
+  <section|Uncertainty Principle>
 
-  In classical mechanics, higher (than two) order momentum appearing in
-  Hamiltonian implies instability. It was first found by Russian
-  mathematician Mikhail Ostrogradsky, a disciple of Euler. He noticed that
-  Hamiltonian with higher order momentum is not lower-bounded, leading to a
-  dynamical instability. But in quantum mechanics, this instability may
-  disappear. For example, consider the Hamiltonian
-  <math|<wide|r|^><around*|(|x,k|)>=V<around*|(|x|)>+a k<rsup|2>+b
-  k<rsup|4>>, it corresponding to a Schr<wide|o|\<ddot\>>dinger equation with
-  higher order spatial derivatives like
+  An <strong|observable> is a real function on the collection of states of a
+  quantum system. The second part of probability interpretation is about the
+  expectation of an observable.\ 
+
+  <\axiom>
+    [Probability Interpretation (Part 2)]<label|axiom:prob2> \ Given an
+    observable <math|O> and a wave-function <math|f> of quantum system, the
+    expected value of the observable is given by
+
+    <\equation*>
+      \<bbb-E\><rsub|f><around*|[|O<around*|(|t|)>|]>=<big|int><rsub|\<cal-X\>>\<mathd\>x
+      f<rsup|\<ast\>><around*|(|x,t|)>f<around*|(|x,t|)>O<around*|(|x|)>.
+    </equation*>
+  </axiom>
+
+  For a single particle system, we use <math|x<around*|(|t|)>> to denote the
+  position of the particle at time <math|t>. Velocity is defined as usual,
 
   <\equation*>
-    \<mathi\><frac|\<partial\>f|\<partial\>t><around*|(|x,t|)>=b\<nabla\><rsup|4>f<around*|(|x,t|)>+a\<nabla\><rsup|2>f<around*|(|x,t|)>+V<around*|(|x|)>f<around*|(|x,t|)>.
+    v<around*|(|t|)>\<assign\>lim<rsub|\<Delta\>t\<rightarrow\>0><frac|x<around*|(|t+\<Delta\>t|)>-x<around*|(|t|)>|\<Delta\>t>.
   </equation*>
 
-  Historically, such equation has been investigated because it is an
-  approximation of \Prelativistic\Q Schr<wide|o|\<ddot\>>dinger equation,
-  where the energy is <math|<wide|H|^>=<sqrt|<wide|p|^><rsup|2>+m<rsub|0><rsup|2>>>
-  for free relativistic particle. If we Taylor expand the right hand side by
-  <math|<wide|p|^>> (which is proportional to <math|\<nabla\>>), then we get
-  higher order spatial derivatives. In some papers, stable solution was found
-  for some proper (yet non-trivial) values of <math|<around*|(|a,b|)>> (TODO:
-  add resource).
+  Both position and velocity are obserbables. Further, we can compute the
+  variance of an observable <math|O> as an expectation
+  <math|Var<rsub|f><around*|[|O<around*|(|t|)>|]>\<assign\>\<bbb-E\><rsub|f><around*|[|<around*|(|O-\<bbb-E\><rsub|f><around*|[|O<around*|(|t|)>|]>|)><rsup|2>|]>>.
+  Then, uncertainty principle claims:
+
+  <\axiom>
+    [Uncertainty Principle]<label|axiom:uncert> In a single particle quantum
+    system, given a wave-function <math|f>, the variances of position and of
+    velocity have the relation
+
+    <\equation*>
+      \<Delta\>x\<Delta\>v\<assign\><sqrt|Var<rsub|f><around*|[|x<around*|(|t|)>|]>
+      Var<rsub|f><around*|[|v<around*|(|t|)>|]>>\<sim\>\<hbar\>/<around*|(|2m|)>,
+    </equation*>
+
+    where <math|m> is the mass of the particle, and <math|\<hbar\>> is the
+    reduced Planck's constant.
+  </axiom>
+
+  In this section, we are to show how uncertainty principle restricts further
+  to the transition rate. For simplicity, we set <math|d=1> throughout this
+  section. Since axiom <reference|axiom:uncert> holds for all wave-functions
+  of a single particle, we choose <math|f> to be Gaussian at <math|t=0>, that
+  is
+
+  <\equation*>
+    f<around*|(|x,0|)>=<around*|(|2\<mathpi\>\<sigma\><rsup|2>|)><rsup|-1/4>
+    exp<around*|(|-<frac|x<rsup|2>|4\<sigma\><rsup|2>>|)>.
+  </equation*>
+
+  The coefficient guarantees the normalization of <math|f>. By axiom
+  <reference|axiom:prob2>, we have
+
+  <\equation*>
+    \<bbb-E\><rsub|f><around*|[|x<around*|(|0|)>|]>\<assign\><big|int><rsub|\<bbb-R\>>\<mathd\>x
+    f<rsup|\<ast\>><around*|(|x,0|)>f<around*|(|x,0|)>x=<frac|1|<sqrt|2\<mathpi\>\<sigma\><rsup|2>>><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
+    exp<around*|(|-<frac|x<rsup|2>|2\<sigma\><rsup|2>>|)>x=0,
+  </equation*>
+
+  then
+
+  <\equation*>
+    Var<rsub|f><around*|[|x<around*|(|0|)>|]>\<assign\><big|int><rsub|\<bbb-R\>>\<mathd\>x
+    f<rsup|\<ast\>><around*|(|x,0|)>f<around*|(|x,0|)>x<rsup|2>=<frac|1|<sqrt|2\<mathpi\>\<sigma\><rsup|2>>><big|int><rsub|\<bbb-R\><rsup|d>>\<mathd\>x
+    exp<around*|(|-<frac|x<rsup|2>|2\<sigma\><rsup|2>>|)>x<rsup|2>=\<sigma\><rsup|2>.
+  </equation*>
+
+  \;
+
+  To evaluate <math|Var<rsub|f><around*|[|v<around*|(|0|)>|]>>, we have to
+  use the time evolution to calculate <math|x<around*|(|\<Delta\>t|)>>. By
+  equation <reference|equ:superposition>, we have (for brevity, we omit the
+  subscript <math|cut> in <math|N<rsub|cut>>)
+
+  <\equation*>
+    f<around*|(|x,\<Delta\>t|)>=f<around*|(|x,0|)>-\<mathi\>\<Delta\>t<big|sum><rsub|n=0><rsup|N><frac|<around*|(|-1|)><rsup|n>|n!>
+    \<partial\><rsup|n><around*|[|R<rsub|n><around*|(|x|)>f<around*|(|x,0|)>|]>+\<cdots\>.
+  </equation*>
+
+  We have to evaluate up to <math|\<omicron\><around*|(|\<Delta\>t<rsup|2>|)>>,
+  so as to give the variance of velocity <math|\<sim\>x<rsup|2><around*|(|\<Delta\>t|)>/\<Delta\>t<rsup|2>>.
+  But this would be too complicated. For simplification, we consider a \Pfree
+  particle\Q where the condition that <math|R<rsub|n>>s are all vanishing
+  except for <math|R<rsub|N>>. This is the situation when <math|\<sigma\>>
+  tends to zero, because there are more <math|\<sigma\>> factors in the
+  denominator if there are more derivatives on <math|f>, and as
+  <math|\<sigma\>> tends to zero, the term proportional to
+  <math|R<rsub|N><around*|(|x|)>\<partial\><rsup|N><around*|[|f<around*|(|x,0|)>|]>>
+  dominates.<\footnote>
+    In the traditional approach of quantum mechanics,
+    <math|\<sigma\>\<rightarrow\>0> indicates that the momentum is large
+    (since momentum is proportional to <math|\<partial\>/\<partial\>x>), so
+    the term with the highest order of momentum will dominates the time
+    evolution. When the momentum is large enough, the kinetic term dominates
+    Hamiltonian, the potential becomes omittable, making the particle free.
+  </footnote> In this situation, equation <reference|equ:superposition>
+  reduces to
+
+  <\equation*>
+    \<mathi\><frac|\<partial\>f|\<partial\>t><around*|(|x,t|)>=<frac|<around*|(|-1|)><rsup|N>|N!>
+    R<rsub|N><around*|(|x|)>\<partial\><rsup|N>f<around*|(|x,t|)>.
+  </equation*>
+
+  Hence,
+
+  <\align>
+    <tformat|<table|<row|<cell|f<around*|(|x,\<Delta\>t|)>=>|<cell|f<around*|(|x,0|)>+<frac|\<partial\>f|\<partial\>t><around*|(|x,0|)>\<Delta\>t+<frac|1|2><frac|\<partial\><rsup|2>f|\<partial\>t<rsup|2>><around*|(|x,0|)>\<Delta\>t<rsup|2>+\<omicron\><around*|(|\<Delta\>t<rsup|2>|)>>>|<row|<cell|=>|<cell|f<around*|(|x,0|)>-\<mathi\><frac|<around*|(|-1|)><rsup|N>|N!>
+    R<rsub|N><around*|(|x|)>\<partial\><rsup|N>f<around*|(|x,0|)>\<Delta\>t-<frac|\<mathi\>|2><frac|<around*|(|-1|)><rsup|N>|N!>
+    R<rsub|N><around*|(|x|)>\<partial\><rsup|N><frac|\<partial\>f|\<partial\>t><around*|(|x,0|)>\<Delta\>t<rsup|2>+\<omicron\><around*|(|\<Delta\>t<rsup|2>|)>.>>>>
+  </align>
+
+  Inserting <math|<around*|(|\<partial\>f/\<partial\>t|)>> again gives
+
+  <\equation*>
+    f<around*|(|x,\<Delta\>t|)>=f<around*|(|x,0|)>-\<mathi\><frac|<around*|(|-1|)><rsup|N>|N!>
+    R<rsub|N><around*|(|x|)>\<partial\><rsup|N>f<around*|(|x,0|)>\<Delta\>t-<frac|1|2><around*|[|<frac|<around*|(|-1|)><rsup|N>|N!>R<rsub|N><around*|(|x|)>|]><rsup|2>\<partial\><rsup|2N>f<around*|(|x,0|)>\<Delta\>t<rsup|2>+\<omicron\><around*|(|\<Delta\>t<rsup|2>|)>.
+  </equation*>
+
+  \;
+
+  Now we are to evaluate <math|Var<rsub|f><around*|[|v<around*|(|0|)>|]>>. As
+  we have evaluated, <math|\<bbb-E\><rsub|f><around*|[|x<around*|(|0|)>|]>=0>,
+  we then have
+
+  <\equation*>
+    \<bbb-E\><rsub|f><around*|[|v<around*|(|0|)>|]>=<frac|\<bbb-E\><rsub|f><around*|[|x<around*|(|\<Delta\>t|)>|]>-\<bbb-E\><rsub|f><around*|[|x<around*|(|0|)>|]>|\<Delta\>t>=<frac|\<bbb-E\><rsub|f><around*|[|x<around*|(|\<Delta\>t|)>|]>|\<Delta\>t>=<frac|1|\<Delta\>t><big|int><rsub|\<bbb-R\>>\<mathd\>x
+    f<rsup|\<ast\>><around*|(|x,\<Delta\>t|)>f<around*|(|x,\<Delta\>t|)>x
+  </equation*>
+
+  Inserting <math|f<around*|(|x,\<Delta\>t|)>> up to
+  <math|\<omicron\><around*|(|\<Delta\>t|)>>, and knowing that
+  <math|R<rsub|N>> is real (see section <reference|section:Hermitianity on
+  Moments>), we find <math|\<bbb-E\><rsub|f><around*|[|v<around*|(|0|)>|]>=\<omicron\><around*|(|1|)>>.
+  Then we have (using the famous formula of variance)
+
+  <\equation*>
+    Var<rsub|f><around*|[|v<around*|(|0|)>|]>=\<bbb-E\><rsub|f><around*|[|v<rsup|2><around*|(|0|)>|]>-\<bbb-E\><rsup|2><rsub|f><around*|[|v<around*|(|0|)>|]>=\<bbb-E\><rsub|f><around*|[|v<rsup|2><around*|(|0|)>|]>+\<omicron\><around*|(|1|)>.
+  </equation*>
+
+  Now focus on <math|\<bbb-E\><rsub|f><around*|[|v<rsup|2><around*|(|0|)>|]>>.
+  Directly,
+
+  <\equation*>
+    \<bbb-E\><rsub|f><around*|[|v<rsup|2><around*|(|0|)>|]>=<frac|\<bbb-E\><rsub|f><around*|[|<around*|(|x<around*|(|\<Delta\>t|)>-x<around*|(|0|)>|)><rsup|2>|]>|\<Delta\>t<rsup|2>>=<frac|\<bbb-E\><rsub|f><around*|[|x<rsup|2><around*|(|\<Delta\>t|)>|]>|\<Delta\>t<rsup|2>>-2<frac|\<bbb-E\><rsub|f><around*|[|x<around*|(|\<Delta\>t|)>x<around*|(|0|)>|]>|\<Delta\>t<rsup|2>>+<frac|\<bbb-E\><rsub|f><around*|[|x<rsup|2><around*|(|0|)>|]>|\<Delta\>t<rsup|2>>.
+  </equation*>
+
+  Things become complicated: how is <math|\<bbb-E\><rsub|f><around*|[|x<around*|(|\<Delta\>t|)>x<around*|(|0|)>|]>>
+  defined? In fact, when we evaluate <math|\<bbb-E\><rsub|f><around*|[|v<rsup|2><around*|(|0|)>|]>>,
+  we shall treat everything at <math|t=0> as constant. Thus
+  <math|x<around*|(|0|)>> is treated as <math|\<bbb-E\><rsub|f><around*|[|x<around*|(|0|)>|]>>.
+  So, we have
+
+  <\equation*>
+    \<bbb-E\><rsub|f><around*|[|v<rsup|2><around*|(|0|)>|]>=<frac|\<bbb-E\><rsub|f><around*|[|<around*|(|x<around*|(|\<Delta\>t|)>-\<bbb-E\><rsub|f><around*|[|x<around*|(|0|)>|]>|)><rsup|2>|]>|\<Delta\>t<rsup|2>>=<frac|\<bbb-E\><rsub|f><around*|[|x<rsup|2><around*|(|\<Delta\>t|)>|]>|\<Delta\>t<rsup|2>>.
+  </equation*>
+
+  Hence,
+
+  <\align>
+    <tformat|<table|<row|<cell|\<bbb-E\><rsub|f><around*|[|v<rsup|2><around*|(|0|)>|]>>|<cell|=<big|int><rsub|\<bbb-R\>>\<mathd\>x
+    f<rsup|\<ast\>><around*|(|x,\<Delta\>t|)>f<around*|(|x,\<Delta\>t|)><frac|x<rsup|2>|\<Delta\>t<rsup|2>>>>|<row|<cell|=>|<cell|<around*|(|<frac|R<rsub|N><around*|(|x|)>|N!>|)><rsup|2><around*|[|<big|int><rsub|\<bbb-R\>>\<mathd\>x\<partial\><rsup|N>f<around*|(|x,0|)>\<partial\><rsup|N>f<around*|(|x,0|)>x<rsup|2>-<big|int><rsub|\<bbb-R\>>\<mathd\>x\<partial\><rsup|2N>f<around*|(|x,0|)>f<around*|(|x,0|)>x<rsup|2>|]>+\<omicron\><around*|(|1|)>.>>>>
+  </align>
+
+  Using maxima,we get the following table:
+
+  <\big-table|<tabular|<tformat|<cwith|1|-1|1|1|cell-halign|c>|<cwith|1|-1|2|2|cell-halign|c>|<table|<row|<cell|<math|N>>|<cell|<math|\<Delta\>x\<Delta\>v>>>|<row|<cell|1>|<cell|<math|<frac|R<rsub|1><around*|(|x|)>\<sigma\>|<sqrt|2>>>>>|<row|<cell|2>|<cell|<math|<frac|R<rsub|2><around*|(|x|)>|2>>>>|<row|<cell|3>|<cell|<math|\<mathi\><sqrt|<frac|7|6>><frac|R<rsub|3><around*|(|x|)>|8\<sigma\>>>>>|<row|<cell|4>|<cell|<math|<sqrt|<frac|5|3>><frac|R<rsub|4><around*|(|x|)>|16\<sigma\><rsup|2>>>>>|<row|<cell|5>|<cell|<math|\<mathi\><sqrt|<frac|217|30>><frac|R<rsub|5><around*|(|x|)>|128\<sigma\><rsup|3>>>>>|<row|<cell|6>|<cell|<math|<sqrt|<frac|21|5>><frac|R<rsub|6><around*|(|x|)>|256\<sigma\><rsup|4>>>>>>>>>
+    These are computed by Maxima. Define <verbatim|f:
+    (2*%pi*\<sigma\>^2)^(-1/4)*exp(-x^2/(4*\<sigma\>^2));>, <verbatim|N: 5;>
+    (for instance), and <verbatim|g: diff(f, x, N)*diff(f, x, N)*x^2-diff(f,
+    x, 2*N)*f*x^2;> which is the <math|<around*|[|\<cdots\>|]>> part in the
+    expression of <math|\<langle\>v<rsup|2><around*|(|0|)>\<rangle\>>. Then
+    <math|\<Delta\>x\<Delta\>v\<assign\><sqrt|Var<rsub|f><around*|[|x<around*|(|0|)>|]>
+    Var<rsub|f><around*|[|v<around*|(|0|)>|]>>> is given by
+    <verbatim|sqrt((R/N!)^2*integrate(g, x, -inf, inf)*\<sigma\>^2);>.
+  </big-table>
+
+  From this table, we see that only when <math|N=2> can
+  <math|\<Delta\>x\<Delta\>v> be independent of <math|\<sigma\>>. In
+  addition, only when <math|N=1,2> will <math|\<Delta\>x\<Delta\>v> be finite
+  as <math|\<sigma\>> tends to zero. In addition, <math|R<rsub|2>> shall be
+  constant.
 </body>
 
 <\initial>
@@ -792,6 +936,7 @@
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-10|<tuple|1.9|7>>
     <associate|auto-11|<tuple|1.10|8>>
+    <associate|auto-12|<tuple|1.1|?>>
     <associate|auto-2|<tuple|1.1|1>>
     <associate|auto-3|<tuple|1.2|1>>
     <associate|auto-4|<tuple|1.3|2>>
@@ -801,16 +946,20 @@
     <associate|auto-8|<tuple|1.7|5>>
     <associate|auto-9|<tuple|1.8|6>>
     <associate|axiom:prob|<tuple|1.2|2>>
+    <associate|axiom:prob1|<tuple|1.2|?>>
+    <associate|axiom:prob2|<tuple|1.4|?>>
     <associate|axiom:sup|<tuple|1.1|1>>
-    <associate|eq:deltaexp|<tuple|1.10|4>>
-    <associate|eq:expandbymoments|<tuple|1.15|5>>
-    <associate|eq:hamiltonian|<tuple|1.5|3>>
-    <associate|eq:hermit|<tuple|1.4|2>>
-    <associate|eq:kmanalogy|<tuple|1.14|5>>
-    <associate|eq:moment|<tuple|1.9|3>>
-    <associate|eq:probtoself|<tuple|1.3|2>>
-    <associate|eq:transexp|<tuple|1.13|5>>
+    <associate|axiom:uncert|<tuple|1.5|?>>
+    <associate|eq:deltaexp|<tuple|1.9|4>>
+    <associate|eq:expandbymoments|<tuple|1.14|5>>
+    <associate|eq:hamiltonian|<tuple|1.4|3>>
+    <associate|eq:hermit|<tuple|1.3|2>>
+    <associate|eq:kmanalogy|<tuple|1.13|5>>
+    <associate|eq:moment|<tuple|1.8|3>>
+    <associate|eq:probtoself|<tuple|1.2|2>>
+    <associate|eq:transexp|<tuple|1.12|5>>
     <associate|equ:superposition|<tuple|1.1|1>>
+    <associate|footnote-1|<tuple|1|?>>
     <associate|footnote-1.1|<tuple|1.1|1>>
     <associate|footnote-1.2|<tuple|1.2|1>>
     <associate|footnote-1.3|<tuple|1.3|2>>
@@ -818,6 +967,8 @@
     <associate|footnote-1.5|<tuple|1.5|3>>
     <associate|footnote-1.6|<tuple|1.6|7>>
     <associate|footnote-1.7|<tuple|1.7|8>>
+    <associate|footnote-1.8|<tuple|1.8|?>>
+    <associate|footnote-1.9|<tuple|1.9|?>>
     <associate|footnr-1.1|<tuple|1.1|1>>
     <associate|footnr-1.2|<tuple|1.2|1>>
     <associate|footnr-1.3|<tuple|1.3|2>>
@@ -825,11 +976,29 @@
     <associate|footnr-1.5|<tuple|1.5|3>>
     <associate|footnr-1.6|<tuple|1.6|7>>
     <associate|footnr-1.7|<tuple|1.7|8>>
+    <associate|footnr-1.8|<tuple|1.8|?>>
+    <associate|footnr-1.9|<tuple|1.9|?>>
+    <associate|section:Hermitianity on Moments|<tuple|1.9|?>>
   </collection>
 </references>
 
 <\auxiliary>
   <\collection>
+    <\associate|table>
+      <tuple|normal|<\surround|<hidden-binding|<tuple>|1.1>|>
+        These are computed by Maxima. Define
+        <with|font-family|<quote|tt>|language|<quote|verbatim>|f:
+        (2*%pi*\<sigma\>^2)^(-1/4)*exp(-x^2/(4*\<sigma\>^2));>,
+        <with|font-family|<quote|tt>|language|<quote|verbatim>|N: 5;> (for
+        instance), and <with|font-family|<quote|tt>|language|<quote|verbatim>|g:
+        diff(f, x, N)*diff(f, x, N)*x^2-diff(f, x, 2*N)*f*x^2;> which is the
+        <with|mode|<quote|math>|<around*|[|\<cdots\>|]>> part in the
+        expression of <with|mode|<quote|math>|\<langle\>v<rsup|2><around*|(|0|)>\<rangle\>>.
+        Then <with|mode|<quote|math>|\<Delta\>x \<Delta\>p> is given by
+        <with|font-family|<quote|tt>|language|<quote|verbatim>|sqrt((R/N!)^2*integrate(g,
+        x, -inf, inf)*\<sigma\>^2);>.
+      </surround>|<pageref|auto-12>>
+    </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-shape|<quote|small-caps>|1.<space|2spc>From
       Stochastic Process to Quantum Mechanics: A Sketch>
@@ -871,7 +1040,7 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-10>
 
-      1.10.<space|2spc>Higher Order Momentum?
+      1.10.<space|2spc>Uncertainty Principle
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-11>
     </associate>
