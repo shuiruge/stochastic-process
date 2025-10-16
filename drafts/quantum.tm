@@ -97,7 +97,7 @@
   transition density. But in quantum mechanics, it is about unitary.
 
   <\axiom>
-    [Probability Interpretation (Part 1)]<label|axiom:prob1> Given a
+    [Probability Interpretation on Density]<label|axiom:prob1> Given a
     wave-function <math|f> of quantum system, the probabilistic density that
     the system at state <math|x> is given by
     <math|<around*|\||f<around*|(|x|)>|\|><rsup|2>=f<rsup|\<ast\>><around*|(|x|)>f<around*|(|x|)>>.
@@ -330,9 +330,10 @@
     <around*|(|\<partial\><rsub|\<alpha\><rsub|1>>\<cdots\>\<partial\><rsub|\<alpha\><rsub|n>>\<delta\>|)><around*|(|x|)>.<label|eq:deltaexp>
   </equation>
 
-  With this expansion, the left hand side is not a function anymore, but
-  shall be treated as a generalized function (as the same in the right hand
-  side).
+  <with|color|dark green|<em|It shall be read as a formal expansion, or an
+  \Palgorithm\Q (with which we obtain a valid expression of
+  <math|<big|int>\<mathd\>x f<around*|(|x|)>\<varphi\><around*|(|x|)>>). Only
+  by applying to an analytic Schwartz function can it make sense.>>
 
   Moments also relate to Fourier transformation. We have the Fourier
   transformation
@@ -547,7 +548,7 @@
   induce.
 
   <\axiom>
-    [Locality] Interaction shall be local.
+    [Locality]<label|axiom:local> Interaction shall be local.
   </axiom>
 
   This implies that the time evolution (equation
@@ -741,10 +742,10 @@
 
   An <strong|observable> is a real function on the collection of states of a
   quantum system. The second part of probability interpretation is about the
-  expectation of an observable.\ 
+  expectation of an observable.
 
   <\axiom>
-    [Probability Interpretation (Part 2)]<label|axiom:prob2> \ Given an
+    [Probability Interpretation on Observable]<label|axiom:prob2> \ Given an
     observable <math|O> and a wave-function <math|f> of quantum system, the
     expected value of the observable is given by
 
@@ -764,12 +765,13 @@
   Both position and velocity are observables. Further, we can compute the
   variance of an observable <math|O> as an expectation
   <math|Var<rsub|f><around*|[|O<around*|(|t|)>|]>\<assign\>\<bbb-E\><rsub|f><around*|[|<around*|(|O-\<bbb-E\><rsub|f><around*|[|O<around*|(|t|)>|]>|)><rsup|2>|]>>.
-  Then, uncertainty principle claims:
+  Then, uncertainty principle claims the relation between the variances of
+  position and of velocity.
 
   <\axiom>
-    [Uncertainty Principle]<label|axiom:uncert> In a single particle quantum
-    system, given a wave-function <math|f>, the variances of position and of
-    velocity have the relation
+    [Uncertainty Principle of Single Particle]<label|axiom:uncert> In a
+    single particle quantum system, given a wave-function <math|f>, the
+    variances of position and of velocity have the relation
 
     <\equation*>
       \<Delta\>x\<Delta\>v\<assign\><sqrt|Var<rsub|f><around*|[|x<around*|(|t|)>|]>
@@ -781,10 +783,10 @@
   </axiom>
 
   In this section, we are to show how uncertainty principle restricts further
-  to the transition rate. For simplicity, we set <math|d=1> throughout this
-  section. Since axiom <reference|axiom:uncert> holds for all wave-functions
-  of a single particle, we choose <math|f> to be Gaussian at <math|t=0>, that
-  is
+  to the transition rate. We first deal with the situation where dimension
+  <math|d=1>. Since axiom <reference|axiom:uncert> holds for all
+  wave-functions of a single particle, we choose <math|f> to be Gaussian at
+  <math|t=0>, that is
 
   <\equation*>
     f<around*|(|x,0|)>=<around*|(|2\<mathpi\>\<sigma\><rsup|2>|)><rsup|-1/4>
@@ -898,27 +900,51 @@
 
   <\align>
     <tformat|<table|<row|<cell|\<bbb-E\><rsub|f><around*|[|v<rsup|2><around*|(|0|)>|]>>|<cell|=<big|int><rsub|\<bbb-R\>>\<mathd\>x
-    f<rsup|\<ast\>><around*|(|x,\<Delta\>t|)>f<around*|(|x,\<Delta\>t|)><frac|x<rsup|2>|\<Delta\>t<rsup|2>>>>|<row|<cell|=>|<cell|<around*|(|<frac|R<rsub|N><around*|(|x|)>|N!>|)><rsup|2><around*|[|<big|int><rsub|\<bbb-R\>>\<mathd\>x\<partial\><rsup|N>f<around*|(|x,0|)>\<partial\><rsup|N>f<around*|(|x,0|)>x<rsup|2>-<big|int><rsub|\<bbb-R\>>\<mathd\>x\<partial\><rsup|2N>f<around*|(|x,0|)>f<around*|(|x,0|)>x<rsup|2>|]>+\<omicron\><around*|(|1|)>.>>>>
+    f<rsup|\<ast\>><around*|(|x,\<Delta\>t|)>f<around*|(|x,\<Delta\>t|)><frac|x<rsup|2>|\<Delta\>t<rsup|2>>>>|<row|<cell|=>|<cell|<around*|(|<frac|1|N!>|)><rsup|2><big|int><rsub|\<bbb-R\>>\<mathd\>x<around*|[|\<partial\><rsup|N>f<around*|(|x,0|)>\<partial\><rsup|N>f<around*|(|x,0|)>-\<partial\><rsup|2N>f<around*|(|x,0|)>f<around*|(|x,0|)>|]>R<rsub|N><rsup|2><around*|(|x|)>x<rsup|2>+\<omicron\><around*|(|1|)>.>>>>
   </align>
 
-  Using maxima,we get the table <reference|table:uncert>. We find that only
-  when <math|N=2>, and when <math|R<rsub|2>> is a constant, can
-  <math|\<Delta\>x\<Delta\>v> satisfy the uncertainty principle
-  <reference|axiom:uncert>. Any other situation depends on <math|\<sigma\>>,
-  which is either vanishing or diverging when <math|\<sigma\>> tends to zero.
-  We then conclude that <with|color|dark green|<em|uncertainty principle
-  forces that <math|N=2>, and together with Hermitianity, <math|R<rsub|2>> is
-  a real constant>>.
+  Assume that <math|R<rsub|N><rsup|2>> is analytic, so that we can Taylor
+  expand it at origin, as
 
-  <\big-table|<tabular|<tformat|<cwith|1|-1|1|1|cell-halign|c>|<cwith|1|-1|2|2|cell-halign|c>|<table|<row|<cell|<math|N>>|<cell|<math|\<Delta\>x\<Delta\>v>>>|<row|<cell|1>|<cell|<math|<frac|R<rsub|1><around*|(|x|)>\<sigma\>|<sqrt|2>>>>>|<row|<cell|2>|<cell|<math|<frac|R<rsub|2><around*|(|x|)>|2>>>>|<row|<cell|3>|<cell|<math|\<mathi\><sqrt|<frac|7|6>><frac|R<rsub|3><around*|(|x|)>|8\<sigma\>>>>>|<row|<cell|4>|<cell|<math|<sqrt|<frac|5|3>><frac|R<rsub|4><around*|(|x|)>|16\<sigma\><rsup|2>>>>>|<row|<cell|5>|<cell|<math|\<mathi\><sqrt|<frac|217|30>><frac|R<rsub|5><around*|(|x|)>|128\<sigma\><rsup|3>>>>>|<row|<cell|6>|<cell|<math|<sqrt|<frac|21|5>><frac|R<rsub|6><around*|(|x|)>|256\<sigma\><rsup|4>>>>>>>>>
-    <label|table:uncert>These are computed by Maxima. Define <verbatim|f:
-    (2*%pi*\<sigma\>^2)^(-1/4)*exp(-x^2/(4*\<sigma\>^2));>, <verbatim|N: 5;>
-    (for instance), and <verbatim|g: diff(f, x, N)*diff(f, x, N)*x^2-diff(f,
-    x, 2*N)*f*x^2;> which is the <math|<around*|[|\<cdots\>|]>> part in the
-    expression of <math|\<langle\>v<rsup|2><around*|(|0|)>\<rangle\>>. Then
-    <math|\<Delta\>x\<Delta\>v> is given by
-    <verbatim|sqrt((R/N!)^2*integrate(g, x, -inf, inf)*\<sigma\>^2);>.
-  </big-table>
+  <\equation*>
+    R<rsub|N><rsup|2><around*|(|x|)>=R<rsup|2><rsub|N><around*|(|0|)>+\<partial\>R<rsup|2><rsub|N><around*|(|0|)>x+<frac|1|2>\<partial\><rsup|2>R<rsup|2><rsub|N><around*|(|0|)>x<rsup|2>+\<cdots\>.
+  </equation*>
+
+  Then,
+
+  <\equation*>
+    \<bbb-E\><rsub|f><around*|[|v<rsup|2><around*|(|0|)>|]>=<big|sum><rsub|n=0><rsup|\<infty\>><around*|(|<frac|1|N!>|)><rsup|2><frac|\<partial\><rsup|n>R<rsup|2><rsub|N><around*|(|0|)>|n!><big|int><rsub|\<bbb-R\>>\<mathd\>x<around*|[|\<partial\><rsup|N>f<around*|(|x,0|)>\<partial\><rsup|N>f<around*|(|x,0|)>-\<partial\><rsup|2N>f<around*|(|x,0|)>f<around*|(|x,0|)>|]>x<rsup|2+n>+\<omicron\><around*|(|1|)>.
+  </equation*>
+
+  Using maxima, we compute the term in <math|\<bbb-E\><rsub|f><around*|[|v<rsup|2><around*|(|0|)>|]>>
+  for each <math|N> and <math|n>.<\footnote>
+    First assume <verbatim|assume(\<sigma\> \<gtr\> 0)$>. Define <verbatim|N:
+    7$ n: 10$> (for instance), <verbatim|f: (2*%pi*\<sigma\>^2)^(-1/4) *
+    exp(-x^2 / (4*\<sigma\>^2))$>, and <verbatim| integrand: (diff(f, x,
+    N)*diff(f, x, N) - diff(f, x, 2*N)*f) * x^(n+2)$>. Then
+    <verbatim|at(diff(R2(x), x, n), x=0)/(N!^2)/n! * integrate(integrand, x,
+    -inf, inf);> gives the <math|n>-th term in
+    <math|\<bbb-E\><rsub|f><around*|[|v<rsup|2><around*|(|0|)>|]>>.
+  </footnote> <with|color|dark green|<em|We find that, for
+  <math|\<Delta\>x\<Delta\>v> satisfying the uncertainty principle
+  <reference|axiom:uncert>, we shall have
+  <math|R<rsub|N><around*|(|x|)>\<propto\>x<rsup|N-2>> for each
+  <math|N\<geqslant\>2>.>> Any other situation depends on <math|\<sigma\>>,
+  which is either vanishing or diverging when <math|\<sigma\>> tends to zero.
+
+  We can generalize the previous analysis to dimension <math|d\<gtr\>1>, in
+  which the covariance matrix of <math|f> is diagonal, such that all
+  dimensions are independent. Namely,
+
+  <\equation*>
+    f<around*|(|x,0|)>=<big|prod><rsub|\<alpha\>=1><rsup|d><around*|(|2\<mathpi\><around*|(|\<sigma\><rsup|\<alpha\>>|)><rsup|2>|)><rsup|-1/4>exp<around*|(|-<frac|1|4><around*|(|<frac|x<rsup|\<alpha\>>|\<sigma\><rsup|\<alpha\>>>|)><rsup|2>|)>.
+  </equation*>
+
+  The previous analysis, then, is taken on each dimension individually,
+  resulting in exactly the same result for each dimension. In the same way,
+  we can generalize it to multiple particle systems, where position and
+  velocity of a particle is measured when it is far apart from the other
+  particles.
 </body>
 
 <\initial>
@@ -933,7 +959,7 @@
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-10|<tuple|1.9|7>>
     <associate|auto-11|<tuple|1.10|8>>
-    <associate|auto-12|<tuple|1.1|?>>
+    <associate|auto-12|<tuple|1.11|?>>
     <associate|auto-2|<tuple|1.1|1>>
     <associate|auto-3|<tuple|1.2|1>>
     <associate|auto-4|<tuple|1.3|2>>
@@ -942,6 +968,7 @@
     <associate|auto-7|<tuple|1.6|4>>
     <associate|auto-8|<tuple|1.7|5>>
     <associate|auto-9|<tuple|1.8|6>>
+    <associate|axiom:local|<tuple|1.3|?>>
     <associate|axiom:prob1|<tuple|1.2|?>>
     <associate|axiom:prob2|<tuple|1.4|?>>
     <associate|axiom:sup|<tuple|1.1|1>>
@@ -963,6 +990,7 @@
     <associate|footnote-1.6|<tuple|1.6|7>>
     <associate|footnote-1.7|<tuple|1.7|8>>
     <associate|footnote-1.8|<tuple|1.8|?>>
+    <associate|footnote-1.9|<tuple|1.9|?>>
     <associate|footnr-1.1|<tuple|1.1|1>>
     <associate|footnr-1.2|<tuple|1.2|1>>
     <associate|footnr-1.3|<tuple|1.3|2>>
@@ -971,29 +999,13 @@
     <associate|footnr-1.6|<tuple|1.6|7>>
     <associate|footnr-1.7|<tuple|1.7|8>>
     <associate|footnr-1.8|<tuple|1.8|?>>
+    <associate|footnr-1.9|<tuple|1.9|?>>
     <associate|section:Hermitianity on Moments|<tuple|1.9|?>>
-    <associate|table:uncert|<tuple|1.1|?>>
   </collection>
 </references>
 
 <\auxiliary>
   <\collection>
-    <\associate|table>
-      <tuple|normal|<\surround|<hidden-binding|<tuple>|1.1>|>
-        These are computed by Maxima. Define
-        <with|font-family|<quote|tt>|language|<quote|verbatim>|f:
-        (2*%pi*\<sigma\>^2)^(-1/4)*exp(-x^2/(4*\<sigma\>^2));>,
-        <with|font-family|<quote|tt>|language|<quote|verbatim>|N: 5;> (for
-        instance), and <with|font-family|<quote|tt>|language|<quote|verbatim>|g:
-        diff(f, x, N)*diff(f, x, N)*x^2-diff(f, x, 2*N)*f*x^2;> which is the
-        <with|mode|<quote|math>|<around*|[|\<cdots\>|]>> part in the
-        expression of <with|mode|<quote|math>|\<langle\>v<rsup|2><around*|(|0|)>\<rangle\>>.
-        Then <with|mode|<quote|math>|\<Delta\>x\<Delta\>v\<assign\><sqrt|Var<rsub|f><around*|[|x<around*|(|0|)>|]>
-        Var<rsub|f><around*|[|v<around*|(|0|)>|]>>> is given by
-        <with|font-family|<quote|tt>|language|<quote|verbatim>|sqrt((R/N!)^2*integrate(g,
-        x, -inf, inf)*\<sigma\>^2);>.
-      </surround>|<pageref|auto-12>>
-    </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-shape|<quote|small-caps>|1.<space|2spc>From
       Stochastic Process to Quantum Mechanics: A Sketch>
@@ -1035,9 +1047,12 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-10>
 
-      1.10.<space|2spc>Uncertainty Principle
+      1.10.<space|2spc>Uncertainty Principle Induces Canonicality
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-11>
+
+      1.11.<space|2spc>Summary <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-12>
     </associate>
   </collection>
 </auxiliary>
