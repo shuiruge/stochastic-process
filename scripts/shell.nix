@@ -9,5 +9,6 @@ in pkgs.mkShell rec {
     pythonPackages.jax
     pythonPackages.matplotlib
     pythonPackages.tqdm
+    pythonPackages.numpy
   ];
 }
